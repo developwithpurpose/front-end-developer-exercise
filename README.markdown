@@ -34,3 +34,14 @@ Any image you need can be found in the `./app/assets/images` directory. Some ima
 Please use jQuery if you decide you need a JavaScript framework.
 
 If you use a preprocessor of any kind, include the source code as well as the compiled output.
+
+Server
+------
+
+This package has a `Gruntfile.js` that you can use to serve up your application. You'll first need to install [Node.js](http://nodejs.org/). Once you have Node.js installed and have cloned this repo, then you can run the following commands to get the server up and open the landing webpage.
+
+```
+npm install
+grunt connect
+open http://localhost:9001/app/index.html
+```
