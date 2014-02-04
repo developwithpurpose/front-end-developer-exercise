@@ -22,14 +22,14 @@ Resources
 
 The creative team has provided a mockup of what the finished product should look like located at `./resources/mockup.jpg`. See also the annotated mockup for more detailed information on fonts/measurements/etc.
 
-For an example of a possible transition, see `./resources/transition.gif`.
+For an example of a possible transition, see `./resources/transition-example.gif`.
 
 All of the body copy can be found at `./resources/body-copy.txt`.
 
 Assets
 ------
 
-Any image you need can be found in the `.app/assets/images` directory. Some images have been sliced in multiple ways, so use whichever you feel make the most sense to use, or not at all if you feel you don't need too.
+Any image you need can be found in the `./app/assets/images` directory. Some images have been sliced in multiple ways, so use whichever you feel make the most sense to use, or not at all if you feel you don't need too.
 
 Please use jQuery if you decide you need a JavaScript framework.
 
