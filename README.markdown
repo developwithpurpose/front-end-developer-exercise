@@ -45,3 +45,22 @@ npm install
 grunt connect
 open http://localhost:9001/app/index.html
 ```
+
+Dynamic Content
+---------------
+
+As a user I want to be encouraged by how many friends of mine are also going through the selected babystep. I don't need to see all my friends, just a summary of who are in the same babystep.
+
+You should request the data from `./app/assets/javascript/baby-steps.json`, which includes a list of friend objects. Each object contains names and their babystep. Based on the data returned, you will need to show the following information to the user sorted by last name ascending.
+
+The creative mockup shows an example of how this message should be displayed to the user.  `./resources/mockup.jpg`.
+
+### Message Logic
+
+* if 0 friends, then don't show any message
+* if 1 friend, then show "Paul Taylor is also in Baby Step 2"
+* if 2 friends, then show "Thomas Harris and Sharon Thomas are also in Baby Step 3"
+* if 3 friends,
+    then show "Deborah Lee, Shirley Perez, and 1 other friend are also in Baby Step 4"
+* if 4 or more friends,
+    then show "Patricia Allen, Matthew Garcia, and 2 other friends are also in Baby Step 5"
