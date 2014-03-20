@@ -1,4 +1,4 @@
-{ 
+{
   "boss": true,
   "curly": true,
   "eqeqeq": true,
@@ -12,6 +12,8 @@
   "trailing": true,
   "undef": true,
   "unused": true,
+  "undef": true,
+  "newcap": true,
   "globals": {
     "jQuery": true,
     "module": true,
