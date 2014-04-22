@@ -1,5 +1,7 @@
-{
-    "friends": [
+/*------------------------------------------------
+					Call in Friends
+------------------------------------------------*/
+friends = [
         { "firstName" : "Paul", "lastName" : "Taylor", "babyStep": 2 },
         { "firstName" : "Sharon", "lastName" : "Thomas", "babyStep": 3 },
         { "firstName" : "Thomas", "lastName" : "Harris", "babyStep": 3 },
@@ -21,5 +23,29 @@
         { "firstName" : "Paul", "lastName" : "Taylor", "babyStep": 7 },
         { "firstName" : "Amy", "lastName" : "Gonzalez", "babyStep": 7 },
         { "firstName" : "Richard", "lastName" : "Martinez", "babyStep": 7 }
-    ]
+];
+
+for( var k = 1; k <= maxPrompts; k++ )
+{
+    var f = new Array();
+    $.each(friends, function (index, friend) {
+        stockStatus = '';
+        if (friend.babyStep === k) {
+            f.push(friend.lastName + "|" + friend.firstName);
+        }
+    });
+    f.sort();
+    var ffl = new Array();
+    f.forEach(flipNames);
+	
+	if (ffl.length<1){
+       ffl.push("<a>No friends currently on this step.</a>");
+   }
+		
+    $(".friend-data" + k).append(ffl.toString());
+}
+
+function flipNames(element, index, array) {
+    names = element.split("|");
+    ffl.push("<a> " + names[1] + " " + names[0] + "</a>");
 }
