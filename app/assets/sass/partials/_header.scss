@@ -1,0 +1,24 @@
+header {
+    height: 276px;
+	background: url(../images/header.jpg) left top no-repeat;
+	
+	h1 {
+	    float: right;
+	    line-height: 1;
+	    font-family: $OpenSans;
+	    font-weight: 300;
+	    text-align: right;
+	    color: #fff;
+	    @include _rem(font-size, 32px);
+	    @include _rem(margin, 50px 70px 0 0);
+	    
+	    span {
+	        display: block;
+	        text-transform: uppercase;
+	        font-weight: 700;
+	        letter-spacing: -1px;
+	        @include _rem(font-size, 50px);
+	        @include _rem(padding-top, 3px);
+	    }
+	}
+}

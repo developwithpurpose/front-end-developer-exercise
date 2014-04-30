@@ -1,0 +1,42 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	overflow-y:scroll;
+}
+
+body {
+	background: #bbbfc2;
+}
+
+.wrapper {
+    position: relative;
+    @include _rem(max-width, 980px);
+    margin: 0 auto;
+    @include _rem(padding-bottom, 60px);
+    
+    &:before,
+    &:after {
+        position: absolute;
+        z-index: -1;
+        content: ""
+    }
+    
+    &:before {
+        width: 100%; height: 80%;
+        top: -10px; left: 0;
+        box-shadow: 0 0 15px 2px rgba(0,0,0,.3);
+        border-bottom-right-radius: 5px 175px;
+        border-bottom-left-radius: 5px 175px;
+    }
+    
+    &:after {
+        width: 85%;
+        height: 10%;
+        left: 7.5%;
+        border-radius: 25%;
+        bottom: 60px;
+        box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    }
+}
