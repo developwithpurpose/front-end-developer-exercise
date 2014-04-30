@@ -1,0 +1,237 @@
+//thanks to Eric Meyer for https://github.com/ericam/susy
+//and Hans Christian Reinl for http://drublic.de/blog/rem-fallback-sass-less/
+@mixin _rem($property, $values) {
+  // Create a couple of empty lists as output buffers.
+  $base-font-size: 16px !global; // should be consistent with your html/body font-size
+  $px-values: ();
+  $rem-values: ();
+
+  // Loop through the $values list
+  @each $value in $values {
+    // For each property value, if it's in rem or px, derive both rem and
+    // px values for it and add those to the end of the appropriate buffer.
+    // Ensure all pixel values are rounded to the nearest pixel.
+    @if $value == 0 or $value == 0px {
+      // 0 -- use it without a unit
+      $px-values: join($px-values, 0);
+      $rem-values: join($rem-values, 0);
+    } @else if type-of($value) == number and not unitless($value) and (unit($value) == px) {
+      // px value given - calculate rem value from base-font-size
+      $new-rem-value: $value / $base-font-size;
+      $px-values: join($px-values, round($value));
+      $rem-values: join($rem-values, #{$new-rem-value}rem);
+    } @else {
+      // unitless value - use those directly as rem and calculate the px-fallback
+      $px-values: join($px-values, round($value * $base-font-size));
+      $rem-values: join($rem-values, #{$value}rem);
+    }
+  }
+
+  // output the converted rules
+  #{$property}: $px-values;
+  #{$property}: $rem-values;
+}
+
+// Tipsy.sass v1.0.2 * A mixin tooltip CSS using Sass * Copyright 2014, Dang Van Thanh
+@mixin tipsy($gravity, $color, $radius) {
+  position: relative;
+  display: inline-block;
+  &:hover, &:focus {
+    &:before, &:after {
+      visibility: visible;
+      opacity: 1;
+      transition: .2s .3s;
+      -webkit-transition: .2s .3s;
+      -moz-transition: .2s .3s;
+    }
+  }
+  &:before, &:after {
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000000;
+    pointer-events: none;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+  }
+  &:before {
+    content: '';
+    border: 5px solid transparent;
+    bottom: 0;
+    z-index: 1000001;
+  }
+  &:after {
+    content: attr(data-tipsy);
+    background-color: $color;
+    border-radius: $radius;
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+    padding: 5px 10px;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+  }
+
+  @if $gravity == 'nw' {
+    &:hover, &:focus {
+      &:before {
+        bottom: -15%;
+      }
+      &:after {
+        top: 115%;
+      }
+    }
+    &:before {
+      border-bottom-color: $color;
+      left: 60%;
+      bottom: -35%;
+    }
+    &:after {
+      left: 50%;
+      top: 135%;
+    }
+  } @else if $gravity == 'n' {
+    &:hover, &:focus {
+      &:before {
+        bottom: -15%;
+      }
+      &:after {
+        top: 115%;
+      }
+    }
+    &:before, &:after {
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+    }
+    &:before {
+      border-bottom-color: $color;
+      bottom: -35%;
+    }
+    &:after {
+      top: 135%;
+    }
+  } @else if $gravity == 'ne' {
+    &:hover, &:focus {
+      &:before {
+        bottom: -15%;
+      }
+      &:after {
+        top: 115%;
+      }
+    }
+    &:before {
+      border-bottom-color: $color;
+      right: 60%;
+      bottom: -35%;
+    }
+    &:after {
+      right: 50%;
+      top: 135%;
+    }
+  } @else if $gravity == 'e' {
+    &:hover, &:focus {
+      &:before {
+        left: -15%;
+      }
+      &:after {
+        right: 115%;
+      }
+    }
+    &:before, &:after {
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+    }
+    &:before {
+      border-left-color: $color;
+      left: -35%;
+    }
+    &:after {
+      right: 125%;
+    }
+  } @else if $gravity == 'se' {
+    &:hover, &:focus {
+      &:before {
+        top: -15%;
+      }
+      &:after {
+        bottom: 115%;
+      }
+    }
+    &:before {
+      border-top-color: $color;
+      top: -35%;
+      right: 60%;
+    }
+    &:after {
+      bottom: 135%;
+      right: 50%;
+    }
+  } @else if $gravity == 's' {
+    &:hover, &:focus {
+      &:before {
+        top: -15%;
+      }
+      &:after {
+        bottom: 115%;
+      }
+    }
+    &:before, &:after {
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+    }
+    &:before {
+      border-top-color: $color;
+      top: -35%;
+    }
+    &:after {
+      bottom: 135%;
+    }
+  } @else if $gravity == 'sw' {
+    &:hover, &:focus {
+      &:before {
+        top: -15%;
+      }
+      &:after {
+        bottom: 115%;
+      }
+    }
+    &:before {
+      border-top-color: $color;
+      top: -35%;
+      left: 60%;
+    }
+    &:after {
+      bottom: 135%;
+      left: 50%;
+    }
+  } @else if $gravity == 'w' {
+    &:hover, &:focus {
+      &:before {
+        right: -15%;
+      }
+      &:after {
+        left: 115%;
+      }
+    }
+    &:before, &:after {
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+    }
+    &:before {
+      border-right-color: $color;
+      right: -35%;
+    }
+    &:after {
+      left: 135%;
+    }
+  }
+}

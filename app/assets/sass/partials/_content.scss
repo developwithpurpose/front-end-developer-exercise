@@ -1,0 +1,215 @@
+@import "icons/small/*.png";
+@import "icons/large/*.png";
+@include all-small-sprites;
+@include all-large-sprites;
+
+main {
+    background: #fff;
+    @include _rem(padding-top, 60px);
+    @extend %cf;
+}
+
+nav {
+    float: left;
+    @include _rem(width, 300px);
+    @include _rem(padding-bottom, 195px);
+    overflow: hidden;
+    background-color: #ebeced;
+    background: linear-gradient(to right, #ebeced 0%,#d1d5d6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebeced',endColorstr='#d1d5d6',GradientType=1);
+    box-shadow: inset -8px 0 12px -6px rgba(0,0,0,0.15);
+    
+    ul {
+        @extend %navList;
+    }
+    
+    a {
+        position: relative;
+        display: block;
+        z-index: 1;
+        line-height: 60px;
+        border-bottom: 1px solid #fff;
+        font-family: $SourceSansPro;
+        font-weight: 400;
+        text-align: right;
+        text-decoration: none;
+        color: #9ba0a4;
+        @include _rem(font-size, 18px);
+        @include _rem(padding-right, 85px);
+		transition: color ease-in-out .3s;
+		
+		&:before,
+		&:after {
+		   position: absolute; 
+		   content: "";
+		}
+		
+		&:before {
+		    width: 31px; height: 24px;
+		    right: 24px; top: 50%;
+		    margin-top:-12px;
+		    overflow: hidden;
+		}
+        
+        @for $i from 1 through 7 {
+            &.step-#{$i} {
+                &:before {
+        		    @extend .small-icons_small_bs#{$i}
+        		}
+        		
+        		&:hover,
+                &:focus,
+                &.active {
+                    &:before {
+        		        @extend .small-icons_small_bs#{$i}_blue;
+        		    }
+                }
+        		
+            }
+        }
+				    
+		&:after {
+		    width: 100%; height: 100%;
+		    z-index: -1;
+		    left: -100%;
+		    background: #fff;
+		    transition: ease .5s;
+		}
+        
+        &:hover,
+        &:focus,
+        &.active {
+            color: $blue;
+        }
+        
+        &.active {
+            font-weight: 700;
+            
+            &:after {
+                transform: translate(100%, 0);
+            }
+        }
+    }
+}
+
+.content {
+    float: left;
+    @include _rem(width, 680px);
+    @include _rem(padding, 0 70px);
+}
+
+.baby-step {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        animation-name: fadeInDown;
+        @include _rem(margin-bottom, 33px);
+    }
+    
+    &.hidden {
+        @extend %hidden;
+    }
+    
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h2 {
+    margin: 0;
+    font-family: $SourceSansPro;
+    line-height: 20px;
+    color: $blue;
+}
+
+h2 {
+    position: relative;
+    font-weight: 600;
+    @include _rem(font-size, 30px);
+    @include _rem(padding-left, 85px);
+    @include _rem(margin, 20px 0 19px 0);
+    
+    &:before {
+        position: absolute;
+        content: "";
+        left: -1px; top: 50%;
+        margin-top: -35px;
+        width: 78px; height: 65px;
+        overflow: hidden;
+    }
+    
+    @for $i from 1 through 7 {
+        .step-#{$i} & {
+            &:before {
+                @extend .large-icons_large_bs#{$i}_blue;
+    		}
+        }
+        
+    }
+    
+    span {
+        display: block;
+        clear:both;
+        font-weight: 300;
+        color: #5c6366;
+        @include _rem(font-size, 18px); 
+        @include _rem(padding-top, 5px);
+    }
+}
+
+p {
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+    line-height: 1.4;
+    color: #65686f;
+    @include _rem(font-size, 13px);
+    @include _rem(margin-bottom, 18px);
+}
+
+p#friends {
+    font-weight: 700;
+    margin: 0;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        animation-name: fadeInDown;
+    }
+    
+    &.hidden {
+        @extend %hidden;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #6fbee7;
+    }
+}
+
+span.other-friends {
+    text-decoration: underline;
+    cursor: pointer;
+    @include tipsy(s, $blue, 0);
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

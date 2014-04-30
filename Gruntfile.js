@@ -8,6 +8,7 @@ module.exports = function( grunt ) {
         pkg: grunt.file.readJSON( "package.json" ),
         jshint: {
             all: [ "Gruntfile.js", "app/assets/javascripts/**/*.js", "spec/*.js" ],
+            main: ["app/assets/javascripts/main.js"],
             options: {
                 jshintrc: ".jshintrc"
             }
@@ -45,7 +46,11 @@ module.exports = function( grunt ) {
             lint: {
                 files: [ "<%= jshint.all %>", "app/**/*.html" ],
                 tasks: [ "jshint", "validation", "clean:validation" ]
-            }
+            },
+            css: {
+				files: "app/assets/sass/**/*.scss",
+				tasks: ["compass", "autoprefixer", "cssmin"]
+			}
         },
         jasmine: {
             pivotal: {
@@ -59,6 +64,29 @@ module.exports = function( grunt ) {
                 }
             }
         },
+        
+        compass: {
+            dist: {
+              options: {
+                config: "config.rb"
+              }
+            }
+        },
+        
+        autoprefixer: {
+            no_dest: {
+              src: "app/assets/stylesheets/style.css"
+            }
+        },
+        
+        cssmin: {
+            combine: {
+                files: {
+                    "app/assets/stylesheets/style.min.css": ["app/assets/stylesheets/normalize.css", "app/assets/stylesheets/style.css"]
+                }
+            }
+        },
+        
         connect: {
             server: {
                 options: {
