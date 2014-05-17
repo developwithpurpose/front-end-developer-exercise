@@ -345,6 +345,7 @@ div#content div.step_content p {
 div#content div.step_content p.friends {
 	font-size: 14px;
 	margin-top: 40px;
+	font-weight: 600;
 }
 div#content div.step_content p.friends a {
 	color: #6fbee7;
