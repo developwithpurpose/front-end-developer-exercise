@@ -1,0 +1,357 @@
+/* 
+CSS for Dave Ramsey's Code Evaluation
+Cody S Kratzer
+5-16-2014 
+*/
+
+/* 
+webfont kits from http://www.fontsquirrel.com/fonts/open-sans 
+I used webfont kits because the fonts were not installed on my computer and I wanted
+the same experience for all users.
+*/
+@font-face {
+	font-family: 'Open Sans Light';
+	src: url('../fonts/opensans/opensans-light-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/opensans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/opensans/opensans-light-webfont.woff') format('woff'),
+		 url('../fonts/opensans/opensans-light-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('../fonts/opensans/opensans-light-webfont.svg#OpenSansLight') format('svg'); /* Legacy iOS */
+}
+@font-face {
+	font-family: 'Open Sans Bold';
+	src: url('../fonts/opensans/opensans-bold-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/opensans/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/opensans/opensans-bold-webfont.woff') format('woff'),
+		 url('../fonts/opensans/opensans-bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('../fonts/opensans/opensans-bold-webfont.svg#OpenSansBold') format('svg'); /* Legacy iOS */
+}
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../fonts/sourcesanspro/sourcesanspro-regular-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/sourcesanspro/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/sourcesanspro/sourcesanspro-regular-webfont.woff') format('woff'),
+		 url('../fonts/sourcesanspro/sourcesanspro-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('../fonts/sourcesanspro/sourcesanspro-regular-webfont.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+}
+@font-face {
+	font-family: 'Source Sans Pro Light';
+	src: url('../fonts/sourcesanspro/sourcesanspro-light-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/sourcesanspro/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/sourcesanspro/sourcesanspro-light-webfont.woff') format('woff'),
+		 url('../fonts/sourcesanspro/sourcesanspro-light-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('../fonts/sourcesanspro/sourcesanspro-light-webfont.svg#SourceSansProLight') format('svg'); /* Legacy iOS */
+}
+@font-face {
+	font-family: 'Source Sans Pro SemiBold';
+	src: url('../fonts/sourcesanspro/sourcesanspro-semibold-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/sourcesanspro/sourcesanspro-semibold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/sourcesanspro/sourcesanspro-semibold-webfont.woff') format('woff'),
+		 url('../fonts/sourcesanspro/sourcesanspro-semibold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('../fonts/sourcesanspro/sourcesanspro-semibold-webfont.svg#SourceSansProSemiBold') format('svg'); /* Legacy iOS */
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   (My go-to reset css)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-color: #bbbfc2;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* *** MY PERSONAL CODE STARTS HERE *** */
+/* 
+I chose to give the body container multiple shadows instead of
+using the supplied images because its less calls to the server and
+thus provides a more efficient page load time
+*/
+div#body {
+	margin: 0 auto 50px auto;
+	background-color: white;
+	width: 980px;
+	-moz-box-shadow: 0px 8px 20px -10px #7c8083,
+  				-8px -50px 20px -10px #7c8083,
+  				8px -50px 20px -10px #7c8083;
+  	-webkit-box-shadow: 0px 8px 20px -10px #7c8083,
+  				-8px -50px 20px -10px #7c8083,
+  				8px -50px 20px -10px #7c8083;
+  	box-shadow: 0px 8px 20px -10px #7c8083,
+  				-8px -50px 20px -10px #7c8083,
+  				8px -50px 20px -10px #7c8083;
+}
+
+/* header styles */
+/*
+I used the text-less image so that I could create the header
+with an <h1> tag for improved SEO
+*/
+div#header {
+	background: url(../images/header.jpg);
+	height: 276px;
+	padding: 50px 70px 0 0;
+	margin-bottom: 60px;
+	text-align: right;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+div#header h1 {
+	color: #fff;
+	font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	text-shadow: 0 0 1px #111;
+}
+/* 
+I kept all of the text inside the <h1> because I wanted SEO to pick up all the words 
+in the title as part of the header text 
+*/
+div#header h1 div {
+	font-family: "Open Sans Bold", Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	line-height: 48px;
+	letter-spacing: -1.5px;
+	padding-top: 3px;
+}
+
+/* body content styles */
+
+/* navigation styles */
+/* 
+Once again I chose to use a box-shadow instead of the provided image because of page load efficiency
+I am also using "float: left;" for the navigation and content divs because I am anti-tables.
+*/
+div#nav {
+	float: left;
+	background-color: #ebeced;
+	-moz-box-shadow: inset -5px 0px 20px -2px #d1d5d6;
+  	-webkit-box-shadow: inset -5px 0px 20px -2px #d1d5d6;
+  	box-shadow: inset -5px 0px 20px -2px #d1d5d6;
+  	width: 300px;
+  	min-height: 620px;
+}
+/* 
+opted for CSS transitions for the nav menu
+went with an ease fade because I think subtle transitions make a better user experience
+*/
+div#nav a {
+	display: block;
+	border-bottom: solid 1px white;
+	font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	color: #9ba0a4;
+	line-height: 60px;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    text-align: right;
+}
+div#nav a:hover, div#nav a.selected {
+	background-color: white;
+	font-family: "Source Sans Pro SemiBold", Helvetica, Arial, sans-serif;
+	color: #36abe1;
+	border-bottom: solid 1px #d1d5d6;
+}
+div#nav a img {
+	width: 30px;
+	height: 25px;
+	margin: 18px 24px;
+}
+/* opted to use sprites for the icons for more efficient page load time */
+div#nav a#step1 img {
+	background: url(../images/icons/sprites/icons_small.png) 0 0;
+}
+div#nav a#step1:hover img, div#nav a#step1.selected img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -175px;
+}
+div#nav a#step2 img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -25px;
+}
+div#nav a#step2:hover img, div#nav a#step2.selected img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -200px;
+}
+div#nav a#step3 img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -50px;
+}
+div#nav a#step3:hover img, div#nav a#step3.selected img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -225px;
+}
+div#nav a#step4 img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -75px;
+}
+div#nav a#step4:hover img, div#nav a#step4.selected img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -250px;
+}
+div#nav a#step5 img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -100px;
+}
+div#nav a#step5:hover img, div#nav a#step5.selected img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -275px;
+}
+div#nav a#step6 img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -125px;
+}
+div#nav a#step6:hover img, div#nav a#step6.selected img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -300px;
+}
+div#nav a#step7 img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -150px;
+}
+div#nav a#step7:hover img, div#nav a#step7.selected img {
+	background: url(../images/icons/sprites/icons_small.png) 0 -325px;
+}
+
+/* content styles */
+div#content {
+	float: left;
+	width: 680px;
+}
+div#content div.step_content {
+	padding: 0 70px;
+	display: none;
+}
+
+/* 
+opted for css animation between steps because its more efficient than
+jQuery and I don't play with css animations much at my current job.
+It was fun :)
+*/
+div#content div.selected {
+	animation: fadein 1s;
+	-webkit-animation: fadein 1s;
+	-moz-animation: fadein 1s;
+	-o-animation: fadein 1s;
+	display: block;
+}
+@keyframes fadein {
+	0% { opacity: 0; }
+	100% { opacity: 100%; }
+}
+@-webkit-keyframes fadein {
+	0% { opacity: 0; }
+	100% { opacity: 100%; }
+}
+@-moz-keyframes fadein {
+	0% { opacity: 0; }
+	100% { opacity: 100%; }
+}
+@-o-keyframes fadein {
+	0% { opacity: 0; }
+	100% { opacity: 100%; }
+}
+
+/* floating the image left because I am anti-tables */
+div#content div.step_content img {
+	float: left;
+	margin-right: 15px;
+	width: 77px;
+	height: 65px;
+}
+/*
+using sprites again in the content div for faster page load time
+*/
+div#content div#step1_content img {
+	background: url(../images/icons/sprites/icons_large.png) 0 -455px;
+}
+div#content div#step2_content img {
+	background: url(../images/icons/sprites/icons_large.png) 0 -520px;
+}
+div#content div#step3_content img {
+	background: url(../images/icons/sprites/icons_large.png) 0 -585px;
+}
+div#content div#step4_content img {
+	background: url(../images/icons/sprites/icons_large.png) 0 -648px;
+}
+div#content div#step5_content img {
+	background: url(../images/icons/sprites/icons_large.png) 0 -713px;
+}
+div#content div#step6_content img {
+	background: url(../images/icons/sprites/icons_large.png) 0 -777.5px;
+}
+div#content div#step7_content img {
+	background: url(../images/icons/sprites/icons_large.png) 0 -842px;
+}
+/* content header */
+div#content div.step_content h1 {
+	font-family: "Source Sans Pro SemiBold", Helvetica, Arial, sans-serif;
+	font-size: 30px;
+	font-weight: normal;
+	color: #36abe1;
+	line-height: 20px;
+	padding: 8px 0 4px;
+}
+/* content sub-header */
+div#content div.step_content h2 {
+	font-family: "Source Sans Pro Light", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #5c6366;
+	line-height: 20px;
+	margin-bottom: 24px;
+}
+/* content paragraphs */
+div#content div.step_content p {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: #65686f;
+	line-height: 18px;
+	margin-bottom: 25px;
+}
+/* paragraph containing json data */
+div#content div.step_content p.friends {
+	font-size: 14px;
+	margin-top: 40px;
+}
+div#content div.step_content p.friends a {
+	color: #6fbee7;
+	text-decoration: none;
+}
+
+/* clear out floating objects */
+.clr {
+	clear: both;
+}
