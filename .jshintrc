@@ -16,6 +16,7 @@
   "newcap": true,
   "globals": {
     "jQuery": true,
+    "$": true,
     "module": true,
     "jasmine": true,
     "describe": true,
