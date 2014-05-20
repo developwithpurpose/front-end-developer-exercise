@@ -43,7 +43,7 @@ module.exports = function( grunt ) {
           }
         },
         lint: {
-          files: [ "<%= jshint.all %>", "app/**/*.html" ],
+          files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
           tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
         }
       },
