@@ -1,0 +1,330 @@
+.cf:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+* {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+a img {
+  border: none;
+}
+img,
+audio,
+canvas,
+video {
+  max-width: 100%;
+}
+body {
+  color: #65686f;
+  font: 13px Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+p {
+  margin-top: 24px;
+  line-height: 18px;
+}
+a {
+  color: #6fbee7;
+  text-decoration: none;
+}
+a:hover {
+  color: #64abd0;
+}
+.icon {
+  vertical-align: top;
+  display: inline-block;
+}
+.icon-small {
+  width: 30px;
+  height: 25px;
+  background-image: url("../../images/icons/sprites/icons_small.png");
+}
+.icon-small.icon-fund {
+  background-position: 0 0px;
+}
+.icon-small.icon-fund.icon-blue {
+  background-position: 0 -175px;
+}
+.icon-small.icon-snowball {
+  background-position: 0 -25px;
+}
+.icon-small.icon-snowball.icon-blue {
+  background-position: 0 -200px;
+}
+.icon-small.icon-savings {
+  background-position: 0 -50px;
+}
+.icon-small.icon-savings.icon-blue {
+  background-position: 0 -225px;
+}
+.icon-small.icon-retirement {
+  background-position: 0 -75px;
+}
+.icon-small.icon-retirement.icon-blue {
+  background-position: 0 -250px;
+}
+.icon-small.icon-college {
+  background-position: 0 -100px;
+}
+.icon-small.icon-college.icon-blue {
+  background-position: 0 -275px;
+}
+.icon-small.icon-house {
+  background-position: 0 -125px;
+}
+.icon-small.icon-house.icon-blue {
+  background-position: 0 -300px;
+}
+.icon-small.icon-wealth {
+  background-position: 0 -150px;
+}
+.icon-small.icon-wealth.icon-blue {
+  background-position: 0 -325px;
+}
+.icon-large {
+  width: 77px;
+  height: 65px;
+  background-image: url("../../images/icons/sprites/icons_large.png");
+}
+.icon-large.icon-fund {
+  background-position: 0 0px;
+}
+.icon-large.icon-fund.icon-blue {
+  background-position: 0 -455px;
+}
+.icon-large.icon-snowball {
+  background-position: 0 -65px;
+}
+.icon-large.icon-snowball.icon-blue {
+  background-position: 0 -520px;
+}
+.icon-large.icon-savings {
+  background-position: 0 -130px;
+}
+.icon-large.icon-savings.icon-blue {
+  background-position: 0 -585px;
+}
+.icon-large.icon-retirement {
+  background-position: 0 -195px;
+}
+.icon-large.icon-retirement.icon-blue {
+  background-position: 0 -650px;
+}
+.icon-large.icon-college {
+  background-position: 0 -260px;
+}
+.icon-large.icon-college.icon-blue {
+  background-position: 0 -715px;
+}
+.icon-large.icon-house {
+  background-position: 0 -325px;
+}
+.icon-large.icon-house.icon-blue {
+  background-position: 0 -780px;
+}
+.icon-large.icon-wealth {
+  background-position: 0 -390px;
+}
+.icon-large.icon-wealth.icon-blue {
+  background-position: 0 -845px;
+}
+.step {
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: .5s;
+          transition: .5s;
+  -webkit-transform: translate3d(0, -30px, 0);
+          transform: translate3d(0, -30px, 0);
+}
+.step.is-active {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+@media screen and (min-width: 980px) {
+  .step {
+    -webkit-transform: translate3d(-70px, 0, 0);
+            transform: translate3d(-70px, 0, 0);
+  }
+}
+.step-header {
+  position: relative;
+  padding-top: 10px;
+  padding-left: 97px;
+}
+.step-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.step-title {
+  color: #36abe1;
+  font: 600 30px/20px "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+.step-subtitle {
+  margin-top: 5px;
+  color: #5c6366;
+  font: 300 18px/20px "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+.step-friends {
+  margin-top: 40px;
+  color: #9ba0a4;
+  font-weight: bold;
+}
+body {
+  background: #bbbfc2;
+}
+.container-shadow {
+  margin: auto;
+  max-width: 980px;
+  border-radius: 0 0 25% 25%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+.container {
+  position: relative;
+  background: white;
+}
+.page-header {
+  padding: 30px 20px 60px;
+  background: #000000 url("../../images/header.jpg") no-repeat bottom right;
+  color: #fff;
+  text-align: right;
+}
+@media screen and (min-width: 980px) {
+  .page-header {
+    padding: 50px 70px;
+    height: 276px;
+    background-position: center;
+  }
+}
+.site-title {
+  font-family: "Open Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+.site-title .part-1 {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1;
+}
+.site-title .part-2 {
+  display: block;
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 1;
+}
+@media screen and (min-width: 980px) {
+  .site-title .part-1 {
+    font-size: 32px;
+  }
+  .site-title .part-2 {
+    font-size: 50px;
+    line-height: 48px;
+  }
+}
+.page-main {
+  display: block;
+}
+@media screen and (min-width: 980px) {
+  .page-main {
+    margin-top: 60px;
+    background: url("../../images/shadow_left_nav.jpg") repeat-y;
+  }
+  .page-main:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+@media screen and (min-width: 980px) {
+  .nav {
+    float: left;
+    width: 300px;
+  }
+}
+.content {
+  padding: 30px;
+}
+@media screen and (min-width: 980px) {
+  .content {
+    float: left;
+    padding: 0 70px;
+    min-height: 680px;
+    width: 680px;
+  }
+}
+.nav {
+  background: #ebeced;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+.nav:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.nav li {
+  float: left;
+  width: 14.285714286%;
+  box-shadow: 0 1px #fff;
+}
+.nav a {
+  display: block;
+  color: #9ba0a4;
+  line-height: 60px;
+}
+.nav a.is-active {
+  background: white;
+  color: #36abe1;
+  font-weight: 600;
+  -webkit-transition: .5s;
+          transition: .5s;
+}
+.nav .step-nav-label {
+  display: none;
+}
+@media screen and (min-width: 980px) {
+  .nav {
+    background: transparent;
+    text-align: right;
+  }
+  .nav li {
+    float: none;
+    width: 100%;
+  }
+  .nav a {
+    padding: 0 24px;
+  }
+  .nav .step-nav-label {
+    display: inline;
+  }
+  .nav .step-nav-icon {
+    margin-left: 27px;
+  }
+}
+.step-nav-icon {
+  margin-top: 17px;
+}

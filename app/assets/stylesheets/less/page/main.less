@@ -1,0 +1,39 @@
+//
+// MAIN PAGE CONTENT
+//
+
+
+// PAGE MAIN WRAPPER
+
+.page-main {
+  display: block; // we have to explicitly set this for IE
+  @media @mq-lg-min {
+    margin-top: 60px;
+    background: url("@{pth-img}shadow_left_nav.jpg") repeat-y;
+
+    .cf;
+  }
+}
+
+
+// PAGE NAVIGATION
+
+.nav {
+  @media @mq-lg-min {
+    float: left;
+    width: 300px;
+  }
+}
+
+
+// PAGE CONTENT
+
+.content {
+  padding: 30px;
+  @media @mq-lg-min {
+    float: left;
+    padding: 0 70px;
+    min-height: 680px;
+    width: 680px;
+  }
+}

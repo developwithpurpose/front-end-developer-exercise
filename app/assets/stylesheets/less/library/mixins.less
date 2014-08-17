@@ -1,0 +1,22 @@
+//
+// MIXINS
+//
+
+
+// MICRO CLEARFIX (http://css-tricks.com/snippets/css/clear-fix/)
+
+.cf {
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+
+// SMOOTHER FONT ANTIALIASING
+
+.font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,180 @@
+//
+// ICONS
+//
+
+
+// MODULE-SPECIFIC MIXINS
+
+.icon-position(@offset, @large, @blue) when (@large = false) and (@blue = false) {
+  @icon-x: 30px;
+  @icon-y: 25px;
+
+  @offset-distance: -(@offset * @icon-y);
+
+  background-position: 0 @offset-distance;
+}
+
+.icon-position(@offset, @large, @blue) when (@large = false) and (@blue = true) {
+  @icon-x: 30px;
+  @icon-y: 25px;
+
+  @offset-distance: -((@offset * @icon-y) + (@icon-y * 7));
+
+  background-position: 0 @offset-distance;
+}
+
+.icon-position(@offset, @large, @blue) when (@large = true) and (@blue = false) {
+  @icon-x: 77px;
+  @icon-y: 65px;
+
+  @offset-distance: -(@offset * @icon-y);
+
+  background-position: 0 @offset-distance;
+}
+
+.icon-position(@offset, @large, @blue) when (@large = true) and (@blue = true) {
+  @icon-x: 77px;
+  @icon-y: 65px;
+
+  @offset-distance: -((@offset * @icon-y) + (@icon-y * 7));
+
+  background-position: 0 @offset-distance;
+}
+
+
+// BASE ICON CLASS
+
+.icon {
+  vertical-align: top;
+  display: inline-block;
+}
+
+
+// SMALL ICONS
+
+.icon-small {
+  width: 30px;
+  height: 25px;
+  background-image: url("@{pth-img}icons/sprites/icons_small.png");
+
+  &.icon-fund {
+    .icon-position(0, false, false);
+
+    &.icon-blue {
+      .icon-position(0, false, true);
+    }
+  }
+
+  &.icon-snowball {
+    .icon-position(1, false, false);
+
+    &.icon-blue {
+      .icon-position(1, false, true);
+    }
+  }
+
+  &.icon-savings {
+    .icon-position(2, false, false);
+
+    &.icon-blue {
+      .icon-position(2, false, true);
+    }
+  }
+
+  &.icon-retirement {
+    .icon-position(3, false, false);
+
+    &.icon-blue {
+      .icon-position(3, false, true);
+    }
+  }
+
+  &.icon-college {
+    .icon-position(4, false, false);
+
+    &.icon-blue {
+      .icon-position(4, false, true);
+    }
+  }
+
+  &.icon-house {
+    .icon-position(5, false, false);
+
+    &.icon-blue {
+      .icon-position(5, false, true);
+    }
+  }
+
+  &.icon-wealth {
+    .icon-position(6, false, false);
+
+    &.icon-blue {
+      .icon-position(6, false, true);
+    }
+  }
+}
+
+
+// LARGE ICONS
+
+.icon-large {
+  width: 77px;
+  height: 65px;
+  background-image: url("@{pth-img}icons/sprites/icons_large.png");
+
+  &.icon-fund {
+    .icon-position(0, true, false);
+
+    &.icon-blue {
+      .icon-position(0, true, true);
+    }
+  }
+
+  &.icon-snowball {
+    .icon-position(1, true, false);
+
+    &.icon-blue {
+      .icon-position(1, true, true);
+    }
+  }
+
+  &.icon-savings {
+    .icon-position(2, true, false);
+
+    &.icon-blue {
+      .icon-position(2, true, true);
+    }
+  }
+
+  &.icon-retirement {
+    .icon-position(3, true, false);
+
+    &.icon-blue {
+      .icon-position(3, true, true);
+    }
+  }
+
+  &.icon-college {
+    .icon-position(4, true, false);
+
+    &.icon-blue {
+      .icon-position(4, true, true);
+    }
+  }
+
+  &.icon-house {
+    .icon-position(5, true, false);
+
+    &.icon-blue {
+      .icon-position(5, true, true);
+    }
+  }
+
+  &.icon-wealth {
+    .icon-position(6, true, false);
+
+    &.icon-blue {
+      .icon-position(6, true, true);
+    }
+  }
+}
