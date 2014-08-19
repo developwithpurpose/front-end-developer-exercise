@@ -35,7 +35,7 @@ Assets
 
 Any image you need can be found in the `./app/assets/images` directory. Some images have been sliced in multiple ways, so use whichever you feel make the most sense to use, or not at all if you feel you don't need to.
 
-Please use jQuery if you decide you need a JavaScript framework.
+Please use jQuery if you decide you need a JavaScript library.
 
 If you use a preprocessor of any kind, include the source code as well as the compiled output.
 
