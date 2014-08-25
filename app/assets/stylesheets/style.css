@@ -1,0 +1,150 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	background-color:#bbbfc2;
+}
+
+#outside-container {
+	width:1010px;
+	height:966px;
+	margin-left:auto;
+	margin-right:auto;
+	background-image: url("../images/shadow_left.jpg"), url("../images/shadow_right.jpg"), url("../images/shadow_bottom.jpg");
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-position: left top, right top, bottom;
+}
+
+#container {
+	width:980px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#fff;
+}
+
+header {
+	width:980px;
+	height:336px;
+	background-color:#fff;
+	background:url("../images/header.jpg") no-repeat;
+	text-align:right;
+}
+
+header h1 {
+	font-family:'Open Sans', sans-serif;
+	font-weight:300;
+	font-size:32px;
+	color:#fff;
+	display:block;
+	padding:50px 70px 0 0;
+}
+
+header h1#heading-bold {
+	font-weight:600;
+	font-size:50px;
+	line-height:48px;
+	text-transform:uppercase;
+	padding:15px 70px 0 0;
+}
+
+/********************* Fonts *********************/
+
+h1 {
+	font-family:'Open Sans', sans-serif;
+	font-weight:400;
+	font-size:30px;
+	color:#36abe1;
+	line-height:34px;
+	display:inline;
+}
+
+h2 {
+	font-family:'Open Sans', sans-serif;
+	font-weight:300;
+	font-size:18px;
+	color:#5c6366;
+	line-height:20px;
+}
+
+p {
+	font-family: Helvetica, sans-serif;
+	font-size:13px;
+	color:#65686f;
+	line-height:18px;
+	margin:24px 0px 0px 0px;
+}
+
+h4 {
+	font-family: Helvetica, sans-serif;
+	font-size:13px;
+	color:#65686f;
+	margin-top:40px;
+}
+
+/********************* Aside *********************/
+
+aside {
+	background:#ebeced url("../images/shadow_left_nav.jpg") repeat-y;
+	width:300px;
+	height:600px;
+	display:inline;
+	float:left;
+}
+
+ul {
+	list-style-type:none;
+}
+
+li {
+	font-family:'Open Sans', sans-serif;
+	font-weight:400;
+	font-size:18px;
+	color:#9ba0a4;
+	line-height:60px;
+	border-bottom:1px solid #fff;
+	width:300px;
+	text-align:right;
+}
+
+li a {
+	color:#9ba0a4;
+	line-height:60px;
+	text-decoration:none;
+}
+
+li a:hover {
+	color:#36abe1;
+	line-height:60px;
+	text-decoration:none;
+}
+
+li img {
+	padding:0px 24px 0px;
+	line-height:25px;
+}
+
+/********************* Section *********************/
+
+section {
+	background-color:#fff;
+	width:540px;
+	height:596px;
+	display:inline;
+	float:left;
+	padding:4px 70px 0px;
+}
+
+.bs-step {
+    position:relative;
+  	padding-top: 5px;
+  	padding-left: 90px;
+	height:60px;
+}
+
+img.bs-icon {
+    position:absolute;
+	top:0;
+	left:0;
+}
