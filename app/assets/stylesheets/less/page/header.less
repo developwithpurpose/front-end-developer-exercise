@@ -1,0 +1,42 @@
+//
+// PAGE HEADER
+//
+
+
+.page-header {
+  padding: 30px 20px 60px;
+  background: #000 url("@{pth-img}header.jpg") no-repeat bottom right;
+  color: #fff;
+  text-align: right;
+  @media @mq-lg-min {
+    padding: 50px 70px;
+    height: 276px;
+    background-position: center;
+  }
+}
+
+.site-title {
+  font-family: @ff-headings-alt;
+  .part-1 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .part-2 {
+    display: block;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 1;
+  }
+  @media @mq-lg-min {
+    .part-1 {
+      font-size: 32px;
+    }
+    .part-2 {
+      font-size: 50px;
+      line-height: 48px;
+    }
+  }
+}

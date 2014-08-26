@@ -1,0 +1,51 @@
+//
+// STEP
+//
+
+
+.step {
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: .5s;
+  transform: translate3d(0, -30px, 0);
+  &.is-active {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  @media @mq-lg-min {
+    transform: translate3d(-70px, 0, 0);
+  }
+}
+
+.step-header {
+  position: relative;
+  padding-top: 10px;
+  padding-left: 97px;
+}
+
+.step-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.step-title {
+  color: @co-text-titles;
+  font: 600 30px/20px @ff-headings;
+}
+
+.step-subtitle {
+  margin-top: 5px;
+  color: @co-text-subtitles;
+  font: 300 18px/20px @ff-headings;
+}
+
+.step-friends {
+  margin-top: 40px;
+  color: @co-text-nav-links;
+  font-weight: bold;
+}

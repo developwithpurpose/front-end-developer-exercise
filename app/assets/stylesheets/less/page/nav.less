@@ -1,0 +1,53 @@
+//
+// NAVIGATION
+//
+
+
+.nav {
+  background: @co-bg-nav;
+  text-align: center;
+  font-size: 18px;
+  font-family: @ff-headings;
+
+  .cf;
+  li {
+    float: left;
+    width: 14.285714286%; // 100/7
+    box-shadow: 0 1px #fff;
+  }
+  a {
+    display: block;
+    color: @co-text-nav-links;
+    line-height: 60px;
+    &.is-active {
+      background: white;
+      color: @co-text-titles;
+      font-weight: 600;
+      transition: .5s;
+    }
+  }
+  .step-nav-label {
+    display: none;
+  }
+  @media @mq-lg-min {
+    background: transparent;
+    text-align: right;
+    li {
+      float: none;
+      width: 100%;
+    }
+    a {
+      padding: 0 24px;
+    }
+    .step-nav-label {
+      display: inline;
+    }
+    .step-nav-icon {
+      margin-left: 27px;
+    }
+  }
+}
+
+.step-nav-icon {
+  margin-top: 17px;
+}
