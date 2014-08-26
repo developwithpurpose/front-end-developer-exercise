@@ -1,0 +1,142 @@
+body {
+	background-color: #bbbfc2;
+}
+
+a {
+	color: #6fbee7;
+	text-decoration: none;
+}
+
+#shadowBox {
+    margin-left: auto;
+    margin-right: auto;
+	width: 1010px;
+}
+
+#shadowBox > img {
+	display: inline-block;
+}
+
+#contentContainer {
+	background-color: white;
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	width: 980px;
+}
+
+#navigationContainer {
+	/* 
+		Repeat a 1px image vertically to create gradient.
+	   Avoids browser compatibility issues using CSS's 
+	   'gradient' attribute.
+	*/
+    background: url(../images/shadow_left_nav.jpg);
+	background-repeat: repeat-y;
+	color: #9ba0a4;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 60px;
+	text-align: right;
+	vertical-align: middle;
+	width: 300px;
+}
+
+#navigationContainer img {
+	margin-left: 16px;
+	vertical-align: middle;
+}
+
+#stepContainer {
+	padding-left: 70px;
+	padding-right: 70px;
+	width: 516px;
+}
+
+#navFooter {
+	height: 160px;
+}
+
+.contentColumn {
+	display: inline-block;
+	margin-top: 60px;
+	vertical-align: top;
+}
+
+.navItem {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+	border-bottom-color: white;
+	cursor: pointer;
+	padding-right: 24px;
+}
+
+.selectedNavItem {
+	background: white;
+	color: #36abe1;
+	font-weight: 600;
+}
+
+.stepDescr {
+	color: #65686f;
+	display: none;
+	font-family: 'Helvetica';
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.stepTitle {
+	color: #36abe1;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.stepSubTitle {	
+	color: #5c6366;
+	font-size: 18px;
+	font-weight: 300;
+	padding-top:4px;
+}
+
+.selectedImage {
+	display:none;
+}
+
+.stepHeaderImage {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.stepHeaderText {
+	display: inline-block;
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 20px;
+	margin-left: 8px;
+	vertical-align: middle;
+}
+
+.stepHeaderText + p {
+	margin-top: 0px;
+	padding-top: 24px;
+}
+
+.socialContainer {
+	margin-top: 40px;
+}
+
+/*Unhide elements on the first step for the user
+  to view upon first accessing the site. This
+  avoids the user having to wait for document.ready()*/
+
+.initialStepDescr {
+	display: inline;
+}
+
+.initialSelectedNavItemImg {
+	display: inline-block;
+}
+
+.initialUnselectedNavItemImg {
+	display: none;
+}
