@@ -58,10 +58,8 @@ $.loadFriends = function() {
                 friendCount++;
             }
         });
-
         //Set friends names        
         $('#friendsNames' + stepNo).html(friendNames);
-
         //Set friends follow message
         if (friendCount == 0) {
             $('#friendsMsg' + stepNo).html(' ');
