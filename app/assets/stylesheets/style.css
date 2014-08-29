@@ -1,0 +1,196 @@
+﻿html {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:100;
+  color: #5c6366;
+  font-size: 18px;
+  line-height:20px;
+}
+
+body {
+    background-color:#bbbfc2;
+}
+
+.floatLeft {
+    float:left;
+}
+
+.floatRight {
+    float:right;
+}
+
+.floatClear {
+  clear:both;
+}
+
+/*Contrainer Styles - Begin*/
+.containerShadows {
+    width:1010px; 
+    margin-left: auto;  
+    margin-right: auto;
+}
+
+.container {
+    max-width:980px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.whiteBackground {
+    background-color:white;
+}
+
+.stepContainer {
+    width:70%;
+    height:500px;
+    overflow:hidden;
+}
+
+.stepContent {
+    margin-left:70px;
+    margin-right:70px;
+    height:500px;
+}
+
+.stepContent {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:13px;
+    color: #65686f;
+}
+
+.allSteps {
+    position:relative;
+}
+
+.content {
+    padding-top:60px;
+    overflow:hidden;
+}
+/*Contrainer Styles - End*/
+
+/*Side Menu Style - Begin*/
+.sideMenu {
+    padding:0px;
+    margin:0px;
+    top:-60px;
+    position:relative;
+}
+
+.sideMenu li {
+    border-bottom:1px solid white;
+    list-style-type:none;
+    list-style:none;
+    
+    color:#9ba0a4;
+    line-height:60px;
+    width:100%;
+    margin:0px;
+    padding:0px;
+}
+
+.sideMenu a {
+    display:block;
+    padding-right:55px;
+    margin-right:24px;
+    text-align:right;
+}
+
+.sideMenu a:hover {
+    cursor:pointer;
+}
+
+.step a {
+   background-position:right;
+   background-repeat:no-repeat;
+}
+
+.step.selected a {
+    color:#36abe1;
+    font-weight:600;
+}
+
+.step1 a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs1.png);
+}
+
+.step1.selected a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs1_blue.png);
+}
+
+.step2 a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs2.png);
+}
+
+.step2.selected a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs2_blue.png);
+}
+
+.step3 a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs3.png);
+}
+
+.step3.selected a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs3_blue.png);
+}
+
+.step4 a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs4.png);
+}
+
+.step4.selected a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs4_blue.png);
+}
+
+.step5 a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs5.png);
+}
+
+.step5.selected a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs5_blue.png);
+}
+
+.step6 a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs6.png);
+}
+
+.step6.selected a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs6_blue.png);
+}
+
+.step7 a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs7.png);
+}
+
+.step7.selected a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs7_blue.png);
+}
+
+.sideNav {
+    background-image:url(/app/assets/images/shadow_left_nav.jpg);
+    background-repeat:repeat-y;
+    width:30%;
+    height:500px;
+    position:relative;
+    overflow:hidden;
+}
+
+.selectedBackSlider {
+    background-color:white;
+    height:60px;
+    top:0px;
+    position:relative;
+}
+
+/*Side Menu Style - End*/
+
+/*Friend Message Style - Begin*/
+
+.frends {
+    padding-top:20px;
+}
+
+.friends a {
+    color:#6fbee7;
+    font-weight:bold;
+}
+
+/*Friend Message Style - End*/
