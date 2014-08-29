@@ -98,102 +98,70 @@ body {
     cursor:pointer;
 }
 
-.step1 a {
-    background-image:url(/app/assets/images/icons/individual/icons_small_bs1.png);
-    background-position:right;
-    background-repeat:no-repeat;
+.step a {
+   background-position:right;
+   background-repeat:no-repeat;
 }
 
-.step1_sel a {
-    background-image:url(/app/assets/images/icons/individual/icons_small_bs1_blue.png);
-    background-position:right;
-    background-repeat:no-repeat;
+.step.selected a {
     color:#36abe1;
     font-weight:600;
+}
+
+.step1 a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs1.png);
+}
+
+.step1.selected a {
+    background-image:url(/app/assets/images/icons/individual/icons_small_bs1_blue.png);
 }
 
 .step2 a {
     background-image:url(/app/assets/images/icons/individual/icons_small_bs2.png);
-    background-position:right;
-    background-repeat:no-repeat;
 }
 
-.step2_sel a {
+.step2.selected a {
     background-image:url(/app/assets/images/icons/individual/icons_small_bs2_blue.png);
-    background-position: right;
-    background-repeat:no-repeat;
-    color:#36abe1;
-    font-weight:600;
 }
 
 .step3 a {
     background-image:url(/app/assets/images/icons/individual/icons_small_bs3.png);
-    background-position:right;
-    background-repeat:no-repeat;
 }
 
-.step3_sel a {
+.step3.selected a {
     background-image:url(/app/assets/images/icons/individual/icons_small_bs3_blue.png);
-    background-position:right;
-    background-repeat:no-repeat;
-    color:#36abe1;
-    font-weight:600;
 }
 
 .step4 a {
     background-image:url(/app/assets/images/icons/individual/icons_small_bs4.png);
-    background-position:right;
-    background-repeat:no-repeat;
 }
 
-.step4_sel a {
+.step4.selected a {
     background-image:url(/app/assets/images/icons/individual/icons_small_bs4_blue.png);
-    background-position:right;
-    background-repeat:no-repeat;
-    color:#36abe1;
-    font-weight:600;
 }
 
 .step5 a {
     background-image:url(/app/assets/images/icons/individual/icons_small_bs5.png);
-    background-position:right;
-    background-repeat:no-repeat;
 }
 
-.step5_sel a {
+.step5.selected a {
     background-image:url(/app/assets/images/icons/individual/icons_small_bs5_blue.png);
-    background-position:right;
-    background-repeat:no-repeat;
-    color:#36abe1;
-    font-weight:600;
 }
 
 .step6 a {
     background-image:url(/app/assets/images/icons/individual/icons_small_bs6.png);
-    background-position:right;
-    background-repeat:no-repeat;
 }
 
-.step6_sel a {
+.step6.selected a {
     background-image:url(/app/assets/images/icons/individual/icons_small_bs6_blue.png);
-    background-position:right;
-    background-repeat:no-repeat;
-    color:#36abe1;
-    font-weight:600;
 }
 
 .step7 a {
     background-image:url(/app/assets/images/icons/individual/icons_small_bs7.png);
-    background-position:right;
-    background-repeat:no-repeat;
 }
 
-.step7_sel a {
+.step7.selected a {
     background-image:url(/app/assets/images/icons/individual/icons_small_bs7_blue.png);
-    background-position:right;
-    background-repeat:no-repeat;
-    color:#36abe1;
-    font-weight:600;
 }
 
 .sideNav {
@@ -205,7 +173,7 @@ body {
     overflow:hidden;
 }
 
-.selected {
+.selectedBackSlider {
     background-color:white;
     height:60px;
     top:0px;
