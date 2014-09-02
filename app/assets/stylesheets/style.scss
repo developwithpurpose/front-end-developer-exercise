@@ -26,7 +26,7 @@ body {
 	height: 800px;
 	margin-left: auto;
 	margin-right: auto;
-	background-image: url("../images/shadow_left.jpg"), url("../images/shadow_right.jpg"), url("../images/shadow_bottom.jpg");
+	//background-image: url("../images/shadow_left.jpg"), url("../images/shadow_right.jpg"), url("../images/shadow_bottom.jpg");
 	background-repeat: no-repeat, no-repeat, no-repeat;
 	background-position: left top, right top, bottom;
     
@@ -41,7 +41,7 @@ body {
 }
 
 #canvas {
-	width: 98.07%;
+	width: 78%;//98.07% > 78%
 	margin-left: auto;
 	margin-right: auto;
 	background-color: $background-color;
