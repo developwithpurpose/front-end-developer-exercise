@@ -46,8 +46,11 @@ This package has a `Gruntfile.js` that you can use to serve up your application.
 
 ```
 npm install
-grunt connect
-open http://localhost:9001/app/index.html
+bower install
+grunt build
+grunt server
+http://localhost:9000/app/index.html
+grunt jasmine
 ```
 
 Dynamic Content

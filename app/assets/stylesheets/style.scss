@@ -1,0 +1,360 @@
+@import 'reset';
+
+/*=============================================================
+  ==========================variables==========================
+=============================================================*/
+
+$baby-step-active: #36abe1;
+$baby-step-inactive: #9ba0a4;
+$grey: #65686f;
+$background-color: #ffffff;
+$friends-highlight: #6fbee7;
+
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 480px;
+
+/*=============================================================
+  ==========================design=============================
+=============================================================*/
+
+body {
+	background-color: #bbbfc2;
+}
+
+#canvas-wrapper {
+	width: 79%;
+	height: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	//background-image: url("../images/shadow_left.jpg"), url("../images/shadow_right.jpg"), url("../images/shadow_bottom.jpg");
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-position: left top, right top, bottom;
+    
+    @media screen and (min-width: $tablet-breakpoint) {
+        overflow: hidden;
+    }
+    
+    @media screen and (max-width: $mobile-breakpoint) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+#canvas {
+	width: 78%;//98.07% > 78%
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $background-color;
+	
+	@media screen and (max-width: $mobile-breakpoint) {
+        width: 125%;
+    }
+}
+
+header {
+	width: 100%;
+	height: 336px;
+	background-color: $background-color;
+	background: url("../images/header.jpg") no-repeat;
+	text-align: right;
+	
+	h1 {
+    	font-family: 'Open Sans', sans-serif;
+    	font-weight: 300;
+    	font-size: 32px;
+    	color: $background-color;
+    	display: block;
+    	padding: 50px 70px 0 0;
+    	
+    	@media screen and (max-width: $tablet-breakpoint) {
+            font-size: 1.5em;
+        }
+    }
+
+    h1#heading-bold {
+    	font-weight: 600;
+    	font-size: 50px;
+    	line-height: 48px;
+    	text-transform: uppercase;
+    	padding: 0 70px 0 0;
+    	
+    	@media screen and (max-width: $tablet-breakpoint) {
+            font-size: 3em;
+        }
+    }
+}
+
+
+
+/*=============================================================
+  ==========================fonts==============================
+=============================================================*/
+
+h1 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	font-size: 30px;
+	color: $baby-step-active;
+	line-height: 34px;
+	display: inline;
+	
+	@media screen and (max-width: $tablet-breakpoint) {
+        font-size: 24px;
+    }
+    
+    @media screen and (max-width: $mobile-breakpoint) {
+        font-size: 16px;
+    }
+}
+
+h2 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #5c6366;
+	line-height: 20px;
+	
+	@media screen and (max-width: $tablet-breakpoint) {
+        font-size: 14px;
+    }
+    
+    @media screen and (max-width: $mobile-breakpoint) {
+        font-size: 12px;
+    }
+}
+
+p {
+	font-family: Helvetica, sans-serif;
+	font-size: 13px;
+	color: $grey;
+	line-height: 18px;
+	margin: 24px 0px 0px 0px;
+}
+
+section {
+	font-family: Helvetica, sans-serif;
+	font-size: 13px;
+	color: $grey;
+}
+
+h4 {
+	font-family: Helvetica, sans-serif;
+	font-size: 13px;
+	color: $grey;
+	margin-top: 40px;
+}
+
+em {
+    font-style: normal;
+}
+
+
+/*=============================================================
+  ==========================baby-steps=========================
+=============================================================*/
+
+nav {
+    background: #ebeced url("../images/shadow_left_nav.jpg") repeat-y;
+    width: 30%;
+    height: 500px;
+    position: relative;
+    float: left;
+    
+    @media screen and (max-width: $tablet-breakpoint) {
+        display: none;
+    }
+}
+
+div.slider {
+    background-color: $background-color;
+    height: 60px;
+    top: 0px;
+    position: relative;
+    z-index: 10;
+}
+
+ul.baby-steps {
+    margin: 0;
+    padding: 0;
+    margin-top: -60px;
+    
+	width: 100%;
+	height: 600px;
+	display: inline;
+	float: left;
+	list-style-type: none;
+	z-index: 20;
+	position: relative;
+	
+	li {
+    	font-family: 'Source Sans Pro', sans-serif;
+    	font-weight: 400;
+    	font-size: 18px;
+    	color: $baby-step-inactive;
+    	line-height: 60px;
+    	border-bottom: 1px solid $background-color;
+    	width: 100%;
+    	text-align: center;
+    	cursor: pointer; 
+    	cursor: hand;
+    }
+    
+    li.baby-step-1 {
+        background: url("../images/icons/individual/icons_small_bs1.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-1.active {
+        color: $baby-step-active;
+        background: url("../images/icons/individual/icons_small_bs1_blue.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-2 {
+        background: url("../images/icons/individual/icons_small_bs2.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-2.active {
+        color: $baby-step-active;
+        background: url("../images/icons/individual/icons_small_bs2_blue.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-3 {
+        background: url("../images/icons/individual/icons_small_bs3.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-3.active {
+        color: $baby-step-active;
+        background: url("../images/icons/individual/icons_small_bs3_blue.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-4 {
+        background: url("../images/icons/individual/icons_small_bs1.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-4.active {
+        color: $baby-step-active;
+        background: url("../images/icons/individual/icons_small_bs4_blue.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-5 {
+        background: url("../images/icons/individual/icons_small_bs5.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-5.active {
+        color: $baby-step-active;
+        background: url("../images/icons/individual/icons_small_bs5_blue.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-6 {
+        background: url("../images/icons/individual/icons_small_bs6.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-6.active {
+        color: $baby-step-active;
+        background: url("../images/icons/individual/icons_small_bs6_blue.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-7 {
+        background: url("../images/icons/individual/icons_small_bs7.png") no-repeat 90% 50%;
+    }
+
+    li.baby-step-7.active {
+        color: $baby-step-active;
+        background: url("../images/icons/individual/icons_small_bs7_blue.png") no-repeat 90% 50%;
+    }
+    
+}
+
+/*=============================================================
+  ==========================sections===========================
+=============================================================*/
+
+aside {
+    overflow: hidden;
+    position: relative;
+}
+
+article {
+    position: relative;
+    overflow: hidden;
+}
+
+section {
+	background-color: $background-color;
+	float: left;
+	padding:4px 70px 0px;
+	height: 496px;
+	
+	@media screen and (max-width: $tablet-breakpoint) {
+        height: 400px;
+    }
+    
+    @media screen and (max-width: $mobile-breakpoint) {
+        height: 600px;
+    }
+}
+
+.bs-heading {
+    position: relative;
+  	padding-top: 5px;
+  	padding-left: 90px;
+	height: 60px;
+}
+
+img.bs-icon {
+    position: absolute;
+	top: 0;
+	left: 0;
+}
+
+section.baby-step-section-1 .bs-heading {
+    background: $background-color url("../images/icons/individual/icons_large_bs1_blue.png") no-repeat 0% 50%;
+}
+
+section.baby-step-section-2 .bs-heading {
+    background: $background-color url("../images/icons/individual/icons_large_bs2_blue.png") no-repeat 0% 50%;
+}
+
+section.baby-step-section-3 .bs-heading {
+    background: $background-color url("../images/icons/individual/icons_large_bs3_blue.png") no-repeat 0% 50%;
+}
+
+section.baby-step-section-4 .bs-heading {
+    background: $background-color url("../images/icons/individual/icons_large_bs4_blue.png") no-repeat 0% 50%;
+}
+
+section.baby-step-section-5 .bs-heading {
+    background: $background-color url("../images/icons/individual/icons_large_bs5_blue.png") no-repeat 0% 50%;
+}
+
+section.baby-step-section-6 .bs-heading {
+    background: $background-color url("../images/icons/individual/icons_large_bs6_blue.png") no-repeat 0% 50%;
+}
+
+section.baby-step-section-7 .bs-heading {
+    background: $background-color url("../images/icons/individual/icons_large_bs7_blue.png") no-repeat 0% 50%;
+}
+
+
+/*=============================================================
+  ==========================footer===========================
+=============================================================*/
+
+footer {
+    padding-bottom: 20px;
+    background-image: url("../images/shadow_bottom.jpg");
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+/*=============================================================
+  ==========================friends============================
+=============================================================*/
+
+section div.friends {
+    margin-top: 20px;
+    
+    em {
+        color: $friends-highlight;
+        font-weight: bold;
+    }
+}
