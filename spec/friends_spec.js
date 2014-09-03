@@ -6,7 +6,7 @@ describe("Friends collection", function() {
           url: "/app/assets/javascripts/baby-steps.json"
       });
       
-      expect(friends.url).toEqual("/app/assets/javascripts/baby-steps.json");
+      expect(friends.url).toEqual("assets/javascripts/baby-steps.json");
     });
   });
   
@@ -14,7 +14,7 @@ describe("Friends collection", function() {
       it("should return the collection URL", function() {
           var friends = new Friends();
           
-          expect(friends.url).toEqual("/app/assets/javascripts/baby-steps.json");
+          expect(friends.url).toEqual("assets/javascripts/baby-steps.json");
       });
   });
   
