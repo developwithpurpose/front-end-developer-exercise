@@ -245,7 +245,7 @@ body {
 .article-container {
     float: left;
     margin-right: 70px;
-    max-height: 325px;
+    max-height: 315px;
     overflow: hidden;
     width: 540px;
 }

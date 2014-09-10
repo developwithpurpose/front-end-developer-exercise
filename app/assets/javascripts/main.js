@@ -17,7 +17,6 @@ $(document).ready(function() {
     });
   });
 
-
   $step.one('click', function() {
     var stepNumber = $(this).data("toggle");
 
