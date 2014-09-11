@@ -59,10 +59,6 @@ $(document).ready(function() {
         message = message.length > 0 ? (message + " also in Baby Step " + stepNumber) : "";
         var el = document.getElementById('step-' + stepNumber);
         el.innerHTML = el.innerHTML + "<p class='friends'>" + message + "</p>";
-        // $('#results').html(
-        //   'First name: ' + arrayItem.firstName
-        //   + '<br />Author: ' + arrayItem.lastName
-        //   + '<br />Baby Step: ' + );
       }
     });
     return false;
