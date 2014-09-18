@@ -1,0 +1,227 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700);
+
+body{
+  background-color: #bbbfc2;
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  width: 980px;
+  margin: auto;
+  background: #fff;
+}
+  .container:before{
+    width: 15px;
+    height: 724px;
+    content: "";
+    display: block;
+    background: url('../images/shadow_left.jpg') no-repeat left top;
+    position: absolute;
+    top: 0;
+    margin-left: -15px;
+  }
+  .container:after{
+    width: 15px;
+    height: 724px;
+    content: "";
+    display: block;
+    background: url('../images/shadow_right.jpg') no-repeat left top;
+    position: absolute;
+    top: 0;
+    margin-left: 980px;
+  }
+
+  /* Header */
+  .header{
+    height: 226px;
+    background: url('../images/header.jpg') no-repeat left top;
+    margin-bottom: 60px;
+    padding: 50px 70px 0 0;
+  }
+    .header h1{
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 300;
+      font-size: 32px;
+      color: #fff;
+      text-align: right;
+    }
+    .header h1 strong{
+      font-size: 50px;
+      display: block;
+      text-transform: uppercase;
+      line-height: 48px;
+      margin-top: 3px;
+    }
+
+
+  /* Sidebar */
+  .sidebar{
+    float: left;
+    width: 300px;
+    background: url('../images/shadow_left_nav.jpg');
+    min-height: 520px;
+  }
+    .sidebar ul{
+      position: relative;
+      z-index: 1000;
+    }
+    .sidebar ul li{
+      list-style: none;
+      height: 59px;
+      line-height: 60px;
+      border-bottom: 1px solid #fff;
+      text-align: right;
+      padding: 0 24px 0 0;
+    }
+    .sidebar li a{
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: #9ba0a4;
+      text-decoration: none;
+      height: 25px;
+      line-height: 25px;
+      display: inline-block;
+      background: url('../images/icons/sprites/icons_small.png') no-repeat right top;
+      padding-right: 60px;
+    }
+    .sidebar li.active a{
+      color: #36abe1;
+      font-weight: 600;
+    }
+      .sidebar li a.step-1{
+        background-position: right 0px;
+      }
+      .sidebar li.active a.step-1{
+        background-position: right -175px;
+      }
+      .sidebar li a.step-2{
+        background-position: right -25px;
+      }
+      .sidebar li.active a.step-2{
+        background-position: right -200px;
+      }
+      .sidebar li a.step-3{
+        background-position: right -50px;
+      }
+      .sidebar li.active a.step-3{
+        background-position: right -225px;
+      }
+      .sidebar li a.step-4{
+        background-position: right -75px;
+      }
+      .sidebar li.active a.step-4{
+        background-position: right -250px;
+      }
+      .sidebar li a.step-5{
+        background-position: right -100px;
+      }
+      .sidebar li.active a.step-5{
+        background-position: right -275px;
+      }
+      .sidebar li a.step-6{
+        background-position: right -125px;
+      }
+      .sidebar li.active a.step-6{
+        background-position: right -300px;
+      }
+      .sidebar li a.step-7{
+        background-position: right -150px;
+      }
+      .sidebar li.active a.step-7{
+        background-position: right -325px;
+      }
+
+  .highlight-block{
+    height: 60px;
+    position: relative;
+    background: #fff;
+    z-index: 900;
+    margin-top: -420px;
+  }
+
+
+  /* Content */
+  .content{
+    float: right;
+    width: 540px;
+    padding: 0 70px;
+    height: 520px;
+    overflow: hidden;
+  }
+    .content .slide{
+      height: 520px;
+      margin: 0;
+      padding: 0;
+    }
+    .content h1{
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      color: #36abe1;
+      line-height: 30px;
+      height: 58px;
+      padding-top: 7px;
+      padding-left: 92px;
+      background: url('../images/icons/sprites/icons_large_copy.png') no-repeat left top;
+      margin-bottom: 12px;
+    }
+      .content .step-1 h1{
+        background-position: left -455px;
+      }
+      .content .step-2 h1{
+        background-position: left -520px;
+      }
+      .content .step-3 h1{
+        background-position: left -585px;
+      }
+      .content .step-4 h1{
+        background-position: left -650px;
+      }
+      .content .step-5 h1{
+        background-position: left -715px;
+      }
+      .content .step-6 h1{
+        background-position: left -780px;
+      }
+      .content .step-7 h1{
+        background-position: left -845px;
+      }
+    .content h1 small{
+      display: block;
+      font-size: 18px;
+      font-weight: 300;
+      color: #5c6366;
+      line-height: 20px;
+    }
+
+    .content p{
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 18px;
+      color: #65686f;
+      margin-bottom: 18px;
+    }
+    .content p.friends{
+      padding-top: 15px;
+    }
+    .content p a{
+      color: #6fbee7;
+      text-decoration: none;
+    }
+
+
+/* Bottom shadow */
+.bottom-shadow{
+  height: 45px;
+  background: url('../images/shadow_bottom.jpg') no-repeat top center;
+}
+
+
+/* Utilities */
+.clearfix{
+  clear: both;
+}
