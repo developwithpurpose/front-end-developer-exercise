@@ -1,0 +1,37 @@
+rem(value)
+    if (value is 'auto' || value is 'inherit')
+        return value;
+
+    u = unit(value);
+
+    if (u is 'px')
+        return unit(value/16, 'rem');
+    else
+        return unit(value, u);
+
+remit($property, $sizes)
+    $rems = ();
+    $pxs = ();
+
+    for $size in $sizes
+        push($rems, rem($size));
+        push($pxs, $size);
+
+    add-property($property, $pxs);
+    add-property($property, $rems);
+
+placeholder($styles)
+    &::-webkit-input-placeholder
+        {$styles}
+
+    &:-moz-placeholder
+        {$styles}
+
+    &::-moz-placeholder
+        {$styles}
+
+    &:-ms-input-placeholder
+        {$styles}
+
+    &.placeholder
+        {$styles}

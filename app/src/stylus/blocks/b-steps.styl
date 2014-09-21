@@ -1,0 +1,96 @@
+.b-steps
+    min-height 620px;
+    background url(../img/b-steps.jpg) repeat-y left top;
+    clearfix();
+
+    &__nav
+        float left;
+        width 300px;
+        font 18px $font-source-sans;
+        color #9ba0a4;
+        position relative;
+
+        &__overlay
+            position absolute;
+            top 0; left 0;
+            size 100% 59px;
+            background $color-white;
+            z-index 10;
+            transition 0.5s all;
+
+        &__item
+            position relative;   
+            z-index 50;   
+            padding 16px 25px;
+            text-align right;
+            border-bottom 1px solid $color-white;
+            cursor pointer;
+            
+            &[data-step]:after
+                content '';
+                display inline-block;
+                vertical-align middle;
+                margin-left 30px;
+                size 30px 25px;
+                background url(../img/b-steps-icons.png) no-repeat;
+                
+            for $num in (1..7)
+                /.b-steps__nav__item.active[data-step={'"%s"' % $num}]:after,
+                &[data-step={'"%s"' % $num}]:after
+                    background-position 0 -25px * ($num - 1);
+
+                /.b-steps__nav__item.active[data-step={'"%s"' % $num}]:after
+                    background-position -37px -25px * ($num - 1);
+
+            &.active
+                color #36abe1;
+                font-weight 600;
+
+    &__content
+        overflow hidden;
+        padding 0 70px;
+
+    &__slider
+        font-size 13px;
+        color #65686f;
+        position relative;
+
+    &__item
+        min-height 300px;
+
+        &__heading
+            margin 0 0 18px;
+            font 600 30px $font-source-sans;
+            color #36abe1;
+            line-height 1.15;
+
+            small
+                display block;
+                color #5c6366;
+                font-size 18px;
+                font-weight 300;
+
+            &:before
+                content '';
+                float left;
+                margin-right 15px;
+                size 77px 65px;
+                background url(../img/b-steps-icons.png) no-repeat;
+
+        for $num in (1..7)
+            &[data-step={'"%s"' % $num}] .b-steps__item__heading:before
+                background-position -167px -65px * ($num - 1);
+
+        &__text
+            line-height 18px;
+
+            & + &
+                margin-top 18px;
+
+        &__friends
+            margin 40px 0 0;
+            font-weight bold;
+            color #65686f;
+
+            a
+                color #6fbee7;

@@ -1,0 +1,42 @@
+doctype html 5
+<!--[if lt IE 9]> <html lang="ru" class="ie"> <![endif]-->
+<!--[if !IE]><!-->
+html(lang="ru")
+  <!--<![endif]-->
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='css/main.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic,300')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:300,700&subset=latin,cyrillic')
+
+    <!--[if lt IE 9]>
+    script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js') 
+    <![endif]-->
+  body
+    .container
+        .b-main
+
+            // === Header ================================================================================ 
+
+            include partials/header
+
+            // ==== Content ============================================================================== 
+
+            .b-content
+                include partials/steps 
+
+            // ==== Footer ===============================================================================  
+
+            include partials/footer
+
+    // === Scripts ======================================================================================= 
+
+    script(src='js/vendor/jquery.min.js')
+    script(src='js/vendor/underscore.min.js')
+    // В bxSlider добавлен метод isWorking()!
+    script(src='js/vendor/jquery.bxslider.js')
+    script(src='js/main.js')
