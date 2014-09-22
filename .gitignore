@@ -1,1 +1,5 @@
 node_modules/
+nbproject/
+.sass-cache/
+bower_components/
+npm-debug.log

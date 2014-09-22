@@ -1,83 +1,72 @@
-/*jshint -W015, -W116, -W013, -W011 */
-/*globals require:false, module:false */
-module.exports = function( grunt ) {
-  require( "matchdep" ).filterDev( "grunt-*" )
-    .forEach( grunt.loadNpmTasks );
+module.exports = function (grunt) {
+    grunt.initConfig({
+        pkg:grunt.file.readJSON('package.json'),
 
-  grunt.initConfig({
-      pkg: grunt.file.readJSON( "package.json" ),
-      jshint: {
-        all: [ "Gruntfile.js", "app/assets/javascripts/**/*.js", "spec/*.js" ],
-        options: {
-          jshintrc: ".jshintrc"
-        }
-      },
-      uglify: {
-        build: {
-          files: [{
-            expand: true,
-            cwd: "app/assets/javascripts",
-            src: "**/*.js",
-            dest: "build/javascripts",
-            reset: true
-          }]
-        }
-      },
-      validation: {
-        options: {
-          stoponerror: false
+        connect: {
+            server: {
+                options: {
+                    port: 9001,
+                    livereload: true,
+                    keepalive: true
+                }
+            }
         },
-        files: {
-          src: [ "app/**/*.html" ]
-        }
-      },
-      clean: {
-        validation: [ "validation-*.json" ]
-      },
-      watch: {
-        test: {
-          files: [ "<%= jshint.all %>" ],
-          tasks: [ "uglify", "jasmine" ],
-          options: {
-            livereload: 9000
-          }
-        },
-        lint: {
-          files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
-          tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
-        }
-      },
-      jasmine: {
-        pivotal: {
-          src: "build/javascripts/**/*.js",
-          options: {
-            specs: "spec/**/*.spec.js",
-            vendor: [
-              "vendor/**/*.js"
-            ],
-            template: "spec/index.tmpl"
-          }
-        }
-      },
-      connect: {
-        server: {
-          options: {
-            port: 9001,
-            livereload: true,
-            keepalive: true
-          }
-        }
-      },
-    csslint: {
-      options: {
-        csslintrc: ".csslintrc"
-      },
-      strict: {
-        src: [ "app/assets/stylesheets/**/*.css" ]
-      }
-    }
-  });
 
-  grunt.registerTask( "default", ["connect"] );
-  grunt.registerTask( "lint", ["jshint", "csslint"] );
+        concat: {
+            options: {},
+            
+            javascript: {
+                src: ['bower_components/jquery/dist/jquery.js', 'bower_components/underscore/underscore.js', 'bower_components/backbone/backbone.js', 'app/assets/javascripts/models/friend.js', 'app/assets/javascripts/collections/friends.js', 'app/assets/javascripts/views/app_view.js', 'app/assets/javascripts/views/friend_view.js'],
+                dest: 'app/assets/javascripts/build.js'
+            },
+            
+            stylesheets: {
+                src: ['app/assets/stylesheets/reset.scss', 'app/assets/stylesheets/style.scss'],
+                dest: 'app/assets/stylesheets/build.scss'
+            }
+        },
+
+        sass: {
+            dist: { 
+                options: {
+                    style: 'compressed'
+                },
+                files: {
+                    'app/assets/stylesheets/build.css' : 'app/assets/stylesheets/build.scss'
+                }
+            }
+        },
+        
+        uglify: {
+            javascripts: {
+                files: {
+                    'app/assets/javascripts/build.min.js' : ['app/assets/javascripts/build.js']
+                }
+            }
+        },
+
+        watch: {
+            files:['app/assets/javascripts/**/*.js','app/assets/stylesheets/*.scss'],
+            tasks:['concat','sass', 'uglify'] 
+        },
+        
+        jasmine: {
+            developwithpurpose: {
+                src: 'app/assets/javascripts/**/*.js',
+                options: {
+                    specs: 'spec/*spec.js'
+                }
+            }
+        }
+    }); 
+
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jasmine');
+    
+    grunt.registerTask('build',['concat', 'sass', 'uglify', 'watch']);
+    grunt.registerTask('server',['connect']);
 };

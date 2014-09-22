@@ -1,0 +1,9 @@
+{
+  "name": "front-end-developer-exercise",
+  "version": "0.1.0",
+  "dependencies": {
+    "underscore": "~1.7.0",
+    "jquery": "1.11.1",
+    "backbone": "~1.1.2"
+  }
+}
