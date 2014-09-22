@@ -61,18 +61,113 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* set box model and remove font rendering glitch on mac */
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+body {
+    background-color: #bbbfc2;
+}
 
+#container {
+    position: relative;
+    width: 980px;
+    height: 955px;
+    margin: auto;
+    background-color: #ffffff;
+}
 
+    header {
+        display: block;
+        position: relative;
+        height: 276px;
+        padding: 50px 70px;
+        
+        text-align: right;
+        font-family: 'Open Sans';
+        font-weight: 300;
+        font-size: 32px;
+        color: #ffffff;
 
+        margin-bottom: 60px;
+        background: url('../images/header.jpg') center center no-repeat #ffffff;
+    }
 
+    header > strong {
+        display: block;
+        font-size: 50px;
+        line-height: 48px;
+        font-weight: 700;
+    }
 
+    nav {
+        float: left;
+        width: 300px;
+        height: 620px;
+        background: url('../images/shadow_left_nav.jpg') top left repeat-y #ebeced;
+    }
 
+    nav > a {
+        display: block;
+        
+        text-decoration: none;
+        text-align: right;
+        padding-right: 24px;
+        font-family: 'Source Sans Pro';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 60px;
 
+        border-bottom: 1px solid #ffffff;
+        color: #9ba0a4;
+    }
 
+    nav > a.selected {
+        font-weight: 600;
 
+        background: #ffffff;
+        color: #36abe1;
+    }
 
+    main {
+        float: left;
+        width: 680px;
+        padding: 0 70px;
+    }
+
+    .shadow_left {
+        position: absolute;
+        top: 0;
+        left: -15px;
+        width: 15px;
+        height: 724px;
+        background: url('../images/shadow_left.jpg') top right no-repeat #bbbfc2;
+    }
+
+    .shadow_right {
+        position: absolute;
+        top: 0;
+        right: -15px;
+        width: 15px;
+        height: 724px;
+        background: url('../images/shadow_right.jpg') top left no-repeat #bbbfc2;
+    }
+
+    .shadow_bottom {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 980px;
+        height: 30px;
+        background: url('../images/shadow_bottom.jpg') top center no-repeat #bbbfc2;
+    }
 
 
 /* ==========================================================================
