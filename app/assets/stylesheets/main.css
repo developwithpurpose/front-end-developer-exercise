@@ -61,16 +61,19 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* set box model and remove font rendering glitch on mac */
+/* + set box model and remove font rendering glitch on mac */
 
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* - set box model and remove font rendering glitch on mac */
 
 body {
     background-color: #bbbfc2;
@@ -89,7 +92,7 @@ body {
         position: relative;
         height: 276px;
         padding: 50px 70px;
-        
+
         text-align: right;
         font-family: 'Open Sans';
         font-weight: 300;
@@ -100,12 +103,12 @@ body {
         background: url('../images/header.jpg') center center no-repeat #ffffff;
     }
 
-    header > strong {
-        display: block;
-        font-size: 50px;
-        line-height: 48px;
-        font-weight: 700;
-    }
+        header > strong {
+            display: block;
+            font-size: 50px;
+            line-height: 48px;
+            font-weight: 700;
+        }
 
     nav {
         position: relative;
@@ -115,39 +118,66 @@ body {
         background: url('../images/shadow_left_nav.jpg') top left repeat-y #ebeced;
     }
 
-    nav > a {
-        display: block;
-        position: relative;
-        
-        text-decoration: none;
-        text-align: right;
-        padding-right: 24px;
-        font-family: 'Source Sans Pro';
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 60px;
+        nav > a {
+            display: block;
+            position: relative;
 
-        z-index: 100;
+            text-decoration: none;
+            text-align: right;
+            font-family: 'Source Sans Pro';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 60px;
+            outline: none;
 
-        border-bottom: 1px solid #ffffff;
-        color: #9ba0a4;
-    }
+            z-index: 100;
 
-    nav > a.selected {
-        font-weight: 600;
-        color: #36abe1;
-    }
+            border-bottom: 1px solid #ffffff;
+            color: #9ba0a4;
+        }
 
-    #navSelection {
-        position: absolute;
-        top: 0;
-        width: 300px;
-        height: 60px;
+        nav > a.selected {
+            outline: none;
+            font-weight: 600;
+            color: #36abe1;
+        }
 
-        z-index: 0;
+            nav > a > span {
+                display: inline-block;
+                vertical-align: middle;
+                width: 30px;
+                height: 25px;
+                margin: 0 24px;
+                background: url('../images/icons/sprites/icons_small.png') top left no-repeat;
+            }
 
-        background-color: #ffffff;
-    }
+        .step1 { background-position: 0 0px; }
+        .step2 { background-position: 0 -25px; }
+        .step3 { background-position: 0 -50px; }
+        .step4 { background-position: 0 -75px; }
+        .step5 { background-position: 0 -100px; }
+        .step6 { background-position: 0 -125px; }
+        .step7 { background-position: 0 -150px; }
+
+        .selected > .step1 { background-position: 0 -175px; }
+        .selected > .step2 { background-position: 0 -200px; }
+        .selected > .step3 { background-position: 0 -225px; }
+        .selected > .step4 { background-position: 0 -250px; }
+        .selected > .step5 { background-position: 0 -275px; }
+        .selected > .step6 { background-position: 0 -300px; }
+        .selected > .step7 { background-position: 0 -325px; }
+
+        #navSelection {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 60px;
+
+            z-index: 0;
+
+            background-color: #ffffff;
+        }
 
     main {
         float: left;
@@ -181,7 +211,6 @@ body {
         height: 30px;
         background: url('../images/shadow_bottom.jpg') top center no-repeat #bbbfc2;
     }
-
 
 /* ==========================================================================
    Media Queries
