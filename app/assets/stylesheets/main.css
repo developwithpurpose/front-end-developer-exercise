@@ -87,7 +87,7 @@ body {
     background-color: #ffffff;
 }
 
-    header {
+    #container > header {
         display: block;
         position: relative;
         height: 276px;
@@ -103,7 +103,7 @@ body {
         background: url('../images/header.jpg') center center no-repeat #ffffff;
     }
 
-        header > strong {
+        #container > header > strong {
             display: block;
             font-size: 50px;
             line-height: 48px;
@@ -142,30 +142,54 @@ body {
             color: #36abe1;
         }
 
-            nav > a > span {
-                display: inline-block;
-                vertical-align: middle;
-                width: 30px;
-                height: 25px;
-                margin: 0 24px;
-                background: url('../images/icons/sprites/icons_small.png') top left no-repeat;
-            }
+        .small.icon {
+            display: inline-block;
+            vertical-align: middle;
+            width: 30px;
+            height: 25px;
+            margin: 0 24px;
+            background: url('../images/icons/sprites/icons_small.png') top left no-repeat;
+        }
 
-        .step1 { background-position: 0 0px; }
-        .step2 { background-position: 0 -25px; }
-        .step3 { background-position: 0 -50px; }
-        .step4 { background-position: 0 -75px; }
-        .step5 { background-position: 0 -100px; }
-        .step6 { background-position: 0 -125px; }
-        .step7 { background-position: 0 -150px; }
+        .small.step1.icon { background-position: 0 0; }
+        .small.step2.icon { background-position: 0 -25px; }
+        .small.step3.icon { background-position: 0 -50px; }
+        .small.step4.icon { background-position: 0 -75px; }
+        .small.step5.icon { background-position: 0 -100px; }
+        .small.step6.icon { background-position: 0 -125px; }
+        .small.step7.icon { background-position: 0 -150px; }
 
-        .selected > .step1 { background-position: 0 -175px; }
-        .selected > .step2 { background-position: 0 -200px; }
-        .selected > .step3 { background-position: 0 -225px; }
-        .selected > .step4 { background-position: 0 -250px; }
-        .selected > .step5 { background-position: 0 -275px; }
-        .selected > .step6 { background-position: 0 -300px; }
-        .selected > .step7 { background-position: 0 -325px; }
+        .selected > .small.step1.icon { background-position: 0 -175px; }
+        .selected > .small.step2.icon { background-position: 0 -200px; }
+        .selected > .small.step3.icon { background-position: 0 -225px; }
+        .selected > .small.step4.icon { background-position: 0 -250px; }
+        .selected > .small.step5.icon { background-position: 0 -275px; }
+        .selected > .small.step6.icon { background-position: 0 -300px; }
+        .selected > .small.step7.icon { background-position: 0 -325px; }
+
+        .large.icon {
+            float: left;
+            width: 77px;
+            height: 65px;
+            margin-right: 24px;
+            background: url('../images/icons/sprites/icons_large.png') top left no-repeat transparent;
+        }
+
+        .large.step1.icon { background-position: 0 0; }
+        .large.step2.icon { background-position: 0 -65px; }
+        .large.step3.icon { background-position: 0 -130px; }
+        .large.step4.icon { background-position: 0 -195px; }
+        .large.step5.icon { background-position: 0 -260px; }
+        .large.step6.icon { background-position: 0 -325px; }
+        .large.step7.icon { background-position: 0 -390px; }
+
+        .selected > header > .large.step1.icon { background-position: 0 -455px; }
+        .selected > header > .large.step2.icon { background-position: 0 -520px; }
+        .selected > header > .large.step3.icon { background-position: 0 -585px; }
+        .selected > header > .large.step4.icon { background-position: 0 -650px; }
+        .selected > header > .large.step5.icon { background-position: 0 -715px; }
+        .selected > header > .large.step6.icon { background-position: 0 -780px; }
+        .selected > header > .large.step7.icon { background-position: 0 -845px; }
 
         #navSelection {
             position: absolute;
@@ -182,8 +206,61 @@ body {
     main {
         float: left;
         width: 680px;
+        height: 620px;
         padding: 0 70px;
+        overflow: auto;
     }
+
+        article {
+            height: 620px;
+        }
+
+        article > header {
+            margin-bottom: 24px;
+        }
+
+        .headertext {
+            float: left;
+        }
+
+        .headertext > h1,
+        .headertext > h2 {
+            margin: 0;
+            padding: 0;
+            font-family: 'Source Sans Pro';
+            line-height: 20px;
+        }
+
+        .headertext > h1 {
+            font-weight: 600;
+            font-size: 30px;
+            color: #36abe1;
+            margin-top: 18px;
+            margin-bottom: 6px;
+        }
+
+        .headertext > h2 {
+            font-weight: 300;
+            font-size: 18px;
+            color: #5c6366;
+        }
+
+        article > section {
+            font-family: 'helvetica';
+            font-size: 13px;
+            color: #65686f;
+            line-height: 18px;
+            margin-bottom: 40px;
+        }
+
+        article > footer {
+            font-family: 'helvetica';
+            font-size: 13px;
+        }
+
+        article > footer > a {
+            color: #6fbee7;
+        }
 
     .shadow_left {
         position: absolute;
