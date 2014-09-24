@@ -195,7 +195,7 @@ body {
             position: absolute;
             top: 0;
             right: 0;
-            width: 300px;
+            width: 0; /* will be 300px when an element is selected */
             height: 60px;
 
             z-index: 0;
@@ -208,7 +208,12 @@ body {
         width: 680px;
         height: 620px;
         padding: 0 70px;
-        overflow: auto;
+
+        /*
+            there's a neat scroll effect if overflow is set to auto
+            but it doesn't change routes when scrolling, it's just fun
+        */
+        overflow: hidden;
     }
 
         article {

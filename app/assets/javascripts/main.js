@@ -16,9 +16,9 @@ function ready() {
 	var $main = $('main');
 	var $article = $('article');
 	var $navSelection = $('#navSelection');
-	var $selectedLink = $navLink.eq(0);
-	var $selectedArticle = $article.eq(0);
-	var lastIndex = 0; // used to prevent crazy transition glitches
+	var $selectedLink = $navLink.eq(-1);
+	var $selectedArticle = $article.eq(-1);
+	var lastIndex = -1; // used to prevent crazy transition glitches
 	var scrollSnapTimeout; // used to snap to a baby step <article> when user stops scrolling
 	var disableScrollEvent = false; // to prevent multiple transition triggers
 
@@ -56,15 +56,12 @@ function ready() {
 	var navClick = function(event) {
 		var index;
 
-		// stackoverflow.com/questions/1000597/event-preventdefault-function-not-working-in-ie
-		event.preventDefault ? event.preventDefault() : event.returnValue = false;
-
-		index = $(this).index();
-
-		scrollToSelectedArticle(index);
-		selectStep(index);
-
-		return false; // ie.old
+		if($selectedLink[0] != $(this)[0]) {
+			$selectedLink = $(this);
+			index = $selectedLink.index();
+			scrollToSelectedArticle(index);
+			selectStep(index);
+		}
 	};
 
 	var mainScroll = function(event) {
@@ -87,8 +84,18 @@ function ready() {
 		scrollSnapTimeout = setTimeout(scrollSnap, 75);
 	};
 
+	// probably not seo friendly :-(
+	// would probably use another third party library to handle this in production
+	// TODO: fix odd error loading #/step7 - for time's sake, #wontfix
+	var parseRoute = function() {
+		var step = location.href.split('step')[1] - 1 || 0;
+		$navLink.eq(step).click();
+	};
+
 	$navLink.click(navClick);
 	$main.scroll(mainScroll);
+
+	parseRoute();
 };
 
 $(ready);
