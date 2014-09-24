@@ -267,7 +267,14 @@ body {
             font-size: 13px;
         }
 
-        article > footer > a {
+        article > footer > .friends {
+            font-family: 'helvetica';
+            font-weight: 400;
+            color: #65686f;
+        }
+
+        article > footer > .friends > a {
+            text-decoration: none;
             color: #6fbee7;
         }
 
