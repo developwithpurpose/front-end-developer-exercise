@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/* ! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 html,
 button,
@@ -60,6 +60,16 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+/*
+
+Notes on css lint -
+This file is based on html5 boilerplate, a best-practices template. 
+Ironically it also causes the CSS linter to fail. Many of the failing 
+tests only apply to IE < 8.
+
+*/
+
 
 /* + set box model and remove font rendering glitch on mac */
 
@@ -128,12 +138,15 @@ body {
             font-weight: 400;
             font-size: 18px;
             line-height: 60px;
-            outline: none;
 
             z-index: 100;
 
             border-bottom: 1px solid #ffffff;
             color: #9ba0a4;
+        }
+
+        nav > a:focus {
+            outline: none;
         }
 
         nav > a.selected {
@@ -254,7 +267,7 @@ body {
             color: #5c6366;
         }
 
-        article > section {
+        article > .description {
             font-family: 'helvetica';
             font-size: 13px;
             color: #65686f;
