@@ -54,12 +54,17 @@ function ready() {
 	};
 
 	var navClick = function(event) {
-		event.preventDefault();
+		var index;
 
-		var index = $(this).index();
+		// stackoverflow.com/questions/1000597/event-preventdefault-function-not-working-in-ie
+		event.preventDefault ? event.preventDefault() : event.returnValue = false;
+
+		index = $(this).index();
 
 		scrollToSelectedArticle(index);
 		selectStep(index);
+
+		return false; // ie.old
 	};
 
 	var mainScroll = function(event) {
