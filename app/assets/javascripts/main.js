@@ -1,5 +1,7 @@
 /*
 
+Author: Stephen Bussard
+
 Style explanation
 
 - perform jQuery selector queries in advance to avoid redundant computations
@@ -9,29 +11,80 @@ Style explanation
 */
 
 function ready() {
-	var $navElem = $('nav > a');
+	var articleHeight = 620;
+	var $navLink = $('nav > a');
+	var $main = $('main');
+	var $article = $('article');
 	var $navSelection = $('#navSelection');
+	var $selectedLink = $navLink.eq(0);
+	var $selectedArticle = $article.eq(0);
+	var lastIndex = 0; // used to prevent crazy transition glitches
+	var scrollSnapTimeout; // used to snap to a baby step <article> when user stops scrolling
+	var disableScrollEvent = false; // to prevent multiple transition triggers
 
-	var navTransition = function(event) {
-		var $selectedElem = $(this);
-		var topOffset = $selectedElem.position().top + 'px';
-		var goAwayAndComeBack = function() {
-			$navElem.removeClass('selected');
-			$navSelection.css({ top: topOffset });
-			$navSelection.animate({ width: '300px' }, 100, function() {
-				$selectedElem.addClass('selected');
+	// must not trigger other events!
+	var selectStep = function(index) {
+		var linkOffset;
+		var articleOffset;
+		var time = 100;
+
+		$selectedLink = $navLink.eq(index);
+		$selectedArticle = $article.eq(index);
+
+		linkOffset = $selectedLink.position().top + 'px';
+		articleOffset = $selectedArticle.position().top + 'px';
+
+		$navLink.removeClass('selected');
+		$article.removeClass('selected');
+		$navSelection.animate({ width: 0 }, time, function() {
+			$navSelection.css({ top: linkOffset });
+			$navSelection.animate({ width: '300px'}, time, function() {
+				$selectedLink.addClass('selected');
+				$selectedArticle.addClass('selected');
 			});
-		};
-
-		event.preventDefault();
-
-		if(!$selectedElem.hasClass('selected')) {
-			$navSelection.animate({ width: '0' }, 100, goAwayAndComeBack);
-		}
+		});
 	};
 
-	$navElem.click(navTransition);
-}
+	var scrollToSelectedArticle = function(index) {
+		var articlePos = articleHeight * index;
+		disableScrollEvent = true;
+		$main.animate({ scrollTop: articlePos }, 100, function() {
+			disableScrollEvent = false;
+		});
+	};
+
+	var navClick = function(event) {
+		event.preventDefault();
+
+		var index = $(this).index();
+
+		scrollToSelectedArticle(index);
+		selectStep(index);
+	};
+
+	var mainScroll = function(event) {
+		var pos = $main.scrollTop();
+		var rem = pos % articleHeight;
+		var index = (pos - rem) / articleHeight;
+		index = (rem < articleHeight * 0.5) ? index : index + 1;
+
+		var scrollSnap = function() {
+			scrollToSelectedArticle(index);
+		};
+
+		if(index != lastIndex && !disableScrollEvent) {
+			selectStep(index);
+		}
+
+		lastIndex = index;
+
+		clearTimeout(scrollSnapTimeout);
+		scrollSnapTimeout = setTimeout(scrollSnap, 75);
+	};
+
+	$navLink.click(navClick);
+	$main.scroll(mainScroll);
+};
 
 $(ready);
 
