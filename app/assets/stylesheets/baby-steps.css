@@ -1,0 +1,207 @@
+/* line 16, ../scss-stylesheets/baby-steps.scss */
+body {
+  opacity: 0;
+  background: url(../images/shadow_bottom.jpg) 75px 970px no-repeat, url(../images/shadow_left.jpg) 77.5px top no-repeat, url(../images/shadow_right.jpg) 1068px top no-repeat;
+  background-size: 1010px 30px, 15px 1000px, 15px 1000px;
+  background-color: #bbbfc2;
+  height: 1000px;
+  width: 1200px;
+}
+
+/* line 31, ../scss-stylesheets/baby-steps.scss */
+header {
+  background: url(../images/header_text.jpg) no-repeat;
+  background-size: 980px 276px;
+  width: 980px;
+  height: 276px;
+  margin: 0 0 0 90px;
+  box-shadow: 0 -5px 5px 5px rgba(200, 200, 200, 0.55);
+}
+
+/* line 40, ../scss-stylesheets/baby-steps.scss */
+#content-wrapper {
+  background-color: #F2F2F2;
+  height: 694px;
+  width: 980px;
+  margin: 0 0 0 90px;
+}
+
+/* line 47, ../scss-stylesheets/baby-steps.scss */
+#steps-nav-panel {
+  margin: 60px 0 0 0;
+  width: 300px;
+  display: inline-block;
+}
+/* line 51, ../scss-stylesheets/baby-steps.scss */
+#steps-nav-panel div {
+  height: 207px;
+  width: 299px;
+  margin: 0;
+  border-right: 1px solid #C0C3C4;
+  background: #ebeced;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: -moz-linear-gradient(to right, #ebeced 90%, #d1d5d6 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(to right, color-stop(90%, #ebeced), color-stop(100%, #d1d5d6));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #ebeced 90%, #d1d5d6 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #ebeced 90%, #d1d5d6 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #ebeced 90%, #d1d5d6 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #ebeced 90%, #d1d5d6 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
+  /* IE6-8 */
+}
+/* line 57, ../scss-stylesheets/baby-steps.scss */
+#steps-nav-panel div img {
+  position: relative;
+  top: 50px;
+}
+/* line 63, ../scss-stylesheets/baby-steps.scss */
+#steps-nav-panel ul {
+  padding: 0 0 0 0;
+  background: #ebeced;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: -moz-linear-gradient(to right, #ebeced 90%, #d1d5d6 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(to right, color-stop(90%, #ebeced), color-stop(100%, #d1d5d6));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #ebeced 90%, #d1d5d6 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #ebeced 90%, #d1d5d6 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #ebeced 90%, #d1d5d6 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #ebeced 90%, #d1d5d6 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
+  /* IE6-8 */
+}
+/* line 66, ../scss-stylesheets/baby-steps.scss */
+#steps-nav-panel ul li {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+  cursor: pointer;
+  border-right: 1px solid #C0C3C4;
+  border-bottom: 1px solid #ffffff;
+  padding: 0 0 0 2.5em;
+  margin: 0;
+  display: block;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition-property: color, border-right, background-color;
+  -moz-transition-property: color, border-right, background-color;
+  -o-transition-property: color, border-right, background-color;
+  transition-property: color, border-right, background-color;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+/* line 86, ../scss-stylesheets/baby-steps.scss */
+#steps-nav-panel ul li a {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0 0 0 4em;
+  color: inherit;
+  text-decoration: none;
+}
+/* line 96, ../scss-stylesheets/baby-steps.scss */
+#steps-nav-panel ul li img {
+  position: relative;
+  left: 5px;
+  vertical-align: middle;
+  padding: 0 24px 0 24px;
+}
+
+/* line 106, ../scss-stylesheets/baby-steps.scss */
+li.active {
+  border-right: none !important;
+  font-weight: 600;
+  color: #36abe1 !important;
+  background-color: #F2F2F2 !important;
+  padding: 0 0 0 2.33em !important;
+  -webkit-transition-property: color, border-right, background-color;
+  -moz-transition-property: color, border-right, background-color;
+  -o-transition-property: color, border-right, background-color;
+  transition-property: color, border-right, background-color;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+/* line 117, ../scss-stylesheets/baby-steps.scss */
+article {
+  display: inline !important;
+  width: 535px;
+  height: 635px;
+  margin: 60px 0 0 0;
+  padding: 0 70px 0 70px;
+  float: right;
+}
+/* line 127, ../scss-stylesheets/baby-steps.scss */
+article #step-title {
+  display: inline-block;
+  position: relative;
+  bottom: 0.5em;
+  height: 50px;
+  padding: 0 0 0 0.5em;
+}
+/* line 134, ../scss-stylesheets/baby-steps.scss */
+article #step-number {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #36abe1;
+  line-height: 20px;
+  padding: 0 0 5px 0;
+}
+/* line 145, ../scss-stylesheets/baby-steps.scss */
+article #step-detail {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #5c6366;
+  line-height: 20px;
+  padding: 5px 0 0 0;
+}
+/* line 155, ../scss-stylesheets/baby-steps.scss */
+article #step-content {
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: #65686f;
+  line-height: 18px;
+  padding: 0px 0 40px 0;
+}
+/* line 167, ../scss-stylesheets/baby-steps.scss */
+article #friends p {
+  color: #65686f;
+  font-weight: normal;
+  font-size: 13px;
+  font-family: Helvetica, sans-serif;
+  display: inline;
+}
+/* line 176, ../scss-stylesheets/baby-steps.scss */
+article #friends a {
+  color: #6fbee7;
+  font-weight: normal;
+  font-size: 13px;
+  font-family: Helvetica, sans-serif;
+  display: inline;
+}
