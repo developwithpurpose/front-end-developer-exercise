@@ -17,9 +17,9 @@ function ready() {
 		$main = $("main"),
 		$article = $("article"),
 		$navSelection = $("#navSelection"),
-		$selectedLink = $navLink.eq(-1),
-		$selectedArticle = $article.eq(-1),
-		lastIndex = -1, // used to prevent crazy transition glitches
+		lastIndex = 99, // used to prevent crazy transition glitches
+		$selectedLink = $navLink.eq(lastIndex),
+		$selectedArticle = $article.eq(lastIndex),
 		scrollSnapTimeout, // used to snap to a baby step <article> when user stops scrolling
 		disableScrollEvent = false; // to prevent multiple transition triggers
 
@@ -141,9 +141,6 @@ function ready() {
 		});
 	}
 
-	// probably not seo friendly :-(
-	// would probably use another third party library to handle this in production
-	// TODO: fix odd error loading #/step7 - for time's sake, #wontfix
 	function parseRoute() {
 		var step = window.location.href.split("step")[1] - 1 || 0;
 		$navLink.eq(step).click();
