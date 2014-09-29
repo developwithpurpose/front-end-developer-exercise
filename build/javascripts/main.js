@@ -1,0 +1,1 @@
+var babySteps={onNavClick:function(){$(".nav-link").click(function(){var a=$(this).attr("href");$(".baby-step").removeClass("active"),$(a).addClass("active"),$("nav a").removeClass("active"),$(this).addClass("active")})}};$(document).ready(babySteps.onNavClick);

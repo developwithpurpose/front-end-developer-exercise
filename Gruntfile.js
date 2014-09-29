@@ -4,6 +4,10 @@ module.exports = function( grunt ) {
   require( "matchdep" ).filterDev( "grunt-*" )
     .forEach( grunt.loadNpmTasks );
 
+
+  grunt.loadNpmTasks("grunt-contrib-sass");
+
+
   grunt.initConfig({
       pkg: grunt.file.readJSON( "package.json" ),
       jshint: {
@@ -36,15 +40,25 @@ module.exports = function( grunt ) {
       },
       watch: {
         test: {
-          files: [ "<%= jshint.all %>" ],
-          tasks: [ "uglify", "jasmine" ],
+          files: [ "<%= jshint.all %>", "app/assets/stylesheets/scss/*.scss" ],
+          tasks: [ "uglify", "sass"/*, "jasmine"*/ ],
           options: {
             livereload: 9000
           }
         },
         lint: {
-          files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
-          tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
+          files: [ "<%= jshint.all %>", "app/**/*.html" ],
+          tasks: [ "jshint", "validation", "clean:validation" ]
+        }
+      },
+      sass: {                              // Task
+        dist: {                            // Target
+          options: {                       // Target options
+            style: "compressed"
+          },
+          files: {                         // Dictionary of files
+            "app/assets/stylesheets/css/styles.css" : "app/assets/stylesheets/scss/styles.scss"                 // 'destination': 'source'
+          }
         }
       },
       jasmine: {
@@ -68,16 +82,17 @@ module.exports = function( grunt ) {
           }
         }
       },
-    csslint: {
-      options: {
-        csslintrc: ".csslintrc"
-      },
-      strict: {
-        src: [ "app/assets/stylesheets/**/*.css" ]
+      csslint: {
+        options: {
+          csslintrc: ".csslintrc"
+        },
+        strict: {
+          src: [ "app/assets/stylesheets/**/*.css" ]
+        }
       }
-    }
   });
 
-  grunt.registerTask( "default", ["connect"] );
+  grunt.registerTask( "default", ["connect", "sass"] );
+
   grunt.registerTask( "lint", ["jshint", "csslint"] );
 };

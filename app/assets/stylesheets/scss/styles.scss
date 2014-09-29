@@ -1,0 +1,143 @@
+/*test*/
+
+@import 'reset';
+@import 'variables';
+@import 'typography';
+@import 'icons';
+
+/* Custom styles */
+
+body {
+	background-color: $bodyBgColor;
+}
+
+header {
+	height: 276px;
+	width: 980px;
+	background: $contentBgColor url(../../images/header.jpg) no-repeat 0 0;
+	display: block;
+	float: left;
+	padding: 0 0 60px 0;
+
+	h1 {
+		color: #fff;
+		font: 300 32px/32px 'Open Sans', sans-serif;
+		margin: 50px 70px 0 0;
+		text-align: right;
+
+		span {
+			display: block;
+			font: 700 50px/48px 'Open Sans', sans-serif;
+			text-transform: uppercase;
+		}
+	}
+}
+
+nav {
+	display:block;
+	float:left;
+	background-color: $leftNavBgColor;
+	background-image: linear-gradient(
+      to left,
+      #d1d5d6,
+      #ebeced 3%
+    );
+	width: 300px;
+
+	ul {
+		margin:0;
+		padding:0;
+		li {
+			text-align:right;
+			border-bottom: 1px solid #fff;
+
+			&:nth-last-child(1) {
+				border-bottom: 0;
+			}
+
+		}
+	}
+}
+
+.nav-link {
+	display: block;
+	color: $navColor;
+	padding-right: 24px;
+	font: 300 18px/60px 'Source Sans Pro', sans-serif;
+	text-decoration: none;
+
+	&.active {
+		background-color: #fff;
+		font-weight: 600;
+		color: $navSelectedColor;
+	}
+}
+
+.container {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.page {
+	float:left;
+	background-color: $contentBgColor;
+	-webkit-box-shadow: 0px 0px 8px #888888;
+}
+
+.content {
+	float: right;
+	width: 540px;
+	margin: 0 70px;
+}
+
+.baby-step {
+	display: none;
+
+	h2 {
+		i {
+			margin-right: 14px;
+		}
+	}
+
+	p {
+		color: $copyColor;
+		font: normal 13px/18px 'Helvetica', sans-serif;
+	}
+}
+
+.primary-header {
+	display: inline-block;
+	color: $primaryColor;
+	font: 600 30px/28px 'Source Sans Pro', sans-serif;
+	margin: 0;
+	padding-top: 5px;
+}
+
+.sub-header {
+	color: $secondaryColor;
+	display: block;
+	font: 300 18px/20px 'Source Sans Pro', sans-serif;
+	margin: 0;
+}
+
+.baby-step.active {
+	display:block;
+	-webkit-animation: fadeContent 0.45s linear;
+}
+
+/* End custom styles */
+
+/* Keyframes */
+
+@-webkit-keyframes fadeContent {
+	0% {
+		opacity: 0;
+		padding-top: 25px;
+	}
+	100% {
+		opacity: 1;
+		padding-top: 0;
+	}
+}
+
+/* End Keyframes */

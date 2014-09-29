@@ -1,0 +1,116 @@
+/* Baby step icons */
+
+	/* Large icons */
+	$lg-icons: url('../../images/icons/sprites/icons_large.png');
+	$lg-icon-width: 77px;
+	$lg-icon-height: 64.8px;
+
+	.bstep-icn-lg {
+		background-image: $lg-icons;
+		width: $lg-icon-width;
+		height: $lg-icon-height;
+		display: inline-block;
+		float:left;
+	}
+
+	.bstep-icn-lg-1 {
+		background-position: 0 (-$lg-icon-height * 7);
+	}
+
+	.bstep-icn-lg-2 {
+		background-position: 0 (-$lg-icon-height * 8);
+	}
+
+	.bstep-icn-lg-3 {
+		background-position: 0 (-$lg-icon-height * 9);
+	}
+
+	.bstep-icn-lg-4 {
+		background-position: 0 (-$lg-icon-height * 10);
+	}
+
+	.bstep-icn-lg-5 {
+		background-position: 0 (-$lg-icon-height * 11);
+	}
+
+	.bstep-icn-lg-6 {
+		background-position: 0((-$lg-icon-height * 12) + 1);
+	}
+
+	.bstep-icn-lg-7 {
+		background-position: 0 ((-$lg-icon-height * 13) - 1);
+	}
+
+	/* Small Icons */
+	$sm-icons: url('../../images/icons/sprites/icons_small.png');
+	$sm-icon-width: 30px;
+	$sm-icon-height: 25px;
+
+	.bstep-icn-sm {
+		background-image: $sm-icons;
+		width: $sm-icon-width;
+		height: $sm-icon-height;
+		display: inline-block;
+		float:right;
+		margin-top:17px;
+		margin-left: 12px;
+	}
+
+	.bstep-icn-sm-1 {
+		background-position: 0 0;
+	}
+
+	.nav-link.active .bstep-icn-sm-1 {
+		background-position: 0 (-$sm-icon-height * 7);
+	}
+
+	.bstep-icn-sm-2 {
+		background-position: 0 (-$sm-icon-height * 1);
+	}
+
+	.nav-link.active .bstep-icn-sm-2 {
+		background-position: 0 (-$sm-icon-height * 8);
+	}
+
+	.bstep-icn-sm-3 {
+		background-position: 0 (-$sm-icon-height * 2);
+	}
+
+	.nav-link.active .bstep-icn-sm-3 {
+		background-position: 0 (-$sm-icon-height * 9);
+	}
+
+	.bstep-icn-sm-4 {
+		background-position: 0 (-$sm-icon-height * 3);
+	}
+
+	.nav-link.active .bstep-icn-sm-4 {
+		background-position: 0 (-$sm-icon-height * 10);
+	}
+
+	.bstep-icn-sm-5 {
+		background-position: 0 (-$sm-icon-height * 4);
+	}
+
+	.nav-link.active .bstep-icn-sm-5 {
+		background-position: 0 (-$sm-icon-height * 11);
+	}
+
+	.bstep-icn-sm-6 {
+		background-position: 0 (-$sm-icon-height * 5);
+	}
+
+	.nav-link.active .bstep-icn-sm-6 {
+		background-position: 0 (-$sm-icon-height * 12);
+	}
+
+	.bstep-icn-sm-7 {
+		background-position: 0 (-$sm-icon-height * 6);
+	}
+
+	.nav-link.active .bstep-icn-sm-7 {
+		background-position: 0 (-$sm-icon-height * 13);
+	}
+
+
+/* End baby step icons */
