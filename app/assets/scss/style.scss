@@ -1,0 +1,278 @@
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: #bbbfc2;
+    margin:0;
+}
+
+.container {
+    position: relative;
+    width: 980px;
+    height: 955px;
+    margin: auto;
+    background-color: #ffffff;
+    header[role="banner"] {
+        display: block;
+        position: relative;
+        height: 276px;
+        padding: 50px 70px;
+        margin-bottom: 60px;
+        font-family: 'Open Sans';
+        font-weight: 300;
+        font-size: 32px;
+        color: #ffffff;
+        text-align: right;
+        background: url('../images/header.jpg') center center no-repeat #ffffff;
+        strong {
+            display: block;
+            font-size: 50px;
+            line-height: 48px;
+            font-weight: 700;
+        }
+    }
+}
+
+
+nav {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 620px;
+    background: url('../images/shadow_left_nav.jpg') top left repeat-y #ebeced;
+    @include linear-gradient(#ebeced,#d1d5d6);
+    
+    a {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        text-align: right;
+        font-family: 'Source Sans Pro';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 60px;
+        z-index: 100;
+        border-bottom: 1px solid #ffffff;
+        color: #9ba0a4;
+    }
+
+    
+    i {
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 25px;
+        margin: 0 24px;
+        background: url('../images/icons/sprites/icons_small.png') top left no-repeat;
+    }
+    .step1 {
+        background-position: 0 0;
+    }
+    .step2 {
+        background-position: 0 -25px;
+    }
+    .step3 {
+        background-position: 0 -50px;
+    }
+    .step4 {
+        background-position: 0 -75px;
+    }
+    .step5 {
+        background-position: 0 -100px;
+    }
+    .step6 {
+        background-position: 0 -125px;
+    }
+    .step7 {
+        background-position: 0 -150px;
+    }
+
+    .active {
+        outline: none;
+        font-weight: 600;
+        color: #36abe1;
+        background: white;
+        .step1 {
+            background-position: 0 -175px;
+        }
+        .step2 {
+            background-position: 0 -200px;
+        }
+        .step3 {
+            background-position: 0 -225px;
+        }
+        .step4 {
+            background-position: 0 -250px;
+        }
+        .step5 {
+            background-position: 0 -275px;
+        }
+        .step6 {
+            background-position: 0 -300px;
+        }
+        .step7 {
+            background-position: 0 -325px;
+        }
+    }
+
+    #nav_mask {
+        outline: none;
+        width:300px;
+        height:60px;
+        z-index:10;
+        background: white;
+        display: block;
+        position: absolute;
+    }
+}
+
+
+
+main {
+    float: left;
+    width: 680px;
+    height: 620px;
+    padding: 0 70px;
+    overflow: hidden;
+    article {
+        height: 620px;
+        font-family: 'helvetica';
+        header {
+            i {
+                float: left;
+                display: inline-block;
+                width: 77px;
+                height: 65px;
+                margin-right: 24px;
+                color: #36abe1;
+                background: url('../images/icons/sprites/icons_large.png') top left no-repeat transparent;
+
+            }
+            .step1 {
+                background-position: 0 -455px;
+            }
+            .step2 {
+                background-position: 0 -520px;
+            }
+            .step3 {
+                background-position: 0 -585px;
+            }
+            .step4 {
+                background-position: 0 -648px;
+            }
+            .step5 {
+                background-position: 0 -713px;
+            }
+            .step6 {
+                background-position: 0 -777px;
+            }
+            .step7 {
+                background-position: 0 -842px;
+            }
+        }
+        .title {
+            float: left;
+            h1, h2 {
+                margin: 0;
+                padding: 0;
+                font-family: 'Source Sans Pro';
+                line-height: 20px;
+            }
+
+            h1 {
+                font-weight: 600;
+                font-size: 30px;
+                margin-top: 18px;
+                margin-bottom: 6px;
+                color: #36abe1;
+            }
+
+            h2 {
+                font-weight: 300;
+                font-size: 18px;
+                color: #5c6366;
+            }
+
+        }
+        .text {
+            font-size: 13px;
+            color: #65686f;
+            line-height: 18px;
+            margin-bottom: 40px;
+        }
+        footer {
+            font-size: 13px;
+            color: #65686f;
+            margin-top:0px;
+            .friends {
+                font-weight: 700;
+                a {
+                    text-decoration: none;
+                    color: #6fbee7;
+                }
+            }
+        }
+    }
+}
+
+#shadow_left {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 15px;
+    height: 724px;
+    background: url('../images/shadow_left.jpg') top right no-repeat;
+}
+
+#shadow_right {
+    position: absolute;
+    top: 0;
+    right: -15px;
+    width: 15px;
+    height: 724px;
+    background: url('../images/shadow_right.jpg') top left no-repeat;
+}
+
+#shadow_bottom {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 980px;
+    height: 30px;
+    background: url('../images/shadow_bottom.jpg') top center no-repeat;
+}
+
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+ 
