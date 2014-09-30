@@ -1,22 +1,47 @@
-var babySteps = {
+(function() {
 
-	onNavClick: function() {
-		$(".nav-link").click(function(){
+	"use strict";
 
-			var linkURL = $(this).attr("href");
+	var babySteps = {
 
-			$(".baby-step").removeClass("active");
+		onNavClick: function() {
 
-			$(linkURL).addClass("active");
+			var $linkURL = $(this).attr("href"),
+				activeClass = "active";
+			
+			$(".nav-link").on("click", function(){
 
-			$("nav a").removeClass("active");
+				$(".baby-step").removeClass(activeClass);
 
-			$(this).addClass("active");
+				$($linkURL).addClass(activeClass);
 
-		});
-	}
+				$("nav a").removeClass(activeClass);
 
-};
+				$(this).addClass(activeClass);
+
+				return false;
+
+			});
+
+		},
+		displayJSON: function() {
+			
+			$.getJSON("/app/assets/javascripts/baby-steps.json", function(data) {
+				
+				var friends = data.friends;
 
 
-$(document).ready(babySteps.onNavClick);
+
+			});
+			
+		}
+
+	};
+
+
+	$(document).ready(function() {
+		babySteps.onNavClick();
+		babySteps.displayJSON();
+	});
+
+})();
