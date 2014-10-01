@@ -1,0 +1,71 @@
+
+
+//POSITION VERTICALLY center
+@mixin vertical-align(){
+  top:50%;
+  -webkit-transform:translateY(-50%);
+  transform:translateY(-50%);
+}
+//POSITION VERTICALLY & horizontally center
+@mixin align-center(){
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%,-50%);
+  transform:translateY(-50%,-50%);
+}
+
+//BOOTSTRAP BASED CONTAINERS
+//-------------------------------------------------------
+@mixin container-fluid{
+  width:100%;
+  @include container-fixed();
+}
+
+@mixin container{
+  @include container-fixed();
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+
+
+//FLEXBOX MIXINS
+//-------------------------------------------------------
+@mixin flexdisplay($justify:flex-start,$direction:row){
+    display:block;
+    display:-webkit-flex;
+    display:flex;
+
+    @if $justify == 'left' or $justify == 'start'{
+      $justify:flex-start;
+
+    }
+    -webkit-justify-content: $justify;
+    justify-content: $justify;
+    //can build this out more later for vertical
+}
+
+@mixin flexitem($grow:1,$shrink:0,$basis:0,$align:auto){
+    -webkit-flex:$grow $shrink $basis;
+    flex:$grow $shrink $basis;
+
+    -webkit-align-self:$align;
+    align-self:$align;
+}
+
+
+// Keep images from scaling beyond the width of their parents.
+@mixin img-responsive($display: block) {
+  display: $display;
+  width: 100% \9; // Force IE10 and below to size SVG images correctly
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}

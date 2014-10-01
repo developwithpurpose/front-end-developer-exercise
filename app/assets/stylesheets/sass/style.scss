@@ -1,3 +1,14 @@
 @import 'variables';
+@import 'mixins';
 @import 'fonts';
 @import 'resets';
+@import 'components';
+
+
+@media screen and (max-width: $screen-md){
+    @import 'query/sm-screen';
+}
+
+@media screen and (max-width: $screen-xs){
+   @import 'query/xs-screen';
+}

@@ -44,12 +44,12 @@ gulp.task('styles',function(){
    .pipe(livereload());
 });
 
-//Minify JS SCRIPTS
+//Minify & CONCAT JS SCRIPTS
 //----------------------------------------------
 gulp.task('scripts',function(){
    return gulp.src(paths.jssrc)
    .pipe(uglify())
-   .pipe(concat('scripts.js'))
+   .pipe(concat('main.js'))
    .pipe(gulp.dest(paths.js));
 });
 

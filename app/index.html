@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Single Page Demo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/stylesheets/style.css" />
 </head>
 <body>
-<div class="container">
-    <header class="masthead-cont">
-        <div class="masthead-inner">
 
+<!-- handlebars template -->
+<script type="text/template" id="stepTemplate">
+    {{#each babyStep}}
+        <article id="{{id}}" class="article-step">
+            <h2 class="title-article">{{title}} <span>{{sub_title}}</span></h2>
+            <p class="article-copy">{{copy_1}}</p>
+            <p class="article-copy">{{copy_2}}</p>
+        </article>
+    {{/each}}
+</script>
+<!--//end of handlebars template -->
+
+<div class="container">
+    <header class="masthead-wrap">
+        <div class="masthead-inner">
+            <img src="assets/images/header.jpg" />
         </div>
     </header>
 
     <section class="content-wrap">
         <div class="content-inner">
-            <aside class="page-aside">
-
+            <aside class="aside-page">
+                <ul class="steps-list">
+                    <li><a href="#step-one" data-step="1">Baby Step 1</a></li>
+                    <li><a href="#step-two" data-step="2">Baby Step 2</a></li>
+                    <li><a href="#step-three" data-step="3">Baby Step 3</a></li>
+                    <li><a href="#step-four" data-step="4">Baby Step 4</a></li>
+                    <li><a href="#step-five" data-step="5">Baby Step 5</a></li>
+                    <li><a href="#step-six" data-step="6">Baby Step 6</a></li>
+                    <li><a href="#step-seven" data-step="7">Baby Step 7</a></li>
+                </ul>
             </aside>
+
+            <!--data gets rendered here -->
             <div class="article-wrap">
-                <article id="step-one" class="article-step">
+                <div class="article-inner"></div>
 
-                </article>
-                <article id="step-two" class="article-step">
-
-                </article>
-                <article id="step-three" class="article-step">
-
-                </article>
-                <article id="step-four" class="article-step">
-
-                </article>
-                <article id="step-five" class="article-step">
-
-                </article>
-                <article id="step-six" class="article-step">
-
-                </article>
-                <article id="step-seven" class="article-step">
-
-                </article>
+                <div class="results"></div>
             </div>
+
+            <!--//data-->
+
         </div>
 
     </section>
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="assets/javascripts/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,211 @@
+//HEADER AREA
+//-----------------------------------------------/
+.masthead-wrap{
+    //height:200px;
+    //background:red;
+
+    .masthead-inner{
+        background:url('../images/header.jpg') no-repeat;
+        img{
+            width:100%;
+            @include img-responsive;
+        }
+    }
+}
+
+//MAIN ARTICLE area
+//-----------------------------------------------
+.content-wrap{
+    padding-top:60px;
+    background:$white-primary;
+
+    .content-inner{
+        @include clearfix;
+    }
+}
+//ASIDE AREA
+//-----------------------------------------------
+.aside-page{
+
+    padding-bottom:180px;
+    background:$gray-primary;
+    box-shadow:inset -2px 0 5px rgba(10,10,10,.3);
+    @include make-md-column(3,0);
+}
+
+.steps-list {
+    height:auto;
+    text-align:right;
+
+
+
+    li {
+        height:60px;
+        line-height:60px;
+        box-shadow:inset 0 -1px 0 $white-primary;
+        font-size:18px;
+        color:$list-text;
+        background: linear-gradient(-90deg, $white-primary 50%,transparent 50%);
+        background-size: 200% 20%;
+        transition: all 0.4s ease;
+        @include source;
+        @include make-xs-column(12,0);
+        padding:0 24px 0 0;
+
+
+        &:hover{
+            a {
+                color:$blue-primary;
+            }
+        }
+
+        &.is-active{
+            //background:$white-primary;
+            background-position: 100% 100%;
+            a {
+                color:$blue-primary;
+                font-weight:600;
+            }
+        }
+
+        a {
+            display:block;
+            height:60px;
+            line-height:60px;
+            margin:0;
+            padding:0;
+            color:$list-text;
+
+            &:after{
+                content:'\e600';
+                display:inline-block;
+                //top:5px;
+                padding:0 0 0 24px;
+                //line-height:60px;
+                font-family:'icomoon';
+                font-size:25px;
+                font-weight:normal;
+            }
+        }
+
+        &:nth-child(2) a:after{
+            content:'\e601';
+        }
+        &:nth-child(3) a:after{
+            content:'\e608';
+        }
+        &:nth-child(4) a:after{
+            content:'\e607';
+        }
+        &:nth-child(5) a:after{
+            content:'\e606';
+        }
+        &:nth-child(6) a:after{
+            content:'\e605';
+        }
+        &:nth-child(7) a:after{
+            content:'\e604';
+        }
+    }
+}
+
+//ARTICLE AREA
+//--------------------------------------------
+.article-wrap{
+    display:inline-block;
+    @include make-md-column(9,0);
+
+    .results {
+        padding:0 70px;
+        line-height:18px;
+        font-size:13px;
+        //font-family:"Helvetica","arial",sans-serif;
+        color:$text-color;
+
+        span {
+            font-weight:bold;
+            color:$blue-primary;
+        }
+    }
+}
+
+.article-step{
+    display:none;
+    padding:0 70px;
+
+
+    &.is-visible{
+        display:block;
+
+        animation:scaleUp 0.4s ease 1;
+    }
+
+
+    .title-article {
+        margin-bottom:24px;
+        line-height:20px;
+        font-size:30px;
+        color:$blue-primary;
+        @include source(600);
+        &:before{
+            content:'\e600';
+            display:block;
+            float:left;
+            width:60px;
+            height:60px;
+            margin-right:16px;
+            padding:0;
+            line-height:40px;
+            font-family:'icomoon';
+            font-size:50px;
+            font-weight:normal;
+        }
+        span {
+            display:block;
+            margin-top:5px;
+            line-height:20px;
+            font-size:18px;
+            color:$gray-secondary;
+            font-weight:300;
+        }
+    }
+    .article-copy{
+        margin-bottom:18px;
+        line-height:18px;
+        font-size:13px;
+        //font-family:"Helvetica","arial",sans-serif;
+        color:$text-color;
+    }
+
+    //specific icon declarations
+    &#step-two{
+        .title-article:before{
+            content:'\e601';
+        }
+    }
+    &#step-three{
+        .title-article:before{
+            content:'\e608';
+        }
+    }
+    &#step-four{
+        .title-article:before{
+            content:'\e607';
+        }
+    }
+    &#step-five{
+        .title-article:before{
+            content:'\e606';
+        }
+    }
+    &#step-six{
+        .title-article:before{
+            content:'\e605';
+        }
+    }
+    &#step-seven{
+        .title-article:before{
+            content:'\e604';
+        }
+    }
+}

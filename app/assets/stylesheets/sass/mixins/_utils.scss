@@ -1,0 +1,4 @@
+@mixin source($weight:400){
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight:$weight;
+}
