@@ -105,10 +105,22 @@ $(document).ready(function(){
                             numFound++;//number of items in a step
                             console.log(numFound);
 
+                            if(numFound <= 2){
+                                results +='<span>' + value.firstName + ' ' + value.lastName + '</span> ';
+                            }
+
+
                             //results.push(value.firstName + ' ' + value.lastName);
                             //results.sort(compare);
                         }
                     });
+                    if( numFound == 1){
+                        results += ' is also in Baby Step ' + selfStep;
+                    }else if(numFound == 2){
+                        results += ' are also in Baby Step ' + selfStep;
+                    }else if(numFound > 2){
+                        results += ', and ' + (numFound - 2) + ' other friend' + (numFound == 3 ? '' : 's') + ' are in Baby Step ' + selfStep;
+                    }
                     /*
                     if(selfStep == 2){
                         message = '<span>' + results.toString() + '</span> is also in Baby Step ' + selfStep;
@@ -129,7 +141,7 @@ $(document).ready(function(){
                     */
 
                     //add friends message
-                    $('.results').html(message);
+                    $('.results').html(results);
 
                 });
 
