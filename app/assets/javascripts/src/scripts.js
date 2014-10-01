@@ -77,8 +77,8 @@ $(document).ready(function(){
             article = $('.article-step'),
             message = '';
 
-            tab.on('click',function(event){
-                event.preventDefault();
+            tab.on('click',function(e){
+                e.preventDefault();
                 var self = $(this),
                 selfTarget = self.attr('href'),
                 selfStep = self.data('step');
@@ -93,17 +93,23 @@ $(document).ready(function(){
                 window.location.hash = selfTarget;
 
                 //grab json data to display message
-                results = [];//reset array
 
                 $.getJSON(urlString,function(data){
-                    var friends = data.friends;
+                    var friends = data.friends,
+                    results = '',//reset array
+                    numFound = 0;
 
                     $.each(friends,function(key,value){
-                        if(value.babyStep == selfStep){
-                            results.push(value.firstName + ' ' + value.lastName);
-                            results.sort(compare);
+                        if(value.babyStep === selfStep){
+
+                            numFound++;//number of items in a step
+                            console.log(numFound);
+
+                            //results.push(value.firstName + ' ' + value.lastName);
+                            //results.sort(compare);
                         }
                     });
+                    /*
                     if(selfStep == 2){
                         message = '<span>' + results.toString() + '</span> is also in Baby Step ' + selfStep;
                     }else if(selfStep == 3){
@@ -120,6 +126,7 @@ $(document).ready(function(){
                     }else{
                         message = '';
                     }
+                    */
 
                     //add friends message
                     $('.results').html(message);
@@ -170,7 +177,7 @@ $(document).ready(function(){
 
     //include google fonts
         WebFontConfig = {
-        google: { families: [ 'Source+Sans+Pro:300,400,600:latin' ] }
+        google: { families: [ 'Source+Sans+Pro:300,400,600:latin','Open+Sans:300,700:latin' ] }
       };
       (function() {
         var wf = document.createElement('script');

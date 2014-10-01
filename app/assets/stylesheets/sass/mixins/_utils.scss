@@ -2,3 +2,8 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-weight:$weight;
 }
+
+@mixin open($weight:300){
+    font-family: 'Open Sans', sans-serif;
+    font-weight:$weight;
+}

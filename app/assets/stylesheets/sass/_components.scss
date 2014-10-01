@@ -6,6 +6,30 @@
 
     .masthead-inner{
         background:url('../images/header.jpg') no-repeat;
+
+        .masthead-copy{
+            position:absolute;
+            z-index:1000;
+            top:50px;
+            right:70px;
+            color:$white-primary;
+
+            .title-masthead{
+                max-width:450px;
+                text-align:right;
+                font-size:32px;
+                @include open;
+
+                span{
+                    display:block;
+                    line-height:45px;
+                    font-size:48px;
+                    font-weight:700;
+                    text-transform:uppercase;
+                }
+            }
+        }
+
         img{
             width:100%;
             @include img-responsive;
