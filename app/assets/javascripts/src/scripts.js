@@ -3,9 +3,9 @@ $(document).ready(function(){
 (function(){
     var stepApp = {
         init : function(){
-            this.template();
+            this.runApp();
         },
-        template : function(){
+        runApp : function(){
 
             var template = $('#stepTemplate').html(),
             render = Handlebars.compile(template);
@@ -74,7 +74,7 @@ $(document).ready(function(){
             var urlString = 'assets/javascripts/baby-steps.json',
             tabItem = $('.steps-list li'),
             tab = $('.steps-list a'),
-            article = $('.article-step'),
+            article = $('.baby-step'),
             message = '';
 
             tab.on('click',function(e){
@@ -84,55 +84,65 @@ $(document).ready(function(){
                 selfStep = self.data('step');
 
                 //set active and visible states
-                tabItem.removeClass('is-active');
-                self.parent().addClass('is-active');//add active state
+                tabItem.removeClass('is-active');//remove active class from all
+                self.parent().addClass('is-active');//add active state to current
                 article.removeClass('is-visible');//remove visible class from articles
-                $(selfTarget).addClass('is-visible');//add visible class to current article
+                $(selfTarget).addClass('is-visible');//add visible class to current
 
                 //set url hash
                 window.location.hash = selfTarget;
 
                 //grab json data to display message
-
                 $.getJSON(urlString,function(data){
                     var friends = data.friends,
                     friend = [],
-                    results = '',//reset array
+                    results = '',
                     numFound = 0;
 
                     $.each(friends,function(key,value){
                         if(value.babyStep === selfStep){
+                            numFound++;//number of items in a step for each iteration
 
-                            numFound++;//number of items in a step
-                            console.log(numFound);
+                            //push into array
+                            friend.push(value.firstName + ' ' + value.lastName);
 
-                            if(numFound <= 2){
-                                friend.push(value.firstName + ' ' + value.lastName);
-                                friend.sort();
-                                //results +='<span>' + value.firstName + ' ' + value.lastName + '</span> ';
-                                //results.push(value.firstName + ' ' + value.lastName);
-                                //results.sort(compare);
-                            }
+                            //console.log(numFound);
                         }
                     });
+
+                    //sort by lastname and knock out items after first 2
+                    friend.sort(compare).splice(2,numFound);
+
+                    //construct message
                     if( numFound == 1){
-                        results += ' is also in Baby Step ' + selfStep;
+                        results += '<span>' +  friend.join('') + '</span> is also in Baby Step ' + selfStep;
                     }else if(numFound == 2){
-                        results += ' are also in Baby Step ' + selfStep;
+                        results += '<span>' + friend.join(' <i>and</i> ') + '</span> are also in Baby Step ' + selfStep;
                     }else if(numFound > 2){
-                        results += ', and ' + (numFound - 2) + ' other friend' + (numFound == 3 ? '' : 's') + ' are in Baby Step ' + selfStep;
+                        results += '<span>' + friend.join(', ') + ',</span> and ' + (numFound - 2) + ' other friend' + (numFound == 3 ? '' : 's') + ' are also in Baby Step ' + selfStep;
                     }
 
 
-                    //add friends message
-                    $('.results').html(results);
+                    //add friends message to message element
+                    $('.message').html(results);
 
                 });
+                //sort by last name function
+                function compare(a, b) {
+                    var splitA = a.split(" ");
+                    var splitB = b.split(" ");
+                    var lastA = splitA[splitA.length - 1];
+                    var lastB = splitB[splitB.length - 1];
+
+                    if (lastA < lastB) return -1;
+                    if (lastA > lastB) return 1;
+                    return 0;
+                }
 
             });
 
 
-            //instantiate page url
+            //instantiate page url hash
             this.locateTab();
         },
         locateTab :function(){
@@ -149,10 +159,39 @@ $(document).ready(function(){
                     $("a[href="+ tabLocation +"]").parent().addClass('is-active');
                 }
             }
+            //instantiate mobile
+            this.mobileMenu();
+        },
+        mobileMenu : function(){
+            var mobileToggle = $('.mobile-menu'),
+            pageAside = $('.aside-page'),
+            overlay = $('.overlay');
+
+            mobileToggle.on('click',function(){
+                pageAside.addClass('is-active');
+                overlay.addClass('is-visible');
+            });
+            pageAside.on('click',function(event){
+                event.stopPropagation();
+                var self = $(this);
+
+                if(self.hasClass('is-active')){
+                    self.removeClass('is-active');
+                }
+                overlay.removeClass('is-visible');
+            });
+
+            $(window).on('resize',function(){
+                if($(window).innerWidth() > 767 ){
+                    pageAside.removeClass('is-active');
+                    overlay.removeClass('is-visible');
+                }
+            });
+
         }
     }
 
-    //
+    //instantiate application
     stepApp.init();
 
 

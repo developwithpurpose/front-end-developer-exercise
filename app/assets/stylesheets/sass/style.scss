@@ -1,14 +1,13 @@
+//global
 @import 'variables';
-@import 'mixins';
-@import 'fonts';
-@import 'resets';
+@import 'mixins/global-mixins';
+
+//utilities
+@import 'modules/fonts';
+@import 'modules/utils';
+@import 'modules/resets';
+
+//site specific
 @import 'components';
 
 
-@media screen and (max-width: $screen-md){
-    @import 'query/sm-screen';
-}
-
-@media screen and (max-width: $screen-xs){
-   @import 'query/xs-screen';
-}

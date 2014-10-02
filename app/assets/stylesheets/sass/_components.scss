@@ -1,11 +1,8 @@
 //HEADER AREA
 //-----------------------------------------------/
 .masthead-wrap{
-    //height:200px;
-    //background:red;
-
     .masthead-inner{
-        background:url('../images/header.jpg') no-repeat;
+        //background:url('../images/header.jpg') no-repeat;
 
         .masthead-copy{
             position:absolute;
@@ -17,15 +14,58 @@
             .title-masthead{
                 max-width:450px;
                 text-align:right;
-                font-size:32px;
+                font-size:30px;
                 @include open;
 
                 span{
                     display:block;
                     line-height:45px;
-                    font-size:48px;
+                    font-size:45px;
                     font-weight:700;
                     text-transform:uppercase;
+                }
+            }
+            @media screen and (max-width:$screen-md){
+                top:40px;
+                right:40px;
+                .title-masthead{
+                     font-size:21px;
+                     span{
+                        line-height:34px;
+                        font-size:35px;
+                     }
+                }
+            }
+            @media screen and (max-width:$screen-sm){
+                top:20px;
+                right:40px;
+                .title-masthead{
+                    max-width:250px;
+                    font-size:18px;
+                     span{
+                        line-height:34px;
+                        font-size:28px;
+                     }
+                }
+            }
+            @media screen and (max-width:$screen-xs){
+                position:relative;
+                top:0;
+                left:0;
+                border-bottom:solid 1px $bg-primary;
+                background:$gray-primary;
+
+                .title-masthead{
+                    padding:15px 10px;
+                    max-width:100%;
+                    text-align: center;
+                    font-size:16px;
+                    color:$text-color;
+                    span {
+                        display:block;
+                        line-height:19px;
+                        font-size:16px;
+                    }
                 }
             }
         }
@@ -42,6 +82,39 @@
 .content-wrap{
     padding-top:60px;
     background:$white-primary;
+    box-shadow:-2px 3px 2px rgba(10,10,10,.2),
+    2px 3px 2px rgba(10,10,10,.2);
+
+    .mobile-menu {
+        //only visible below 767
+        margin-bottom:20px;
+        padding:15px 40px;
+        line-height:20px;
+        background:$blue-primary;
+        color:$white-primary;
+        cursor:pointer;
+        transition:all ease .4s;
+
+        &:hover{
+            background:darken($blue-primary,12%);
+        }
+        p {
+            line-height:1;
+            text-align:left;
+            //text-transform:uppercase;
+            font-size:18px;
+            font-weight:bold;
+            @include source;
+
+            i {
+                padding-right:5px;
+                font-size:21px;
+                font-weight:normal;
+                vertical-align: text-top;
+
+            }
+        }
+    }
 
     .content-inner{
         @include clearfix;
@@ -51,7 +124,7 @@
 //-----------------------------------------------
 .aside-page{
 
-    padding-bottom:180px;
+    padding:0 2px 180px 0;
     background:$gray-primary;
     box-shadow:inset -2px 0 5px rgba(10,10,10,.3);
     @include make-md-column(3,0);
@@ -60,8 +133,6 @@
 .steps-list {
     height:auto;
     text-align:right;
-
-
 
     li {
         height:60px;
@@ -100,6 +171,9 @@
             padding:0;
             color:$list-text;
 
+            &:active,&:focus{
+                background:none;//ie fix
+            }
             &:after{
                 content:'\e600';
                 display:inline-block;
@@ -112,6 +186,7 @@
             }
         }
 
+        //convert to list & loop later or prior to production
         &:nth-child(2) a:after{
             content:'\e601';
         }
@@ -138,32 +213,37 @@
 .article-wrap{
     display:inline-block;
     @include make-md-column(9,0);
+    padding:0 70px;//override bt column
 
-    .results {
-        padding:0 70px;
+    .message {
+        margin:0 auto;
+        padding:10px 0;
         line-height:18px;
         font-size:13px;
         //font-family:"Helvetica","arial",sans-serif;
         color:$text-color;
+        cursor:pointer;
 
         span {
             font-weight:bold;
             color:$blue-primary;
+
+            i {
+                color:$text-color;
+                font-style:normal;
+                font-weight:normal;
+            }
         }
     }
 }
 
-.article-step{
+.baby-step{
     display:none;
-    padding:0 70px;
-
 
     &.is-visible{
         display:block;
-
         animation:scaleUp 0.4s ease 1;
     }
-
 
     .title-article {
         margin-bottom:24px;
@@ -233,3 +313,13 @@
         }
     }
 }
+
+//include media query files
+@media screen and (max-width: $screen-md){
+    @import 'queries/sm-screen';
+}
+/* //wasnt needed
+@media screen and (max-width: $screen-xs){
+   @import 'queries/xs-screen';
+}
+*/

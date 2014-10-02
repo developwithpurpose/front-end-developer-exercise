@@ -1,5 +1,6 @@
 {
   "name": "front-end-developer-exercise",
+  "author" : "Cortney Robinson",
   "version": "0.1.0",
   "devDependencies": {
     "browser-sync": "^1.3.6",
@@ -10,6 +11,7 @@
     "gulp-concat": "^2.3.4",
     "gulp-connect": "^2.0.6",
     "gulp-cssmin": "^0.1.6",
+    "gulp-jasmine": "^1.0.1",
     "gulp-jshint": "^1.7.1",
     "gulp-livereload": "^2.1.1",
     "gulp-plumber": "^0.6.4",

@@ -1,0 +1,58 @@
+.content-wrap{
+    padding-top:0px;
+}
+.aside-page{
+    z-index:3000;
+    position:absolute;
+    display:none;
+    width:80%;
+    margin-bottom:40px;
+    padding-bottom:0;
+    box-shadow:0px 0px 4px 1px rgba(10,10,10,.4);
+    @include clearfix;
+    @include align-center;
+
+    -webkit-animation:slideUp ease .4s 1;
+    -moz-animation:slideUp ease .4s 1;
+    -ms-animation:slideUp ease .4s 1;
+    animation:slideUp ease .4s 1;
+
+    &.is-active{
+        display:block;
+        -webkit-animation:slideDown ease .4s 1;
+        -moz-animation:slideDown ease .4s 1;
+        -ms-animation:slideDown ease .4s 1;
+        animation:slideDown ease .4s 1;
+    }
+
+}
+.steps-list {
+    height:auto;
+    margin:0 auto;
+    padding:0;
+    text-align:center;
+    float:none;
+
+    li {
+        float:left;
+        padding:0 10px;
+        font-size:18px;
+        text-align:left;
+        //box-shadow:none;
+        //@include make-md-column(2,0);
+        &:hover{
+            background:$white-primary;
+        }
+        a {
+            text-align:center;
+            &:after{
+                //display:none;
+            }
+        }
+
+    }
+}
+
+.article-wrap{
+    padding:0 40px 40px;
+}

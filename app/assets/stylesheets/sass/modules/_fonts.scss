@@ -23,6 +23,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu:before {
+    content: "\e609";
+}
+.icon-heart:before {
+    content: "\e60b";
+}
+.icon-close:before {
+    content: "\e60a";
+}
 .icon-icon-caret-up:before {
     content: "\e602";
 }

@@ -12,6 +12,7 @@ var sass = require('gulp-sass'),
    prefix = require('gulp-autoprefixer'),
    uglify = require('gulp-uglify'),
    browserSync = require('browser-sync'),
+   jasmine = require('gulp-jasmine'),
    connect = require('gulp-connect');
    livereload = require('gulp-livereload');
 
@@ -21,7 +22,8 @@ var paths = {
    sass    : "./app/assets/stylesheets/sass/**/*.scss",//source css
    css     : "./app/assets/stylesheets/",//dest css
    jssrc   : "./app/assets/javascripts/src/*.js",//source js
-   js      : "./app/assets/javascripts/" //des js
+   js      : "./app/assets/javascripts/", //des js
+   jaz     : './spec/main.spec.js'
 }
 
 // UPDATE AND WATCH HTML
@@ -44,13 +46,18 @@ gulp.task('styles',function(){
    .pipe(livereload());
 });
 
-//Minify & CONCAT JS SCRIPTS
+//Minify & CONCAT JS SCRIPTS & RUN JASMINE
 //----------------------------------------------
 gulp.task('scripts',function(){
    return gulp.src(paths.jssrc)
    .pipe(uglify())
    .pipe(concat('main.js'))
    .pipe(gulp.dest(paths.js));
+});
+
+gulp.task('jstester',function(){
+  return gulp.src(paths.jaz)
+  .pipe(jasmine());
 });
 
 
@@ -74,7 +81,8 @@ gulp.task('webserver',function(){
    });
 });
 
-//Call livereload
+//Call livereload & Server
+//-----------------------------------------------
 gulp.task('livereload',function(){
    gulp.src([paths.sass, paths.jssrc,paths.html])
    .pipe(watch())
@@ -83,5 +91,5 @@ gulp.task('livereload',function(){
 
 
 //DEFAULT TASKS THAT GULP MUST RUN AT START
-gulp.task('default',['webserver','styles','scripts','livereload','watch']);
+gulp.task('default',['webserver','styles','scripts','jstester','livereload','watch']);
 
