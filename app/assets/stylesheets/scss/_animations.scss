@@ -1,0 +1,47 @@
+/* Keyframes */
+
+@-webkit-keyframes fadeContent {
+	0% {
+		opacity: 0;
+		padding-top: 18px;
+	}
+	100% {
+		opacity: 1;
+		padding-top: 0;
+	}
+}
+
+@-moz-keyframes fadeContent {
+	0% {
+		opacity: 0;
+		padding-top: 18px;
+	}
+	100% {
+		opacity: 1;
+		padding-top: 0;
+	}
+}
+
+@-o-keyframes fadeContent {
+	0% {
+		opacity: 0;
+		padding-top: 18px;
+	}
+	100% {
+		opacity: 1;
+		padding-top: 0;
+	}
+}
+
+@keyframes fadeContent {
+	0% {
+		opacity: 0;
+		padding-top: 18px;
+	}
+	100% {
+		opacity: 1;
+		padding-top: 0;
+	}
+}
+
+/* End Keyframes */
