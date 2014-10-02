@@ -96,6 +96,7 @@ $(document).ready(function(){
 
                 $.getJSON(urlString,function(data){
                     var friends = data.friends,
+                    friend  [],
                     results = '',//reset array
                     numFound = 0;
 
@@ -108,10 +109,6 @@ $(document).ready(function(){
                             if(numFound <= 2){
                                 results +='<span>' + value.firstName + ' ' + value.lastName + '</span> ';
                             }
-
-
-                            //results.push(value.firstName + ' ' + value.lastName);
-                            //results.sort(compare);
                         }
                     });
                     if( numFound == 1){
@@ -121,44 +118,13 @@ $(document).ready(function(){
                     }else if(numFound > 2){
                         results += ', and ' + (numFound - 2) + ' other friend' + (numFound == 3 ? '' : 's') + ' are in Baby Step ' + selfStep;
                     }
-                    /*
-                    if(selfStep == 2){
-                        message = '<span>' + results.toString() + '</span> is also in Baby Step ' + selfStep;
-                    }else if(selfStep == 3){
 
-                        message = '<span>' + results.join(' and ') + '</span> are also in Baby Step ' + selfStep;
-                    }else if(selfStep == 4){
-                        message = '<span>' + results.toString() + ',</span> and 1 other friend is also in Baby Step ' + selfStep;
-                    }else if(selfStep == 5){
-                        message ='<span>' + results.toString() + ',</span> and 2 other friends are also in Baby Step ' + selfStep;
-                    }else if(selfStep == 6){
-                        message = '<span>' + results.toString() + ',</span> and 3 other friends are also in Baby Step ' + selfStep;
-                    }else if(selfStep == 7){
-                        message = '<span>' + results.toString() + ',</span> and 4 other friends are also in Baby Step ' + selfStep;
-                    }else{
-                        message = '';
-                    }
-                    */
 
                     //add friends message
                     $('.results').html(results);
 
                 });
 
-
-
-
-                //sort by last name
-                function compare(a, b) {
-                    var splitA = a.split(" ");
-                    var splitB = b.split(" ");
-                    var lastA = splitA[splitA.length - 1];
-                    var lastB = splitB[splitB.length - 1];
-
-                    if (lastA < lastB) return -1;
-                    if (lastA > lastB) return 1;
-                    return 0;
-                }
             });
 
 
