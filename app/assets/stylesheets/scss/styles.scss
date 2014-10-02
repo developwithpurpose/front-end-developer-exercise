@@ -1,143 +1,164 @@
-/*test*/
+/* Imports */
 
 @import 'reset';
 @import 'variables';
-@import 'typography';
 @import 'icons';
 @import 'animations';
 
+/* End imports */
+
 /* Custom styles */
 
-body {
-	background-color: $bodyBgColor;
-}
+	/* Body and page layout */
+	body {
+		background-color: $bodyBgColor;
+	}
 
-header {
-	height: 276px;
-	width: 980px;
-	background: $contentBgColor url(../../images/header.jpg) no-repeat 0 0;
-	display: block;
-	float: left;
-	padding: 0 0 60px 0;
+	.container {
+		margin: 0 auto;
+		width: 980px;
+	}
+
+	.page {
+		background-color: $contentBgColor;
+		float:left;
+		-webkit-box-shadow: 0px 0px 8px #888888;
+		-moz-box-shadow: 0px 0px 8px #888888;
+		-o-box-shadow: 0px 0px 8px #888888;
+		box-shadow: 0px 0px 8px #888888;
+	}
+	/* End Body and page layout */
+
+	/* Header styling */
+
+	header {
+		height: 276px;
+		width: 980px;
+		background: $contentBgColor url(../../images/header.jpg) no-repeat 0 0;
+		display: block;
+		float: left;
+		padding: 0 0 60px 0;
+	}
 
 	h1 {
-		color: #fff;
-		font: 300 32px/32px 'Open Sans', sans-serif;
-		margin: 50px 70px 0 0;
+		margin: 45px 70px 0 0;
 		text-align: right;
-
-		span {
-			display: block;
-			font: bold 50px/48px 'Open Sans', sans-serif;
-			text-transform: uppercase;
-		}
+		color: #fff;
 	}
-}
 
-nav {
-	display:block;
-	float:left;
-	background-color: $leftNavBgColor;
-	background-image: linear-gradient(
-      to left,
-      #d1d5d6,
-      #ebeced 3%
-    );
-	width: 300px;
+	.primary-title {
+		font: 300 32px/40px 'Open Sans', sans-serif;
+	}
 
-	ul {
-		margin:0;
-		padding:0;
-		li {
-			text-align:right;
-			border-bottom: 1px solid #fff;
+	.sub-title {
+		display: block;
+		font: 700 50px/50px 'Open Sans', sans-serif;
+		text-transform: uppercase;
+	}
 
-			&:nth-last-child(1) {
-				border-bottom: 0;
+	/* End header styling */
+
+	/* Nav styling */
+
+	nav {
+		display:block;
+		float:left;
+		background-color: $leftNavBgColor;
+		background-image: linear-gradient(
+	      to left,
+	      #d1d5d6,
+	      #ebeced 3%
+	    );
+		width: 300px;
+
+		ul {
+			margin:0;
+			padding:0;
+			li {
+				text-align:right;
+				border-bottom: 1px solid #fff;
+
+				&:nth-last-child(1) {
+					border-bottom: 0;
+				}
 			}
 		}
 	}
-}
 
-.nav-link {
-	color: $navColor;
-	display: block;
-	font: 300 18px/60px 'Source Sans Pro', sans-serif;
-	padding-right: 24px;
-	text-decoration: none;
+	.nav-link {
+		color: $navColor;
+		display: block;
+		font: 300 18px/60px 'Source Sans Pro', sans-serif;
+		padding-right: 24px;
+		text-decoration: none;
 
-	&.active {
-		background-color: #fff;
-		color: $navSelectedColor;
-		font-weight: 600;
-	}
+		&.active {
+			background-color: #fff;
+			color: $navSelectedColor;
+			font-weight: 600;
+		}
 
-	&, &:focus {
-		outline: #fff none 0;
-	}
-}
-
-.container {
-	margin: 0 auto;
-	width: 980px;
-}
-
-.page {
-	background-color: $contentBgColor;
-	float:left;
-	-webkit-box-shadow: 0px 0px 8px #888888;
-}
-
-.content {
-	float: right;
-	margin: 0 70px;
-	width: 540px;
-}
-
-.baby-step {
-	display: none;
-
-	h2 {
-		i {
-			margin-right: 14px;
+		&, &:focus {
+			outline: #fff none 0; //Fixes Firefox and IE link outlining on nav links
 		}
 	}
 
-	p {
-		color: $copyColor;
-		font: normal 13px/18px 'Helvetica', sans-serif;
+	/* End nav styling */
+
+	/* Content styling */
+
+	.content {
+		float: right;
+		margin: 0 70px;
+		width: 540px;
 	}
 
-	a {
-		color: $copyBlueColor;
-		text-decoration: none;
-		outline: 0;
+	.baby-step {
+		display: none;
+
+		h2 {
+			i {
+				margin-right: 14px;
+			}
+		}
+
+		p {
+			color: $copyColor;
+			font: normal 13px/18px 'Helvetica', sans-serif;
+		}
+
+		a {
+			color: $copyBlueColor;
+			text-decoration: none;
+			outline: 0;
+		}
+
+		.friends-list {
+			margin-top: 27px;
+		}
 	}
 
-	.friends-list {
-		margin-top: 27px;
+	.primary-header {
+		color: $primaryColor;
+		display: inline-block;
+		font: 600 30px/28px 'Source Sans Pro', sans-serif;
+		margin: 0;
+		padding-top: 5px;
 	}
-}
 
-.primary-header {
-	color: $primaryColor;
-	display: inline-block;
-	font: 600 30px/28px 'Source Sans Pro', sans-serif;
-	margin: 0;
-	padding-top: 5px;
-}
+	.sub-header {
+		color: $secondaryColor;
+		display: block;
+		font: 300 18px/20px 'Source Sans Pro', sans-serif;
+		margin: 0;
+	}
 
-.sub-header {
-	color: $secondaryColor;
-	display: block;
-	font: 300 18px/20px 'Source Sans Pro', sans-serif;
-	margin: 0;
-}
+	.baby-step.active {
+		display:block;
+		-webkit-animation: fadeContent 0.25s linear;
+		-moz-animation: fadeContent 0.25s linear;
+	}
 
-.baby-step.active {
-	display:block;
-	-webkit-animation: fadeContent 0.25s linear;
-	-moz-animation: fadeContent 0.25s linear;
-}
+	/* End content styling */
 
 /* End custom styles */
