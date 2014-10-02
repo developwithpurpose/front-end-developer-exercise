@@ -96,7 +96,7 @@ $(document).ready(function(){
 
                 $.getJSON(urlString,function(data){
                     var friends = data.friends,
-                    friend  [],
+                    friend = [],
                     results = '',//reset array
                     numFound = 0;
 
@@ -107,7 +107,11 @@ $(document).ready(function(){
                             console.log(numFound);
 
                             if(numFound <= 2){
-                                results +='<span>' + value.firstName + ' ' + value.lastName + '</span> ';
+                                friend.push(value.firstName + ' ' + value.lastName);
+                                friend.sort();
+                                //results +='<span>' + value.firstName + ' ' + value.lastName + '</span> ';
+                                //results.push(value.firstName + ' ' + value.lastName);
+                                //results.sort(compare);
                             }
                         }
                     });
