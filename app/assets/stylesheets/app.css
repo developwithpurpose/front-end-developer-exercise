@@ -157,6 +157,7 @@ ul li:first-child {
 ul li.transition {
     background-color: #fff;
     opacity: 0.60;
+    filter:alpha(opacity = 60);
     position: absolute;
     z-index: 10;
     width: 100%;
