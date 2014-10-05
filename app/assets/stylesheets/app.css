@@ -1,0 +1,325 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700);
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+/* =============================================================================
+   Normalize elm
+   ========================================================================== */
+h1, h4 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+a {
+    color: #35abe1;
+    text-decoration: none;
+}
+
+/* =============================================================================
+   Project Application CSS
+   @description: Main style file
+   ========================================================================== */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #bbbfc2;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+    margin:0;
+}
+
+section {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 980px;
+    margin: 0 auto 100px;
+    background: #fff;
+    padding: 0;
+    -moz-box-shadow: rgba(82, 82, 82, 0.8) 0px 0px 8px;
+    -webkit-box-shadow: rgba(82, 82, 82, 0.8) 0px 0px 8px;
+    box-shadow: rgba(82, 82, 82, 0.8) 0px 0px 8px;
+}
+/* =============================================================================
+   Top Banner
+   ========================================================================== */
+.banner-caption {
+    background-color: transparent;
+    position: static;
+    max-width: 550px;
+    margin: 70px 50px 0 0;
+    float: right !important;
+    text-align: right;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.top-banner {
+    color: #fff;
+    background: url('/app/assets/images/header.jpg') center bottom no-repeat;
+    height: 276px;
+    margin-bottom: 60px;
+}
+
+.top-banner h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 32px;
+    margin: 0;
+}
+
+.top-banner p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 48px;
+}
+
+/* =============================================================================
+   Side Nav
+   ========================================================================== */
+nav {
+    margin-bottom: 20px;
+    padding-left: 0;
+    position: relative;
+    float: left;
+    width: 33.33333333%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 2px 0 0 0;
+    margin: 0;
+    min-height: 650px;
+    background: #ebeced;
+	/* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI5NiUiIHN0b3AtY29sb3I9IiNlYmVjZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OSUiIHN0b3AtY29sb3I9IiNkMWQ1ZDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(left, #ebeced 96%, #d1d5d6 99%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(96%, #ebeced), color-stop(99%, #d1d5d6));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #ebeced 96%, #d1d5d6 99%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #ebeced 96%, #d1d5d6 99%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #ebeced 96%, #d1d5d6 99%);
+	/* IE10+ */
+	background: linear-gradient(to right, #ebeced 96%, #d1d5d6 99%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1);
+	/* IE6-8 */;
+}
+
+nav a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    text-align: right;
+    padding: 0;
+    border: 0 none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+
+    padding-right: 24px;
+    font-size: 18px;
+    color: #ADAEB0;
+    line-height: 60px;
+    display: block;
+    text-decoration: none;
+}
+
+nav a.active {
+    background: #fff;
+}
+
+nav a:hover,
+nav a.active {
+    color: #36abe1;
+    text-decoration: none;
+}
+
+nav a.transition {
+    background-color: #fff;
+    opacity: 0.60;
+    filter:alpha(opacity = 60);
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    display: none;
+    list-style: none;
+    top: 0;
+}
+
+/* =============================================================================
+   Marketing Modules
+   ========================================================================== */
+
+.markering-content {
+    position: relative;
+    float: left;
+    width: 66.66666667%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 0;
+    overflow: hidden;
+    height: 300px;
+}
+
+.markering-content article > div {
+    margin: 2px 70px 95px;
+}
+
+.markering-content article > div .title {
+    color: #36abe1;
+}
+
+div.markering-content article > div.re-margin {
+    margin: 2px 30px 95px;
+}
+
+p.last {
+    margin-top: 23px;
+}
+
+/* =============================================================================
+   Icons
+   ========================================================================== */
+
+/*========= For size nav =========*/
+nav a i {
+    background: url('/app/assets/images/icons/sprites/icons_small.png') no-repeat 0 0;
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+    margin-left: 20px;
+    position: relative;
+    text-indent: -99999999px;
+    top: 5px;
+}
+
+.link-1 i { background-position: 0 0; }
+.link-2 i { background-position: 0 -25px; }
+.link-3 i { background-position: 0 -50px; }
+.link-4 i { background-position: 0 -75px; }
+.link-5 i { background-position: 0 -100px; height: 25px; }
+.link-6 i { background-position: 0 -125px; }
+.link-7 i { background-position: 0 -150px; height: 25px; }
+
+.link-1:hover i, .active.link-1 i { background-position: 0 -175px; }
+.link-2:hover i, .active.link-2 i { background-position: 0 -200px; }
+.link-3:hover i, .active.link-3 i { background-position: 0 -225px; }
+.link-4:hover i, .active.link-4 i { background-position: 0 -250px; }
+.link-5:hover i, .active.link-5 i { background-position: 0 -275px; }
+.link-6:hover i, .active.link-6 i { background-position: 0 -300px; }
+.link-7:hover i, .active.link-7 i { background-position: 0 -325px; }
+
+/*========= Marketing module icons =========*/
+.title-icon i {
+    background: url('/app/assets/images/icons/sprites/icons_large.png') no-repeat 0 -466px;
+    display: inline-block;
+    width: 78px;
+    height: 62px;
+    margin-left: 0;
+    margin-right: 12px;
+    text-indent: -99999999px;
+    float: left;
+}
+
+.step1 .title-icon i { height: 40px; }
+.step2 .title-icon i { background-position: 0 -523px; }
+.step3 .title-icon i { background-position: 0 -586px; }
+.step4 .title-icon i { background-position: 0 -650px; }
+.step5 .title-icon i { background-position: 0 -712px; height: 66px; }
+.step6 .title-icon i { background-position: 0 -779px; }
+.step7 .title-icon i { background-position: 0 -842px; height: 65px; }
+
+/*========= Media OOCSS =========*/
+.media, .bd { overflow: hidden; _overflow: visible; zoom: 1; }
+.media .img { float: left; }
+
+.bd h4 {
+    margin-top: 0;
+    color: #36abe1;
+    line-height: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.bd p {
+    margin-bottom: 24px;
+    color: #5C6366;
+    line-height: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+/*========= Media queries =========*/
+
+@media (min-width: 768px) {
+    section {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    section {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    section {
+        width: 1170px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .markering-content article > div {
+        margin: 2px 70px 95px;
+    }
+
+    .markering-content article > div h4 {
+        line-height: 30px;
+        font-size: 29px;
+    }
+
+    .banner-caption {
+        margin: 12px 15px 0 0;
+    }
+
+    nav a {
+    	padding-right: 15px;
+    }
+    
+    nav a i {
+        display: none;
+    }
+}
