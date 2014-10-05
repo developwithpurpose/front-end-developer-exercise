@@ -5,7 +5,7 @@
 /* =============================================================================
    Normalize elm
    ========================================================================== */
-h1, h2, h3, h4, h5, h6 {
+h1, h4 {
     font-family: inherit;
     font-weight: 500;
     line-height: 1.1;
@@ -26,6 +26,11 @@ p {
     clear: both;
 }
 
+a {
+    color: #35abe1;
+    text-decoration: none;
+}
+
 /* =============================================================================
    Project Application CSS
    @description: Main style file
@@ -36,18 +41,25 @@ body {
     font-size: 13px;
     color: #65686f;
     line-height: 18px;
+    margin:0;
 }
 
-.source-light {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
+section {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 980px;
+    margin: 0 auto 100px;
+    background: #fff;
+    padding: 0;
+    -moz-box-shadow: rgba(82, 82, 82, 0.8) 0px 0px 8px;
+    -webkit-box-shadow: rgba(82, 82, 82, 0.8) 0px 0px 8px;
+    box-shadow: rgba(82, 82, 82, 0.8) 0px 0px 8px;
 }
-
-.source-bold {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-}
-
+/* =============================================================================
+   Top Banner
+   ========================================================================== */
 .banner-caption {
     background-color: transparent;
     position: static;
@@ -84,11 +96,10 @@ body {
     line-height: 48px;
 }
 
-p.last {
-    margin-top: 23px;
-}
-
-ul {
+/* =============================================================================
+   Side Nav
+   ========================================================================== */
+nav {
     margin-bottom: 20px;
     padding-left: 0;
     position: relative;
@@ -101,26 +112,26 @@ ul {
     margin: 0;
     min-height: 650px;
     background: #ebeced;
-  /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI5NiUiIHN0b3AtY29sb3I9IiNlYmVjZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OSUiIHN0b3AtY29sb3I9IiNkMWQ1ZDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(left, #ebeced 96%, #d1d5d6 99%);
-  /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(96%, #ebeced), color-stop(99%, #d1d5d6));
-  /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, #ebeced 96%, #d1d5d6 99%);
-  /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, #ebeced 96%, #d1d5d6 99%);
-  /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, #ebeced 96%, #d1d5d6 99%);
-  /* IE10+ */
-    background: linear-gradient(to right, #ebeced 96%, #d1d5d6 99%);
-  /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1);
-  /* IE6-8 */;
+	/* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI5NiUiIHN0b3AtY29sb3I9IiNlYmVjZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OSUiIHN0b3AtY29sb3I9IiNkMWQ1ZDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(left, #ebeced 96%, #d1d5d6 99%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(96%, #ebeced), color-stop(99%, #d1d5d6));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #ebeced 96%, #d1d5d6 99%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #ebeced 96%, #d1d5d6 99%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #ebeced 96%, #d1d5d6 99%);
+	/* IE10+ */
+	background: linear-gradient(to right, #ebeced 96%, #d1d5d6 99%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1);
+	/* IE6-8 */;
 }
 
-ul li {
+nav a {
     position: relative;
     display: block;
     padding: 10px 15px;
@@ -132,29 +143,26 @@ ul li {
     border: 0 none;
     border-bottom: 1px solid #fff;
     background: transparent;
+
+    padding-right: 24px;
+    font-size: 18px;
+    color: #ADAEB0;
+    line-height: 60px;
+    display: block;
+    text-decoration: none;
 }
 
-ul li:first-child {
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
+nav a.active {
+    background: #fff;
 }
 
-ul li:last-child {
-    margin-bottom: 0;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
+nav a:hover,
+nav a.active {
+    color: #36abe1;
+    text-decoration: none;
 }
 
-ul li:first-child {
-    -moz-border-top-right-radius: 0;
-    -webkit-border-top-right-radius: 0;
-    border-top-right-radius: 0;
-    -moz-border-top-left-radius: 0;
-    -webkit-border-top-left-radius: 0;
-    border-top-left-radius: 0;
-}
-
-ul li.transition {
+nav a.transition {
     background-color: #fff;
     opacity: 0.60;
     filter:alpha(opacity = 60);
@@ -166,29 +174,9 @@ ul li.transition {
     top: 0;
 }
 
-a {
-    color: #35abe1;
-    text-decoration: none;
-}
-
-ul li a {
-    padding-right: 24px;
-    font-size: 18px;
-    color: #ADAEB0;
-    line-height: 60px;
-    display: block;
-    text-decoration: none;
-}
-
-ul li a.active {
-    background: #fff;
-}
-
-ul li a:hover,
-ul li a.active {
-    color: #36abe1;
-    text-decoration: none;
-}
+/* =============================================================================
+   Marketing Modules
+   ========================================================================== */
 
 .markering-content {
     position: relative;
@@ -210,98 +198,47 @@ ul li a.active {
     color: #36abe1;
 }
 
-section {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: 980px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 0;
-    -moz-box-shadow: 6px 0px 5px -5px #999999, -6px 0px 5px -5px #999999;
-    -webkit-box-shadow: 6px 0px 5px -5px #999999, -6px 0px 5px -5px #999999;
-    box-shadow: 6px 0px 5px -5px #999999, -6px 0px 5px -5px #999999;
-}
-
 div.markering-content article > div.re-margin {
     margin: 2px 30px 95px;
 }
-/* side nave icons styles:*/
-a i {
+
+p.last {
+    margin-top: 23px;
+}
+
+/* =============================================================================
+   Icons
+   ========================================================================== */
+
+/*========= For size nav =========*/
+nav a i {
     background: url('/app/assets/images/icons/sprites/icons_small.png') no-repeat 0 0;
     display: inline-block;
     width: 30px;
     height: 24px;
-    margin-left: 30px;
+    margin-left: 20px;
     position: relative;
     text-indent: -99999999px;
     top: 5px;
 }
 
-.link-1 i {
-    background-position: 0 0;
-}
+.link-1 i { background-position: 0 0; }
+.link-2 i { background-position: 0 -25px; }
+.link-3 i { background-position: 0 -50px; }
+.link-4 i { background-position: 0 -75px; }
+.link-5 i { background-position: 0 -100px; height: 25px; }
+.link-6 i { background-position: 0 -125px; }
+.link-7 i { background-position: 0 -150px; height: 25px; }
 
-.link-2 i {
-    background-position: 0 -25px;
-}
+.link-1:hover i, .active.link-1 i { background-position: 0 -175px; }
+.link-2:hover i, .active.link-2 i { background-position: 0 -200px; }
+.link-3:hover i, .active.link-3 i { background-position: 0 -225px; }
+.link-4:hover i, .active.link-4 i { background-position: 0 -250px; }
+.link-5:hover i, .active.link-5 i { background-position: 0 -275px; }
+.link-6:hover i, .active.link-6 i { background-position: 0 -300px; }
+.link-7:hover i, .active.link-7 i { background-position: 0 -325px; }
 
-.link-3 i {
-    background-position: 0 -50px;
-}
-
-.link-4 i {
-    background-position: 0 -75px;
-}
-
-.link-5 i {
-    background-position: 0 -100px;
-}
-
-.link-6 i {
-    background-position: 0 -125px;
-}
-
-.link-7 i {
-    background-position: 0 -150px;
-}
-
-.link-1:hover i,
-.active.link-1 i {
-    background-position: 0 -175px;
-}
-
-.link-2:hover i,
-.active.link-2 i {
-    background-position: 0 -200px;
-}
-
-.link-3:hover i,
-.active.link-3 i {
-    background-position: 0 -225px;
-}
-
-.link-4:hover i,
-.active.link-4 i {
-    background-position: 0 -250px;
-}
-
-.link-5:hover i,
-.active.link-5 i {
-    background-position: 0 -275px;
-}
-
-.link-6:hover i,
-.active.link-6 i {
-    background-position: 0 -300px;
-}
-
-.link-7:hover i,
-.active.link-7 i {
-    background-position: 0 -325px;
-}
-/*large icon style*/
+/*========= Marketing module icons =========*/
 .title-icon i {
     background: url('/app/assets/images/icons/sprites/icons_large.png') no-repeat 0 -466px;
     display: inline-block;
@@ -313,45 +250,17 @@ a i {
     float: left;
 }
 
-.step1 .title-icon i {
-    height: 40px;
-}
+.step1 .title-icon i { height: 40px; }
+.step2 .title-icon i { background-position: 0 -523px; }
+.step3 .title-icon i { background-position: 0 -586px; }
+.step4 .title-icon i { background-position: 0 -650px; }
+.step5 .title-icon i { background-position: 0 -712px; height: 66px; }
+.step6 .title-icon i { background-position: 0 -779px; }
+.step7 .title-icon i { background-position: 0 -842px; height: 65px; }
 
-.step2 .title-icon i {
-    background-position: 0 -523px;
-}
-
-.step3 .title-icon i {
-    background-position: 0 -586px;
-}
-
-.step4 .title-icon i {
-    background-position: 0 -650px;
-}
-
-.step5 .title-icon i {
-    background-position: 0 -712px;
-    height: 66px;
-}
-
-.step6 .title-icon i {
-    background-position: 0 -779px;
-}
-
-.step7 .title-icon i {
-    background-position: 0 -843px;
-}
-
-/* ====== media ====== */
-.media, .bd {
-    overflow: hidden;
-    _overflow: visible;
-    zoom: 1;
-}
-
-.media .img {
-    float: left;
-}
+/*========= Media OOCSS =========*/
+.media, .bd { overflow: hidden; _overflow: visible; zoom: 1; }
+.media .img { float: left; }
 
 .bd h4 {
     margin-top: 0;
@@ -371,6 +280,8 @@ a i {
     font-weight: normal;
     font-size: 18px;
 }
+
+/*========= Media queries =========*/
 
 @media (min-width: 768px) {
     section {
@@ -401,10 +312,14 @@ a i {
     }
 
     .banner-caption {
-        margin: 12px 50px 0 0;
+        margin: 12px 15px 0 0;
     }
 
-    ul li i {
+    nav a {
+    	padding-right: 15px;
+    }
+    
+    nav a i {
         display: none;
     }
 }
