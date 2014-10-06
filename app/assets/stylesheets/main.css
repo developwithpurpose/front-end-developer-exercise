@@ -1,0 +1,216 @@
+
+
+.sprites {
+	background: url(../images/icons/sprites/icons_small.png) no-repeat;
+	display: block;
+	zoom: 1;
+}
+
+.money 			{background-position: -1px -5px; width: 28px; height: 15px; top: 24px;}
+.current .money {background-position: -1px -180px}
+
+.circles 		  {background-position: -1px -27px; width: 29px; height: 20px; top: 20px;}
+.current .circles {background-position: -1px -202px;}
+
+.pig 			{background-position: 0 -53px; width: 30px; height: 19px; top: 20px;}
+.current .pig 	{background-position: 0 -228px}
+
+.bars 			{background-position: -3px -76px; width: 24px; height: 23px; top: 16px;}
+.current .bars 	{background-position: -3px -251px}
+
+.book 			{background-position: -5px -100px; width: 18px; height: 25px; top: 20px;}
+.current .book 	{background-position: -5px -275px}
+
+.house 			{background-position: -3px -126px; width: 24px; height: 24px; top: 20px;}
+.current .house {background-position: -3px -301px;}
+
+.hand 			{background-position: -3px -150px; width: 24px; height: 25px; top: 20px;}
+.current .hand 	{background-position: -3px -325px;}
+
+
+#wrap {
+	position: relative;
+	background: #fff;
+	width: 980px;
+	margin: 0 auto 40px;
+}
+
+	#wrap:after {
+		display: block;
+		content: "";
+		background: url(../images/shadow_bottom.jpg) no-repeat;
+		position: absolute;
+		bottom: -20px;
+		width: 980px;
+		height: 20px;
+	}
+
+.shadow {
+	position: absolute;
+	top: 0;
+	width: 15px;
+	height: 724px;
+}
+
+	.shadow.left {
+		background: url(../images/shadow_left.jpg) no-repeat;
+		left: -15px;
+	}
+
+	.shadow.right {
+		background: url(../images/shadow_right.jpg) no-repeat;
+		right: -15px;
+	}
+
+
+header {
+	background: url(../images/header.jpg) no-repeat;
+	height: 276px;
+	padding: 50px 70px;
+	text-align: right;
+}
+
+	header h1 {
+		color: #fff;
+		font-size: 32px;
+		font-weight: 300;
+	}
+
+	header h1 strong {
+		display: block;
+		padding: 15px 0 0;
+		font-size: 50px;
+		font-weight: 600;
+		line-height: 48px;
+		text-transform: uppercase;
+	}
+
+.content-wrapper {
+	position: relative;
+	padding: 60px 70px 0 370px;
+	min-height: 680px;
+}
+
+aside {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	bottom: 0;
+	width: 300px;
+	background-color: #393939;
+	background: -webkit-gradient(linear, left top, right top, from(#d1d5d6), to(#ebeced));
+	background: -webkit-linear-gradient(left, #ebeced, #d1d5d6);
+	background: -moz-linear-gradient(left, #ebeced, #d1d5d6);
+	background: -ms-linear-gradient(left, #ebeced, #d1d5d6);
+	background: -o-linear-gradient(left, #ebeced, #d1d5d6);
+	-webkit-box-shadow: inset -9px 0 8px -2px rgba(0,0,0,.1);
+   	   -moz-box-shadow: inset -9px 0 8px -2px rgba(0,0,0,.1);
+		    box-shadow: inset -9px 0 8px -2px rgba(0,0,0,.1);
+}
+	aside .highlight {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 60px;
+		background: #fff;
+		z-index: 2;
+	}
+
+	aside ul {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 3;
+	}
+
+	aside li {
+		border-bottom: 1px solid #fff;
+	}
+
+	aside a {
+		position: relative;
+		display: block;
+		font: 400 18px/60px 'Source Sans Pro', sans-serif;
+		padding: 0 0 0 128px;
+		color: #9ba0a4;
+	}
+
+	aside i {
+		position: absolute;
+		right: 24px;
+	}
+
+	aside .current {
+		top: 0;
+		font-weight: 600;
+		color: #36abe1;
+	}
+
+
+.article-container {
+	position: relative;
+	height: 620px;
+	overflow: hidden;
+}
+
+
+.inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4340px;
+}
+
+article {
+	height: 620px;
+}
+
+	article img {
+		float: left;
+		margin: 0 10px 0 0;
+	}
+
+	article h2 {
+		/* font: 600 30px/20px 'Source Sans Pro', sans-serif; Comp says line-height 20px, looks too tight */ 
+		font: 600 30px/32px 'Source Sans Pro', sans-serif;
+		color: #36abe1;
+		padding: 6px 0 0;
+	}
+
+	article h3 {
+		font: 300 18px/20px 'Source Sans Pro', sans-serif;	
+		color: #5c6366;
+		margin: 0 0 24px;
+	}
+
+	article p {
+		font: 13px/18px 'Helvetica', sans-serif;
+		color: #65686f;
+		margin: 0 0 20px;
+	}
+
+	article .friends {
+		font: 13px 'Helvetica', sans-serif;
+		color: #65686f;
+	}
+
+	article .friends a {
+		color: #6fbee7;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
