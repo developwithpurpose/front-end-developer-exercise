@@ -185,6 +185,7 @@ article {
 	    }
 	    p {
 	    	color: $dark-grey-t;
+	    	padding-bottom: 20px;
 	    } 
 		.item {
 		    width: 100%;
@@ -229,7 +230,6 @@ article {
 				}
 			}
 			.friends {
-				padding: 30px 0 0;
 				color: $dark-grey-t;
 				strong {
 					font-weight: 900;

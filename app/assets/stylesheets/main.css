@@ -243,6 +243,7 @@ article #content h3 {
 }
 article #content p {
   color: #65686f;
+  padding-bottom: 20px;
 }
 article #content .item {
   width: 100%;
@@ -274,7 +275,6 @@ article #content .item[data-step="7"] .heading {
   background-position-y: -842px;
 }
 article #content .item .friends {
-  padding: 30px 0 0;
   color: #65686f;
 }
 article #content .item .friends strong {
