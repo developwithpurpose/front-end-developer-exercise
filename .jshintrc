@@ -17,6 +17,7 @@
   "globals": {
     "jQuery": true,
     "$": true,
+    "_": true,
     "module": true,
     "jasmine": true,
     "describe": true,
@@ -26,6 +27,7 @@
     "beforeEach": true,
     "afterEach": true,
     "expect": true,
-    "document": true
+    "document": true, 
+    "console": true
   }
 }

@@ -1,0 +1,241 @@
+// bower components
+@import 'bower_components/reset-scss/reset.scss';
+@import 'bower_components/bower-bourbon/bourbon';
+@import 'bower_components/bower-neat/neat';
+
+// fonts
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
+
+// sass helpers
+@import 'mixins';
+@import 'variables';
+
+// global
+body {
+	background: $grey-bg;
+	padding: 0 20px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 940px;
+	margin: 0 auto;
+	overflow: auto;
+	box-shadow: 0px 0px 21px -7px #000;
+}
+
+// layout
+header {
+	background: transparent url("../images/header.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 276px;
+	padding: 35px 50px 0 0;
+	h1 {
+		float: right;
+		@include font(600, 50px, 48px);
+		color: $white-t;
+		text-align: right;
+		text-transform: uppercase;
+		span {
+			@include font(300, 32px, 15px);
+			text-transform: capitalize;
+		}
+
+	}
+}
+
+article {
+	display: block;
+	background: $white-bg;
+	padding: 60px 0 0;
+	overflow: auto;
+	#sidebar {
+		@include span-columns(3.85);
+		.baby-steps {
+			li {
+				@include animate(1s);
+				@include gradient($grad-begin, $grad-end);
+				position: relative;
+				display: block;
+				width: 100%;
+				height: 60px;
+				border-bottom: 1px solid $white-bg;
+				cursor: pointer;
+				@include font(400, 18px, 60px);
+				text-align: right;
+				color: $light-grey-bg;
+				padding-right: 24px;
+				&:after {
+					@include animate(.6s);
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 60px;
+					background: $white-bg;
+					right: -500px;					
+				}
+				&:last-child {
+					border-bottom: 0;
+				}
+				&.sel {
+					color: $blue-t;
+					&:after {
+						top: 0;
+						right: 0;
+						z-index: 0;
+					}
+					span {
+						position: relative;
+						z-index: 1;
+					}
+				}
+				span {
+					padding-right: 45px;
+					background: transparent url("../images/icons/sprites/icons_small.png") right 0 no-repeat;
+				}
+				&[data-step="1"] {
+
+					&.sel {
+						span {
+							background-position-y: -175px;
+						}
+					}	
+				}
+				&[data-step="2"] {
+					span {
+						background-position-y: -26px;
+					}
+					&.sel {
+						span {
+							background-position-y: -201px;
+						}
+					}	
+				}
+				&[data-step="3"] {
+					span {
+						background-position-y: -52px;
+					}
+					&.sel {
+						span {
+							background-position-y: -227px;
+						}
+					}			
+				}
+				&[data-step="4"] {
+					span {
+						background-position-y: -76px;
+					}
+					&.sel {
+						span {
+							background-position-y: -251px;
+						}
+					}						
+				}
+				&[data-step="5"] {
+					span {
+						background-position-y: -101px;
+					}
+					&.sel {
+						span {
+							background-position-y: -276px;
+						}
+					}						
+				}
+				&[data-step="6"] {
+					span {
+						background-position-y: -126px;
+					}
+					&.sel {
+						span {
+							background-position-y: -302px;
+						}
+					}					
+				}
+				&[data-step="7"] {
+					span {
+						background-position-y: -151px;
+					}				
+					&.sel {
+						span {
+							background-position-y: -326px;
+						}
+					}	
+				}
+			} 
+		}
+	}
+	#content {
+		@include span-columns(8.15);
+	    height: 420px;
+		overflow: hidden;
+	    position: relative;
+	    padding: 0 70px 0 47px;
+	    h2 {
+	    	@include font(400, 30px, 20px);
+	    	color: $blue-t;
+	    }
+	    h3 {
+	    	@include font(300, 18px, 40px);
+	    	color: $grey-t;
+	    }
+	    p {
+	    	color: $dark-grey-t;
+	    } 
+		.item {
+		    width: 100%;
+		    height: 450px;
+		    .heading {
+				background: transparent url("../images/icons/sprites/icons_large.png") left 0 no-repeat;
+		    	padding: 0 0 0 90px;
+		    }
+			&[data-step="1"] {
+				.heading {
+					background-position-y: -461px;
+				}
+			}
+			&[data-step="2"] {
+				.heading {
+					background-position-y: -521px;
+				}
+			}
+			&[data-step="3"] {
+				.heading {
+					background-position-y: -590px;				
+				}
+			}
+			&[data-step="4"] {
+				.heading {
+					background-position-y: -651px;						
+				}
+			}
+			&[data-step="5"] {
+				.heading {
+					background-position-y: -715px;				
+				}
+			}
+			&[data-step="6"] {
+				.heading {
+					background-position-y: -782px;			
+				}
+			}
+			&[data-step="7"] {
+				.heading {
+					background-position-y: -842px;						
+				}
+			}
+			.friends {
+				padding: 30px 0 0;
+				color: $dark-grey-t;
+				strong {
+					font-weight: 900;
+					color: $light-blue-t;
+				}
+			}
+		}
+	}
+}

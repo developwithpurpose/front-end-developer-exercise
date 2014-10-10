@@ -1,0 +1,41 @@
+// fonts
+@mixin font($weight, $size, $height) {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: $height;
+}
+
+// gradient
+@mixin gradient($start, $end) {
+	background: $start;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI5NyUiIHN0b3AtY29sb3I9IiNlYmVjZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZDFkNWQ2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+	background: -moz-linear-gradient(left, $start 97%, $end 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(97%,$start), color-stop(100%,$end));
+	background: -webkit-linear-gradient(left, $start 97%,$end 100%);
+	background: -o-linear-gradient(left, $start 97%,$end 100%);
+	background: -ms-linear-gradient(left, $start 97%,$end 100%);
+	background: linear-gradient(to right, $start 97%,$end 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
+}
+
+// background-images
+@mixin png($path, $width, $height) {
+	background: transparent url('../images/' + $path + '.png') 0 0 no-repeat;
+	width: $width;
+	height: $height;
+}
+@mixin image-link($width: inherit, $height: inherit) {
+	display: block;
+	width: $width;
+	height: $height;
+	text-indent: -8400px;
+}
+
+// animations
+@mixin animate($speed) {
+    transition: All $speed ease-in-out;
+    -webkit-transition: All $speed ease-in-out;
+    -moz-transition: All $speed ease-in-out;
+    -o-transition: All $speed ease-in-out;
+}

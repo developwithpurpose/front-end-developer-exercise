@@ -1,0 +1,7 @@
+{
+  "name": "bower-neat",
+  "version": "1.5.0",
+  "main": "./_neat.scss",
+  "dependencies": {
+  }
+}
