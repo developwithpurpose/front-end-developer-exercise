@@ -22,55 +22,51 @@ jQuery(function ($) {
             });             
         },
 
-        getFriends: function() {
+        getFriends: (function() {
+            var babyStepsFriends = "./assets/javascripts/baby-steps.json";
+            
+            $.getJSON(babyStepsFriends).done(function(data) {
 
-            (function() {
-                var babyStepsFriends = "./assets/javascripts/baby-steps.json";
-                
-                $.getJSON(babyStepsFriends).done(function(data) {
+                var babyStepsGrouped = _.groupBy(data.friends, "babyStep");
+                var $friends = $(".friends");
 
-                    var babyStepsGrouped = _.groupBy(data.friends, "babyStep");
-                    var $friends = $(".friends");
-
-                    $friends.each(function () {
-                      
-                      var $this = $(this), 
-                          babyStep = $this.data("id"), 
-                          group = babyStepsGrouped[babyStep];
-                      
-                      if (group) {
-                        
-                        var out = [];
-                        var remaining = 0;
-                        var namesToShow = 2;
-                        var total = group.length;
-                        var list = group.slice(0, namesToShow).map(function (friend) {
-                          return "<strong>" + friend.firstName + " " + friend.lastName + "</strong>";
-                        });
-                        
-                        if (total - namesToShow > 0) {
-                          remaining = total - namesToShow;
-                        }
-                        
-                        out.push(list.join(" and "));
-                        
-                        if (remaining) {
-                          out.push(" and " + remaining + " other" + ( remaining > 1 ? "s" : "" ));
-                        }
-                        
-                        out.push(total === 1 ? "is" : "are");
-                        out.push("on baby step " + babyStep);
-                        
-                        $this.append(out.join(" "));
-                        
-                      }
-                      
+                $friends.each(function () {
+                  
+                  var $this = $(this), 
+                      babyStep = $this.data("id"), 
+                      group = babyStepsGrouped[babyStep];
+                  
+                  if (group) {
+                    
+                    var out = [];
+                    var remaining = 0;
+                    var namesToShow = 2;
+                    var total = group.length;
+                    var list = group.slice(0, namesToShow).map(function (friend) {
+                      return "<strong>" + friend.firstName + " " + friend.lastName + "</strong>";
                     });
-
+                    
+                    if (total - namesToShow > 0) {
+                      remaining = total - namesToShow;
+                    }
+                    
+                    out.push(list.join(" and "));
+                    
+                    if (remaining) {
+                      out.push(" and " + remaining + " other" + ( remaining > 1 ? "s" : "" ));
+                    }
+                    
+                    out.push(total === 1 ? "is" : "are");
+                    out.push("on baby step " + babyStep);
+                    
+                    $this.append(out.join(" "));
+                    
+                  }
+                  
                 });
-            })();
 
-        },
+            });
+        })(),
 
         init: function() {
             helpers.attachEvents();
