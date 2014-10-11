@@ -22,10 +22,10 @@ jQuery(function ($) {
             });             
         },
 
-        getFriends: (function() {
+        getFriends: function() {
             var babyStepsFriends = "./assets/javascripts/baby-steps.json";
             
-            $.getJSON(babyStepsFriends).done(function(data) {
+            return $.getJSON(babyStepsFriends).done(function(data) {
 
                 var babyStepsGrouped = _.groupBy(data.friends, "babyStep");
                 var $friends = $(".friends");
@@ -66,7 +66,7 @@ jQuery(function ($) {
                 });
 
             });
-        })(),
+        },
 
         init: function() {
             helpers.attachEvents();
