@@ -250,29 +250,44 @@ article #content .item {
   height: 450px;
 }
 article #content .item .heading {
-  background: transparent url("../images/icons/sprites/icons_large.png") left 0 no-repeat;
   padding: 0 0 0 90px;
+  position: relative;
 }
-article #content .item[data-step="1"] .heading {
+article #content .item .heading:before {
+  content: "";
+  background: transparent url("../images/icons/sprites/icons_large.png") left 0 no-repeat;
+  width: 80px;
+  height: 55px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+article #content .item .heading.alt-size:before {
+  background-size: 60px;
+  height: 50px;
+}
+article #content .item[data-step="1"] .heading:before {
   background-position-y: -461px;
 }
-article #content .item[data-step="2"] .heading {
+article #content .item[data-step="2"] .heading:before {
   background-position-y: -521px;
 }
-article #content .item[data-step="3"] .heading {
+article #content .item[data-step="3"] .heading:before {
   background-position-y: -590px;
 }
-article #content .item[data-step="4"] .heading {
-  background-position-y: -651px;
+article #content .item[data-step="4"] .heading:before {
+  background-position-y: -504px;
 }
-article #content .item[data-step="5"] .heading {
-  background-position-y: -715px;
+article #content .item[data-step="5"] .heading:before {
+  background-position-y: -555px;
 }
-article #content .item[data-step="6"] .heading {
-  background-position-y: -782px;
+article #content .item[data-step="6"] .heading:before {
+  background-position-y: -606px;
+  height: 49px;
 }
-article #content .item[data-step="7"] .heading {
-  background-position-y: -842px;
+article #content .item[data-step="7"] .heading:before {
+  background-position-y: -656px;
 }
 article #content .item .friends {
   color: #65686f;

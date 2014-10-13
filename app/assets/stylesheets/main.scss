@@ -191,42 +191,62 @@ article {
 		    width: 100%;
 		    height: 450px;
 		    .heading {
-				background: transparent url("../images/icons/sprites/icons_large.png") left 0 no-repeat;
 		    	padding: 0 0 0 90px;
+		    	position: relative;
+		    	&:before {
+		    		content: "";
+					background: transparent url("../images/icons/sprites/icons_large.png") left 0 no-repeat;
+					width: 80px;
+					height: 55px;
+					display: block;
+					position: absolute;
+					left: 0px;
+					top: 0px;
+		    	}
+				&.alt-size {
+					&:before {
+						$bg-size: 60px;
+						$bg-height: 50px;
+
+						background-size: $bg-size;
+						height: $bg-height;
+					}
+				}
 		    }
 			&[data-step="1"] {
-				.heading {
+				.heading:before {
 					background-position-y: -461px;
 				}
 			}
 			&[data-step="2"] {
-				.heading {
+				.heading:before {
 					background-position-y: -521px;
 				}
 			}
 			&[data-step="3"] {
-				.heading {
+				.heading:before {
 					background-position-y: -590px;				
 				}
 			}
 			&[data-step="4"] {
-				.heading {
-					background-position-y: -651px;						
+				.heading:before {
+					background-position-y: -504px;			
 				}
 			}
 			&[data-step="5"] {
-				.heading {
-					background-position-y: -715px;				
+				.heading:before {
+					background-position-y: -555px;		
 				}
 			}
 			&[data-step="6"] {
-				.heading {
-					background-position-y: -782px;			
+				.heading:before {
+					background-position-y: -606px;
+					height: 49px;		
 				}
 			}
 			&[data-step="7"] {
-				.heading {
-					background-position-y: -842px;						
+				.heading:before {
+					background-position-y: -656px;					
 				}
 			}
 			.friends {
