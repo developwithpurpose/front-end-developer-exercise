@@ -1,0 +1,32 @@
+{
+  "name": "reset-scss",
+  "homepage": "https://github.com/ianrose/reset-scss",
+  "authors": [
+    "Eric Meyer"
+  ],
+  "description": "A Scss version of Eric Meyer's CSS reset",
+  "main": "reset.scss",
+  "keywords": [
+    "reset",
+    "scss",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "64bf22e7ca",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "64bf22e7ca6609e332d81bbf01341f9b5d1344dc"
+  },
+  "_source": "git://github.com/ianrose/reset-scss.git",
+  "_target": "*",
+  "_originalSource": "reset-scss",
+  "_direct": true
+}

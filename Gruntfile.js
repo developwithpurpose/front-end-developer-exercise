@@ -12,6 +12,19 @@ module.exports = function( grunt ) {
           jshintrc: ".jshintrc"
         }
       },
+      sass: {
+        options: {
+          loadPath: "bower_components"
+        },
+        dist: {
+          options: {                       
+            style: "expanded"
+          },
+          files: {
+            "app/assets/stylesheets/main.css": "app/assets/stylesheets/main.scss"
+          }
+        }
+      }, 
       uglify: {
         build: {
           files: [{
@@ -45,7 +58,11 @@ module.exports = function( grunt ) {
         lint: {
           files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
           tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
-        }
+        },
+        css: {
+          files: "app/**/stylesheets/main.scss",
+          tasks: ["sass"],
+        },
       },
       jasmine: {
         pivotal: {
@@ -78,6 +95,6 @@ module.exports = function( grunt ) {
     }
   });
 
-  grunt.registerTask( "default", ["connect"] );
+  grunt.registerTask( "default", ["connect", "sass"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
 };

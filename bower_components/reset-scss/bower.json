@@ -1,0 +1,23 @@
+{
+  "name": "reset-scss",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ianrose/reset-scss",
+  "authors": [
+    "Eric Meyer"
+  ],
+  "description": "A Scss version of Eric Meyer's CSS reset",
+  "main": "reset.scss",
+  "keywords": [
+    "reset",
+    "scss",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

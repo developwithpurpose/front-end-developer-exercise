@@ -1,0 +1,23 @@
+{
+  "name": "front-end-developer-exercise",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bfrable/front-end-developer-exercise",
+  "authors": [
+    "Brett Frable <brett@engagedc.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bower-bourbon": "~3.1.8",
+    "bower-neat": "~1.5.0",
+    "reset-scss": "*",
+    "jquery": "~2.1.1",
+    "underscore": "~1.7.0"
+  }
+}
