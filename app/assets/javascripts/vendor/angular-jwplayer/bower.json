@@ -1,0 +1,41 @@
+{
+  "name": "angular-jwplayer",
+  "version": "1.1.5",
+  "authors": [
+    "david sendelbach"
+  ],
+  "main": [
+    "angular-jwplayer.js"
+  ],
+  "description": "angularjs directive for jwplayer video player.",
+  "keywords": ["angularjs", "video", "jwplayer", "angular-jwplayer"],
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "pages",
+    "server.js",
+    "index.html",
+    "server.js",
+    "README.md",
+    "package.json",
+    "LICENSE",
+    "Gruntfile.*",
+    "CHANGELOG.md",
+    "app.js",
+    ".gitignore"
+  ],
+  "dependencies": {
+    "angular": "~1.2.0",
+    "angular-animate": "~1.2.0",
+    "angular-sanitize": "~1.2.0",
+    "angular-touch": "~1.2.0",
+    "angular-route": "~1.2.0",
+    "jwplayer-mirror": "~6.7.4071"
+  },
+  "devDependencies": {
+    
+  }
+}
