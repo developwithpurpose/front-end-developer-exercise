@@ -15,7 +15,7 @@ sevenBabyStepsAnimations.animation( '.step', function() {
 			if ( previousStepnum < stepNum ) {
 				element.css('top', 681).animate({top: 60});
 			} else {
-				element.css('top', -324).animate({top: 60});
+				element.css('top', -334).animate({top: 60});
 			}
 
 			//run the animation here and call done when the animation is complete
@@ -35,7 +35,7 @@ sevenBabyStepsAnimations.animation( '.step', function() {
 			if ( previousStepnum < stepNum ) {
 				element.animate({top: 681});
 			} else {
-				element.animate({top: -324});
+				element.animate({top: -334});
 			}
 
 		},
