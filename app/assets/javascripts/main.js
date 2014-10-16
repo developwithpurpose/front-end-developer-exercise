@@ -3,6 +3,9 @@
 	var currentURL = document.URL,
 		currentStep = currentURL.substring( currentURL.length - 1, currentURL.length );
 
+	if( currentStep == '/' )
+		currentStep = 1;
+
 	$( '#nav a.step' + currentStep ).addClass( 'active' );
 
 	$( '#nav' ).on( 'click', 'a', function( event ) {
