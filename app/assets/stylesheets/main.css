@@ -278,13 +278,13 @@ html {
 	height: 100%;
 	position: relative;
 }
-#steps article {
+#steps .step {
 	position: absolute;
 	top: 681px;
 	left: 0;
 	width: 100%;
 }
-#steps article:first-child {
+#steps .step:first-child {
 	top: 60px;
 }
 .step-header {

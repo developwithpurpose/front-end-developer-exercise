@@ -1,13 +1,22 @@
 'use strict';
 
 /* Animations */
-var $currentArticle,
-	sevenBabyStepsAnimations = angular.module( 'sevenBabyStepsAnimations', ['ngAnimate'] );
+var sevenBabyStepsAnimations = angular.module( 'sevenBabyStepsAnimations', ['ngAnimate'] );
 
 sevenBabyStepsAnimations.animation( '.step', function() {
 	return {
 		enter: function( element, done ) {
-			element.hide().fadeIn();
+			element.addClass('active');
+			var stepId = element.find( 'article' ).attr( 'id' ),
+				stepNum = stepId.substring( 5, 6 ),
+				previousId = $('#steps').find('.active').find('article').attr('id'),
+				previousStepnum = previousId.substring( 5, 6 );
+
+			if ( previousStepnum < stepNum ) {
+				element.css('top', 681).animate({top: 60});
+			} else {
+				element.css('top', -324).animate({top: 60});
+			}
 
 			//run the animation here and call done when the animation is complete
 			return function(cancelled) {
@@ -17,7 +26,18 @@ sevenBabyStepsAnimations.animation( '.step', function() {
 			};
 		},
 		leave: function(element, done) {
-			element.show().fadeOut();
+			element.removeClass('active');
+			var stepId = element.find( 'article' ).attr( 'id' ),
+				stepNum = stepId.substring( 5, 6 ),
+				previousId = $('#steps').find('.active').find('article').attr('id'),
+				previousStepnum = previousId.substring( 5, 6 );
+
+			if ( previousStepnum < stepNum ) {
+				element.animate({top: 681});
+			} else {
+				element.animate({top: -324});
+			}
+
 		},
 		move: function(element, done) {
 		},
