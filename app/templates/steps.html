@@ -1,0 +1,13 @@
+<article id="step-{{ stepNum }}">
+	<header class="step-header clearfix">
+		<div class="icon">
+			<span class="sprite"></span>
+		</div>
+		<div class="step-header-content">
+			<h2 ng-bind-html="step.h2"></h2>
+			<h3 ng-bind-html="step.h3"></h3>
+		</div>
+	</header>
+	<div ng-bind-html="step.desc"></div>
+	<p class="other-friends" ng-bind-html="otherFriends"></p>
+</article>
