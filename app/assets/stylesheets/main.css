@@ -198,6 +198,7 @@ html {
 	background: #fff;
 	pointer-events: none;
 	cursor: default;
+	font-weight: 600;
 }
 #nav .icon {
 	display: inline-block;
