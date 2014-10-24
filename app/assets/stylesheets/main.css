@@ -1,0 +1,249 @@
+body {
+	background-color: #bbbfc2;
+}
+
+a {
+	color: #6fbee7;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.container {
+	width: 1176px;
+}
+
+#main-content {
+	padding-top: 60px;
+	background-color: #ffffff;
+}
+
+#shadow-left {
+	padding:0;
+	text-align: right;
+}
+
+#shadow-right {
+	padding:0;
+	text-align: left;
+}
+
+#left-nav {
+	padding: 0 27px 0 0;
+    background-image: url('../images/shadow_left_nav.jpg');
+    background-repeat: repeat-y;
+    height: 619px;
+}
+
+#left-nav ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style-type: none;
+    position: relative;
+    z-index: 1;
+}
+
+#left-nav ul > li {
+	border-bottom: solid 1px white;
+	height: 60px;
+	line-height: 60px;
+	color: #9ba0a4;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	text-align: right;
+	padding-right: 24px;
+}
+
+#left-nav ul > li.active {
+    font-weight: 600;
+    color: #36abe1;
+}
+
+#left-nav ul > li img {
+	margin-left: 24px;
+}
+
+#active-button-background {
+    position:absolute;
+    background-color: #ffffff;
+    height: 60px;
+    width: 300px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+img.small-dollar.blue {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 175px;
+}
+
+img.small-coin.blue {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 150px;
+}
+
+img.small-pig.blue {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 125px;
+}
+
+img.small-chart.blue{
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 100px;
+}
+
+img.small-book.blue {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 75px;
+}
+
+img.small-house.blue {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 50px;
+}
+
+img.small-hand.blue {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 25px;
+}
+
+img.small-dollar.grey {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 0;
+}
+
+img.small-coin.grey {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 -25px;
+}
+
+img.small-pig.grey {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 -50px;
+}
+
+img.small-chart.grey {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 -75px;
+}
+
+img.small-book.grey {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 -100px;
+}
+
+img.small-house.grey {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 -125px;
+}
+
+img.small-hand.grey {
+	width: 30px;
+	height: 25px;
+	background: url('../images/icons/sprites/icons_small.png') 0 -150px;
+}
+
+#step-content {
+	padding-left: 43px;
+    padding-right: 70px;
+}
+
+.step-content-header {
+	font-family: 'Source Sans Pro', sans-serif;
+    display: block;
+}
+
+.step-content-header > img, .step-content-header > div {
+	float: left;
+}
+
+.step-content-header > div {
+	margin-left: 10px;
+}
+
+.step-content-header p {
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 20px;
+}
+
+.step-content-header h2 {
+	font-weight: 600;
+	line-height: 20px;
+	color: #36abe1;
+	font-size: 30px;
+	margin: 10px 0 5px 0;
+}
+
+img.large-dollar {
+	width: 77px;
+	height: 65px;
+	background: url('../images/icons/sprites/icons_large.png') 0 450px;
+}
+
+img.large-coin {
+	width: 77px;
+	height: 65px;
+	background: url('../images/icons/sprites/icons_large.png') 0 390px;
+}
+
+img.large-pig {
+	width: 77px;
+	height: 65px;
+	background: url('../images/icons/sprites/icons_large.png') 0 325px;
+}
+
+img.large-chart {
+	width: 77px;
+	height: 65px;
+	background: url('../images/icons/sprites/icons_large.png') 0 260px;
+}
+
+img.large-book {
+	width: 77px;
+	height: 65px;
+	background: url('../images/icons/sprites/icons_large.png') 0 195px;
+}
+
+img.large-house {
+	width: 77px;
+	height: 65px;
+	background: url('../images/icons/sprites/icons_large.png') 0 130px;
+}
+
+img.large-hand {
+	width: 77px;
+	height: 65px;
+	background: url('../images/icons/sprites/icons_large.png') 0 65px;
+}
+
+#step-content-body{
+    padding-top: 24px;
+    line-height: 18px;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+}
+
+.friends {
+    margin-top: 30px;
+}
+
+/* Initialize page by hiding all step content */
+div[id^=content-step] {
+    display: none;
+}
