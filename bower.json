@@ -1,0 +1,6 @@
+{
+  "name": "front-end-developer-exercise",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation"
+  }
+}
