@@ -43,5 +43,20 @@ header {
     display: inline-block;
     vertical-align: center;
     background-color: #ebeced; }
+    .container .nav #focus {
+      background-color: white; }
+    .container .nav .step {
+      display: inline-block;
+      min-height: 60px;
+      width: 276px;
+      float: left;
+      text-align: right;
+      padding-right: 24px; }
+    .container .nav .gradient {
+      height: 60px;
+      background-image: linear-gradient(to left, #d1d5d6, #ebeced 4%);
+      border-bottom: 1px solid white; }
+    .container .nav img {
+      padding-top: 15px; }
 
 /*# sourceMappingURL=main.css.map */
