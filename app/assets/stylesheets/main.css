@@ -26,15 +26,40 @@ header {
 
 .container {
   height: 600px;
-  margin-top: 60px;
-  background-color: pink; }
+  margin-top: 60px; }
   .container .content {
     width: 540px;
     height: 400px;
     margin-right: 70px;
-    background-color: #6fbee7;
+    background-color: white;
     float: right;
     display: inline-block; }
+    .container .content img {
+      display: inline-block; }
+    .container .content h1 {
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 400;
+      font-size: 30px;
+      vertical-align: 26px;
+      color: #36abe1;
+      line-height: 20px;
+      display: inline-block; }
+    .container .content h2 {
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      position: relative;
+      right: 150px;
+      color: #5c6366;
+      line-height: 20px;
+      display: inline-block; }
+    .container .content p {
+      padding-top: 24px;
+      font-family: Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      color: #65686f;
+      line-height: 18px; }
   .container .nav {
     width: 300px;
     margin-right: 70px;
