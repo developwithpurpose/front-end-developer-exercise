@@ -37,7 +37,6 @@ header {
     display: inline-block; }
   .container .nav {
     width: 300px;
-    height: 400px;
     margin-right: 70px;
     float: left;
     display: inline-block;
@@ -56,7 +55,17 @@ header {
       height: 60px;
       background-image: linear-gradient(to left, #d1d5d6, #ebeced 4%);
       border-bottom: 1px solid white; }
+    .container .nav h3 {
+      display: inline-block;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 60px;
+      color: #9ba0a4;
+      padding-right: 30px;
+      vertical-align: 10px; }
     .container .nav img {
-      padding-top: 15px; }
+      padding-top: 15px;
+      display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */
