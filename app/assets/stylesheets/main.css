@@ -1,3 +1,24 @@
+body {
+  background-color: #bbbfc2; }
 
+header {
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+  height: 278px;
+  width: 980px;
+  margin: auto;
+  color: white;
+  text-align: right; }
+  header .sub-headline {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    padding: 50px 70px 0 0; }
+  header .headline {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    padding: 15px 70px 0 0;
+    line-height: 48px; }
 
 /*# sourceMappingURL=main.css.map */
