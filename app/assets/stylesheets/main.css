@@ -7,22 +7,20 @@ body {
   background-color: #bbbfc2; }
 
 header {
-  background-image: url("../images/header.jpg");
-  background-repeat: no-repeat;
+  background: #bbbfc2 url("../images/header.jpg") no-repeat 0 0;
   height: 278px;
+  display: block;
   color: white;
   text-align: right; }
-  header .sub-headline {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-    font-size: 32px;
-    padding: 50px 70px 0 0; }
-  header .headline {
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 600;
-    font-size: 50px;
-    padding: 15px 70px 0 0;
-    line-height: 48px; }
+  header h1 {
+    padding: 50px 70px 0 0;
+    text-align: right;
+    color: white; }
+    header h1 .sub-headline {
+      font: 300 32px/32px "Open Sans", sans-serif; }
+    header h1 .headline {
+      font: 600 50px/48px "Source Sans Pro", sans-serif;
+      display: block; }
 
 .container {
   height: 600px;
@@ -92,5 +90,3 @@ header {
     .container .nav img {
       padding-top: 15px;
       display: inline-block; }
-
-/*# sourceMappingURL=main.css.map */

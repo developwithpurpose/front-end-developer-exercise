@@ -1,11 +1,15 @@
 // VARIABLES
 
+// Colors
 $headline-blue:   #36abe1
 $subhead-grey:    #5c6366
 $body-black:      #65686f
 $link-blue:       #6fbee7
 $background-grey: #bbbfc2
 $nav-text-grey:   #9ba0a4
+
+//Icons
+$icon-large: url('./../images/icons/sprites/icons_large.png')
 
 // STYLES
 #wrapper
@@ -15,22 +19,20 @@ $nav-text-grey:   #9ba0a4
 body
   background-color: $background-grey
 header
-  background-image: url("../images/header.jpg")
-  background-repeat: no-repeat
+  background: $background-grey url("../images/header.jpg") no-repeat 0 0
   height: 278px
+  display: block
   color: white
   text-align: right
-  .sub-headline
-    font-family: 'Open Sans', sans-serif
-    font-weight: 300
-    font-size: 32px
+  h1
     padding: 50px 70px 0 0
-  .headline
-    font-family: 'Source Sans Pro', sans-serif
-    font-weight: 600
-    font-size: 50px
-    padding: 15px 70px 0 0
-    line-height: 48px
+    text-align: right
+    color: white
+    .sub-headline
+      font: 300 32px/32px 'Open Sans', sans-serif
+    .headline
+      font: 600 50px/48px 'Source Sans Pro', sans-serif
+      display: block
 .container
   height: 600px
   margin-top: 60px
