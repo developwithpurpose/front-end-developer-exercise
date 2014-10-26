@@ -19,8 +19,11 @@ header {
     header h1 .sub-headline {
       font: 300 32px/32px "Open Sans", sans-serif; }
     header h1 .headline {
-      font: 600 50px/48px "Source Sans Pro", sans-serif;
-      display: block; }
+      font: 600 50px/48px "Open Sans", sans-serif;
+      display: block;
+      padding-top: 15px; }
+      header h1 .headline span {
+        letter-spacing: -11px; }
 
 .container {
   height: 600px;
@@ -28,13 +31,16 @@ header {
   .container .content {
     width: 540px;
     height: 400px;
+    overflow: hidden;
     margin-right: 70px;
     background-color: white;
     float: right;
     display: inline-block; }
+    .container .content article {
+      min-height: 400px; }
     .container .content img {
       display: inline-block; }
-    .container .content h1 {
+    .container .content article h1 {
       font-family: "Source Sans Pro", sans-serif;
       font-weight: 400;
       font-size: 30px;
@@ -42,7 +48,7 @@ header {
       color: #36abe1;
       line-height: 20px;
       display: inline-block; }
-    .container .content h2 {
+    .container .content article h2 {
       font-family: "Source Sans Pro", sans-serif;
       font-weight: 300;
       font-size: 18px;

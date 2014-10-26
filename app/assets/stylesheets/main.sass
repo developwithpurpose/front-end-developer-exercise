@@ -31,8 +31,11 @@ header
     .sub-headline
       font: 300 32px/32px 'Open Sans', sans-serif
     .headline
-      font: 600 50px/48px 'Source Sans Pro', sans-serif
+      font: 600 50px/48px 'Open Sans', sans-serif
       display: block
+      padding-top: 15px
+      span
+        letter-spacing: -11px
 .container
   height: 600px
   margin-top: 60px
@@ -40,13 +43,16 @@ header
   .content
     width: 540px
     height: 400px
+    overflow: hidden
     margin-right: 70px
     background-color: white
     float: right
     display: inline-block
+    article
+      min-height: 400px
     img
       display: inline-block
-    h1
+    article h1
       font-family: 'Source Sans Pro', sans-serif
       font-weight: 400
       font-size: 30px
@@ -54,13 +60,12 @@ header
       color: $headline-blue
       line-height: 20px
       display: inline-block
-    h2
+    article h2
       font-family: 'Source Sans Pro', sans-serif
       font-weight: 300
       font-size: 18px
       position: relative
       right: 150px
-
       color: $subhead-grey
       line-height: 20px
       display: inline-block
