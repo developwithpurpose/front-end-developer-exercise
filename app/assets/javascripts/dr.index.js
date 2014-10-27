@@ -64,17 +64,21 @@
                 .addClass('blue');
 
         // Hide active content
-        $('#step-content > div.active').hide().removeClass('active');
+        $('#step-content > div.active').fadeOut(350).removeClass('active');
 
-        // Show selected content
-        var stepContentId = '#content-' + $(this)[0].id;
-        $(stepContentId).show().addClass('active');
+        $('#active-button-background').fadeOut(350);
 
         // What is the 'top' value of current element?
         var thisTop = $(this).position().top;
-        $('#active-button-background').fadeOut(350);
+
+        // Get id of selected step's content div
+        var stepContentId = '#content-' + $(this)[0].id;
 
         setTimeout(function () {
+            // Show selected content
+            $(stepContentId).fadeIn().addClass('active');
+
+            // Highlight selected button
             $('#active-button-background')
                 .css({ top: thisTop })
                 .fadeIn(350);

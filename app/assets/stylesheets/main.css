@@ -12,6 +12,31 @@ a {
 	width: 1176px;
 }
 
+#header h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    z-index: 100;
+    position: absolute;
+    color: #fff;
+    text-align: right;
+    top: 0px;
+    margin-top: 50px;
+    padding-right: 70px;
+    width: 980px;
+    line-height: 27px;
+}
+
+#header h1 > strong {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 50px;
+    text-transform: uppercase;
+    line-height: 48px;
+    width: 500px;
+    margin-top: 15px;
+}
+
 #main-content {
 	padding-top: 60px;
 	background-color: #ffffff;
