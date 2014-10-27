@@ -2,7 +2,7 @@
 
 {{ app_directory }}:
   npm:
-  - installed
+  - bootstrap
   - user: vagrant
 
 bower install:

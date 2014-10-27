@@ -1,4 +1,12 @@
+$images: "/app/assets/images/";
+
+// Library imports
 @import "settings";
 @import "foundation";
+@import "compass/css3/text-shadow";
 
-// A
+// App imports
+@import "colors";
+@import "baseline";
+@import "header";
+@import "babysteps";

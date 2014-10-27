@@ -1,0 +1,126 @@
+.babysteps {
+  // Reset all type to use our alternative font
+  div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  form,
+  p,
+  blockquote,
+  th,
+  td {
+    font-family: $font-family-sans-serif-alt;
+  }
+
+  $numberOfSteps: 7;
+  $stepHeight: 60;
+
+  padding-top: rem-calc(24);
+
+  @media #{$medium-up} {
+    padding-top: rem-calc(60);
+  }
+
+  .nav {
+    background-color: $backgroundLighter;
+    // As high as the number of steps
+    min-height: rem-calc($stepHeight * ($numberOfSteps + 1));
+
+    ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      display: block;
+      text-align: right;
+      line-height: rem-calc(60);
+    }
+
+    .icon {
+      float: right;
+      margin-left: rem-calc(24);
+      font-size: rem-calc(24);
+      line-height: rem-calc(60);
+      width: rem-calc(24);
+      text-align: center;
+    }
+  }
+
+  .steps {
+    .content {
+      display: none;
+      padding: 0 rem-calc(24);
+
+      &.active {
+        display: block;
+      }
+    }
+
+    p {
+      color: #65686f;
+    }
+
+    h2 {
+      color: $babyStepBlue;
+      font-size: rem-calc(30);
+      font-weight: $font-weight-alt-bold;
+      line-height: rem-calc(20);
+    }
+
+    h3 {
+      color: #5c6366;
+      font-size: rem-calc(18);
+      font-weight: $font-weight-alt-light;
+      line-height: rem-calc(20);
+      margin-bottom: rem-calc(24);
+    }
+
+    .icon {
+      color: $babyStepBlue;
+      position: relative;
+      top: rem-calc(-10);
+      float: right;
+      font-size: rem-calc(64);
+      width: rem-calc(84);
+      text-align: right;
+    }
+
+    @media #{$small-only} {
+      float: none !important;
+      width: 100% !important;
+
+      .content {
+        display: block;
+      }
+    }
+
+    @media #{$medium-up} {
+      .content {
+        padding: 0 70px;
+      }
+
+      .icon {
+        float: left;
+        text-align: left;
+      }
+
+      h2 {
+      }
+
+      h3 {
+      }
+    }
+  }
+}

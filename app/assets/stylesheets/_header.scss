@@ -1,0 +1,55 @@
+header .tagline {
+  background-color: black;
+  background-image: url(#{$images}/header.jpg);
+  background-position: -150px 0;
+  background-repeat: no-repeat;
+  min-height: 222px;
+
+  h1 {
+    @include text-shadow(2px 0px 10px black);
+
+    text-align: right;
+    margin-right: rem-calc(20);
+    color: white;
+  }
+
+  span {
+    display: block;
+  }
+
+  .what {
+    padding-top: rem-calc(120);
+    font-weight: $font-weight-light;
+    font-size: rem-calc(18);
+  }
+
+  .who {
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    font-size: rem-calc(27);
+    line-height: rem-calc(25);
+  }
+
+  @media #{$medium-up} {
+    min-height: 276px;
+    padding: rem-calc(50) 0;
+
+    h1 {
+      margin-right: rem-calc(70);
+    }
+
+    .what {
+      padding-top: 0;
+      font-size: rem-calc(32);
+    }
+
+    .who {
+      font-size: rem-calc(50);
+      line-height: rem-calc(48);
+    }
+  }
+
+  @media #{$large-up} {
+    background-position: 0 0;
+  }
+}

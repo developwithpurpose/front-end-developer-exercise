@@ -1,6 +1,7 @@
 {
   "name": "front-end-developer-exercise",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "compass": "Igosuki/compass-mixins"
   }
 }

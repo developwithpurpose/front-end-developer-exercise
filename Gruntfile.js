@@ -9,7 +9,11 @@ module.exports = function( grunt ) {
 
     sass: {
       options: {
-        includePaths: ["bower_components/foundation/scss"]
+        includePaths: [
+          "bower_components/foundation/scss",
+          "bower_components/compass/lib",
+          "build/fonts"
+        ]
       },
       build: {
         options: {
@@ -18,6 +22,13 @@ module.exports = function( grunt ) {
         files: {
           "build/stylesheets/app.css": "app/assets/stylesheets/app.scss"
         }
+      }
+    },
+
+    webfont: {
+      build: {
+        src: "app/assets/icons/*.svg",
+        dest: "build/fonts"
       }
     },
 
@@ -52,6 +63,11 @@ module.exports = function( grunt ) {
       sass: {
         files: "app/assets/stylesheets/*.scss",
         tasks: ["scsslint", "sass"]
+      },
+
+      font: {
+        files: "app/assets/icons/*.svg",
+        tasks: ["webfont"]
       },
 
       js: {
