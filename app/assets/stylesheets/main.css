@@ -73,88 +73,70 @@ a {
     z-index: 0;
 }
 
-img.small-dollar.blue {
-	width: 30px;
+[class^="icon-small"] span:after {
+    content: "";
+    width: 30px;
 	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 175px;
+    display: inline-block;
+    margin: 0 0 0 24px;
+    vertical-align: middle;
+    background: url('../images/icons/sprites/icons_small.png') no-repeat;
 }
 
-img.small-coin.blue {
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 150px;
+.icon-small-dollar.active span:after {
+     background-position: 0 -175px;
 }
 
-img.small-pig.blue {
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 125px;
+.icon-small-coin.active span:after {
+    background-position: 0 -200px;
 }
 
-img.small-chart.blue{
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 100px;
+.icon-small-pig.active span:after {
+	background-position: 0 -225px;
 }
 
-img.small-book.blue {
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 75px;
+.icon-small-chart.active span:after {
+	background-position: 0 -250px;
 }
 
-img.small-house.blue {
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 50px;
+.icon-small-book.active span:after {
+	background-position: 0 -275px;
 }
 
-img.small-hand.blue {
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 25px;
+.icon-small-house.active span:after {
+	background-position: 0 -300px;
 }
 
-img.small-dollar.grey {
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 0;
+.icon-small-hand.active span:after {
+	background-position: 0 -325px;
 }
 
-img.small-coin.grey {
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 -25px;
+.icon-small-dollar span:after {
+	background-position: 0 0;
 }
 
-img.small-pig.grey {
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 -50px;
+.icon-small-coin span:after {
+    background-position: 0 -25px;
 }
 
-img.small-chart.grey {
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 -75px;
+.icon-small-pig span:after {
+	background-position: 0 -50px;
 }
 
-img.small-book.grey {
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 -100px;
+.icon-small-chart span:after {
+	background-position: 0 -75px;
 }
 
-img.small-house.grey {
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 -125px;
+.icon-small-book span:after {
+	background-position: 0 -100px;
 }
 
-img.small-hand.grey {
-	width: 30px;
-	height: 25px;
-	background: url('../images/icons/sprites/icons_small.png') 0 -150px;
+.icon-small-house span:after {
+	background-position: 0 -125px;
+}
+
+.icon-small-hand span:after {
+	background-position: 0 -150px;
 }
 
 #step-content {
