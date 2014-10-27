@@ -171,46 +171,38 @@ a {
 	margin: 10px 0 5px 0;
 }
 
-img.large-dollar {
-	width: 77px;
+[class^="icon-large"] {
+    width: 77px;
 	height: 65px;
-	background: url('../images/icons/sprites/icons_large.png') 0 450px;
+    background-image: url('../images/icons/sprites/icons_large.png');
 }
 
-img.large-coin {
-	width: 77px;
-	height: 65px;
-	background: url('../images/icons/sprites/icons_large.png') 0 390px;
+.icon-large-dollar {
+	background-position:  0 450px;
 }
 
-img.large-pig {
-	width: 77px;
-	height: 65px;
-	background: url('../images/icons/sprites/icons_large.png') 0 325px;
+.icon-large-coin {
+    background-position:  0 390px;
 }
 
-img.large-chart {
-	width: 77px;
-	height: 65px;
-	background: url('../images/icons/sprites/icons_large.png') 0 260px;
+.icon-large-pig {
+	background-position:  0 325px;
 }
 
-img.large-book {
-	width: 77px;
-	height: 65px;
-	background: url('../images/icons/sprites/icons_large.png') 0 195px;
+.icon-large-chart {
+	background-position:  0 260px;
 }
 
-img.large-house {
-	width: 77px;
-	height: 65px;
-	background: url('../images/icons/sprites/icons_large.png') 0 130px;
+.icon-large-book {
+	background-position:  0 195px;
 }
 
-img.large-hand {
-	width: 77px;
-	height: 65px;
-	background: url('../images/icons/sprites/icons_large.png') 0 65px;
+.icon-large-house {
+	background-position:  0 130px;
+}
+
+.icon-large-hand {
+	background-position:  0 65px;
 }
 
 #step-content-body{
