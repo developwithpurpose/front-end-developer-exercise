@@ -72,13 +72,12 @@
 
         // What is the 'top' value of current element?
         var thisTop = $(this).position().top;
-        $('#active-button-background').fadeOut(350);
 
-        setTimeout(function () {
-            $('#active-button-background')
-                .css({ top: thisTop })
-                .fadeIn(350);
-        }, 350)
+        // Move the white background behind the current
+        // nav button.
+        $('#active-button-background').animate({
+            'top': thisTop
+        }, 500);
     });
 
 }(jQuery));
