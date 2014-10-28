@@ -26,6 +26,7 @@
     "beforeEach": true,
     "afterEach": true,
     "expect": true,
-    "document": true
+    "document": true,
+    "angular": true
   }
 }

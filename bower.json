@@ -1,0 +1,30 @@
+{
+  "name": "NationalGuard.com",
+  "version": "4.0.0",
+  "authors": [
+    "iostudio"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fittext": "*",
+    "jquery": "~1.11",
+    "normalize-scss": "~3.0.1",
+    "susy": "~2.1.3",
+    "velocity": "~1.1.0",
+    "headjs": "~1.0.3",
+    "lodash": "~2.4.1",
+    "angular": "~1.2.26",
+    "angular-animate": "1.2.26",
+    "angular-route": "1.2.26",
+    "metaquery": "~1.2.5",
+    "respond": "~1.4.2"
+  },
+  "devDependencies": {}
+}

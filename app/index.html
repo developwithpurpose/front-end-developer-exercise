@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="stepsApp">
+<head>
+	<title>Front End Challenge</title>
+	<meta charset="utf-8" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" >
+	<meta name="apple-mobile-web-app-capable" content="yes" >
+	<meta name="mobile-web-app-capable" content="yes" >
+
+	<!-- MetaQuery.js Breakpoints -->
+	<meta media="(max-width: 649px)" content="palm-only" name="breakpoint" >
+	<meta media="(min-width: 650px) and (max-width: 1024px)" content="tablet-only" name="breakpoint" >
+	<meta media="(min-width: 1025px)" content="desktop-only" name="breakpoint" >
+	<meta media="(min-width: 650px)" content="tablet-up" name="breakpoint" >
+	<meta media="(max-width: 1024px)" content="tablet-down" name="breakpoint" >
+	<meta media="(max-width: 1400px)" content="desktop-down" name="breakpoint" >
+	<meta media="(min-width: 1400px)" content="large-desktop" name="breakpoint" >
+<!-- 	<meta media="only screen and (-webkit-min-device-pixel-ratio : 2)" content="retina" name="breakpoint" >
+ -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700%7CSource+Sans+Pro:300,400,600" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/app.css">
+	<!-- Loading these scripts in <head> prevents FOUC -->
+	<script src='/bower_components/headjs/dist/1.0.0/head.min.js'></script>
+	<script src='/bower_components/fittext/fittext.js'></script>
+	<script src='/assets/javascripts/responsive.js'></script>
+	<script src='../bower_components/lodash/dist/lodash.compat.min.js'></script>
+<!-- 	<script >
+		if( Array.prototype.indexOf === undefined){
+			Array.prototype.indexOf = _.indexOf;
+		}
+	</script> -->
+<!-- <script type="text/javascript" src='/bower_components/respond/dest/respond.min.js'></script> -->
+<!-- 	<script type="text/javascript" src='/bower_components/matchmedia/matchMedia.js'></script>
+	<script type="text/javascript" src='/bower_components/metaquery/metaquery.js'></script> -->
+</head>
+<body >
+	<div class="banner">
+		<img ng-src="/assets/images/header.jpg" alt="Dave Ramsey">
+		<div class="text">
+			<h2>Real Life, Love and Money with</h2>
+			<h1>America's Most Trusted Guy</h1>
+		</div>
+	</div>
+
+	<div class="steps" ng-view>
+
+	</div>
+	<script src='../bower_components/jquery/dist/jquery.min.js'></script>
+	<script src='../bower_components/velocity/velocity.js'></script>
+	<script src='../bower_components/velocity/velocity.ui.js'></script>
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-animate/angular-animate.js"></script>
+	<script src="../bower_components/angular-route/angular-route.js"></script>
+
+	<script src="/assets/javascripts/main.js"></script>
+	<script src="/angular/services/steplist.js"></script>
+	<script src="/angular/services/babysteps.js"></script>
+	<script src="/angular/controllers/steps.js"></script>
+	<script src="/angular/animations/stepAnimation.js"></script>
+
+
+</body>
+</html>

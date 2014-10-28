@@ -1,0 +1,27 @@
+<div class="menu" >
+	<a class="link"
+		ng-repeat="step in steps"
+		ng-href="#/{{ $index + 1 }}"
+		ng-class="{active: isActive(step)}"
+
+		><span>Baby Step {{ $index + 1 }}</span><img ng-src="/assets/images/icons/individual/icons_large_bs{{ $index + 1 }}_blue.png"></a>
+</div>
+<div class="window">
+	<div class="details"  ng-class="{active: isActive(step)}" ng-show="isActive(step)" ng-repeat="step in steps">
+		<div class="header">
+			<img ng-src="/assets/images/icons/individual/icons_large_bs{{ $index + 1 }}_blue.png" >
+			<div class="text">
+				<h1>Baby Step {{ $index + 1 }}</h1>
+				<p>{{ steps[$index].summary }}</p>
+			</div>
+		</div>
+		<div class="article" ng-switch on="friendList.length">
+			<p ng-repeat="paragraph in step.details">{{ paragraph }}</p>
+			<span ng-switch-when="0" ></span>
+			<p ng-switch-when="1" ><span>{{ friendList[0].firstName }} {{ friendList[0].lastName }}</span> is also in Baby Step {{ currentStep }}</p>
+			<p ng-switch-when="2" ><span>{{ friendList[0].firstName }} {{ friendList[0].lastName }}</span> and <span>{{ friendList[1].firstName }} {{ friendList[1].lastName }}</span> are also in Baby Step {{ currentStep }}</p>
+			<p ng-switch-when="3" ><span>{{ friendList[0].firstName }} {{ friendList[0].lastName }}</span>, <span>{{ friendList[1].firstName }} {{ friendList[1].lastName }}</span>, and 1 other friend are also in Baby Step {{ currentStep }}</p>
+			<p ng-switch-default ><span>{{ friendList[0].firstName }} {{ friendList[0].lastName }}</span>, <span>{{ friendList[1].firstName }} {{ friendList[1].lastName }}</span>, and {{ friendList.length - 2 }} other friends are also in Baby Step {{ currentStep }}</p>
+		</div>
+	</div>
+</div>

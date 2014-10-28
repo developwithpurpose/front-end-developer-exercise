@@ -1,0 +1,185 @@
+/* line 7, ../app.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* line 15, ../app.scss */
+.cf:after, .banner:after, .steps .details .header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 23, ../app.scss */
+#__bs_notify__ {
+  font-size: 20px !important;
+  z-index: 1000000000 !important;
+  border: 0.2em solid white !important;
+  box-shadow: 0 0 0.1em 0.1em #CCCCCC !important;
+}
+
+/* line 31, ../app.scss */
+html {
+  background-color: #bbbfc2;
+}
+
+/* line 35, ../app.scss */
+body {
+  margin: auto;
+  background-color: white;
+  /*
+  	Uncomment to change from a responsive layout to a static layout.
+  	To maintain proportions font-size must be 1/100th of screen width.
+  */
+}
+
+/* line 47, ../app.scss */
+.banner {
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans';
+}
+/* line 53, ../app.scss */
+.banner img {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+/* line 59, ../app.scss */
+.banner .text {
+  position: absolute;
+  top: 7em;
+  left: 45em;
+  right: 5em;
+  z-index: 1;
+}
+/* line 67, ../app.scss */
+.banner h1, .banner h2 {
+  color: white;
+  text-align: right;
+}
+/* line 71, ../app.scss */
+.banner h1 {
+  font-size: 5em;
+  line-height: 0.96em;
+}
+/* line 76, ../app.scss */
+.banner h2 {
+  font-size: 3.2em;
+  font-weight: 300;
+}
+
+/* line 83, ../app.scss */
+.steps {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6em;
+}
+/* line 12, ../../../../../../../Users/forrestgalloway/Projects/front-end-developer-exercise/app/bower_components/susy/sass/susy/output/support/_clearfix.scss */
+.steps:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 87, ../app.scss */
+.steps .menu {
+  width: 30%;
+  float: left;
+  font-size: 0.3em;
+  background-color: #ebeced;
+}
+/* line 95, ../app.scss */
+.steps .menu .link {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  font-size: 6em;
+  display: table;
+  font-family: 'Source Sans Pro';
+  font-weight: 500;
+  color: #9ba0a4;
+  line-height: 3.3em;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+/* line 12, ../../../../../../../Users/forrestgalloway/Projects/front-end-developer-exercise/app/bower_components/susy/sass/susy/output/support/_clearfix.scss */
+.steps .menu .link:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 107, ../app.scss */
+.steps .menu .link.active {
+  color: #36abe1;
+  background-color: white;
+}
+/* line 112, ../app.scss */
+.steps .menu .link > span {
+  width: 69.38776%;
+  float: left;
+  margin-right: 2.04082%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+}
+/* line 119, ../app.scss */
+.steps .menu .link > img {
+  width: 15%;
+  vertical-align: middle;
+  border: none;
+}
+/* line 127, ../app.scss */
+.steps .window {
+  width: 70%;
+  float: left;
+  font-size: 0.7em;
+  padding: 0 10em;
+}
+/* line 139, ../app.scss */
+.steps .details img {
+  float: left;
+  width: 15%;
+}
+/* line 143, ../app.scss */
+.steps .details .text {
+  float: right;
+  width: 80%;
+  height: 12em;
+  margin-left: 5%;
+}
+/* line 149, ../app.scss */
+.steps .details .text h1 {
+  padding-top: 5%;
+  font-size: 4.25em;
+  font-family: 'Source Sans Pro';
+  font-weight: 500;
+  color: #36abe1;
+  line-height: 0.7em;
+}
+/* line 158, ../app.scss */
+.steps .details .text p {
+  font-family: 'Source Sans Pro';
+  font-size: 2.5em;
+  color: #5c6366;
+  line-height: 1.4em;
+  font-weight: 300;
+}
+/* line 167, ../app.scss */
+.steps .details .article {
+  font-family: 'Helvetica';
+  font-size: 2em;
+  line-height: 1.29em;
+}
+/* line 172, ../app.scss */
+.steps .details .article p {
+  margin-bottom: 2em;
+}
+/* line 174, ../app.scss */
+.steps .details .article p span {
+  color: #36abe1;
+}

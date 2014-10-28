@@ -1,0 +1,180 @@
+// requires Sass 3.3+
+@import "../../bower_components/susy/sass/susy";
+
+$blue: #36abe1;
+
+
+*, *:before, *:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.cf{
+    &:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+// browser-sync notification
+#__bs_notify__{
+	font-size: 20px !important;
+	z-index: 1000000000 !important;
+	border: 0.2em solid white !important;
+	box-shadow: 0 0 0.1em 0.1em #CCCCCC !important;
+
+}
+
+html{
+	background-color: #bbbfc2;
+}
+
+body{
+	margin: auto;
+	background-color: white;
+
+	/*
+		Uncomment to change from a responsive layout to a static layout.
+		To maintain proportions font-size must be 1/100th of screen width.
+	*/
+	// width: 1000px
+	// font-size: 10px;
+}
+
+.banner{
+	@extend .cf;
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans';
+
+	img{
+		position: relative;
+		width: 100%;
+		z-index: 0;
+	}
+
+	.text{
+		position: absolute;
+		top: 7em;
+		left: 45em;
+		right: 5em;
+		z-index: 1;
+	}
+
+	h1,h2{
+		color: white;
+		text-align: right;
+	}
+	h1{
+		font-size: 5em;
+		line-height: 0.96em;
+
+	}
+	h2{
+		font-size: 3.2em;
+		font-weight: 300;
+	}
+
+}
+
+.steps{
+	//adds a clear-fix, Susy is configured to float grid items
+	@include container(100%);
+	margin-top: 6em;
+	.menu{
+		// spans 3 of 10 columns with a gutter size of 0
+		@include span (3 of 10 0);
+		// Susy defines a 1/4 gutter width as 1/4 of 1 column, you determine the number of columns
+		font-size: 0.3em;
+		background-color: #ebeced;
+
+
+		.link{
+			@include container(100%);
+			width:100%;
+			font-size: 6em;
+			display: table;
+			font-family: 'Source Sans Pro';
+			font-weight: 500;
+			color: #9ba0a4;
+			line-height: 3.3em;
+			text-decoration: none;
+			border-bottom: 1px solid white;
+
+			&.active{
+				color: $blue;
+				background-color: white;
+			}
+
+			>span{
+				@include span(7 of 10 1/4);
+				display: table-cell;
+				vertical-align: middle;
+				text-align: right;
+			}
+
+			>img{
+				width: 15%;
+				vertical-align: middle;
+				border: none;
+			}
+		}
+	}
+
+.window{
+	@include span (7 of 10 0);
+	font-size: 0.7em;
+	padding: 0 10em;
+}
+
+	.details{
+		//position: absolute;
+		.header{
+			@extend .cf;
+		}
+
+		img{
+			float: left;
+			width: 15%;
+		}
+		.text{
+			float: right;
+			width: 80%;
+			height: 12em;
+			margin-left: 5%;
+
+			h1{
+				padding-top: 5%;
+				font-size: 4.25em;
+				font-family: 'Source Sans Pro';
+				font-weight: 500;
+				color: $blue;
+				line-height: 0.7em;
+			}
+
+			 p{
+				font-family: 'Source Sans Pro';
+				font-size: 2.5em;
+				color: #5c6366;
+				line-height: 1.4em;
+				font-weight: 300;
+			}
+		}
+
+		.article{
+			font-family: 'Helvetica';
+			font-size: 2em;
+			line-height: 1.29em;
+
+			p{
+				margin-bottom: 2em;
+				span{
+					color: $blue;
+				}
+			}
+		}
+	}
+}
