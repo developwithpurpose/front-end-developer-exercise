@@ -1,5 +1,6 @@
 {
   "boss": true,
+  "node": true,
   "curly": true,
   "eqeqeq": true,
   "eqnull": true,
@@ -14,11 +15,11 @@
   "unused": true,
   "undef": true,
   "newcap": true,
+  "debug": true,
   "globals": {
     "jQuery": true,
     "$": true,
     "module": true,
-    "jasmine": true,
     "describe": true,
     "it": true,
     "require": true,
@@ -26,6 +27,7 @@
     "beforeEach": true,
     "afterEach": true,
     "expect": true,
-    "document": true
+    "document": true,
+    "console": true
   }
 }

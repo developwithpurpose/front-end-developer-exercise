@@ -1,0 +1,153 @@
+.babysteps {
+  // Reset all type to use our alternative font
+  // These elements are taken from the _type.scss module
+  div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+    font-family: $font-family-sans-serif-alt;
+  }
+
+  // NOTE that we are going to use Source Sans Pro throughout the rest of this
+  // section. The mockups call for Helvetica but that might be switching typefaces a bit too
+  // often. We'll check with design about optimizing this.
+
+  // Foundation puts padding on the columns for a bit of a gutter but we don't want these
+  // as we're going to use a background and a border on the li elements and this padding
+  // would get in the way.
+  .columns {
+    padding: 0;
+  }
+
+  // Make this a bit more prominent and give it room to breath
+  .friends-on-my-step {
+    margin: rem-calc(40) 0;
+    font-weight: $font-weight-alt-bold;
+  }
+
+  // Highlight the friend in the familiar blue
+  .friend {
+    color: $babyStepBlue;
+  }
+
+  // How many steps in total are possible?
+  $numberOfSteps: 7;
+  // How high should each navigation element be in rem
+  $stepHeight: 60;
+
+  padding-top: rem-calc(24);
+
+  // The mockups call for more space between the header and main content if the screen is large enough
+  @media #{$medium-up} {
+    padding-top: rem-calc(60);
+  }
+
+  // The left side of the screen contains a way to navigate between the steps if the screen is large enough
+  .nav {
+    $gradientStart: $backgroundLighter;
+    $gradientEnd: darken($gradientStart, 10%);
+
+    background-color: $gradientStart;
+    @include background-image(linear-gradient(to right, $gradientStart 0%, $gradientStart 90%, $gradientEnd 100%));
+
+    // As high as the number of steps plus some wiggle room. This will make sure that our background color and
+    // gradient are viewable and don't break off prematurely.
+    min-height: rem-calc($stepHeight * ($numberOfSteps + 1));
+
+    ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        border-bottom: 1px solid white;
+      }
+
+      .active {
+        // We'll indicate the currently selected step this way
+        background-color: white;
+        // Use CSS3 transitions to slowly fade the background color
+        @include transition(background-color 500ms ease-out);
+      }
+    }
+
+    a {
+      display: block;
+      text-align: right;
+      line-height: rem-calc(60);
+      padding-right: rem-calc(24);
+    }
+
+    .icon {
+      float: right;
+      margin-left: rem-calc(24);
+      font-size: rem-calc(24);
+      line-height: rem-calc(60);
+      width: rem-calc(24);
+      text-align: center;
+    }
+  }
+
+  .steps {
+    .content {
+      display: none;
+      padding: 0 rem-calc(24);
+
+      &.active {
+        display: block;
+      }
+    }
+
+    h2 {
+      color: $babyStepBlue;
+      font-size: rem-calc(30);
+      font-weight: $font-weight-alt-bold;
+      line-height: rem-calc(20);
+    }
+
+    h3 {
+      color: $mutedText;
+      font-size: rem-calc(18);
+      font-weight: $font-weight-alt-light;
+      line-height: rem-calc(20);
+      margin-bottom: rem-calc(24);
+    }
+
+    // On smaller screens float the icons to the right so that our headings and text
+    // are easily scannable; we don't want to cause the eye to jump left and right
+    // as they are reading the content.
+    .icon {
+      color: $babyStepBlue;
+      position: relative;
+      top: rem-calc(-10);
+      float: right;
+      font-size: rem-calc(64);
+      width: rem-calc(64);
+      text-align: right;
+      padding: 0 rem-calc(12);
+    }
+
+    // Let the steps fill the screen on small devices
+    @media #{$small-only} {
+      float: none !important;
+      width: 100% !important;
+
+      .content {
+        display: block;
+      }
+    }
+
+    @media #{$medium-up} {
+      // More room on the left and right, this helps to keep the character length of each line
+      // lower which makes the text easier to read.
+      .content {
+        padding: 0 70px;
+      }
+
+      // Let the icons become a drop cap for the header
+      .icon {
+        float: left;
+        text-align: center;
+        padding: 0;
+        margin-right: rem-calc(12);
+      }
+    }
+  }
+}
