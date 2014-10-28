@@ -6,12 +6,16 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "box-cutter/ubuntu1404"
 
   # Node.js static server using the connect lib
   config.vm.network "forwarded_port", guest: 9001, host: 9001
   # Where livereload will listen
   config.vm.network "forwarded_port", guest: 9002, host: 9002
+  # Testem in development mode
+  config.vm.network "forwarded_port", guest: 7357, host: 7357
+  # Mincer to handle serving things up in development mode
+  config.vm.network "forwarded_port", guest: 7358, host: 7358
 
   config.vm.synced_folder ".", "/exercise"
   config.vm.synced_folder "salt/roots", "/srv"

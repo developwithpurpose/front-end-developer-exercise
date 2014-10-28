@@ -1,3 +1,6 @@
+ruby:
+  pkg.installed
+
 sass:
   gem.installed
 

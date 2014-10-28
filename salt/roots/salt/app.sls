@@ -5,7 +5,7 @@
   - bootstrap
   - user: vagrant
 
-bower install:
+bower --config.interactive=false install:
   cmd:
   - run
   - user: vagrant

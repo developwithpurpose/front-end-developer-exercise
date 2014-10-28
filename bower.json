@@ -2,6 +2,12 @@
   "name": "front-end-developer-exercise",
   "dependencies": {
     "foundation": "zurb/bower-foundation",
-    "compass": "Igosuki/compass-mixins"
+    "compass": "Igosuki/compass-mixins",
+    "underscore": "jashkenas/underscore",
+    "domready": "ded/domready",
+    "react": "reactjs/react-bower"
+  },
+  "devDependencies": {
+    "should": "shouldjs/should.js"
   }
 }

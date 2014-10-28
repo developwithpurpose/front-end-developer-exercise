@@ -22,6 +22,18 @@
     font-family: $font-family-sans-serif-alt;
   }
 
+  .columns {
+    padding: 0;
+  }
+
+  .friends-on-my-step {
+    font-weight: $font-weight-alt-bold;
+  }
+
+  .friend {
+    color: $babyStepBlue;
+  }
+
   $numberOfSteps: 7;
   $stepHeight: 60;
 
@@ -32,7 +44,12 @@
   }
 
   .nav {
-    background-color: $backgroundLighter;
+    $gradientStart: $backgroundLighter;
+    $gradientEnd: darken($gradientStart, 10%);
+
+    background-color: $gradientStart;
+    @include background-image(linear-gradient(to right, $gradientStart 0%, $gradientStart 90%, $gradientEnd 100%));
+
     // As high as the number of steps
     min-height: rem-calc($stepHeight * ($numberOfSteps + 1));
 
@@ -40,6 +57,16 @@
       list-style: none;
       padding: 0;
       margin: 0;
+
+      li {
+        padding-right: rem-calc(24);
+        border-bottom: 1px solid white;
+      }
+
+      .active {
+        background-color: white;
+        @include transition(background-color 500ms ease-out);
+      }
     }
 
     a {
@@ -93,8 +120,9 @@
       top: rem-calc(-10);
       float: right;
       font-size: rem-calc(64);
-      width: rem-calc(84);
+      width: rem-calc(64);
       text-align: right;
+      padding: 0 rem-calc(12);
     }
 
     @media #{$small-only} {
@@ -113,13 +141,9 @@
 
       .icon {
         float: left;
-        text-align: left;
-      }
-
-      h2 {
-      }
-
-      h3 {
+        text-align: center;
+        padding: 0;
+        margin-right: rem-calc(12);
       }
     }
   }
