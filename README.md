@@ -13,8 +13,8 @@ What I still need to work on:
 
 Highlights:
 
-* Use a configuration management tool and Vagrant to make a development
-  environment.
+* Use a [configuration management tool](http://saltstack.com) and
+  [Vagrant](http://vagrantup.com) to make a development environment.
 * Used the [Foundation front-end framework](http://foundation.zurb.com)
   to get mobile device support and a starting point for annoying things
   like grids.
@@ -23,9 +23,10 @@ Highlights:
   JavaScript source.
 * Used [React](http://facebook.github.io/react/) to make components for
   some things.
-* Used Google Fonts for the typography and this eliminated the need to
+* Used [Google Fonts](https://www.google.com/fonts) for the typography and this eliminated the need to
   use images except.
-* Used a web font to handle the iconography instead of images.
+* Used a [web font plugin](https://github.com/sapegin/grunt-webfont) to
+  handle the iconography instead of images.
 * Switched Jasmine out for [Testem](https://github.com/airportyh/testem)
   because I so thoroughly enjoy using it.
 
@@ -43,9 +44,6 @@ Start with a clone.
 ```shell
 git clone https://github.com/robmadole/front-end-developer-exercise.git
 ```
-
-I used [Salt](http://www.saltstack.com) to automate the installation of
-everything. You can find these definitions in `salt/roots/salt`.
 
 Launch Vagrant and give it time to install everything listed in the Salt
 states.
@@ -85,8 +83,7 @@ grunt
 Grunt will launch a static server using connect on port 9001 - unless
 Vagrant had to change that.
 
-From your _host computer_ launch http://localhost:9001 and open the
-"app" resource.
+From your _host computer_ launch [http://localhost:9001/app](http://localhost:9001/app).
 
 ## Changing the Baby Step that our user is on
 
@@ -126,4 +123,5 @@ To get the test runner going (make sure you are inside of Vagrant).
 grunt testrunner
 ```
 
-From your _host computer_ launch http://localhost:7357.
+From your _host computer_ launch
+[http://localhost:7357](http://localhost:7357).
