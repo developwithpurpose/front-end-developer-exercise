@@ -1,11 +1,14 @@
 header .tagline {
   background-color: black;
   background-image: url(#{$images}/header.jpg);
+  // On smaller screens move Dave over to the left a bit
   background-position: -150px 0;
   background-repeat: no-repeat;
+  // Hide the square pattern at the bottom because it takes up a lot of room on smaller devices
   min-height: 222px;
 
   h1 {
+    // This will help with legibility of the text with some of the brighter sections of the background
     @include text-shadow(2px 0px 10px black);
 
     text-align: right;
@@ -13,16 +16,19 @@ header .tagline {
     color: white;
   }
 
+  // Allows us to break up the lines a little more efficiently
   span {
     display: block;
   }
 
+  // The "Real, Life, Love and Money with" part
   .what {
     padding-top: rem-calc(120);
     font-weight: $font-weight-light;
     font-size: rem-calc(18);
   }
 
+  // The "America's Most Truste Guy" part
   .who {
     text-transform: uppercase;
     font-weight: $font-weight-bold;
@@ -31,7 +37,9 @@ header .tagline {
   }
 
   @media #{$medium-up} {
+    // Let's show the square pattern for larger screens
     min-height: 276px;
+    // Bit more room for the text to center in the header
     padding: rem-calc(50) 0;
 
     h1 {
@@ -39,6 +47,7 @@ header .tagline {
     }
 
     .what {
+      // We'll let the padding on the main container take over
       padding-top: 0;
       font-size: rem-calc(32);
     }
@@ -50,6 +59,7 @@ header .tagline {
   }
 
   @media #{$large-up} {
+    // Pop Dave away from the left edge since we have plenty of room now
     background-position: 0 0;
   }
 }

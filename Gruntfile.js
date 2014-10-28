@@ -80,6 +80,9 @@ module.exports = function( grunt ) {
 
     webfont: {
       main: {
+        options: {
+          autoHint: false
+        },
         src: "<%= locations.icons %>",
         dest: "build/fonts"
       }
@@ -151,6 +154,6 @@ module.exports = function( grunt ) {
 
   grunt.registerTask("lint", ["jshint", "scsslint", "validation", "clean:validation"]);
   grunt.registerTask("build", ["lint", "browserify:main", "sass:main", "webfont:main"]);
-  grunt.registerTask("develop", ["testem:run:main"]);
+  grunt.registerTask("testrunner", ["testem:run:main"]);
   grunt.registerTask("default", ["build", "connect", "watch"]);
 };
