@@ -36,6 +36,8 @@ header {
     background-color: white;
     float: right;
     display: inline-block; }
+    .container .content section {
+      min-height: 400px; }
     .container .content article {
       min-height: 400px; }
     .container .content img {
@@ -72,10 +74,16 @@ header {
     vertical-align: center;
     background-color: #ebeced; }
     .container .nav #focus {
-      background-color: white; }
+      background-color: white;
+      width: 300px;
+      min-height: 61px;
+      position: absolute;
+      z-index: 1;
+      top: 338px; }
     .container .nav .step {
+      color: #9ba0a4;
       display: inline-block;
-      min-height: 60px;
+      height: 60px;
       width: 276px;
       float: left;
       text-align: right;
@@ -90,9 +98,12 @@ header {
       font-weight: 400;
       font-size: 18px;
       line-height: 60px;
-      color: #9ba0a4;
       padding-right: 30px;
-      vertical-align: 10px; }
+      vertical-align: 10px;
+      position: relative;
+      z-index: 999; }
     .container .nav img {
       padding-top: 15px;
-      display: inline-block; }
+      display: inline-block;
+      position: relative;
+      z-index: 999; }

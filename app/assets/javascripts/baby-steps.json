@@ -21,40 +21,5 @@
         { "firstName" : "Paul", "lastName" : "Taylor", "babyStep": 7 },
         { "firstName" : "Amy", "lastName" : "Gonzalez", "babyStep": 7 },
         { "firstName" : "Richard", "lastName" : "Martinez", "babyStep": 7 }
-    ],
-    "babysteps": {
-        "title": "Baby Step 1",
-        "description": "$1,000 Emergency Fund",
-        "content": "An emergency fund is for those unexpected events in life that you can&rsquo;t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It&rsquo;s not a matter of if these events will happen; it&rsquo;s simply a matter of when they will happen.<br><br>This beginning emergency fund will keep life&rsquo;s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It&rsquo;s time to break the cycle of debt!"
-    },
-    {
-        "title": "Baby Step 2",
-        "description": "Pay off all debt using the Debt Snowball",
-        "content": "List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don&rsquo;t worry about interest rates unless two debts have similar payoffs. If that&rsquo;s the case, then list the higher interest rate debt first.<br><br>The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It&rsquo;s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt."
-    },
-    {
-        "title": "Baby Step 3",
-        "description": "3 to 6 months of exepenses in savings",
-        "content": "Once you complete the first two baby steps, you will have built serious momentum. But don&rsquo;t start throwing all your &ldquo;extra&rdquo; money into investments quite yet. It&rsquo;s time to build your full emergency fund. Ask yourself, &ldquo;What would it take for me to live for three to six months if I lost my income?&rdquo; Your answer to that question is how much you should save.<br><br>Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you&rsquo;re paying to yourself, a buffer between you and life."
-    },
-    {
-        "title": "Baby Step 4",
-        "description": "Invest 15% of household income for retirement",
-        "content": "When you reach this step, you&rsquo;ll have no payments—except the house—and a fully funded emergency fund. Now it&rsquo;s time to get serious about building wealth.<br><br>Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don&rsquo;t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early."
-    },
-    {
-        "title": "Baby Step 5",
-        "description": "College funding for children",
-        "content": "By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.<br><br>In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!"
-    },
-    {
-        "title": "Baby Step 6",
-        "description": "Pay off your house early",
-        "content": "Now it&rsquo;s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.<br><br>As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!"
-    },
-    {
-        "title": "Baby Step 7",
-        "description": "Build wealth and give!",
-        "content": "It&rsquo;s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!<br><br>Golda Meir says, &ldquo;You can&rsquo;t shake hands with a clenched fist.&rdquo; Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family&rsquo;s future, and be gracious enough to bless others. You can do all three at the same time."
-    }
+    ]
 }
