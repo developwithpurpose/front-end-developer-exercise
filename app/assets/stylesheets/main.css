@@ -35,9 +35,11 @@ header {
     margin-right: 70px;
     background-color: white;
     float: right;
-    display: inline-block; }
+    display: inline-block;
+    position: relative; }
     .container .content section {
-      min-height: 400px; }
+      min-height: 400px;
+      position: absolute; }
     .container .content article {
       min-height: 400px; }
     .container .content img {
