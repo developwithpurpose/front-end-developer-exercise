@@ -8,9 +8,6 @@ $link-blue:       #6fbee7
 $background-grey: #bbbfc2
 $nav-text-grey:   #9ba0a4
 
-//Icons
-$icon-large: url('./../images/icons/sprites/icons_large.png')
-
 // STYLES
 #wrapper
   background-color: white
@@ -55,8 +52,8 @@ header
       min-height: 400px
     img
       display: inline-block
-      margin-right: 10px
       float: left
+      margin-right: 10px
     .article-head
       display: inline-block
       float: left
@@ -114,7 +111,14 @@ header
       text-align: right
       width: 276px
     .gradient
-      background: linear-gradient(to left, #d1d5d6, #ebeced 4%)
+      background: #ebeced /* Old browsers */
+      background: -moz-linear-gradient(left,  #ebeced 96%, #d1d5d6 100%) /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, right top, color-stop(96%,#ebeced), color-stop(100%,#d1d5d6)) /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(left,  #ebeced 96%,#d1d5d6 100%) /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(left,  #ebeced 96%,#d1d5d6 100%) /* Opera 11.10+ */
+      background: -ms-linear-gradient(left,  #ebeced 96%,#d1d5d6 100%) /* IE10+ */
+      background: linear-gradient(to right,  #ebeced 96%,#d1d5d6 100%) /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ) /* IE6-9 */
       border-bottom: 1px solid white
       height: 60px
     h3
