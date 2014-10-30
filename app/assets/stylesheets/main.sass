@@ -19,7 +19,7 @@ $icon-large: url('./../images/icons/sprites/icons_large.png')
 body
   background-color: $background-grey
 header
-  background: $background-grey url("../images/header.jpg") no-repeat 0 0
+  background: url("../images/header.jpg") no-repeat 0 0
   color: white
   display: block
   height: 278px
@@ -55,33 +55,42 @@ header
       min-height: 400px
     img
       display: inline-block
-    article h1
-      color: $headline-blue
+      margin-right: 10px
+      float: left
+    .article-head
       display: inline-block
-      font:
-        family: 'Source Sans Pro', sans-serif
-        size: 30px
-        weight: 400
-      line-height: 20px
-      vertical-align: 26px
-    article h2
-      color: $subhead-grey
-      display: inline-block
-      font:
-        family: 'Source Sans Pro', sans-serif
-        size: 18px
-        weight: 300
-      line-height: 20px
-      position: relative
-      right: 150px
+      float: left
+      h1
+        color: $headline-blue
+        font:
+          family: 'Source Sans Pro', sans-serif
+          size: 30px
+          weight: 400
+        line-height: 40px
+        vertical-align: 36px
+      h2
+        color: $subhead-grey
+        font:
+          family: 'Source Sans Pro', sans-serif
+          size: 18px
+          weight: 300
+        line-height: 18px
     p
       color: $body-black
+      clear: both
       font:
         family: Helvetica, sans-serif
         size: 13px
         weight: 400
       line-height: 18px
       padding-top: 24px
+    .friend-data
+      padding-top: 40px
+      a
+        text-decoration: none
+        color: $link-blue
+        font-weight: 700
+        line-height: 0px
   .nav
     background-color: #ebeced
     display: inline-block

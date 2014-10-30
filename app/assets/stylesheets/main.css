@@ -7,7 +7,7 @@ body {
   background-color: #bbbfc2; }
 
 header {
-  background: #bbbfc2 url("../images/header.jpg") no-repeat 0 0;
+  background: url("../images/header.jpg") no-repeat 0 0;
   color: white;
   display: block;
   height: 278px;
@@ -43,31 +43,40 @@ header {
     .container .content article {
       min-height: 400px; }
     .container .content img {
-      display: inline-block; }
-    .container .content article h1 {
-      color: #36abe1;
       display: inline-block;
-      font-family: "Source Sans Pro", sans-serif;
-      font-size: 30px;
-      font-weight: 400;
-      line-height: 20px;
-      vertical-align: 26px; }
-    .container .content article h2 {
-      color: #5c6366;
+      margin-right: 10px;
+      float: left; }
+    .container .content .article-head {
       display: inline-block;
-      font-family: "Source Sans Pro", sans-serif;
-      font-size: 18px;
-      font-weight: 300;
-      line-height: 20px;
-      position: relative;
-      right: 150px; }
+      float: left; }
+      .container .content .article-head h1 {
+        color: #36abe1;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 40px;
+        vertical-align: 36px; }
+      .container .content .article-head h2 {
+        color: #5c6366;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 18px; }
     .container .content p {
       color: #65686f;
+      clear: both;
       font-family: Helvetica, sans-serif;
       font-size: 13px;
       font-weight: 400;
       line-height: 18px;
       padding-top: 24px; }
+    .container .content .friend-data {
+      padding-top: 40px; }
+      .container .content .friend-data a {
+        text-decoration: none;
+        color: #6fbee7;
+        font-weight: 700;
+        line-height: 0px; }
   .container .nav {
     background-color: #ebeced;
     display: inline-block;

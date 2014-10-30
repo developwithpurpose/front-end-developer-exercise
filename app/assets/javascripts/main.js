@@ -13,7 +13,7 @@ $(document).ready(function(){
 
   reset();
 
-// Resets nav styles and updates selected styles and sets focus
+// Resets nav styles and updates selected styles and sets focus on click
   $('.step').on('click', function() {
     clickedStep = (steps.index($(this).closest('li'))) + 1;
     var activeImage = "assets/images/icons/individual/icons_small_bs" + clickedStep + "_blue.png"
@@ -50,27 +50,27 @@ $(document).ready(function(){
             }
             // a must be equal to b
             return 0;
-          });
+          }); // end .sort
         }
-      }); // end  friends .each
+      }); // end friends .each
       if (stepFriends.length === 1){
         $.each(stepFriends, function(k, friend){
-          statusHTML += "<p>" + friend.firstName + " " + friend.lastName + " is also in Baby Step " + friend.babyStep + "</p>";
+          statusHTML = "<p class='friend-data'><a href='#'>" + friend.firstName + " " + friend.lastName + "</a> is also in Baby Step " + friend.babyStep + "</p>";
         });
       } //end stepFriends .each
       else if (stepFriends.length === 2){
         $.each(stepFriends, function(k, friend){
-          statusHTML = "<p>" + stepFriends[0].firstName + " " + stepFriends[0].lastName + " and " + stepFriends[1].firstName + " " + stepFriends[1].lastName + " are also in Baby Step " + friend.babyStep + ".</p>";
+          statusHTML = "<p class='friend-data'><a href='#'>" + stepFriends[0].firstName + " " + stepFriends[0].lastName + "</a> and <a href='#'>" + stepFriends[1].firstName + " " + stepFriends[1].lastName + "</a> are also in Baby Step " + friend.babyStep + ".</p>";
         });
       }
       else if (stepFriends.length == 3){
         $.each(stepFriends, function(k, friend){
-          statusHTML = "<p>" + stepFriends[0].firstName + " " + stepFriends[0].lastName + " and " + stepFriends[1].firstName + " " + stepFriends[1].lastName + " and " + (stepFriends.length - 2) + " other friend is also in Baby Step " + friend.babyStep + ".</p>";
+          statusHTML = "<p class='friend-data'><a href='#'>" + stepFriends[0].firstName + " " + stepFriends[0].lastName + "</a>, <a href='#'>" + stepFriends[1].firstName + " " + stepFriends[1].lastName + "</a> and " + (stepFriends.length - 2) + " other friend is also in Baby Step " + friend.babyStep + ".</p>";
         });
       }
       else if (stepFriends.length > 3){
         $.each(stepFriends, function(k, friend){
-          statusHTML = "<p>" + stepFriends[0].firstName + " " + stepFriends[0].lastName + " and " + stepFriends[1].firstName + " " + stepFriends[1].lastName + " and " + (stepFriends.length - 2) + " other friends are also in Baby Step " + friend.babyStep + ".</p>";
+          statusHTML = "<p class='friend-data'><a href='#'>" + stepFriends[0].firstName + " " + stepFriends[0].lastName + "</a>, <a href='#'>" + stepFriends[1].firstName + " " + stepFriends[1].lastName + "</a> and " + (stepFriends.length - 2) + " other friends are also in Baby Step " + friend.babyStep + ".</p>";
         });
       }
 
