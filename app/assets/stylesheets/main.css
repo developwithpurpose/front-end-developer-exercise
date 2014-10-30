@@ -1,0 +1,127 @@
+#wrapper {
+  background-color: white;
+  margin: auto;
+  width: 980px; }
+
+body {
+  background-color: #bbbfc2; }
+
+header {
+  background: url("../images/header.jpg") no-repeat 0 0;
+  color: white;
+  display: block;
+  height: 278px;
+  text-align: right; }
+  header h1 {
+    color: white;
+    padding: 50px 70px 0 0;
+    text-align: right; }
+    header h1 .sub-headline {
+      font: 300 32px/32px "Open Sans", sans-serif; }
+    header h1 .headline {
+      display: block;
+      font: 600 50px/48px "Open Sans", sans-serif;
+      padding-top: 15px; }
+      header h1 .headline span {
+        letter-spacing: -11px; }
+
+.container {
+  height: 600px;
+  margin-top: 60px; }
+  .container .content {
+    background-color: white;
+    display: inline-block;
+    float: right;
+    height: 400px;
+    margin-right: 70px;
+    overflow: hidden;
+    position: relative;
+    width: 540px; }
+    .container .content section {
+      min-height: 400px;
+      position: absolute; }
+    .container .content article {
+      min-height: 400px; }
+    .container .content img {
+      display: inline-block;
+      float: left;
+      margin-right: 10px; }
+    .container .content .article-head {
+      display: inline-block;
+      float: left; }
+      .container .content .article-head h1 {
+        color: #36abe1;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 40px;
+        vertical-align: 36px; }
+      .container .content .article-head h2 {
+        color: #5c6366;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 18px; }
+    .container .content p {
+      color: #65686f;
+      clear: both;
+      font-family: Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      padding-top: 24px; }
+    .container .content .friend-data {
+      padding-top: 40px; }
+      .container .content .friend-data a {
+        text-decoration: none;
+        color: #6fbee7;
+        font-weight: 700;
+        line-height: 0px; }
+  .container .nav {
+    background-color: #ebeced;
+    display: inline-block;
+    float: left;
+    margin-right: 70px;
+    vertical-align: center;
+    width: 300px; }
+    .container .nav #focus {
+      background-color: white;
+      min-height: 61px;
+      position: absolute;
+      top: 338px;
+      width: 300px;
+      z-index: 1; }
+    .container .nav .step {
+      color: #9ba0a4;
+      display: inline-block;
+      float: left;
+      height: 60px;
+      padding-right: 24px;
+      text-align: right;
+      width: 276px; }
+    .container .nav .gradient {
+      background: #ebeced;
+      background: -moz-linear-gradient(left, #ebeced 96%, #d1d5d6 100%);
+      background: -webkit-gradient(linear, left top, right top, color-stop(96%, #ebeced), color-stop(100%, #d1d5d6));
+      background: -webkit-linear-gradient(left, #ebeced 96%, #d1d5d6 100%);
+      background: -o-linear-gradient(left, #ebeced 96%, #d1d5d6 100%);
+      background: -ms-linear-gradient(left, #ebeced 96%, #d1d5d6 100%);
+      background: linear-gradient(to right, #ebeced 96%, #d1d5d6 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
+      border-bottom: 1px solid white;
+      height: 60px; }
+    .container .nav h3 {
+      display: inline-block;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 60px;
+      padding-right: 30px;
+      position: relative;
+      vertical-align: 10px;
+      z-index: 999; }
+    .container .nav img {
+      display: inline-block;
+      padding-top: 15px;
+      position: relative;
+      z-index: 999; }
