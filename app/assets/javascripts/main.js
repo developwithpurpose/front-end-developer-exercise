@@ -58,29 +58,25 @@ $(document).ready(function(){
           statusHTML += "<p>" + friend.firstName + " " + friend.lastName + " is also in Baby Step " + friend.babyStep + "</p>";
         });
       } //end stepFriends .each
-      if (stepFriends.length === 2){
+      else if (stepFriends.length === 2){
         $.each(stepFriends, function(k, friend){
           statusHTML = "<p>" + stepFriends[0].firstName + " " + stepFriends[0].lastName + " and " + stepFriends[1].firstName + " " + stepFriends[1].lastName + " are also in Baby Step " + friend.babyStep + ".</p>";
         });
       }
-      if (stepFriends.length == 3){
+      else if (stepFriends.length == 3){
         $.each(stepFriends, function(k, friend){
-          statusHTML = "<p>" + stepFriends[0].firstName + " " + stepFriends[0].lastName + " and " + stepFriends[1].firstName + " " + stepFriends[1].lastName + " and " + (stepFriends.length - 2) + " other is also in Baby Step " + friend.babyStep + ".</p>";
+          statusHTML = "<p>" + stepFriends[0].firstName + " " + stepFriends[0].lastName + " and " + stepFriends[1].firstName + " " + stepFriends[1].lastName + " and " + (stepFriends.length - 2) + " other friend is also in Baby Step " + friend.babyStep + ".</p>";
         });
       }
-      if (stepFriends.length > 3){
+      else if (stepFriends.length > 3){
         $.each(stepFriends, function(k, friend){
-          statusHTML = "<p>" + stepFriends[0].firstName + " " + stepFriends[0].lastName + " and " + stepFriends[1].firstName + " " + stepFriends[1].lastName + " and " + (stepFriends.length - 2) + " others are also in Baby Step " + friend.babyStep + ".</p>";
+          statusHTML = "<p>" + stepFriends[0].firstName + " " + stepFriends[0].lastName + " and " + stepFriends[1].firstName + " " + stepFriends[1].lastName + " and " + (stepFriends.length - 2) + " other friends are also in Baby Step " + friend.babyStep + ".</p>";
         });
       }
-
 
       $(div).html(statusHTML);
+
     }); // end friendDivs .each
-
-      // statusHTML += " are also in Baby Step ";
-
-     // run through this loop through all of the articles (7)
   }); // end .getJSON
 }); // end .ready
 

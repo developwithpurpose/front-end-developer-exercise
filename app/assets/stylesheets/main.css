@@ -1,26 +1,26 @@
 #wrapper {
   background-color: white;
-  width: 980px;
-  margin: auto; }
+  margin: auto;
+  width: 980px; }
 
 body {
   background-color: #bbbfc2; }
 
 header {
   background: #bbbfc2 url("../images/header.jpg") no-repeat 0 0;
-  height: 278px;
-  display: block;
   color: white;
+  display: block;
+  height: 278px;
   text-align: right; }
   header h1 {
+    color: white;
     padding: 50px 70px 0 0;
-    text-align: right;
-    color: white; }
+    text-align: right; }
     header h1 .sub-headline {
       font: 300 32px/32px "Open Sans", sans-serif; }
     header h1 .headline {
-      font: 600 50px/48px "Open Sans", sans-serif;
       display: block;
+      font: 600 50px/48px "Open Sans", sans-serif;
       padding-top: 15px; }
       header h1 .headline span {
         letter-spacing: -11px; }
@@ -29,14 +29,14 @@ header {
   height: 600px;
   margin-top: 60px; }
   .container .content {
-    width: 540px;
-    height: 400px;
-    overflow: hidden;
-    margin-right: 70px;
     background-color: white;
-    float: right;
     display: inline-block;
-    position: relative; }
+    float: right;
+    height: 400px;
+    margin-right: 70px;
+    overflow: hidden;
+    position: relative;
+    width: 540px; }
     .container .content section {
       min-height: 400px;
       position: absolute; }
@@ -45,67 +45,67 @@ header {
     .container .content img {
       display: inline-block; }
     .container .content article h1 {
-      font-family: "Source Sans Pro", sans-serif;
-      font-weight: 400;
-      font-size: 30px;
-      vertical-align: 26px;
       color: #36abe1;
-      line-height: 20px;
-      display: inline-block; }
-    .container .content article h2 {
+      display: inline-block;
       font-family: "Source Sans Pro", sans-serif;
-      font-weight: 300;
-      font-size: 18px;
-      position: relative;
-      right: 150px;
-      color: #5c6366;
-      line-height: 20px;
-      display: inline-block; }
-    .container .content p {
-      padding-top: 24px;
-      font-family: Helvetica, sans-serif;
+      font-size: 30px;
       font-weight: 400;
-      font-size: 13px;
+      line-height: 20px;
+      vertical-align: 26px; }
+    .container .content article h2 {
+      color: #5c6366;
+      display: inline-block;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 20px;
+      position: relative;
+      right: 150px; }
+    .container .content p {
       color: #65686f;
-      line-height: 18px; }
+      font-family: Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      padding-top: 24px; }
   .container .nav {
-    width: 300px;
-    margin-right: 70px;
-    float: left;
+    background-color: #ebeced;
     display: inline-block;
+    float: left;
+    margin-right: 70px;
     vertical-align: center;
-    background-color: #ebeced; }
+    width: 300px; }
     .container .nav #focus {
       background-color: white;
-      width: 300px;
       min-height: 61px;
       position: absolute;
-      z-index: 1;
-      top: 338px; }
+      top: 338px;
+      width: 300px;
+      z-index: 1; }
     .container .nav .step {
       color: #9ba0a4;
       display: inline-block;
-      height: 60px;
-      width: 276px;
       float: left;
-      text-align: right;
-      padding-right: 24px; }
-    .container .nav .gradient {
       height: 60px;
-      background-image: linear-gradient(to left, #d1d5d6, #ebeced 4%);
-      border-bottom: 1px solid white; }
+      padding-right: 24px;
+      text-align: right;
+      width: 276px; }
+    .container .nav .gradient {
+      background: linear-gradient(to left, #d1d5d6, #ebeced 4%);
+      border-bottom: 1px solid white;
+      height: 60px; }
     .container .nav h3 {
       display: inline-block;
       font-family: "Source Sans Pro", sans-serif;
-      font-weight: 400;
       font-size: 18px;
+      font-weight: 400;
       line-height: 60px;
       padding-right: 30px;
-      vertical-align: 10px;
       position: relative;
+      vertical-align: 10px;
       z-index: 999; }
     .container .nav img {
-      padding-top: 15px;
       display: inline-block;
+      padding-top: 15px;
       position: relative;
       z-index: 999; }
