@@ -1,0 +1,68 @@
+body { font: 14px Arial; margin: 0px; background-color: #fff; }
+a, a:visited { color:#00f; }
+h1 { color: #aaa; font-family: Times; font-size: 24px; }
+p {	color: #aaa; font-family: Times; font-size: 16px; }
+
+.container {
+	margin: 0 auto;
+	width: 920px;
+	height: 100%;
+}
+
+.sp h2 { color: #269ABC; margin: .5em 0; }
+
+.sp h3 { font-size: 1.05em; margin: 0 0 .5em 0; }
+
+.sp p {	font-size: 1em; margin: 0 0 1em 0; }
+
+.sp { width: 600px; position: relative; left: -150px; margin: 20px 0 0 20px; float: right; }
+
+.tabs { float: left; }
+
+.tabs li {
+	display: block;
+	border: 1px solid #fff;
+	padding: 15px 12px 15px 20px;
+	margin: 0 0 0 0;
+	color: #999999;
+	background-color: #CCCCCC;
+	cursor: pointer;
+	border-right: 12px inset #D5D5D5;
+	width: 250px;
+}
+
+.tabs li:hover {
+	color: #269ABC;
+	border: 2px outset #E1EDF7;
+	border-right: 12px outset #d5d5d5;
+}
+
+.tabs li.selected { background-color: white; color: #269ABC; border-right: 1px solid #fff; }
+
+.sp .panel_container {
+	position: relative;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.tabs img {
+	margin-left: 25px;
+}
+
+.panel_content img { float: left; padding: 0 15px 2px 0; }
+
+.sp .panel_container .panel .panel_content { padding: 15px }
+
+.sp .panel_container .panels { position: absolute; top: 0; }
+.sp .panel_container .panel { position: absolute; }
+
+footer {
+	margin-top: 400px;
+	text-align: center;
+}
+
+/* Media query screen size change */
+ @media (max-width:768px){.tabs span {width:150px;} .sp{width:400px; left:-300px}}
+ @media (min-width:768px){.tabs span {width:200px;} .sp{width:500px; left:-150px}}
+ @media (min-width:992px){.tabs span {width:250px;} .sp{width:600px; left: 0}}
+ 
