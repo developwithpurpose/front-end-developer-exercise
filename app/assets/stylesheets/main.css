@@ -1,0 +1,199 @@
+
+.main-header{
+	margin: auto;
+	width: 980px; 
+	height: 276px; 
+	background-image:url('../images/header_text.jpg'); 
+	background-size: cover;
+	background-color: #FFFFFF;
+}
+
+.main-container{
+	width: 980px;
+	height: 569px;
+	margin: auto;
+	padding-top: 60px;
+	background-color: #FFFFFF !important;
+}
+
+/* ===================
+=
+= Helper Classes
+=
+======================*/
+
+.hidden{
+	display: none;
+}
+
+.display{
+	display: block;
+}
+
+
+.list-active{
+}
+.list-active span{
+	color: #36abe1 !important;
+
+}
+
+
+/* ===================
+=
+= Below is for the left tab
+=
+======================*/
+
+.left-tab{
+	float: left; 
+	width: 300px;
+	height: 569px;
+	background: -webkit-linear-gradient(left, #ebeced 93%, #d1d5d6); 
+	background: -webkit-gradient(linear, left top, right top, color-stop(93%, #ebeced), color-stop(100%, #d1d5d6)); 
+	background: -o-linear-gradient(right, #ebeced 93%, #d1d5d6); 
+	background: -moz-linear-gradient(right, #ebeced 93%, #d1d5d6);
+	background: -ms-linear-gradient(left, #ebeced 93%, #d1d5d6);
+	background: linear-gradient(to right, #ebeced 93%, #d1d5d6); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); 
+}
+
+.mover{
+	height: 60px;
+	width: 300px;
+	position: relative;
+	background-color: #FFFFFF;
+	z-index: 1;
+	top: 2px;
+}
+
+.left-tab-list{
+	left: 0;
+	top: -60;
+	margin: 0;
+	padding: 0;
+	padding-top: 2px;
+	position: relative;
+	z-index: 2;
+	background: none;
+}
+
+.left-tab-li{
+	list-style: none;
+	width: 300px;
+	vertical-align: middle;
+	text-align: right;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.left-tab-li:hover span{
+	color: #36abe1;
+	cursor: pointer;
+}
+
+.left-tab-icon-active, .left-tab-icon-inactive{
+	height: 27px;
+	width: auto;
+	float: right;
+	margin-right: 24px;
+	margin-top: 16px;
+}
+
+.left-tab-icon-label{
+	font: Source Sans Pro;
+	font-weight: 550;
+	font-size: 18px;
+	color: #9ba0a4;
+	line-height: 60px;
+	margin: auto;
+	margin-right: 24px;
+}
+
+/* ===================
+=
+= Below is for the right body
+=
+======================*/
+
+.right-body{
+	float: left;
+	width: 680px;
+	height: 350px;
+	overflow: hidden;
+}
+
+.right-content{
+	position: relative;
+}
+
+.right-content-wrapper{
+	padding-left: 70px;
+	padding-right: 70px;
+	height: 350px;
+}
+
+.right-body-header{
+	height: 65px;
+}
+
+.right-step-image{
+	margin-right: 15px;
+	width: 77px;
+	float:left;
+}
+
+.right-header-text-wrapper{
+	width: 448px;
+	float:left;
+	height: 65px;
+}
+
+.right-header-title{
+	color: #36abe1;
+	line-height: 30px;
+	font-weight: 550px;
+	font-size: 30px;
+	height: 30px;
+	font: Source Sans Pro;
+	margin-top: 5px;
+}
+
+.right-header-subtitle{
+	font: Source Sans Pro;
+	font-weight: 100;
+	color: #5c6366;
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.right-body-text{
+	margin-top: 15px;
+	color: #65686f;
+}
+
+.right-body-text p{
+	margin: 0;
+}
+
+.right-body-friends-wrapper{
+	margin-top: 40px;
+}
+
+.right-body-friends{
+	color: #65686f;
+	font-size: 13px;
+}
+
+.right-body-name{
+	color: #6fbee7;
+}
+
+.right-body-friends-people{
+	font: helvetica;
+	font-size: 13px;
+	color: #65686f;
+}
+
+
+
+
