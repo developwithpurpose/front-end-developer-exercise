@@ -1,0 +1,306 @@
+/*csslint box-model:false,box-sizing:false*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #BBBFC2;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ----------------------------- 
+    Typography
+  ----------------------------- */
+h1 {
+  color: #FFF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  line-height: 48px;
+  margin: 0;
+  text-align: right;
+  text-transform: uppercase;
+}
+h2 {
+  color: #36abe1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 0 0 10px 0;
+}
+h3 {
+  color: #5c6366;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+}
+p, li, span {
+  color: #65686f;
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* ----------------------------- 
+    Page Wrapper
+  ----------------------------- */
+.wrapper {
+  background-color: #FFF;
+  margin: 0 auto;
+  min-height: 100px;
+  position: relative;
+  width: 980px;
+  z-index: 4;
+}
+.wrapper:before,
+.wrapper:after {
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 15px;
+  z-index: 2;
+}
+.wrapper:before {
+  background-image: url('../images/shadow_left.jpg');
+  left: -12px;
+}
+.wrapper:after {
+  background-image: url('../images/shadow_right.jpg');
+  right: -12px;
+}
+
+/* ----------------------------- 
+    Page Header 
+  ----------------------------- */
+.header {
+  background-image: url('../images/header.jpg');
+  height: 276px;
+  position: relative;
+  width: 100%;
+  z-index: 6;
+}
+.header-content {
+  float: right;
+  margin: 50px 70px 0 0;
+  width: 50%;
+}
+.header-content .leading-title {
+  color: #FFF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 100;
+  margin:  0 0 15px 0;
+  text-align: right;
+}
+
+/* ----------------------------- 
+    Main, Aside, and Article
+  ----------------------------- */
+.main {
+  background-color: #FFF;
+  padding-top: 60px;
+  position: relative;
+  z-index: 6;
+}
+.aside,
+.article {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+}
+.aside {
+  width: 300px;
+}
+.article {
+  padding: 0 70px;
+  width: 680px;
+}
+
+/* ----------------------------- 
+    Baby Step Nav
+  ----------------------------- */
+.bs-nav {
+  background-image: url('../images/shadow_left_nav.jpg');
+  border-top: 1px solid #ECECEE;
+  margin: 0;
+  min-height: 600px;
+  padding: 0;
+}
+.bs-nav li {
+  border-bottom: 1px solid #FFF;
+  color: #9ba0a4;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 60px;
+  list-style: none;
+  text-align: right;
+}
+.bs-nav li:hover {
+  color: #6cbee7;
+}
+.bs-nav .bs-nav-active {
+  background-color: #FFF;
+  color: #36abe1;
+  font-weight: 600;
+}
+
+/* ----------------------------- 
+    Baby Step Nav Icons
+  ----------------------------- */
+.bs-nav .icon {
+  background-image: url('../images/icons/sprites/icons_small.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 25px;
+  margin: 0 24px 0 20px;
+  position: relative;
+  top: 5px;
+  width: 30px;
+}
+.bs-nav .icon-bs1 {
+  background-position: 0 0;
+}
+.bs-nav .icon-bs2 {
+  background-position: 0 -25px;
+}
+.bs-nav .icon-bs3 {
+  background-position: 0 -50px;
+}
+.bs-nav .icon-bs4 {
+  background-position: 0 -75px;
+}
+.bs-nav .icon-bs5 {
+  background-position: 0 -100px;
+}
+.bs-nav .icon-bs6 {
+  background-position: 0 -125px;
+}
+.bs-nav .icon-bs7 {
+  background-position: 0 -150px;
+}
+
+/* Baby Nav Icon Hover States 
+  ----------------------------- */
+.bs-nav li:hover .icon-bs1,
+.bs-nav .bs-nav-active .icon-bs1 {
+  background-position: 0 -175px;
+}
+.bs-nav li:hover .icon-bs2,
+.bs-nav .bs-nav-active .icon-bs2 {
+  background-position: 0 -200px;
+}
+.bs-nav li:hover .icon-bs3,
+.bs-nav .bs-nav-active .icon-bs3 {
+  background-position: 0 -225px;
+}
+.bs-nav li:hover .icon-bs4,
+.bs-nav .bs-nav-active .icon-bs4 {
+  background-position: 0 -250px;
+}
+.bs-nav li:hover .icon-bs5,
+.bs-nav .bs-nav-active .icon-bs5 {
+  background-position: 0 -275px;
+}
+.bs-nav li:hover .icon-bs6,
+.bs-nav .bs-nav-active .icon-bs6 {
+  background-position: 0 -300px;
+}
+.bs-nav li:hover .icon-bs7,
+.bs-nav .bs-nav-active .icon-bs7 {
+  background-position: 0 -325px;
+}
+
+/* ----------------------------- 
+    Baby Steps Content
+  ----------------------------- */
+.bs-step-container {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+.bs-wrapper {
+  position: relative;
+}
+.bs-step {
+  position: relative;
+  padding: 15px 0;
+  min-height: 300px;
+}
+.friends .friend-name {
+  color: #6fbee7;
+  font-weight: 700;
+}
+
+/* ----------------------------- 
+    Baby Step Content Icons
+  ----------------------------- */
+.icon-lrg {
+  background-image: url('../images/icons/sprites/icons_large.png');
+  background-repeat: no-repeat;
+  display: block;
+  float: left;
+  height: 65px;
+  margin-right: 15px;
+  position: relative;
+  top: -8px;
+  width: 77px;
+}
+.icon-lrg-bs1 {
+  background-position: 0 -454px;  
+}
+.icon-lrg-bs2 {
+  background-position: 0 -515px;
+}
+.icon-lrg-bs3 {
+  background-position: 0 -584px;
+}
+.icon-lrg-bs4 {
+  background-position: 0 -648px;
+}
+.icon-lrg-bs5 {
+  background-position: 0 -713px;
+}
+.icon-lrg-bs6 {
+  background-position: 0 -779px;
+  height: 63px;
+}
+.icon-lrg-bs7 {
+  background-position: 0 -842px;
+}
+
+/* ----------------------------- 
+    Footer
+  ----------------------------- */
+.footer {
+  background-image: url('../images/shadow_bottom.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 30px;
+  position: relative;
+  width: 100%;
+  z-index: 6;
+}
+
+/* ----------------------------- 
+    Clearfix
+  ----------------------------- */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
