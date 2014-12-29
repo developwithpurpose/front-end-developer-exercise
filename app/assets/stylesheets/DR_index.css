@@ -19,22 +19,28 @@ div#baby-step-image.dollar {
 	background-position:0 0px;
 }
 div#baby-step-image.coins {
-	background-position:0 -65px;
+	background-position:0 -66px;
 }
 div#baby-step-image.pig {
-	background-position:0 -130px;
+	background-position:0 -131px;
 }
 div#baby-step-image.chart {
-	background-position:0 -195px;
+	background-position:0 -194px;
 }
 div#baby-step-image.book {
-	background-position:0 -260px;
+	background-position:0 -261px;
 }
 div#baby-step-image.house {
-	background-position:0 -325px;
+	background-position:0 -326px;
+	margin-bottom:1px;
+	height: 64px;
+	width: 436px
 }
 div#baby-step-image.hand {
 	background-position:0 -390px;
+	margin-top:1px;
+	height: 64px;
+	width: 436px;
 }
 
 ul.nav-left-vertical {
