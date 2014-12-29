@@ -13,6 +13,7 @@ div#baby-step-image{
 	height: 65px;
 	width: 436px;
 	background: url(../images/headings/headings.png);
+	margin-bottom: 24px;
 }
 div#baby-step-image.dollar {
 	background-position:0 0px;
@@ -138,4 +139,16 @@ li a div#hand {
 }
 li a div#hand.active {
 	background-position: 0 -325px;
+}
+.baby-step-display {
+	display:block;
+}
+.baby-step-hide {
+	display:none;
+}
+p {
+	font-family:Helvetica;
+	font-size:13px;
+	color:#65686f;
+	line-height;18px
 }
