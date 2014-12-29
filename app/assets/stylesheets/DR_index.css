@@ -1,0 +1,141 @@
+
+div#head-div {
+	margin-bottom:60px;
+	align:center;
+}
+div#step-text-display{
+	width: 540px;
+	height:360px;
+	position:absolute;
+	margin-left:370px;
+}
+div#baby-step-image{
+	height: 65px;
+	width: 436px;
+	background: url(../images/headings/headings.png);
+}
+div#baby-step-image.dollar {
+	background-position:0 0px;
+}
+div#baby-step-image.coins {
+	background-position:0 -65px;
+}
+div#baby-step-image.pig {
+	background-position:0 -130px;
+}
+div#baby-step-image.chart {
+	background-position:0 -195px;
+}
+div#baby-step-image.book {
+	background-position:0 -260px;
+}
+div#baby-step-image.house {
+	background-position:0 -325px;
+}
+div#baby-step-image.hand {
+	background-position:0 -390px;
+}
+
+ul.nav-left-vertical {
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+li.nav-left-button-link {
+	height:60px;
+	width:300px;
+	display:block;
+	float:none;
+	margin-bottom:1px;
+	text-align:center;
+}
+li a {
+	display:block;
+	min-width:300px;
+	height: 60px;
+	text-indent: 110px;
+	line-height: 60px;
+	font-family: "Source Sans Pro", sans-serif;
+	color: #9ba0a4;
+	text-decoration:none;
+	background: #ebeced; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: -moz-linear-gradient(left,  #ebeced 0%, #ebeced 95%, #d1d5d6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ebeced), color-stop(92%,#ebeced), color-stop(100%,#d1d5d6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ebeced 0%,#ebeced 95%,#d1d5d6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ebeced 0%,#ebeced 95%,#d1d5d6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ebeced 0%,#ebeced 95%,#d1d5d6 100%); /* IE10+ */
+	background: linear-gradient(to right,  #ebeced 0%,#ebeced 95%,#d1d5d6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-8 */
+}
+li a.link.active {
+	display:block;
+	min-width:300px;
+	height: 60px;
+	text-indent: 110px;
+	line-height: 60px;
+	font-family: "Source Sans Pro", sans-serif;
+	color: #36abe1;
+	text-decoration:none;
+}
+li a.link {
+	display:block;
+	min-width:300px;
+	height: 60px;
+	text-indent: 110px;
+	line-height: 60px;
+	font-family: "Source Sans Pro", sans-serif;
+	color: #9ba0a4;
+	text-decoration:none;
+}
+li a div {
+	height:25px;
+	width: 30px;
+	display: inline-block;
+	background: url(../images/icons/sprites/icons_small.png);
+	float:right;
+	margin: 17px 24px;
+}
+li a div#dollar {
+	background-position: 0 0px;
+}
+li a div#dollar.active {
+	background-position: 0 -175px;
+}
+li a div#coins {
+	background-position: 0 -25px;
+}
+li a div#coins.active {
+	background-position: 0 -200px;
+}
+li a div#pig {
+	background-position: 0 -50px;
+}
+li a div#pig.active {
+	background-position: 0 -225px;
+}
+li a div#chart {
+	background-position: 0 -75px;
+}
+li a div#chart.active {
+	background-position: 0 -250px;
+}
+li a div#book {
+	background-position: 0 -100px;
+}
+li a div#book.active {
+	background-position: 0 -275px;
+}
+li a div#house {
+	background-position: 0 -125px;
+}
+li a div#house.active {
+	background-position: 0 -300px;
+}
+li a div#hand {
+	background-position: 0 -150px;
+}
+li a div#hand.active {
+	background-position: 0 -325px;
+}

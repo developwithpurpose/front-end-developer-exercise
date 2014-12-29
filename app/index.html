@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="assets/stylesheets/DR_index.css">
+<script src="http://use.edgefonts.net/source-sans-pro.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+		
+	<div id="head-div">
+		<img src="assets/images/header_text.jpg" alt="Welcome To DaveRamsey.com" class="head-image">
+	</div>
+	
+	<div id="step-text-display">
+		<div id="baby-step-image">
+		
+		</div>
+	</div>
+	
+	<ul class="nav-left-vertical">
+		<li class="nav-left-button-link">
+			<a href="#" class="link active"><span>Baby Step 1</span><div id="dollar" class="active"></div></a>
+		</li>
+		<li class="nav-left-button-link">
+			<a href="#" class="link"><span>Baby Step 2</span><div id="coins"></div></a>
+		</li>
+		<li class="nav-left-button-link">
+			<a href="#" class="link"><span>Baby Step 3</span><div id="pig"></div></a>
+		</li>
+		<li class="nav-left-button-link">
+			<a href="#" class="link"><span>Baby Step 4</span><div id="chart"></div></a>
+		</li>
+		<li class="nav-left-button-link">
+			<a href="#" class="link"><span>Baby Step 5</span><div id="book"></div></a>
+		</li>
+		<li class="nav-left-button-link">
+			<a href="#" class="link"><span>Baby Step 6</span><div id="house"></div></a>
+		</li>
+		<li class="nav-left-button-link">
+			<a href="#" class="link"><span>Baby Step 7</span><div id="hand"></div></a>
+		</li>
+	</ul>
+
+<script>
+	$(function() {
+		var links = $('a.link').click(function(event) {
+			event.preventDefault();
+			links.removeClass('active');
+			links.find("div").removeClass('active');
+			$(this).addClass('active');
+			$(this).find("div").addClass('active');
+			var stepClassToAdd = $(this).find("div").attr("id");
+			var divForHeaderImage = document.getElementById("baby-step-image");
+			var $insertableDiv = $(divForHeaderImage)
+			$insertableDiv.removeClass();
+			$insertableDiv.addClass(stepClassToAdd);
+		})
+	})
+</script>
+	
+<script>
+	
+</script>
+	
+</body>
+</html>
