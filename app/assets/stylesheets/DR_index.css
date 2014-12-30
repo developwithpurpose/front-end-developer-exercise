@@ -1,0 +1,224 @@
+body {
+	width: 1010px;
+	margin: 0 auto 50px auto;
+	background:#bbbfc2;
+}
+/*Three shadow image divs on left, right, and bottom edge of body */
+div#left-right-shadows {
+	height:1013px;
+	width:1010px;
+	position:absolute;
+}
+img {
+	height:100%;
+	width:15px;
+}
+img#right-shadow {
+	float:right;
+}
+div#bottom-shadow {
+	height:30px;
+	width:980px;
+	position:absolute;
+	bottom:-30px;
+	left:15px;
+	background: url(../images/shadow_bottom.jpg);
+	text-align:center;
+}
+div#full-body{
+	height:1013px;
+	width:1010px;
+	background:white;
+	position:relative;
+}
+div#head-div {
+	margin-bottom:60px;
+	background: url(../images/header_text.jpg);
+	height:276px;
+	max-width:980px;
+	margin-left:15px;
+}
+div#central-div {
+	text-align:center;
+	max-width:980px;
+	margin-left:15px;
+	height:500px;
+}
+div#step-display-area{
+	width: 540px;
+	height:360px;
+	right:15px;
+	margin-right:70px;
+	position:absolute;
+}
+div#baby-step-image{
+	height: 65px;
+	width: 436px;
+	background: url(../images/headings/headings.png);
+	margin-bottom: 24px;
+}
+div#baby-step-image.dollar {
+	background-position:0 0px;
+}
+div#baby-step-image.coins {
+	background-position:0 -66px;
+}
+div#baby-step-image.pig {
+	background-position:0 -131px;
+}
+div#baby-step-image.chart {
+	background-position:0 -194px;
+}
+div#baby-step-image.book {
+	background-position:0 -261px;
+}
+/* trimmed house picture so hand doesn't block door*/
+div#baby-step-image.house {
+	background-position:0 -326px;
+	height: 64px;
+	border-top: 1px;
+	margin-bottom:25px;
+}
+div#baby-step-image.hand {
+	background-position:0 -390px;
+	height: 64px;
+	margin-top:1px;
+}
+ul.nav-left-vertical {
+	list-style-type:none;
+	margin: 0;
+	margin-right:70px;
+	padding: 0;
+	position: absolute;
+}
+li.nav-left-button-link {
+	height:60px;
+	width:300px;
+	display:block;
+	float:none;
+	margin-bottom:1px;
+	text-align:center;
+}
+li a {
+	display:block;
+	min-width:300px;
+	height: 60px;
+	text-indent: 110px;
+	line-height: 60px;
+	font-family: "Source Sans Pro", sans-serif;
+	color: #9ba0a4;
+	text-decoration:none;
+	background: url(../images/shadow_left_nav.jpg);
+}
+li a.active {
+	display:block;
+	min-width:300px;
+	height: 60px;
+	text-indent: 110px;
+	line-height: 60px;
+	font-family: "Source Sans Pro regular";
+	text-decoration:none;
+	background: white; 
+}
+li a#left-nav-filler {
+	height:250px;
+}
+li a.link.active {
+	display:block;
+	min-width:300px;
+	height: 60px;
+	text-indent: 110px;
+	line-height: 60px;
+	font-family: "Source Sans Pro semibold", sans-serif;
+	color: #36abe1;
+	text-decoration:none;
+}
+li a.link {
+	display:block;
+	min-width:300px;
+	height: 60px;
+	text-indent: 110px;
+	line-height: 60px;
+	font-family: "Source Sans Pro", sans-serif;
+	color: #9ba0a4;
+	text-decoration:none;
+}
+li a div {
+	height:25px;
+	width: 30px;
+	display: inline-block;
+	background: url(../images/icons/sprites/icons_small.png);
+	float:right;
+	margin: 17px 24px;
+}
+li a div#dollar {
+	background-position: 0 0px;
+}
+li a div#dollar.active {
+	background-position: 0 -175px;
+}
+li a div#coins {
+	background-position: 0 -25px;
+}
+li a div#coins.active {
+	background-position: 0 -200px;
+}
+li a div#pig {
+	background-position: 0 -50px;
+}
+li a div#pig.active {
+	background-position: 0 -225px;
+}
+li a div#chart {
+	background-position: 0 -75px;
+}
+li a div#chart.active {
+	background-position: 0 -250px;
+}
+li a div#book {
+	background-position: 0 -100px;
+}
+li a div#book.active {
+	background-position: 0 -275px;
+}
+li a div#house {
+	background-position: 0 -125px;
+}
+li a div#house.active {
+	background-position: 0 -300px;
+}
+li a div#hand {
+	background-position: 0 -150px;
+}
+li a div#hand.active {
+	background-position: 0 -325px;
+}
+.baby-step-display {
+	display:block;
+}
+.baby-step-hidden {
+	display:none;
+}
+div#baby-step-friends {
+	margin-top:40px;
+}
+/*used font-weight 200 to substitute for 'Reg' attribute*/
+p {
+	font-family: Helvetica;
+	font-weight: 200;
+	font-size:13px;
+	color:#65686f;
+	line-height:18px;
+	text-align:left;
+}
+div#friend-store {
+	display:hidden;
+}
+p#baby-step-friends-text a {
+	color:#6fbee7;
+	text-decoration:none;
+}
+/*text in mockup appears different between paragraph and friends list but lists same fonts*/
+p#baby-step-friends-text {
+	font-weight:300;
+}
