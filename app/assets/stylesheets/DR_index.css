@@ -47,7 +47,7 @@ div#central-div {
 div#step-display-area{
 	width: 540px;
 	height:360px;
-	right:0;
+	right:15px;
 	margin-right:70px;
 	position:absolute;
 }
