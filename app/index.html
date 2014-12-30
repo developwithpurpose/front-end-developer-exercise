@@ -2,103 +2,213 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="assets/stylesheets/DR_index.css">
-<script src="http://use.edgefonts.net/source-sans-pro.js"></script>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
-		
+<div id="full-body">
+	<div id="left-right-shadows">
+		<img src="assets/images/shadow_left.jpg">
+		<img src="assets/images/shadow_right.jpg" id="right-shadow">
+	</div>
+	
+	<div id="bottom-shadow"></div>
+	
+	
 	<div id="head-div">
-		<img src="assets/images/header_text.jpg" alt="Welcome To DaveRamsey.com" class="head-image">
 	</div>
 	
-	<ul class="nav-left-vertical">
-		<li class="nav-left-button-link">
-			<a href="#" class="link 1 active"><span>Baby Step 1</span><div id="dollar" class="active"></div></a>
-		</li>
-		<li class="nav-left-button-link">
-			<a href="#" class="link 2"><span>Baby Step 2</span><div id="coins"></div></a>
-		</li>
-		<li class="nav-left-button-link">
-			<a href="#" class="link 3"><span>Baby Step 3</span><div id="pig"></div></a>
-		</li>
-		<li class="nav-left-button-link">
-			<a href="#" class="link 4"><span>Baby Step 4</span><div id="chart"></div></a>
-		</li>
-		<li class="nav-left-button-link">
-			<a href="#" class="link 5"><span>Baby Step 5</span><div id="book"></div></a>
-		</li>
-		<li class="nav-left-button-link">
-			<a href="#" class="link 6"><span>Baby Step 6</span><div id="house"></div></a>
-		</li>
-		<li class="nav-left-button-link">
-			<a href="#" class="link 7"><span>Baby Step 7</span><div id="hand"></div></a>
-		</li>
-	</ul>
+	<div id="central-div">
+		<ul class="nav-left-vertical">
+			<li class="nav-left-button-link">
+				<a href="#" class="link 1 active"><span>Baby Step 1</span><div id="dollar" class="active"></div></a>
+			</li>
+			<li class="nav-left-button-link">
+				<a href="#" class="link 2"><span>Baby Step 2</span><div id="coins"></div></a>
+			</li>
+			<li class="nav-left-button-link">
+				<a href="#" class="link 3"><span>Baby Step 3</span><div id="pig"></div></a>
+			</li>
+			<li class="nav-left-button-link">
+				<a href="#" class="link 4"><span>Baby Step 4</span><div id="chart"></div></a>
+			</li>
+			<li class="nav-left-button-link">
+				<a href="#" class="link 5"><span>Baby Step 5</span><div id="book"></div></a>
+			</li>
+			<li class="nav-left-button-link">
+				<a href="#" class="link 6"><span>Baby Step 6</span><div id="house"></div></a>
+			</li>
+			<li class="nav-left-button-link">
+				<a href="#" class="link 7"><span>Baby Step 7</span><div id="hand"></div></a>
+			</li>
+			<li class="nav-left-button-link">
+				<a id="left-nav-filler"></a>
+			</li>
+		</ul>
 	
-	<div id="step-text-display">
-		<div id="baby-step-image">
+		<div id="step-display-area">
+			<div id="baby-step-image">
 		
+			</div>
+			<div id="baby-step-text">
+				<div id="baby-step-1" class="baby-step-display">
+					<p>An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.</p>
+
+					<p>This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!
+					</p>
+				</div>
+	
+				<div id="baby-step-2" class="baby-step-hidden">
+					<p>List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first.
+					</p>
+					<p>The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.
+					</p>
+				</div>
+	
+				<div id="baby-step-3" class="baby-step-hidden">
+					<p>Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra” money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?” Your answer to that question is how much you should save.
+					</p>
+					<p>Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you’re paying to yourself, a buffer between you and life.
+					</p>
+				</div>
+	
+				<div id="baby-step-4" class="baby-step-hidden">
+					<p>When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.
+					</p>
+					<p>Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.
+					</p>
+				</div>
+
+				<div id="baby-step-5" class="baby-step-hidden">
+					<p>By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.
+					</p>
+					<p>In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!
+					</p>
+				</div>
+
+				<div id="baby-step-6" class="baby-step-hidden"> 
+					<p>Now it’s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.
+					</p>
+					<p>As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!
+					</p>
+				</div>
+
+				<div id="baby-step-7" class="baby-step-hidden">
+					<p>It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!
+					</p>
+					<p>Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.
+					</p>
+				</div>
+			</div>
+			<div id="baby-step-friends">
+				<p id="baby-step-friends-text"></p>
+			</div>
 		</div>
-		<div id="baby-step-text">
-			<div id="baby-step-1" class="baby-step-display">
-				<p>An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.</p>
-
-				<p>This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!
-				</p>
-			</div>
 	
-			<div id="baby-step-2" class="baby-step-hide">
-				<p>List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first.
-				</p>
-				<p>The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.
-				</p>
-			</div>
-	
-			<div id="baby-step-3" class="baby-step-hide">
-				<p>Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra” money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?” Your answer to that question is how much you should save.
-				</p>
-				<p>Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you’re paying to yourself, a buffer between you and life.
-				</p>
-			</div>
-	
-			<div id="baby-step-4" class="baby-step-hide">
-				<p>When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.
-				</p>
-				<p>Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.
-				</p>
-			</div>
-
-			<div id="baby-step-5" class="baby-step-hide">
-				<p>By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.
-				</p>
-				<p>In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!
-				</p>
-			</div>
-
-			<div id="baby-step-6" class="baby-step-hide"> 
-				<p>Now it’s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.
-				</p>
-				<p>As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!
-				</p>
-			</div>
-
-			<div id="baby-step-7" class="baby-step-hide">
-				<p>It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!
-				</p>
-				<p>Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.
-				</p>
-			</div>
-		</div>
+		<div id="friend-store"></div>
 	</div>
-	
+</div>
 <script>
+	$(document).ready(function(){
+		$.ajax({
+			url: "assets/javascripts/baby-steps.json",
+			type: "GET",
+			success: function(resp){
+				convertFriendsToArray(resp);
+			}
+		})
+	});
+	
+	function convertFriendsToArray(list) {
+		var allFriendsArray = new Array();
+		for (var i = 0; i < list["friends"].length; i++){
+			allFriendsArray.push(list["friends"][i]);
+		}
+		$("#friend-store").data({ allFriends: allFriendsArray });
+		identifyFriendsInStep(1);
+	}
+	
+	function identifyFriendsInStep(babyStep){
+		var currentStep = parseInt(babyStep);
+		var stepWithFriends = new Array();
+		var list = $("#friend-store").data();
+		if(list["allFriends"].length > 0){
+			for(var i = 0; i < list["allFriends"].length; i++) {
+				if (list["allFriends"][i]["babyStep"] === currentStep){
+					stepWithFriends.push(list["allFriends"][i]);
+				}
+			}
+		}
+		processFriendList(stepWithFriends,currentStep);
+	}
+	
+	function processFriendList(friendList, babyStep){
+		var sortedFriendList = sortLastNameAsc(friendList);
+		if(sortedFriendList.length > 1){
+			var firstFriend = "<a href='' >" + sortedFriendList[0].firstName + " " + sortedFriendList[0].lastName + "</a>";
+			var secondFriend = "<a href='' >" + sortedFriendList[1].firstName + " " + sortedFriendList[1].lastName + "</a>";
+			var totalNumFriends = sortedFriendList.length;
+			var additionalFriends = totalNumFriends - 2;
+		} else if(sortedFriendList.length === 1){
+			var firstFriend =  "<a href='' >" + sortedFriendList[0].firstName + " " + sortedFriendList[0].lastName + "</a>";
+		}
+		
+		if(sortedFriendList.length > 3){
+			$("p#baby-step-friends-text").html(firstFriend + ", " + secondFriend + ", and " + additionalFriends + " other friends are also in Baby Step " + babyStep);
+		}else if(friendList.length === 3) {
+			$("p#baby-step-friends-text").html(firstFriend + ", " + secondFriend + ", and " + additionalFriends + " other friend are also in Baby Step " + babyStep);
+		}else if(sortedFriendList.length === 2) {
+			$("p#baby-step-friends-text").html(firstFriend + " and " + secondFriend + " are also in Baby Step " + babyStep);
+		}
+		else if(sortedFriendList.length === 1) {
+			$("p#baby-step-friends-text").html(firstFriend + " is also in Baby Step " + babyStep);
+		} else {
+			$("p#baby-step-friends-text").html("");
+		}
+	}
+	function sortLastNameAsc(friendList) {
+		if(friendList.length < 2){
+			return friendList;
+		} else {
+			var sortedLastName = friendList.sort(compare);
+			var sortedLastAndFirstName = sortByFirstName(sortedLastName);
+			return sortedLastAndFirstName;
+		}
+	}
+	function compare(a,b) {
+		if (a.lastName < b.lastName) {
+			return -1;
+		}
+		if (a.lastName > b.lastName) {
+			return 1;
+		}
+			return 0;
+	}
+	function sortByFirstName(list) {
+		for(var i = 0; i < list.length-1; i++){
+			if(list[i].lastName === list[i+1].lastName){
+				if(list[i].firstName > list[i+1].firstName){
+					var personOne = list[i];
+					var personTwo = list[i+1];
+					list[i] = personTwo;
+					list[i+1] = personOne;
+				}
+			}
+		}
+		return list;
+	}
+	
 	$(function() {
 		var links = $('a.link').click(function(event) {
+			
 			event.preventDefault();
+			
 			links.removeClass('active');
 			links.find("div").removeClass('active');
+			
 			$(this).addClass('active');
 			$(this).find("div").addClass('active');
+			
 			var stepClassToAdd = $(this).find("div").attr("id");
 			var divForHeaderImage = document.getElementById("baby-step-image");
 			var $insertableDiv = $(divForHeaderImage)
@@ -106,23 +216,13 @@
 			$insertableDiv.addClass(stepClassToAdd);
 			
 			var babyStep = $(this).attr("class").split(' ')[1];
-			var temp = document.getElementById("baby-step-" + babyStep);
-			$("#baby-step-text>div.baby-step-display").removeClass("baby-step-display").addClass("baby-step-hide");
-			$(temp).addClass("baby-step-display").removeClass("baby-step-hide");
+			var foundBabyStep = document.getElementById("baby-step-" + babyStep);
+			$("#baby-step-text>div.baby-step-display").removeClass("baby-step-display").addClass("baby-step-hidden");
+			$(foundBabyStep).addClass("baby-step-display").removeClass("baby-step-hidden");
+			
+			identifyFriendsInStep(babyStep);
 		})
-	})
-</script>
-	
-<script>
-	$(document).ready(function(){
-		$.ajax({
-			url: "assets/javascripts/baby-steps.json",
-			type: "GET",
-			success: function(resp){
-				console.log(resp);
-			}
-		})
-	})
+	});
 </script>
 	
 </body>

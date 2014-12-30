@@ -1,13 +1,55 @@
-
+body {
+	width: 1010px;
+	margin: 0 auto 50px auto;
+	background:#bbbfc2;
+}
+/*Three shadow image divs on left, right, and bottom edge of body */
+div#left-right-shadows {
+	height:1013px;
+	width:1010px;
+	position:absolute;
+}
+img {
+	height:100%;
+	width:15px;
+}
+img#right-shadow {
+	float:right;
+}
+div#bottom-shadow {
+	height:30px;
+	width:980px;
+	position:absolute;
+	bottom:-30px;
+	left:15px;
+	background: url(../images/shadow_bottom.jpg);
+	text-align:center;
+}
+div#full-body{
+	height:1013px;
+	width:1010px;
+	background:white;
+	position:relative;
+}
 div#head-div {
 	margin-bottom:60px;
-	align:center;
+	background: url(../images/header_text.jpg);
+	height:276px;
+	max-width:980px;
+	margin-left:15px;
 }
-div#step-text-display{
+div#central-div {
+	text-align:center;
+	max-width:980px;
+	margin-left:15px;
+	height:500px;
+}
+div#step-display-area{
 	width: 540px;
 	height:360px;
+	right:0;
+	margin-right:70px;
 	position:absolute;
-	margin-left:370px;
 }
 div#baby-step-image{
 	height: 65px;
@@ -30,22 +72,22 @@ div#baby-step-image.chart {
 div#baby-step-image.book {
 	background-position:0 -261px;
 }
+/* trimmed house picture so hand doesn't block door*/
 div#baby-step-image.house {
 	background-position:0 -326px;
-	margin-bottom:1px;
 	height: 64px;
-	width: 436px
+	border-top: 1px;
+	margin-bottom:25px;
 }
 div#baby-step-image.hand {
 	background-position:0 -390px;
-	margin-top:1px;
 	height: 64px;
-	width: 436px;
+	margin-top:1px;
 }
-
 ul.nav-left-vertical {
 	list-style-type:none;
 	margin: 0;
+	margin-right:70px;
 	padding: 0;
 	position: absolute;
 }
@@ -66,15 +108,20 @@ li a {
 	font-family: "Source Sans Pro", sans-serif;
 	color: #9ba0a4;
 	text-decoration:none;
-	background: #ebeced; /* Old browsers */
-	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-	background: -moz-linear-gradient(left,  #ebeced 0%, #ebeced 95%, #d1d5d6 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ebeced), color-stop(92%,#ebeced), color-stop(100%,#d1d5d6)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  #ebeced 0%,#ebeced 95%,#d1d5d6 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  #ebeced 0%,#ebeced 95%,#d1d5d6 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  #ebeced 0%,#ebeced 95%,#d1d5d6 100%); /* IE10+ */
-	background: linear-gradient(to right,  #ebeced 0%,#ebeced 95%,#d1d5d6 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-8 */
+	background: url(../images/shadow_left_nav.jpg);
+}
+li a.active {
+	display:block;
+	min-width:300px;
+	height: 60px;
+	text-indent: 110px;
+	line-height: 60px;
+	font-family: "Source Sans Pro regular";
+	text-decoration:none;
+	background: white; 
+}
+li a#left-nav-filler {
+	height:250px;
 }
 li a.link.active {
 	display:block;
@@ -82,7 +129,7 @@ li a.link.active {
 	height: 60px;
 	text-indent: 110px;
 	line-height: 60px;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "Source Sans Pro semibold", sans-serif;
 	color: #36abe1;
 	text-decoration:none;
 }
@@ -149,12 +196,29 @@ li a div#hand.active {
 .baby-step-display {
 	display:block;
 }
-.baby-step-hide {
+.baby-step-hidden {
 	display:none;
 }
+div#baby-step-friends {
+	margin-top:40px;
+}
+/*used font-weight 200 to substitute for 'Reg' attribute*/
 p {
-	font-family:Helvetica;
+	font-family: Helvetica;
+	font-weight: 200;
 	font-size:13px;
 	color:#65686f;
-	line-height;18px
+	line-height:18px;
+	text-align:left;
+}
+div#friend-store {
+	display:hidden;
+}
+p#baby-step-friends-text a {
+	color:#6fbee7;
+	text-decoration:none;
+}
+/*text in mockup appears different between paragraph and friends list but lists same fonts*/
+p#baby-step-friends-text {
+	font-weight:300;
 }
