@@ -1,3 +1,91 @@
+
+
+
+
+
+
+/* main page */
+
+
+#content {
+  display: block;
+  background: #fff;
+  padding: 0px 70px;
+  min-height: 700px;
+  margin: 60px 0px 0px 330px;
+}
+
+
+.contentblock p{
+	font-family:Helvetica, Arial, sans-serif;
+	display: inline-block
+	font-size: 13px;
+	line-height: 18px;
+	color:  #65686f;
+}
+
+.contentblock.hidden {
+  display: none;
+}
+
+/* side navigation */
+#sidemenu {
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  float: left;
+  background: #e8e8e8;
+  border-right: 1px solid #c9c9c9;
+}
+
+
+#sidemenu li { display: block; text-align: center; border-top: 1px solid #fff; font-size: 1.1em; }
+
+#sidemenu li a { 
+  display: block;
+  padding: 6px 2px;
+  color: #555;
+  text-decoration: none;
+  border-bottom: 1px solid #d1d1d1;
+
+}
+#sidemenu li a:hover {
+  background: #f2f2f2;
+}
+
+#sidemenu li a strong { 
+  display: block;
+}
+
+#sidemenu li a.open {
+  background: #fff;
+}
+
+/* extra styles */
+.bigtxtfield {
+  display: block;
+  width: 350px;
+  color: #555;
+  padding: 4px 6px;
+  margin-bottom: 15px;
+}
+
+.bigtxtarea {
+  display: block;
+  width: 440px;
+  height: 90px;
+  padding: 5px 9px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #555;
+  font-size: 1.2em;
+}
+
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }
+
 body
 {
     background-color: #bbbfc2;
@@ -23,6 +111,7 @@ body
 .hdr-img{
 	background: url('../images/header.jpg') no-repeat;
 	height: 278px;	
+	margin-bottom: 60px;
 }
 .hdr-strong{
 	font-family: 'Open Sans', sans-serif;
@@ -32,7 +121,7 @@ body
 	line-height: 43px;
 	text-align: right;
 }
-.wrapper h1, .wrapper h4, .wrapper p, .wrapper pre, .wrapper ul, .wrapper li
+p
 {
     margin: 0;
     padding: 0;
@@ -51,8 +140,6 @@ body
     margin: 50px 70px 0 0;
     text-align: right;
 }
-.
-
 
 .wrapper li
 {
@@ -74,48 +161,53 @@ body
     -ms-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
+#wrapper #content img{
+	float: left;
+	margin: 0px 20px 0px 0px;
+	height: 70px;
+}
 .content-hdr h2{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 600;
 	font-size: 30px;
 	color:  #36abe1;
 	line-height: 20px;
-	margin: 16px 0 2px 0;
-	float: left;
-}
-.content-hdr img{
-	float: left;
-	margin: 0px 20px 0px 0px;
-}
-.content-hdr  div{
+	margin: 15px 0 2px 0;
 	float: left;
 	display: block;
 }
-.tab-content p{
-	font-family:Helvetica, Arial, sans-serif;
-	display: inline-block
-;
-	font-size: 13px;
-	line-height: 18px;
-	color:  #65686f;
-}
-.content-hdr  p{
+.content-hdr p{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
 	font-size: 18px;
 	color: #5c6366;
 	line-height: 20px;
-	margin: 0px 0px 24px 0px;
+	display: block;  
+	margin: 24px 0px;
 }
-#v-nav
+#sidemenu
 {
-    height: 760px;
-    margin: 60px auto;
-    color: #333;
-    background: #fff url('../images/shadow_bottom.jpg') no-repeat bottom center;;
+    float: left;
+    width: 330px;
+    display: block;
+    height: 700px;
+    position: relative;
+    min-height: 500px;
+    top: 0;
+    border-right-width: 0;
+    margin: auto 0 !important;
+    padding:0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	background: -webkit-linear-gradient(left, #ebeced 90%, #d1d5d6 130%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #ebeced 0%, #d1d5d6 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #ebeced 0%, #d1d5d6 100%); /* IE10+ */
+    background: linear-gradient(left, #ebeced 0%, #d1d5d6 100%); /* W3C */ 
+	line-height: 60px;
+    margin-top:  60px;
 }
 
-#v-nav >ul
+#sidemenu >ul
 {
     float: left;
     width: 330px;
@@ -136,178 +228,22 @@ body
 	line-height: 60px;
 }
 
-#v-nav >ul >li
+#sidemenu  li
 {
-    width: 330px;
-    list-style-type: none;
-    display: block;
-    text-shadow: 0px 1px 1px #F2F1F0;
-    font-size: 1.11em;
-    position: relative;
-    border-right-width: 0;
-    border-bottom: 1px solid #DDD;
-    padding: 10px 0px !important;      
+    width: 330px;      
     color:  #9ba0a4;
     line-height: 60px;
-	
-    height: 61px;
+    height: 73px;
     background: url('../images/icons/individual/icons_large_bs1.png') no-repeat right middle;
 }
-#v-nav  ul  li p{
+#sidemenu  li a{
+	    height: 61px;
+}
+#sidemenu  ul  li p{
 	float: left;
 	margin: 0px 0px 0px 134px;
 }
-
-#v-nav >ul >li.current
-{
-    color: #26abe1;
-    border-right: none;
-    z-index: 10;
-    background: white !important;
-    position: relative;
-    moz-box-shadow: inset 0 0 35px 5px #fafbfd;
-    -webkit-box-shadow: inset 0 0 35px 5px #fafbfd;
-    box-shadow: inset 0 0 35px 5px #fafbfd;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 600;
-}
-
-#v-nav >ul >li.first.current
-{
-    border-bottom: 1px solid #DDD;
-}
-
-#v-nav >ul >li.last
-{
-    border-bottom: none;
-}
-#v-nav  li  .icon-bs1{
-	background: url('../images/icons/individual/icons_large_bs1.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  .current .icon-bs1{
-	background: url('../images/icons/individual/icons_large_bs1_blue.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  li  .icon-bs2{
-	background: url('../images/icons/individual/icons_large_bs2.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  .current .icon-bs2{
-	background: url('../images/icons/individual/icons_large_bs2_blue.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  li  .icon-bs3{
-	background: url('../images/icons/individual/icons_large_bs3.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  .current .icon-bs3{
-	background: url('../images/icons/individual/icons_large_bs3_blue.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  li  .icon-bs4{
-	background: url('../images/icons/individual/icons_large_bs4.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  .current .icon-bs4{
-	background: url('../images/icons/individual/icons_large_bs4_blue.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  li  .icon-bs5{
-	background: url('../images/icons/individual/icons_large_bs5.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  .current .icon-bs5{
-	background: url('../images/icons/individual/icons_large_bs5_blue.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  li  .icon-bs6{
-	background: url('../images/icons/individual/icons_large_bs6.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  .current .icon-bs6{
-	background: url('../images/icons/individual/icons_large_bs6_blue.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  li  .icon-bs7{
-	background: url('../images/icons/individual/icons_large_bs7.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav  .current .icon-bs7{
-	background: url('../images/icons/individual/icons_large_bs7_blue.png') no-repeat;
-	background-size: cover;
-    background-position: center;
-	width: 40px;
-	height: 30px;
-	float: right;
-	margin: 13px 24px 0 0;
-}
-#v-nav >div.tab-content
+#sidemenu .-content
 {
     margin-left: 330px;
     background-color: #FFF;
@@ -322,7 +258,7 @@ body
     padding: 0px 70px 25px 70px;
 }
 
-#v-nav >div.tab-content >h4
+#sidemenu .content >h4
 {
     font-size: 1.2em;
     color: Black;
@@ -331,4 +267,146 @@ body
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
+#sidemenu  li p{
+	float: left;
+	margin: 0px 0px 0px 134px;
+	color:  #9ba0a4;
+}
+#sidemenu  li .open p{
+    color: #36abe1;
+    border-right: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+#sidemenu  li  .icon-bs1{
+	background: url('../images/icons/individual/icons_large_bs1.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  .open .icon-bs1{
+	background: url('../images/icons/individual/icons_large_bs1_blue.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  li  .icon-bs2{
+	background: url('../images/icons/individual/icons_large_bs2.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  .open .icon-bs2{
+	background: url('../images/icons/individual/icons_large_bs2_blue.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  li  .icon-bs3{
+	background: url('../images/icons/individual/icons_large_bs3.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  .open .icon-bs3{
+	background: url('../images/icons/individual/icons_large_bs3_blue.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  li  .icon-bs4{
+	background: url('../images/icons/individual/icons_large_bs4.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  .open .icon-bs4{
+	background: url('../images/icons/individual/icons_large_bs4_blue.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  li  .icon-bs5{
+	background: url('../images/icons/individual/icons_large_bs5.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  .open .icon-bs5{
+	background: url('../images/icons/individual/icons_large_bs5_blue.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  li  .icon-bs6{
+	background: url('../images/icons/individual/icons_large_bs6.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  .open .icon-bs6{
+	background: url('../images/icons/individual/icons_large_bs6_blue.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  li  .icon-bs7{
+	background: url('../images/icons/individual/icons_large_bs7.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+#sidemenu  .open .icon-bs7{
+	background: url('../images/icons/individual/icons_large_bs7_blue.png') no-repeat;
+	background-size: cover;
+    background-position: center;
+	width: 40px;
+	height: 30px;
+	float: right;
+	margin: 13px 24px 0 0;
+}
+.img-bot{
+	margin: 0px auto 30px auto;
+	height: 30px;
+	width: 960px;
+	background: url('../images/shadow_bottom.jpg') no-repeat center;
+}
