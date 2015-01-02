@@ -31,3 +31,7 @@ $(function() {
     // Trigger the event hashchange on page load, using jquery-hashchange-plugin
     $(window).hashchange();
 });
+
+$(document).ready(function(e){
+$("#v-nav .first").delay(300).fadeIn("slow");
+});
