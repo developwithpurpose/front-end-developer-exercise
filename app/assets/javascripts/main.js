@@ -87,7 +87,7 @@ $(document).ready(function() {
 		}
 	};
 
-	xhr.open('GET', 'baby-steps.json', true);
+	xhr.open('GET', 'assets/javascripts/baby-steps.json', true);
 	xhr.send(null);
 			
 	//Current Step Selection
