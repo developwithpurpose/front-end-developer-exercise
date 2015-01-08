@@ -1,0 +1,256 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Open+Sans:400,300,700);
+
+
+
+
+/*Instead of using a large reset, I felt this would be sufficient*/
+* {  
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #bbbfc2;
+}
+
+.wrapper {
+	width: 1010px;
+	margin: 0 auto;
+	background-color: #fff;
+	overflow: hidden;
+	min-height: 80%;
+	position: relative;
+}
+
+
+
+
+/*****   Top of page (header)   *****/
+.header {
+	width: 980px;
+	height: 276px;
+	background-image: url("../images/header.jpg");
+	background-repeat: no-repeat;
+	margin-bottom: 60px;
+	float: left;
+	display: inline-block;
+}
+
+h1 {
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	text-align: right;	
+}
+
+.skinny-title {
+	font-size: 32px;
+	font-weight: 300;
+	position: relative;
+	top: 50px;
+	right: 70px;
+}
+
+.fat-title {
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 48px;
+	position: relative;
+	right: 70px;
+	letter-spacing: -1px;
+}
+
+#shadow-left {
+	float: left;
+	background-color: #bbbfc2;
+}
+
+#shadow-right {
+	float: right;
+	background-color: #bbbfc2;
+}
+
+#shadow-bottom {
+	display: block;
+	background-color: #bbbfc2;
+	margin: 0 auto;
+}
+
+
+
+
+/*****   Menu   *****/
+
+.baby-steps-list {
+	width: 300px;
+	margin-right: 70px;
+	margin-bottom: 0;
+	float: left;
+}
+
+li {
+	list-style-type: none;
+	background: linear-gradient(to right, #ebeced 90%, #d1d5d6 99%), #ebeced; /*Work around to make CSS3 transition work*/
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9, from stackoverflow */
+	border-bottom: 1px solid #fff;
+	transition: 1s ease;
+}
+
+li a {
+	color: #9ba0a4;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	line-height: 60px;
+	padding-left: 120px;
+	text-decoration: none;
+}
+
+li.active {
+	background: #fff;
+	padding-left: 20px;
+}
+
+li.active a {
+	color: #36abe1;
+	font-weight: 600;
+}
+
+ul li:first-child a:after {
+	content: url("../images/icons/individual/icons_small_bs1.png");
+	position: relative;
+	right: 24px;
+	top: 7px;
+	float: right;
+}
+ul li:first-child + li a:after { /*the '+ li' stuff is to make it ie8 compatible.  Looks horrible though. */
+	content: url("../images/icons/individual/icons_small_bs2.png");
+	position: relative;
+	right: 24px;
+	top: 7px;
+	float: right;
+}
+ul li:first-child + li + li a:after {
+	content: url("../images/icons/individual/icons_small_bs3.png");
+	position: relative;
+	right: 24px;
+	top: 7px;
+	float: right;
+}
+ul li:first-child + li + li + li a:after {
+	content: url("../images/icons/individual/icons_small_bs4.png");
+	position: relative;
+	right: 24px;
+	top: 7px;
+	float: right;
+}
+ul li:first-child + li + li + li + li a:after {
+	content: url("../images/icons/individual/icons_small_bs5.png");
+	position: relative;
+	right: 24px;
+	top: 7px;
+	float: right;
+}
+ul li:first-child + li + li + li + li + li a:after {
+	content: url("../images/icons/individual/icons_small_bs6.png");
+	position: relative;
+	right: 24px;
+	top: 7px;
+	float: right;
+}
+ul li:first-child + li + li + li + li + li + li a:after {
+	content: url("../images/icons/individual/icons_small_bs7.png");
+	position: relative;
+	right: 24px;
+	top: 7px;
+	float: right;
+}
+
+ul li.active:first-child a:after {
+	content: url("../images/icons/individual/icons_small_bs1_blue.png");
+}
+ul li:first-child + li.active a:after {
+	content: url("../images/icons/individual/icons_small_bs2_blue.png");
+}
+ul li:first-child + li + li.active a:after {
+	content: url("../images/icons/individual/icons_small_bs3_blue.png");
+}
+ul li:first-child + li + li + li.active a:after {
+	content: url("../images/icons/individual/icons_small_bs4_blue.png");
+}
+ul li:first-child + li + li + li + li.active a:after {
+	content: url("../images/icons/individual/icons_small_bs5_blue.png");
+}
+ul li:first-child + li + li + li + li + li.active a:after {
+	content: url("../images/icons/individual/icons_small_bs6_blue.png");
+}
+ul li:first-child + li + li + li + li + li + li.active a:after {
+	content: url("../images/icons/individual/icons_small_bs7_blue.png");
+}
+ul li:first-child + li + li + li + li + li + li + li {
+	min-height: 150px;
+}
+
+#div img {
+	padding-top: 60px;
+}
+
+
+
+
+/*****   Content   *****/
+
+.panel-image {
+	float: left;
+}
+
+.baby-step-header, .baby-step-subheader {
+	margin-left: 100px;
+}
+
+.baby-step-header {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	font-size: 30px;
+	color: #36abe1;
+	line-height: 20px;
+	margin-bottom: 5px;
+	padding-top: 15px;
+}
+
+.baby-step-subheader {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #5c6366;
+	line-height: 20px;
+	margin-bottom: 24px;
+}
+
+.baby-step-panel p {
+	font-family: Helvetica;
+	font-size: 13px;
+	color: #65686f;
+	line-height: 18px;
+}
+
+.baby-step-panel {
+	display: none;
+}
+
+.baby-step-panel.active {
+	display: block;
+	float: right;
+	width: 540px;
+	margin-right: 70px;
+}
+
+.info {
+	margin-bottom: 40px;
+}
+
+.baby-step-panel p a {
+	color: #6fbee7;
+}
+
+/* So running csslint I noticed plenty of warnings about using ids as selectors.  I don't understand the issue here (I am not saying that it isn't an issue, just that I don't understand the "why.") But the
+   jslint and csslint tests were awesome to see how many things I should clean up in my code.  It was super interesting. */
