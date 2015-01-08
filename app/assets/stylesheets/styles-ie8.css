@@ -194,6 +194,9 @@ header h2 {
 	-o-transition: opacity 0.4s ease-in-out;
 	transition: opacity 0.4s ease-in-out;
 }
+.babyStep:not(:first-child) {
+	opacity: 0;
+}
 .stepContainer {
 	height: auto;
 }
