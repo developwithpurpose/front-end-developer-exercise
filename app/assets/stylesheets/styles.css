@@ -10,7 +10,7 @@ body, html {
 }
 
 /* Header */
-header {
+#header {
 	width: 840px;
 	height: 176px;
 	margin: 0 auto;
@@ -19,7 +19,7 @@ header {
 	background-repeat: no-repeat;
 	position: relative;
 }
-header::before {
+#header::before {
 	content: '';
 	width: 15px;
 	height: 936px;
@@ -30,7 +30,7 @@ header::before {
 	top: 0;
 	left: -15px;
 }
-header::after {
+#header::after {
 	content: '';
 	width: 15px;
 	height: 936px;
@@ -41,19 +41,19 @@ header::after {
 	top: 0;
 	right: -15px;
 }
-header h1, header h2 {
+#header h1, h2 {
 	margin: 0 0 15px;
 	color: #ffffff;
 	font-family: 'Open Sans', sans-serif;
 	text-align: right;
 }
-header h1 {
+#header h1 {
 	font-size: 50px;
 	font-weight: bold;
 	line-height: 48px;
 	text-transform: uppercase;
 }
-header h2 {
+#header h2 {
 	font-size: 32px;
 	font-weight: lighter;
 	line-height: 15px;
@@ -225,4 +225,48 @@ span.babyStepNumber {
 }
 span.babyStepNumber:last-child {
 	display: inline-block;
+}
+
+/* IE8 Fixes */
+#headerLeft {
+	width: 15px;
+	height: 936px;
+	background: url('../images/shadow_left.jpg');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='http://www.andrewwierzba.com/sandbox/assets/images/shadow_left.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='http://www.andrewwierzba.com/sandbox/assets/images/shadow_left.jpg', sizingMethod='scale')";
+	background-repeat: no-repeat;
+	background-size: 15px 936px;
+	position: absolute;
+	top: 0;
+	left: -15px;
+}
+#headerRight {
+	width: 15px;
+	height: 936px;
+	background: url('../images/shadow_right.jpg');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../images/shadow_right.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='../images/shadow_right.jpg', sizingMethod='scale')";
+	background-repeat: no-repeat;
+	background-size: 15px 936px;
+	position: absolute;
+	top: 0;
+	right: -15px;
+}
+#stepNavigationTop {
+	width: 260px;
+	height: 1px;
+	background: url('../images/shadow_left_nav.jpg');
+	position: absolute;
+	top: 0;
+	z-index: 2;
+}
+#appBottom {
+	width: 980px;
+	height: 30px;
+	margin: 0 auto;
+	background: url('../images/shadow_bottom.jpg');
+	position: absolute;
+	right: 0;
+	bottom: -30px;
+	left: 0;
 }

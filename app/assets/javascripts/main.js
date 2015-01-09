@@ -95,7 +95,7 @@ $(document).ready(function() {
 	var currentStep = $('.currentStep');
 
 	var activeIcon = $('img').last();
-	var stepContent = $('#stepContent section');
+	var stepContent = $('#stepContent .babyStep');
 	
 	step.eq(0).addClass('currentStep');
 	//$('step:first-child img:last-child').css('display', 'block');
