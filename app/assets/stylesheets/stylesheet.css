@@ -1,0 +1,119 @@
+/* 7 Baby Steps Stylesheet */
+
+h1 {
+	font-family: 'SourceSansPro-Regular', sans-serif;
+	font-size: 25px;
+	color: #36abe1;
+	line-height: 10px;
+}
+
+h2 {
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #5c6366;
+	font-size: 15px;
+}
+
+p.small {
+
+}
+
+.content {
+	margin-top: 60px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.tab_content {
+	font-size: 13px;
+	font-family: 'Helvetica';
+	line-height: 18px;
+	color: #65686f;
+}
+
+.table_content {
+	margin-top: 60px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	line-height: 60px;
+}
+
+.nav_bar {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.table_icon {
+	padding-right: 24px;
+	padding-left: 24px;
+}
+
+/*li {
+	padding-left: 170px;
+}*/
+
+ul, li {
+	padding-left: 170px;
+}
+
+/*a {
+    display: block;
+    width: 200px;
+    background-color: gray;
+}*/
+
+.ui-tabs-vertical { 
+	width: 65em; 
+}
+
+.ui-tabs-vertical .ui-tabs-nav { 
+	padding: .2em .1em .2em .2em; 
+	float: left; 
+	width: 12em; 
+}
+
+.ui-tabs-vertical .ui-tabs-nav li { 
+	clear: left; 
+	width: 100%; 
+	border-bottom-width: 1px !important; 
+	border-right-width: 0 !important; 
+	margin: 0 -1px .2em 0; 
+}
+
+.ui-tabs-vertical .ui-tabs-nav li a { 
+	display:block; 
+}
+
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { 
+	padding-bottom: 0; 
+	padding-right: .1em; 
+	border-right-width: 1px; 
+	border-right-width: 1px; 
+}
+
+.ui-tabs-vertical .ui-tabs-panel { 
+	padding: 1em;
+	padding-left: 5em; 
+	float: right; 
+	width: 46em;
+	/*background-color: gray;*/
+}
+
+.ui-widget-content { 
+	border: none;
+}
+
+.ui-widget-content a {
+	color: #6fbee7;
+}
+
+.icon_float {
+	float: left;
+}
+
+.ui-tabs-nav {
+	height: 90%;
+}
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: #36abe1;
+}
