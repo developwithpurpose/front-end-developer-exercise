@@ -1,0 +1,16 @@
+ul.baby-steps {
+  background-color: rgb(236, 236, 238);
+  list-style-type: none;
+}
+
+img.dave {
+  width: 100%;
+}
+
+li {
+  font-family: 'Source Sans Pro', sans-serif;  
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+}
+
