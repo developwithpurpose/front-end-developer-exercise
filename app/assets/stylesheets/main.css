@@ -35,7 +35,7 @@ h2.title {
   padding-top: 90px;
 }
 
-p {
+div.content {
   font-family: 'Helvetica', sans-serif;
   font-weight: normal;
   color: #65686f;
@@ -61,6 +61,7 @@ p {
   padding-right: 24px;
 }
 
-.blue {
-  
+.names {
+  color: #6fbee7;
 }
+
