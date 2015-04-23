@@ -3,7 +3,6 @@ ul.baby-steps {
   max-width: 350px;
   float: left;
   height: 100%;
-
 }
 
 img.dave {
@@ -16,6 +15,8 @@ img.large {
 
 li {
   margin-bottom: 2px;
+  margin-left: -40px;
+  padding-right: 25px;
 }
 h3.subtitle {
   font-family: 'Source Sans Pro', sans-serif;
@@ -95,5 +96,6 @@ div.content {
 }
 
 p {
-  padding-top: 10px;
+  padding-top: 20px;
 }
+

@@ -9,7 +9,7 @@ $(document).ready(function(){
 });
 
 $('#bs1').on('click', function(){
-  $(this).toggleClass("blue").siblings().removeClass("blue");    
+  $(this).toggleClass("blue").siblings().removeClass("blue");   
   $.ajax({
     url: '/app/assets/views/babystep1.html',
     dataType: 'html',
@@ -19,28 +19,17 @@ $('#bs1').on('click', function(){
   }) 
   $.getJSON("/app/assets/javascripts/baby-steps.json", function(data){
     var list = [];
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 21; i++) {
       var step = data.friends[i].babyStep;
       var last = data.friends[i].lastName;
       var first = data.friends[i].firstName;
       if (step === 1) {
         list.push(first + " " + last + ", ");
         newList = list[list.length - 1];        
-
         $('.content').append($("<span></span>").append(newList).addClass("names")); 
       }
     } 
   }) 
-});
-
-$('#sp2').click(function(){
-  $('#sp2').empty();
-  $('#sp2').append('<img class="sprite" src="/app/assets/images/icons/individual/icons_small_bs2_blue.png" />');
-});
-
-$('ul.baby-steps').click(function(){
-  $('#sp2').empty();  
-  $('#sp2').append('<img class="sprite" src="/app/assets/images/icons/individual/icons_small_bs2.png" />');
 });
 
 $('#bs2').on('click', function(){
@@ -54,18 +43,18 @@ $('#bs2').on('click', function(){
   })
   $.getJSON("/app/assets/javascripts/baby-steps.json", function(data){
     var list = [];
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 21; i++) {
       var step = data.friends[i].babyStep;
       var last = data.friends[i].lastName;
       var first = data.friends[i].firstName;
       if (step === 2) {
-        list.push(first + " " + last + ", ");
+        list.push(first + " " + last + " ");
         newList = list[list.length - 1];        
 
         $('.content').append($("<span></span>").append(newList).addClass("names"));  
       }
     }   
-    $('.content').append("are on this step");    
+    $('.content').append("is on this step");    
   })     
 });
 
@@ -128,7 +117,7 @@ $('#bs5').on('click', function(){
     success: function(data) {
      $('.content').hide().html(data).fadeIn('slow');
    }
-  }) 
+  }); 
  $.getJSON("/app/assets/javascripts/baby-steps.json", function(data){
     var list = [];
     for (var i = 0; i < 21; i++) {
@@ -189,9 +178,9 @@ $('#bs7').on('click', function(){
       var first = data.friends[i].firstName;
       if (step === 5) {
         list.push(first + " " + last + ", ");
-        newList = list[list.length - 1];        
-
+        newList = list[list.length - 1];     
         $('.content').append($("<span></span>").append(newList).addClass("names")); 
+        console.log(newList);        
       }
     }   
     $('.content').append("are on this step");    
