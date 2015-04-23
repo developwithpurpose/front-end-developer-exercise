@@ -2,27 +2,30 @@ ul.baby-steps {
   list-style-type: none;
   max-width: 350px;
   float: left;
+  height: 100%;
+
 }
 
 img.dave {
   width: 100%;
 }
 
-li {
-  font-family: 'Source Sans Pro', sans-serif;  
-  font-size: 18px;
-  color: #9ba0a4;
-  line-height: 60px;
-  padding-left: 120px;
-  background-color: rgb(236, 236, 238);
+img.large {
+  vertical-align: text-top;
 }
 
+li {
+  margin-bottom: 2px;
+}
 h3.subtitle {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   line-height: 20px;
   color: #5c6366;
   margin-top: 0;
+  margin-left: 75px;
+  padding-left: 15px;
+  margin-bottom: 0;
 }
 
 h2.title {
@@ -32,7 +35,8 @@ h2.title {
   color: #36abe1;
   line-height: 20px;
   display: inline;
-  padding-top: 90px;
+  padding-left: 15px;
+  margin-top: 40px;
 }
 
 div.content {
@@ -65,3 +69,31 @@ div.content {
   color: #6fbee7;
 }
 
+.grey {
+  font-family: 'Source Sans Pro', sans-serif;  
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+  padding-left: 120px;
+  padding-bottom: 2px;
+  background: -webkit-linear-gradient(#ebeced, #d1d5d6); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#ebeced, #d1d5d6); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#ebeced, #d1d5d6); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#ebeced, #d1d5d6); /* Standard syntax */
+}
+
+.blue {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  line-height: 60px;
+  color: #36abe1;
+  background: rgb(255, 255, 255);
+}
+
+#last {
+  padding-bottom: 200px;
+}
+
+p {
+  padding-top: 10px;
+}

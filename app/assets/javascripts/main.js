@@ -5,10 +5,11 @@ $(document).ready(function(){
     success: function(data) {
      $('.content').append(data);
     }
-  })  
+  })
 });
 
 $('#bs1').on('click', function(){
+  $(this).toggleClass("blue").siblings().removeClass("blue");    
   $.ajax({
     url: '/app/assets/views/babystep1.html',
     dataType: 'html',
@@ -32,8 +33,19 @@ $('#bs1').on('click', function(){
   }) 
 });
 
+$('#sp2').click(function(){
+  $('#sp2').empty();
+  $('#sp2').append('<img class="sprite" src="/app/assets/images/icons/individual/icons_small_bs2_blue.png" />');
+});
+
+$('ul.baby-steps').click(function(){
+  $('#sp2').empty();  
+  $('#sp2').append('<img class="sprite" src="/app/assets/images/icons/individual/icons_small_bs2.png" />');
+});
+
 $('#bs2').on('click', function(){
-  $.ajax({
+  $(this).toggleClass("blue").siblings().removeClass("blue");  
+    $.ajax({
     url: '/app/assets/views/babystep2.html',
     dataType: 'html',
     success: function(data) {
@@ -58,6 +70,7 @@ $('#bs2').on('click', function(){
 });
 
 $('#bs3').on('click', function(){
+  $(this).toggleClass("blue").siblings().removeClass("blue");  
   $.ajax({
     url: '/app/assets/views/babystep3.html',
     dataType: 'html',
@@ -74,7 +87,6 @@ $('#bs3').on('click', function(){
       if (step === 3) {
         list.push(first + " " + last + ", ");
         newList = list[list.length - 1];        
-
        $('.content').append($("<span></span>").append(newList).addClass("names")); 
       }
     }   
@@ -83,6 +95,7 @@ $('#bs3').on('click', function(){
 });
 
 $('#bs4').on('click', function(){
+  $(this).toggleClass("blue").siblings().removeClass("blue");    
   $.ajax({
     url: '/app/assets/views/babystep4.html',
     dataType: 'html',
@@ -108,6 +121,7 @@ $('#bs4').on('click', function(){
 });
 
 $('#bs5').on('click', function(){
+  $(this).toggleClass("blue").siblings().removeClass("blue");    
   $.ajax({
     url: '/app/assets/views/babystep5.html',
     dataType: 'html',
@@ -133,6 +147,7 @@ $('#bs5').on('click', function(){
 });
 
 $('#bs6').on('click', function(){
+  $(this).toggleClass("blue").siblings().removeClass("blue");    
   $.ajax({
     url: '/app/assets/views/babystep6.html',
     dataType: 'html',
@@ -158,6 +173,7 @@ $('#bs6').on('click', function(){
 });
 
 $('#bs7').on('click', function(){
+  $(this).toggleClass("blue").siblings().removeClass("blue");    
   $.ajax({
     url: '/app/assets/views/babystep7.html',
     dataType: 'html',
