@@ -17,8 +17,29 @@ li {
   background-color: rgb(236, 236, 238);
 }
 
+h3.subtitle {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  line-height: 20px;
+  color: #5c6366;
+  margin-top: 0;
+}
+
 h2.title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #36abe1;
+  line-height: 20px;
   display: inline;
+  padding-top: 90px;
+}
+
+p {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: normal;
+  color: #65686f;
+  line-height: 18px;
 }
 
 .large {
@@ -27,7 +48,8 @@ h2.title {
 
 .content {
   padding-left: 350px;
-  padding-right: 30px;
+  margin-left: 70px;
+  padding-right: 70px;
 }
 
 .content, ul.baby-steps {
@@ -36,6 +58,7 @@ h2.title {
 
 .sprite {
   padding-left: 30px;
+  padding-right: 24px;
 }
 
 
