@@ -25,13 +25,13 @@
 			<div id="baby_steps">
 				<div id="bs_nav">
 					<ul class="menu_items">
-						<li class="step_one">Baby Step 1<img class="7icons" src="assets/images/icons/individual/icons_small_bs1.png"></li>
-						<li class="step_two">Baby Step 2<img class="7icons" src="assets/images/icons/individual/icons_small_bs2.png"></li>
-						<li class="step_three">Baby Step 3<img class="7icons" src="assets/images/icons/individual/icons_small_bs3.png"></li>
-						<li class="step_four">Baby Step 4<img class="7icons" src="assets/images/icons/individual/icons_small_bs4.png"></li>
-						<li class="step_five">Baby Step 5<img class="7icons" src="assets/images/icons/individual/icons_small_bs5.png"></li>
-						<li class="step_six">Baby Step 6<img class="7icons" src="assets/images/icons/individual/icons_small_bs6.png"></li>
-						<li class="step_seven">Baby Step 7<img class="7icons" src="assets/images/icons/individual/icons_small_bs7.png"></li>
+						<li class="step_one active">Baby Step 1<img class="step_one_icons" src="assets/images/icons/individual/icons_small_bs1.png"></li>
+						<li class="step_two">Baby Step 2<img class="step_two_icons" src="assets/images/icons/individual/icons_small_bs2.png"></li>
+						<li class="step_three">Baby Step 3<img class="step_three_icons" src="assets/images/icons/individual/icons_small_bs3.png"></li>
+						<li class="step_four">Baby Step 4<img class="step_four_icons" src="assets/images/icons/individual/icons_small_bs4.png"></li>
+						<li class="step_five">Baby Step 5<img class="step_five_icons" src="assets/images/icons/individual/icons_small_bs5.png"></li>
+						<li class="step_six">Baby Step 6<img class="step_six_icons" src="assets/images/icons/individual/icons_small_bs6.png"></li>
+						<li class="step_seven">Baby Step 7<img class="step_seven_icons" src="assets/images/icons/individual/icons_small_bs7.png"></li>
 					</ul>
 				</div>
 				
@@ -183,14 +183,14 @@
 		for(var i=0; i<menu_length; i++) {
 			menu_items[i].addEventListener('click', function(e){
 				var target = document.querySelector('.step_defs > .' + e.target.classList[0]);
-				var menu_id = e.target.className.split(" ")[0];
-				console.log(menu_id);
-
+				var menu_id = e.target.className.split(" ")[0] + "_icons";
+				
 				Array.prototype.filter.call(target.parentNode.children, function(siblings) {
 					siblings.style.display = 'none';
 				});
 				
 				$(this).addClass("active").siblings().removeClass("active");
+								
 				target.style.display = 'block';
 				t_id=target.id + "_friends";
 				frnds = onSwitch(target.id);
