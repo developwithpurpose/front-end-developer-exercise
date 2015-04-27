@@ -72,7 +72,7 @@ body{
 	text-decoration: none;
 	font-family: 'Source Sans Pro', cursive;
 	font-style: normal;
-	font-weight: 200;
+	font-weight: 300;
 	font-size: 18px;
 	color: #9ba0a4;
 	line-height: 60px;
@@ -80,20 +80,24 @@ body{
 	border-bottom: solid 2px white;
 	text-decoration: none;
 }
-/*#bs_nav li a{
+#bs_nav li img{
+	float: right;
+	padding-right: 24px;
+	padding-top: 17px;
+}
+.active{
+	display: block;
 	text-decoration: none;
-}*/
-/*#bs_nav a:hover{
 	font-family: 'Source Sans Pro', cursive;
 	font-style: normal;
 	font-weight: 600;
 	font-size: 18px;
 	color: #36abe1;
-}*/
-#bs_nav li img{
-	float: right;
-	padding-right: 24px;
-	padding-top: 17px;
+	line-height: 60px;
+	padding-left: 125px;
+	border-bottom: solid 2px white;
+	text-decoration: none;
+	background-color: white;
 }
 .step_defs{
 	background-color: #fff;
@@ -101,9 +105,6 @@ body{
 	width: 680px;
 	height: 600px;
 }
-/*.step_one {
-	display: none;
-}*/
 .step_head{
 	padding-top: 3px;
 }
