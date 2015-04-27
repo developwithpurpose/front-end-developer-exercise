@@ -1,0 +1,164 @@
+header {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 276px;
+	width: 980px;
+}
+header p {
+	color: #fff;
+	text-align: right;
+	margin: 0px;
+	padding: 0px;
+}
+header #head_l1{
+	font-family: 'Open Sans', cursive;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 32px;
+	padding-top: 50px;
+	padding-right: 70px;
+	margin: 0px;
+}
+header #head_l2{
+	font-family: 'Open Sans', cursive;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 50px;
+	padding-right: 70px;
+	line-height: 48px;
+	margin-top: 0px;
+
+}
+body{
+	background-image: url("../images/header.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+	background-color: #bbbfc2;
+	margin-top: 0;
+}
+#main_body{
+	width: 980px;
+	margin-top: 0;
+	padding-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+	
+}
+/*#main_body p {
+	padding: 0px;
+	margin: 0px;
+}*/
+#baby_steps{
+	margin: 0;
+	padding-top: 60px;
+	background-color: white;
+}
+#bs_nav{
+	/*background-color: #ebeced;*/
+	float:left;
+	background-image: linear-gradient(to right, #ebeced 95%, #d1d5d6);
+	width: 300px;
+	height: 600px;
+}
+#bs_nav ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+#bs_nav li{
+	display: block;
+	text-decoration: none;
+	font-family: 'Source Sans Pro', cursive;
+	font-style: normal;
+	font-weight: 200;
+	font-size: 18px;
+	color: #9ba0a4;
+	line-height: 60px;
+	padding-left: 125px;
+	border-bottom: solid 2px white;
+	text-decoration: none;
+}
+/*#bs_nav li a{
+	text-decoration: none;
+}*/
+/*#bs_nav a:hover{
+	font-family: 'Source Sans Pro', cursive;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	color: #36abe1;
+}*/
+#bs_nav li img{
+	float: right;
+	padding-right: 24px;
+	padding-top: 17px;
+}
+.step_defs{
+	background-color: #fff;
+	float:left;
+	width: 680px;
+	height: 600px;
+}
+/*.step_one {
+	display: none;
+}*/
+.step_head{
+	padding-top: 3px;
+}
+.step_head img{
+	float: left;
+	padding-left: 70px;
+	padding-right: 15px;
+}
+/*.step_head, .step_body{
+	padding-left: 70px;
+	float: left;
+}*/
+.head_text{
+	padding-top: 1px;
+}
+.step_head #step_title{
+	font-family: 'Source Sans Pro', cursive;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 30px;
+	color: #36abe1;
+	line-height: 20px;
+	margin-top: 10px;
+	margin-bottom: 6px;
+}
+.step_head #step_subtitle{
+	font-family: 'Source Sans Pro', cursive;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	color: #5c6366;
+	line-height: 20px;
+	margin: 0;
+}
+.step_body{
+	font-family: 'Helvetica', cursive;
+	font-style: normal;
+	font-size: 13px;
+	color: #65686f;
+	line-height: 18px;
+	padding-top: 24px;
+	padding-left: 70px;
+	padding-right: 70px;
+}
+.step_body p{
+	margin-top: 0;
+}
+.step_defs .step_two, .step_defs .step_three, .step_defs .step_four, .step_defs .step_five,
+.step_defs .step_six, .step_defs .step_seven{
+	display: none;
+}
+.f_output{
+	margin: 0;
+	padding-top: 27px;
+}
+.f_output .names{
+	color: #6fbee7;
+}
