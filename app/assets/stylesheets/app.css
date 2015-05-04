@@ -10,7 +10,22 @@ body {
   min-height: 225px;
   padding: 50px 70px 0 70px;
   background-image: url("../images/header.jpg");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  text-align: right; }
+  #header .text-light {
+    width: 55%;
+    float: right;
+    font-weight: 300;
+    font-size: 32px; }
+  #header .text-bold {
+    width: 55%;
+    float: right;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 48px;
+    text-transform: uppercase; }
 
 #main {
   padding-top: 60px;

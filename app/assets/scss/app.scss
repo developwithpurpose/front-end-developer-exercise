@@ -1,9 +1,10 @@
 $source_sans: 'Source Sans Pro', sans-serif;
 $open_sans: 'Open Sans', sans-serif;
 
+$white: #ffffff;
 $main-bg-color: #bbbfc2;
 $nav-font-color: #9ba0a4;
-$content-bg-color: #ffffff;
+$content-bg-color: $white;
 
 @mixin nav-gradient() {
   background: #ebeced;
@@ -32,7 +33,25 @@ body {
   padding: 50px 70px 0 70px;
   background-image: url('../images/header.jpg');
   background-repeat: no-repeat;
+  font-family: $open_sans;
+  color: $white;
+  text-align: right;
 
+  .text-light {
+    width: 55%;
+    float: right;
+    font-weight: 300;
+    font-size: 32px;
+  }
+
+  .text-bold {
+    width: 55%;
+    float: right;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
 }
 
 #main {
