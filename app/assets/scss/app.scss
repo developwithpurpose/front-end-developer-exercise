@@ -1,10 +1,15 @@
 $source_sans: 'Source Sans Pro', sans-serif;
 $open_sans: 'Open Sans', sans-serif;
+$helvetica: 'Helvetica', sans-serif;
 
 $white: #ffffff;
 $main-bg-color: #bbbfc2;
 $nav-font-color: #9ba0a4;
 $content-bg-color: $white;
+$body-copy: #65686f;
+$baby-step-number: #36abe1;
+$baby-step-name: #5c6366;
+$friend-name: #6fbee7;
 
 @mixin nav-gradient() {
   background: #ebeced;
@@ -18,9 +23,22 @@ $content-bg-color: $white;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
 }
 
+@mixin clearfix() {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body {
   margin: 0;
   background-color: $main-bg-color;
+}
+
+p {
+  font-family: $helvetica;
+  font-size: 13px;
+  color: $body-copy;
+  line-height: 18px;
 }
 
 #container {
@@ -60,9 +78,7 @@ body {
 
   //clearfix for floated nav and content sections
   &:after {
-    content: "";
-    display: table;
-    clear: both;
+    @include clearfix();
   }
 }
 
@@ -76,4 +92,53 @@ body {
 #content {
   width: 75%;
   float: right;
+
+  .baby-step {
+    padding: 0 70px;
+
+    .baby-step-header {
+      .baby-step-icon {
+        max-width: 79.9886px;
+        float: left;
+      }
+
+      .baby-step-text {
+        float: left;
+        margin-left: 10px;
+        padding-top: 10px;
+
+        .step-number {
+          font-family: $source_sans;
+          font-weight: 600;
+          font-size: 30px;
+          line-height: 20px;
+          color: $baby-step-number;
+          margin-bottom: 5px;
+        }
+
+        .step-name {
+          font-family: $source_sans;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 20px;
+          color: $baby-step-name;
+        }
+      }
+
+      &:after {
+        @include clearfix();
+      }
+    }
+
+    .baby-step-friends {
+      margin-top: 40px;
+      font-family: $helvetica;
+      color: $body-copy;
+      font-size: 13px;
+
+      .friend {
+        color: $friend-name;
+      }
+    }
+  }
 }

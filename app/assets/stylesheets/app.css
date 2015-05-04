@@ -2,6 +2,12 @@ body {
   margin: 0;
   background-color: #bbbfc2; }
 
+p {
+  font-family: "Helvetica", sans-serif;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px; }
+
 #container {
   margin: auto;
   width: 980px; }
@@ -51,3 +57,36 @@ body {
 #content {
   width: 75%;
   float: right; }
+  #content .baby-step {
+    padding: 0 70px; }
+    #content .baby-step .baby-step-header .baby-step-icon {
+      max-width: 79.9886px;
+      float: left; }
+    #content .baby-step .baby-step-header .baby-step-text {
+      float: left;
+      margin-left: 10px;
+      padding-top: 10px; }
+      #content .baby-step .baby-step-header .baby-step-text .step-number {
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 20px;
+        color: #36abe1;
+        margin-bottom: 5px; }
+      #content .baby-step .baby-step-header .baby-step-text .step-name {
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 20px;
+        color: #5c6366; }
+    #content .baby-step .baby-step-header:after {
+      content: "";
+      display: table;
+      clear: both; }
+    #content .baby-step .baby-step-friends {
+      margin-top: 40px;
+      font-family: "Helvetica", sans-serif;
+      color: #65686f;
+      font-size: 13px; }
+      #content .baby-step .baby-step-friends .friend {
+        color: #6fbee7; }
