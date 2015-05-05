@@ -1,0 +1,116 @@
+$gray: #ebeced;
+$dark-gray: #d1d5d6;
+$blue: #36abe1;
+$steps-gray: #9ba0a4;
+$subtitle-gray: #5c6366;
+$text-gray: #65686f;
+
+*{
+	@include borderBox;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+html, body{
+	height:100%;
+}
+
+.wrapper{
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+}
+
+main, header{
+	width: 980px;
+	margin: 0 auto;
+}
+main{
+	margin-top: 60px;
+	overflow:auto;
+}
+header{
+	height: 276px;
+	background: url('../images/header.jpg') no-repeat;
+}
+.row{
+	clear:both;
+}
+.col{
+	float:left;
+	&:first-child{
+		width: 30%;
+	}
+	&:last-child{
+		width: 70%;
+	}
+}
+	.column-1{
+		@include linearGradient($gray, $dark-gray);
+	}
+	.column-2{
+		padding: 0 70px;
+	}
+		.step-list{
+			list-style:none;
+			margin: 0;
+			padding:0;
+			li{
+				position:relative;
+				height: 60px;
+				font-size: 18px;
+				font-weight:normal;
+				border-bottom: 1px solid white;
+				line-height: 60px;
+				color: $steps-gray;
+				padding-left: 40%;
+				&:last-child{
+					border-bottom:none;
+				}
+				&.active{
+					background:white;
+					color: $blue;
+					font-weight: 600;
+				}
+			}
+		}
+			.icon{
+				@include verticalAlign;
+				position:absolute;
+				right: 24px;
+				display:block;
+				height: 24px;
+				width: 30px;
+				background: url('../images/icons/sprites/icons_small.png') no-repeat;
+			}
+
+				@for $i from 0 through 6{
+					.icon-#{$i+1} {
+	  					background-position: 0px $i*-25px; 
+	  				}
+				}
+
+.step-content{
+	display:none;
+	h2{
+		font-size: 30px;
+		font-weight: 600;
+		color: $blue;
+		margin: 0;
+	}
+	span{
+		font-weight: 100;
+		color: $subtitle-gray;
+		line-height: 20px;
+		font-size: 18px;
+	}
+	p{
+		font-family:  Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-size: 13px;
+		color: $text-gray;
+		line-height: 18px;
+	}
+}
+	.active{
+		display:block;
+	}
