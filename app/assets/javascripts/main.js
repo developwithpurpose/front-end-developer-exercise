@@ -13,5 +13,9 @@ $(document).ready(function(){
 		$('.step-content-holder').animate({
 			   "margin-left": "-" + (lastChar-1)*100 + "%"
 			}, 300);
-		})
+		});
+
+	// $.getJSON( "http://localhost:9001/app/assets/javascripts/baby-steps.json", function( data ) {
+	// 	  
+	// 	});
 })
