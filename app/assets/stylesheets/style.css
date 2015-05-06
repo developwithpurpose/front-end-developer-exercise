@@ -1,0 +1,331 @@
+/* 
+    Created on : May 4, 2015, 11:27:51 AM
+    Author     : Bryce Embry
+
+Hello again.  
+
+In the stylesheet I've tried to keep the styles simple and limit them to CSS2, 
+so the site will be compatible with IE 8+. 
+*/
+
+
+/*
+********  Element Styles *****************
+*/
+
+body {
+    background-color: #bbbfc2;
+    position: absolute;
+    width: 100%;
+    margin-top: 0px;
+    padding-top: 0px; 
+    z-index: -5;
+}
+    
+a {
+        color: #6fbee7;
+        text-decoration: none; 
+    }
+    
+ /*
+********  Class Styles *****************
+*/
+ 
+ .shadowBox {
+     width: 1010px;
+     height: 867px; 
+     margin-left: auto;
+     margin-right: auto;
+     top: 0px; 
+     position: relative;
+     background: url("../images/shadow_bottom.jpg") no-repeat bottom center;
+     z-index: -10;
+ }
+ 
+    .shadowLeft, .shadowRight{
+        margin-top: 0px; 
+        padding-top: 0px;
+        width: 1010px; 
+        height: 100%;  
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: -10;
+     }
+
+     .shadowLeft {
+         background: url("../images/shadow_left.jpg") no-repeat top left;
+     }
+
+     .shadowRight {
+         background: url("../images/shadow_right.jpg") no-repeat top right;
+     }
+ 
+.container { 
+    margin-top: 0px; 
+    padding-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px; 
+    height: 800px; 
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    right: 15px;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.head {
+    width: 980px;
+    height: 276px; 
+    background-image: url("../images/header.jpg"); 
+    background-repeat:  no-repeat;
+    background-position: 0px 0px; 
+    margin-top: 0px; 
+    margin-bottom: 60px; 
+}
+
+    .headTextLight{
+        color: #ffffff;
+        font-family: 'Open Sans', sans-serif; 
+        font-size: 32px; 
+        font-weight: 300;
+        text-align: right;
+        padding-top: 50px; 
+        padding-bottom: 0px; 
+        margin-right: 70px; 
+        margin-bottom: 0px; 
+        line-height: 32px; 
+    }
+
+    .headTextBold{
+        color: #ffffff;
+        font-family: 'Open Sans', sans-serif; 
+        font-size: 50px; 
+        font-weight: 700;
+        line-height: 48px; 
+        text-align: right;
+        margin-right: 70px; 
+        margin-top: 15px;
+        padding-top: 0px; 
+    }
+    
+.mainBody {
+    background-color: #ffffff;
+    display: block;
+    width: 100%;
+    height: 500px;
+    position: absolute; 
+    z-index: 5;
+}
+/* Navigation */
+    .navigation{
+        height: 100%;
+        width: 240px;
+        float: left;
+        display: block; 
+        position: absolute;
+        background-color: #ebeced;
+        background: url('../images/shadow_left_nav.jpg') repeat-y top right;
+        z-index: 10;
+        /*
+        * background: linear-gradient(to right, #ebeced 95%, #d1d5d6);  
+        * The background gradient is not compatible with older browsers. 
+        *  I just wanted to throw it in. 
+        */
+    }
+
+     [class*='navItem'] {
+        border-bottom: 1px solid #ffffff;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #9ba0a4;
+        line-height: 60px;
+        text-align: right;
+        padding-right: 65px;
+        cursor: pointer; 
+        position: relative;
+        height: 60px;
+        z-index: 15;
+    }
+    
+    [class*="navLogo"]{
+        background-image: url("../images/icons/sprites/icons_small.png");
+        background-repeat: no-repeat;
+        height: 25px;
+        width: 29px;
+        position:absolute;
+        top: 15px;
+        left: 191px; 
+        z-index: 15;
+    }
+
+
+    .navLogo1 {
+        background-position: 0px 0px;
+    }
+    
+    .navLogo2 {
+        background-position: 0px -25px;
+    }
+
+    .navLogo3 {
+        background-position: 0px -50px;
+    }
+    
+    .navLogo4 {
+        background-position: 0px -75px;
+    }
+    
+    .navLogo5 {
+        background-position: 0px -100px;
+    }
+    
+    .navLogo6 {
+        background-position: 0px -125px;
+    }
+    
+    .navLogo7 {
+        background-position: 0px -150px;
+    }
+    
+    .navLogoSelected1 {
+        background-position: 0px -175px; 
+    }
+    
+    .navLogoSelected2 {
+        background-position: 0px -200px; 
+    }
+    
+    .navLogoSelected3 {
+        background-position: 0px -225px; 
+    }
+    
+    .navLogoSelected4 {
+        background-position: 0px -250px; 
+    }
+    
+    .navLogoSelected5 {
+        background-position: 0px -275px; 
+    }
+    
+    .navLogoSelected6 {
+        background-position: 0px -300px; 
+    }
+    
+    .navLogoSelected7 {
+        background-position: 0px -325px; 
+    }
+    
+    
+    .navItemSelected {
+        font-weight: 600;
+        color: #36abe1;
+        background-color: #ffffff;
+    }
+    
+/* Articles */
+
+.article{
+   width: 600px;
+   float: right; 
+   margin-left: 70px;
+   margin-right: 70px;
+   display: block; 
+   background-color: #ffffff;
+   position: relative;
+   z-index: 5;
+}
+
+    [class*="articleBody"] {
+       font-family: "Helvetica", sans-serif; 
+       font-size: 13px;
+       color: #65686f;
+       line-height: 18px; 
+       display: none;
+       top: 0px;
+       position: absolute;
+    }
+    
+    .articleBody1 {
+        display: block;
+    }
+
+    .articleHead {
+       position: relative;
+       height: 70px;
+    }
+    
+    [class*="articleLogo"] {
+        background-image: url("../images/icons/sprites/icons_large.png");
+        background-repeat: no-repeat;
+        height: 65px;
+        width: 75px;
+        position:absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    
+    /*
+    *  The images in this sprite didn't seem evenly spaced, so it was tricky to get the 
+    *  right calculations. 
+    */
+    .articleLogo1 {
+        background-position: 0px -455px;
+    }
+    
+    .articleLogo2 {
+        background-position: 0px -519px;
+    }
+    
+    .articleLogo3 {
+        background-position: 0px -583px;
+    }
+    
+    .articleLogo4 {
+        background-position: 0px -647px;
+    }
+    
+    .articleLogo5 {
+        background-position: 0px -713px;
+    }
+    
+    .articleLogo6 {
+        background-position: 0px -777px;
+    }
+    
+    .articleLogo7 {
+        background-position: 0px -842px;
+    }
+    
+   
+    .articleTitle, .articleSubtitle {
+        font-family: "Source Sans Pro", sans-serif;
+        margin-left: 90px;
+    }
+    
+    .articleTitle{
+        padding-top: 15px; 
+        font-weight: 600;
+        color: #36abe1;
+        font-size: 30px;
+        line-height: 20px;
+    }
+
+    .articleSubtitle{
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 300;
+        font-size: 18px; 
+        color: #5c6366;
+        line-height: 20px; 
+    }
+
+    [class*="socialConnection"] {
+        margin-top: 20px; 
+        padding-top: 10px; 
+    }
+    
