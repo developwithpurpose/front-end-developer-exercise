@@ -15,7 +15,28 @@ $(document).ready(function(){
 			}, 300);
 		});
 
-	// $.getJSON( "http://localhost:9001/app/assets/javascripts/baby-steps.json", function( data ) {
-	// 	  
-	// 	});
+	$.getJSON( "http://localhost:9001/app/assets/javascripts/baby-steps.json", function( data ) {
+		for (var i = 0; i < data.friends.length; i++) {
+			
+			if(data.friends[i].babyStep == (i+1)){
+				$('.friends-list-' + (i+1)).append(data.friends[i].firstName);
+			}
+					
+		switch (data.friends[i].babyStep) {
+			case 1:
+				var varBabyStep = 1;
+				alert(varBabyStep);
+				break; 
+			case 2:
+				var varBabyStep = 2;
+				alert(varBabyStep);
+				break; 
+			default: 
+				return true;
+		}
+		
+		$('.friends-list-' + varBabyStep).append(data.friends[i].firstName);
+			
+		}
+	});
 })
