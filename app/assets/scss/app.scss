@@ -87,6 +87,101 @@ p {
   float: left;
 
   @include nav-gradient();
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+
+      a {
+        display: block;
+        padding-right: 20px;
+        text-align: right;
+        text-decoration: none;
+        font-family: $source_sans;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 60px;
+        color: $nav-font-color;
+        border-bottom: 1px solid $white;
+
+        .icon {
+            position: relative;
+            top: 6px;
+            display: inline-block;
+            width: 30px;
+            height: 25px;
+            margin-left: 15px;
+            background-image: url('../images/icons/sprites/icons_small.png');
+            background-repeat: no-repeat
+        }
+
+        &.step-1 .icon {
+          background-position: 0 0;
+        }
+
+        &.step-2 .icon {
+          background-position: 0 -25px;
+        }
+
+        &.step-3 .icon {
+          background-position: 0 -50px;
+        }
+
+        &.step-4 .icon {
+          background-position: 0 -75px;
+        }
+
+        &.step-5 .icon {
+          background-position: 0 -100px;
+        }
+
+        &.step-6 .icon {
+          background-position: 0 -125px;
+        }
+
+        &.step-7 .icon {
+          background-position: 0 -150px;
+        }
+
+        &.active {
+          background-color: $white;
+          color: $baby-step-number;
+          font-weight: 600;
+
+          &.step-1 .icon {
+            background-position: 0 -175px;
+          }
+
+          &.step-2 .icon {
+            background-position: 0 -200px;
+          }
+
+          &.step-3 .icon {
+            background-position: 0 -225px;
+          }
+
+          &.step-4 .icon {
+            background-position: 0 -250px;
+          }
+
+          &.step-5 .icon {
+            background-position: 0 -275px;
+          }
+
+          &.step-6 .icon {
+            background-position: 0 -300px;
+          }
+
+          &.step-7 .icon {
+            background-position: 0 -325px;
+          }
+        }
+      }
+    }
+  }
 }
 
 #content {

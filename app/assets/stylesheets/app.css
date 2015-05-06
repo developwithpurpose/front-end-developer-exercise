@@ -53,6 +53,62 @@ p {
   background: -ms-linear-gradient(left, #ebeced 96%, #d1d5d6 100%);
   background: linear-gradient(to right, #ebeced 96%, #d1d5d6 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); }
+  #nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    #nav ul li a {
+      display: block;
+      padding-right: 20px;
+      text-align: right;
+      text-decoration: none;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 60px;
+      color: #9ba0a4;
+      border-bottom: 1px solid #ffffff; }
+      #nav ul li a .icon {
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        width: 30px;
+        height: 25px;
+        margin-left: 15px;
+        background-image: url("../images/icons/sprites/icons_small.png");
+        background-repeat: no-repeat; }
+      #nav ul li a.step-1 .icon {
+        background-position: 0 0; }
+      #nav ul li a.step-2 .icon {
+        background-position: 0 -25px; }
+      #nav ul li a.step-3 .icon {
+        background-position: 0 -50px; }
+      #nav ul li a.step-4 .icon {
+        background-position: 0 -75px; }
+      #nav ul li a.step-5 .icon {
+        background-position: 0 -100px; }
+      #nav ul li a.step-6 .icon {
+        background-position: 0 -125px; }
+      #nav ul li a.step-7 .icon {
+        background-position: 0 -150px; }
+      #nav ul li a.active {
+        background-color: #ffffff;
+        color: #36abe1;
+        font-weight: 600; }
+        #nav ul li a.active.step-1 .icon {
+          background-position: 0 -175px; }
+        #nav ul li a.active.step-2 .icon {
+          background-position: 0 -200px; }
+        #nav ul li a.active.step-3 .icon {
+          background-position: 0 -225px; }
+        #nav ul li a.active.step-4 .icon {
+          background-position: 0 -250px; }
+        #nav ul li a.active.step-5 .icon {
+          background-position: 0 -275px; }
+        #nav ul li a.active.step-6 .icon {
+          background-position: 0 -300px; }
+        #nav ul li a.active.step-7 .icon {
+          background-position: 0 -325px; }
 
 #content {
   width: 75%;
