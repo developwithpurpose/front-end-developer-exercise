@@ -14,8 +14,83 @@
 	transform: translateY(-50%);
 }
 
+@mixin horizontalAlign(){
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
 @mixin borderBox{
 	-webkit-box-sizing: border-box; 
   	-moz-box-sizing: border-box;    
   	box-sizing: border-box;  
+}
+
+@mixin transitionSpeed($speed: .3s){
+	-webkit-transition: all $speed ease-in-out;
+	-moz-transition: all $speed ease-in-out;
+	-o-transition: all $speed ease-in-out;
+	transition: all $speed ease-in-out;
+}
+
+@mixin backfaceVisibility{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+@mixin flipTransitionStyles{
+	-webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: rotateY(0deg);
+
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    -moz-transform: rotateY(0deg);
+
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+    -o-transform: rotateY(0deg);
+
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+    -ms-transform: rotateY(0deg);
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+
+@mixin rotateY{
+	-webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+@mixin rotateX($degree: 45deg){
+	-webkit-transform: rotateX($degree);
+    -moz-transform: rotateX($degree);
+    -o-transform: rotateX($degree);
+    -ms-transform: rotateX($degree);
+    transform: rotateX($degree);
+}
+
+@mixin rotate($degree: -1deg){
+	-webkit-transform: rotate($degree);
+	-moz-transform: rotate($degree);
+	-o-transform: rotate($degree);
+	-ms-transform: rotate($degree);
+	transform: rotate($degree);
+}
+
+@mixin boxShadow($h: 0, $v: 0, $blur: 15px, $spread: 10px, $color: rgba(black, .5)){
+	box-shadow: $h $v $blur $spread $color;
+	-moz-box-shadow: $h $v $blur $spread $color;
+	-webkit-box-shadow: $h $v $blur $spread $color;
+	-ms-box-shadow: $h $v $blur $spread $color;
 }

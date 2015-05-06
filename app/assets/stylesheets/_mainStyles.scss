@@ -4,6 +4,7 @@ $blue: #36abe1;
 $steps-gray: #9ba0a4;
 $subtitle-gray: #5c6366;
 $text-gray: #65686f;
+$background-gray: #bbbfc2;
 
 *{
 	@include borderBox;
@@ -12,21 +13,62 @@ $text-gray: #65686f;
 
 html, body{
 	height:100%;
+	background: $background-gray;
 }
 
-.wrapper{
-	min-height: 100%;
-	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
-	height: 100%;
-}
-
-main, header{
+main, header, .wrapper, .container{
 	width: 980px;
 	margin: 0 auto;
+	position:relative;
+}
+.wrapper{
+	height: 465px;
+	// shadows around wrapper
+	&:before{
+		@include boxShadow;
+		@include rotate;
+		z-index: 0;
+		position: absolute;
+		content: "";
+		bottom: 15px;
+		width: 50%;
+		top: 0;
+		left:10px;
+		background: none;
+	}
+	&:after{
+		@include boxShadow;
+		@include rotate(1deg);
+		z-index: 0;
+		position: absolute;
+		content: "";
+		bottom: 15px;
+		width: 50%;
+		top: 0;
+		right:10px;
+		background: none;
+	}
+}
+.container{
+	background: white;
+	z-index: 1;
+	&:before{
+		@include boxShadow(0,0,20px,0, rgba(black, .5));
+		content: "";
+		position: absolute;
+		z-index: -1;
+		height: 41px;
+		bottom: 0;
+		left: 10px;
+		right: 10px;
+		-moz-border-radius: 100px / 10px;
+		border-radius: 100px / 10px;
+	}
 }
 main{
-	margin-top: 60px;
-	overflow:auto;
+	margin: 60px 0 50px 0;
+	overflow:hidden;
+	background: white;
 }
 header{
 	height: 276px;
@@ -34,9 +76,11 @@ header{
 }
 .row{
 	clear:both;
+	height: 500px;
 }
 .col{
 	float:left;
+	height: 100%;
 	&:first-child{
 		width: 30%;
 	}
@@ -48,13 +92,14 @@ header{
 		@include linearGradient($gray, $dark-gray);
 	}
 	.column-2{
-		padding: 0 70px;
+		width: 686px;
+		overflow-x: hidden;
 	}
 		.step-list{
 			list-style:none;
 			margin: 0;
 			padding:0;
-			li{
+			.baby-step{
 				position:relative;
 				height: 60px;
 				font-size: 18px;
@@ -62,17 +107,20 @@ header{
 				border-bottom: 1px solid white;
 				line-height: 60px;
 				color: $steps-gray;
-				padding-left: 40%;
+				perspective: 1000;
 				&:last-child{
 					border-bottom:none;
 				}
-				&.active{
-					background:white;
-					color: $blue;
-					font-weight: 600;
+				&:hover{
+					cursor:pointer;
 				}
 			}
+			a{
+				z-index: 1;
+  				position: relative;
+			}
 		}
+
 			.icon{
 				@include verticalAlign;
 				position:absolute;
@@ -81,6 +129,7 @@ header{
 				height: 24px;
 				width: 30px;
 				background: url('../images/icons/sprites/icons_small.png') no-repeat;
+				z-index: 1;
 			}
 
 				@for $i from 0 through 6{
@@ -89,8 +138,14 @@ header{
 	  				}
 				}
 
+.step-content-holder{
+	width: 700%;
+	height: 500px;
+}
 .step-content{
-	display:none;
+	width: 686px;
+	padding: 0 70px;
+	float:left;
 	h2{
 		font-size: 30px;
 		font-weight: 600;
@@ -111,6 +166,59 @@ header{
 		line-height: 18px;
 	}
 }
-	.active{
-		display:block;
+
+	.step-title{
+		padding-left: 95px;
+		height: 65px;
 	}
+	@for $i from 1 through 7{
+		.step-title-#{$i}{
+			background: url('../images/icons/individual/icons_large_bs#{$i}_blue.png') no-repeat;
+		}
+	}	
+
+/* tab animation */
+.active{
+	display:block;
+}
+
+.activate-flipper{
+	@include transitionSpeed;
+	@include rotateY;
+}
+
+.front, .back {
+	@include backfaceVisibility;
+	@include flipTransitionStyles;
+	position: absolute;
+	padding-left: 40%;
+	width:100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.flipper{
+	@include transitionSpeed;
+	transform-style: preserve-3d;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.front {
+	-webkit-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	background: none;
+	z-index: 2;
+}
+.back {
+	@include rotateY;
+	background: white;
+	a{
+		color: $blue;
+		font-weight: 600;
+		width: 100%;
+	}
+}

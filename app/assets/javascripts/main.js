@@ -1,13 +1,17 @@
 $(document).ready(function(){
 	
-	$('ul.step-list li').click(function(){
-		var stepID = $(this).attr('data-step');
+	$('.baby-step').click(function(){
+		var stepID = $(this).attr('data-step'),
+			IDLength = stepID.length;
+			lastChar = stepID.charAt(IDLength - 1);
 
-		$('ul.step-list li').removeClass('active');
-		$('.step-content').removeClass('active');
+		// unflips any selected tabs, flips the selected one
+		$('.flipper').removeClass('activate-flipper');
+		$(this).children('.flipper').addClass('activate-flipper');
 
-		$(this).addClass('active');
-		$("#"+stepID).addClass('active');
-	})
-
+		// moves different steps into view
+		$('.step-content-holder').animate({
+			   "margin-left": "-" + (lastChar-1)*100 + "%"
+			}, 300);
+		})
 })
