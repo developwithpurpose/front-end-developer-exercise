@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	
+	// when baby step is clicked, execute animation and move appropriate content into view
 	$('.baby-step').click(function(){
 		var stepID = $(this).attr('data-step'),
 			IDLength = stepID.length;
@@ -17,7 +18,7 @@ $(document).ready(function(){
 
 	$.getJSON( "http://localhost:9001/app/assets/javascripts/baby-steps.json", function( data ) {
 
-		// start counting how many people are in each step outside the loop so they're not overwritten each time.
+		// start counting how many people are in each step outside the loop so they're not overwritten each time
 		var step1Count = 0,
 			step2Count = 0,
 			step3Count = 0,
@@ -28,7 +29,7 @@ $(document).ready(function(){
 
 		for (var i = 0; i < data.friends.length; i++) {
 
-			// counts the number of list names as span items, so it can stop after getting to two per step.
+			// counts the number of list names as span items, so it can stop after getting to two per step
 			var spanCount = $(('.friends-list-' + theBabyStep) + " span").length;
 			
 			// define in which baby step we're dealing with when looping through each item
@@ -72,17 +73,30 @@ $(document).ready(function(){
 				default: 
 					return false;
 			}
+	
+	
 
-			// only append more span tags & names if the current count isn't alread at 2
+			// only append more span tags & names if the current count isn't already at 2
 			if(spanCount < 2){
 				// appends each name within <span> tags so :after pseduo element can add commas except for on the last child 
 				$('.friends-list-' + theBabyStep).append('<span>' + data.friends[i].firstName + " " + data.friends[i].lastName + '</span>');
 			};
-
-			// each time, replace .others-list with the updated count, minus two since they're listed as spans
-			$('.friends-list-' + theBabyStep + '+ .others-list').replaceWith("<p class='others-list'>and " + (thisStepCount - 2) + " Other Friends are on this step.</p>");
+			
+			if(thisStepCount == 2){
+				$('.friends-list-' + theBabyStep + ' span:first-child').append(' <p class="and">and</p>');
+				$('.friends-list-' + theBabyStep + ' span:after').css('display','none');
+			}
+			
+			// only show other friends count if there are more than two friends on this step
+			if(thisStepCount > 2){	
+				// each time, replace .others-list with the updated count, minus two since they're listed as spans
+				// note that it's replaced with another 'others-list' class instance -- otherwise, future replacements wouldn't work
+				$('.friends-list-' + theBabyStep + '+ .others-list').replaceWith("<p class='others-list'>and " + (thisStepCount - 2) + " Other Friends are on this step.</p>");
+			}
 
 		}
+		
+		
 
 	});
 })
