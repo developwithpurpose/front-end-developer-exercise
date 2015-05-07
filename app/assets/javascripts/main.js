@@ -18,6 +18,9 @@ $(document).ready(function(){
 
 	$.getJSON( "http://localhost:9001/app/assets/javascripts/baby-steps.json", function( data ) {
 
+		// filler profilelink variable that could be swapped out for the link in JSON.
+		var profileLink = "http://macarthur.me";
+
 		// start counting how many people are in each step outside the loop so they're not overwritten each time
 		var step1Count = 0,
 			step2Count = 0,
@@ -77,16 +80,16 @@ $(document).ready(function(){
 			// only append more span tags & names if the current count isn't already at 2
 			if(spanCount < 2){
 				// appends each name within <span> tags so :after pseduo element can add commas except for on the last child 
-				$('.friends-list-' + theBabyStep).append('<span>' + data.friends[i].firstName + " " + data.friends[i].lastName + '</span>');
+				$('.friends-list-' + theBabyStep).prepend("<span class='name-span'><a href='" + profileLink + "'>"  + data.friends[i].firstName + " " + data.friends[i].lastName + "</a></span>");
 			};
 			
 			// place an 'and' between the names if there are only two on that particular baby step
 			// if there are more than two people on the baby step, then remove any 'and's that were placed there
 			if(thisStepCount == 2){
-				$('.friends-list-' + theBabyStep + ' span:first-child').append("<aside>and</aside>");
+				$('.friends-list-' + theBabyStep + ' span:first-of-type').append("<aside> and </aside>");
 				$('.friends-list-' + theBabyStep + ' span').addClass('remove-comma');
 			} else if (thisStepCount > 2) {
-				$('.friends-list-' + theBabyStep + ' span:first-child aside').remove();
+				$('.friends-list-' + theBabyStep + '  aside').remove();
 				$('.friends-list-' + theBabyStep + ' span').removeClass('remove-comma');
 			}
 												
@@ -95,14 +98,14 @@ $(document).ready(function(){
 			
 				// based on the count, set the word choice for appended text
 				if(thisStepCount <= 3){
-					var wordChoice = "friend is";
+					var wordChoice = "Friend is";
 				} else {
-					var wordChoice = "friends are";
+					var wordChoice = "Friends are";
 				}
 					
 				// each time, replace .appended-text with the updated count, minus two since they're listed as spans
 				// note that it's replaced with another 'appended-text' class instance -- otherwise, future replacements wouldn't work
-				$('.friends-list-' + theBabyStep + '+ .appended-text').replaceWith("<p class='appended-text'>and " + (thisStepCount - 2) + " Other " + wordChoice + " on this step.</p>");
+				$('.friends-list-' + theBabyStep + ' .appended-text').replaceWith("<p class='appended-text'> and " + (thisStepCount - 2) + " Other " + wordChoice + " on this step.</p>");
 			
 			// if there are only one or two friends, then append slightly different text
 			} else {
@@ -115,7 +118,7 @@ $(document).ready(function(){
 				}
 				
 				// replace the appropriate 'appended-text' class instance with the correct text
-				$('.friends-list-' + theBabyStep + '+ .appended-text').replaceWith("<p class='appended-text'> " + wordChoice + " on this baby step.</p>");				
+				$('.friends-list-' + theBabyStep + ' .appended-text').replaceWith("<p class='appended-text'> " + wordChoice + " on this step</p>");				
 			}
 				
 		}
