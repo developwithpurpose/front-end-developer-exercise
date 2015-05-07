@@ -73,8 +73,6 @@ $(document).ready(function(){
 				default: 
 					return false;
 			}
-	
-	
 
 			// only append more span tags & names if the current count isn't already at 2
 			if(spanCount < 2){
@@ -82,21 +80,45 @@ $(document).ready(function(){
 				$('.friends-list-' + theBabyStep).append('<span>' + data.friends[i].firstName + " " + data.friends[i].lastName + '</span>');
 			};
 			
+			// place an 'and' between the names if there are only two on that particular baby step
+			// if there are more than two people on the baby step, then remove any 'and's that were placed there
 			if(thisStepCount == 2){
-				$('.friends-list-' + theBabyStep + ' span:first-child').append(' <p class="and">and</p>');
-				$('.friends-list-' + theBabyStep + ' span:after').css('display','none');
+				$('.friends-list-' + theBabyStep + ' span:first-child').append("<aside>and</aside>");
+				$('.friends-list-' + theBabyStep + ' span').addClass('remove-comma');
+			} else if (thisStepCount > 2) {
+				$('.friends-list-' + theBabyStep + ' span:first-child aside').remove();
+				$('.friends-list-' + theBabyStep + ' span').removeClass('remove-comma');
 			}
-			
+												
 			// only show other friends count if there are more than two friends on this step
 			if(thisStepCount > 2){	
-				// each time, replace .others-list with the updated count, minus two since they're listed as spans
-				// note that it's replaced with another 'others-list' class instance -- otherwise, future replacements wouldn't work
-				$('.friends-list-' + theBabyStep + '+ .others-list').replaceWith("<p class='others-list'>and " + (thisStepCount - 2) + " Other Friends are on this step.</p>");
+			
+				// based on the count, set the word choice for appended text
+				if(thisStepCount <= 3){
+					var wordChoice = "friend is";
+				} else {
+					var wordChoice = "friends are";
+				}
+					
+				// each time, replace .appended-text with the updated count, minus two since they're listed as spans
+				// note that it's replaced with another 'appended-text' class instance -- otherwise, future replacements wouldn't work
+				$('.friends-list-' + theBabyStep + '+ .appended-text').replaceWith("<p class='appended-text'>and " + (thisStepCount - 2) + " Other " + wordChoice + " on this step.</p>");
+			
+			// if there are only one or two friends, then append slightly different text
+			} else {
+				
+				// based on the count, set the word choice for appended text
+				if(thisStepCount == 1){
+					var wordChoice = "is";
+				} else {
+					var wordChoice = "are";
+				}
+				
+				// replace the appropriate 'appended-text' class instance with the correct text
+				$('.friends-list-' + theBabyStep + '+ .appended-text').replaceWith("<p class='appended-text'> " + wordChoice + " on this baby step.</p>");				
 			}
-
+				
 		}
-		
-		
 
 	});
 })
