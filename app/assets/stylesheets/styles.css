@@ -567,6 +567,11 @@ header {
 .step-title-7 {
   background: url("../images/icons/individual/icons_large_bs7_blue.png") no-repeat; }
 
+.friends-list span:after {
+  content: ", "; }
+.friends-list span:last-child:after {
+  content: ""; }
+
 /* tab animation */
 .active {
   display: block; }

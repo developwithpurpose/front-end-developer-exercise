@@ -177,6 +177,19 @@ header{
 		}
 	}	
 
+.friends-list{
+	span{
+		&:after{
+			content:", ";
+		}
+		&:last-child{
+			&:after{
+				content:"";
+			}
+		}
+	}
+}
+
 /* tab animation */
 .active{
 	display:block;
