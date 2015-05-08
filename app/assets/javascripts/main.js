@@ -6,9 +6,14 @@ $(document).ready(function(){
 			IDLength = stepID.length;
 			lastChar = stepID.charAt(IDLength - 1);
 
+		$('.flipper').flip({
+		  axis: 'y',
+		  trigger: 'click'
+		});
+
 		// unflips any selected tabs, flips the selected one
-		$('.flipper').removeClass('activate-flipper');
-		$(this).children('.flipper').addClass('activate-flipper');
+		// $('.flipper').removeClass('activate-flipper');
+		// $(this).children('.flipper').addClass('activate-flipper');
 
 		// move different baby steps into view by adjusting left margin
 		$('.step-content-holder').animate({
