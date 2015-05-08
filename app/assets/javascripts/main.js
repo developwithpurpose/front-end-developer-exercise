@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
 	// was having dreadful time getting conditional CSS to work for IE, so fell back to JS detection
 	// function borrowed & modified from: http://stackoverflow.com/a/19999868
 	function msieversion() {
@@ -20,11 +19,18 @@ $(document).ready(function(){
 	if(msieversion() == false){
 		$('.baby-step:first-child .flipper').addClass('activate-flipper');
 	} else {
+		// misc style changes
+		$('.back').remove();
+		$('.icon').css('margin-top','-12px');
+		
+		// activates the first baby step item if in IE
 		$('.baby-step:first-child .flipper').addClass('ie-activated');
 		$('.baby-step:first-child').addClass('alter-icon');
+		
+		// animation on hover for IE only
 		$('.flipper').hover(function(){$(this).toggleClass('ie-hover');});
 	}
-	
+
 	// when baby step is clicked, execute animation and move appropriate content into view
 	$('.baby-step').click(function(){
 		var stepID = $(this).attr('data-step'),
@@ -33,7 +39,7 @@ $(document).ready(function(){
 
 		$(".baby-step").removeClass("alter-icon");
 		$(this).addClass("alter-icon");
-
+		
 		// apply tab transition if not using Internet Explorer
 		if(msieversion() == false){
 			// unflips any selected tabs, flips the selected one
@@ -42,9 +48,9 @@ $(document).ready(function(){
 		} else {
 			$('.flipper').removeClass('ie-hover');
 			$('.flipper').removeClass('ie-activated');
+			$(this).children('.flipper').addClass('ie-hover');
 			$(this).children('.flipper').addClass('ie-activated');
 		}
-
 		// move different baby steps into view by adjusting left margin
 		$('.step-content-holder').animate({
 			   "margin-left": "-" + (lastChar-1)*100 + "%"

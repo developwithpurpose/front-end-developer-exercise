@@ -17,17 +17,17 @@ html, body{
 	height:100%;
 	background: $background-gray;
 }
-main, header, .wrapper, .container{
+.main, .header, .wrapper, .container{
 	width: 980px;
 	margin: 0 auto;
 	position:relative;
 }
-main{
+.main{
 	margin: 60px 0 50px 0;
 	overflow:hidden;
 	background: white;
 }
-header{
+.header{
 	height: 276px;
 	background: url('../images/header.jpg') no-repeat;
 }
@@ -259,7 +259,6 @@ header{
 .front {
 	-webkit-transform: rotateY(0deg);
 	-ms-transform: rotateY(0deg);
-	background: none;
 }
 .back {
 	@include rotateY;
@@ -274,6 +273,9 @@ header{
 .ie-hover, .ie-activated{
 	@include transitionSpeed;
 	background: white;
+	.front{
+		background:white;
+		}
 }
 .alter-icon{
 	@for $i from 0 through 6{

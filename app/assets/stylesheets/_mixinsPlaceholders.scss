@@ -3,7 +3,8 @@
 	background: -moz-linear-gradient(left, $from 95%, $to 100%);
 	background: -o-linear-gradient(left, $from 95%, $to 100%);
 	background: -ms-linear-gradient(left, $from 95%, $to 100%);
-	background: linear-gradient(left, $from 95%, $to 100%);
+	background: linear-gradient(to right, $from 95%, $to 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#ebeced, endColorstr=#d1d5d6,GradientType=1 );
 }
 
 @mixin verticalAlign(){
@@ -24,7 +25,8 @@
 
 @mixin borderBox{
 	-webkit-box-sizing: border-box; 
-  	-moz-box-sizing: border-box;    
+  	-moz-box-sizing: border-box;  
+	-ms-box-sizing: border-box;
   	box-sizing: border-box;  
 }
 
@@ -64,12 +66,12 @@
     transform: rotateY(0deg);
 }
 
-@mixin rotateY{
-	-webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -o-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
+@mixin rotateY($default:-180deg){
+	-webkit-transform: rotateY($default);
+    -moz-transform: rotateY($default);
+    -o-transform: rotateY($default);
+    -ms-transform: rotateY($default);
+    transform: rotateY($default);
 }
 
 @mixin rotateX($degree: 45deg){

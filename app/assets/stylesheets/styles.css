@@ -360,6 +360,7 @@ th {
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif; }
 
@@ -367,17 +368,17 @@ html, body {
   height: 100%;
   background: #bbbfc2; }
 
-main, header, .wrapper, .container {
+.main, .header, .wrapper, .container {
   width: 980px;
   margin: 0 auto;
   position: relative; }
 
-main {
+.main {
   margin: 60px 0 50px 0;
   overflow: hidden;
   background: white; }
 
-header {
+.header {
   height: 276px;
   background: url("../images/header.jpg") no-repeat; }
 
@@ -473,7 +474,8 @@ header {
   background: -moz-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
   background: -o-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
   background: -ms-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
-  background: linear-gradient(left, #ebeced 95%, #d1d5d6 100%); }
+  background: linear-gradient(to right, #ebeced 95%, #d1d5d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#ebeced, endColorstr=#d1d5d6,GradientType=1 ); }
 
 .column-2 {
   width: 686px;
@@ -665,8 +667,7 @@ header {
 
 .front {
   -webkit-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  background: none; }
+  -ms-transform: rotateY(0deg); }
 
 .back {
   -webkit-transform: rotateY(-180deg);
@@ -685,8 +686,10 @@ header {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background: white; }  
-  
+  background: white; }
+  .ie-hover .front, .ie-activated .front {
+    background: white; }
+
 .alter-icon .icon-1 {
   background-position: 0 -175px; }
 .alter-icon .icon-2 {
