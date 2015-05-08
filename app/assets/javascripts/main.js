@@ -105,7 +105,7 @@ $(document).ready(function(){
 					
 				// each time, replace .appended-text with the updated count, minus two since they're listed as spans
 				// note that it's replaced with another 'appended-text' class instance -- otherwise, future replacements wouldn't work
-				$('.friends-list-' + theBabyStep + ' .appended-text').replaceWith("<p class='appended-text'> and " + (thisStepCount - 2) + " Other " + wordChoice + " on this step.</p>");
+				$('.friends-list-' + theBabyStep + ' .appended-text').replaceWith("<p class='appended-text'> and " + (thisStepCount - 2) + " Other " + wordChoice + " on this step</p>");
 			
 			// if there are only one or two friends, then append slightly different text
 			} else {
