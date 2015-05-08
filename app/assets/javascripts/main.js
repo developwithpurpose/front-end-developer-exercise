@@ -1,4 +1,27 @@
 $(document).ready(function(){
+
+
+	// was having dreadful time getting conditional CSS to work for IE, so fell back to JS detection
+	// function borrowed & modified from: http://stackoverflow.com/a/19999868
+	function msieversion() {
+
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){      // If Internet Explorer, return version number
+            return true;
+        } else {
+        	return false;
+        }
+	}
+
+	// if not using IE, then add the flipper class to the first nav tab (baby step #1)
+	// if using IE, then use the class .ie-hover for tab animation when hovering
+	if(msieversion() == false){
+		$('.baby-step:first-child .flipper').addClass('activate-flipper');
+	} else {
+		$('.flipper').hover(function(){$(this).toggleClass('ie-hover');});
+	}
 	
 	// when baby step is clicked, execute animation and move appropriate content into view
 	$('.baby-step').click(function(){
@@ -6,14 +29,18 @@ $(document).ready(function(){
 			IDLength = stepID.length;
 			lastChar = stepID.charAt(IDLength - 1);
 
-		$('.flipper').flip({
-		  axis: 'y',
-		  trigger: 'click'
-		});
+		$(".baby-step").removeClass("alter-icon");
+		$(this).addClass("alter-icon");
 
-		// unflips any selected tabs, flips the selected one
-		// $('.flipper').removeClass('activate-flipper');
-		// $(this).children('.flipper').addClass('activate-flipper');
+		// apply tab transition if not using Internet Explorer
+		if(msieversion() == false){
+			// unflips any selected tabs, flips the selected one
+			$('.flipper').removeClass('activate-flipper');
+			$(this).children('.flipper').addClass('activate-flipper');
+		} else {
+			$('.flipper').removeClass('ie-activated');
+			$(this).children('.flipper').addClass('ie-activated');
+		}
 
 		// move different baby steps into view by adjusting left margin
 		$('.step-content-holder').animate({
