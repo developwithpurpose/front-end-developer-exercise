@@ -20,6 +20,8 @@ $(document).ready(function(){
 	if(msieversion() == false){
 		$('.baby-step:first-child .flipper').addClass('activate-flipper');
 	} else {
+		$('.baby-step:first-child .flipper').addClass('ie-activated');
+		$('.baby-step:first-child').addClass('alter-icon');
 		$('.flipper').hover(function(){$(this).toggleClass('ie-hover');});
 	}
 	
@@ -38,6 +40,7 @@ $(document).ready(function(){
 			$('.flipper').removeClass('activate-flipper');
 			$(this).children('.flipper').addClass('activate-flipper');
 		} else {
+			$('.flipper').removeClass('ie-hover');
 			$('.flipper').removeClass('ie-activated');
 			$(this).children('.flipper').addClass('ie-activated');
 		}
