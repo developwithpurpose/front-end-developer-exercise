@@ -357,6 +357,7 @@ td,
 th {
   padding: 0; }
 
+/* variables */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -597,7 +598,8 @@ html, body {
     font-size: 13px; }
     .friends-list .name-span a {
       color: #6fbee7;
-      text-decoration: none; }
+      text-decoration: none;
+      font-weight: normal; }
     .friends-list .name-span:after {
       color: #65686f;
       content: ", "; }
@@ -681,6 +683,7 @@ html, body {
     font-weight: 600;
     width: 100%; }
 
+/* classes toggled by jQuery for tabs if using IE */
 .ie-hover, .ie-activated {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -708,5 +711,20 @@ html, body {
   color: #36abe1;
   font-weight: 600;
   width: 100%; }
+
+/* styles applied when using IE */
+#unfriendly-browser .column-1 {
+  filter: none;
+  background: none;
+  background: url("../images/shadow_left_nav.jpg") repeat-y;
+  background-position: right; }
+#unfriendly-browser .activate-flipper {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg); }
+#unfriendly-browser .back {
+  display: none; }
 
 /*# sourceMappingURL=styles.css.map */

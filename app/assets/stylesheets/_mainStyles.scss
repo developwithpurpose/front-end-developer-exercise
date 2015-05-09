@@ -1,5 +1,4 @@
-// color variables
-
+/* variables */
 $gray: #ebeced;
 $dark-gray: #d1d5d6;
 $blue: #36abe1;
@@ -206,6 +205,7 @@ html, body{
 		a{
 			color: $text-blue;
 			text-decoration:none;
+			font-weight: normal;
 		}
 		&:after{
 			color: $text-gray;
@@ -269,7 +269,7 @@ html, body{
 		width: 100%;
 	}
 }
-// class toggled by jQuery for tabs if using IE
+/* classes toggled by jQuery for tabs if using IE */
 .ie-hover, .ie-activated{
 	@include transitionSpeed;
 	background: white;
@@ -289,5 +289,20 @@ html, body{
 		  	font-weight: 600;
 		  	width: 100%;
 		}
+	}
+}
+/* styles applied when using IE */
+#unfriendly-browser{
+	.column-1{
+		filter:none;
+		background:none;
+		background: url('../images/shadow_left_nav.jpg') repeat-y;
+		background-position: right;
+	}
+	.activate-flipper{
+		@include rotateY(0deg);
+	}
+	.back{
+		display:none;
 	}
 }

@@ -1,28 +1,35 @@
 $(document).ready(function(){
 
-	// was having dreadful time getting conditional CSS to work for IE, so fell back to JS detection
+	// discover if user is using either Safari or IE
+	if(navigator.userAgent.indexOf("Safari") > -1){
+		var is_safari = true;
+	}
+	if(navigator.userAgent.indexOf('MSIE') > -1){
+		var is_explorer = true;
+	}
+
+	// was having dreadful time getting conditional CSS to work, so fell back to JS detection
 	// function borrowed & modified from: http://stackoverflow.com/a/19999868
-	function msieversion() {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+    versionNum = parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)));
 
-        var ua = window.navigator.userAgent;
-        var msie = ua.indexOf("MSIE ");
-
-        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){      // If Internet Explorer, return version number
-            return true;
-        } else {
-        	return false;
-        }
+	// adds ID to DOM so IE/Safari-specific styles will kick in
+	if(is_safari || is_explorer){
+		$('body').attr('id','unfriendly-browser');
 	}
 
 	// if not using IE, then add the flipper class to the first nav tab (baby step #1)
-	// if using IE, then use the class .ie-hover for tab animation when hovering
-	if(msieversion() == false){
+	// if using IE or Safari, then use the class .ie-hover for tab animation when hovering
+	if((is_safari == false) && (is_explorer == false)){
+
 		$('.baby-step:first-child .flipper').addClass('activate-flipper');
+
 	} else {
-		// misc style changes
-		$('.back').remove();
-		$('.icon').css('margin-top','-12px');
-		
+
+		if(versionNum === 8){
+			$('.icon').css('margin-top','-12px');
+		}
 		// activates the first baby step item if in IE
 		$('.baby-step:first-child .flipper').addClass('ie-activated');
 		$('.baby-step:first-child').addClass('alter-icon');
@@ -39,23 +46,22 @@ $(document).ready(function(){
 
 		$(".baby-step").removeClass("alter-icon");
 		$(this).addClass("alter-icon");
+		$('.flipper').removeClass('activate-flipper');
+		$(this).children('.flipper').addClass('activate-flipper');
 		
-		// apply tab transition if not using Internet Explorer
-		if(msieversion() == false){
-			// unflips any selected tabs, flips the selected one
-			$('.flipper').removeClass('activate-flipper');
-			$(this).children('.flipper').addClass('activate-flipper');
-		} else {
+		// apply tab transition if using Internet Explorer or Safari
+		if(is_safari || is_explorer){
 			$('.flipper').removeClass('ie-hover');
 			$('.flipper').removeClass('ie-activated');
 			$(this).children('.flipper').addClass('ie-hover');
 			$(this).children('.flipper').addClass('ie-activated');
 		}
+
 		// move different baby steps into view by adjusting left margin
 		$('.step-content-holder').animate({
-			   "margin-left": "-" + (lastChar-1)*100 + "%"
-			}, 300);
-		});
+			"margin-left": "-" + (lastChar-1)*100 + "%"
+		}, 300);
+	});
 
 	$.getJSON( "http://localhost:9001/app/assets/javascripts/baby-steps.json", function( data ) {
 
