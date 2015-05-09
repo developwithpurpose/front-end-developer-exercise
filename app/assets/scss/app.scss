@@ -106,6 +106,8 @@ p {
         line-height: 60px;
         color: $nav-font-color;
         border-bottom: 1px solid $white;
+        background: none;
+        transition: background-color 0.75s ease;
 
         .icon {
             position: relative;
@@ -147,7 +149,7 @@ p {
         }
 
         &.active {
-          background-color: $white;
+          background: $white;
           color: $baby-step-number;
           font-weight: 600;
 

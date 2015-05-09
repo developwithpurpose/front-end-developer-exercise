@@ -67,7 +67,9 @@ p {
       font-weight: 300;
       line-height: 60px;
       color: #9ba0a4;
-      border-bottom: 1px solid #ffffff; }
+      border-bottom: 1px solid #ffffff;
+      background: none;
+      transition: background-color 0.75s ease; }
       #nav ul li a .icon {
         position: relative;
         top: 6px;
@@ -92,7 +94,7 @@ p {
       #nav ul li a.step-7 .icon {
         background-position: 0 -150px; }
       #nav ul li a.active {
-        background-color: #ffffff;
+        background: #ffffff;
         color: #36abe1;
         font-weight: 600; }
         #nav ul li a.active.step-1 .icon {
