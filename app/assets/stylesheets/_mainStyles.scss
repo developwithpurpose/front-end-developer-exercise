@@ -1,0 +1,308 @@
+/* variables */
+$gray: #ebeced;
+$dark-gray: #d1d5d6;
+$blue: #36abe1;
+$steps-gray: #9ba0a4;
+$subtitle-gray: #5c6366;
+$text-gray: #65686f;
+$text-blue: #6fbee7;
+$background-gray: #bbbfc2;
+
+*{
+	@include borderBox;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+html, body{
+	height:100%;
+	background: $background-gray;
+}
+.main, .header, .wrapper, .container{
+	width: 980px;
+	margin: 0 auto;
+	position:relative;
+}
+.main{
+	margin: 60px 0 50px 0;
+	overflow:hidden;
+	background: white;
+}
+.header{
+	height: 276px;
+	background: url('../images/header.jpg') no-repeat;
+}
+.header-text{
+	color:white;
+	float:right;
+	margin: 50px 70px 0 0;
+	font-family: 'Open Sans', sans-serif;
+	text-align:right;
+	h2{
+		font-weight: 100;
+		font-size: 32px;
+		margin: 0 0 5px 0;
+		line-height:100%;
+	}
+	h1{
+		margin: 0;
+		font-weight: 700;
+		font-size: 50px;
+		line-height: 48px;
+		text-transform:uppercase;
+	}
+}
+.wrapper{
+	height: 465px;
+	// shadows around wrapper
+	&:before{
+		@include boxShadow;
+		@include rotate;
+		z-index: 0;
+		position: absolute;
+		content: "";
+		bottom: 15px;
+		width: 50%;
+		top: 0;
+		left:10px;
+		background: none;
+	}
+	&:after{
+		@include boxShadow;
+		@include rotate(1deg);
+		z-index: 0;
+		position: absolute;
+		content: "";
+		bottom: 15px;
+		width: 50%;
+		top: 0;
+		right:10px;
+		background: none;
+	}
+}
+.container{
+	background: white;
+	z-index: 1;
+	&:before{
+		@include boxShadow(0,0,20px,0, rgba(black, .5));
+		content: "";
+		position: absolute;
+		z-index: -1;
+		height: 41px;
+		bottom: 0;
+		left: 10px;
+		right: 10px;
+		-moz-border-radius: 100px / 10px;
+		border-radius: 100px / 10px;
+	}
+}
+.row{
+	clear:both;
+	height: 500px;
+}
+.col{
+	float:left;
+	height: 100%;
+	&:first-child{
+		width: 30%;
+	}
+	&:last-child{
+		width: 70%;
+	}
+}
+.column-1{
+	@include linearGradient($gray, $dark-gray);
+}
+.column-2{
+	width: 686px;
+	overflow-x: hidden;
+}
+.step-list{
+	list-style:none;
+	margin: 0;
+	padding:0;
+	.baby-step{
+		position:relative;
+		height: 60px;
+		font-size: 18px;
+		font-weight:normal;
+		border-bottom: 1px solid white;
+		line-height: 60px;
+		color: $steps-gray;
+		perspective: 1000;
+		&:last-child{
+			border-bottom:none;
+		}
+		&:hover{
+			cursor:pointer;
+		}
+	}
+	a{
+		z-index: 1;
+			position: relative;
+	}
+}
+.icon{
+	@include verticalAlign;
+	position:absolute;
+	right: 24px;
+	display:block;
+	height: 24px;
+	width: 30px;
+	background: url('../images/icons/sprites/icons_small.png') no-repeat;
+	z-index: 1;
+}
+@for $i from 0 through 6{
+	.icon-#{$i+1} {
+			background-position: 0px $i*-25px; 
+		}
+}
+.step-content-holder{
+	width: 700%;
+	height: 500px;
+}
+.step-content{
+	width: 686px;
+	padding: 0 70px;
+	float:left;
+	h2{
+		font-size: 30px;
+		font-weight: 600;
+		color: $blue;
+		margin: 0;
+	}
+	span{
+		font-weight: 100;
+		color: $subtitle-gray;
+		line-height: 20px;
+		font-size: 18px;
+	}
+	p{
+		font-family:  Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		font-size: 13px;
+		color: $text-gray;
+		line-height: 18px;
+		&:last-of-type{
+			margin-bottom:30px;
+		}
+		&:first-of-type{
+			margin-top: 15px;
+		}
+	}
+}
+.step-title{
+	padding-left: 95px;
+	height: 65px;
+}
+@for $i from 1 through 7{
+	.step-title-#{$i}{
+		background: url('../images/icons/individual/icons_large_bs#{$i}_blue.png') no-repeat;
+	}
+}	
+.friends-list{
+	font-family: Helvetica, Arial, sans-serif;
+	.name-span{
+		font-size: 13px;
+		a{
+			color: $text-blue;
+			text-decoration:none;
+			font-weight: normal;
+		}
+		&:after{
+			color: $text-gray;
+			content:", ";
+		}
+		&:last-of-type{
+			&:after{
+				content:"";
+			}
+		}
+		&.remove-comma:after{
+			content: ""!important;
+		}
+	}
+	aside{
+		color: $text-gray;
+		display: inline;
+	}
+	p{
+		display: inline;
+	}
+}
+/* tab animation */
+.active{
+	display:block;
+}
+.activate-flipper{
+	@include transitionSpeed;
+	@include rotateY;
+}
+.front, .back {
+	@include backfaceVisibility;
+	@include flipTransitionStyles;
+	position: absolute;
+	padding-left: 40%;
+	width:100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.flipper{
+	@include transitionSpeed;
+	// following attribute does not work in IE; falls back on JS in that case, for different animation
+	transform-style: preserve-3d;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.front {
+	-webkit-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+}
+.back {
+	@include rotateY;
+	background: white;
+	a{
+		color: $blue;
+		font-weight: 600;
+		width: 100%;
+	}
+}
+/* classes toggled by jQuery for tabs if using IE */
+.ie-hover, .ie-activated{
+	@include transitionSpeed;
+	background: white;
+	.front{
+		background:white;
+		}
+}
+.alter-icon{
+	@for $i from 0 through 6{
+		.icon-#{$i+1}{
+			background-position: 0 (-25*$i)-175px;
+		}
+	}
+	.front{
+		a{
+			color: $blue;
+		  	font-weight: 600;
+		  	width: 100%;
+		}
+	}
+}
+/* styles applied when using IE */
+#unfriendly-browser{
+	.column-1{
+		filter:none;
+		background:none;
+		background: url('../images/shadow_left_nav.jpg') repeat-y;
+		background-position: right;
+	}
+	.activate-flipper{
+		@include rotateY(0deg);
+	}
+	.back{
+		display:none;
+	}
+}
