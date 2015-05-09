@@ -85,6 +85,7 @@ p {
 #nav {
   width: 25%;
   float: left;
+  min-height: 600px;
 
   @include nav-gradient();
 
