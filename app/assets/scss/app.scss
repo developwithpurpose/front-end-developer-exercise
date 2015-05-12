@@ -1,0 +1,242 @@
+$source_sans: 'Source Sans Pro', sans-serif;
+$open_sans: 'Open Sans', sans-serif;
+$helvetica: 'Helvetica', sans-serif;
+
+$white: #ffffff;
+$main-bg-color: #bbbfc2;
+$nav-font-color: #9ba0a4;
+$content-bg-color: $white;
+$body-copy: #65686f;
+$baby-step-number: #36abe1;
+$baby-step-name: #5c6366;
+$friend-name: #6fbee7;
+
+@mixin nav-gradient() {
+  background: #ebeced;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI5NiUiIHN0b3AtY29sb3I9IiNlYmVjZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZDFkNWQ2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+  background: -moz-linear-gradient(left,  #ebeced 96%, #d1d5d6 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(96%,#ebeced), color-stop(100%,#d1d5d6));
+  background: -webkit-linear-gradient(left,  #ebeced 96%,#d1d5d6 100%);
+  background: -o-linear-gradient(left,  #ebeced 96%,#d1d5d6 100%);
+  background: -ms-linear-gradient(left,  #ebeced 96%,#d1d5d6 100%);
+  background: linear-gradient(to right,  #ebeced 96%,#d1d5d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
+}
+
+@mixin clearfix() {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  margin: 0;
+  background-color: $main-bg-color;
+}
+
+p {
+  font-family: $helvetica;
+  font-size: 13px;
+  color: $body-copy;
+  line-height: 18px;
+}
+
+#container {
+  margin: auto;
+  width: 980px;
+}
+
+#header {
+  min-height: 225px;
+  padding: 50px 70px 0 70px;
+  background-image: url('../images/header.jpg');
+  background-repeat: no-repeat;
+  font-family: $open_sans;
+  color: $white;
+  text-align: right;
+
+  .text-light {
+    width: 55%;
+    float: right;
+    font-weight: 300;
+    font-size: 32px;
+  }
+
+  .text-bold {
+    width: 55%;
+    float: right;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+}
+
+#main {
+  padding-top: 60px;
+  background-color: $content-bg-color;
+
+  //clearfix for floated nav and content sections
+  &:after {
+    @include clearfix();
+  }
+}
+
+#nav {
+  width: 25%;
+  float: left;
+  min-height: 600px;
+
+  @include nav-gradient();
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+
+      a {
+        display: block;
+        padding-right: 20px;
+        text-align: right;
+        text-decoration: none;
+        font-family: $source_sans;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 60px;
+        color: $nav-font-color;
+        border-bottom: 1px solid $white;
+        background: none;
+        transition: background-color 0.75s ease;
+
+        .icon {
+            position: relative;
+            top: 6px;
+            display: inline-block;
+            width: 30px;
+            height: 25px;
+            margin-left: 15px;
+            background-image: url('../images/icons/sprites/icons_small.png');
+            background-repeat: no-repeat
+        }
+
+        &.step-1 .icon {
+          background-position: 0 0;
+        }
+
+        &.step-2 .icon {
+          background-position: 0 -25px;
+        }
+
+        &.step-3 .icon {
+          background-position: 0 -50px;
+        }
+
+        &.step-4 .icon {
+          background-position: 0 -75px;
+        }
+
+        &.step-5 .icon {
+          background-position: 0 -100px;
+        }
+
+        &.step-6 .icon {
+          background-position: 0 -125px;
+        }
+
+        &.step-7 .icon {
+          background-position: 0 -150px;
+        }
+
+        &.active {
+          background: $white;
+          color: $baby-step-number;
+          font-weight: 600;
+
+          &.step-1 .icon {
+            background-position: 0 -175px;
+          }
+
+          &.step-2 .icon {
+            background-position: 0 -200px;
+          }
+
+          &.step-3 .icon {
+            background-position: 0 -225px;
+          }
+
+          &.step-4 .icon {
+            background-position: 0 -250px;
+          }
+
+          &.step-5 .icon {
+            background-position: 0 -275px;
+          }
+
+          &.step-6 .icon {
+            background-position: 0 -300px;
+          }
+
+          &.step-7 .icon {
+            background-position: 0 -325px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#content {
+  width: 75%;
+  float: right;
+
+  .baby-step {
+    padding: 0 70px;
+
+    .baby-step-header {
+      .baby-step-icon {
+        max-width: 79.9886px;
+        float: left;
+      }
+
+      .baby-step-text {
+        float: left;
+        margin-left: 10px;
+        padding-top: 10px;
+
+        .step-number {
+          font-family: $source_sans;
+          font-weight: 600;
+          font-size: 30px;
+          line-height: 20px;
+          color: $baby-step-number;
+          margin-bottom: 5px;
+        }
+
+        .step-name {
+          font-family: $source_sans;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 20px;
+          color: $baby-step-name;
+        }
+      }
+
+      &:after {
+        @include clearfix();
+      }
+    }
+
+    .baby-step-friends {
+      margin-top: 40px;
+      font-family: $helvetica;
+      color: $body-copy;
+      font-size: 13px;
+
+      .friend {
+        color: $friend-name;
+      }
+    }
+  }
+}

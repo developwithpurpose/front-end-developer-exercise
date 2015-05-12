@@ -64,7 +64,8 @@ module.exports = function( grunt ) {
           options: {
             port: 9001,
             livereload: true,
-            keepalive: true
+            keepalive: true,
+            hostname: "localhost"
           }
         }
       },
