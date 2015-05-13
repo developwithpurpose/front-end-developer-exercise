@@ -353,6 +353,19 @@ td,
 th {
   padding: 0; }
 
+/*---------------------------------
+		GLOBAL STYLES
+-----------------------------------*/
+body {
+  background-color: #bbbfc2; }
+
+.wrapper {
+  margin: 0 auto;
+  width: 980px; }
+
+/*---------------------------------
+		HEADER
+-----------------------------------*/
 header {
   background-image: url("../images/header.jpg");
   height: 276px; }
@@ -373,11 +386,56 @@ h1 {
     line-height: 48px;
     text-transform: uppercase; }
 
-body {
-  background-color: #bbbfc2; }
+/*---------------------------------
+		SIDEBAR - NAV TABS
+-----------------------------------*/
+.content {
+  padding-top: 60px;
+  background-color: #fff; }
+  .content .nav-tabs {
+    background: -webkit-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
+    background: -moz-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
+    background: -o-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
+    background: -ms-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
+    background: linear-gradient(to right, #ebeced 95%, #d1d5d6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#ebeced, endColorstr=#d1d5d6,GradientType=1 );
+    display: inline-block;
+    float: left;
+    height: 617px;
+    width: 300px;
+    position: relative; }
+    .content .nav-tabs ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .content .nav-tabs ul li {
+        box-sizing: border-box;
+        border-bottom: 1px solid #fff;
+        color: #9ba0a4;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 400;
+        line-height: 60px;
+        text-align: right;
+        padding-right: 78px;
+        position: relative; }
+        .content .nav-tabs ul li:hover {
+          cursor: pointer; }
+        .content .nav-tabs ul li a, .content .nav-tabs ul li a:hover, .content .nav-tabs ul li a:active, .content .nav-tabs ul li a:visited {
+          text-decoration: none;
+          color: inherit;
+          display: block;
+          width: 100%; }
+        .content .nav-tabs ul li img {
+          position: absolute;
+          top: 17px;
+          right: 24px; }
+      .content .nav-tabs ul li.selected {
+        background-color: #fff;
+        color: #36abe1;
+        font-weight: 600; }
 
-.wrapper {
-  margin: 0 auto;
-  width: 980px; }
+/*---------------------------------
+		BODY
+-----------------------------------*/
 
 /*# sourceMappingURL=main.css.map */

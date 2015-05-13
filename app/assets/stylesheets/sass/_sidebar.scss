@@ -1,0 +1,67 @@
+/*---------------------------------
+		SIDEBAR - NAV TABS
+-----------------------------------*/
+$bs-tab-text: #9ba0a4;
+$bs-tab-text-selected: #36abe1;
+
+
+.content {
+	padding-top: 60px;
+	background-color: #fff;
+
+	.nav-tabs {
+		background: -webkit-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
+  		background: -moz-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
+  		background: -o-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
+  		background: -ms-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
+  		background: linear-gradient(to right, #ebeced 95%, #d1d5d6 100%);
+  		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#ebeced, endColorstr=#d1d5d6,GradientType=1 );
+		display: inline-block;
+		float: left;
+		height: 617px;
+		width: 300px;
+		position: relative;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				box-sizing: border-box;
+				border-bottom: 1px solid #fff; //this is adding extra height to list items
+				color: $bs-tab-text;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-weight: 400;
+				line-height: 60px;
+				text-align: right;
+				padding-right: 78px;
+				position: relative;
+				&:hover {
+					cursor: pointer;
+				}
+
+				a, a:hover, a:active, a:visited {
+					text-decoration: none;
+					color: inherit;
+					display: block;
+					width: 100%;
+				}
+
+				img {
+					position: absolute;
+					top: 17px;
+					right: 24px;
+				}			
+			}
+
+			li.selected {
+				background-color: #fff;
+				color: $bs-tab-text-selected;
+				font-weight: 600;
+			}	
+
+		}
+
+	}
+}
