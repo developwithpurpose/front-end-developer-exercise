@@ -1,0 +1,212 @@
+/***********************************
+ * Global CSS File
+ * Contains all styles common to the
+ * entire site.
+ * Created May 13, 2015
+ **********************************/
+
+/*div { border: 1px solid #000; }*/
+
+
+/********** BOOTSTRAP OVERRIDES **********/
+
+.page-header { margin: 0; }
+
+
+
+
+/********* MAIN LAYOUT **********/
+
+html, body, .container, .row { height: 100%; }
+
+body {
+	background-color: #bbbfc2;
+	color: #65686f;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	min-height: 100%;
+	line-height: 18px;
+}
+
+.wrapper {
+	background: #bbbfc2 url('../images/shadow_bottom.jpg') center bottom no-repeat;
+	min-height: 100%;
+	margin: 0 auto;
+	padding-bottom: 30px;
+	width: 1010px;
+}
+
+.left-shadow, .right-shadow {
+	background-repeat: no-repeat;
+	height: 100%;
+	min-height: 724px;
+	width: 15px;
+}
+.left-shadow { background-image: url('../images/shadow_left.jpg'); }
+.right-shadow { background-image: url('../images/shadow_right.jpg'); }
+
+.page-content { 
+	background-color: #fff; 
+	overflow: hidden;
+	width: 980px;
+}
+
+/* Page Header */
+.page-header {
+	background: #fff url('../images/header.jpg') top left no-repeat;
+	border: 0;
+	height: 276px;
+	margin: 0;
+		margin-top: 0px;
+		margin-bottom: 60px;
+	padding: 0;
+}
+	.page-header .header-title {
+		color: #fff;
+		float: right;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 32px;
+		font-weight: 300;
+		line-height: 40px;
+		margin: 50px 70px;
+		text-align: right;
+	}
+		.page-header .header-title-highlight { 
+			font-size: 50px;
+			font-weight: 700;
+			line-height: 48px;
+		}
+
+.container { 
+	min-height: 640px;
+	padding: 0;
+	width: 980px;
+	background: url('../images/shadow_left_nav.jpg') repeat-y; 
+}
+
+.baby-steps { 
+	padding: 0 70px;
+	width: 680px;
+}
+
+
+
+
+/********** IMAGES / ICONS **********/
+
+.icon-sm {
+	display: inline-block;
+	height: 24px;
+	margin-left: 20px;
+	text-indent: -9999px;
+	vertical-align: text-top;
+	width: 32px;
+}
+
+.icon-dollar-sm { background: url('../images/icons/sprites/icons_small.png') 0 0 no-repeat; }
+	.on .icon-dollar-sm { background: url('../images/icons/sprites/icons_small.png') 0 -175px no-repeat; }
+.icon-snowball-sm { background: url('../images/icons/sprites/icons_small.png') 0 -25px no-repeat; }
+	.on .icon-snowball-sm { background: url('../images/icons/sprites/icons_small.png') 0 -200px no-repeat; }
+.icon-pig-sm { background: url('../images/icons/sprites/icons_small.png') 0 -51px no-repeat; }
+	.on .icon-pig-sm { background: url('../images/icons/sprites/icons_small.png') 0 -226px no-repeat; }
+.icon-graph-sm { background: url('../images/icons/sprites/icons_small.png') 0 -76px no-repeat; }
+	.on .icon-graph-sm { background: url('../images/icons/sprites/icons_small.png') 0 -251px no-repeat; }
+.icon-book-sm { background: url('../images/icons/sprites/icons_small.png') 0 -100px no-repeat; height: 26px; }
+	.on .icon-book-sm { background: url('../images/icons/sprites/icons_small.png') 0 -275px no-repeat; height: 26px; }
+.icon-home-sm { background: url('../images/icons/sprites/icons_small.png') 0 -126px no-repeat; }
+	.on .icon-home-sm { background: url('../images/icons/sprites/icons_small.png') 0 -301px no-repeat; }
+.icon-hand-sm { background: url('../images/icons/sprites/icons_small.png') 0 -150px no-repeat; height: 25px; }
+	.on .icon-hand-sm { background: url('../images/icons/sprites/icons_small.png') 0 -325px no-repeat; height: 25px; }
+
+.icon-text {
+	display: inline-block;
+	height: 64px;
+	padding-left: 92px;
+}
+
+.icon-dollar { background: url('../images/icons/sprites/icons_large.png') 0 -462px no-repeat; height: 60px; }
+.icon-snowball { background: url('../images/icons/sprites/icons_large.png') 0 -522px no-repeat; }
+.icon-pig { background: url('../images/icons/sprites/icons_large.png') 0 -586px no-repeat; }
+.icon-graph { background: url('../images/icons/sprites/icons_large.png') 0 -649px no-repeat; }
+.icon-book { background: url('../images/icons/sprites/icons_large.png') 0 -713px no-repeat; height: 65px; }
+.icon-home { background: url('../images/icons/sprites/icons_large.png') 0 -778px no-repeat; }
+.icon-hand { background: url('../images/icons/sprites/icons_large.png') 0 -842px no-repeat; height: 65px; }
+
+
+
+
+/********** COMPONENTS **********/
+
+.baby-steps-nav {
+	padding: 0;
+	width: 300px;
+}
+	.baby-steps-nav ul { 
+		overflow: hidden;
+	}
+	.baby-steps-nav li { 
+		border-bottom: 1px solid #fff;
+		text-align: right;
+	}
+		.baby-steps-nav li a {
+			display: block;
+			color: #9ba0a4;
+			font-family: 'Source Sans Pro';
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 60px;
+			padding-right: 24px;
+			text-decoration: none;
+		}
+			.baby-steps-nav li a:hover { text-decoration: underline; }
+		.baby-steps-nav li.on a {
+			background-color: #fff;
+			color: #36abe1;
+			font-weight: 600;
+		}
+
+
+/* Baby Step Content */
+.baby-step { display: none; }
+
+.baby-step-header {
+	font-family: 'Sans Source Pro', sans-serif;
+	line-height: 20px;
+	margin-bottom: 4px;
+}
+.baby-step-title {
+	color: #36abe1;
+	font-size: 30px;
+	font-weight: 600;
+	margin: 0;
+}
+.baby-step-subtitle {
+	color: #5c6366;
+	font-size: 18px;
+	font-weight: 300;
+	margin: 0;
+}
+.baby-step-friends {
+	color: #65686f;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+}
+.baby-step-friends-name {
+	color: #6fbee7;
+}
+	
+
+
+
+
+/********** ADD-ONS **********/
+
+.float-left { float: left; }
+.float-right { float: right; }
+.clear-fix { 
+	float: none;
+	overflow: hidden;
+}
+
+
+
