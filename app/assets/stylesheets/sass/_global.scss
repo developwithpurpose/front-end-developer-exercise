@@ -9,5 +9,29 @@ body {
 
 .wrapper {
 	margin: 0 auto;
+	position: relative;
 	width: 980px;
+}
+
+.shadow-left {
+	height: 724px;
+	width: 15px;
+	position: absolute;
+	top: 0px;
+	left: -15px;
+}
+
+.shadow-right {
+	height: 724px;
+	width: 15px;
+	position: absolute;
+	top: 0px;
+	right: -15px;
+}
+
+.shadow-bottom {
+	height: 30px;
+	width: 980px;
+	position: absolute;
+	bottom: -30px;
 }

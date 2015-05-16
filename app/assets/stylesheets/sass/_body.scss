@@ -1,3 +1,78 @@
 /*---------------------------------
 		BODY
 -----------------------------------*/
+$bs-heading-text: #36abe1;
+$bs-subhead-text: #5c6366;
+$bs-text: #65686f;
+$friends-list-text: #65686f;
+$friends-list-text-blue: #6fbee7;
+
+
+.the-baby-steps {
+    display: inline-block;
+    float: right;
+    height: 400px;
+    overflow: hidden;
+    padding: 0 70px;
+    width: 680px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.bs-content-box {
+    height: 400px;
+    
+    .bs-heading-container {
+        display: flex;
+        align-items: center;
+        
+        img {
+            padding-right: 12px;
+        }
+    
+        .bs-heading {
+            display: inline-block;
+            
+            h2 {
+                color: $bs-heading-text;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 30px;//20px per spec didn't look right
+                margin: 0;
+        
+            }
+    
+            h4 {
+                color: $bs-subhead-text;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 20px;
+                margin: 0;
+            }
+        }
+    }
+    
+    p {
+        clear: both;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 24px;
+        color: $bs-text;
+        
+    }
+    
+    div[class^="friends-on-step"] {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        margin-top: 16px;
+        color: $friends-list-text;
+        
+        span a {
+            color: $friends-list-text-blue;
+            text-decoration: none;
+        }
+    }
+}

@@ -26,36 +26,96 @@ $bs-tab-text-selected: #36abe1;
 			list-style: none;
 			margin: 0;
 			padding: 0;
-
+		
 			li {
 				box-sizing: border-box;
-				border-bottom: 1px solid #fff; //this is adding extra height to list items
+				border-bottom: 1px solid #fff;
 				color: $bs-tab-text;
 				font-family: 'Source Sans Pro', sans-serif;
 				font-weight: 400;
-				line-height: 60px;
+				line-height: 59px;
 				text-align: right;
-				padding-right: 78px;
 				position: relative;
-				&:hover {
-					cursor: pointer;
-				}
+				width: 100%;
 
 				a, a:hover, a:active, a:visited {
 					text-decoration: none;
 					color: inherit;
-					display: block;
+					display: inline-block;
 					width: 100%;
+					cursor: pointer;
+					transition: background-color .7s;
 				}
-
-				img {
-					position: absolute;
-					top: 17px;
-					right: 24px;
-				}			
+				
+				a:after {
+					content: "";
+					display: block;
+					background: url("../images/icons/sprites/icons_small.png") no-repeat;
+					width: 30px;
+					height: 25px;
+					float: right;
+					margin: 17px 24px 0 30px;
+				}
+				
+				//nav tab icons
+				a[href="#baby-step-1"]:after {
+					background-position: 0 0;
+				}
+				
+				a[href="#baby-step-1"].selected:after {
+					background-position: 0 -175px;
+				}
+				
+				a[href="#baby-step-2"]:after {
+					background-position: 0 -25px;
+				}
+				
+				a[href="#baby-step-2"].selected:after {
+					background-position: 0 -200px;
+				}
+				
+				a[href="#baby-step-3"]:after {
+					background-position: 0 -50px;
+				}
+				
+				a[href="#baby-step-3"].selected:after {
+					background-position: 0 -225px;
+				}
+				
+				a[href="#baby-step-4"]:after {
+					background-position: 0 -75px;
+				}
+				
+				a[href="#baby-step-4"].selected:after {
+					background-position: 0 -250px;
+				}
+				
+				a[href="#baby-step-5"]:after {
+					background-position: 0 -100px;
+				}
+				
+				a[href="#baby-step-5"].selected:after {
+					background-position: 0 -275px;
+				}
+				
+				a[href="#baby-step-6"]:after {
+					background-position: 0 -125px;
+				}
+				
+				a[href="#baby-step-6"].selected:after {
+					background-position: 0 -300px;
+				}
+				
+				a[href="#baby-step-7"]:after {
+					background-position: 0 -150px;
+				}
+				
+				a[href="#baby-step-7"].selected:after {
+					background-position: 0 -325px;
+				}
 			}
 
-			li.selected {
+			a.selected, a.selected:hover, a.selected:visited {
 				background-color: #fff;
 				color: $bs-tab-text-selected;
 				font-weight: 600;
@@ -65,3 +125,4 @@ $bs-tab-text-selected: #36abe1;
 
 	}
 }
+
