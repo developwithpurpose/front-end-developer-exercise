@@ -63,6 +63,7 @@ module.exports = function( grunt ) {
         server: {
           options: {
             port: 9001,
+            hostname: "localhost",
             livereload: true,
             keepalive: true
           }
@@ -75,9 +76,16 @@ module.exports = function( grunt ) {
       strict: {
         src: [ "app/assets/stylesheets/**/*.css" ]
       }
+    },
+    sass: {
+      dist: {
+        files: {
+          'app/assets/stylesheets/main.css': 'app/assets/stylesheets/sass/main.scss'
+        }
+      }
     }
   });
-
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.registerTask( "default", ["connect"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
 };

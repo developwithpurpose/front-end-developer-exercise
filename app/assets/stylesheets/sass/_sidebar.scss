@@ -1,0 +1,129 @@
+/*---------------------------------
+		SIDEBAR - NAV TABS
+-----------------------------------*/
+$bs-tab-text: #9ba0a4;
+$bs-tab-text-selected: #36abe1;
+
+.content {
+	background-color: #fff;
+	padding-top: 60px;
+	
+	.nav-tabs {
+		/*--gradient: cssmatic.com */
+		background: #ebeced;
+		background: -moz-linear-gradient(left, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+		background: -webkit-gradient(left top, right top, color-stop(0%, #ebeced), color-stop(95%, #ebeced), color-stop(100%, #d1d5d6));
+		background: -webkit-linear-gradient(left, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+		background: -o-linear-gradient(left, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+		background: -ms-linear-gradient(left, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+		background: linear-gradient(to right, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1 );
+		float: left;
+		height: 617px;
+		position: relative;
+		width: 300px;
+		
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		
+			li {
+				border-bottom: 1px solid #fff;
+				box-sizing: border-box;
+				color: $bs-tab-text;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-weight: 400;
+				line-height: 59px;
+				position: relative;
+				text-align: right;
+				width: 100%;
+
+				a, a:hover, a:active, a:visited {
+					color: inherit;
+					cursor: pointer;
+					display: inline-block;
+					text-decoration: none;
+					transition: background-color 1s;
+					width: 100%;
+				}
+				
+				a:after {
+					background: url("../images/icons/sprites/icons_small.png") no-repeat;
+					content: "";
+					display: block;
+					float: right;
+					height: 25px;
+					margin: 17px 24px 0 30px;
+					width: 30px;
+				}
+				
+				//nav tab icons
+				a[href="#baby-step-1"]:after {
+					background-position: 0 0;
+				}
+				
+				a[href="#baby-step-1"].selected:after {
+					background-position: 0 -175px;
+				}
+				
+				a[href="#baby-step-2"]:after {
+					background-position: 0 -25px;
+				}
+				
+				a[href="#baby-step-2"].selected:after {
+					background-position: 0 -200px;
+				}
+				
+				a[href="#baby-step-3"]:after {
+					background-position: 0 -50px;
+				}
+				
+				a[href="#baby-step-3"].selected:after {
+					background-position: 0 -225px;
+				}
+				
+				a[href="#baby-step-4"]:after {
+					background-position: 0 -75px;
+				}
+				
+				a[href="#baby-step-4"].selected:after {
+					background-position: 0 -250px;
+				}
+				
+				a[href="#baby-step-5"]:after {
+					background-position: 0 -100px;
+				}
+				
+				a[href="#baby-step-5"].selected:after {
+					background-position: 0 -275px;
+				}
+				
+				a[href="#baby-step-6"]:after {
+					background-position: 0 -125px;
+				}
+				
+				a[href="#baby-step-6"].selected:after {
+					background-position: 0 -300px;
+				}
+				
+				a[href="#baby-step-7"]:after {
+					background-position: 0 -150px;
+				}
+				
+				a[href="#baby-step-7"].selected:after {
+					background-position: 0 -325px;
+				}
+			}
+
+			a.selected, a.selected:hover, a.selected:visited {
+				background-color: #fff;
+				color: $bs-tab-text-selected;
+				font-weight: 600;
+			}	
+
+		}
+
+	}
+}
+
