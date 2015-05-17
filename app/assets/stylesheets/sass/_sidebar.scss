@@ -4,57 +4,58 @@
 $bs-tab-text: #9ba0a4;
 $bs-tab-text-selected: #36abe1;
 
-
 .content {
-	padding-top: 60px;
 	background-color: #fff;
-
+	padding-top: 60px;
+	
 	.nav-tabs {
-		background: -webkit-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
-  		background: -moz-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
-  		background: -o-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
-  		background: -ms-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
-  		background: linear-gradient(to right, #ebeced 95%, #d1d5d6 100%);
-  		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#ebeced, endColorstr=#d1d5d6,GradientType=1 );
-		display: inline-block;
+		/*--gradient: cssmatic.com */
+		background: #ebeced;
+		background: -moz-linear-gradient(left, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+		background: -webkit-gradient(left top, right top, color-stop(0%, #ebeced), color-stop(95%, #ebeced), color-stop(100%, #d1d5d6));
+		background: -webkit-linear-gradient(left, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+		background: -o-linear-gradient(left, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+		background: -ms-linear-gradient(left, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+		background: linear-gradient(to right, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1 );
 		float: left;
 		height: 617px;
-		width: 300px;
 		position: relative;
-
+		width: 300px;
+		
 		ul {
 			list-style: none;
 			margin: 0;
 			padding: 0;
 		
 			li {
-				box-sizing: border-box;
 				border-bottom: 1px solid #fff;
+				box-sizing: border-box;
 				color: $bs-tab-text;
 				font-family: 'Source Sans Pro', sans-serif;
 				font-weight: 400;
 				line-height: 59px;
-				text-align: right;
 				position: relative;
+				text-align: right;
 				width: 100%;
 
 				a, a:hover, a:active, a:visited {
-					text-decoration: none;
 					color: inherit;
-					display: inline-block;
-					width: 100%;
 					cursor: pointer;
-					transition: background-color .7s;
+					display: inline-block;
+					text-decoration: none;
+					transition: background-color 1s;
+					width: 100%;
 				}
 				
 				a:after {
+					background: url("../images/icons/sprites/icons_small.png") no-repeat;
 					content: "";
 					display: block;
-					background: url("../images/icons/sprites/icons_small.png") no-repeat;
-					width: 30px;
-					height: 25px;
 					float: right;
+					height: 25px;
 					margin: 17px 24px 0 30px;
+					width: 30px;
 				}
 				
 				//nav tab icons

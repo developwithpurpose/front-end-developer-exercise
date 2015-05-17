@@ -6,73 +6,80 @@ $bs-subhead-text: #5c6366;
 $bs-text: #65686f;
 $friends-list-text: #65686f;
 $friends-list-text-blue: #6fbee7;
-
+$bs-heading-font-size: 30px;
+$bs-subheading-font-size: 18px;
+$bs-font-size: 13px;
 
 .the-baby-steps {
-    display: inline-block;
+    box-sizing: border-box;
     float: right;
     height: 400px;
     overflow: hidden;
     padding: 0 70px;
-    width: 680px;
-    box-sizing: border-box;
     position: relative;
+    width: 680px;
 }
 
 .bs-content-box {
     height: 400px;
     
     .bs-heading-container {
-        display: flex;
-        align-items: center;
+        position: relative;
+        margin-bottom: 16px;
         
         img {
             padding-right: 12px;
+            display: inline-block;
         }
     
         .bs-heading {
             display: inline-block;
-            
-            h2 {
-                color: $bs-heading-text;
-                font-family: 'Source Sans Pro', sans-serif;
-                font-weight: 600;
-                font-size: 30px;
-                line-height: 30px;//20px per spec didn't look right
-                margin: 0;
-        
-            }
-    
-            h4 {
-                color: $bs-subhead-text;
-                font-family: 'Source Sans Pro', sans-serif;
-                font-weight: 300;
-                font-size: 18px;
-                line-height: 20px;
-                margin: 0;
-            }
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
         }
     }
     
     p {
         clear: both;
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 13px;
-        line-height: 18px;
-        margin-bottom: 24px;
         color: $bs-text;
-        
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: $bs-font-size;
+        line-height: 18px;
+        margin-bottom: 20px;
     }
     
     div[class^="friends-on-step"] {
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 13px;
-        margin-top: 16px;
+        box-sizing: border-box;
         color: $friends-list-text;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: $bs-font-size;
+        margin-top: 36px;
         
         span a {
             color: $friends-list-text-blue;
             text-decoration: none;
+            &:hover {
+                color: darken($friends-list-text-blue, 15%);
+            }
         }
     }
+}
+
+h2 {
+    color: $bs-heading-text;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: $bs-heading-font-size;
+    line-height: 30px;//20px per spec didn't look right
+    margin: 0;
+}
+
+h4 {
+    color: $bs-subhead-text;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: $bs-subheading-font-size;
+    line-height: 20px;
+    margin: 0;
 }

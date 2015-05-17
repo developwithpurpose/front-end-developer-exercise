@@ -1,26 +1,17 @@
-
 //Baby step tab selection and content animation
 $(function() {
-    //animate.css options
-    var animationClassName = 'animated fadeInUp';
-    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-    
     
     $("a[href^=#]").click(function(event) { 
     	event.preventDefault();
     	
-    	$(this).parent().siblings().children().removeClass('selected');
-    	$(this).addClass('selected');
-    
-    	//get target href, trigger target element to become visible
-    	var target = $(this).attr('href');
-    	$('.bs-content-box').addClass('hidden');
-    	$(target).removeClass('hidden');
+    	//add class of selected to selected nav tab only
+    	$(this).parent().siblings().children().removeClass("selected");
+    	$(this).addClass("selected");
     	
-    	//animate target babystep into view
-    	$(target).addClass(animationClassName).one(animationEnd, function() {
-    	    $(target).removeClass(animationClassName);
-    	});
+    	//get target href, trigger target element to become visible
+    	var target = $(this).attr("href");
+    	$(".bs-content-box").hide();
+        $(target).fadeIn(1000);
     });
 });
 
@@ -30,7 +21,7 @@ $.getJSON( "assets/javascripts/baby-steps.json", function (data) {
     //sort the return data by lastName asc
     //more efficient than once each iteration below.
     data.friends.sort(function(a,b) {
-        if(a.lastName == b.lastName) {
+        if(a.lastName === b.lastName) {
             return 0;
         }
         if(a.lastName < b.lastName) {
@@ -50,28 +41,28 @@ $.getJSON( "assets/javascripts/baby-steps.json", function (data) {
         var friendsOnStep = [];
         for(var i = 0; i < data.friends.length; i++) { 
             if(data.friends[i].babyStep === step) {
-                friendsOnStep.push(data.friends[i].firstName + ' ' + data.friends[i].lastName);
+                friendsOnStep.push(data.friends[i].firstName + " " + data.friends[i].lastName);
             }
         }
         
         //console.log(friendsOnStep);
         //friends list message logic
-        if(friendsOnStep.length == 1) {
-            $('.friends-on-step-' + step).html("<span><a href='#'>" + friendsOnStep[0] + 
+        if(friendsOnStep.length === 1) {
+            $(".friends-on-step-" + step).html("<span><a href='#'>" + friendsOnStep[0] + 
                 "</a></span> is also in Baby Step " + step + ".");
-        } else if(friendsOnStep.length == 2) {
-            $('.friends-on-step-' + step).html("<span><a href='#'>" + friendsOnStep[0] +
+        } else if(friendsOnStep.length === 2) {
+            $(".friends-on-step-" + step).html("<span><a href='#'>" + friendsOnStep[0] +
                 "</a> and <a href='#'>" + friendsOnStep[1] + "</a></span> are also in Baby Step " + step + ".");
-        } else if (friendsOnStep.length == 3) {
-            $('.friends-on-step-' + step).html("<span><a href='#'>" + friendsOnStep[0] +
+        } else if (friendsOnStep.length === 3) {
+            $(".friends-on-step-" + step).html("<span><a href='#'>" + friendsOnStep[0] +
                 "</a>, <a href='#'>" + friendsOnStep[1] + "</a>," + "</span> and " + 
                 (friendsOnStep.length - 2) + " other friend are also in Baby Step " + step + ".");
         } else if (friendsOnStep.length >= 4) {
-            $('.friends-on-step-' + step).html("<span><a href='#'>" + friendsOnStep[0] +
+            $(".friends-on-step-" + step).html("<span><a href='#'>" + friendsOnStep[0] +
                 "</a>, <a href='#'>" + friendsOnStep[1] + "</a>," + "</span> and " + 
                 (friendsOnStep.length - 2) + " other friends are also in Baby Step " + step + ".");
         } else {
-            $('.friends-on-step-' + step).html("");
+            $(".friends-on-step-" + step).html("");
         }
         
         step++;
