@@ -5,8 +5,6 @@
  * Created May 13, 2015
  **********************************/
 
-/*div { border: 1px solid #000; }*/
-
 
 /********** BOOTSTRAP OVERRIDES **********/
 
@@ -77,11 +75,12 @@ body {
 			line-height: 48px;
 		}
 
+/* Page Content */
 .container { 
 	min-height: 640px;
 	padding: 0;
 	width: 980px;
-	background: url('../images/shadow_left_nav.jpg') repeat-y; 
+	background: url('../images/shadow_left_nav.jpg') 0 0 repeat-y; 
 }
 
 .baby-steps { 
@@ -137,6 +136,7 @@ body {
 
 /********** COMPONENTS **********/
 
+/* Baby Step Navigation */
 .baby-steps-nav {
 	padding: 0;
 	width: 300px;
@@ -195,18 +195,6 @@ body {
 	color: #6fbee7;
 }
 	
-
-
-
-
-/********** ADD-ONS **********/
-
-.float-left { float: left; }
-.float-right { float: right; }
-.clear-fix { 
-	float: none;
-	overflow: hidden;
-}
 
 
 

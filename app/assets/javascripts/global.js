@@ -101,9 +101,16 @@ Array.prototype.sortBy = function(key){
 
 
 
-// JQuery Document Ready
+/********** JQuery Document Ready **********/
+
 $(document).ready(function(){
 
+	// # href links cancel
+	$(document).on('click', 'a[href="#"]', function(e){
+		e.preventDefault();
+	});
+
+	
 	// Nav bar link clicks
 	$('.baby-steps-nav').on('click', '.link-baby-step', function(e){
 		e.preventDefault();
@@ -136,6 +143,5 @@ $(document).ready(function(){
 
 	// Load up and display friends data
 	displayFriends();
-
 	
 });
