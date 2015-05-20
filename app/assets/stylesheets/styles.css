@@ -1,0 +1,260 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+html {
+	height: 101%;
+}
+
+body {
+	background-color: #bbbfc2;
+	text-align: center;
+	font-family: helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: regular;
+	color: #65686f;
+	line-height: 18px;
+}
+
+.clear {
+	clear: both;
+}
+
+#taglines {
+	float: right;
+	text-align: right;
+	margin: 70px 50px 0px 0px;
+}
+
+h1.upperTag {
+	font-family: 'Open Sans', arial, sans-serif;
+	font-weight: 300;
+	font-size: 32px;
+	color: #ffffff;
+	padding-bottom: 15px;
+}
+
+h1.lowerTag {
+	font-family: 'Open Sans', arial, sans-serif;
+	font-weight: 700;
+	font-size: 50px;
+	color: #fff;
+	line-height: 48px;
+	text-transform: uppercase;
+}
+
+#wrap {
+	margin: 0px auto 0px auto;
+	width: 980px;
+	background-color: #ffffff;
+	text-align: left;
+}
+
+#header {
+	background: #ffffff url("../images/header.jpg") no-repeat top;
+	margin: 0px;
+	width: 980px;
+	height: 276px;
+	padding-bottom: 60px;
+}
+
+#mainContent {
+	width: 100%;
+	background-color: #fff;
+	float: left;
+}
+
+nav {
+	width: 300px;
+}
+
+.menu {
+	float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ebeced 95%, #d1d5d6);
+    text-align: right;
+}
+
+.menu li {
+	width: 300px;
+	height: 60px;
+	overflow: hidden;
+	display: block;
+	border-bottom: 1px solid #fff;
+}
+
+.menu li:hover {
+	background: #fff;
+}
+
+.menu li a {
+	height: 25px;
+	line-height: 60px;
+	display: inline-block;
+	padding-right: 24px;
+	color: #9ba0a4;
+	text-decoration: none;
+	font-family: source sans pro;
+	font-size: 18px;
+	font-weight: semi-bold;
+}
+
+.menu a:hover {
+	color: #36abe1;
+}
+
+/*------------------
+     Nav Sprite 
+-------------------*/
+span {
+	display: inline-block;
+	width: 30px;
+	height: 25px;
+	margin: 17px 24px 0px 0px;
+	vertical-align:top; 
+	background-image:url("../images/icons/sprites/icons_small.png"); 
+	background-repeat:no-repeat;
+}
+.menu li span#bs1 {
+	background-position: 0 0;
+}
+.menu li span#bs2 {
+	background-position: 0 -24px;
+}
+.menu li span#bs3 {
+	background-position: 0 -52px;
+}
+.menu li span#bs4 {
+	background-position: 0 -75px;
+}
+.menu li span#bs5 {
+	background-position: 0 -99px;
+}
+.menu li span#bs6 {
+	background-position: 0 -125px;
+}
+.menu li span#bs7 {
+	background-position: 0 -150px;
+}
+.menu li span#bs1:hover {
+	background-position: 0 -175px;
+}
+.menu li span#bs2:hover {
+	background-position: 0 -199px;
+}
+.menu li span#bs3:hover {
+	background-position: 0 -227px;
+}
+.menu li span#bs4:hover {
+	background-position: 0 -250px;
+}
+.menu li span#bs5:hover {
+	background-position: 0 -274px;
+}
+.menu li span#bs6:hover {
+	background-position: 0 -300px;
+}
+.menu li span#bs7:hover {
+	background-position: 0 -325px;
+}
+
+/*-----------------------
+     Large Icon Sprite 
+-----------------------*/
+#lgIcon_bs1, #lgIcon_bs2, #lgIcon_bs3, #lgIcon_bs4, #lgIcon_bs5, #lgIcon_bs6, #lgIcon_bs7 {
+	float: left;
+	width: 77px;
+	height: 65px;
+	background: #ffffff url("../images/icons/sprites/icons_large.png") center; 
+	background-repeat:no-repeat;
+}
+
+#lgIcon_bs1 {
+	background-position: 0 -454px;
+}
+#lgIcon_bs2 {
+	background-position: 0 -517px;
+}
+#lgIcon_bs3 {
+	background-position: 0 -585px;
+}
+#lgIcon_bs4 {
+	background-position: 0 -646px;
+}
+#lgIcon_bs5 {
+	background-position: 0 -713px;
+}
+#lgIcon_bs6 {
+	background-position: 0 -778px;
+}
+#lgIcon_bs7 {
+	background-position: 0 -843px;
+}
+
+#bodyCopy {
+	float: left;
+	width: 540px;
+	margin-left: 70px;
+}
+
+.headingArea {
+	float: left;
+	height: 60px;
+}
+
+.headingText {
+	float: left;
+	width: 448px;
+	margin: 10px 0px 0px 15px;
+}
+
+h2 {
+	font-family: source sans pro;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 20px;
+	color: #36abe1;
+	padding-bottom: 6px;
+}
+
+h3 {
+	font-family: source sans pro;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 20px;
+	color: #5c6366;
+}
+
+.description {
+	float: left;
+	width: 100%;
+	margin: 24px 0px 16px 0px;
+}
+
+.description p {
+	padding-bottom: 24px;
+}
+
+.dynamic {
+	margin-bottom: 50px;
+}
+
+.dynamic a {
+	color: #6fbee7;
+	text-decoration: none;
+}
+
+
+
+
+
+
