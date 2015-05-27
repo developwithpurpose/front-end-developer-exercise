@@ -55,7 +55,7 @@ Dynamic Content
 
 As a user I want to be encouraged by how many friends of mine are also going through the selected baby step. I don't need to see all my friends, just a summary of who is in the same baby step.
 
-You should request the data from `./app/assets/javascript/baby-steps.json`, which includes a list of friend objects. Each object contains names and their baby step. Based on the data returned, you will need to show the following information to the user sorted by last name ascending.
+You should request the data from `./app/assets/javascripts/baby-steps.json`, which includes a list of friend objects. Each object contains names and their baby step. Based on the data returned, you will need to show the following information to the user sorted by last name ascending.
 
 ### Message Logic
 

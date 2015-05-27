@@ -34,6 +34,21 @@ module.exports = function( grunt ) {
       clean: {
         validation: [ "validation-*.json" ]
       },
+      compass: {
+        dist: {
+          options: {
+            sassDir: "app/assets/stylesheets/",
+            cssDir: "app/assets/stylesheets/",
+            environment: "production"
+          }
+        },
+        dev: {
+          options: {
+            sassDir: "app/assets/stylesheets/",
+            cssDir: "app/assets/stylesheets/"
+          }
+        }
+      },
       watch: {
         test: {
           files: [ "<%= jshint.all %>" ],
@@ -45,6 +60,10 @@ module.exports = function( grunt ) {
         lint: {
           files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
           tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
+        },
+        css: {
+            files: "app/assets/stylesheets/*.scss",
+            tasks: ["compass"]
         }
       },
       jasmine: {
@@ -75,9 +94,18 @@ module.exports = function( grunt ) {
       strict: {
         src: [ "app/assets/stylesheets/**/*.css" ]
       }
+    },
+    sass: {
+      dist: {
+        files: {
+          "app/assets/stylesheets/main.css" : "app/assets/stylesheets/main.scss"
+        }
+      }
     }
   });
-
-  grunt.registerTask( "default", ["connect"] );
+  grunt.loadNpmTasks("grunt-contrib-sass");
+  grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks("grunt-contrib-compass");
+  grunt.registerTask( "default", ["connect", "sass", "watch", "compass"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
 };
