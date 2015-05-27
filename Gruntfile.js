@@ -37,15 +37,15 @@ module.exports = function( grunt ) {
       compass: {
         dist: {
           options: {
-            sassDir: "app/assets/stylesheets/",
-            cssDir: "app/assets/stylesheets/",
+            sassDir: "app/assets/stylesheets",
+            cssDir: "app/assets/stylesheets",
             environment: "production"
           }
         },
         dev: {
           options: {
-            sassDir: "app/assets/stylesheets/",
-            cssDir: "app/assets/stylesheets/"
+            sassDir: "app/assets/stylesheets",
+            cssDir: "app/assets/stylesheets"
           }
         }
       },
@@ -100,12 +100,15 @@ module.exports = function( grunt ) {
         files: {
           "app/assets/stylesheets/main.css" : "app/assets/stylesheets/main.scss"
         }
+      },
+      options: {
+          compass: true
       }
     }
   });
-  grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-compass");
-  grunt.registerTask( "default", ["connect", "sass", "watch", "compass"] );
+  grunt.loadNpmTasks("grunt-contrib-sass");
+  grunt.registerTask( "default", [ "compass","sass","connect"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
 };
