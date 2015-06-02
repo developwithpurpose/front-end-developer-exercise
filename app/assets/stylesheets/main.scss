@@ -1,0 +1,313 @@
+$header-font-stack: "Open Sans", sans-serif;
+$section-header-font-stack: "Source Sans pro", sans-serif;
+$font-stack: Helvetica, Arial, sans-serif;
+  
+$body-background-color: #bbbfc2;
+$dark-blue: #36abe1;
+$light-blue: #6fbee7;
+$white: #fff;
+$body-text-gray: #65686f;
+$section-header-gray: #5c6366;
+$nav-gray: #9ba0a4;
+$gradient-left: #ebeced;
+$gradient-right: #d1d5d6;
+$shadow-gray: #888888;
+$ie8-shadow-gray: #a4a6a8;
+
+$large-icons-url: url('../images/icons/sprites/icons_large.png');
+$large-icons-width: 77px;
+$large-icons-height: 64.9px;
+
+$small-icons-url: url('../images/icons/sprites/icons_small.png');
+$small-icons-width: 30px;
+$small-icons-height:25px;
+
+$gradient-url: url('../images/shadow_left_nav.jpg');
+
+@mixin horizontal-gradient($left, $right) {
+    background: $left;
+    background: -moz-linear-gradient(left,  $left 97%, $right 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(97%, $left), color-stop(100%, $right));
+    background: -webkit-linear-gradient(left,  $left 97%, $right 100%);
+    background: -o-linear-gradient(left,  $left 97%,$right 100%);
+    background: -ms-linear-gradient(left,  $left 97%,$right 100%);
+    background: linear-gradient(to right,  $left 97%,$right 100%);
+}
+
+@mixin drop-shadow($color){
+	-webkit-box-shadow: 0px 0px 8px 0px $color;
+	-moz-box-shadow: 0px 0px 8px 0px $color;
+	box-shadow: 0px 0px 8px 0px $color;	
+}
+
+@mixin ie8-drop-shadow($color){
+	filter: progid:DXImageTransform.Microsoft.Shadow(Color='#{$color}', Strength=2, Direction=90),
+         progid:DXImageTransform.Microsoft.Shadow(Color='#{$color}', Strength=2, Direction=180),
+         progid:DXImageTransform.Microsoft.Shadow(Color='#{$color}', Strength=2, Direction=270);
+}
+
+.baby-steps {
+	background-color: $body-background-color;
+	color: $body-text-gray;
+	font-family: $font-stack;
+	font-size: 13px;
+	line-height: 18px;
+	margin: 0;
+}
+
+.no-boxshadow .baby-steps {
+	@include ie8-drop-shadow($ie8-shadow-gray);
+}
+
+h1 {
+	color: $white;
+	float: right;
+	font-family: $header-font-stack;
+	margin: 70px 50px 0 0;
+	text-align: right;
+	width: 50%;
+	
+}
+
+h2 {
+	color: $dark-blue;
+	display: block;
+	font-family: $section-header-font-stack;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 20px;
+	margin: 0;
+}
+	
+header {
+	@include drop-shadow($shadow-gray);
+	background: url('../images/header.jpg');
+	height: 276px;
+	margin: auto;
+	width: 980px;
+}
+
+.header-intro {
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 18px;
+}
+
+.header-emphasis {
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 48px;
+	margin-top: 15px;
+	text-transform: uppercase;
+	
+}
+
+main {
+	@include drop-shadow($shadow-gray);
+	background-color: $white;
+	display: block;	
+	margin: auto;
+	overflow: hidden;
+	padding-top: 60px;
+	width: 980px;
+	
+	#active-link-bg {
+		background-color: $white;
+		height: 60px;
+		left: -300px;
+		position: relative;
+		top: 0;
+		width: 300px;
+		z-index: 100;
+	}
+	
+}
+
+.no-cssgradients #active-link-bg {
+	left: -298px;
+}
+	
+div {
+	display: inline-block;
+	position: relative;
+	top: -61px;
+	width: 680px;
+}
+
+section {
+	background-color: $white;
+	display: none;
+	float: left;
+	margin: 0 70px;
+	
+	i {
+		background: $large-icons-url no-repeat;
+		display: inline-block;
+		float: left;
+		height: $large-icons-height;
+		margin-right: 14px;
+		width: $large-icons-width;
+	}
+	
+	.section-header {
+		display: inline-block;
+		padding-top: 12px;
+	}
+	
+	.section-subtitle {
+		color: $section-header-gray;
+		display: block;
+		font-family: $section-header-font-stack;
+		font-size: 18px;
+		font-weight: 300;
+		margin-bottom: 24px;
+		margin-top: 5px;
+	}
+	
+	.friends {
+		margin-top: 40px;
+	}
+	
+	.friend-name {
+		color: $light-blue;
+	}
+	
+}
+
+#baby-step1 i {
+	background-position: 0 (-$large-icons-height * 7);
+}
+
+#baby-step2 i {
+	background-position: 0 (-$large-icons-height * 8);
+}
+
+#baby-step3 i {
+	background-position: 0 (-$large-icons-height * 9);
+}
+
+#baby-step4 i {
+	background-position: 0 (-$large-icons-height * 10);
+}
+
+#baby-step5 i {
+	background-position: 0 (-$large-icons-height * 11);
+}
+
+#baby-step6 i {
+	background-position: 0 (-$large-icons-height * 12);
+}
+
+#baby-step7 i {
+	background-position: 0 (-$large-icons-height * 13);
+}
+
+ul {
+	@include horizontal-gradient($gradient-left, $gradient-right);
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 300px;
+}
+
+.no-cssgradients ul {
+	background-image: $gradient-url;
+	left: 2px;
+	position: relative;
+}
+
+li {
+	border-bottom: 1px solid $white;
+	clear: both;
+	float: right;
+	line-height: 60px;
+	list-style: none;
+	position: relative;
+	width: 100%;
+	z-index: 110;
+	
+	a {
+		color: $nav-gray;
+		float: right;
+		font-family: $section-header-font-stack;
+		font-size: 18px;
+		margin-right: 24px;
+		text-decoration: none;
+		
+		i {
+			background: $small-icons-url no-repeat;	
+			background-position: right;
+			display: inline-block;
+			height: $small-icons-height;
+			margin: auto auto auto 24px;
+			vertical-align: middle;
+			width: $small-icons-width;
+		}
+		
+	}
+	
+	.small-icon.one {
+		background-position: 100% 0;
+	}
+	
+	.small-icon.two {
+		background-position: 100% (-$small-icons-height * 1);
+	}
+	
+	.small-icon.three {
+		background-position: 100% (-$small-icons-height * 2);
+	}
+	
+	.small-icon.four {
+		background-position: 100% (-$small-icons-height * 3);
+	}
+	
+	.small-icon.five {
+		background-position: 100% (-$small-icons-height * 4);		
+	}
+	
+	.small-icon.six {
+		background-position: 100% (-$small-icons-height * 5);
+	}
+	
+	.small-icon.seven {
+		background-position: 100% (-$small-icons-height * 6);
+	}
+	
+}
+
+.ui-tabs-active {
+	a {
+		color: $dark-blue;
+		font-weight: 700;
+	}
+	
+	.small-icon.one {
+		background-position: 100% (-$small-icons-height * 7);
+	}
+	
+	.small-icon.two {
+		background-position: 100% (-$small-icons-height * 8);
+	}
+	
+	.small-icon.three {
+		background-position: 100% (-$small-icons-height * 9);
+	}
+	
+	.small-icon.four {
+		background-position: 100% (-$small-icons-height * 10);
+	}
+	
+	.small-icon.five {
+		background-position: 100% (-$small-icons-height * 11);
+	}
+	
+	.small-icon.six {
+		background-position: 100% (-$small-icons-height * 12);
+	}
+	
+	.small-icon.seven {
+		background-position: 100% (-$small-icons-height * 13);
+	}
+	
+}
