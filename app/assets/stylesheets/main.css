@@ -1,0 +1,68 @@
+html{
+	background-color: #bbbfc2;
+}
+body{
+width: 80%;
+margin: 0 auto;
+}
+.left-shadow{
+	background-image: url("../images/shadow_left.jpg");
+	background-repeat: no-repeat;
+	height: 120em;
+	width: 1em;
+	float: left;
+}
+#banner{
+	background-image: url("../images/header_text.jpg");
+	height: 17em;
+	width: 100%;
+	background-repeat: no-repeat;
+	margin-bottom: 60px;
+
+}
+#main-body{
+	overflow: hidden;
+	/*margin-bottom: 3em;*/
+	background-color: white;
+}
+/*above was your last place*/
+#side-bar{
+	float: left;
+	width: 35%;
+  	background-image:
+    	linear-gradient(
+      		to right, 
+      		#ebeced, #d1d5d6
+    	);
+}
+
+#baby-step{
+	line-height: 60px;
+	border-bottom: white 1px solid;
+}
+#main-content{
+	width: 65%;
+	float: right;
+	font-family: Helvetica;
+	line-height: 18px;
+	font-size: 13px;
+	color: #65686f;
+}
+#title{
+	background-image: url("../images/headings/heading_bs1.png");
+	height: 5em;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+#content{
+	padding: 0px 70px 0px 70px; 
+}
+#content p{
+	margin: 20px 0px 40px 0px;
+}
+.bottom-shadow{
+	background-image: url("../images/shadow_bottom.jpg");
+	background-repeat: no-repeat;
+	height: 1em;
+	width: 100%;
+}
