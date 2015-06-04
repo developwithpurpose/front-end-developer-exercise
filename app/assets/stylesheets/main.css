@@ -2,15 +2,27 @@ html{
 	background-color: #bbbfc2;
 }
 body{
-width: 80%;
-margin: 0 auto;
+	/*overflow: hidden;*/
+}
+#all-content{
+	width: 61em;
+	margin-left: 7em;
+	overflow: hidden;
 }
 .left-shadow{
 	background-image: url("../images/shadow_left.jpg");
 	background-repeat: no-repeat;
-	height: 120em;
+	height: 100em;
 	width: 1em;
+	display: inline-block;
 	float: left;
+}
+#the-middle{
+	width: 59em;
+	overflow: hidden;
+	background-color: white;
+	float: left;
+	display: inline-block;
 }
 #banner{
 	background-image: url("../images/header_text.jpg");
@@ -18,35 +30,68 @@ margin: 0 auto;
 	width: 100%;
 	background-repeat: no-repeat;
 	margin-bottom: 60px;
-
 }
 #main-body{
 	overflow: hidden;
-	/*margin-bottom: 3em;*/
 	background-color: white;
 }
-/*above was your last place*/
 #side-bar{
+	display: inline-block;
 	float: left;
-	width: 35%;
+	font-family: Source Sans Pro;
+	width: 30%;
+	text-align: right;
   	background-image:
     	linear-gradient(
       		to right, 
       		#ebeced, #d1d5d6
     	);
 }
-
 #baby-step{
 	line-height: 60px;
 	border-bottom: white 1px solid;
+	padding-right: 24px;
+	color: #9ba0a4;
 }
+#baby-step img{
+	margin-left: 24px;
+	vertical-align: middle;
+}
+.empty-step{
+	height: 10em;
+	width: 100%;
+	background-image:
+    	linear-gradient(
+      		to right, 
+      		#ebeced, #d1d5d6
+    	);
+}
+#side-bar .step-1{
+	border-top:   solid 1px #d1d5d6;
+	background-color: white;
+	color: #36abe1;
+	font-family: Source Sans Pro;
+	font-weight: 600;
+}
+ul{
+    list-style-type: none;
+    padding:0; 
+    margin:0;
+}
+/*.step-1 img{
+	margin-left: 24px;
+	vertical-align: middle;
+}*/
 #main-content{
 	width: 65%;
-	float: right;
+	display: inline-block;
 	font-family: Helvetica;
 	line-height: 18px;
 	font-size: 13px;
 	color: #65686f;
+}
+#content{
+ 	padding: 0px 70px 0px 70px;
 }
 #title{
 	background-image: url("../images/headings/heading_bs1.png");
@@ -54,15 +99,29 @@ margin: 0 auto;
 	width: 100%;
 	background-repeat: no-repeat;
 }
-#content{
-	padding: 0px 70px 0px 70px; 
-}
+/*#title2{
+	background-image: url("../images/headings/heading_bs2.png");
+	height: 5em;
+	width: 100%;
+	background-repeat: no-repeat;
+}*/
 #content p{
 	margin: 20px 0px 40px 0px;
+}
+#friends{
+	text-align: center;
 }
 .bottom-shadow{
 	background-image: url("../images/shadow_bottom.jpg");
 	background-repeat: no-repeat;
 	height: 1em;
 	width: 100%;
+}
+.right-shadow{
+	background-image: url("../images/shadow_right.jpg");
+	background-repeat: no-repeat;
+	display: inline-block;
+	float: right;
+	height: 100em;
+	width: 1em;
 }
