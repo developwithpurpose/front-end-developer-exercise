@@ -2,18 +2,18 @@ $(document).ready(onReady);
 function onReady() {
 "use strict";
 
-$(".step-2").click(function changeStyle(){
-	// var gradient =  "background-image",
- //    	"linear-gradient(
- //      		to right, 
- //      		#ebeced, #d1d5d6
- //    	)";
+$("#step-2").click(function changeStyle(){
 	var oldSrc = "assets/images/icons/individual/icons_small_bs1_blue.png";
 	var newSrc = "assets/images/icons/individual/icons_small_bs1.png";
-	$('.step-1').css("color","#9ba0a4");
-	// $('.step-1').css(gradient);
-	$('.step-1 img[src="' + oldSrc + '"]').attr('src', newSrc);
+	$(".chosen").addClass('baby-step').removeClass('chosen');
+	$('#step-1 img[src="' + oldSrc + '"]').attr('src', newSrc);
+	$(this).addClass('chosen').removeClass('baby-step');
 	console.log("Youve clicked step 2");
+	var list = $('#list');
+	for (var i=0; i<list.length; i++){
+		console.log('#list');//also try innerText
+	}
+
 });
 
 $(".step-3").click(function changeStyle(){

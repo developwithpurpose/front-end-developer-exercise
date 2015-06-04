@@ -41,19 +41,19 @@ body{
 	font-family: Source Sans Pro;
 	width: 30%;
 	text-align: right;
-  	background-image:
+}
+.baby-step{
+	line-height: 60px;
+	border-bottom: white 1px solid;
+	padding-right: 24px;
+	color: #9ba0a4;
+	background-image:
     	linear-gradient(
       		to right, 
       		#ebeced, #d1d5d6
     	);
 }
-#baby-step{
-	line-height: 60px;
-	border-bottom: white 1px solid;
-	padding-right: 24px;
-	color: #9ba0a4;
-}
-#baby-step img{
+.baby-step img{
 	margin-left: 24px;
 	vertical-align: middle;
 }
@@ -66,22 +66,20 @@ body{
       		#ebeced, #d1d5d6
     	);
 }
-#side-bar .step-1{
+.chosen{
+	line-height: 60px;
+	padding-right: 24px;
 	border-top:   solid 1px #d1d5d6;
 	background-color: white;
 	color: #36abe1;
-	font-family: Source Sans Pro;
 	font-weight: 600;
 }
-ul{
-    list-style-type: none;
-    padding:0; 
-    margin:0;
-}
-/*.step-1 img{
+
+.chosen img{
 	margin-left: 24px;
 	vertical-align: middle;
-}*/
+}
+
 #main-content{
 	width: 65%;
 	display: inline-block;
