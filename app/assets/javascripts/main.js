@@ -25,7 +25,12 @@ function onReady() {
 	});
 
 $("#step-1").click(function changeStyle(){
+	//this gets the # of the id
+	console.log(this.id.slice(-1));
 	//this changes the styling of the tabs
+	console.log(this.id.slice(-1));
+
+
 	var oldSrc1 = "assets/images/icons/individual/icons_small_bs1.png";
 	var newSrc1 = "assets/images/icons/individual/icons_small_bs1_blue.png";
 	var oldSrc2 = "assets/images/icons/individual/icons_small_bs2_blue.png";
@@ -47,21 +52,15 @@ $("#step-1").click(function changeStyle(){
 	$('img[src="' + oldSrc5 + '"]').attr('src', newSrc5);
 	$('img[src="' + oldSrc6 + '"]').attr('src', newSrc6);
 	$('img[src="' + oldSrc7 + '"]').attr('src', newSrc7);
-	$('#step-1').addClass('first-chosen').removeClass('baby-step');
+	console.log(this);
+	$(this).addClass('first-chosen').removeClass('baby-step');
 	$('#step-2').addClass('baby-step').removeClass('chosen');
 	$('#step-3').addClass('baby-step').removeClass('chosen');
 	$('#step-4').addClass('baby-step').removeClass('chosen');
 	$('#step-5').addClass('baby-step').removeClass('chosen');
 	$('#step-6').addClass('baby-step').removeClass('chosen');
 	$('#step-7').addClass('baby-step').removeClass('chosen');
-	// var list = $('#list');
-	// for (var i=0; i<list.length; i++){
-	// 	console.log(list[i]);
-	// 	for(var i=0; i<list.length; i++){
-	// 		console.log(this);//gets the clicked element
-	// 		console.log(this.innerHTML);
-	// 	};
-	// }
+
 	//this is to change the title
 	$("#title").css({"height":"5em"});
 	$("#title2").css({"height":"0em"});
@@ -102,6 +101,8 @@ $("#step-1").click(function changeStyle(){
 // });
 
 $("#step-2").click(function changeStyle(){
+	//this gets the #2 out of the id
+	console.log(this.id.slice(-1));
 	//this changes the styling of the tabs
 	var oldSrc = "assets/images/icons/individual/icons_small_bs1_blue.png";
 	var newSrc = "assets/images/icons/individual/icons_small_bs1.png";
@@ -133,10 +134,10 @@ $("#step-2").click(function changeStyle(){
 	$('#step-7').addClass('baby-step').removeClass('chosen');
 	var list = $('#list');
 	for (var i=0; i<list.length; i++){
-		console.log(list[i]);
+		// console.log(list[i]);
 		for(var i=0; i<list.length; i++){
-			console.log(this);//gets the clicked element
-			console.log(this.innerHTML);
+		// 	console.log(this);
+		// 	console.log(this.innerHTML);
 		};
 		// };
 	}
@@ -178,6 +179,8 @@ $("#step-2").click(function changeStyle(){
 });
 
 $("#step-3").click(function changeStyle(){
+	//this gets the number of the element
+	console.log(this.id.slice(-1));
 	//this changes the styling of the tabs
 	var oldSrc1 = "assets/images/icons/individual/icons_small_bs1_blue.png";
 	var newSrc1 = "assets/images/icons/individual/icons_small_bs1.png";
@@ -201,8 +204,9 @@ $("#step-3").click(function changeStyle(){
 	$('img[src="' + oldSrc6 + '"]').attr('src', newSrc6);
 	$('img[src="' + oldSrc7 + '"]').attr('src', newSrc7);
 	$(".first-chosen").addClass('baby-step').removeClass('first-chosen');
-	$(".chosen").addClass('baby-step').removeClass('chosen');
-	$('#step-3').addClass('chosen').removeClass('baby-step');
+	// $(".chosen").addClass('baby-step').removeClass('chosen');
+	$('#step-2').addClass('baby-step').removeClass('chosen');
+	$(this).addClass('chosen').removeClass('baby-step');
 	$('#step-4').addClass('baby-step').removeClass('chosen');
 	$('#step-5').addClass('baby-step').removeClass('chosen');
 	$('#step-6').addClass('baby-step').removeClass('chosen');
@@ -246,7 +250,8 @@ $("#step-3").click(function changeStyle(){
 
 
 $("#step-4").click(function changeStyle(){
-		//this changes the styling of the tabs
+	console.log(this.id.slice(-1));
+	//this changes the styling of the tabs
 	var oldSrc1 = "assets/images/icons/individual/icons_small_bs1_blue.png";
 	var newSrc1 = "assets/images/icons/individual/icons_small_bs1.png";
 	var oldSrc2 = "assets/images/icons/individual/icons_small_bs2_blue.png";
@@ -269,9 +274,10 @@ $("#step-4").click(function changeStyle(){
 	$('img[src="' + oldSrc6 + '"]').attr('src', newSrc6);
 	$('img[src="' + oldSrc7 + '"]').attr('src', newSrc7);
 	$(".first-chosen").addClass('baby-step').removeClass('first-chosen');
-	$(".chosen").addClass('baby-step').removeClass('chosen');
+	// $(".chosen").addClass('baby-step').removeClass('chosen');
+	$('#step-2').addClass('baby-step').removeClass('chosen');
 	$('#step-3').addClass('baby-step').removeClass('chosen');
-	$('#step-4').addClass('chosen').removeClass('baby-step');
+	$(this).addClass('chosen').removeClass('baby-step');
 	$('#step-5').addClass('baby-step').removeClass('chosen');
 	$('#step-6').addClass('baby-step').removeClass('chosen');
 	$('#step-7').addClass('baby-step').removeClass('chosen');
@@ -314,7 +320,8 @@ $("#step-4").click(function changeStyle(){
 });
 
 $("#step-5").click(function changeStyle(){
-			//this changes the styling of the tabs
+	console.log(this.id.slice(-1));
+	//this changes the styling of the tabs
 	var oldSrc1 = "assets/images/icons/individual/icons_small_bs1_blue.png";
 	var newSrc1 = "assets/images/icons/individual/icons_small_bs1.png";
 	var oldSrc2 = "assets/images/icons/individual/icons_small_bs2_blue.png";
@@ -337,10 +344,11 @@ $("#step-5").click(function changeStyle(){
 	$('img[src="' + oldSrc6 + '"]').attr('src', newSrc6);
 	$('img[src="' + oldSrc7 + '"]').attr('src', newSrc7);
 	$(".first-chosen").addClass('baby-step').removeClass('first-chosen');
-	$(".chosen").addClass('baby-step').removeClass('chosen');
+	// $(".chosen").addClass('baby-step').removeClass('chosen');
+	$('#step-2').addClass('baby-step').removeClass('chosen');
 	$('#step-3').addClass('baby-step').removeClass('chosen');
 	$('#step-4').addClass('baby-step').removeClass('chosen');
-	$('#step-5').addClass('chosen').removeClass('baby-step');
+	$(this).addClass('chosen').removeClass('baby-step');
 	$('#step-6').addClass('baby-step').removeClass('chosen');
 	$('#step-7').addClass('baby-step').removeClass('chosen');
 	//this is to change the title
@@ -381,7 +389,9 @@ $("#step-5").click(function changeStyle(){
 	});
 });
 $("#step-6").click(function changeStyle(){
-				//this changes the styling of the tabs
+	console.log(this.id.slice(-1));
+	//this changes the styling of the tabs
+	console.log(this.id.slice(-1));
 	var oldSrc1 = "assets/images/icons/individual/icons_small_bs1_blue.png";
 	var newSrc1 = "assets/images/icons/individual/icons_small_bs1.png";
 	var oldSrc2 = "assets/images/icons/individual/icons_small_bs2_blue.png";
@@ -404,11 +414,12 @@ $("#step-6").click(function changeStyle(){
 	$('img[src="' + oldSrc6 + '"]').attr('src', newSrc6);
 	$('img[src="' + oldSrc7 + '"]').attr('src', newSrc7);
 	$(".first-chosen").addClass('baby-step').removeClass('first-chosen');
-	$(".chosen").addClass('baby-step').removeClass('chosen');
+	// $(".chosen").addClass('baby-step').removeClass('chosen');
+	$('#step-2').addClass('baby-step').removeClass('chosen');
 	$('#step-3').addClass('baby-step').removeClass('chosen');
 	$('#step-4').addClass('baby-step').removeClass('chosen');
 	$('#step-5').addClass('baby-step').removeClass('chosen');
-	$('#step-6').addClass('chosen').removeClass('baby-step');
+	$(this).addClass('chosen').removeClass('baby-step');
 	$('#step-7').addClass('baby-step').removeClass('chosen');
 	//this is to change the title
 	$("#title").css({"height":"0em"});
@@ -451,21 +462,33 @@ $("#step-6").click(function changeStyle(){
 });
 
 $("#step-7").click(function changeStyle(){
-					//this changes the styling of the tabs
+
+	var list = $('#list');
+	for (var i=0; i<list.length; i++){
+	
+		for(var i=0; i<list.length; i++){
+			console.log(this);//gets the clicked element
+		};
+	}
+	console.log(this.id.slice(-1));
+	//this changes the styling of the tabs
 	var oldSrc1 = "assets/images/icons/individual/icons_small_bs1_blue.png";
-	var newSrc1 = "assets/images/icons/individual/icons_small_bs1.png";
 	var oldSrc2 = "assets/images/icons/individual/icons_small_bs2_blue.png";
-	var newSrc2 = "assets/images/icons/individual/icons_small_bs2.png";
 	var oldSrc3 = "assets/images/icons/individual/icons_small_bs3_blue.png";
-	var newSrc3 = "assets/images/icons/individual/icons_small_bs3.png"
 	var oldSrc4 = "assets/images/icons/individual/icons_small_bs4_blue.png";
-	var newSrc4 = "assets/images/icons/individual/icons_small_bs4.png";
 	var oldSrc5 = "assets/images/icons/individual/icons_small_bs5_blue.png";
-	var newSrc5 = "assets/images/icons/individual/icons_small_bs5.png";
 	var oldSrc6 = "assets/images/icons/individual/icons_small_bs6_blue.png";
-	var newSrc6 = "assets/images/icons/individual/icons_small_bs6.png";
 	var oldSrc7 = "assets/images/icons/individual/icons_small_bs7.png";
+
+	var newSrc1 = "assets/images/icons/individual/icons_small_bs1.png";
+	var newSrc2 = "assets/images/icons/individual/icons_small_bs2.png";
+	var newSrc3 = "assets/images/icons/individual/icons_small_bs3.png"
+	var newSrc4 = "assets/images/icons/individual/icons_small_bs4.png";
+	var newSrc5 = "assets/images/icons/individual/icons_small_bs5.png";
+	var newSrc6 = "assets/images/icons/individual/icons_small_bs6.png";
 	var newSrc7 = "assets/images/icons/individual/icons_small_bs7_blue.png";
+
+
 	$('img[src="' + oldSrc1 + '"]').attr('src', newSrc1);
 	$('img[src="' + oldSrc2 + '"]').attr('src', newSrc2);
 	$('img[src="' + oldSrc3 + '"]').attr('src', newSrc3);
@@ -474,12 +497,13 @@ $("#step-7").click(function changeStyle(){
 	$('img[src="' + oldSrc6 + '"]').attr('src', newSrc6);
 	$('img[src="' + oldSrc7 + '"]').attr('src', newSrc7);
 	$(".first-chosen").addClass('baby-step').removeClass('first-chosen');
-	$(".chosen").addClass('baby-step').removeClass('chosen');
+	// $(".chosen").addClass('baby-step').removeClass('chosen');
+	$('#step-2').addClass('baby-step').removeClass('chosen');
 	$('#step-3').addClass('baby-step').removeClass('chosen');
 	$('#step-4').addClass('baby-step').removeClass('chosen');
 	$('#step-5').addClass('baby-step').removeClass('chosen');
 	$('#step-6').addClass('baby-step').removeClass('chosen');
-	$('#step-7').addClass('chosen').removeClass('baby-step');
+	$(this).addClass('chosen').removeClass('baby-step');
 	//this is to change the title
 	$("#title").css({"height":"0em"});
 	$("#title2").css({"height":"0em"});
@@ -497,14 +521,13 @@ $("#step-7").click(function changeStyle(){
 
    $.get('http://localhost:9001/app/assets/javascripts/baby-steps.json', function(data) { 
         var friends = data.friends;
-        console.log(friends);
     	var firsts = [];
     	var lasts = [];
     	for(var i=0; i<friends.length;i++){
     		if(friends[i].babyStep===7){
     			firsts.push(friends[i].firstName);
     			lasts.push(friends[i].lastName);
-    			console.log(firsts);
+    			// console.log(firsts);
     			var numBer = firsts.length-2;
     		}
 		}
