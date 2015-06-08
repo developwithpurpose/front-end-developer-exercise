@@ -3,7 +3,7 @@ function onReady() {
 "use strict";
 	var list = $("#list div");
 	var x;
-
+	//this get request displays the number of friends on Step 1 when the page loads
    $.get("http://localhost:9001/app/assets/javascripts/baby-steps.json", function(data) { 
         var friends = data.friends;
     	var firsts = [];
@@ -36,21 +36,18 @@ function onReady() {
 			var otherIDs = newList.id.slice(-1);
 			//this parses out the number of the id we're on
 			var thisID = x.id.slice(-1);
+
 			$(newList).addClass("baby-step").removeClass("chosen");
 			if (otherIDs === thisID){
 				$(x).addClass("chosen").removeClass("baby-step");
-				// $(newList).addClass('baby-step').removeClass('chosen');
 			}else{
-				// console.log("This is the else statement of the "+x.id+" gripped function");
+				// console.log("x.id+" gripped function");
 			}
 	}
 }
 
 $("#step-1").click(function changeStyle(){
-	//this gets the # of the id
-	// console.log(this.id.slice(-1));
 	//this changes the styling of the tabs
-
 	var oldSrc1 = "assets/images/icons/individual/icons_small_bs1.png";
 	var newSrc1 = "assets/images/icons/individual/icons_small_bs1_blue.png";
 	var oldSrc2 = "assets/images/icons/individual/icons_small_bs2_blue.png";
@@ -93,11 +90,12 @@ $("#step-1").click(function changeStyle(){
         var friends = data.friends;
     	var firsts = [];
     	var lasts = [];
+    	var numBer = firsts.length-2;
     	for(var i=0; i<friends.length;i++){
     		if(friends[i].babyStep===1){
     			firsts.push(friends[i].firstName);
     			lasts.push(friends[i].lastName);
-    			var numBer = firsts.length-2;
+    			// var numBer = firsts.length-2;
     		}
 		}
 		if (firsts.length===1){
@@ -157,11 +155,12 @@ $("#step-2").click(function changeStyle(){
         var friends = data.friends;
     	var firsts = [];
     	var lasts = [];
+    	var numBer = firsts.length-2;
     	for(var i=0; i<friends.length;i++){
     		if(friends[i].babyStep===2){
     			firsts.push(friends[i].firstName);
     			lasts.push(friends[i].lastName);
-    			var numBer = firsts.length-2;
+    		
     		}
 		}
 		if (firsts.length===1){
@@ -221,11 +220,11 @@ $("#step-3").click(function changeStyle(){
         var friends = data.friends;
     	var firsts = [];
     	var lasts = [];
+    	var numBer = firsts.length-2;
     	for(var i=0; i<friends.length;i++){
     		if(friends[i].babyStep===3){
     			firsts.push(friends[i].firstName);
     			lasts.push(friends[i].lastName);
-    			var numBer = firsts.length-2;
     		}
 		}
 		if (firsts.length===1){
@@ -286,11 +285,11 @@ $("#step-4").click(function changeStyle(){
         var friends = data.friends;
     	var firsts = [];
     	var lasts = [];
+    	var numBer = firsts.length-2;
     	for(var i=0; i<friends.length;i++){
     		if(friends[i].babyStep===4){
     			firsts.push(friends[i].firstName);
     			lasts.push(friends[i].lastName);
-    			var numBer = firsts.length-2;
     		}
 		}
 		if (firsts.length===1){
@@ -350,11 +349,12 @@ $("#step-5").click(function changeStyle(){
         var friends = data.friends;
     	var firsts = [];
     	var lasts = [];
+    	var numBer = firsts.length-2;
     	for(var i=0; i<friends.length;i++){
     		if(friends[i].babyStep===5){
     			firsts.push(friends[i].firstName);
     			lasts.push(friends[i].lastName);
-    			var numBer = firsts.length-2;
+    			
     		}
 		}
 		if (firsts.length===1){
@@ -414,11 +414,12 @@ $("#step-6").click(function changeStyle(){
         var friends = data.friends;
     	var firsts = [];
     	var lasts = [];
+    	var numBer = firsts.length-2;
     	for(var i=0; i<friends.length;i++){
     		if(friends[i].babyStep===6){
     			firsts.push(friends[i].firstName);
     			lasts.push(friends[i].lastName);
-    			var numBer = firsts.length-2;
+    			
     		}
 		}
 		if (firsts.length===1){
@@ -483,12 +484,11 @@ $("#step-7").click(function changeStyle(){
         var friends = data.friends;
     	var firsts = [];
     	var lasts = [];
+    	var numBer = firsts.length-2;
     	for(var i=0; i<friends.length;i++){
     		if(friends[i].babyStep===7){
     			firsts.push(friends[i].firstName);
     			lasts.push(friends[i].lastName);
-    			// console.log(firsts);
-    			var numBer = firsts.length-2;
     		}
 		}
 		if (firsts.length===1){
