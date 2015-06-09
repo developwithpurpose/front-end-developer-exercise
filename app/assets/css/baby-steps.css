@@ -1,0 +1,231 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  top: 0; }
+
+header {
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  height: 276px; }
+  header div {
+    padding-right: 70px;
+    padding-top: 50px; }
+    header div p {
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      margin: 0;
+      text-align: right; }
+    header div .header-one {
+      font-weight: 300;
+      font-size: 32px; }
+    header div .header-two {
+      font-weight: 700;
+      font-size: 50px;
+      text-transform: uppercase;
+      line-height: 48px; }
+
+.wrapper {
+  margin: 60px 0 0 0; }
+  .wrapper aside {
+    width: 300px;
+    float: left;
+    text-align: right; }
+    .wrapper aside ul {
+      list-style-type: none;
+      float: left;
+      margin: 0;
+      padding: 0; }
+      .wrapper aside ul li {
+        float: left;
+        width: 100%;
+        /*background-color: #ebeced;*/
+        background: -webkit-gradient(linear, left top, right top, from(#ebeced, #ebeced 95%), to(#d1d5d6));
+        background: -webkit-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+        background: -moz-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+        background: -ms-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+        background: -o-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+        margin-bottom: 1px;
+        cursor: pointer; }
+        .wrapper aside ul li:active, .wrapper aside ul li:hover, .wrapper aside ul li:focus {
+          background-color: #fff;
+          background: -webkit-linear-gradient(left, #fff, #fff);
+          background: -moz-linear-gradient(left, #fff, #fff);
+          background: -ms-linear-gradient(left, #fff, #fff);
+          background: -o-linear-gradient(left, #fff, #fff); }
+          .wrapper aside ul li:active p, .wrapper aside ul li:hover p, .wrapper aside ul li:focus p {
+            color: #36abe1;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600; }
+          .wrapper aside ul li:active #step1, .wrapper aside ul li:hover #step1, .wrapper aside ul li:focus #step1 {
+            background-position: 0 -175px; }
+          .wrapper aside ul li:active #step2, .wrapper aside ul li:hover #step2, .wrapper aside ul li:focus #step2 {
+            background-position: 0 -200px; }
+          .wrapper aside ul li:active #step3, .wrapper aside ul li:hover #step3, .wrapper aside ul li:focus #step3 {
+            background-position: 0 -225px; }
+          .wrapper aside ul li:active #step4, .wrapper aside ul li:hover #step4, .wrapper aside ul li:focus #step4 {
+            background-position: 0 -250px; }
+          .wrapper aside ul li:active #step5, .wrapper aside ul li:hover #step5, .wrapper aside ul li:focus #step5 {
+            background-position: 0 -275px; }
+          .wrapper aside ul li:active #step6, .wrapper aside ul li:hover #step6, .wrapper aside ul li:focus #step6 {
+            background-position: 0 -300px; }
+          .wrapper aside ul li:active #step7, .wrapper aside ul li:hover #step7, .wrapper aside ul li:focus #step7 {
+            background-position: 0 -325px; }
+        .wrapper aside ul li p {
+          float: left;
+          margin: 0 0 0 130px;
+          padding: 20px 0;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 400;
+          color: #9ba0a4; }
+        .wrapper aside ul li div {
+          background-image: url("../images/icons/sprites/icons_small.png");
+          width: 30px;
+          height: 25px;
+          float: left;
+          margin: 20px 24px; }
+        .wrapper aside ul li #step2 {
+          background-position: 0 -25px; }
+        .wrapper aside ul li #step3 {
+          background-position: 0 -50px; }
+        .wrapper aside ul li #step4 {
+          background-position: 0 -75px; }
+        .wrapper aside ul li #step5 {
+          background-position: 0 -100px; }
+        .wrapper aside ul li #step6 {
+          background-position: 0 -125px; }
+        .wrapper aside ul li #step7 {
+          background-position: 0 -150px; }
+      .wrapper aside ul .active-1 {
+        background-color: #fff;
+        background: -webkit-linear-gradient(left, #fff, #fff);
+        background: -moz-linear-gradient(left, #fff, #fff);
+        background: -ms-linear-gradient(left, #fff, #fff);
+        background: -o-linear-gradient(left, #fff, #fff); }
+        .wrapper aside ul .active-1 p {
+          color: #36abe1;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600; }
+        .wrapper aside ul .active-1 #step1 {
+          background-position: 0 -175px; }
+      .wrapper aside ul .active-2 {
+        background-color: #fff;
+        background: -webkit-linear-gradient(left, #fff, #fff);
+        background: -moz-linear-gradient(left, #fff, #fff);
+        background: -ms-linear-gradient(left, #fff, #fff);
+        background: -o-linear-gradient(left, #fff, #fff); }
+        .wrapper aside ul .active-2 p {
+          color: #36abe1;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600; }
+        .wrapper aside ul .active-2 #step2 {
+          background-position: 0 -200px; }
+      .wrapper aside ul .active-3 {
+        background-color: #fff;
+        background: -webkit-linear-gradient(left, #fff, #fff);
+        background: -moz-linear-gradient(left, #fff, #fff);
+        background: -ms-linear-gradient(left, #fff, #fff);
+        background: -o-linear-gradient(left, #fff, #fff); }
+        .wrapper aside ul .active-3 p {
+          color: #36abe1;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600; }
+        .wrapper aside ul .active-3 #step3 {
+          background-position: 0 -225px; }
+      .wrapper aside ul .active-4 {
+        background-color: #fff;
+        background: -webkit-linear-gradient(left, #fff, #fff);
+        background: -moz-linear-gradient(left, #fff, #fff);
+        background: -ms-linear-gradient(left, #fff, #fff);
+        background: -o-linear-gradient(left, #fff, #fff); }
+        .wrapper aside ul .active-4 p {
+          color: #36abe1;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600; }
+        .wrapper aside ul .active-4 #step4 {
+          background-position: 0 -250px; }
+      .wrapper aside ul .active-5 {
+        background-color: #fff;
+        background: -webkit-linear-gradient(left, #fff, #fff);
+        background: -moz-linear-gradient(left, #fff, #fff);
+        background: -ms-linear-gradient(left, #fff, #fff);
+        background: -o-linear-gradient(left, #fff, #fff); }
+        .wrapper aside ul .active-5 p {
+          color: #36abe1;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600; }
+        .wrapper aside ul .active-5 #step5 {
+          background-position: 0 -275px; }
+      .wrapper aside ul .active-6 {
+        background-color: #fff;
+        background: -webkit-linear-gradient(left, #fff, #fff);
+        background: -moz-linear-gradient(left, #fff, #fff);
+        background: -ms-linear-gradient(left, #fff, #fff);
+        background: -o-linear-gradient(left, #fff, #fff); }
+        .wrapper aside ul .active-6 p {
+          color: #36abe1;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600; }
+        .wrapper aside ul .active-6 #step6 {
+          background-position: 0 -300px; }
+      .wrapper aside ul .active-7 {
+        background-color: #fff;
+        background: -webkit-linear-gradient(left, #fff, #fff);
+        background: -moz-linear-gradient(left, #fff, #fff);
+        background: -ms-linear-gradient(left, #fff, #fff);
+        background: -o-linear-gradient(left, #fff, #fff); }
+        .wrapper aside ul .active-7 p {
+          color: #36abe1;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-weight: 600; }
+        .wrapper aside ul .active-7 #step7 {
+          background-position: 0 -325px; }
+      .wrapper aside ul .tag-to-bottom {
+        bottom: 0;
+        height: 300px; }
+        .wrapper aside ul .tag-to-bottom:active, .wrapper aside ul .tag-to-bottom:hover, .wrapper aside ul .tag-to-bottom:focus {
+          background: -webkit-gradient(linear, left top, right top, from(#ebeced, #ebeced 95%), to(#d1d5d6));
+          background: -webkit-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+          background: -moz-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+          background: -ms-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+          background: -o-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6); }
+  .wrapper article {
+    width: 500px;
+    margin: 0 70px;
+    float: left;
+    font-family: helvetica;
+    color: #65686f;
+    font-size: 13px;
+    line-height: 18px; }
+    .wrapper article p {
+      margin: 24px 0 0 0; }
+    .wrapper article .baby_step_1 {
+      display: none; }
+    .wrapper article .baby_step_2 {
+      display: none; }
+    .wrapper article .baby_step_3 {
+      display: none; }
+    .wrapper article .baby_step_4 {
+      display: none; }
+    .wrapper article .baby_step_5 {
+      display: none; }
+    .wrapper article .baby_step_6 {
+      display: none; }
+    .wrapper article .baby_step_7 {
+      display: none; }
+    .wrapper article .open_box {
+      display: block; }
+    .wrapper article .friends_name {
+      font-family: helvetica;
+      color: #6fbee7;
+      font-style: normal;
+      cursor: pointer; }

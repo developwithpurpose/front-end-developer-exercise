@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+header {
+  background-image: url("css/images-used/header.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%; }
