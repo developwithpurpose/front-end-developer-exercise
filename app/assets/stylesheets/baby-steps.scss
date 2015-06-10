@@ -1,0 +1,300 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+html {
+    margin: 0;
+    padding: 0;
+}
+body{ 
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+header {
+    background-image: url('../images/header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    top: 0;
+    margin: auto 0;
+    height: 276px;
+    div {
+        padding-right: 70px;
+        padding-top: 50px;
+        p {
+            font-family: 'Open Sans', sans-serif;
+            color:#fff;
+            margin: 0;
+            text-align: right;
+        }
+        .header-one{ 
+            font-weight: 300;
+            font-size: 32px;
+        }
+        .header-two{
+            font-weight: 700;
+            font-size: 50px;
+            text-transform: uppercase;
+            line-height: 48px;
+        }
+    }
+}
+
+.wrapper {
+    margin: 60px 0 0 0;
+    aside {
+        width: 300px;
+        float: left;
+        text-align: right;
+        ul {
+            list-style-type: none;
+            float: left;
+            margin: 0;
+            padding: 0;
+            li{
+                float: left;
+                width: 100%;
+                /*background-color: #ebeced;*/
+                background: -webkit-gradient(linear, left top, right top, from(#ebeced, #ebeced 95%), to(#d1d5d6)); 
+                background: -webkit-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+                background: -moz-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+                background: -ms-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+                background: -o-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+                margin-bottom: 1px;
+                cursor: pointer;
+                    &:active, &:hover, &:focus {
+                        background-color: #fff;
+                        background: -webkit-linear-gradient(left, #fff, #fff);
+                        background: -moz-linear-gradient(left, #fff, #fff);
+                        background: -ms-linear-gradient(left, #fff, #fff);
+                        background: -o-linear-gradient(left, #fff, #fff);
+                        p {
+                            color: #36abe1;
+                            font-family: 'Source Sans Pro', sans-serif;
+                            font-weight: 600;
+                        }
+                        #step1 {
+                            background-position: 0 -175px;    
+                        }
+                        #step2 {
+                            background-position: 0 -200px;
+                        }
+                        #step3 {
+                            background-position: 0 -225px;
+                        }
+                        #step4 {
+                            background-position: 0 -250px;
+                        }
+                        #step5 {
+                            background-position: 0 -275px;
+                        }
+                        #step6 {
+                            background-position: 0 -300px; 
+                        }
+                        #step7 {
+                            background-position: 0 -325px;
+                        }
+                    }
+                p {
+                    float: left;
+                    margin: 0 0 0 130px;
+                    padding: 20px 0;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    font-weight: 400;
+                    color: #9ba0a4;
+                }
+                div {
+                    background-image: url('../images/icons/sprites/icons_small.png');
+                    width: 30px;
+                    height: 25px;
+                    float: left;
+                    margin: 20px 24px;
+                }
+                #step2 {
+                    background-position: 0 -25px;    
+                }
+                #step3 {
+                    background-position: 0 -50px;
+                }
+                #step4 {
+                    background-position: 0 -75px;
+                }
+                #step5 {
+                    background-position: 0 -100px;
+                }
+                #step6 {
+                    background-position: 0 -125px;
+                }
+                #step7 {
+                    background-position: 0 -150px;
+                }
+            }
+            .active-1 {
+                background-color: #fff;
+                background: -webkit-linear-gradient(left, #fff, #fff);
+                background: -moz-linear-gradient(left, #fff, #fff);
+                background: -ms-linear-gradient(left, #fff, #fff);
+                background: -o-linear-gradient(left, #fff, #fff);
+                    p {
+                        color: #36abe1;
+                        font-family: 'Source Sans Pro', sans-serif;
+                        font-weight: 600;
+                    }
+                #step1 {
+                            background-position: 0 -175px;    
+                        }
+            }
+            .active-2 {
+                background-color: #fff;
+                background: -webkit-linear-gradient(left, #fff, #fff);
+                background: -moz-linear-gradient(left, #fff, #fff);
+                background: -ms-linear-gradient(left, #fff, #fff);
+                background: -o-linear-gradient(left, #fff, #fff);
+                    p {
+                        color: #36abe1;
+                        font-family: 'Source Sans Pro', sans-serif;
+                        font-weight: 600;
+                    }
+                #step2 {
+                            background-position: 0 -200px;
+                        }
+            }
+            .active-3 {
+                background-color: #fff;
+                background: -webkit-linear-gradient(left, #fff, #fff);
+                background: -moz-linear-gradient(left, #fff, #fff);
+                background: -ms-linear-gradient(left, #fff, #fff);
+                background: -o-linear-gradient(left, #fff, #fff);
+                    p {
+                        color: #36abe1;
+                        font-family: 'Source Sans Pro', sans-serif;
+                        font-weight: 600;
+                    }
+                #step3 {
+                            background-position: 0 -225px;
+                        }
+            }
+            .active-4 {
+                background-color: #fff;
+                background: -webkit-linear-gradient(left, #fff, #fff);
+                background: -moz-linear-gradient(left, #fff, #fff);
+                background: -ms-linear-gradient(left, #fff, #fff);
+                background: -o-linear-gradient(left, #fff, #fff);
+                    p {
+                        color: #36abe1;
+                        font-family: 'Source Sans Pro', sans-serif;
+                        font-weight: 600;
+                    }
+                #step4 {
+                            background-position: 0 -250px;
+                        }
+            }
+            .active-5 {
+                background-color: #fff;
+                background: -webkit-linear-gradient(left, #fff, #fff);
+                background: -moz-linear-gradient(left, #fff, #fff);
+                background: -ms-linear-gradient(left, #fff, #fff);
+                background: -o-linear-gradient(left, #fff, #fff);
+                    p {
+                        color: #36abe1;
+                        font-family: 'Source Sans Pro', sans-serif;
+                        font-weight: 600;
+                    }
+                #step5 {
+                            background-position: 0 -275px;
+                        }
+            }
+            .active-6 {
+                background-color: #fff;
+                background: -webkit-linear-gradient(left, #fff, #fff);
+                background: -moz-linear-gradient(left, #fff, #fff);
+                background: -ms-linear-gradient(left, #fff, #fff);
+                background: -o-linear-gradient(left, #fff, #fff);
+                    p {
+                        color: #36abe1;
+                        font-family: 'Source Sans Pro', sans-serif;
+                        font-weight: 600;
+                    }
+                #step6 {
+                            background-position: 0 -300px;
+                        }
+            }
+            .active-7 {
+                background-color: #fff;
+                background: -webkit-linear-gradient(left, #fff, #fff);
+                background: -moz-linear-gradient(left, #fff, #fff);
+                background: -ms-linear-gradient(left, #fff, #fff);
+                background: -o-linear-gradient(left, #fff, #fff);
+                    p {
+                        color: #36abe1;
+                        font-family: 'Source Sans Pro', sans-serif;
+                        font-weight: 600;
+                    }
+                #step7 {
+                            background-position: 0 -325px;
+                        }
+            }
+            
+            .tag-to-bottom {
+                bottom: 0;
+                height: 300px;
+                &:active, &:hover, &:focus {
+                    background: -webkit-gradient(linear, left top, right top, from(#ebeced, #ebeced 95%), to(#d1d5d6)); 
+                background: -webkit-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+                background: -moz-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+                background: -ms-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+                background: -o-linear-gradient(left, #ebeced, #ebeced 95%, #d1d5d6);
+                }
+            }
+        }
+    }
+    article {
+        width: 500px;
+        margin: 0 70px;
+        float: left;
+        font-family: helvetica;
+        color: #65686f;
+        font-size: 13px;
+        line-height: 18px;
+        p {
+            margin: 24px 0 0 0;   
+        }
+        .baby_step_1 {
+            display: none;
+        }
+        .baby_step_2 {
+            display: none;  
+        }
+        .baby_step_3 {
+            display: none;
+        }
+        .baby_step_4 {
+            display: none;
+        }
+        .baby_step_5 {
+            display: none;
+        }
+        .baby_step_6 {
+            display: none;
+        }
+        .baby_step_7 {
+           display: none; 
+        }
+        .open_box {
+          display: block;  
+        }
+        .friends_name {
+            font-family: helvetica;
+            color: #6fbee7;
+            font-style: normal;
+            cursor: pointer;
+        }
+        .other_friends {
+           font-family: helvetica;
+            color: #65686f;
+            font-style: normal;
+    
+        }
+    }
+    
+}
