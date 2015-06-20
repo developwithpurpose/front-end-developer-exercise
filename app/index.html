@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Dave Ramsey - Baby Steps</title>
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery-jvert-tabs-1.1.4.css" />
+  <script type="text/javascript" src="assets/javascripts/jquery-1.4.1.min.js"></script>
+  <script type="text/javascript" src="assets/javascripts/jquery-jvert-tabs-1.1.4.js"></script>		
+  <link href="assets/stylesheets/babysteps.css" rel="stylesheet" type="text/css">
+ 
+</head>
+
+
+<body>
+  <div id="content">
+  <div id="header-img"></div>
+    <h1>The Seven Baby Steps</h1>
+<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$("#BabyStepsTabs").jVertTabs();
+			function openTab(tabId,index)
+			{
+				$(tabId).jVertTabs('selected',index);
+			}
+		});
+
+</script>
+<script>
+function myFunction (stepName, currentID){
+            
+        /* set no cache */
+        $.ajaxSetup({ cache: false });
+ 
+        $.getJSON("assets/javascripts/baby-steps.json", function(data){ 
+            var babyStepNames = [];
+               
+           
+            /* loop through array */
+            $.each(data.friends, function(index, d){         
+               if(d.babyStep === stepName){
+                babyStepNames.push( d.firstName + ' ' + d.lastName, "; ");
+                       }
+                });
+             
+			    
+             //$(currentID).html(babyStepNames.join(''));
+           $(currentID).html(babyStepNames.join(''));
+            }).error(function(jqXHR, textStatus, errorThrown){
+            alert("error occurred!");
+        });
+  
+};
+</script>
+
+	<div id="BabyStepsTabs">
+		<div>
+			<ul>
+                            <li class="bstep1"><a href="#BabyStep1">Baby Step 1 </a></li>
+                            <li class="bstep2"><a href="#BabyStep2">Baby Step 2 </a></li>
+                            <li class="bstep3"><a href="#BabyStep3">Baby Step 3</a></li>
+                            <li class="bstep4"><a href="#BabyStep4">Baby Step 4</a></li>
+                            <li class="bstep5"><a href="#BabyStep5">Baby Step 5</a></li>
+                            <li class="bstep6"><a href="#BabyStep6">Baby Step 6</a></li>
+                            <li class="bstep7"><a href="#BabyStep7">Baby Step 7</a></li>
+			</ul>
+		</div>
+
+            <div>
+		<div id="#BabyStep1">
+			<img src="assets/images/headings/heading_bs1.png" width="436" height="65" alt="Baby Step 1 Large" />
+			<br>
+			<p> An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and 	the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.</p>
+
+			<p> This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt! </p>	
+                        <div id="b1"> <script>myFunction(1,"#b1");</script></div>
+                </div>
+     
+                <div id="#BabyStep2">
+                        <img src="assets/images/headings/heading_bs2.png" width="436" height="65" alt="Baby Step 2 Large" />
+        
+                        <p> List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first. </p>
+
+                        <p>The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.</p>
+                        <div id="b2"> <script>myFunction(2,"#b2");</script></div>	
+                </div>
+		
+                <div id="#BabyStep3">
+                        <img src="assets/images/headings/heading_bs3.png" width="436" height="65" alt="Baby Step 3 Large">
+                        
+                        <p>Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra” money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?” Your answer to that question is how much you should save.</p>
+
+                        <p>Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you’re paying to yourself, a buffer between you and life.</p>	
+                        <div id="b3"> <script>myFunction(3,"#b3");</script></div>	
+                </div>
+ 
+                <div id="#BabyStep4">
+			<img src="assets/images/headings/heading_bs4.png" width="436" height="65" alt="Baby Step 4 Large">
+                        <p>When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.</p>
+
+                        <p> Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.</p>
+                        <div id="b4"> <script>myFunction(4,"#b4");</script></div>	
+                </div>
+  
+                <div id="BabyStep5">
+                        <img src="assets/images/headings/heading_bs5.png" width="436" height="65" alt="Baby Step 5 Large">
+                        <p>By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.</p>
+
+                        <p>In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!</p>
+                        <div id="b5"> <script>myFunction(5,"#b5");</script></div>	
+                </div>
+   
+
+                <div id="BabyStep6">
+                        <img src="assets/images/headings/heading_bs6.png" width="436" height="65" alt="Baby Step 6 Large">
+                        <p> Now it’s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.</p>
+
+                        <p>As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!</p>
+                        <div id="b6"> <script>myFunction(6,"#b6");</script></div>	
+                </div>
+ 	
+                <div id="BabyStep7" >
+                        <img src="assets/images/headings/heading_bs7.png" width="436" height="65" alt="Baby Step 7 Large">
+                        <p>It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!</p>
+                        
+                        <p>Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.</p>
+                        <div id="b7"> <script>myFunction(7,"#b7");</script></div>		
+                </div>
+   
+             </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
