@@ -6,6 +6,17 @@ module.exports = function( grunt ) {
 
   grunt.initConfig({
       pkg: grunt.file.readJSON( "package.json" ),
+      autoprefixer: {
+        browsers: ["last 2 versions', 'ie 8', 'ie 9"],
+        src: "app/assets/stylesheets/css/main.css"
+      },
+      cssmin: {
+        main: {
+          files: {
+            "app/assets/stylesheets/css/main.css" : "app/assets/stylesheets/css/main.css"
+          }
+        }
+      },
       jshint: {
         all: [ "Gruntfile.js", "app/assets/javascripts/**/*.js", "spec/*.js" ],
         options: {
@@ -75,9 +86,45 @@ module.exports = function( grunt ) {
       strict: {
         src: [ "app/assets/stylesheets/**/*.css" ]
       }
+    },
+    sass: {
+      prod: {
+        options: {
+          outputStyle: "compressed"
+        }, 
+        files: {
+          "assets/stylesheets/css/main.css" : "assets/stylesheets/sass/main.scss"
+        }
+      }, 
+      dev: {
+        options: {
+          sourceMap: true,
+          sourceMapEmbed: true
+        },
+        files: {
+          "assets/stylesheets/css/main.css" : "assets/stylesheets/sass/main.scss"
+        }
+      }    
     }
   });
 
   grunt.registerTask( "default", ["connect"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
+  grunt.registerTask( "build", [
+    "clean",
+    "sass:prod",
+    "autoprefixer",
+    "uglify",
+    "cssmin"
+  ]);
+  grunt.registerTask( "build-dev", [
+    "clean",
+    "sass:dev",
+    "autoprefixer"
+  ]);
+  grunt.registerTask( "serve", [
+    "build-dev",
+    "connect",
+    "watch"
+  ]);
 };
