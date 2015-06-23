@@ -1,0 +1,49 @@
+body {
+  background-color: #bbbfc2; }
+
+div.container {
+  background-color: #fff; }
+
+img.banner {
+  position: relative;
+  width: 100%;
+  margin-bottom: 60px; }
+
+.title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: #fff;
+  position: absolute;
+  top: 50px;
+  right: 70px;
+  max-width: 500px;
+  text-align: right; }
+  .title .tagline {
+    font-weight: 700;
+    line-height: 48px;
+    font-size: 50px;
+    margin-top: 15px; }
+
+ul.steps {
+  width: 300px;
+  height: 100%;
+  float: left;
+  margin-right: 70px;
+  list-style-type: none;
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+  background: -webkit-linear-gradient(right, #ebeced 95%, #d1d5d6);
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: -webkit-linear-gradient(left, #ebeced 95%, #d1d5d6);
+  background: linear-gradient(to right, #ebeced 95%, #d1d5d6);
+  /* Standard syntax */ }
+  ul.steps .active {
+    font-weight: 600;
+    color: #36abe1;
+    background-color: #fff; }

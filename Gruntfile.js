@@ -56,7 +56,21 @@ module.exports = function( grunt ) {
         lint: {
           files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
           tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
-        }
+        },
+        livereload: {
+           options: {
+            livereload: true
+           },
+           files: [
+            "app/assets/stylesheets/css/main.css",
+            "app/assets/javascripts/main.js",
+            "app/index.html"
+            ]
+          }, 
+         sass: {
+          files: ["app/assets/stylesheets/sass/main.scss"],
+          tasks: ["sass:dev", "autoprefixer"]
+         }    
       },
       jasmine: {
         pivotal: {
@@ -93,7 +107,7 @@ module.exports = function( grunt ) {
           outputStyle: "compressed"
         }, 
         files: {
-          "assets/stylesheets/css/main.css" : "assets/stylesheets/sass/main.scss"
+          "app/assets/stylesheets/css/main.css" : "app/assets/stylesheets/sass/main.scss"
         }
       }, 
       dev: {
@@ -102,11 +116,11 @@ module.exports = function( grunt ) {
           sourceMapEmbed: true
         },
         files: {
-          "assets/stylesheets/css/main.css" : "assets/stylesheets/sass/main.scss"
+          "app/assets/stylesheets/css/main.css" : "app/assets/stylesheets/sass/main.scss"
         }
       }    
-    }
-  });
+    } 
+});
 
   grunt.registerTask( "default", ["connect"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
@@ -125,6 +139,6 @@ module.exports = function( grunt ) {
   grunt.registerTask( "serve", [
     "build-dev",
     "connect",
-    "watch"
+    "watch"    
   ]);
 };
