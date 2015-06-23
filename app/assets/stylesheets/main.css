@@ -100,6 +100,32 @@ body {
   width: 100%;
 }
 
+.primary-nav a::after {
+  background: url('../images/icons/sprites/icons_small.png') no-repeat;
+  content: "";
+  display: inline-block;
+  height: 25px;
+  margin-left: 24px;
+  vertical-align: middle;
+  width: 30px;
+}
+
+.primary-nav a.step-one::after { background-position: 0 0; }
+.primary-nav a.step-two::after { background-position: 0 -25px; }
+.primary-nav a.step-three::after { background-position: 0 -50px; }
+.primary-nav a.step-four::after { background-position: 0 -75px; }
+.primary-nav a.step-five::after { background-position: 0 -100px; }
+.primary-nav a.step-six::after { background-position: 0 -125px; }
+.primary-nav a.step-seven::after { background-position: 0 -150px; }
+
+.primary-nav .active a.step-one::after { background-position: 0 -175px; }
+.primary-nav .active a.step-two::after { background-position: 0 -200px; }
+.primary-nav .active a.step-three::after { background-position: 0 -225px; }
+.primary-nav .active a.step-four::after { background-position: 0 -250px; }
+.primary-nav .active a.step-five::after { background-position: 0 -275px; }
+.primary-nav .active a.step-six::after { background-position: 0 -300px; }
+.primary-nav .active a.step-seven::after { background-position: 0 -325px; }
+
 #main {
   padding: 0 70px;
   width: 540px;
