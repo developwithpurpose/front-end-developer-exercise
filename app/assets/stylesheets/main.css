@@ -159,7 +159,7 @@ body{
 #content{
  	padding: 0px 70px 0px 70px;
 }
-#title{
+#title1{
 	background-image: url("../images/headings/heading_bs1.png");
 	height: 5em;
     -webkit-transition-property: height;
