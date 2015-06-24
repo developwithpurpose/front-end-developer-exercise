@@ -1,15 +1,14 @@
-$spriteSheet: url("../../images/icons/sprites/icons_large.png");
 $ltBlue: #36abe1;
 
-body {
+/*body {
   background-color: #bbbfc2;
-}
+}*/
 
-div.container {
+.container {
   background-color: #fff;
 }
 
-img.banner {
+.banner {
   position: relative;
   width: 100%;
   margin-bottom: 60px;
@@ -64,7 +63,7 @@ ul.steps {
   line-height: 20px;  
   margin-right: 70px;
   
-  h1 {
+  .heading {
     font-weight: 600;
     font-size: 30px;
     color: $ltBlue;
@@ -72,7 +71,7 @@ ul.steps {
     margin: 0 0 0 0;
   }
 
-  h3 {
+  .subheading {
     font-weight: 300;
     font-size: 18px;
     color: #5c6366;
@@ -97,12 +96,35 @@ ul.steps {
 }
 
 .stepLogo {
-  background: $spriteSheet;
-  display: inline-block;
-  height: 65px;
+  background-image: url("../../images/icons/sprites/icons_large.png");
+  background-repeat: no-repeat;
+  height: 64px;
   width: 79px;
   float: left;
   margin-right: 10px;
 }
+
+.stepLogo1 {
+  background-position: 0 -455px;
+}
+.stepLogo2 {
+  background-position: 0 -510px;
+}
+.stepLogo3 {
+  background-position: 0 -575px;
+}
+.stepLogo4 {
+  background-position: 0 -645px;
+}
+.stepLogo5 {
+  background-position: 0 -712px;
+}
+.stepLogo6 {
+  background-position: 0 -778px;
+}
+.stepLogo7 {
+  background-position: 0 -842px;
+}
+
 
 
