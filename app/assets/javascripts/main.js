@@ -74,7 +74,7 @@ function clicked(x){
 		else{
 			$("#content p").append("");
 		}	
-	})
+	});
 	//Here's where we are changing the page tab
 	for (var i=0; i<pages.length; i++){
 		//Variable 'newPage' names each id
@@ -92,11 +92,9 @@ function clicked(x){
 		}
 	}
 		 
-	for (var i=0; i<list.length; i++){
+	for (i=0; i<list.length; i++){
 		//Variable 'newList' names each element
-		var newList = list[i];
-		//Variable 'newList' grabs the id from newList
-		var newID = newList.id; 
+		var newList = list[i]; 
 		//This parses out the number of each id
 		var otherIDs = newList.id.slice(-1);
 		//This parses out the number of the id we're on
