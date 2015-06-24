@@ -1,3 +1,6 @@
+$spriteSheet: url("../../images/icons/sprites/icons_large.png");
+$ltBlue: #36abe1;
+
 body {
   background-color: #bbbfc2;
 }
@@ -51,9 +54,55 @@ ul.steps {
 
   .active {
     font-weight: 600;
-    color: #36abe1;
+    color: $ltBlue;
     background-color: #fff;
   }
+}
+
+.content {
+  font-family: "Source Sans Pro";
+  line-height: 20px;  
+  margin-right: 70px;
+  
+  h1 {
+    font-weight: 600;
+    font-size: 30px;
+    color: $ltBlue;
+    padding-top: 12px;
+    margin: 0 0 0 0;
+  }
+
+  h3 {
+    font-weight: 300;
+    font-size: 18px;
+    color: #5c6366;
+    margin: 0 0 0 0;
+    padding-top: 5px;
+  }
+
+  header {
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-family: "Helvetica";
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+  }
+
+  p:last-child {
+    margin-bottom: 40px;
+  }
+}
+
+.stepLogo {
+  background: $spriteSheet;
+  display: inline-block;
+  height: 65px;
+  width: 79px;
+  float: left;
+  margin-right: 10px;
 }
 
 
