@@ -1,14 +1,17 @@
-/* Prototypes */
-var APP = {};
+APP = {};
 
-function Tabbed(options) {
+function BabySteps(options) {
+  // Constants
   this.TAB_HEIGHT = 61;
   this.BABY_STEPS_ENDPOINT = 'assets/javascripts/baby-steps.json';
 
+  // Variables
+  this.cssTransforms = $('html').hasClass('csstransforms');
   this.currentBabyStep = 1;
   this.currentTabIndex = 0;
   this.whosWatching = [];
 
+  // Elements
   this.$panelContainer = $(options['panel_parent']);
   this.$panels = this.$panelContainer.find(options['panel_selector']);
 
@@ -18,12 +21,16 @@ function Tabbed(options) {
   this.$navHighlighter = this.$tabContainer.parent().find(options['nav_highlighter'])
   this.$whosWatching = $(options['whos_watching_selector'])
 
+  // Start app
   this.init();
 }
 
-Tabbed.prototype = {
+BabySteps.prototype = {
   init: function init() {
     this._setupEventHandlers();
+
+    // Just in case there are friends on Baby Step 1
+    this.pollFriends();
   },
 
   _setupEventHandlers: function _setupEventHandlers() {
@@ -51,6 +58,9 @@ Tabbed.prototype = {
     // Highlight tab
     this.highlightTab($tab);
 
+    // Request JSON data of friends on the same baby step
+    this.pollFriends();
+
     // Show appropriate panel
     this.showPanel(panel);
   },
@@ -66,47 +76,78 @@ Tabbed.prototype = {
     this.moveNavHighlight(this.currentTabIndex);
   },
 
+  linkToFriend: function linkToFriend(name) {
+    return '<a href="#" class="no-follow">' + name + '</a>';
+  },
+
   moveNavHighlight: function moveNavHighlight(index) {
     var translateYAmount = (index * this.TAB_HEIGHT);
+    var unit = 'px';
 
-    this.$navHighlighter.css('transform', 'translateY(' + translateYAmount + 'px)');
+    if (this.csstransforms) {
+      this.$navHighlighter.css('transform', 'translateY(' + translateYAmount + unit);
+    } else {
+      this.$navHighlighter.animate({ top: translateYAmount + unit}, 250);
+
+      // This helps guard against the text/icon looking grainy in IE8
+      this.$tabContainer.find('a').each(function() {
+        $(this).get(0).style.filter = '';
+      });
+    }
   },
 
-  renderFriendsWatching: function renderFriendsWatching() {
-    $.getJSON(this.BABY_STEPS_ENDPOINT, function(data) {
-      this.whosWatching = [];
+  pollFriends: function pollFriends() {
+    var request = $.ajax(this.BABY_STEPS_ENDPOINT, { dataType: 'json' })
+      .success(function(data) {
+        this.whosWatching = [];
 
-      $.each(data.friends, function(index, obj) {
-        if (obj.babyStep == this.currentBabyStep) {
-          this.whosWatching.push(obj);
-        }
+        $.each(data.friends, function(index, obj) {
+          if (obj.babyStep == this.currentBabyStep) {
+            this.whosWatching.push(obj);
+          }
+        }.bind(this));
+
+        // Sort the friends by last name ascending
+        this.sortFriends();
+
+        // Render the message string
+        this.renderWatchingMessage();
       }.bind(this));
-
-      this.whosWatchingMessage();
-    }.bind(this));    
   },
 
-  whosWatchingMessage: function whosWatchingMessage() {
+  renderWatchingMessage: function whosWatchingMessage() {
+    var friendCount = this.whosWatching.length;
     var message = '';
+    var names = [];
+    var numberLeft = 0;
+    var maxFriendsToShow = (friendCount == 1 ? 1 : 2); // Max to show is 2
+    var singular = (friendCount == 1 ? true : false);
+    var verb = (singular ? 'is' : 'are');
 
-    if (this.whosWatching) {
-      switch(this.whosWatching.length) {
-        case 1:
-          message = '<a href="#" class="no-click">Paul Taylor</a> is also in Baby Step 2';
-          break;
-        case 2:
-          message = '<a href="#" class="no-click">Thomas Harris</a> and <a href="#" class="no-click">Sharon Thomas</a> are also in Baby Step 3';
-          break;
-        case 3:
-          message = '<a href="#" class="no-click">Deborah Lee</a>, <a href="#" class="no-click">Shirley Perez</a>, and 1 other friend are also in Baby Step 4';
-          break;
-        case 4:
-          message = '<a href="#" class="no-click">Patricia Allen</a>, <a href="#" class="no-click">Matthew Garcia</a>, and 2 other friends are also in Baby Step 5';
-          break;
+    if (friendCount) {
+      // Collect the names and linkify them
+      for(var i = 0; i < maxFriendsToShow; i++) {
+        var name = this.whosWatching[i]['firstName'] + ' ' + this.whosWatching[i]['lastName'];
+
+        names.push(this.linkToFriend(name));
       }
+
+      // How many friends are left over after we've reached our max?
+      numberLeft = friendCount - maxFriendsToShow;
+
+      // If there are people left over
+      if (numberLeft > 0) {
+        message += names.join(', ');
+        message += ', and ' + numberLeft + ' other friend' + (numberLeft == 1 ? '' : 's');
+      } else {
+        message += names.join(' and ');
+      }
+
+      // End the sentence
+      message += ' ' + verb + ' also in Baby Step ' + this.currentBabyStep;
     }
 
-    this.$whosWatching.html(message);
+    this.$whosWatching.hide().html(message).fadeIn(250);
   },
 
   showPanel: function showPanel(panel) {
@@ -114,12 +155,39 @@ Tabbed.prototype = {
     var $clickedPanel = $('.' + panel.substr(1));
     var $startingPanel = this.$panelContainer.find('.' + activeClass);
 
+    // To prevent a flash of the previous friend list, clear the value
+    this.$whosWatching.html('');
+
     // Inactivate active panel
     $startingPanel.removeClass(activeClass);
 
     // Show relative content
     $clickedPanel.addClass(activeClass);
-    this.renderFriendsWatching();
+  },
+
+  sortFriends: function sortFriends() {
+    this.whosWatching.sort(function(a, b) {
+      var firstNameOne = a.firstName.toLowerCase();
+      var firstNameTwo = b.firstName.toLowerCase();
+      var lastNameOne = a.lastName.toLowerCase();
+      var lastNameTwo = b.lastName.toLowerCase();
+
+      // Sort by last name first
+      if (lastNameOne < lastNameTwo) {
+        return -1;
+      } else if (lastNameOne > lastNameTwo) {
+        return 1;
+      }
+
+      // Sort by first name
+      if (firstNameOne < firstNameTwo) {
+        return -1;
+      } else if (firstNameOne > firstNameTwo) {
+        return 1;
+      }
+
+      return 0;
+    });
   }
 };
 
@@ -135,5 +203,11 @@ $(function() {
   }
 
   // Initialize tabs
-  APP.tabbed = new Tabbed(options);
+  APP.BabySteps = new BabySteps(options);
+
+  // Ensure .no-click links are not clickable
+  // Must use document because the .no-click links are dynamically inserted
+  $(document).on('click', '.no-follow', function(e) {
+    e.preventDefault();
+  });
 });
