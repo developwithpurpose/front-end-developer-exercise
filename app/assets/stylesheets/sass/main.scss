@@ -30,32 +30,37 @@ $ltBlue: #36abe1;
 }
 
 ul.steps {
-  $grayLeft: #ebeced;
-  $grayRight: #d1d5d6;
+  background: #fff;
   width: 300px;
   height: 100%;
   float: left;
   margin-right: 70px;
-  padding-left: 0;
   list-style-type: none;
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 18px;
   color: #9ba0a4;
   line-height: 60px;
-  background: -webkit-linear-gradient(right, $grayLeft 95%, $grayRight); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, $grayLeft 95%, $grayRight); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, $grayLeft 95%, $grayRight); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, $grayLeft 95%, $grayRight); /* Standard syntax */
-
+  
   li {
+    $grayLeft: #ebeced;
+    $grayRight: #d1d5d6;
     padding-left: 100px;    
+    margin-bottom: 1px;
+    background: -webkit-linear-gradient(right, $grayLeft 95%, $grayRight); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, $grayLeft 95%, $grayRight); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, $grayLeft 95%, $grayRight); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, $grayLeft 95%, $grayRight); /* Standard syntax */
+  }
+
+  li:last-child {
+    padding: 0 0 200px 0;  
   }
   
   .active {
     font-weight: 600;
     color: $ltBlue;
-    background-color: #fff;
+    background: #fff;
 
     .spr1 { background-position: 0 -175px; }
     .spr2 { background-position: 0 -200px; }
@@ -70,7 +75,7 @@ ul.steps {
 .content {
   font-family: "Source Sans Pro";
   line-height: 20px;  
-  margin-right: 70px;
+  margin: 15px 70px 0 0;
   
   .heading {
     font-weight: 600;
