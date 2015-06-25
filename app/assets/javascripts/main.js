@@ -1,4 +1,4 @@
-APP = {};
+var APP = {};
 
 function BabySteps(options) {
   // Constants
@@ -12,14 +12,14 @@ function BabySteps(options) {
   this.whosWatching = [];
 
   // Elements
-  this.$panelContainer = $(options['panel_parent']);
-  this.$panels = this.$panelContainer.find(options['panel_selector']);
+  this.$panelContainer = $(options.panel_parent);
+  this.$panels = this.$panelContainer.find(options.panel_selector);
 
-  this.$tabContainer = $(options['tab_container']);
-  this.$tabs = this.$tabContainer.find(options['tab_selector']);
+  this.$tabContainer = $(options.tab_container);
+  this.$tabs = this.$tabContainer.find(options.tab_selector);
 
-  this.$navHighlighter = this.$tabContainer.parent().find(options['nav_highlighter'])
-  this.$whosWatching = $(options['whos_watching_selector'])
+  this.$navHighlighter = this.$tabContainer.parent().find(options.nav_highlighter);
+  this.$whosWatching = $(options.whos_watching_selector);
 
   // Start app
   this.init();
@@ -36,7 +36,7 @@ BabySteps.prototype = {
   _setupEventHandlers: function _setupEventHandlers() {
     var self = this;
 
-    this.$tabs.each(function() {
+    this.$tabs.each(function () {
       $(this).on('click', $.proxy(self, 'clickHandler'));
     });
   },
@@ -90,22 +90,24 @@ BabySteps.prototype = {
       this.$navHighlighter.animate({ top: translateYAmount + unit}, 250);
 
       // This helps guard against the text/icon looking grainy in IE8
-      this.$tabContainer.find('a').each(function() {
+      this.$tabContainer.find('a').each(function () {
         $(this).get(0).style.filter = '';
       });
     }
   },
 
   pollFriends: function pollFriends() {
-    var request = $.ajax(this.BABY_STEPS_ENDPOINT, { dataType: 'json' })
-      .success(function(data) {
+    $.ajax(this.BABY_STEPS_ENDPOINT, { dataType: 'json' })
+      .success(function (data) {
         this.whosWatching = [];
 
-        $.each(data.friends, function(index, obj) {
-          if (obj.babyStep == this.currentBabyStep) {
+        /*jslint unparam: true*/
+        $.each(data.friends, function (index, obj) {
+          if (obj.babyStep === this.currentBabyStep) {
             this.whosWatching.push(obj);
           }
         }.bind(this));
+        /*jslint unparam: false*/
 
         // Sort the friends by last name ascending
         this.sortFriends();
@@ -117,19 +119,18 @@ BabySteps.prototype = {
 
   renderWatchingMessage: function whosWatchingMessage() {
     var friendCount = this.whosWatching.length;
+    var i;
     var message = '';
     var names = [];
     var numberLeft = 0;
-    var maxFriendsToShow = (friendCount == 1 ? 1 : 2); // Max to show is 2
-    var singular = (friendCount == 1 ? true : false);
+    var maxFriendsToShow = (friendCount === 1 ? 1 : 2); // Max to show is 2
+    var singular = (friendCount === 1 ? true : false);
     var verb = (singular ? 'is' : 'are');
 
     if (friendCount) {
       // Collect the names and linkify them
-      for(var i = 0; i < maxFriendsToShow; i++) {
-        var name = this.whosWatching[i]['firstName'] + ' ' + this.whosWatching[i]['lastName'];
-
-        names.push(this.linkToFriend(name));
+      for (i = 0; i < maxFriendsToShow; i++) {
+        names.push(this.linkToFriend(this.whosWatching[i].firstName + ' ' + this.whosWatching[i].lastName));
       }
 
       // How many friends are left over after we've reached our max?
@@ -138,7 +139,7 @@ BabySteps.prototype = {
       // If there are people left over
       if (numberLeft > 0) {
         message += names.join(', ');
-        message += ', and ' + numberLeft + ' other friend' + (numberLeft == 1 ? '' : 's');
+        message += ', and ' + numberLeft + ' other friend' + (numberLeft === 1 ? '' : 's');
       } else {
         message += names.join(' and ');
       }
@@ -166,7 +167,7 @@ BabySteps.prototype = {
   },
 
   sortFriends: function sortFriends() {
-    this.whosWatching.sort(function(a, b) {
+    this.whosWatching.sort(function (a, b) {
       var firstNameOne = a.firstName.toLowerCase();
       var firstNameTwo = b.firstName.toLowerCase();
       var lastNameOne = a.lastName.toLowerCase();
@@ -192,7 +193,7 @@ BabySteps.prototype = {
 };
 
 /* Document ready */
-$(function() {
+$(function () {
   var options = {
     tab_container: '.primary-nav',
     tab_selector: 'li',
@@ -200,14 +201,14 @@ $(function() {
     panel_parent: '.page-main',
     panel_selector: 'article',
     whos_watching_selector: '.whos-watching'
-  }
+  };
 
   // Initialize tabs
   APP.BabySteps = new BabySteps(options);
 
   // Ensure .no-click links are not clickable
   // Must use document because the .no-click links are dynamically inserted
-  $(document).on('click', '.no-follow', function(e) {
+  $(document).on('click', '.no-follow', function (e) {
     e.preventDefault();
   });
 });
