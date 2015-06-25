@@ -1,5 +1,7 @@
+var tab1 = $("#tab1");
 $(document).ready(function(){
   $(".step1").siblings("div").hide();
+  activate(tab1);
 });
 
 $.get("assets/javascripts/baby-steps.json", function(data){
@@ -17,8 +19,9 @@ $.get("assets/javascripts/baby-steps.json", function(data){
     var onStep5 = [];
     var onStep6 = [];
     var onStep7 = [];
-
-    if(step === 2) {
+    if(step === 1) {
+      onStep1.push(first, last);
+    } else if(step === 2) {
       onStep2.push(first, last);
     } else if (step ===3 ) {
       onStep3.push(first, last);
@@ -27,37 +30,55 @@ $.get("assets/javascripts/baby-steps.json", function(data){
     } else if (step === 5) {
       onStep5.push(first, last);
     } else if (step === 6) {
-      onStep 6.push(first, last);
-    } else if (step === 7) {}
+      onStep6.push(first, last);
+    } else if (step === 7) {
+      onStep7.push(first, last);
+    }
   }); 
 });
+var tab2 = $("#tab2");
+var tab3 = $("#tab3");
+var tab4 = $("#tab4");
+var tab5 = $("#tab5");
+var tab6 = $("#tab6");
+var tab7 = $("#tab7");
 
-$("#tab1").on("click", function(){
+tab1.on("click", function(){
+  activate(tab1);
   $(".step1").show().siblings("div").hide();
 });
 
-$("#tab2").on("click", function(){
+tab2.on("click", function(){
+  activate(tab2);  
   $(".step2").show().siblings("div").hide();
 });
 
-$("#tab3").on("click", function(){
+tab3.on("click", function(){
+  activate(tab3);
   $(".step3").show().siblings("div").hide();
 });
 
-$("#tab4").on("click", function(){
+tab4.on("click", function(){
+  activate(tab4);
   $(".step4").show().siblings("div").hide();
 });
 
-$("#tab5").on("click", function(){
+tab5.on("click", function(){
+  activate(tab5);
   $(".step5").show().siblings("div").hide();
 });
 
-$("#tab6").on("click", function(){
+tab6.on("click", function(){
+  activate(tab6);
   $(".step6").show().siblings("div").hide();
 });
 
-$("#tab7").on("click", function(){
+tab7.on("click", function(){
+  activate(tab7);
   $(".step7").show().siblings("div").hide();
 });
 
-
+function activate(tab) {
+  tab.addClass("active");
+  tab.siblings("li").removeClass("active");
+}
