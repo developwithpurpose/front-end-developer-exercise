@@ -117,7 +117,7 @@ BabySteps.prototype = {
       }.bind(this));
   },
 
-  renderWatchingMessage: function whosWatchingMessage() {
+  renderWatchingMessage: function renderWatchingMessage() {
     var friendCount = this.whosWatching.length;
     var i;
     var message = '';
