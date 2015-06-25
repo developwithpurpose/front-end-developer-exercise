@@ -78,7 +78,8 @@ module.exports = function( grunt ) {
           options: {
             specs: "spec/**/*.spec.js",
             vendor: [
-              "vendor/**/*.js"
+              "bower_components/jquery/dist/jquery.js",
+              "bower_components/jasmine-jquery/lib/jasmine-jquery.js"            
             ],
             template: "spec/index.tmpl"
           }
