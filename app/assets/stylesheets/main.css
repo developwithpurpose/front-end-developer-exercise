@@ -189,8 +189,9 @@ body {
 }
 
 .baby-step__head {
-  -webkit-margin-before: .5em;
+  margin-bottom: 0;
   position: relative;
+  -webkit-margin-before: .5em;
   z-index: 100;
 }
 
@@ -242,17 +243,21 @@ body {
 }
 
 .baby-step p {
-  clear: left;
   color: #65686f;
   font-family: Helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
+.baby-step p.first {
+  margin-top: 7px;
+}
+
 .whos-watching {
   color: #65686f;
   font-family: Helvetica, sans-serif;
   font-size: 13px;
+  margin-top: 32px;
 }
 
 .whos-watching a {
