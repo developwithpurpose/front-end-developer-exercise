@@ -2,9 +2,58 @@ var tab1 = $("#tab1");
 $(document).ready(function(){
   $(".step1").siblings("div").hide();
   activate(tab1);
+  getFriends();
 });
 
-$.get("assets/javascripts/baby-steps.json", function(data){
+var tab2 = $("#tab2");
+var tab3 = $("#tab3");
+var tab4 = $("#tab4");
+var tab5 = $("#tab5");
+var tab6 = $("#tab6");
+var tab7 = $("#tab7");
+
+tab1.on("click", function(){
+  activate(tab1);
+  $(".step1").fadeToggle("slow").show().siblings("div").hide();
+});
+
+tab2.on("click", function(){
+  activate(tab2);  
+  $(".step2").fadeToggle("slow").show().siblings("div").hide();
+});
+
+tab3.on("click", function(){
+  activate(tab3);
+  $(".step3").fadeToggle("slow").show().siblings("div").hide();
+});
+
+tab4.on("click", function(){
+  activate(tab4);
+  $(".step4").fadeToggle("slow").show().siblings("div").hide();
+});
+
+tab5.on("click", function(){
+  activate(tab5);
+  $(".step5").fadeToggle("slow").show().siblings("div").hide();
+});
+
+tab6.on("click", function(){
+  activate(tab6);
+  $(".step6").fadeToggle("slow").show().siblings("div").hide();
+});
+
+tab7.on("click", function(){
+  activate(tab7);
+  $(".step7").fadeToggle("slow").show().siblings("div").hide();
+});
+
+function activate(tab) {
+  tab.addClass("active");
+  tab.siblings("li").removeClass("active");
+}
+
+function getFriends() {
+  $.get("assets/javascripts/baby-steps.json", function(data){
   var array = data.friends;
 
   $.each(array, function(key, value){
@@ -34,51 +83,8 @@ $.get("assets/javascripts/baby-steps.json", function(data){
     } else if (step === 7) {
       onStep7.push(first, last);
     }
+    console.log();
   }); 
 });
-var tab2 = $("#tab2");
-var tab3 = $("#tab3");
-var tab4 = $("#tab4");
-var tab5 = $("#tab5");
-var tab6 = $("#tab6");
-var tab7 = $("#tab7");
 
-tab1.on("click", function(){
-  activate(tab1);
-  $(".step1").show().siblings("div").hide();
-});
-
-tab2.on("click", function(){
-  activate(tab2);  
-  $(".step2").show().siblings("div").hide();
-});
-
-tab3.on("click", function(){
-  activate(tab3);
-  $(".step3").show().siblings("div").hide();
-});
-
-tab4.on("click", function(){
-  activate(tab4);
-  $(".step4").show().siblings("div").hide();
-});
-
-tab5.on("click", function(){
-  activate(tab5);
-  $(".step5").show().siblings("div").hide();
-});
-
-tab6.on("click", function(){
-  activate(tab6);
-  $(".step6").show().siblings("div").hide();
-});
-
-tab7.on("click", function(){
-  activate(tab7);
-  $(".step7").show().siblings("div").hide();
-});
-
-function activate(tab) {
-  tab.addClass("active");
-  tab.siblings("li").removeClass("active");
 }

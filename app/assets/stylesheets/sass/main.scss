@@ -61,6 +61,7 @@ ul.steps {
     font-weight: 600;
     color: $ltBlue;
     background: #fff;
+    transition: .3s;
 
     .spr1 { background-position: 0 -175px; }
     .spr2 { background-position: 0 -200px; }
