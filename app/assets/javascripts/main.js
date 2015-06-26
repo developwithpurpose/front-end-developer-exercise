@@ -206,8 +206,8 @@ $(function () {
   // Initialize tabs
   APP.BabySteps = new BabySteps(options);
 
-  // Ensure .no-click links are not clickable
-  // Must use document because the .no-click links are dynamically inserted
+  // Ensure .no-follow links are not clickable
+  // Must use document because the .no-follow links are dynamically inserted
   $(document).on('click', '.no-follow', function (e) {
     e.preventDefault();
   });
