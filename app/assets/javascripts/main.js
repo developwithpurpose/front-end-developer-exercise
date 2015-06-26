@@ -57,10 +57,23 @@ function getFriends() {
   var array = data.friends;
 
   $.each(array, function(key, value){
-    var first = value.firstName;
-    var last = value.lastName;
-    var step = value.babyStep;
+    var person = {
+      firstName : value.firstName,
+      lastName : value.lastName,
+      babyStep : value.babyStep
+    };
 
+    function compare(a, b) {
+      if (a.lastName < b.lastName) {
+        return -1;
+      }
+      if (a.lastName > b.lastName) {
+        return 1;
+      }
+      return 0;
+    }
+    array.sort(compare);
+    
     var onStep1 = [];
     var onStep2 = [];
     var onStep3 = [];
@@ -68,23 +81,23 @@ function getFriends() {
     var onStep5 = [];
     var onStep6 = [];
     var onStep7 = [];
-    if(step === 1) {
-      onStep1.push(first, last);
-    } else if(step === 2) {
-      onStep2.push(first, last);
-    } else if (step ===3 ) {
-      onStep3.push(first, last);
-    } else if (step === 4) {
-      onStep4.push(first, last);
-    } else if (step === 5) {
-      onStep5.push(first, last);
-    } else if (step === 6) {
-      onStep6.push(first, last);
-    } else if (step === 7) {
-      onStep7.push(first, last);
+
+    if(person.babyStep === 1) {
+      $(".step1").append(person.firstName, person.lastName);
+    } else if (person.babyStep === 2) {
+      $(".step2").append(person.firstName, person.lastName);
+    } else if (person.babyStep === 3 ) {
+      $(".step3").append(person.firstName, person.lastName);
+    } else if (person.babyStep === 4) {
+      $(".step4").append(person.firstName, person.lastName);      
+    } else if (person.babyStep === 5) {
+      $(".step5").append(person.firstName, person.lastName);
+    } else if (person.babyStep === 6) {
+      $(".step6").append(person.firstName, person.lastName);
+    } else if (person.babyStep === 7) {
+      $(".step7").append(person.firstName, person.lastName);
     }
-    console.log();
-  }); 
+  });
 });
 
 }
