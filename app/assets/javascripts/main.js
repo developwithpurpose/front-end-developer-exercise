@@ -43,18 +43,32 @@
   }
 
   function compare(a, b) {
+    //checks if last names are the same, sorts by first
+    if (a.lastName === b.lastName) {
+      if (a.firstName < b.firstName) {
+        return -1;
+      }
+      if (a.firstName > b.firstName) {
+        return 1;
+      }
+      return 0;
+    }
+    
+    //sorts last name
     if (a.lastName < b.lastName) {
       return -1;
     }
     if (a.lastName > b.lastName) {
       return 1;
-    }
+    } 
     return 0;
-  }
+  } 
 
   function getFriends() {
     $.get("assets/javascripts/baby-steps.json", function(data){
     var array = data.friends;
+
+    array.sort(compare);    
 
     $.each(array, function(key, value){
       var person = {
@@ -63,8 +77,6 @@
         babyStep : value.babyStep
       };
 
-      array.sort(compare);
-    
       if(person.babyStep === 1) {
         $step1.append(person.firstName, person.lastName);
       } else if (person.babyStep === 2) {
