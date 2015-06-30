@@ -53,7 +53,6 @@
       }
       return 0;
     }
-    
     //sorts last name
     if (a.lastName < b.lastName) {
       return -1;
@@ -65,35 +64,61 @@
   } 
 
   function getFriends() {
-    $.get("assets/javascripts/baby-steps.json", function(data){
-    var array = data.friends;
+    $.ajax({
+      url: "assets/javascripts/baby-steps.json",
+      type: "GET",
+      success: function(data) {
+        var array = data.friends;
+        array.sort(compare);    
+ 
+        //filters friends according to babyStep
+        var onStep2 = $(array).filter(function(){
+          return this.babyStep === 2;
+        });
+        var onStep3 = $(array).filter(function(){
+          return this.babyStep === 3;
+        });
+        var onStep4 = $(array).filter(function(){
+          return this.babyStep === 4;
+        });
+        var onStep5 = $(array).filter(function(){
+          return this.babyStep === 5;
+        });
+        var onStep6 = $(array).filter(function(){
+          return this.babyStep === 6;
+        });
+        var onStep7 = $(array).filter(function(){
+          return this.babyStep === 7;
+        });
 
-    array.sort(compare);    
+        function checkAndAppend(arr, step) {
+          var firstsName = arr[0].firstName + " " + arr[0].lastName;
+          var babyStep = arr[0].babyStep;
+          var string = " are also in Baby Step ";
+          if (arr.length === 1) {
+            step.append(firstsName + " is also in Baby Step " + babyStep);
+          } else if (arr.length === 2) {
+            step.append(firstsName + " and " + arr[1].firstName + " " + arr[1].lastName + string + babyStep);
+          } else if (arr.length === 3) {
+            step.append(firstsName + ", " + arr[1].firstName + " " + arr[1].lastName + ", and 1 other friend is also in Baby Step " + babyStep);
+          } else if (arr.length >= 4) {
+            step.append(firstsName + ", " + arr[1].firstName + " " + arr[1].lastName + ", and " + (arr.length -2) + " other friends" + string + babyStep);
+          }
+        }
+        checkAndAppend(onStep2, $step2);
+        checkAndAppend(onStep3, $step3);
+        checkAndAppend(onStep4, $step4);
+        checkAndAppend(onStep5, $step5);
+        checkAndAppend(onStep6, $step6);
+        checkAndAppend(onStep7, $step7);
 
-    $.each(array, function(key, value){
-      var person = {
-        firstName : value.firstName,
-        lastName : value.lastName,
-        babyStep : value.babyStep
-      };
-
-      if(person.babyStep === 1) {
-        $step1.append(person.firstName, person.lastName);
-      } else if (person.babyStep === 2) {
-        $step2.append(person.firstName, person.lastName);
-      } else if (person.babyStep === 3 ) {
-        $step3.append(person.firstName, person.lastName);
-      } else if (person.babyStep === 4) {
-        $step4.append(person.firstName, person.lastName);      
-      } else if (person.babyStep === 5) {
-        $step5.append(person.firstName, person.lastName);
-      } else if (person.babyStep === 6) {
-        $step6.append(person.firstName, person.lastName);
-      } else if (person.babyStep === 7) {
-        $step7.append(person.firstName, person.lastName);
-      }
-    });
-    });
+      }, error: function(err){
+         console.log("Error making request", err);
+      }       
+  });
   }
   
 })();
+
+
+          
