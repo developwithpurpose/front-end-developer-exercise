@@ -3,7 +3,6 @@
   
   var $tab1 = $("#tab1"), $step1 = $(".step1");
   $(document).ready(function(){
-    $step1.siblings("div").hide();
     $tab1.addClass("active");
     getFriends();
   });
@@ -39,7 +38,7 @@
   function activate(tab, step) {
     tab.addClass("active");
     tab.siblings("li").removeClass("active");
-    step.fadeToggle("slow").show().siblings("div").hide();
+    step.removeClass("hidden").siblings("div").addClass("hidden");
   }
 
   function compare(a, b) {
@@ -92,17 +91,19 @@
         });
 
         function checkAndAppend(arr, step) {
-          var firstsName = arr[0].firstName + " " + arr[0].lastName;
+          var firstsName = "<span class='name'>" + arr[0].firstName + " " + arr[0].lastName + "</span>";
           var babyStep = arr[0].babyStep;
           var string = " are also in Baby Step ";
+          var pAndClass = "<p class='social'>";
+          var p = "</p>";
           if (arr.length === 1) {
-            step.append(firstsName + " is also in Baby Step " + babyStep);
+            step.append(pAndClass + firstsName + " is also in Baby Step " + babyStep + p);
           } else if (arr.length === 2) {
-            step.append(firstsName + " and " + arr[1].firstName + " " + arr[1].lastName + string + babyStep);
+            step.append(pAndClass + firstsName + " and " + "<span class='name'>" + arr[1].firstName + " " + arr[1].lastName + "</span>" + string + babyStep + p);
           } else if (arr.length === 3) {
-            step.append(firstsName + ", " + arr[1].firstName + " " + arr[1].lastName + ", and 1 other friend is also in Baby Step " + babyStep);
+            step.append(pAndClass + firstsName + " and " + "<span class='name'>" + arr[1].firstName + " " + arr[1].lastName + "</span>" + ", and 1 other friend is also in Baby Step " + babyStep + p);
           } else if (arr.length >= 4) {
-            step.append(firstsName + ", " + arr[1].firstName + " " + arr[1].lastName + ", and " + (arr.length -2) + " other friends" + string + babyStep);
+            step.append(pAndClass + firstsName + " and " + "<span class='name'>" + arr[1].firstName + " " + arr[1].lastName + "</span>" + ", and " + (arr.length -2) + " other friends" + string + babyStep + p);
           }
         }
         checkAndAppend(onStep2, $step2);

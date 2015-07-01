@@ -1,7 +1,13 @@
 $ltBlue: #36abe1;
 
+body {
+  background-color: #bbbfc2;
+}
 .container {
   background-color: #fff;
+  width: 80%;
+  height: 1000px;
+  margin: auto;
 }
 
 .banner {
@@ -20,6 +26,7 @@ $ltBlue: #36abe1;
   right: 70px;
   max-width: 500px;
   text-align: right;
+  padding-right: 10%;
 
   .tagline {
     font-weight: 700;
@@ -32,9 +39,9 @@ $ltBlue: #36abe1;
 ul.steps {
   background: #fff;
   width: 300px;
-  height: 100%;
   float: left;
   margin-right: 70px;
+  padding-left: 0;
   list-style-type: none;
   font-family: "Source Sans Pro";
   font-weight: 400;
@@ -54,7 +61,7 @@ ul.steps {
   }
 
   li:last-child {
-    padding: 0 0 200px 0;  
+    padding: 0 0 169px 0;  
   }
   
   .active {
@@ -82,7 +89,7 @@ ul.steps {
     font-weight: 600;
     font-size: 30px;
     color: $ltBlue;
-    padding-top: 12px;
+    padding-top: 20px;
     margin: 0 0 0 0;
   }
 
@@ -106,7 +113,17 @@ ul.steps {
   }
 
   p:last-child {
-    margin-bottom: 40px;
+    margin-top: 40px;
+    height: 100%;
+  }
+
+  .social {
+    font-weight: 600;
+    color: #65686f;
+
+    .name {
+      color: #6fbee7;
+    }
   }
 }
 
@@ -145,4 +162,6 @@ ul.steps {
 .spr6 { background-position: 0 -125px; }
 .spr7 { background-position: 0 -150px; }
 
-
+.hidden {
+  display: none;
+}
