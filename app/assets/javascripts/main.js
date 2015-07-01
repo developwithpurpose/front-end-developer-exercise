@@ -114,7 +114,7 @@
         checkAndAppend(onStep7, $step7);
 
       }, error: function(err){
-         console.log("Error making request", err);
+         console.log(err, "There was an error");
       }       
   });
   }

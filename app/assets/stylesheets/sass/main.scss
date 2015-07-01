@@ -112,13 +112,10 @@ ul.steps {
     line-height: 18px;
   }
 
-  p:last-child {
-    margin-top: 40px;
-    height: 100%;
-  }
-
   .social {
     font-weight: 600;
+    margin-top: 40px;
+    height: 100%;
     color: #65686f;
 
     .name {
@@ -165,3 +162,18 @@ ul.steps {
 .hidden {
   display: none;
 }
+
+.step1, .step2, .step3, .step4, .step5, .step6, .step7{
+    animation: slide 1.5s;
+}
+
+@keyframes slide {
+    from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-bottom: 0%;
+  }
+}
+
