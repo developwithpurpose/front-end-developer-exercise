@@ -54,8 +54,8 @@ module.exports = function( grunt ) {
             },
             lint: {
                 files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
-                tasks: [ "jshint", "csslint" ]
-                // tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
+                //tasks: [ "jshint", "csslint" ]
+                tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
             }
         },
         jasmine: {

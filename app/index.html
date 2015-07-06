@@ -18,7 +18,7 @@
 
   <body class="u-rel u-horShadow">
     <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <p class="u-browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <header class="Banner" role="banner">
@@ -51,7 +51,8 @@
           </li>
         </ul>
 
-        <div class="Tabs-content">
+        <div id="stepsPanels" class="Tabs-content">
+          <div class="Tabs-panelList">
           <div id="stepsPanel1" class="Tabs-panel is-visible" role="tabpanel" aria-labelledby="stepsTab1" aria-hidden="false" tabindex="0">
             <div class="Header">
               <svg class="Header-icon" width="75" height="62" role="img" title="Dollar Bill">
@@ -144,12 +145,14 @@
             <p>It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!</p>
             <p>Golda Meir says, "You can’t shake hands with a clenched fist." Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.</p>
           </div>
+          </div>
         </div>
       </div>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/components/jquery/dist/jquery.min.js"><\/script>')</script>
+    <script src="assets/components/velocity/velocity.js"></script>
     <script src="assets/javascripts/main.js"></script>
   </body>
 </html>

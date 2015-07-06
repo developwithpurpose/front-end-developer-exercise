@@ -3,6 +3,7 @@ html {
 
 body {
   background: white;
+  min-width: 44.375em;
   max-width: 61.25em;
   margin: 0 auto 3em;
   font: 16px/1.125 "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -76,18 +77,7 @@ a {
   overflow: hidden;
   position: relative;
   z-index: 1; }
-
-.Tabs-nav {
-  float: left;
-  width: 30.612244898%; }
-
-.Tabs-content {
-  float: right;
-  min-height: 615px;
-  width: 55.1020408163%;
-  margin: 0 7.1428571429%;
-  background: white; }
-  .Tabs-content:before {
+  .Tabs:before {
     content: '';
     display: block;
     position: absolute;
@@ -100,13 +90,24 @@ a {
     background: #ebeced;
     box-shadow: inset 0 0 24px #bbbfc2; }
 
+.Tabs-content {
+  position: relative;
+  box-sizing: border-box;
+  float: right;
+  width: 55.1020408163%;
+  margin: 0 7.1428571429%;
+  background: white;
+  overflow: hidden; }
+
 .Tabs-list {
+  position: relative;
   margin: 0 0 3.75em;
   padding: 0;
   float: left;
   width: 30.612244898%;
   display: block; }
 
+.Tabs-indicator,
 .Tabs-item {
   list-style: none; }
 
@@ -130,9 +131,25 @@ a {
     color: #36abe1;
     font-weight: 600; }
 
+.Tabs-indicator {
+  z-index: -1;
+  background: white;
+  box-sizing: border-box;
+  border-bottom: 1px solid white;
+  position: absolute;
+  top: 0;
+  height: 3.75em;
+  width: 100%;
+  display: none; }
+  .Tabs-indicator.is-visible {
+    display: block; }
+
+.Tabs-panelList.is-animating {
+  position: absolute; }
+
 .Tabs-panel {
   display: none;
-  margin-bottom: 4.375em; }
+  padding-bottom: 4.375em; }
   .Tabs-panel:focus {
     display: block;
     outline: none; }
@@ -193,9 +210,9 @@ a {
 .icon-graph.is-selected:after {
   background-position: -90px 0; }
 
-.icon-graph:hover:after,
-.icon-graph:focus:after,
-.icon-graph.is-selected:after {
+.icon-book:hover:after,
+.icon-book:focus:after,
+.icon-book.is-selected:after {
   background-position: -120px 0; }
 
 .icon-house:hover:after,
@@ -225,7 +242,7 @@ a {
   position: absolute;
   z-index: -1;
   top: -.375em;
-  left: .375em;
+  left: .4375em;
   width: 20%;
   height: 100%;
   box-shadow: -0.25em 0 1em rgba(0, 0, 0, 0.5);
@@ -233,7 +250,7 @@ a {
 
 .u-horShadow:after {
   left: auto;
-  right: .375em;
+  right: .4375em;
   box-shadow: 0.25em 0 1em rgba(0, 0, 0, 0.5);
   transform: rotate(0.75deg); }
 
@@ -247,5 +264,12 @@ a {
   right: 12.5%;
   border-radius: 9.375em/.75em;
   box-shadow: 0 0 2.375em rgba(0, 0, 0, 0.5); }
+
+.u-browserupgrade {
+  background: #ebeced;
+  margin: 0 auto;
+  padding: 1em 0 1.125em;
+  text-align: center;
+  color: #98a0a4; }
 
 /*# sourceMappingURL=main.css.map */

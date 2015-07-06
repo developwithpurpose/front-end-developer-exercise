@@ -19,6 +19,7 @@
     "jquery": "1.11.3",
     "normalize.css": "~3.0.3",
     "bourbon": "~4.2.3",
-    "svg4everybody": "~1.0.0"
+    "svg4everybody": "~1.0.0",
+    "velocity": "~1.2.2"
   }
 }

@@ -2,19 +2,6 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
-}
-
-.Tabs-nav {
-  float: left;
-  width: percentage(300 / 980);
-}
-
-.Tabs-content {
-  float: right;
-  min-height: 615px;
-  width: percentage(540 / 980);
-  margin: 0 percentage(70 / 980);
-  background: white;
 
   &:before {
     content: '';
@@ -31,7 +18,18 @@
   }
 }
 
+.Tabs-content {
+  position: relative;
+  box-sizing: border-box;
+  float: right;
+  width: percentage(540 / 980);
+  margin: 0 percentage(70 / 980);
+  background: white;
+  overflow: hidden;
+}
+
 .Tabs-list {
+  position: relative;
   margin: 0 0 3.75em;
   padding: 0;
   float: left;
@@ -39,6 +37,7 @@
   display: block;
 }
 
+.Tabs-indicator,
 .Tabs-item {
   list-style: none;
 }
@@ -68,9 +67,31 @@
   }
 }
 
+.Tabs-indicator {
+  z-index: -1;
+  background: white;
+  box-sizing: border-box;
+  border-bottom: 1px solid white;
+  position: absolute;
+  top: 0;
+  height: 3.75em;
+  width: 100%;
+  display: none;
+
+  &.is-visible {
+    display: block;
+  }
+}
+
+.Tabs-panelList {
+  &.is-animating {
+    position: absolute;
+  }
+}
+
 .Tabs-panel {
   display: none;
-  margin-bottom: 4.375em;
+  padding-bottom: 4.375em;
 
   &:focus {
     display: block;
