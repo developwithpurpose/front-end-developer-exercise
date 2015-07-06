@@ -20,6 +20,7 @@
     "normalize.css": "~3.0.3",
     "bourbon": "~4.2.3",
     "svg4everybody": "~1.0.0",
-    "velocity": "~1.2.2"
+    "velocity": "~1.2.2",
+    "lodash-compat": "~3.10.0"
   }
 }

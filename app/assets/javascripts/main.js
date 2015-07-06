@@ -56,4 +56,47 @@
             }
         }).on("click", switchPanels);
     });
+
+    var displayFriends = function (data) {
+        var friendsByStep = _.chain(data.friends)
+            .groupBy("babyStep")
+            .value();
+
+        _.forEach(friendsByStep, function (step, key) {
+            var friendsList = "<p class='u-footer'>",
+                friendName = function (friend) {
+                    return "<a href='#'>" +
+                        friend.firstName + " " + friend.lastName +
+                        "</a>";
+                };
+
+            if (step.length > 0) {
+                switch (step.length) {
+                    case 1:
+                        friendsList = friendsList + friendName(step[0]) + " is";
+                        break;
+                    case 2:
+                        friendsList = friendsList + friendName(step[0]) +
+                            " and " + friendName(step[1]) + " are";
+                        break;
+                    case 3:
+                        friendsList = friendsList + friendName(step[0]) + ", " + friendName(step[1]) +
+                            " and 1 other friend are";
+                        break;
+                    default:
+                        friendsList = friendsList + friendName(step[0]) + ", " + friendName(step[1]) +
+                            " and " + (step.length - 2) + " other friends are";
+                        break;
+                }
+
+                friendsList = friendsList + " also in Baby Step " + key + "</p>";
+                $(document.getElementById("stepsPanel" + key)).append(friendsList);
+            }
+        });
+    };
+
+    $.ajax({
+      dataType: "json",
+      url: "assets/javascripts/baby-steps.json",
+    }).then(displayFriends);
 }(jQuery));

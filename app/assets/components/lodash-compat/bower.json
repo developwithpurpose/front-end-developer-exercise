@@ -1,0 +1,12 @@
+{
+  "name": "lodash-compat",
+  "main": "lodash.js",
+  "ignore": [
+    ".*",
+    "*.log",
+    "*.md",
+    "component.json",
+    "package.json",
+    "node_modules"
+  ]
+}
