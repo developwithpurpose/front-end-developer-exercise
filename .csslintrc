@@ -1,1 +1,4 @@
-{}
+{
+  "box-sizing": false,
+  "adjoining-classes": false
+}

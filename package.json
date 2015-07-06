@@ -15,6 +15,10 @@
     "grunt-contrib-uglify": "^0.6.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-html-validation": "^0.1.18",
+    "grunt-sass": "^1.0.0",
     "matchdep": "^0.3.0"
+  },
+  "dependencies": {
+    "normalize.css": "^3.0.3"
   }
 }

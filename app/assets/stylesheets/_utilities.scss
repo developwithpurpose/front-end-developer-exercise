@@ -1,0 +1,47 @@
+.u-cf {
+  @include clearfix;
+}
+
+.u-rel {
+  position: relative;
+}
+
+.u-footer {
+  margin-top: em(34, 13);
+}
+
+.u-horShadow {
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -.375em;
+    left: .375em;
+    width: 20%;
+    height: 100%;
+    box-shadow: -.25em 0 1em rgba(black, .5);
+    transform: rotate(-.75deg);
+  }
+
+  &:after {
+    left: auto;
+    right: .375em;
+    box-shadow: .25em 0 1em rgba(black, .5);
+    transform: rotate(.75deg);
+  }
+}
+
+.u-botShadow {
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    bottom: 0;
+    left: 12.5%;
+    right: 12.5%;
+    border-radius: 9.375em / .75em;
+    box-shadow: 0 0 2.375em rgba(black, .5);
+  }
+}

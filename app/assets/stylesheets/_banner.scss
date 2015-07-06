@@ -1,0 +1,26 @@
+.Banner {
+  background: black url(../images/header.jpg) no-repeat bottom right;
+  min-height: 17.25em;
+  margin-bottom: 3.75em;
+  overflow: hidden;
+  color: white;
+  font-family: $open-sans;
+}
+
+.Banner-heading {
+  box-sizing: border-box;
+  margin: 1.40625em 2.1875em;
+  width: 64%;
+  float: right;
+  text-align: right;
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 1.4;
+}
+
+.Banner-emphasis {
+  display: block;
+  font-weight: 700;
+  font-size: 1.5625em;
+  line-height: .96;
+}

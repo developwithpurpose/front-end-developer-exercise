@@ -1,0 +1,30 @@
+.Header {
+  position: relative;
+  margin-bottom: 1.125em;
+  font-family: $source-sans;
+}
+
+.Header-icon {
+  display: block;
+  float: left;
+  margin-right: .9375em;
+}
+
+.Header-title,
+.Header-definition {
+  margin: 0;
+}
+
+.Header-title {
+  color: $blue;
+  font-weight: 600;
+  font-size: 1.875em;
+  line-height: 1.25;
+}
+
+.Header-definition {
+  color: $gray-darker;
+  font-weight: 300;
+  font-size: 1.125em;
+  line-height: 1.25;
+}

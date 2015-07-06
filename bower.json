@@ -1,0 +1,24 @@
+{
+  "name": "front-end-developer-exercise",
+  "version": "0.1.1",
+  "homepage": "https://github.com/developwithpurpose/front-end-developer-exercise",
+  "authors": [
+    "Josh Farneman <josh@farneman.net>"
+  ],
+  "main": "app/index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "~2.8.3",
+    "jquery": "1.11.3",
+    "normalize.css": "~3.0.3",
+    "bourbon": "~4.2.3",
+    "svg4everybody": "~1.0.0"
+  }
+}
