@@ -1,0 +1,31 @@
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	width:100%;
+	background-color: #BBBFC2;
+}
+
+.wrapper {
+	width:980px;
+	height:100%;
+	margin:0 auto;
+	background-color: #FFFFFF;
+}
+
+.header {
+	width:980px;
+	height:276px;
+	margin-bottom:60px;
+}
+
+.leftBar {
+	width:300px;
+	height:480px;
+	float:left;
+	background-color: #ECECEE;
+}
+
+.content {
+	float:left;
+	margin:0 70px;
+	width:540px;
+}
