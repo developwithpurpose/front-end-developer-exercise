@@ -85,7 +85,7 @@ BabySteps.prototype = {
     var unit = 'px';
 
     if (this.csstransforms) {
-      this.$navHighlighter.css('transform', 'translateY(' + translateYAmount + unit);
+      this.$navHighlighter.css('transform', 'translateY(' + translateYAmount + unit + ')');
     } else {
       this.$navHighlighter.animate({ top: translateYAmount + unit}, 250);
 
