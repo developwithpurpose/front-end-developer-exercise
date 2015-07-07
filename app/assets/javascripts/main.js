@@ -4,7 +4,6 @@ $(document).ready(function(){
   
   $(".baby_step").off('click');
   $(".baby_step").on('click', function(){
-    //console.log($(this));
     // check to see if the baby step selected has opacity class
     if($(this).hasClass('opacity')){
       // selected class has opacity class - add it to the baby step without it first
@@ -38,26 +37,39 @@ $(document).ready(function(){
 		    }
 		    // check to make sure the users array is not empty, then continue
 		    if(users.length != 0){
-			    if(users.length >= 4){
-				    count = users.length - 2;
-				    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " + 
-				    users[0].lastName + ", " + users[1].firstName + " " + users[1].lastName + "</span> and " + count + 
-				    " other friends are also on Baby Step " + baby_step);
-			    }
-			    else if(users.length == 3){
-				    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " + 
-				    users[0].lastName + ", " + users[1].firstName + " " + users[1].lastName + "</span> and 1 other friend are on Baby Step " + baby_step);
-			    }
-			    else if (users.length == 2){
-				    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " + 
-				    users[0].lastName + ", " + users[1].firstName + " " + users[1].lastName + "</span> are also on Baby Step " + baby_step);
-			    }
-			    else{
-				    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " + 
-				    users[0].lastName + "</span> are on Baby Step " + baby_step);
-			    }
+		      // sort the array first based on the last name of the friend
+		      users.sort(function(a,b){
+				// if last name is equal, check first name
+				if(a["lastName"] == b["lastName"]){
+					return a["firstName"] > b["firstName"] ? 1 : -1;
+				}
+				// last name is not equal
+				else{
+					return a["lastName"] > b["lastName"] ? 1 : -1;
+				}
+		      });
+			  
+		    if(users.length >= 4){
+			    count = users.length - 2;
+			    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " + 
+			    users[0].lastName + ", " + users[1].firstName + " " + users[1].lastName + "</span> and " + count + 
+			    " other friends are also on Baby Step " + baby_step);
+		    }
+		    else if(users.length == 3){
+			    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " + 
+			    users[0].lastName + ", " + users[1].firstName + " " + users[1].lastName + "</span> and 1 other friend are on Baby Step " + baby_step);
+		    }
+		    else if (users.length == 2){
+			    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " + 
+			    users[0].lastName + ", " + users[1].firstName + " " + users[1].lastName + "</span> are also on Baby Step " + baby_step);
+		    }
+		    else{
+			    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " + 
+			    users[0].lastName + "</span> are on Baby Step " + baby_step);
+		    }
 	      } // end if check users.length
       }); // end $.getJSON
     } // end if check for opacity class
   }); // end on click
 }); // end document ready
+
