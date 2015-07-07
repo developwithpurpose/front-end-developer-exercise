@@ -163,17 +163,16 @@ ul.steps {
   display: none;
 }
 
-.step1, .step2, .step3, .step4, .step5, .step6, .step7{
-    animation: slide 1.5s;
+.step1, .step2, .step3, .step4, .step5, .step6, .step7 {
+  animation: fade 1.5s;
 }
 
-@keyframes slide {
-    from {
-    margin-top: 100%;
+@keyframes fade {
+  from {
+    opacity: 0;
   }
-
   to {
-    margin-bottom: 0%;
+    margin-bottom: 1;
   }
 }
 

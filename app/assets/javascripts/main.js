@@ -71,6 +71,9 @@
         array.sort(compare);    
  
         //filters friends according to babyStep
+        var onStep1 = $(array).filter(function(){
+          return this.babyStep === 1; 
+        });
         var onStep2 = $(array).filter(function(){
           return this.babyStep === 2;
         });
@@ -91,28 +94,28 @@
         });
 
         function checkAndAppend(arr, step) {
-          var firstsName = "<span class='name'>" + arr[0].firstName + " " + arr[0].lastName + "</span>";
-          var babyStep = arr[0].babyStep;
           var string = " are also in Baby Step ";
           var pAndClass = "<p class='social'>";
           var p = "</p>";
-          if (arr.length === 1) {
-            step.append(pAndClass + firstsName + " is also in Baby Step " + babyStep + p);
-          } else if (arr.length === 2) {
-            step.append(pAndClass + firstsName + " and " + "<span class='name'>" + arr[1].firstName + " " + arr[1].lastName + "</span>" + string + babyStep + p);
-          } else if (arr.length === 3) {
-            step.append(pAndClass + firstsName + " and " + "<span class='name'>" + arr[1].firstName + " " + arr[1].lastName + "</span>" + ", and 1 other friend is also in Baby Step " + babyStep + p);
-          } else if (arr.length >= 4) {
-            step.append(pAndClass + firstsName + " and " + "<span class='name'>" + arr[1].firstName + " " + arr[1].lastName + "</span>" + ", and " + (arr.length -2) + " other friends" + string + babyStep + p);
-          }
-        }
+            if (arr.length === 1) {
+              step.append(pAndClass + "<span class='name'>" + arr[0].firstName + " " + arr[0].lastName + "</span>" + " is also in Baby Step " + arr[0].babyStep + p);
+            } else if (arr.length === 2) {
+                step.append(pAndClass + "<span class='name'>" + arr[0].firstName + " " + arr[0].lastName + "</span>" + " and " + "<span class='name'>" + arr[1].firstName + " " + arr[1].lastName + "</span>" + string + arr[0].babyStep + p);
+            } else if (arr.length === 3) {
+                step.append(pAndClass + "<span class='name'>" + arr[0].firstName + " " + arr[0].lastName + "</span>" + " and " + "<span class='name'>" + arr[1].firstName + " " + arr[1].lastName + "</span>" + ", and 1 other friend is also in Baby Step " + arr[0].babyStep + p);
+            } else if (arr.length >= 4) {
+                step.append(pAndClass + "<span class='name'>" + arr[0].firstName + " " + arr[0].lastName + "</span>" + " and " + "<span class='name'>" + arr[1].firstName + " " + arr[1].lastName + "</span>" + ", and " + (arr.length -2) + " other friends" + string + arr[0].babyStep + p);
+            }           
+        } 
+              
+        checkAndAppend(onStep1, $step1);
         checkAndAppend(onStep2, $step2);
         checkAndAppend(onStep3, $step3);
         checkAndAppend(onStep4, $step4);
         checkAndAppend(onStep5, $step5);
         checkAndAppend(onStep6, $step6);
-        checkAndAppend(onStep7, $step7);
-
+        checkAndAppend(onStep7, $step7);              
+                  
       }, error: function(err){
          console.log(err, "There was an error");
       }       
