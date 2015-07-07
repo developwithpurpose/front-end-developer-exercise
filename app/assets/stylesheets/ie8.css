@@ -1,0 +1,59 @@
+.page-wrap:before {
+  background: url('../images/shadow_left.jpg') no-repeat;
+  content: "";
+  height: 724px;
+  left: -15px;
+  position: absolute;
+  width: 15px;
+  top: 0;
+}
+
+.page-wrap:after {
+  background: url('../images/shadow_right.jpg') no-repeat;
+  content: "";
+  height: 724px;
+  right: -15px;
+  position: absolute;
+  width: 15px;
+  top: 0;
+}
+
+.primary-nav a:after {
+  background: url('../images/icons/sprites/icons_small.png') no-repeat;
+  content: "";
+  display: inline-block;
+  height: 25px;
+  margin-left: 28px;
+  vertical-align: middle;
+  width: 30px;
+}
+
+.primary-nav li a.step-one:after { background-position: 0 0; }
+.primary-nav li a.step-two:after { background-position: 0 -25px; }
+.primary-nav li a.step-three:after { background-position: 0 -50px; }
+.primary-nav li a.step-four:after { background-position: 0 -75px; }
+.primary-nav li a.step-five:after { background-position: 0 -100px; }
+.primary-nav li a.step-six:after { background-position: 0 -125px; }
+.primary-nav li a.step-seven:after { background-position: 0 -150px; }
+
+/*
+  I have to modify content declaration because it's the only way IE8 will 
+  repaint the psuedo element and go back to the off-state.
+
+  http://stackoverflow.com/questions/8703799/forcing-ie8-to-rerender-repaint-before-after-pseudo-elements
+*/
+.primary-nav li.active a.step-one:after { background-position: 0 -175px; content: " "; }
+.primary-nav li.active a.step-two:after { background-position: 0 -200px; content: " "; }
+.primary-nav li.active a.step-three:after { background-position: 0 -225px; content: " "; }
+.primary-nav li.active a.step-four:after { background-position: 0 -250px; content: " "; }
+.primary-nav li.active a.step-five:after { background-position: 0 -275px; content: " "; }
+.primary-nav li.active a.step-six:after { background-position: 0 -300px; content: " "; }
+.primary-nav li.active a.step-seven:after { background-position: 0 -325px; content: " "; }
+
+.baby-step {
+  background-color: #fff; /* Fixes issue with PNG transparency */
+}
+
+a:link { 
+  outline: none; /* Remove the dotted line around links */
+}
