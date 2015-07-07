@@ -18,10 +18,10 @@ body {
 }
 
 header {
-	width: 980px;
-	margin: auto;
-	background-color: white;
-	padding-bottom: 24px;
+  width: 980px;
+  margin: auto;
+  background-color: white;
+  padding-bottom: 24px;
 }
 
 #main {
@@ -37,8 +37,8 @@ header {
 /* ==================================================================================== */
 
 #navigation {
-	width: 320px;
-	float: left;
+  width: 320px;
+  float: left;
 }
 
 .opacity {
@@ -56,8 +56,8 @@ header {
 /* ==================================================================================== */
 
 #paragraph_section {
-	width: 660px;
-	float: right;
+  width: 660px;
+  float: right;
 }
 
 .overflow {
@@ -68,7 +68,7 @@ header {
 }
 
 .paragraph {
-	height: 425px;
+  height: 425px;
 }
 
 .inline {
@@ -84,12 +84,18 @@ h2 {
 /* Padding & Margin Adjustments */
 /* ==================================================================================== */
 
-.pad_t40 { padding-top: 40px; }
-.pad_b60 { padding-bottom: 60px; }
+.pad_t40 { 
+  padding-top: 40px; 
+}
+.pad_b60 { 
+  padding-bottom: 60px; 
+}
 
 /* ==================================================================================== */
 /* Aligning */
 /* ==================================================================================== */
 
-.is-right { text-align: right; }
+.is-right { 
+  text-align: right; 
+}
 
