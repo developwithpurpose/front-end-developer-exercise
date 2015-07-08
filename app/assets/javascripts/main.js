@@ -52,24 +52,23 @@ $(document).ready(function(){
           if(users.length >= 4){
 	    count = users.length - 2;
 	    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " + 
-	    users[0].lastName + ", " + users[1].firstName + " " + users[1].lastName + "</span> and " + count + 
+	    users[0].lastName + "</span><span>, </span><span style='color: #4099ff;'>" + users[1].firstName + " " + users[1].lastName + "</span> and " + count + 
 	    " other friends are also on Baby Step " + baby_step);
 	  }
 	  else if(users.length == 3){
 	    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " + 
-	    users[0].lastName + ", " + users[1].firstName + " " + users[1].lastName + "</span> and 1 other friend are on Baby Step " + baby_step);
+	    users[0].lastName + "</span><span>, </span><span style='color: #4099ff;'>" + users[1].firstName + " " + users[1].lastName + "</span> and 1 other friend are also on Baby Step " + baby_step);
           }
 	  else if (users.length == 2){
-	    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " + 
-	    users[0].lastName + ", " + users[1].firstName + " " + users[1].lastName + "</span> are also on Baby Step " + baby_step);
+	    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " +
+	    users[0].lastName + "</span><span> and </span><span style='color: #4099ff;'>" + users[1].firstName + " " + users[1].lastName + "</span> are also on Baby Step " + baby_step);
 	  }
 	  else{
 	    $("#baby_step_" + baby_step + "_output").html("<span style='color: #4099ff;'>" + users[0].firstName + " " + 
-	    users[0].lastName + "</span> are on Baby Step " + baby_step);
+	    users[0].lastName + "</span> is also on Baby Step " + baby_step);
 	  }
 	} // end if check users.length
       }); // end $.getJSON
     } // end if check for opacity class
   }); // end on click
 }); // end document ready
-
