@@ -1,0 +1,101 @@
+/* ==================================================================================== */
+/* General */
+/* ==================================================================================== */
+
+html { 
+  height: 100%;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
+body {
+  height: 100%;
+  color: #222;
+  background-color: #ccc;
+  background: url(../images/main/bg.jpg) repeat;
+  font-weight: 400;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+header {
+  width: 980px;
+  margin: auto;
+  background-color: white;
+  padding-bottom: 24px;
+}
+
+#main {
+  position: relative;
+  min-height: 480px;
+  width: 980px;
+  margin: auto;
+  background-color: white;
+}
+
+/* ==================================================================================== */
+/* Navigation */
+/* ==================================================================================== */
+
+#navigation {
+  width: 320px;
+  float: left;
+}
+
+.opacity {
+  background-color: #d6d6c2;
+  opacity: .5;
+}
+
+.picture_margin {
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+/* ==================================================================================== */
+/* Paragraph */
+/* ==================================================================================== */
+
+#paragraph_section {
+  width: 660px;
+  float: right;
+}
+
+.overflow {
+  margin-left: 70px;
+  margin-right: 70px;
+  height: 425px;
+  overflow: hidden;
+}
+
+.paragraph {
+  height: 425px;
+}
+
+.inline {
+  display: inline;
+}
+
+h2 {
+  color: #9ba0a4;
+  line-height: 60px;
+}
+
+/* ==================================================================================== */
+/* Padding & Margin Adjustments */
+/* ==================================================================================== */
+
+.pad_t40 { 
+  padding-top: 40px; 
+}
+.pad_b60 { 
+  padding-bottom: 60px; 
+}
+
+/* ==================================================================================== */
+/* Aligning */
+/* ==================================================================================== */
+
+.is-right { 
+  text-align: right; 
+}
+
