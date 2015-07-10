@@ -25,14 +25,15 @@
                 containerHeight = (nextHeight > prevHeight) ? nextHeight : prevHeight;
 
             tabsContainer.height(containerHeight);
+            tabsContainer.addClass("is-animating");
             tabPanels.addClass("is-visible");
 
             destination = nextPanel.position().top;
             duration = (Math.abs(prevPanel.position().top - destination) / 10) + 300;
 
-            tabsPanelList.addClass("is-animating")
+            tabsPanelList.velocity("stop")
                 .velocity({"top": -destination}, duration, function () {
-                    tabsPanelList.removeClass("is-animating");
+                    tabsContainer.removeClass("is-animating");
                     tabPanels.removeClass("is-visible");
                     prevPanel.attr("aria-hidden", true);
                     nextPanel.addClass("is-visible")
@@ -42,12 +43,13 @@
             tabControls.find(".is-selected")
                 .removeClass("is-selected")
                 .attr("aria-selected", false);
+
             indicator.addClass("is-visible")
+                .velocity("stop")
                 .velocity({"top": position}, duration, function () {
                     elem.addClass("is-selected")
                         .attr("aria-selected", true);
                 });
-
         };
 
         tabControlList.on("keypress", function (e) {
@@ -86,7 +88,6 @@
                     default:
                         friendsList = friendsList + friendName(step[0]) + ", " + friendName(step[1]) +
                             " and " + (step.length - 2) + " other friends are";
-                        break;
                 }
 
                 friendsList = friendsList + " also in Baby Step " + key + "</p>";

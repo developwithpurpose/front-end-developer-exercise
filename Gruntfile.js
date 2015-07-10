@@ -47,14 +47,13 @@ module.exports = function( grunt ) {
             },
             css: {
                 files: [ "app/assets/stylesheets/*.scss" ],
-                tasks: [ "sass" ],
+                tasks: [ "sass", "autoprefixer" ],
                 options: {
                     livereload: true
                 }
             },
             lint: {
                 files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
-                //tasks: [ "jshint", "csslint" ]
                 tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
             }
         },
@@ -95,6 +94,16 @@ module.exports = function( grunt ) {
             dist: {
                 files: {
                     "app/assets/stylesheets/main.css": "app/assets/stylesheets/main.scss"
+                }
+            }
+        },
+        autoprefixer: {
+            options: {
+              browsers: ["last 4 versions"]
+            },
+            dist: {
+                files: {
+                    "app/assets/stylesheets/main.css": "app/assets/stylesheets/main.css"
                 }
             }
         }

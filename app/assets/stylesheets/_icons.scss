@@ -11,6 +11,10 @@
     position: absolute;
     right: em(24, 18);
     top: em(18, 18);
+
+    .no-svg & {
+      background-image: url(../images/icons/icon-bg-spritemap.png);
+    }
   }
 }
 
