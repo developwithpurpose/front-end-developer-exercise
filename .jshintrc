@@ -17,6 +17,7 @@
   "globals": {
     "jQuery": true,
     "$": true,
+    "_": true,
     "module": true,
     "jasmine": true,
     "describe": true,

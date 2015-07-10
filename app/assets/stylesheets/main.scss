@@ -1,0 +1,56 @@
+// Setup
+@import 'bourbon';
+
+// Global Vars
+$sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$open-sans: "Open Sans", $sans-serif;
+$source-sans: "Source Sans Pro", $sans-serif;
+$blue: #36abe1;
+$blue-light: #6fbee7;
+$gray-lightest: #ebeced;
+$gray-lighter: #d1d5d6;
+$gray-light: #bbbfc2;
+$gray: #98a0a4;
+$gray-dark: #65686f;
+$gray-darker: #5c6366;
+
+// Scaffolding
+html {
+  background: $gray-light;
+}
+
+body {
+  background: white;
+  min-width: 44.375em;
+  max-width: 61.25em;
+  margin: 0 auto 3em;
+  font: 16px/1.125 $sans-serif;
+  color: $gray-dark;
+}
+
+p {
+  margin: 0 0 em(18, 13);
+  font-size: .8125em;
+  line-height: (18 / 13);
+}
+
+a {
+  text-decoration: none;
+  color: $blue-light;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    text-decoration: underline;
+    outline: none;
+  }
+}
+
+// Components
+@import 'banner';
+@import 'header';
+@import 'tabs';
+
+// Utilities
+@import 'icons';
+@import 'utilities';

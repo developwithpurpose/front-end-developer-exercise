@@ -1,0 +1,131 @@
+.Tabs {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: -24px;
+    bottom: -24px;
+    left: -24px;
+    right: -24px;
+    width: percentage(323 / 980);
+    background: $gray-lightest;
+    box-shadow: inset 0 0 24px $gray-light;
+
+    .no-boxshadow & {
+      width: percentage(300 / 980);
+      top: 0;
+      left: 0;
+      right: auto;
+      bottom: 0;
+      background: $gray-lightest url(../images/shadow_left_nav.jpg) repeat-y top right;
+    }
+  }
+}
+
+.Tabs-list {
+  position: relative;
+  margin: 0 0 3.75em;
+  padding: 0;
+  float: left;
+  width: percentage(300 / 980);
+  display: block;
+}
+
+.Tabs-indicator,
+.Tabs-item {
+  list-style: none;
+}
+
+.Tabs-control {
+  display: block;
+  padding: 0 1.3889em;
+  border-bottom: 1px solid white;
+  color: $gray;
+  text-align: right;
+  font-family: $source-sans;
+  font-size: 1.125em;
+  line-height: 3.3333em;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    color: $blue;
+    text-decoration: none;
+    outline: none;
+  }
+
+  &.is-selected {
+    background: white;
+    color: $blue;
+    font-weight: 600;
+  }
+}
+
+.Tabs-indicator {
+  z-index: -1;
+  background: white;
+  box-sizing: border-box;
+  border-bottom: 1px solid white;
+  position: absolute;
+  top: 0;
+  height: 3.75em;
+  width: 100%;
+  display: none;
+
+  &.is-visible {
+    display: block;
+  }
+}
+
+.Tabs-content {
+  position: relative;
+  box-sizing: border-box;
+  float: right;
+  width: percentage(540 / 980);
+  margin: 0 percentage(70 / 980);
+  background: white;
+  overflow: hidden;
+
+  &.is-animating {
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      width: 100%;
+      height: 1em;
+      @include background-image(linear-gradient(top, rgba(white, 1), rgba(white, 0)), $fallback: transparent);
+    }
+
+    &:after {
+      top: auto;
+      bottom: 0;
+      @include background-image(linear-gradient(top, rgba(white, 0), rgba(white, 1)), $fallback: transparent);
+    }
+
+    .Tabs-panelList {
+      position: absolute;
+    }
+  }
+}
+
+.Tabs-panel {
+  display: none;
+  padding-bottom: 4.375em;
+
+  &:focus {
+    display: block;
+    outline: none;
+  }
+
+  &.is-visible {
+    display: block;
+  }
+}

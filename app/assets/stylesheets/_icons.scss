@@ -1,0 +1,117 @@
+.icon {
+  position: relative;
+  padding-right: em(84, 18);
+
+  &:after {
+    content: '';
+    background-image: url(../images/icons/icon-bg-spritemap.svg);
+    display: block;
+    width: em(30, 18);
+    height: em(25, 18);
+    position: absolute;
+    right: em(24, 18);
+    top: em(18, 18);
+
+    .no-svg & {
+      background-image: url(../images/icons/icon-bg-spritemap.png);
+    }
+  }
+}
+
+.icon-dollar:after {
+  background-position: 0 25px;
+}
+
+.icon-snowballs:after {
+  background-position: -30px 25px;
+}
+
+.icon-bank:after {
+  background-position: -60px 25px;
+}
+
+.icon-graph:after {
+  background-position: -90px 25px;
+}
+
+.icon-book:after {
+  background-position: -120px 25px;
+}
+
+.icon-house:after {
+  background-position: -150px 25px;
+}
+
+.icon-hand:after {
+  background-position: -180px 25px;
+}
+
+.icon-dollar {
+  &:hover,
+  &:focus,
+  &.is-selected {
+    &:after {
+      background-position: 0 0;
+    }
+  }
+}
+
+.icon-snowballs {
+  &:hover,
+  &:focus,
+  &.is-selected {
+    &:after {
+      background-position: -30px 0;
+    }
+  }
+}
+
+.icon-bank {
+  &:hover,
+  &:focus,
+  &.is-selected {
+    &:after {
+      background-position: -60px 0;
+    }
+  }
+}
+
+.icon-graph {
+  &:hover,
+  &:focus,
+  &.is-selected {
+    &:after {
+      background-position: -90px 0;
+    }
+  }
+}
+
+.icon-book {
+  &:hover,
+  &:focus,
+  &.is-selected {
+    &:after {
+      background-position: -120px 0;
+    }
+  }
+}
+
+.icon-house {
+  &:hover,
+  &:focus,
+  &.is-selected {
+    &:after {
+      background-position: -150px 0;
+    }
+  }
+}
+
+.icon-hand {
+  &:hover,
+  &:focus,
+  &.is-selected {
+    &:after {
+      background-position: -180px 0;
+    }
+  }
+}

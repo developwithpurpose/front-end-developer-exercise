@@ -1,1 +1,6 @@
-{}
+{
+  "box-sizing": false,
+  "adjoining-classes": false,
+  "compatible-vendor-prefixes": false,
+  "gradients": false
+}
