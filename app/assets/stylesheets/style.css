@@ -44,6 +44,20 @@ body {
 	height:615px;
 	float:left;
 	background-color: #ECECEE;
+
+}
+
+.leftBar {
+
+background: rgba(235,236,237,1);
+background: -moz-linear-gradient(left, rgba(235,236,237,1) 96%, rgba(209,213,214,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(96%, rgba(235,236,237,1)), color-stop(100%, rgba(209,213,214,1)));
+background: -webkit-linear-gradient(left, rgba(235,236,237,1) 96%, rgba(209,213,214,1) 100%);
+background: -o-linear-gradient(left, rgba(235,236,237,1) 96%, rgba(209,213,214,1) 100%);
+background: -ms-linear-gradient(left, rgba(235,236,237,1) 96%, rgba(209,213,214,1) 100%);
+background: linear-gradient(to right, rgba(235,236,237,1) 96%, rgba(209,213,214,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1 );
+
 }
 
 .step {
