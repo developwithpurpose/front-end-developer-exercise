@@ -1,5 +1,6 @@
 body {
 	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
 	width:100%;
 	background-color: #BBBFC2;
 	margin:0;
@@ -11,6 +12,25 @@ body {
 	height:951px;
 	margin:0 auto;
 	background-color: #FFFFFF;
+	position:relative;
+}
+
+.leftShadow {
+	position:absolute;
+	top:0;
+	left:-15px;
+}
+
+.rightShadow {
+	position:absolute;
+	top:0;
+	right:-15px;
+}
+
+.bottomShadow {
+	position:absolute;
+	left:0;
+	bottom:0;
 }
 
 .header {
@@ -28,7 +48,73 @@ body {
 
 .step {
 	height:60px;
-	border-bottom: 1px solid #FFFFFF
+	border-bottom: 1px solid #FFFFFF;
+	cursor:pointer;
+}
+
+.step.selected, .step:hover {
+	background-color: #FFFFFF;
+}
+
+.step.selected .stepText, .step:hover .stepText {
+	font-weight: 600;
+	color: #36abe1;
+}
+
+#step1 .icon {
+	background-position:0 0;
+}
+
+#step2 .icon {
+	background-position:0 -25px;
+}
+
+#step3 .icon {
+	background-position:0 -50px;
+}
+
+#step4 .icon {
+	background-position:0 -75px;
+}
+
+#step5 .icon {
+	background-position:0 -100px;
+}
+
+#step6 .icon {
+	background-position:0 -125px;
+}
+
+#step7 .icon {
+	background-position:0 -150px;
+}
+
+#step1.selected .icon, #step1:hover .icon {
+	background-position:0 -175px;
+}
+
+#step2.selected .icon, #step2:hover .icon {
+	background-position:0 -200px;
+}
+
+#step3.selected .icon, #step3:hover .icon {
+	background-position:0 -225px;
+}
+
+#step4.selected .icon, #step4:hover .icon {
+	background-position:0 -250px;
+}
+
+#step5.selected .icon, #step5:hover .icon {
+	background-position:0 -275px;
+}
+
+#step6.selected .icon, #step6:hover .icon {
+	background-position:0 -300px;
+}
+
+#step7.selected .icon, #step7:hover .icon {
+	background-position:0 -325px;
 }
 
 .icon {
