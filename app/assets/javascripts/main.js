@@ -11,7 +11,7 @@ $(document).ready( function () {
 
 	$.getJSON("./assets/javascripts/body-copy.json", function (data) {
 		copy = data;
-		UpdateCopy();
+		UpdateCopy(false);
 	})
 
 	$(".step").click( function () {
@@ -22,7 +22,7 @@ $(document).ready( function () {
 		step = $(this).index() + 1;
 
 		UpdateStep();
-		UpdateCopy();
+		UpdateCopy(true);
 	})
 
 	function UpdateStep() {
@@ -68,7 +68,7 @@ $(document).ready( function () {
 
 	}
 
-	function UpdateCopy() {
+	function UpdateCopy(trans) {
 
 		var headerImg = "/app/assets/images/heading_bs" + step + ".png";
 		var altImg = "heading - baby step " + step;
@@ -81,10 +81,29 @@ $(document).ready( function () {
 			output += "<p>" + contentArray[i] + "</p>"; 
 		}
 
-		$(".heading img").attr('src', headerImg);
-		$(".heading img").attr('alt', altImg); 
+		if (trans) {
 
-		$(".bodyCopy").html(output);
+			$(".content").transition({scale:0}, function () { 
+
+				$(".heading img").attr('src', headerImg);
+				$(".heading img").attr('alt', altImg); 
+
+				$(".bodyCopy").html(output);
+
+				$(".content").transition({scale:1})
+
+			});
+
+		} else {
+
+			$(".heading img").attr('src', headerImg);
+			$(".heading img").attr('alt', altImg); 
+
+			$(".bodyCopy").html(output);
+
+		}
+
+
 
 	}
 
