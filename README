@@ -4,7 +4,7 @@ Author: Jonathan King
 Email: kingjon90@gmail.com
 Date: July 12, 2015
 
-Start by connecting with grunt:
+Start by connecting with grunt from root:
 grunt connect
 
 And go to URL:
