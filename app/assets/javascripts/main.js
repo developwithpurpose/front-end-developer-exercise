@@ -2,8 +2,6 @@ $(document).ready( function () {
 
 	var friends, copy, step;
 
-	var outputArray = [];
-
 	step = 1;
 
 	$.getJSON("./assets/javascripts/baby-steps.json", function (data) {
@@ -19,21 +17,26 @@ $(document).ready( function () {
 	})
 
 	$(".step").click( function () {
-		UpdateStep
+
+		$(".step").removeClass("selected");
+		$(this).addClass("selected");
+
+		step = $(this).index() + 1;
+
+		UpdateStep();
 	})
 
 	function UpdateStep() {
 
 		var numFriends, extraFriends, openTag, closeTag, message;
 
-		step = $(this).index();
-		console.log(step)
+		var outputArray = [];
 
-		for (i = 0; i < friends.length; i++) {
+		for (i = 0; i < friends.friends.length; i++) {
 
-			if (friends[i].babyStep == step) {
+			if (friends.friends[i].babyStep == step) {
 
-				outputArray.push(friends[i].firstName + " " + friends[i].lastName);
+				outputArray.push(friends.friends[i].firstName + " " + friends.friends[i].lastName);
 
 			}
 		}
