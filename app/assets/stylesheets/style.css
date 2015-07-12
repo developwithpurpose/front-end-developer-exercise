@@ -180,11 +180,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', end
 	font-size: 13px
 }
 
-.output a {
+.output .name {
 	color:#6fbee7;
-	text-decoration: none;
-}
-
-.output a:hover {
-	text-decoration:underline;
+	font-weight:600;
 }
