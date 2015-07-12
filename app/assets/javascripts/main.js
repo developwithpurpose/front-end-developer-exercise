@@ -7,13 +7,11 @@ $(document).ready( function () {
 	$.getJSON("./assets/javascripts/baby-steps.json", function (data) {
 		friends = data;
 		UpdateStep();
-		console.log(friends);
 	})
 
 	$.getJSON("./assets/javascripts/body-copy.json", function (data) {
 		copy = data;
 		UpdateCopy();
-		console.log(copy);
 	})
 
 	$(".step").click( function () {
@@ -24,6 +22,7 @@ $(document).ready( function () {
 		step = $(this).index() + 1;
 
 		UpdateStep();
+		UpdateCopy();
 	})
 
 	function UpdateStep() {
@@ -69,8 +68,23 @@ $(document).ready( function () {
 
 	}
 
-	function UpdateCopy(currentStep) {
+	function UpdateCopy() {
 
+		var headerImg = "/app/assets/images/heading_bs" + step + ".png";
+		var altImg = "heading - baby step " + step;
+
+		var content = copy.steps[step - 1].text;
+		var output = "";
+		contentArray = content.split("\n");
+
+		for (i = 0; i < contentArray.length; i++) {
+			output += "<p>" + contentArray[i] + "</p>"; 
+		}
+
+		$(".heading img").attr('src', headerImg);
+		$(".heading img").attr('alt', altImg); 
+
+		$(".bodyCopy").html(output);
 
 	}
 

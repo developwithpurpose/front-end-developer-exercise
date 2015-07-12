@@ -162,13 +162,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', end
 	margin:0 0 12px 0;
 }
 
-.content p {
+.content .bodyCopy {
 	margin-bottom:25px;
 	font-family: Helvetica,Arial,sans-serif;
 	font-size:13px;
 	color:#65686f;
 	line-height: 18px;
 }
+
 .content a {
 	
 }
