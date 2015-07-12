@@ -1,0 +1,11 @@
+Dave Ramsey Front End Exercise
+
+Author: Jonathan King
+Email: kingjon90@gmail.com
+Date: July 12, 2015
+
+Start by connecting with grunt:
+grunt connect
+
+And go to URL:
+localhost:9001?app/
