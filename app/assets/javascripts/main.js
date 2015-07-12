@@ -83,14 +83,14 @@ $(document).ready( function () {
 
 		if (trans) {
 
-			$(".content").transition({scale:0}, function () { 
+			$(".content").transition({opacity:0}, function () { 
 
 				$(".heading img").attr('src', headerImg);
 				$(".heading img").attr('alt', altImg); 
 
 				$(".bodyCopy").html(output);
 
-				$(".content").transition({scale:1})
+				$(".content").transition({opacity:1})
 
 			});
 
