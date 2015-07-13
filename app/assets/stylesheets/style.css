@@ -43,10 +43,10 @@ body {
 	width:300px;
 	height:615px;
 	float:left;
-	background-color: #ECECEE;
+	background: url('../images/shadow_left_nav.jpg') 0 0 repeat-y
 
 }
-
+/*
 .leftBar {
 
 background: rgba(235,236,237,1);
@@ -58,7 +58,7 @@ background: -ms-linear-gradient(left, rgba(235,236,237,1) 96%, rgba(209,213,214,
 background: linear-gradient(to right, rgba(235,236,237,1) 96%, rgba(209,213,214,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1 );
 
-}
+}*/
 
 .step {
 	height:60px;
