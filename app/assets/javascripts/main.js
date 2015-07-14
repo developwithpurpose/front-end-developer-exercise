@@ -3,14 +3,21 @@ $('.navLink').on('click', function (e) {
     // switch selected navigation element
     $('.navLink.selected').removeClass('selected');
     $(this).addClass('selected');
-    // slide out old step and once the animation finishes
+
+    if (Modernizr.cssanimations) {
+        // if CSS animations are supported, slide out old step and once the animation finishes remove the selected/fadeOutLeft classes
+        $('.babyStep.selected').addClass('fadeOutLeft').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+            function () {
+                $(this).removeClass('selected fadeOutLeft');
+            }
+        );
+    } else {
+        // if CSS animations not supported, remove selected baby step immediately
+        $('.babyStep.selected').removeClass('selected');
+    }
+    
     $('.babyStep.selected').removeClass('fadeInRight');
-    $('.babyStep.selected').addClass('fadeOutLeft').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
-        function () {
-            $(this).removeClass('selected fadeOutLeft');
-        }
-    );
-    // slide in new step based on navigation item clicked
+    // show new step based on navigation item clicked - will use CSS Transitions if available
     if ($(this).hasClass('step1')) {
         $('.babyStep.step1').addClass('selected fadeInRight');
     }
