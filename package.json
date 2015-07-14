@@ -16,5 +16,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-html-validation": "^0.1.18",
     "matchdep": "^0.3.0"
-  }
+  },
+  "developer-name":"Jonathan King",
+  "developer-email":"kingjon90@gmail.com"
 }
