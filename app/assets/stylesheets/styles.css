@@ -1,0 +1,98 @@
+/* CSS deliberately NOT minified so you can see how I work in a dev environment */
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+img { max-width: 100%; height: inherit !important; }
+
+/* Typography */
+body { font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #65686f; line-height: 18px; }
+h1 { color: #FFF; font-size: 50px; font-family: 'Open Sans'; font-weight: 700; line-height: 48px; text-transform: uppercase; }
+h1 small { display: block; font-weight: 300; text-transform: none; font-size: .64em; /* .64em is the size ratio from the annotated mockup: 32/50 = 64% - this keeps the proportion at responsive sizes */ }
+h2 { color: #36abe1; font-family: 'Source Sans Pro'; font-size: 30px; font-weight: 600; line-height: 20px; margin-bottom: 24px; }
+h2 small { color: #5c6366; font-size: 18px; font-weight: 300; display: block; padding-top: 5px; }
+p { margin-bottom: 1em; }
+a { color: #6fbee7; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus { text-decoration: none; outline: none; }
+
+/* Layout & Container */
+body { background: #bbbfc2; }
+.container { max-width: 980px; margin: 0 auto; padding-left: 15px; background: url('../images/shadow_left.jpg') top left no-repeat; }
+.containerWrapper { padding-right: 15px; background: url('../images/shadow_right.jpg') top right no-repeat; }
+.bottom { height: 30px; background: url('../images/shadow_bottom.jpg') top center no-repeat; }
+
+/* Header */
+header { position: relative; }
+header img { display: block; }
+header h1 { position: absolute; top: 50px; right: 70px; text-align: right; }
+
+/* Content container and navigation */
+main { background: #FFF; padding-top: 60px; display: table; width: 100%; }
+.nav { display: table-cell; width: 30%; vertical-align: top; background: #ebeced url('../images/shadow_left_nav.jpg') right top repeat-y; }
+.nav li { border-bottom: 1px solid #FFF; }
+.nav li a { position: relative; display: block; color: #9ba0a4; font-family: 'Source Sans Pro'; font-size: 18px; line-height: 60px; text-align: right; padding-right: 85px;
+-webkit-transition: background-color 200ms ease-out, color 200ms ease-out;
+-moz-transition: background-color 200ms ease-out, color 200ms ease-out;
+-o-transition: background-color 200ms ease-out, color 200ms ease-out;
+transition: background-color 200ms ease-out, color 200ms ease-out; }
+.nav li a:hover { text-decoration: none; background: #f9f9f9; color: #36abe1; }
+.nav li a i { position: absolute; right: 24px; top: 17.5px; width: 30px; height: 25px; background: url('../images/icons_small.png') center top no-repeat; }
+.nav li.step2 a i { background-position: center -25px; }
+.nav li.step3 a i { background-position: center -50px; }
+.nav li.step4 a i { background-position: center -75px; }
+.nav li.step5 a i { background-position: center -100px; }
+.nav li.step6 a i { background-position: center -125px; }
+.nav li.step7 a i { background-position: center -150px; }
+.nav li.selected { pointer-events: none; /* disable click for selected item */ }
+.nav li.selected a { background: #FFF; color: #36abe1; font-weight: 600; }
+.nav li.step1 a:hover i, .nav li.selected.step1 a i { background-position: center -175px; }
+.nav li.step2 a:hover i, .nav li.selected.step2 a i { background-position: center -200px; }
+.nav li.step3 a:hover i, .nav li.selected.step3 a i { background-position: center -225px; }
+.nav li.step4 a:hover i, .nav li.selected.step4 a i { background-position: center -250px; }
+.nav li.step5 a:hover i, .nav li.selected.step5 a i { background-position: center -275px; }
+.nav li.step6 a:hover i, .nav li.selected.step6 a i { background-position: center -300px; }
+.nav li.step7 a:hover i, .nav li.selected.step7 a i { background-position: center -325px; }
+
+/* Content area */
+.content { display: table-cell; padding: 0 70px; overflow: hidden; width: 70%; vertical-align: top; }
+.contentWrapper { position: relative; min-height: 515px; /* not sure if the min-height is required for this exercise, but shows the navigation background color goes all the way down to the end of the container */ }
+.babyStep { position: absolute; display: none; }
+.babyStep.selected { display: block; min-height: 500px; }
+.babyStep h2 { padding-left: 90px; position: relative; padding-top: 13px; }
+.babyStep h2 i { position: absolute; left: 0; top: 0px; width: 77px; height: 65px; background: url('../images/icons.png') center top no-repeat; }
+.babyStep.step2 h2 i { background-position: center -65px; }
+.babyStep.step3 h2 i { background-position: center -130px; }
+.babyStep.step4 h2 i { background-position: center -195px; }
+.babyStep.step5 h2 i { background-position: center -260px; }
+.babyStep.step6 h2 i { background-position: center -325px; }
+.babyStep.step7 h2 i { background-position: center -390px; }
+.babyStep .friends { margin-top: 40px; }
+
+/* Responsive Media Queries - responsive steps and various values not defined in specification so I'm adding my own based on what looks good */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header h1 { font-size: 42px; top: 12px; right: 30px; }
+    .content { padding: 0 40px; }
+}
+@media (max-width: 767px) {
+    header h1 { font-size: 28px; line-height: 28px; top: 5px; right: 10px; }
+    main { padding-top: 20px; }
+    .nav, .content { display: block; width: 100%; clear: both; }
+    .content { padding: 0; padding-top: 10px; }
+    .contentWrapper { padding: 0 5%; width: 90%; }
+    .babyStep { width: 90%; }
+    .nav li { float: left; width: 14.28571428571429%; }
+    .nav li a { background: #FFF; text-align: left; text-indent: -4000px; padding: 0; }
+    .nav li a i { left: 50%; margin-left: -15px; }
+}
+@media (max-width: 480px) {
+    header h1 { font-size: 18px; line-height: 18px; top: 5px; right: 5px; }
+    .container, .containerWrapper { padding: 0; background: none; }
+}
