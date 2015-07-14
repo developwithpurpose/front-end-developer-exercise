@@ -62,6 +62,7 @@ module.exports = function( grunt ) {
       connect: {
         server: {
           options: {
+            hostname: 'localhost',
             port: 9001,
             livereload: true,
             keepalive: true

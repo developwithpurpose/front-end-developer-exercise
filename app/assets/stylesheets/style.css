@@ -1,0 +1,187 @@
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	width:100%;
+	background-color: #BBBFC2;
+	margin:0;
+	padding:0;
+}
+
+.wrapper {
+	width:980px;
+	height:951px;
+	margin:0 auto;
+	background-color: #FFFFFF;
+	position:relative;
+}
+
+.leftShadow {
+	position:absolute;
+	top:0;
+	left:-15px;
+}
+
+.rightShadow {
+	position:absolute;
+	top:0;
+	right:-15px;
+}
+
+.bottomShadow {
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+
+.header {
+	width:980px;
+	height:276px;
+	margin-bottom:60px;
+}
+
+.leftBar {
+	width:300px;
+	height:615px;
+	float:left;
+	background: url('../images/shadow_left_nav.jpg') 0 0 repeat-y
+
+}
+/*
+.leftBar {
+
+background: rgba(235,236,237,1);
+background: -moz-linear-gradient(left, rgba(235,236,237,1) 96%, rgba(209,213,214,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(96%, rgba(235,236,237,1)), color-stop(100%, rgba(209,213,214,1)));
+background: -webkit-linear-gradient(left, rgba(235,236,237,1) 96%, rgba(209,213,214,1) 100%);
+background: -o-linear-gradient(left, rgba(235,236,237,1) 96%, rgba(209,213,214,1) 100%);
+background: -ms-linear-gradient(left, rgba(235,236,237,1) 96%, rgba(209,213,214,1) 100%);
+background: linear-gradient(to right, rgba(235,236,237,1) 96%, rgba(209,213,214,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1 );
+
+}*/
+
+.step {
+	height:60px;
+	border-bottom: 1px solid #FFFFFF;
+	cursor:pointer;
+}
+
+.step.selected, .step:hover {
+	background-color: #FFFFFF;
+}
+
+.step.selected .stepText, .step:hover .stepText {
+	font-weight: 600;
+	color: #36abe1;
+}
+
+#step1 .icon {
+	background-position:0 0;
+}
+
+#step2 .icon {
+	background-position:0 -25px;
+}
+
+#step3 .icon {
+	background-position:0 -50px;
+}
+
+#step4 .icon {
+	background-position:0 -75px;
+}
+
+#step5 .icon {
+	background-position:0 -100px;
+}
+
+#step6 .icon {
+	background-position:0 -125px;
+}
+
+#step7 .icon {
+	background-position:0 -150px;
+}
+
+#step1.selected .icon, #step1:hover .icon {
+	background-position:0 -175px;
+}
+
+#step2.selected .icon, #step2:hover .icon {
+	background-position:0 -200px;
+}
+
+#step3.selected .icon, #step3:hover .icon {
+	background-position:0 -225px;
+}
+
+#step4.selected .icon, #step4:hover .icon {
+	background-position:0 -250px;
+}
+
+#step5.selected .icon, #step5:hover .icon {
+	background-position:0 -275px;
+}
+
+#step6.selected .icon, #step6:hover .icon {
+	background-position:0 -300px;
+}
+
+#step7.selected .icon, #step7:hover .icon {
+	background-position:0 -325px;
+}
+
+.icon {
+	float:right;
+	margin-top:18px;
+	margin-right:24px;
+	height:25px;
+	width:32px;
+	background: url('../images/icons_small.png') 0 0 no-repeat;
+}
+
+.stepText {
+	float:right;
+	margin-top: 19px;
+	margin-right: 24px;
+	font-size:18px;
+	color:#9ba0a4;
+}
+
+#step1 .icon {
+	background
+}
+
+.content {
+	float:left;
+	margin:0 70px;
+	width:540px;
+}
+
+.heading {
+	margin:0 0 12px 0;
+}
+
+.content .bodyCopy {
+	margin-bottom:25px;
+	font-family: Helvetica,Arial,sans-serif;
+	font-size:13px;
+	color:#65686f;
+	line-height: 18px;
+}
+
+.content a {
+	
+}
+
+.output {
+	margin-top: 40px;
+	font-family: Helvetica,Arial,sans-serif;
+	color:#65686f;
+	font-size: 13px
+}
+
+.output .name {
+	color:#6fbee7;
+	font-weight:600;
+}
