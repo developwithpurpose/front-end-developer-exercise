@@ -18,7 +18,7 @@ module.exports = function( grunt ) {
           expand: true,
           cwd: "app/assets/javascripts",
           src: "**/*.js",
-          dest: "build/javascripts",
+          dest: "app/assets/javascripts/build",
           reset: true
         }]
       }
@@ -49,7 +49,7 @@ module.exports = function( grunt ) {
     },
     jasmine: {
       pivotal: {
-        src: "build/javascripts/**/*.js",
+        src: "app/assets/javascripts/build/**/*.js",
         options: {
           specs: "spec/**/*.spec.js",
           vendor: [
@@ -82,19 +82,13 @@ module.exports = function( grunt ) {
       },
       dist: {
         files: {
-          "build/stylesheets/main.css": "app/assets/stylesheets/main.scss"
+          "app/assets/stylesheets/build/main.css": "app/assets/stylesheets/main.scss"
         }
-      }
-    },
-    copy: {
-      main: {
-        src: "app/index.html",
-        dest: "build/index.html"
       }
     }
   });
 
   grunt.registerTask( "default", ["connect"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
-  grunt.registerTask( "build", ["uglify", "sass", "copy"]);
+  grunt.registerTask( "build", ["uglify", "sass"] );
 };
