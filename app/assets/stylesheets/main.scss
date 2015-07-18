@@ -1,5 +1,4 @@
+@import 'variables';
 @import 'reset';
-
-header.page-header {
-    background: 'images/header.jpg'
-}
+@import 'base';
+@import 'header';
