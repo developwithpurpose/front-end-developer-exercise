@@ -10,9 +10,10 @@ body {
   height: 95%;
 }
 
-.header-image {
-  background: url("../assets/images/header.jpg");
+.header-image img {
   width: 100% !important;
-  height: 276px;
-  color: white;
+}
+
+.content {
+  margin-top: 60px;
 }
