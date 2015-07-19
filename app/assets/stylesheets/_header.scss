@@ -1,5 +1,16 @@
-#page-header {
+.page-header {
     background: url(#{$images-directory}/header.jpg) no-repeat;
     height: 276px;
     color: $light-text-color;
+    margin-bottom: 60px;
+}
+
+.page-header .main-heading {
+    margin: 50px 70px 0 0;
+    text-align: right;
+}
+
+.page-header .main-heading .bold-text {
+    margin-top: 15px;
+    line-height: 48px;
 }

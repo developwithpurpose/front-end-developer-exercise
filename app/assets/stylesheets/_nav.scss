@@ -1,0 +1,20 @@
+.navigation {
+    width: 300px;
+    float: left;
+    padding-bottom: 200px;
+    @include gradient( #ebeced, #d1d5d6 );
+}
+
+.navigation a {
+    color: $alternate-link-color;
+    line-height: 60px;
+    font-size: 18px;
+    display: block;
+    padding-left: 128px;
+    border-bottom: 1px solid #fff;
+}
+
+.navigation .active {
+    background: #fff;
+    color: $light-blue-color;
+}

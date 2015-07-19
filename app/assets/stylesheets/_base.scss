@@ -1,6 +1,7 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
     color: $primary-text-color;
+    background: #bbbfc2;
 }
 
 a {
@@ -11,6 +12,7 @@ a {
 p {
     font-size: 13px;
     line-height: 18px;
+    margin-top: 24px;
 }
 
 h1 {
@@ -23,4 +25,28 @@ h2 {
 
 h3 {
     font-size: 18px;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wrapper {
+    background: #fff;
+    margin: 0 auto;
+    width: 980px;
+}
+
+.right {
+    float:right;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+h1 .large {
+    font-size: 50px;
 }
