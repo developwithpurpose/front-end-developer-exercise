@@ -1,0 +1,18 @@
+body {
+  background-color: #BBBFC2;
+}
+
+.container {
+  background-color: teal;
+  max-width: 80%;
+  margin-left: 10%;
+  margin-top: -20px;
+  height: 95%;
+}
+
+.header-image {
+  background: url("../assets/images/header.jpg");
+  width: 100% !important;
+  height: 276px;
+  color: white;
+}
