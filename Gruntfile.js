@@ -11,10 +11,23 @@ module.exports = function( grunt ) {
         src: "app/assets/stylesheets/css/main.css"
       },
       cssmin: {
-        main: {
+        target: {
           files: {
             "app/assets/stylesheets/css/main.css" : "app/assets/stylesheets/css/main.css"
-          }
+          }        
+        }
+      },
+      imagemin: {
+        static: {
+          options: {
+            optimizationLevel: 3,
+          },
+          files: [{
+            expand: true,
+            cwd: "app",
+            src: ["**/*.{png,jpg,gif}", "**/**/*.{png,jpg,gif}"],
+            dest: "build/images"
+          }]
         }
       },
       jshint: {
@@ -130,7 +143,8 @@ module.exports = function( grunt ) {
     "sass:prod",
     "autoprefixer",
     "uglify",
-    "cssmin"
+    "cssmin",
+    "imagemin"
   ]);
   grunt.registerTask( "build-dev", [
     "clean",
