@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-  background-color: teal;
+  background-color: white;
   max-width: 80%;
   margin-left: 10%;
   margin-top: -20px;
@@ -18,16 +18,31 @@ body {
   margin-top: 60px;
 }
 
+
 .nav-sidebar ul {
   list-style-type: none;
   padding: 0px;
+  height: 70%;
+  
 }
 
 button {
   height: 60px;
-  width: 33%;
-  background-color: #E5E5E7;
+  width: 30%;
+  background-color: #EBECED;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
   color: #9BA0A4;
+  text-align: right;
+  border: 1px solid white;
+}
+
+button img {
+  margin-right: 24px;
+  margin-left: 24px;
+  text-align: right;
+}
+
+.description {
+  width: 70%;
 }
