@@ -7,7 +7,7 @@ body {
   max-width: 80%;
   margin-left: 10%;
   margin-top: -20px;
-  height: 95%;
+  height: 100%;
 }
 
 .header-image img {
@@ -16,4 +16,18 @@ body {
 
 .content {
   margin-top: 60px;
+}
+
+.nav-sidebar ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+button {
+  height: 60px;
+  width: 33%;
+  background-color: #E5E5E7;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  color: #9BA0A4;
 }
