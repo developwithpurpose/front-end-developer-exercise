@@ -18,7 +18,7 @@ module.exports = function( grunt ) {
           expand: true,
           cwd: "app/assets/javascripts",
           src: "**/*.js",
-          dest: "app/assets/javascripts/build",
+          dest: "dist/js",
           reset: true
         }]
       }
@@ -28,7 +28,7 @@ module.exports = function( grunt ) {
         stoponerror: false
       },
       files: {
-        src: [ "app/**/*.html" ]
+        src: [ "public/**/*.html" ]
       }
     },
     clean: {
@@ -86,13 +86,21 @@ module.exports = function( grunt ) {
       },
       dist: {
         files: {
-          "app/assets/stylesheets/build/main.css": "app/assets/stylesheets/main.scss"
+          "dist/css/main.css": "app/assets/stylesheets/main.scss"
         }
+      }
+    },
+    copy: {
+      files: {
+        expand: true,
+        dest: "dist",
+        cwd: "public/",
+        src: "**"
       }
     }
   });
 
   grunt.registerTask( "default", ["connect"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
-  grunt.registerTask( "build", ["uglify", "sass"] );
+  grunt.registerTask( "build", ["copy", "uglify", "sass"] );
 };
