@@ -1,7 +1,7 @@
 ;(function(){
   "use strict";
   
-  var $tab1 = $("#tab1"), $step1 = $(".step1");
+  var $tab1 = $("#tab1");
   $(document).ready(function(){
     $tab1.addClass("active");
     getFriends();
@@ -9,10 +9,12 @@
 
   var $tab2 = $("#tab2"), $tab3 = $("#tab3"), $tab4 = $("#tab4"), 
       $tab5 = $("#tab5"), $tab6 = $("#tab6"), $tab7 = $("#tab7");
-  var $step2 = $(".step2"), $step3 = $(".step3"), $step4 = $(".step4"),
-      $step5 = $(".step5"), $step6 = $(".step6"), $step7 = $(".step7");
+  var $step1 = $(".step1"), $step2 = $(".step2"), $step3 = $(".step3"), 
+      $step4 = $(".step4"), $step5 = $(".step5"), $step6 = $(".step6"), 
+      $step7 = $(".step7");
 
-  $(".steps li[id]").on("click", function(){
+  var li = $(".steps li[id]");
+  li.on("click", function(){
     var id = $(this).attr("id");
     handler(id);
   });
@@ -69,7 +71,7 @@
       success: function(data) {
         var array = data.friends;
         array.sort(compare);    
- 
+
         //filters friends according to babyStep
         var onStep1 = $(array).filter(function(){
           return this.babyStep === 1; 
@@ -91,7 +93,7 @@
         });
         var onStep7 = $(array).filter(function(){
           return this.babyStep === 7;
-        });
+        }); 
 
         function checkAndAppend(arr, step) {
           var string = " are also in Baby Step ";
