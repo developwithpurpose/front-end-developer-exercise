@@ -14,27 +14,36 @@ body {
   width: 100% !important;
 }
 
-.content {
+#content {
   margin-top: 60px;
+}
+
+.nav-sidebar {
+  max-width: 30%;
+  display: inline-block;
 }
 
 
 .nav-sidebar ul {
   list-style-type: none;
   padding: 0px;
-  height: 70%;
-  
+}
+
+.nav-sidebar ul li {
+  width: 100%;
+  display: inline-block;
 }
 
 button {
   height: 60px;
-  width: 30%;
   background-color: #EBECED;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
   color: #9BA0A4;
   text-align: right;
   border: 1px solid white;
+  width: 100%;
+  cursor: pointer;
 }
 
 button img {
@@ -44,5 +53,14 @@ button img {
 }
 
 .description {
-  width: 70%;
+  width: 60%;
+  font-family: 'Helvetica', sans-serif;
+  color: #65686F;
+  font-size: 13px;
+  line-height: 18px;
+  display: inline-block;
+  /*position: absolute;*/
+  /*right: 5em;*/
+  margin-left: 70px;
+  z-index: 1000;
 }
