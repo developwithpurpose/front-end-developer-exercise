@@ -8,9 +8,11 @@
 .page-header .main-heading {
     margin: 50px 70px 0 0;
     text-align: right;
+    @include open-sans-light;
 }
 
 .page-header .main-heading .bold-text {
     margin-top: 15px;
     line-height: 48px;
+    @include open-sans-bold;
 }

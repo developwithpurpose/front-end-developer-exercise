@@ -1,14 +1,17 @@
 .content {
     margin-left: 370px;
+    padding-right: 70px;
 }
 
 .content .content-header {
     color: $light-blue-color;
-    line-height:30px;
+    line-height:32px;
+    @include source-sans-semi-bold;
 }
 
 .content .content-subheader {
     color: $gray-text-color;
+    @include source-sans-light;
 }
 
 .content .content-footer {

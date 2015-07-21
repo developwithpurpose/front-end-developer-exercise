@@ -2,7 +2,8 @@
     width: 300px;
     float: left;
     padding-bottom: 200px;
-    @include gradient( #ebeced, #d1d5d6 );
+    background: #ebeced;
+    @include inset-box-shadow(-21px, 0px, 12px, -8px, #d1d5d6);
 }
 
 .navigation a {
@@ -12,9 +13,11 @@
     display: block;
     padding-left: 128px;
     border-bottom: 1px solid #fff;
+    @include source-sans;
 }
 
 .navigation .active {
     background: #fff;
     color: $light-blue-color;
+    @include source-sans-semi-bold;
 }

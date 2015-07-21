@@ -1,10 +1,36 @@
-@mixin gradient($color1, $color2) {
-    background: $color1;
-    background: -moz-linear-gradient(top, $color1 0%, $color2 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2));
-    background: -webkit-linear-gradient(top, $color1 0%,$color2 100%);
-    background: -o-linear-gradient(top, $color1 0%,$color2 100%);
-    background: -ms-linear-gradient(top, $color1 0%,$color2 100%);
-    background: linear-gradient(to bottom, $color1 0%,$color2 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
+@mixin outset-box-shadow($xOffset, $yOffset, $blur, $spread, $color) {
+    -webkit-box-shadow: $xOffset $yOffset $blur $spread $color;
+    -moz-box-shadow: $xOffset $yOffset $blur $spread $color;
+    box-shadow: $xOffset $yOffset $blur $spread $color;
+}
+
+@mixin inset-box-shadow($xOffset, $yOffset, $blur, $spread, $color) {
+    -webkit-box-shadow: inset $xOffset $yOffset $blur $spread $color;
+    -moz-box-shadow: inset $xOffset $yOffset $blur $spread $color;
+    box-shadow: inset $xOffset $yOffset $blur $spread $color;
+}
+
+@mixin open-sans-light() {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+@mixin open-sans-bold() {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+@mixin source-sans-semi-bold() {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+@mixin source-sans() {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+@mixin source-sans-light() {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
 }

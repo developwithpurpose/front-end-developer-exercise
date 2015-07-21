@@ -35,8 +35,9 @@ h3 {
 
 .wrapper {
     background: #fff;
-    margin: 0 auto;
+    margin: 0 auto 43px;
     width: 980px;
+    @include outset-box-shadow(0px, 1px, 10px, 5px, #949494);
 }
 
 .right {
