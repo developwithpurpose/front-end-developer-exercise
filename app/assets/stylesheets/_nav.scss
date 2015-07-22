@@ -4,20 +4,24 @@
     padding-bottom: 200px;
     background: #ebeced;
     @include inset-box-shadow(-21px, 0px, 12px, -8px, #d1d5d6);
+
+    a {
+        color: $alternate-link-color;
+        line-height: 60px;
+        font-size: 18px;
+        display: block;
+        padding-left: 128px;
+        border-bottom: 1px solid #fff;
+        @include source-sans;
+    }
+
+    .active {
+        background: #fff;
+        color: $light-blue-color;
+        @include source-sans-semi-bold;
+    }
 }
 
-.navigation a {
-    color: $alternate-link-color;
-    line-height: 60px;
-    font-size: 18px;
-    display: block;
-    padding-left: 128px;
-    border-bottom: 1px solid #fff;
-    @include source-sans;
-}
-
-.navigation .active {
-    background: #fff;
-    color: $light-blue-color;
-    @include source-sans-semi-bold;
+.lt-ie9 .navigation {
+    background: url(#{$images-directory}/shadow_left_nav.jpg);
 }
