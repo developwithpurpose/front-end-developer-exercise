@@ -15,6 +15,9 @@
     "grunt-contrib-uglify": "^0.6.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-html-validation": "^0.1.18",
-    "matchdep": "^0.3.0"
+    "jasmine-ajax": "^3.1.1",
+    "jquery": "~1.9.1",
+    "matchdep": "^0.3.0",
+    "normalize.css": "^3.0.3"
   }
 }
