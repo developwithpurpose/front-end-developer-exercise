@@ -6,6 +6,34 @@ module.exports = function( grunt ) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON( "package.json" ),
+    babel: {
+      options: {
+        sourceMap: true
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'app/assets/javascripts',
+          src: ['**/*.js'],
+          dest: 'app/assets/build/babel',
+          ext:'.js'
+        }]
+      }
+    },
+    browserify: {
+      options: {
+        sourceMap: true
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'app/assets/build/babel',
+          src: ['**/*.js'],
+          dest: 'app/assets/build/browserify',
+          ext:'.js'
+        }]
+      }
+    },
     jshint: {
       all: [ "Gruntfile.js", "app/assets/javascripts/**/*.js", "spec/*.js" ],
       options: {
@@ -16,7 +44,7 @@ module.exports = function( grunt ) {
       build: {
         files: [{
           expand: true,
-          cwd: "app/assets/javascripts",
+          cwd: "app/assets/build/browserify",
           src: "**/*.js",
           dest: "dist/js",
           reset: true
@@ -102,5 +130,5 @@ module.exports = function( grunt ) {
 
   grunt.registerTask( "default", ["connect"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
-  grunt.registerTask( "build", ["copy", "uglify", "sass"] );
+  grunt.registerTask( "build", ["babel", "browserify",  "uglify", "sass", "copy"]);
 };
