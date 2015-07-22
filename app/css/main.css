@@ -14,8 +14,47 @@ body {
   width: 100% !important;
 }
 
+.content-container {
+  margin: 0px auto;
+  min-height: 600px;
+}
+
 #content {
   margin-top: 60px;
+  height: 100%;
+  margin: auto;
+  color: #333;
+  margin-top: 60px;
+}
+
+#content > ul
+{
+    float: left;
+    width: 30%;
+    display: block;
+    position: relative;
+    border-right-width: 0;
+    margin: auto 0 !important;
+    padding:0;
+}
+
+#content >ul >li
+{
+  width: 100%;
+  list-style-type: none;
+  display: block;
+  font-size: 1.11em;
+  position: relative;
+  border-right-width: 0;
+  border-bottom: 0.5px solid #DDD;
+  margin: auto;
+  background: whiteSmoke; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #f2f2f2 100%); /* IE10+ */
+  background: linear-gradient(top, #ffffff 0%, #f2f2f2 100%); /* W3C */
 }
 
 .nav-sidebar {
