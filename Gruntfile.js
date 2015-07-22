@@ -53,7 +53,8 @@ module.exports = function( grunt ) {
           options: {
             specs: "spec/**/*.spec.js",
             vendor: [
-              "vendor/**/*.js"
+              "vendor/**/*.js",
+              "node_modules/jasmine-ajax/lib/*.js"
             ],
             template: "spec/index.tmpl"
           }
@@ -63,8 +64,10 @@ module.exports = function( grunt ) {
         server: {
           options: {
             port: 9001,
-            livereload: true,
-            keepalive: true
+            livereload: false,
+            keepalive: true,
+            hostname: "localhost",
+            open: "http://localhost:9001/app/"
           }
         }
       },
@@ -78,6 +81,10 @@ module.exports = function( grunt ) {
     }
   });
 
-  grunt.registerTask( "default", ["connect"] );
+  grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks("grunt-contrib-csslint");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
+
+  grunt.registerTask( "default", ["connect", "uglify"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
 };
