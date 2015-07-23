@@ -132,10 +132,23 @@ module.exports = function( grunt ) {
         cwd: 'public/',
         src: '**'
       }
+    },
+    'string-replace': {
+      dev: {
+        src: 'dist/**/*.html',
+        dest: 'dist/',
+        options: {
+          replacements: [{
+            pattern: 'app.min.js',
+            replacement: 'app.js'
+          }]
+        }
+      }
     }
   });
 
   grunt.registerTask( 'default', ['connect'] );
   grunt.registerTask( 'lint', ['jshint', 'csslint'] );
   grunt.registerTask( 'build', ['babel', 'browserify',  'uglify', 'sass', 'copy']);
+  grunt.registerTask( 'builddev', ['babel', 'browserify',  'uglify', 'sass', 'copy', 'string-replace:dev']);
 };
