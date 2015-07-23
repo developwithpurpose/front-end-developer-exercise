@@ -1,5 +1,12 @@
 $ltBlue: #36abe1;
 $darkGray: #65686f;
+$grayNav1: #ebeced;
+$grayNav2: #d1d5d6;
+
+@import "partials/header";
+@import "partials/navigation";
+@import "partials/content";
+@import "partials/animation";
 
 body {
   background-color: #bbbfc2;
@@ -11,169 +18,7 @@ body {
   margin: auto;
 }
 
-.banner {
-  position: relative;
-  width: 100%;
-  margin-bottom: 60px;
-}
-
-.title {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 32px;
-  color: #fff;
-  position: absolute;
-  top: 50px;
-  right: 70px;
-  max-width: 500px;
-  text-align: right;
-  padding-right: 10%;
-
-  .tagline {
-    font-weight: 700;
-    line-height: 48px;
-    font-size: 50px;
-    margin-top: 15px;
-  }
-}
-
-ul.steps {
-  background: #fff;
-  width: 300px;
-  float: left;
-  margin-right: 70px;
-  padding-left: 0;
-  list-style-type: none;
-  font-family: "Source Sans Pro";
-  font-weight: 400;
-  font-size: 18px;
-  color: #9ba0a4;
-  line-height: 60px;
-  
-  li {
-    $grayLeft: #ebeced;
-    $grayRight: #d1d5d6;
-    padding-left: 100px;    
-    margin-bottom: 1px;
-    background: -webkit-linear-gradient(right, $grayLeft 95%, $grayRight); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, $grayLeft 95%, $grayRight); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, $grayLeft 95%, $grayRight); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, $grayLeft 95%, $grayRight); /* Standard syntax */
-  }
-
-  li:last-child {
-    padding: 0 0 169px 0;  
-  }
-  
-  .active {
-    font-weight: 600;
-    color: $ltBlue;
-    background: #fff;
-    transition: .3s;
-
-    .spr1 { background-position: 0 -175px; }
-    .spr2 { background-position: 0 -200px; }
-    .spr3 { background-position: 0 -225px; }
-    .spr4 { background-position: 0 -250px; }
-    .spr5 { background-position: 0 -275px; }
-    .spr6 { background-position: 0 -300px; }
-    .spr7 { background-position: 0 -325px; }
-  }
-}
-
-.content {
-  font-family: "Source Sans Pro";
-  line-height: 20px;  
-  margin: 15px 70px 0 0;
-  
-  .heading {
-    font-weight: 600;
-    font-size: 30px;
-    color: $ltBlue;
-    padding-top: 20px;
-    margin: 0 0 0 0;
-  }
-
-  .subheading {
-    font-weight: 300;
-    font-size: 18px;
-    color: #5c6366;
-    margin: 0 0 0 0;
-    padding-top: 5px;
-  }
-
-  header {
-    margin-bottom: 24px;
-  }
-
-  p {
-    font-family: "Helvetica";
-    font-size: 13px;
-    color: $darkGray;
-    line-height: 18px;
-  }
-
-  .social {
-    font-weight: 600;
-    margin-top: 40px;
-    height: 100%;
-    color: $darkGray;
-
-    .name {
-      color: #6fbee7;
-    }
-  }
-}
-
-.stepLogo {
-  background-image: url("/build/images/assets/images/icons/sprites/icons_large.png");
-  background-repeat: no-repeat;
-  height: 64px;
-  width: 79px;
-  float: left;
-  margin-right: 10px;
-}
-
-.sprite {
-  background-image: url("/build/images/assets/images/icons/sprites/icons_small.png");
-  background-repeat: no-repeat;
-  height: 25px;
-  width: 30px;
-  float: right;
-  clear: left;
-  margin-right: 30px;
-  margin-top: 15px;
-}
-.stepLogo1 { background-position: 0 -455px; }
-.stepLogo2 { background-position: 0 -510px; }
-.stepLogo3 { background-position: 0 -575px; }
-.stepLogo4 { background-position: 0 -645px; }
-.stepLogo5 { background-position: 0 -712px; }
-.stepLogo6 { background-position: 0 -778px; }
-.stepLogo7 { background-position: 0 -842px; }
-
-.spr1 { background-position: 0 0; }
-.spr2 { background-position: 0 -25px; }
-.spr3 { background-position: 0 -50px; }
-.spr4 { background-position: 0 -75px; }
-.spr5 { background-position: 0 -100px; }
-.spr6 { background-position: 0 -125px; }
-.spr7 { background-position: 0 -150px; }
-
 .hidden {
   display: none;
-}
-
-.step1, .step2, .step3, .step4, .step5, .step6, .step7 {
-  animation: fade 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    margin-bottom: 1;
-  }
 }
 

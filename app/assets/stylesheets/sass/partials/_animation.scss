@@ -1,0 +1,13 @@
+.step1, .step2, .step3, .step4, .step5, .step6, .step7 {
+  animation: fade 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 1;
+  }
+}
+

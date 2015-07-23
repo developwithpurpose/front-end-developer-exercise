@@ -1,0 +1,28 @@
+.banner {
+  position: relative;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+//text in title
+.title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: #fff;
+  position: absolute;
+  top: 50px;
+  right: 70px;
+  max-width: 500px;
+  text-align: right;
+  padding-right: 10%;
+
+  .tagline {
+    font-weight: 700;
+    line-height: 48px;
+    font-size: 50px;
+    margin-top: 15px;
+  }
+}
+
+
