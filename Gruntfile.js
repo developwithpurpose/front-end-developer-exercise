@@ -6,10 +6,6 @@ module.exports = function( grunt ) {
 
   grunt.initConfig({
       pkg: grunt.file.readJSON( "package.json" ),
-      autoprefixer: {
-        browsers: ["last 2 versions', 'ie 8', 'ie 9"],
-        src: "app/assets/stylesheets/css/main.css"
-      },
       cssmin: {
         target: {
           files: {
@@ -36,6 +32,20 @@ module.exports = function( grunt ) {
           jshintrc: ".jshintrc"
         }
       },
+      postcss: {
+            options: {
+                map: true,
+                processors: [
+                    require('autoprefixer-core')({
+                        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+                    })
+                ]
+            },
+            dist: {
+                src: 'app/assets/stylesheets/css/main.css',
+                dest: 'build/stylesheets/main.css'
+            }
+       },
       uglify: {
         build: {
           files: [{
@@ -141,7 +151,7 @@ module.exports = function( grunt ) {
   grunt.registerTask( "build", [
     "clean",
     "sass:prod",
-    "autoprefixer",
+    "postcss",
     "uglify",
     "cssmin",
     "imagemin"
@@ -149,7 +159,7 @@ module.exports = function( grunt ) {
   grunt.registerTask( "build-dev", [
     "clean",
     "sass:dev",
-    "autoprefixer"
+    "postcss"
   ]);
   grunt.registerTask( "serve", [
     "build-dev",

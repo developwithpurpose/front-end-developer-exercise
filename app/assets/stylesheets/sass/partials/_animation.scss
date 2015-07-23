@@ -1,5 +1,9 @@
 .step1, .step2, .step3, .step4, .step5, .step6, .step7 {
-  animation: fade 1.5s;
+  -webkit-animation: fade 1s;
+  -moz-animation: fade 1s;
+  -o-animation: fade 1s;
+  animation: fade 1s;
+
 }
 
 @keyframes fade {
@@ -10,4 +14,34 @@
     margin-bottom: 1;
   }
 }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 1;
+  }
+}
+
+@-moz-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 1;
+  }
+}
+
+@-o-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 1;
+  }
+}
+
+
+
 
