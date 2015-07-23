@@ -8,7 +8,8 @@ module.exports = function( grunt ) {
     pkg: grunt.file.readJSON( 'package.json' ),
     babel: {
       options: {
-        sourceMap: true
+        sourceMap: true,
+        loose: 'all'
       },
       dist: {
         files: [{
@@ -29,7 +30,7 @@ module.exports = function( grunt ) {
           expand: true,
           cwd: 'temp/babel/js',
           src: ['**/*.js'],
-          dest: 'temp/browserify/js',
+          dest: 'dist/js',
           ext:'.js'
         }]
       }
@@ -41,9 +42,19 @@ module.exports = function( grunt ) {
       }
     },
     uglify: {
+      options: {
+        preserveComments: false,
+        compress : false,
+        mangle : false,
+        beautify : {
+            beautify: false,
+            ascii_only: true,
+            quote_keys: true
+        }
+      },
       build: {
         files: {
-          'dist/js/app.min.js': ['temp/browserify/js/app.js']
+          'dist/js/app.min.js': ['dist/js/app.js']
         }
       }
     },
@@ -91,7 +102,7 @@ module.exports = function( grunt ) {
       server: {
         options: {
           port: 9001,
-          livereload: true,
+          livereload: false,
           keepalive: true
         }
       }
