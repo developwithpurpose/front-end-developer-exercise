@@ -19,6 +19,13 @@ module.exports = function( grunt ) {
           dest: 'temp/babel/js',
           ext:'.js'
         }]
+      },
+      spec: {
+        files: [{
+          expand: true,
+          src: ['spec/**/*.spec.js', 'app/assets/javascripts/**/*.js'],
+          dest: 'temp/babel/spec'
+        }]
       }
     },
     browserify: {
@@ -26,13 +33,12 @@ module.exports = function( grunt ) {
         sourceMap: true
       },
       dist: {
-        files: [{
-          expand: true,
-          cwd: 'temp/babel/js',
-          src: ['**/*.js'],
-          dest: 'dist/js',
-          ext:'.js'
-        }]
+        src: ['temp/babel/js/**/*.js'],
+        dest: 'dist/js/app.js'
+      },
+      spec: {
+        src: ['temp/babel/spec/**/*.js'],
+        dest: 'dist/js/tests.js',
       }
     },
     jshint: {
@@ -88,9 +94,8 @@ module.exports = function( grunt ) {
     },
     jasmine: {
       pivotal: {
-        src: 'app/assets/javascripts/build/**/*.js',
         options: {
-          specs: 'spec/**/*.spec.js',
+          specs: 'dist/js/tests.js',
           vendor: [
             'vendor/**/*.js'
           ],
