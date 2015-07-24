@@ -27,7 +27,7 @@ module.exports = function( grunt ) {
         }
       },
       jshint: {
-        all: [ "Gruntfile.js", "app/assets/javascripts/**/*.js", "spec/*.js" ],
+        all: [ "Gruntfile.js", "app/assets/javascripts/*.js", "spec/*.js" ],
         options: {
           jshintrc: ".jshintrc"
         }

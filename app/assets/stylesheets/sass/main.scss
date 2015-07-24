@@ -4,22 +4,10 @@ $grayNav1: #ebeced;
 $grayNav2: #d1d5d6;
 
 @import "bourbon/bourbon";
+@import "partials/base";
 @import "partials/header";
 @import "partials/navigation";
 @import "partials/content";
 @import "partials/animation";
 
-body {
-  background-color: #bbbfc2;
-}
-.container {
-  background-color: #fff;
-  width: 80%;
-  height: 1000px;
-  margin: auto;
-}
-
-.hidden {
-  display: none;
-}
 

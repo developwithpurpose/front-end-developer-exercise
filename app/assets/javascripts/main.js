@@ -1,6 +1,6 @@
 ;(function(){
   "use strict";
-  
+
   var $tab1 = $("#tab1");
   $(document).ready(function(){
     $tab1.addClass("active");
@@ -13,12 +13,14 @@
       $step4 = $(".step4"), $step5 = $(".step5"), $step6 = $(".step6"), 
       $step7 = $(".step7");
 
+  //click event for all li's
   var li = $(".steps li[id]");
   li.on("click", function(){
     var id = $(this).attr("id");
     handler(id);
   });
 
+  //determines which li
   function handler(id) {
     if (id === "tab1") {
       activate($tab1, $step1);
@@ -37,6 +39,7 @@
     }
   }
 
+  //li adds 'active' class, and displays correct div
   function activate(tab, step) {
     tab.addClass("active");
     tab.siblings("li").removeClass("active");
@@ -64,6 +67,7 @@
     return 0;
   } 
 
+  //gets friends
   function getFriends() {
     $.ajax({
       url: "assets/javascripts/baby-steps.json",
@@ -95,6 +99,7 @@
           return this.babyStep === 7;
         }); 
 
+        //appends friends to DOM
         function checkAndAppend(arr, step) {
           var string = " are also in Baby Step ";
           var pAndClass = "<p class='social'>";
@@ -123,8 +128,4 @@
       }       
   });
   }
-  
-})();
-
-
-          
+})();        
