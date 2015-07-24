@@ -1,18 +1,18 @@
 .page-header {
-    background: url(#{$images-directory}/header.jpg) 0 0 no-repeat;
+    background: url(#{$images-directory}header.jpg) 0 0 no-repeat;
     height: 276px;
     color: $light-text-color;
     margin-bottom: 60px;
-}
 
-.page-header .main-heading {
-    margin: 50px 70px 0 0;
-    text-align: right;
-    @include open-sans-light;
-}
+    .main-heading {
+        margin: 50px 70px 0 0;
+        text-align: right;
+        @include open-sans-light;
 
-.page-header .main-heading .bold-text {
-    margin-top: 15px;
-    line-height: 48px;
-    @include open-sans-bold;
+        .bold-text {
+            margin-top: 15px;
+            line-height: 48px;
+            @include open-sans-bold;
+        }
+    }
 }

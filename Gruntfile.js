@@ -120,6 +120,13 @@ module.exports = function( grunt ) {
         src: [ 'app/assets/stylesheets/**/*.css' ]
       }
     },
+    cssmin: {
+      dist: {
+        files: {
+          'dist/css/main.min.css': ['dist/css/main.css']
+        }
+      }
+    },
     sass: {
       options: {
         sourceMap: false,
@@ -143,10 +150,16 @@ module.exports = function( grunt ) {
         src: 'dist/**/*.html',
         dest: 'dist/',
         options: {
-          replacements: [{
-            pattern: 'app.min.js',
-            replacement: 'app.js'
-          }]
+          replacements: [
+            {
+              pattern: 'app.min.js',
+              replacement: 'app.js'
+            },
+            {
+              pattern: 'main.min.css',
+              replacement: 'main.css'
+            }
+          ]
         }
       }
     }
@@ -154,6 +167,6 @@ module.exports = function( grunt ) {
 
   grunt.registerTask( 'default', ['connect'] );
   grunt.registerTask( 'lint', ['jshint', 'csslint'] );
-  grunt.registerTask( 'build', ['babel', 'browserify',  'uglify', 'sass', 'copy']);
+  grunt.registerTask( 'build', ['babel', 'browserify',  'uglify', 'sass', 'copy', 'cssmin']);
   grunt.registerTask( 'builddev', ['babel', 'browserify',  'uglify', 'sass', 'copy', 'string-replace:dev']);
 };
