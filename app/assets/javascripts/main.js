@@ -5,7 +5,7 @@ $(function() {
       steps.removeClass("step");
       $(this).addClass("step");
 
-      $("#content>div.step-content").hide().eq(steps.index($(this))).show("fast");
+      $("#content>div.step-content").hide().eq(steps.index($(this))).show("slow");
 
       window.location.hash = $(this).attr("tab");
     });

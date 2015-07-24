@@ -20,7 +20,6 @@ body {
 }
 
 #content {
-  margin-top: 60px;
   height: 100%;
   margin: auto;
   color: #333;
@@ -34,8 +33,9 @@ body {
     display: block;
     position: relative;
     border-right-width: 0;
-    margin: auto 0 !important;
+    /*margin: auto 0 !important;*/
     padding:0;
+    margin-right:70px;
 }
 
 #content >ul >li
@@ -82,6 +82,16 @@ body {
   display: inline;
 }
 
+.step-content {
+  display: none;
+}
+
+.step-content {
+  font-family: Helvetica, 'sans serif';
+  font-size: 13px;
+  color: #65686F;
+  padding-top: 5px;
+}
 
 .nav-sidebar {
   max-width: 30%;
