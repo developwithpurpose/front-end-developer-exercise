@@ -13,12 +13,9 @@ ul.steps {
   line-height: 60px;
   
   li {
+    @include linear-gradient(to right, $grayNav1 95%, $grayNav2 5%, $fallback: $grayNav1) ;    
     padding-left: 100px;    
     margin-bottom: 1px;
-    background: -webkit-linear-gradient(right, $grayNav1 95%, $grayNav2); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, $grayNav1 95%, $grayNav2); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, $grayNav1 95%, $grayNav2); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, $grayNav1 95%, $grayNav2); /* Standard syntax */
   }
 
   li:last-child {

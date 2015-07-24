@@ -128,7 +128,8 @@ module.exports = function( grunt ) {
     sass: {
       prod: {
         options: {
-          outputStyle: "compressed"
+          outputStyle: "compressed",
+          loadPath: require("node-bourbon").includePaths
         }, 
         files: {
           "app/assets/stylesheets/css/main.css" : "app/assets/stylesheets/sass/main.scss"
