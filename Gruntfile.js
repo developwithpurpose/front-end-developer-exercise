@@ -41,10 +41,84 @@ module.exports = function( grunt ) {
         dest: 'dist/js/tests.js',
       }
     },
+    clean: {
+      validation: [ 'validation-*.json' ]
+    },
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          livereload: false,
+          keepalive: true
+        }
+      }
+    },
+    copy: {
+      files: {
+        expand: true,
+        dest: 'dist',
+        cwd: 'public/',
+        src: '**'
+      }
+    },
+    csslint: {
+      options: {
+        csslintrc: '.csslintrc'
+      },
+      strict: {
+        src: [ 'app/assets/stylesheets/**/*.css' ]
+      }
+    },
+    cssmin: {
+      dist: {
+        files: {
+          'dist/css/main.min.css': ['dist/css/main.css']
+        }
+      }
+    },
+    jasmine: {
+      pivotal: {
+        options: {
+          specs: 'dist/js/tests.js',
+          vendor: [
+            'vendor/**/*.js'
+          ],
+          template: 'spec/index.tmpl'
+        }
+      }
+    },
     jshint: {
       all: [ 'Gruntfile.js', 'app/assets/javascripts/**/*.js', 'spec/*.js' ],
       options: {
         jshintrc: '.jshintrc'
+      }
+    },
+    sass: {
+      options: {
+        sourceMap: false,
+      },
+      dist: {
+        files: {
+          'dist/css/main.css': 'app/assets/stylesheets/main.scss'
+        }
+      }
+    },
+    'string-replace': {
+      dev: {
+        src: 'dist/**/*.html',
+        dest: 'dist/',
+        options: {
+          replacements: [
+            {
+              pattern: 'app.min.js',
+              replacement: 'app.js'
+            },
+            {
+              pattern: 'main.min.css',
+              replacement: 'main.css'
+            }
+          ]
+        }
       }
     },
     uglify: {
@@ -72,9 +146,6 @@ module.exports = function( grunt ) {
         src: [ 'public/**/*.html' ]
       }
     },
-    clean: {
-      validation: [ 'validation-*.json' ]
-    },
     watch: {
       test: {
         files: [ '<%= jshint.all %>' ],
@@ -90,77 +161,6 @@ module.exports = function( grunt ) {
       sass: {
         files: [ 'app/assets/stylesheets/**/*.scss' ],
         tasks: [ 'sass' ]
-      }
-    },
-    jasmine: {
-      pivotal: {
-        options: {
-          specs: 'dist/js/tests.js',
-          vendor: [
-            'vendor/**/*.js'
-          ],
-          template: 'spec/index.tmpl'
-        }
-      }
-    },
-    connect: {
-      server: {
-        options: {
-          port: 9001,
-          livereload: false,
-          keepalive: true
-        }
-      }
-    },
-    csslint: {
-      options: {
-        csslintrc: '.csslintrc'
-      },
-      strict: {
-        src: [ 'app/assets/stylesheets/**/*.css' ]
-      }
-    },
-    cssmin: {
-      dist: {
-        files: {
-          'dist/css/main.min.css': ['dist/css/main.css']
-        }
-      }
-    },
-    sass: {
-      options: {
-        sourceMap: false,
-      },
-      dist: {
-        files: {
-          'dist/css/main.css': 'app/assets/stylesheets/main.scss'
-        }
-      }
-    },
-    copy: {
-      files: {
-        expand: true,
-        dest: 'dist',
-        cwd: 'public/',
-        src: '**'
-      }
-    },
-    'string-replace': {
-      dev: {
-        src: 'dist/**/*.html',
-        dest: 'dist/',
-        options: {
-          replacements: [
-            {
-              pattern: 'app.min.js',
-              replacement: 'app.js'
-            },
-            {
-              pattern: 'main.min.css',
-              replacement: 'main.css'
-            }
-          ]
-        }
       }
     }
   });
