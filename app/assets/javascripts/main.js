@@ -8,25 +8,24 @@ $(function() {
       $("#content>div.step-content").hide().eq(steps.index($(this))).show("slow");
 
       window.location.hash = $(this).attr("tab");
+
+    });
+  });
+  $(document).ready( function () {
+
+    $('button').click( function () {
+      $.ajax({
+        url: "./assets/javascripts/baby-steps.json",
+        dataType: "text",
+        success: function(data) {
+          var json = $.parseJSON(data);
+          console.log(json.friends);
+          console.log(json.friends[0].babyStep);
+
+          $('#result').html(json.friends[0]);
+        }
+      })
     });
   });
 
-  if (location.hash) {
-        showTab(location.hash);
-    }
-    else {
-        showTab("tab1");
-    }
-
-    function showTab(tab) {
-        $("#content ul li:[tab*=" + tab + "]").click();
-    }
-
-    // Bind the event hashchange, using jquery-hashchange-plugin
-    $(window).hashchange(function() {
-        showTab(location.hash.replace("#", ""));
-    });
-
-    // Trigger the event hashchange on page load, using jquery-hashchange-plugin
-    $(window).hashchange();
 });
