@@ -42,7 +42,8 @@ module.exports = function( grunt ) {
       }
     },
     clean: {
-      validation: [ 'validation-*.json' ]
+      validation: [ 'validation-*.json' ],
+      build: [ 'dist', 'temp' ]
     },
     connect: {
       server: {
@@ -167,6 +168,6 @@ module.exports = function( grunt ) {
 
   grunt.registerTask( 'default', ['connect'] );
   grunt.registerTask( 'lint', ['jshint', 'csslint'] );
-  grunt.registerTask( 'build', ['babel', 'browserify',  'uglify', 'sass', 'copy', 'cssmin']);
-  grunt.registerTask( 'builddev', ['babel', 'browserify',  'uglify', 'sass', 'copy', 'string-replace:dev']);
+  grunt.registerTask( 'build', ['clean', 'babel', 'browserify',  'uglify', 'sass', 'copy', 'cssmin']);
+  grunt.registerTask( 'builddev', ['clean', 'babel', 'browserify',  'uglify', 'sass', 'copy', 'string-replace:dev']);
 };
