@@ -368,11 +368,62 @@
             for (var i = 0; i < response.friends.length; i++) {
               friendDictionary[response.friends[i].babyStep].push(response.friends[i]);//Push friend into new array.
             }
+            for (var i = 1; i <= 7; i++) {
+              if (friendDictionary[i].length > 0) {
+                friendDictionary[i] = alphabetizeFriends(friendDictionary[i]);
+              }
+            }
             renderFriends(friendDictionary);
           }
         }
       }
       xhrObj.send();
+    }
+    //As according to the ReadMe it seems friends should be alphabetized by last name.
+    //This will take in the array of friends and return an array of sorted friends.
+    //This method will be using merge sort
+    function alphabetizeFriends(friendsArray) {
+      if (friendsArray.length === 1) {
+        return friendsArray;
+      }
+      var left = [], right = [];
+      var middle = Math.floor(friendsArray.length / 2);
+      for (var i = 0; i < middle; i++) {
+        left.push(friendsArray[i]);
+      }
+      for (var i = middle; i < friendsArray.length; i++) {
+        right.push(friendsArray[i]);
+      }
+      left = alphabetizeFriends(left);
+      right = alphabetizeFriends(right);
+      return alphabeticalMerge(left, right);
+    }
+    //The actual merge, this should not be called directly from outside of alphabetizeFriends
+    function alphabeticalMerge(left, right) {
+      var returnValue = [];
+      var leftIterator = 0;
+      var rightIterator = 0;
+      while (leftIterator < left.length && rightIterator < right.length) {
+        if (left[leftIterator].lastName[0] <= right[rightIterator].lastName[0]) {
+          returnValue.push(left[leftIterator]);
+          leftIterator++;
+        } else {
+          returnValue.push(right[rightIterator]);
+          rightIterator++;
+        }
+      }
+      if (leftIterator < left.length) {
+        while (leftIterator < left.length) {
+          returnValue.push(left[leftIterator]);
+          leftIterator++;
+        }
+      } else if (rightIterator < right.length) {
+        while(rightIterator < right.length) {
+          returnValue.push(right[rightIterator]);
+          rightIterator++;
+        }
+      }
+      return returnValue;
     }
     //Called via loadSocialInfo and it expects there to be a dictionary with arrays as values for the different baby step numbers as keys.
     function renderFriends(friendDictionary) {
