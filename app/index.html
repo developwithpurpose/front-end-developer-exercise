@@ -159,6 +159,9 @@
       margin-bottom:40px;
     }
     @media (max-device-width:800px) {
+      html {
+        background:white;
+      }
       body {
         width:100%;
         height:100%;
@@ -175,13 +178,17 @@
       #main-content {
         margin-top:10px;
       }
+      #content-wrapper {
+        /*overflow:scroll;
+        -webkit-overflow-scrolling:touch; Really wanted to add this but could break landscape mode on iPhones */
+        height:100%;
+      }
       #nav {
         display:none;
       }
       #baby-step-content {
         width:100%;
-        overflow:scroll;
-        -webkit-overflow-scrolling:touch;
+        height:inherit;
       }
       .baby-step-header {
         text-align:center;
@@ -189,13 +196,14 @@
       .baby-step-wrapper {
         margin-left:10px;
         margin-right:10px;
-        margin-bottom:100px;
+        margin-bottom:50px;
+        height:inherit;
       }
     }
   </style>
 </head>
 <body>
-  <div id='#content-wrapper'>
+  <div id='content-wrapper'>
     <div id="top-image-area">
       <img id="header-image" src="/app/assets/images/header.jpg" />
       <div id='header-text-wrapper'>
