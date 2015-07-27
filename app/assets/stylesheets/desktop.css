@@ -1,0 +1,156 @@
+@font-face {
+  font-family:"Open Sans Light";
+  src:url("/app/assets/fonts/OpenSansLight.eot?iefix") format("embedded-opentype"), url("/app/assets/fonts/OpenSansLight.woff2") format("woff");
+}
+@font-face {
+  font-family:"Open Sans Bold";
+  src:url("/app/assets/fonts/OpenSansBold.eot?iefix") format("embedded-opentype"), url("/app/assets/fonts/OpenSansBold.woff2") format("woff");
+}
+@font-face {
+  font-family:"Source Sans Pro Light";
+  src:url("/app/assets/fonts/SourceSansProLight.eot?iefix") format("embedded-opentype"), url("/app/assets/fonts/SourceSansProLight.woff2") format("woff");
+}
+@font-face {
+  font-family:"Source Sans Pro Regular";
+  src:url("/app/assets/fonts/SourceSansProRegular.eot?iefix") format("embedded-opentype"), url("/app/assets/fonts/SourceSansProRegular.woff2") format("woff");
+}
+@font-face {
+  font-family:"Source Sans Pro Semi-Bold";
+  src:url("/app/assets/fonts/SourceSansProSemiBold.eot?iefix") format("embedded-opentype"), url("/app/assets/fonts/SourceSansProSemiBold.woff2") format("woff");
+}
+html {
+  background:#bbbfc2;
+}
+body {
+  margin:auto;
+  width:980px;
+  height:800px;
+  background:white;
+}
+ol {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  color:#9ba0a4;
+  line-height:60px;
+  font-size:18px;
+  text-align: right;
+  font-family:"Source Sans Pro Regular"
+}
+ol li {
+  border-bottom:solid 1px white;
+  cursor:pointer;
+}
+ol img {
+  display:inline-block;
+  width:30px;
+  vertical-align: middle;
+  padding-left:24px;
+  padding-right:24px;
+}
+h2 {
+  margin:0;
+  -webkit-margin-after:0;
+  -webkit-margin-before:0;
+  font-size:30px;
+  line-height:20px;
+  font-family:"Source Sans Pro Semi-Bold";
+  color:#36abe1;
+  padding-bottom:10px;
+  vertical-align:top;
+}
+h3 {
+  margin:0;
+  -webkit-margin-after:0;
+  -webkit-margin-before:0;
+  color:#5c6366;
+  font-size:18px;
+  line-height: 20px;
+  vertical-align: top;
+  font-family:"Source Sans Pro Light";
+}
+p {
+  color:#65686f;
+  font-size:13px;
+  line-height: 18px;
+  font-family: Helvetica;
+}
+
+.top-image-area {
+  position:relative;
+}
+.header-image {
+  width:100%;
+}
+.header-text-wrapper {
+  position:absolute;
+  top:0;
+  right:0;
+  margin-top:5%;
+  margin-right:6%;
+}
+.header-text-wrapper span {
+  color:white;
+  display:block;
+  text-align:right;
+  line-height:48px;
+}
+.real-life {
+  font-size:32px;
+  font-family:"Open Sans Light"
+}
+.america-most {
+  font-size:50px;
+  max-width:445px;
+  float:right;
+  font-family:"Open Sans Bold"
+}
+.main-content {
+  margin-top:60px;
+}
+.nav {
+  position:relative;
+  width:30%;
+  background-color:#ebeced;
+  padding-bottom:33px;
+  display: inline-block;
+  box-shadow:inset -7px 0 9px -7px rgba(0,0,0,0.4);/*I attempted to create an image so IE8 could have this but the image was too off color */
+}
+.baby-step-content {
+  display: inline-block;
+  vertical-align: top;
+  width:69%;
+  height:465px;
+  overflow:hidden;
+}
+.baby-step-wrapper {
+  margin-left:70px;
+  margin-right:70px;
+  height:100%;
+}
+.baby-step-image {
+  display: inline-block;
+}
+.header-text-section {
+  display:inline-block;
+  /*vertical-align:top;
+  padding-top:15px;*/
+  padding-left:10px;
+}
+.nav-inset {
+  position: absolute;
+  right:0;
+}
+.active {
+  background:white;
+}
+.active span {
+  color:#36abe1;
+}
+.friend {
+  color:#6fbee7;
+}
+.final-description-paragraph {
+  -webkit-margin-after:0;
+  margin-bottom:40px;
+}

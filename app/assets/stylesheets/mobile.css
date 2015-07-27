@@ -1,0 +1,40 @@
+  html {
+    background:white;
+  }
+  body {
+    width:100%;
+    height:100%;
+  }
+  .real-life {
+    font-size:10px;
+    line-height:10px !important;
+  }
+  .america-most {
+    font-size:15px;
+    width:50%;
+    line-height:15px !important;
+  }
+  .main-content {
+    margin-top:10px;
+  }
+  .content-wrapper {
+    /*overflow:scroll;
+    -webkit-overflow-scrolling:touch; Really wanted to add this but could break landscape mode on iPhones */
+    height:100%;
+  }
+  .nav {
+    display:none;
+  }
+  .baby-step-content {
+    width:100%;
+    height:inherit;
+  }
+  .baby-step-header {
+    text-align:center;
+  }
+  .baby-step-wrapper {
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:50px;
+    height:inherit;
+  }
