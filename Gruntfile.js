@@ -4,6 +4,8 @@ module.exports = function( grunt ) {
   require( 'matchdep' ).filterDev( 'grunt-*' )
     .forEach( grunt.loadNpmTasks );
 
+  grunt.loadNpmTasks('grunt-spritesmith');
+
   grunt.initConfig({
     pkg: grunt.file.readJSON( 'package.json' ),
     babel: {
@@ -102,6 +104,14 @@ module.exports = function( grunt ) {
         files: {
           'dist/css/main.css': 'app/assets/stylesheets/main.scss'
         }
+      }
+    },
+    sprite: {
+      all: {
+        src: 'app/assets/images/icons/individual/*.png',
+        dest: 'public/img/icon-spritesheet.png',
+        destCss: 'app/assets/stylesheets/_icon-sprites.scss',
+        imgPath: '../img/icon-spritesheet.png'
       }
     },
     'string-replace': {
