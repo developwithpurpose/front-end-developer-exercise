@@ -14,13 +14,9 @@ module.exports = function( grunt ) {
       },
       uglify: {
         build: {
-          files: [{
-            expand: true,
-            cwd: "app/assets/javascripts",
-            src: "**/*.js",
-            dest: "build/javascripts",
-            reset: true
-          }]
+          files: {
+            "build/javascripts/main.js": ["app/assets/javascripts/social.js", "app/assets/javascripts/Utils.js", "app/assets/javascripts/main.js"]
+          }
         }
       },
       validation: {
@@ -78,6 +74,6 @@ module.exports = function( grunt ) {
     }
   });
 
-  grunt.registerTask( "default", ["connect"] );
+  grunt.registerTask( "default", ["jshint", "csslint", "validation", "uglify", "connect"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
 };
