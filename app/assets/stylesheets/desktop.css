@@ -1,22 +1,22 @@
 @font-face {
   font-family:"Open Sans Light";
-  src:url("/app/assets/fonts/OpenSansLight.woff2") format("woff");
+  src:url("/app/assets/fonts/OpenSansLight.eot?iefix") format("embedded-opentype"), url("/app/assets/fonts/OpenSansLight.woff2") format("woff");
 }
 @font-face {
   font-family:"Open Sans Bold";
-  src:url("/app/assets/fonts/OpenSansBold.woff2") format("woff");
+  src:url("/app/assets/fonts/OpenSansBold.eot?iefix") format("embedded-opentype"), url("/app/assets/fonts/OpenSansBold.woff2") format("woff");
 }
 @font-face {
   font-family:"Source Sans Pro Light";
-  src:url("/app/assets/fonts/SourceSansProLight.woff2") format("woff");
+  src:url("/app/assets/fonts/SourceSansProLight.eot?iefix") format("embedded-opentype"), url("/app/assets/fonts/SourceSansProLight.woff2") format("woff");
 }
 @font-face {
   font-family:"Source Sans Pro Regular";
-  src:url("/app/assets/fonts/SourceSansProRegular.woff2") format("woff");
+  src:url("/app/assets/fonts/SourceSansProRegular.eot?iefix") format("embedded-opentype"), url("/app/assets/fonts/SourceSansProRegular.woff2") format("woff");
 }
 @font-face {
   font-family:"Source Sans Pro Semi-Bold";
-  src:url("/app/assets/fonts/SourceSansProSemiBold.woff2") format("woff");
+  src:url("/app/assets/fonts/SourceSansProSemiBold.eot?iefix") format("embedded-opentype"), url("/app/assets/fonts/SourceSansProSemiBold.woff2") format("woff");
 }
 html {
   background:#bbbfc2;
@@ -49,6 +49,7 @@ ol img {
   padding-right:24px;
 }
 h2 {
+  margin:0;
   -webkit-margin-after:0;
   -webkit-margin-before:0;
   font-size:30px;
@@ -56,13 +57,16 @@ h2 {
   font-family:"Source Sans Pro Semi-Bold";
   color:#36abe1;
   padding-bottom:10px;
+  vertical-align:top;
 }
 h3 {
+  margin:0;
   -webkit-margin-after:0;
   -webkit-margin-before:0;
   color:#5c6366;
   font-size:18px;
   line-height: 20px;
+  vertical-align: top;
   font-family:"Source Sans Pro Light";
 }
 p {
@@ -101,10 +105,6 @@ p {
   float:right;
   font-family:"Open Sans Bold"
 }
-#trusted-guy {
-  font-size:50px;
-  font-family:"Open Sans Bold"
-}
 .main-content {
   margin-top:60px;
 }
@@ -133,8 +133,8 @@ p {
 }
 .header-text-section {
   display:inline-block;
-  vertical-align:top;
-  padding-top:15px;
+  /*vertical-align:top;
+  padding-top:15px;*/
   padding-left:10px;
 }
 .nav-inset {
