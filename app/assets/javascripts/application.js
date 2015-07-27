@@ -1,3 +1,5 @@
+import NavigationView from './views/navigation';
+
 export default class {
 
     start() {
@@ -7,7 +9,7 @@ export default class {
     }
 
     initNavigation() {
-
+        let navigation = new NavigationView();
     }
 
     initContent() {

@@ -84,7 +84,7 @@ module.exports = function( grunt ) {
         options: {
           specs: 'dist/js/tests.js',
           vendor: [
-            'vendor/**/*.js'
+            'public/js/vendor/**/*.js'
           ],
           template: 'spec/index.tmpl'
         }
@@ -180,4 +180,5 @@ module.exports = function( grunt ) {
   grunt.registerTask( 'lint', ['jshint', 'csslint'] );
   grunt.registerTask( 'build', ['clean', 'babel', 'browserify',  'uglify', 'sass', 'copy', 'cssmin']);
   grunt.registerTask( 'builddev', ['clean', 'babel', 'browserify',  'uglify', 'sass', 'copy', 'string-replace:dev']);
+  grunt.registerTask( 'test', ['builddev', 'jasmine']);
 };

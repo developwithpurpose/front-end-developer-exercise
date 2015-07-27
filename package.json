@@ -20,6 +20,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-html-validation": "^0.1.18",
     "grunt-sass": "^1.0.0",
+    "grunt-spritesmith": "^4.7.1",
     "grunt-string-replace": "^1.2.0",
     "matchdep": "^0.3.0"
   }
