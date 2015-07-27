@@ -18,11 +18,6 @@ module.exports = function( grunt ) {
             "build/javascripts/main.js": ["app/assets/javascripts/social.js", "app/assets/javascripts/Utils.js", "app/assets/javascripts/main.js"]
           }
 
-        },
-        options: {
-          beautify:true,
-          compress:false,
-          mangle:false
         }
       },
       validation: {
