@@ -16,4 +16,27 @@
     .content-footer {
         margin-top: 40px;
     }
+
+    $large-blue-icons: (
+        $icons-large-bs1-blue,
+        $icons-large-bs2-blue,
+        $icons-large-bs3-blue,
+        $icons-large-bs4-blue,
+        $icons-large-bs5-blue,
+        $icons-large-bs6-blue,
+        $icons-large-bs7-blue
+    );
+
+    .icon {
+        margin-right: 15px;
+        float: left;
+        position: relative;
+        margin-top: -7px;
+    }
+
+    @for $i from 1 through length($large-blue-icons) {
+        .step#{$i}-icon {
+            @include sprite( nth($large-blue-icons, $i) );
+        }
+    }
 }
