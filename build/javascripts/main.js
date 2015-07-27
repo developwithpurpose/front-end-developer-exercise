@@ -1,1 +1,173 @@
-function Social(){function a(){var a=new window.XMLHttpRequest;a.open("GET","/app/assets/javascripts/baby-steps.json"),a.onload=function(){if(200===a.status){var c=JSON.parse(a.responseText);if(c.friends){var d,e={};for(d=1;7>=d;d++)e[d]=[];for(d=0;d<c.friends.length;d++)e[c.friends[d].babyStep].push(c.friends[d]);for(d=1;7>=d;d++)e[d].length>0&&(e[d]=window.Utils.alphabetizeFriends(e[d]));b(e)}}},a.send()}function b(a){for(var b=1;7>=b;b++){var c,d=a[b],e=null,f="";if(1===d.length)e="<span class='friend'>"+d[0].firstName+" "+d[0].lastName+"</span> is also in Baby Step "+b;else if(2===d.length){for(f="",c=0;2>c;c++)f+="<span class='friend'>"+d[c].firstName+" "+d[c].lastName+"</span> and ";e=f.substring(0,f.length-4)+" are also in Baby Step "+b}else if(d.length>2){for(f="",c=0;2>c;c++)f+="<span class='friend'>"+d[c].firstName+" "+d[c].lastName+"</span>, ";f+=" and "+(d.length-2)+" other ",f+=3===d.length?"friend":"friends",e=f+" are also in Baby Step "+b}if(e){var g=document.getElementById("baby-step-"+b);g.innerHTML+="<p style='webkit-margin-before:0;'>"+e+"</p>"}}}return{loadSocialInfo:a}}function Utils(){function a(c){if(1===c.length)return c;var d,e=[],f=[],g=Math.floor(c.length/2);for(d=0;g>d;d++)e.push(c[d]);for(d=g;d<c.length;d++)f.push(c[d]);return e=a(e),f=a(f),b(e,f)}function b(a,b){for(var c=[],d=0,e=0;d<a.length&&e<b.length;)a[d].lastName[0]<=b[e].lastName[0]?(c.push(a[d]),d++):(c.push(b[e]),e++);if(d<a.length)for(;d<a.length;)c.push(a[d]),d++;else if(e<b.length)for(;e<b.length;)c.push(b[e]),e++;return c}return{alphabetizeFriends:a}}window.Social=new Social,window.Utils=new Utils,function(){function a(a,c){return function(){b(a,c)}}function b(a,b){c(document.getElementById("baby-step-1").style.marginTop,465*a*-1,0,!0);var d=document.getElementsByClassName("active")[0];d.className="",d.children[1].src=d.children[1].src.replace("_blue.png",".png"),b.className="active",b.children[1].src=b.children[1].src.replace(".png","_blue.png")}function c(a,b,d,e){if(!d&&b>a-5)return void(document.getElementById("baby-step-1").style.marginTop=b+"px");if(d&&a+5>b)return void(document.getElementById("baby-step-1").style.marginTop=b+"px");a&&"string"==typeof a&&(a=parseInt(a.replace("px",""))),e&&b>a&&(d=1);var f=-5;d&&(f=5),a+=f,document.getElementById("baby-step-1").style.marginTop=a+"px",window.setTimeout(function(){c(a,b,d)},1)}for(var d=document.querySelectorAll("li"),e=0;e<d.length;e++)d[e].onclick=a(e,d[e]);window.setTimeout(window.Social.loadSocialInfo)}();
+function Social() {
+    function loadSocialInfo() {
+        var xhrObj = new window.XMLHttpRequest();
+        if (window.ActiveXObject) {
+            try {
+                xhrObj = new window.ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                xhrObj = new window.ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+        if (xhrObj) {
+            xhrObj.open("GET", "/app/assets/javascripts/baby-steps.json");
+            xhrObj.onreadystatechange = function() {
+                if (xhrObj.readyState === 4 && xhrObj.status === 200) {
+                    var response = JSON.parse(xhrObj.responseText);
+                    if (response.friends) {
+                        var friendDictionary = {};
+                        var i;
+                        for (i = 1; i <= 7; i++) {
+                            friendDictionary[i] = [];
+                        }
+                        for (i = 0; i < response.friends.length; i++) {
+                            friendDictionary[response.friends[i].babyStep].push(response.friends[i]);
+                        }
+                        for (i = 1; i <= 7; i++) {
+                            if (friendDictionary[i].length > 0) {
+                                friendDictionary[i] = window.Utils.alphabetizeFriends(friendDictionary[i]);
+                            }
+                        }
+                        renderFriends(friendDictionary);
+                    }
+                }
+            };
+            xhrObj.send();
+        }
+    }
+    function renderFriends(friendDictionary) {
+        for (var i = 1; i <= 7; i++) {
+            var friends = friendDictionary[i];
+            var textToAdd = null;
+            var tempText = "";
+            var j;
+            if (friends.length === 1) {
+                textToAdd = "<span class='friend'>" + friends[0].firstName + " " + friends[0].lastName + "</span> is also in Baby Step " + i;
+            } else if (friends.length === 2) {
+                tempText = "";
+                for (j = 0; j < 2; j++) {
+                    tempText += "<span class='friend'>" + friends[j].firstName + " " + friends[j].lastName + "</span> and ";
+                }
+                textToAdd = tempText.substring(0, tempText.length - 4) + " are also in Baby Step " + i;
+            } else if (friends.length > 2) {
+                tempText = "";
+                for (j = 0; j < 2; j++) {
+                    tempText += "<span class='friend'>" + friends[j].firstName + " " + friends[j].lastName + "</span>, ";
+                }
+                tempText += " and " + (friends.length - 2) + " other ";
+                if (friends.length === 3) {
+                    tempText += "friend";
+                } else {
+                    tempText += "friends";
+                }
+                textToAdd = tempText + " are also in Baby Step " + i;
+            }
+            if (textToAdd) {
+                var babyStep = document.getElementById("baby-step-" + i);
+                babyStep.innerHTML += "<p style='webkit-margin-before:0;'>" + textToAdd + "</p>";
+            }
+        }
+    }
+    return {
+        loadSocialInfo: loadSocialInfo
+    };
+}
+
+window.Social = new Social();
+
+function Utils() {
+    function alphabetizeFriends(friendsArray) {
+        if (friendsArray.length === 1) {
+            return friendsArray;
+        }
+        var left = [], right = [];
+        var middle = Math.floor(friendsArray.length / 2);
+        var i;
+        for (i = 0; i < middle; i++) {
+            left.push(friendsArray[i]);
+        }
+        for (i = middle; i < friendsArray.length; i++) {
+            right.push(friendsArray[i]);
+        }
+        left = alphabetizeFriends(left);
+        right = alphabetizeFriends(right);
+        return alphabeticalMerge(left, right);
+    }
+    function alphabeticalMerge(left, right) {
+        var returnValue = [];
+        var leftIterator = 0;
+        var rightIterator = 0;
+        while (leftIterator < left.length && rightIterator < right.length) {
+            if (left[leftIterator].lastName[0] <= right[rightIterator].lastName[0]) {
+                returnValue.push(left[leftIterator]);
+                leftIterator++;
+            } else {
+                returnValue.push(right[rightIterator]);
+                rightIterator++;
+            }
+        }
+        if (leftIterator < left.length) {
+            while (leftIterator < left.length) {
+                returnValue.push(left[leftIterator]);
+                leftIterator++;
+            }
+        } else if (rightIterator < right.length) {
+            while (rightIterator < right.length) {
+                returnValue.push(right[rightIterator]);
+                rightIterator++;
+            }
+        }
+        return returnValue;
+    }
+    return {
+        alphabetizeFriends: alphabetizeFriends
+    };
+}
+
+window.Utils = new Utils();
+
+(function() {
+    var navListElement = document.querySelectorAll("li");
+    for (var i = 0; i < navListElement.length; i++) {
+        navListElement[i].onclick = makeClickHandler(i, navListElement[i]);
+    }
+    function makeClickHandler(index, elem) {
+        return function() {
+            selectStep(index, elem);
+        };
+    }
+    function selectStep(babyStep, elem) {
+        animateToStep(document.getElementById("baby-step-1").style.marginTop, babyStep * 465 * -1, 0, true);
+        var activeLi = document.querySelectorAll(".active")[0];
+        activeLi.className = "";
+        activeLi.children[1].src = activeLi.children[1].src.replace("_blue.png", ".png");
+        elem.className = "active";
+        elem.children[1].src = elem.children[1].src.replace(".png", "_blue.png");
+    }
+    function animateToStep(currentMargin, desiredMargin, direction, firstCheck) {
+        if (!direction && currentMargin - 5 < desiredMargin) {
+            document.getElementById("baby-step-1").style.marginTop = desiredMargin + "px";
+            return;
+        } else if (direction && currentMargin + 5 > desiredMargin) {
+            document.getElementById("baby-step-1").style.marginTop = desiredMargin + "px";
+            return;
+        }
+        if (currentMargin && typeof currentMargin === "string") {
+            currentMargin = parseInt(currentMargin.replace("px", ""));
+        }
+        if (firstCheck) {
+            if (currentMargin < desiredMargin) {
+                direction = 1;
+            }
+        }
+        var offset = -5;
+        if (direction) {
+            offset = 5;
+        }
+        currentMargin += offset;
+        document.getElementById("baby-step-1").style.marginTop = currentMargin + "px";
+        window.setTimeout(function() {
+            animateToStep(currentMargin, desiredMargin, direction);
+        }, 1);
+    }
+    window.setTimeout(window.Social.loadSocialInfo);
+})();

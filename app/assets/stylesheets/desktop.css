@@ -112,7 +112,7 @@ p {
   position:relative;
   width:30%;
   background-color:#ebeced;
-  padding-bottom:37px;
+  padding-bottom:33px;
   display: inline-block;
   box-shadow:inset -7px 0 9px -7px rgba(0,0,0,0.4);/*I attempted to create an image so IE8 could have this but the image was too off color */
 }

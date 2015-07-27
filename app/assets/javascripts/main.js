@@ -15,7 +15,7 @@
     //First lets kick off the animation
     animateToStep(document.getElementById("baby-step-1").style.marginTop, babyStep * 465 * -1, 0, true);
     //Then update the LI's to where they need to be.
-    var activeLi = document.getElementsByClassName("active")[0];
+    var activeLi = document.querySelectorAll(".active")[0];
     activeLi.className = "";
     activeLi.children[1].src = activeLi.children[1].src.replace("_blue.png", ".png");
     elem.className = "active";

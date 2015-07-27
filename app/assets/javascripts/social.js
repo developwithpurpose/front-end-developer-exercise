@@ -3,30 +3,39 @@ function Social() {
 
   function loadSocialInfo() {
     var xhrObj = new window.XMLHttpRequest();
-    xhrObj.open("GET", "/app/assets/javascripts/baby-steps.json");
-    xhrObj.onload = function () {
-      if (xhrObj.status === 200) {
-        var response = JSON.parse(xhrObj.responseText);
-        if (response.friends) {
-          //Create dictionary with arrays to add friends to base on baby steps.
-          var friendDictionary = {};
-          var i;
-          for (i = 1; i <= 7; i++) {
-            friendDictionary[i] = [];
-          }
-          for (i = 0; i < response.friends.length; i++) {
-            friendDictionary[response.friends[i].babyStep].push(response.friends[i]);//Push friend into new array.
-          }
-          for (i = 1; i <= 7; i++) {
-            if (friendDictionary[i].length > 0) {
-              friendDictionary[i] = window.Utils.alphabetizeFriends(friendDictionary[i]);
+    if (window.ActiveXObject) {
+         try {
+            xhrObj = new window.ActiveXObject("Msxml2.XMLHTTP");
+         } catch(e) {
+            xhrObj = new window.ActiveXObject("Microsoft.XMLHTTP");
+         }
+    }
+    if (xhrObj) {
+      xhrObj.open("GET", "/app/assets/javascripts/baby-steps.json");
+      xhrObj.onreadystatechange = function () {
+        if (xhrObj.readyState === 4 && xhrObj.status === 200) {
+          var response = JSON.parse(xhrObj.responseText);
+          if (response.friends) {
+            //Create dictionary with arrays to add friends to base on baby steps.
+            var friendDictionary = {};
+            var i;
+            for (i = 1; i <= 7; i++) {
+              friendDictionary[i] = [];
             }
+            for (i = 0; i < response.friends.length; i++) {
+              friendDictionary[response.friends[i].babyStep].push(response.friends[i]);//Push friend into new array.
+            }
+            for (i = 1; i <= 7; i++) {
+              if (friendDictionary[i].length > 0) {
+                friendDictionary[i] = window.Utils.alphabetizeFriends(friendDictionary[i]);
+              }
+            }
+            renderFriends(friendDictionary);
           }
-          renderFriends(friendDictionary);
         }
-      }
-    };
-    xhrObj.send();
+      };
+      xhrObj.send();
+    }
   }
 
   //Called via loadSocialInfo and it expects there to be a dictionary with arrays as values for the different baby step numbers as keys.
