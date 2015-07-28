@@ -21,4 +21,21 @@ describe("Module: framework/collection", function() {
         expect( collectionInstance.models ).toEqual( [ testObject ] );
     });
 
+    it( 'each() loops over the model array and executes a callback', function() {
+        collectionInstance = new Collection();
+
+        collectionInstance.push( { id: 'item1' } );
+        collectionInstance.push( { id: 'item2' } );
+        collectionInstance.push( { id: 'item3' } );
+
+        let returnValues = [];
+        collectionInstance.each(
+            ( item ) => {
+                returnValues.push( item.id );
+            }
+        );
+
+        expect( returnValues ).toEqual( [ 'item1', 'item2', 'item3' ] );
+    });
+
 });

@@ -25,4 +25,14 @@ describe("Module: framework/base", function() {
         expect( result ).toEqual( 'a value' );
     });
 
+    it( 'on() method adds a listener that can be triggered by trigger()', function() {
+        let testEventCallback = jasmine.createSpy();
+
+        baseInstance.subscribers.testEvent = [];
+        baseInstance.on( 'testEvent', testEventCallback );
+        baseInstance.trigger( 'testEvent' );
+
+        expect( testEventCallback ).toHaveBeenCalledWith( baseInstance );
+    });
+
 });

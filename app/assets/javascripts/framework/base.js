@@ -12,6 +12,36 @@ export default class {
      */
     constructor() {
         this.data = {};
+        this.subscribers = {
+            'change': []
+        };
+    }
+
+    /**
+     * Getter accessor for a property on the data object
+     *
+     * @param {string} property Name of the property being accessed
+     */
+    get( property ) {
+        return this.data[ property ];
+    }
+
+    on( eventName, callback ) {
+        if ( Array.isArray( this.subscribers[ eventName ] ) ) {
+            this.subscribers[ eventName ].push( callback );
+        } else {
+            throw 'Invalid event name provided to on() method';
+        }
+    }
+
+    trigger( eventName ) {
+        if ( Array.isArray( this.subscribers[ eventName ] ) ) {
+            for ( let callback of this.subscribers[ eventName ] ) {
+                callback( this );
+            }
+        } else {
+            throw 'Invalid event name provided to trigger() method';
+        }
     }
 
     /**
@@ -22,15 +52,6 @@ export default class {
      */
     set( property, value ) {
         this.data[ property ] = value;
-    }
-
-    /**
-     * Getter accessor for a property on the data object
-     *
-     * @param {string} property Name of the property being accessed
-     */
-    get( property ) {
-        return this.data[ property ];
     }
 
 }
