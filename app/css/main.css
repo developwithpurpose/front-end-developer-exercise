@@ -119,3 +119,16 @@ button img {
   margin-left: 24px;
   text-align: right;
 }
+
+#result {
+  display: inline;
+  height: 50px;
+  width: 200px;
+  font-family: Helvetica, 'sans serif';
+  font-size: 13px;
+  color: #65686F;
+}
+
+#result >h4 {
+  display: inline;
+}
