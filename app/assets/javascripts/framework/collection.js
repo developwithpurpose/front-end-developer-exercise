@@ -26,11 +26,11 @@ export default class extends Base {
      */
     push( model ) {
         this.models.push( model );
-        model.on( 'change',
-            () => {
-                this.trigger( 'change' );
-            }
-        );
+        // model.on( 'change',
+        //     () => {
+        //         this.trigger( 'change' );
+        //     }
+        // );
     }
 
     /**

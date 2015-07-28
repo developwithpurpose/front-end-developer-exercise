@@ -12,9 +12,7 @@ export default class {
      */
     constructor() {
         this.data = {};
-        this.subscribers = {
-            'change': []
-        };
+        this.subscribers = {};
     }
 
     /**
@@ -26,21 +24,35 @@ export default class {
         return this.data[ property ];
     }
 
-    on( eventName, callback ) {
-        if ( Array.isArray( this.subscribers[ eventName ] ) ) {
-            this.subscribers[ eventName ].push( callback );
-        } else {
-            throw 'Invalid event name provided to on() method';
+    /**
+     * Subscribes to a given event on a given object
+     *
+     * @param {'lib/base'} publisher Object that will notify of the event
+     * @param {string} eventName Name of the event being subscribed to
+     * @param {function} callback Function to be called when the publisher notifies
+     * @returns {undefined}
+     */
+    listen( publisher, eventName, callback ) {
+        if ( !Array.isArray( publisher.subscribers[ eventName ] ) ) {
+            publisher.subscribers[ eventName ] = [];
         }
+        publisher.subscribers[ eventName ].push({
+            callback: callback,
+            subscriber: this
+        });
     }
 
-    trigger( eventName ) {
+    /**
+     * Notifies subscribers that an event occurred. Subscribers subcribe using their own listen method.
+     *
+     * @param {string} eventName Name of the event that has occurred
+     * @returns {undefined}
+     */
+    notify( eventName ) {
         if ( Array.isArray( this.subscribers[ eventName ] ) ) {
-            for ( let callback of this.subscribers[ eventName ] ) {
-                callback( this );
+            for ( let item of this.subscribers[ eventName ] ) {
+                item.callback.call( item.subscriber, this );
             }
-        } else {
-            throw 'Invalid event name provided to trigger() method';
         }
     }
 

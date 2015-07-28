@@ -11,7 +11,7 @@ export default class extends View {
     }
 
     addEvents() {
-        this.model.on( 'change', () => { this.refresh() });
+        // this.model.on( 'change', () => { this.refresh() });
         this.$el.click( ( e ) => {
             e.preventDefault();
             this.model.set( 'active', true );
