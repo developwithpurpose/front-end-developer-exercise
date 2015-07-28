@@ -11,7 +11,8 @@ module.exports = function( grunt ) {
     babel: {
       options: {
         sourceMap: true,
-        loose: 'all'
+        loose: ['all'],
+        optional: ['spec.protoToAssign']
       },
       dist: {
         files: [{
@@ -86,7 +87,8 @@ module.exports = function( grunt ) {
           vendor: [
             'public/js/vendor/**/*.js'
           ],
-          template: 'spec/index.tmpl'
+          template: 'spec/index.tmpl',
+          keepRunner: true
         }
       }
     },
