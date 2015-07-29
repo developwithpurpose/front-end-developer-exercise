@@ -25,7 +25,6 @@ export default class extends View {
         this.initContentItems();
 
         this.friendsCollection.load();
-        console.log( this.friendsCollection );
     }
 
     /**

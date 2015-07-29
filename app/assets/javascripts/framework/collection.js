@@ -5,7 +5,7 @@ import Model from './model';
  * An ordered set of models
  *
  * @module 'lib/collection'
- * @augments {lib/base}
+ * @augments {module:lib/base}
  */
 export default class extends Base {
 
@@ -26,7 +26,7 @@ export default class extends Base {
     /**
      * Adds a model to the collection. Adds a change listener on the model
      *
-     * @param  {lib/model} model The model to be added to the collection
+     * @param  {module:lib/model} model The model to be added to the collection
      * @return {undefined}
      */
     push( model ) {
@@ -52,6 +52,16 @@ export default class extends Base {
     }
 
     /**
+     * Filter the collection with a given callback function. Shorthand to models.filter()
+     *
+     * @param {Function} callback The callback used to filter the Collection
+     * @returns { Array.<module:framework/model>[] }
+     */
+    filter( callback ) {
+        return this.models.filter( callback );
+    }
+
+    /**
      * Loads data for the collection from a GET XHR request and initializes models
      * for each record returned in the JSON response.
      *
@@ -69,8 +79,12 @@ export default class extends Base {
 
             $.each( collectionData, ( index, recordData ) => {
                 let model = new this.modelClass( recordData );
+
                 this.push( model );
+
                 if ( index === totalRecords - 1 ) {
+                    this.notify( 'loaded' );
+
                     if ( 'function' === typeof callback ) {
                         callback();
                     }

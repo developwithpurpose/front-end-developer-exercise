@@ -17,7 +17,11 @@ export default class extends View {
     }
 
     render() {
+        const babyStep = this.babyStepModel.get( 'step' );
 
+        let friends = this.friendsCollection.filter( ( friend ) => {
+            return friend.get( 'babyStep' ) === babyStep;
+        });
     }
 
 }
