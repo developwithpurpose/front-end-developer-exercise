@@ -48,4 +48,20 @@ describe("Module: framework/collection", function() {
         expect( returnValues ).toEqual( [ 'item1', 'item2', 'item3' ] );
     });
 
+    describe( 'Collection load() tests', function() {
+
+        beforeEach( function( done ) {
+            collectionInstance = new Collection();
+            collectionInstance.url = '/spec/fixtures/collection-fixture.json';
+            collectionInstance.resource = 'testResource';
+            collectionInstance.load( function() {
+                done();
+            });
+        }, 1000);
+
+        it( 'Collection loads data through a GET request and creates models', function() {
+            expect( collectionInstance.models.length ).toEqual( 2 );
+        });
+    });
+
 });

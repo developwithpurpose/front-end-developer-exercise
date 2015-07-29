@@ -16,7 +16,11 @@ export default class extends Base {
      */
     constructor() {
         super();
+
         this.models = [];
+        this.url = '';
+        this.resource = null;
+        this.modelClass = Model;
     }
 
     /**
@@ -45,6 +49,34 @@ export default class extends Base {
         for ( let i of this.models ) {
             callback( i );
         }
+    }
+
+    /**
+     * Loads data for the collection from a GET XHR request and initializes models
+     * for each record returned in the JSON response.
+     *
+     * @param {Function} callback A callback to be called on load success
+     * @return {undefined}
+     */
+    load( callback ) {
+        if ( typeof this.resource !== 'string' ) {
+            throw 'Resource must be a string to load a Collection';
+        }
+
+        $.getJSON( this.url, ( response ) => {
+            const collectionData = response[ this.resource ];
+            const totalRecords = collectionData.length;
+
+            $.each( collectionData, ( index, recordData ) => {
+                let model = new this.modelClass( recordData );
+                this.push( model );
+                if ( index === totalRecords - 1 ) {
+                    if ( 'function' === typeof callback ) {
+                        callback();
+                    }
+                }
+            });
+        });
     }
 
 }

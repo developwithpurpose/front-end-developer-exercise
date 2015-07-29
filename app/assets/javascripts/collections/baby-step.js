@@ -15,7 +15,7 @@ export default class extends Collection {
      */
     constructor() {
         super();
-        this.model = BabyStepModel;
+        this.modelClass = BabyStepModel;
         this.initBabySteps();
     }
 
@@ -26,7 +26,7 @@ export default class extends Collection {
      */
     initBabySteps() {
         for ( let i = 0; i < 7; i++ ) {
-            let model = new this.model({
+            let model = new this.modelClass({
                 id: i,
                 step: i + 1,
                 active: i === 0

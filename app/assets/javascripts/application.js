@@ -9,7 +9,6 @@ export default class {
 
         this.initNavigation( babySteps );
         this.initContent( babySteps );
-        this.initFriends();
     }
 
     initNavigation( babySteps ) {
@@ -20,7 +19,4 @@ export default class {
         new ContentView( babySteps );
     }
 
-    initFriends() {
-
-    }
 }
