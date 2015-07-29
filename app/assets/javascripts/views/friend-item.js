@@ -51,10 +51,10 @@ export default class extends View {
                 content += firstFriendLink + ' and ' + this.getFriendLink( friends[1] ) + ' are';
                 break;
             case 3:
-                content += firstFriendLink + ', ' + this.getFriendLink( friends[1] ) + ', and 1 other friend are'
+                content += firstFriendLink + ', ' + this.getFriendLink( friends[1] ) + ', and 1 other friend are';
                 break;
             default:
-                content += firstFriendLink + ', ' + this.getFriendLink( friends[1] ) + ', and ' + (friends.length - 2) + ' other friends are'
+                content += firstFriendLink + ', ' + this.getFriendLink( friends[1] ) + ', and ' + (friends.length - 2) + ' other friends are';
         }
 
         content += ' also in Baby Step ' + babyStep;
