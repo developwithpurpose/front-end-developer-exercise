@@ -1,19 +1,23 @@
+import BabyStepCollection from './collections/baby-step';
 import NavigationView from './views/navigation';
+import ContentView from './views/content';
 
 export default class {
 
     start() {
-        this.initNavigation();
-        this.initContent();
+        const babySteps = new BabyStepCollection();
+
+        this.initNavigation( babySteps );
+        this.initContent( babySteps );
         this.initFriends();
     }
 
-    initNavigation() {
-        let navigation = new NavigationView();
+    initNavigation( babySteps ) {
+        new NavigationView( babySteps );
     }
 
-    initContent() {
-
+    initContent( babySteps ) {
+        new ContentView( babySteps );
     }
 
     initFriends() {

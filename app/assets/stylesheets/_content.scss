@@ -2,6 +2,10 @@
     margin-left: 370px;
     padding-right: 70px;
 
+    &.hidden {
+        display: none;
+    }
+
     .content-header {
         color: $light-blue-color;
         line-height:32px;

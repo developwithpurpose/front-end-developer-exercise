@@ -63,7 +63,10 @@ export default class {
      * @param {*} value Value to set the property
      */
     set( property, value ) {
-        this.data[ property ] = value;
+        if ( value !== this.data[ property ] ) {
+            this.data[ property ] = value;
+            this.notify( 'change' );
+        }
     }
 
 }

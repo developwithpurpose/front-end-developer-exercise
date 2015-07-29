@@ -31,8 +31,19 @@ export default class extends Collection {
                 step: i + 1,
                 active: i === 0
             });
+
             this.push( model );
+
+            this.listen( model, 'activated', this.stepActivated );
         }
+    }
+
+    stepActivated( model ) {
+        this.each( ( current ) => {
+            if ( current !== model ) {
+                current.set( 'active', false );
+            }
+        });
     }
 
 }

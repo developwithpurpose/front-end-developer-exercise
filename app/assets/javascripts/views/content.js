@@ -1,23 +1,23 @@
 import View from '../framework/view';
-import NavigationItem from './navigation-item';
+import ContentItem from './content-item';
 
 /**
- * A view to represent the navigation sidebar
+ * A view to represent the content panes
  *
  * @module
  */
 export default class extends View {
 
     /**
-     * Adds the collection to the view and sets up the nav item views
+     * Adds the collection to the view and sets up the content item views
      *
      * @return {undefined}
      */
     constructor( collection ) {
         super();
         this.collection = collection;
-        this.$el = $( '#navigation' );
-        this.initNavigationItems();
+        this.$el = $( '#content' );
+        this.initContentItems();
     }
 
     /**
@@ -25,11 +25,11 @@ export default class extends View {
      *
      * @return {undefined}
      */
-    initNavigationItems() {
-        this.navigationItems = [];
+    initContentItems() {
+        this.contentItems = [];
         this.collection.each(
             ( model ) => {
-                this.addNavigationItem( model );
+                this.addContentItem( model );
             }
         );
     }
@@ -39,8 +39,8 @@ export default class extends View {
      *
      * @param {'framework/model'} model The model to be attached to the view being added
      */
-    addNavigationItem( model ) {
-        this.navigationItems.push( new NavigationItem( model ) );
+    addContentItem( model ) {
+        this.contentItems.push( new ContentItem( model ) );
     }
 
 }

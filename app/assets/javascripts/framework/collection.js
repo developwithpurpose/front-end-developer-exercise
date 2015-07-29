@@ -1,4 +1,5 @@
 import Base from './base';
+import Model from './model';
 
 /**
  * An ordered set of models
@@ -25,12 +26,13 @@ export default class extends Base {
      * @return {undefined}
      */
     push( model ) {
+        if ( ! ( model instanceof Model ) ) {
+            throw 'push() method expects to be passed a model';
+        }
         this.models.push( model );
-        // model.on( 'change',
-        //     () => {
-        //         this.trigger( 'change' );
-        //     }
-        // );
+        this.listen( model, 'change', () => {
+            this.notify( 'change' );
+        });
     }
 
     /**

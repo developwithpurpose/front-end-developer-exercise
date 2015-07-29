@@ -36,4 +36,15 @@ describe("Module: framework/base", function() {
         expect( testEventCallback ).toHaveBeenCalledWith( publisher );
     });
 
+    it( 'set() method notifies subscribers of a change event', function() {
+        let testEventCallback = jasmine.createSpy();
+        let subscriber = baseInstance;
+        let publisher = new Base();
+
+        subscriber.listen.call( subscriber, publisher, 'change', testEventCallback );
+        publisher.set( 'testProperty', 'testValue' );
+
+        expect( testEventCallback ).toHaveBeenCalledWith( publisher );
+    });
+
 });

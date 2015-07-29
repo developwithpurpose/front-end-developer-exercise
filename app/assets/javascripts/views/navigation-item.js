@@ -2,7 +2,7 @@ import View from '../framework/view';
 
 export default class extends View {
 
-    constructor( model, $el ) {
+    constructor( model ) {
         super();
 
         this.model = model;
@@ -11,10 +11,12 @@ export default class extends View {
     }
 
     addEvents() {
-        // this.model.on( 'change', () => { this.refresh() });
+        this.listen( this.model, 'change', this.refresh );
+
         this.$el.click( ( e ) => {
             e.preventDefault();
             this.model.set( 'active', true );
+            this.model.notify( 'activated' );
         });
     }
 
@@ -24,8 +26,10 @@ export default class extends View {
 
         if ( true === active ) {
             linkElement.addClass( 'active' );
+            linkElement.attr( 'aria-selected', true );
         } else {
             linkElement.removeClass( 'active' );
+            linkElement.attr( 'aria-selected', false );
         }
     }
 
