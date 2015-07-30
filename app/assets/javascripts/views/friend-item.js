@@ -3,7 +3,7 @@ import View from '../framework/view';
 /**
  * Handles the friends lists in the baby steps content articles
  *
- * @module views/fried-item
+ * @module views/friend-item
  * @augments {module:framework/view}
  */
 export default class extends View {
