@@ -33,7 +33,6 @@ body {
     display: block;
     position: relative;
     border-right-width: 0;
-    /*margin: auto 0 !important;*/
     padding:0;
     margin-right:70px;
     height: 100%;
@@ -131,4 +130,9 @@ button img {
 
 #result >h4 {
   display: inline;
+}
+
+a {
+  text-decoration: none;
+  color: #6FBEE7;
 }
