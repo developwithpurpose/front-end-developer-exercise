@@ -1,0 +1,58 @@
+/* header */
+
+header {
+  background-color: #bbbfc2;
+}
+
+.title-top {
+  font-family: Open Sans, sans-serif;
+  font-weight: light;
+  font-size: 32px;
+  color: #fff;
+  /* height: 15px; */
+}
+
+.title-bottom {
+  font-family: Open Sans, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  color: #fff;
+  line-height: 48px;
+}
+
+/* nav bar */
+
+.nav {
+  font-family: Source Sans Pro, sans-serif;
+  font-weight: semibold;
+  font-size: 18px;
+  line-height: 60px;
+  list-style-type: none;
+}
+
+/* Baby Steps */
+
+.bs-header {
+  font-family: Source Sans Pro, sans-serif;
+  font-weight: semi-bold;
+  font-size: 30px;
+  color: #36abe1;
+  line-height: 20px;
+}
+
+.bs-subheader {
+  font-family: Source Sans Pro;
+  font-weight: light;
+  font-size: 18px;
+  color: #5c6366;
+  line-height: 20px;
+
+/* base styling */
+
+body {
+  background-color: #bbbfc2;
+}
+
+p {
+  font-family: helvetica;
+}
