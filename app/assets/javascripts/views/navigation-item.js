@@ -6,7 +6,7 @@ export default class extends View {
         super();
 
         this.model = model;
-        this.$el = $( '#navigation .step' + model.get( 'step' ) );
+        this.$el = $( '#navigation .step' + model.get( 'step' ) + ' a' );
         this.addEvents();
     }
 
@@ -22,14 +22,13 @@ export default class extends View {
 
     refresh() {
         const active = this.model.get( 'active' );
-        const linkElement = this.$el.find( 'a' );
 
         if ( true === active ) {
-            linkElement.addClass( 'active' );
-            linkElement.attr( 'aria-selected', true );
+            this.$el.addClass( 'active' );
+            this.$el.attr( 'aria-selected', true );
         } else {
-            linkElement.removeClass( 'active' );
-            linkElement.attr( 'aria-selected', false );
+            this.$el.removeClass( 'active' );
+            this.$el.attr( 'aria-selected', false );
         }
     }
 
