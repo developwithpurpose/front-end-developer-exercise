@@ -50,7 +50,7 @@
         }
     }
 
-    .active {
+    .active a {
         background: #fff;
         color: $light-blue-color;
         @include source-sans-semi-bold;

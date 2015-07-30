@@ -19,7 +19,7 @@ export default class extends View {
         super();
 
         this.model = model;
-        this.$el = $( '#navigation .step' + model.get( 'step' ) + ' a' );
+        this.$el = $( '#navigation .step' + model.get( 'step' ) );
         this.addEvents();
     }
 
