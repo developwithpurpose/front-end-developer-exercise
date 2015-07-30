@@ -4,7 +4,8 @@ import BabyStepModel from '../models/baby-step';
 /**
  * Collection of BabyStepModels
  *
- * @module
+ * @module collections/baby-step
+ * @augments {module:framework/collection}
  */
 export default class extends Collection {
 
@@ -38,6 +39,12 @@ export default class extends Collection {
         }
     }
 
+    /**
+     * Sets all models `active` property to false, except for the model passed
+     *
+     * @param {module:models/baby-step} model The active model
+     * @return {undefined}
+     */
     stepActivated( model ) {
         this.each( ( current ) => {
             if ( current !== model ) {

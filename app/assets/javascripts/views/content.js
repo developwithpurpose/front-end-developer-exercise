@@ -6,13 +6,15 @@ import FriendsCollection from '../collections/friends';
 /**
  * A view to represent the content panes
  *
- * @module
+ * @module views/content
+ * @augments {module:framework/view}
  */
 export default class extends View {
 
     /**
      * Adds the collection to the view and sets up the content item views
      *
+     * @param {module:collections/baby-step} babyStepCollection The baby step collection
      * @return {undefined}
      */
     constructor( babyStepCollection ) {
@@ -46,7 +48,7 @@ export default class extends View {
     /**
      * Adds a child view and a friends view using a model from the collection
      *
-     * @param {'framework/model'} model The model to be attached to the view being added
+     * @param {module:framework/model} model The model to be attached to the view being added
      */
     addContentItem( model ) {
         this.contentItems.push( new ContentItem( model ) );

@@ -1,7 +1,11 @@
 /**
  * Base class all other library classes extend
  *
- * @module 'lib/base'
+ * Contains accessor ( get() and set() ) methods and a mechanism for publishing event
+ * notifications to subscribers, as well as the ability to subscribe to other classes
+ * notifications
+ *
+ * @module lib/base
  */
 export default class {
 
@@ -27,7 +31,7 @@ export default class {
     /**
      * Subscribes to a given event on a given object
      *
-     * @param {'lib/base'} publisher Object that will notify of the event
+     * @param {module:lib/base} publisher Object that will notify of the event
      * @param {string} eventName Name of the event being subscribed to
      * @param {function} callback Function to be called when the publisher notifies
      * @returns {undefined}
@@ -61,6 +65,7 @@ export default class {
      *
      * @param {string} property Name of the property being set
      * @param {*} value Value to set the property
+     * @returns {undefined}
      */
     set( property, value ) {
         if ( value !== this.data[ property ] ) {

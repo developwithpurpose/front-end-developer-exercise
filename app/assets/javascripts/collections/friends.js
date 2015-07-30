@@ -4,7 +4,8 @@ import FriendModel from '../models/friend';
 /**
  * Collection of BabyStepModels
  *
- * @module
+ * @module collections/friends
+ * @augments {module:framework/collection}
  */
 export default class extends Collection {
 

@@ -1,10 +1,10 @@
 import Base from '../../app/assets/javascripts/framework/base'
 
-describe("Module: framework/base", function() {
+describe( 'Module: framework/base', function() {
 
     let baseInstance;
 
-    beforeEach(function() {
+    beforeEach( function() {
         baseInstance = new Base();
     });
 

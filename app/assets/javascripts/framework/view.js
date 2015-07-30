@@ -3,18 +3,9 @@ import Base from './base';
 /**
  * Acts as a liason between DOM elements and models
  *
- * @module 'lib/view'
- * @augments {lib/base}
+ * @module framework/view
+ * @augments {module:framework/base}
  */
 export default class extends Base {
-
-    /**
-     * Initialize the view
-     *
-     * @return {undefined}
-     */
-    constructor() {
-        super();
-    }
 
 }

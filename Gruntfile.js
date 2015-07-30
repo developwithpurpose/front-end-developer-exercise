@@ -4,21 +4,21 @@ module.exports = function( grunt ) {
   require( 'matchdep' ).filterDev( 'grunt-*' )
     .forEach( grunt.loadNpmTasks );
 
-  grunt.loadNpmTasks('grunt-spritesmith');
+  grunt.loadNpmTasks( 'grunt-spritesmith' );
 
   grunt.initConfig({
     pkg: grunt.file.readJSON( 'package.json' ),
     babel: {
       options: {
         sourceMap: true,
-        loose: ['all'],
-        optional: ['spec.protoToAssign']
+        loose: [ 'all' ],
+        optional: [ 'spec.protoToAssign' ]
       },
       dist: {
         files: [{
           expand: true,
           cwd: 'app/assets/javascripts',
-          src: ['**/*.js'],
+          src: [ '**/*.js' ],
           dest: 'temp/babel/js',
           ext:'.js'
         }]
@@ -26,7 +26,7 @@ module.exports = function( grunt ) {
       spec: {
         files: [{
           expand: true,
-          src: ['spec/**/*.spec.js', 'app/assets/javascripts/**/*.js'],
+          src: [ 'spec/**/*.spec.js', 'app/assets/javascripts/**/*.js' ],
           dest: 'temp/babel/spec'
         }]
       }
@@ -36,11 +36,11 @@ module.exports = function( grunt ) {
         sourceMap: true
       },
       dist: {
-        src: ['temp/babel/js/**/*.js'],
+        src: [ 'temp/babel/js/**/*.js' ],
         dest: 'dist/js/app.js'
       },
       spec: {
-        src: ['temp/babel/spec/**/*.js'],
+        src: [ 'temp/babel/spec/**/*.js' ],
         dest: 'dist/js/tests.js',
       }
     },
@@ -76,7 +76,7 @@ module.exports = function( grunt ) {
     cssmin: {
       dist: {
         files: {
-          'dist/css/main.min.css': ['dist/css/main.css']
+          'dist/css/main.min.css': [ 'dist/css/main.css' ]
         }
       }
     },
@@ -84,9 +84,7 @@ module.exports = function( grunt ) {
       pivotal: {
         options: {
           specs: 'dist/js/tests.js',
-          vendor: [
-            'public/js/vendor/**/*.js'
-          ],
+          vendor: [ 'public/js/vendor/**/*.js' ],
           template: 'spec/index.tmpl',
           keepRunner: true
         }
@@ -147,7 +145,7 @@ module.exports = function( grunt ) {
       },
       build: {
         files: {
-          'dist/js/app.min.js': ['dist/js/app.js']
+          'dist/js/app.min.js': [ 'dist/js/app.js' ]
         }
       }
     },
@@ -178,9 +176,9 @@ module.exports = function( grunt ) {
     }
   });
 
-  grunt.registerTask( 'default', ['connect'] );
-  grunt.registerTask( 'lint', ['jshint', 'csslint'] );
-  grunt.registerTask( 'build', ['clean', 'babel', 'browserify',  'uglify', 'sass', 'copy', 'cssmin']);
-  grunt.registerTask( 'builddev', ['clean', 'babel', 'browserify',  'uglify', 'sass', 'copy', 'string-replace:dev']);
-  grunt.registerTask( 'test', ['builddev', 'jasmine']);
+  grunt.registerTask( 'default', [ 'connect' ] );
+  grunt.registerTask( 'lint', [ 'jshint', 'csslint' ] );
+  grunt.registerTask( 'build', [ 'clean', 'babel', 'browserify',  'uglify', 'sass', 'copy', 'cssmin' ]);
+  grunt.registerTask( 'builddev', [ 'clean', 'babel', 'browserify',  'uglify', 'sass', 'copy', 'string-replace:dev' ]);
+  grunt.registerTask( 'test', [ 'builddev', 'jasmine' ]);
 };

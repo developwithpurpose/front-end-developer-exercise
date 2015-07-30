@@ -22,6 +22,13 @@
         margin-top: 40px;
     }
 
+    .icon {
+        margin-right: 15px;
+        float: left;
+        position: relative;
+        margin-top: -7px;
+    }
+
     $large-blue-icons: (
         $icons-large-bs1-blue,
         $icons-large-bs2-blue,
@@ -31,13 +38,6 @@
         $icons-large-bs6-blue,
         $icons-large-bs7-blue
     );
-
-    .icon {
-        margin-right: 15px;
-        float: left;
-        position: relative;
-        margin-top: -7px;
-    }
 
     @for $i from 1 through length($large-blue-icons) {
         .step#{$i}-icon {

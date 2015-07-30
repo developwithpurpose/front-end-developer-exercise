@@ -1,6 +1,6 @@
 import Model from '../../app/assets/javascripts/framework/model'
 
-describe("Module: framework/model", function() {
+describe( 'Module: framework/model', function() {
 
     let modelInstance;
 

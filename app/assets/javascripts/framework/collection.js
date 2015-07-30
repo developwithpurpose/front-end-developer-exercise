@@ -4,8 +4,8 @@ import Model from './model';
 /**
  * An ordered set of models
  *
- * @module 'lib/collection'
- * @augments {module:lib/base}
+ * @module lib/collection
+ * @augments {module:framework/base}
  */
 export default class extends Base {
 
@@ -26,7 +26,7 @@ export default class extends Base {
     /**
      * Adds a model to the collection. Adds a change listener on the model
      *
-     * @param  {module:lib/model} model The model to be added to the collection
+     * @param  {module:framework/model} model The model to be added to the collection
      * @return {undefined}
      */
     push( model ) {
@@ -42,7 +42,7 @@ export default class extends Base {
     /**
      * Iterates over the models in the collection
      *
-     * @param  {Function} callback A callback function with the item as a parameter
+     * @param {function} callback A callback function with the item as a parameter
      * @return {undefined}
      */
     each( callback ) {
@@ -54,8 +54,8 @@ export default class extends Base {
     /**
      * Filter the collection with a given callback function. Shorthand to models.filter()
      *
-     * @param {Function} callback The callback used to filter the Collection
-     * @returns { Array.<module:framework/model>[] }
+     * @param {function} callback The callback used to filter the Collection
+     * @returns {array.<module:framework/model>[]}
      */
     filter( callback ) {
         return this.models.filter( callback );
@@ -65,7 +65,7 @@ export default class extends Base {
      * Loads data for the collection from a GET XHR request and initializes models
      * for each record returned in the JSON response.
      *
-     * @param {Function} callback A callback to be called on load success
+     * @param {function} callback A callback to be called on load success
      * @return {undefined}
      */
     load( callback ) {

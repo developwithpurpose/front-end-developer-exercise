@@ -3,15 +3,15 @@ import Base from './base';
 /**
  * Loads and holds data and notifies subscribers of changes
  *
- * @module 'lib/model'
- * @augments {lib/base}
+ * @module framework/model
+ * @augments {module:framework/base}
  */
 export default class extends Base {
 
     /**
      * Initializes the model with data if any is passed
      *
-     * @param  {object} data Data with which to initialize the model
+     * @param {object} data Data with which to initialize the model
      * @return {undefined}
      */
     constructor( data ) {

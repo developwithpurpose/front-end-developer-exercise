@@ -1,7 +1,7 @@
 import Collection from '../../app/assets/javascripts/framework/collection';
 import Model from '../../app/assets/javascripts/framework/model';
 
-describe("Module: framework/collection", function() {
+describe( 'Module: framework/collection', function() {
 
     let collectionInstance;
 

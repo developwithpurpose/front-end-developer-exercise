@@ -1,7 +1,20 @@
 import View from '../framework/view';
 
+/**
+ * Handles the friends lists in the baby steps content articles
+ *
+ * @module views/fried-item
+ * @augments {module:framework/view}
+ */
 export default class extends View {
 
+    /**
+     * Intitializes the view
+     *
+     * @param {module:models/baby-step} babyStepModel The baby step model for this view
+     * @param {module:collections/friends} friendsCollection The collection of all friends
+     * @return {undefined}
+     */
     constructor( babyStepModel, friendsCollection ) {
         super();
 
