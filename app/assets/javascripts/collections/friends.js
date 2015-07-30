@@ -19,7 +19,7 @@ export default class extends Collection {
         super();
 
         this.modelClass = FriendModel;
-        this.url = '/dist/api/baby-steps.json';
+        this.url = 'api/baby-steps.json';
         this.resource = 'friends';
     }
 

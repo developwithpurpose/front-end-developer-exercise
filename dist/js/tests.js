@@ -222,7 +222,7 @@ var _default = (function (_Collection) {
     _Collection.call(this);
 
     this.modelClass = _modelsFriend2['default'];
-    this.url = '/dist/api/baby-steps.json';
+    this.url = 'api/baby-steps.json';
     this.resource = 'friends';
   }
 
@@ -904,7 +904,7 @@ var _frameworkView = require('../framework/view');
 /**
  * Handles the friends lists in the baby steps content articles
  *
- * @module views/fried-item
+ * @module views/friend-item
  * @augments {module:framework/view}
  */
 
