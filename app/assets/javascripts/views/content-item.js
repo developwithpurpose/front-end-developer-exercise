@@ -18,12 +18,24 @@ export default class extends View {
         const active = this.model.get( 'active' );
 
         if ( true === active ) {
-            this.$el.removeClass( 'hidden' );
-            this.$el.attr( 'aria-hidden', false );
+            this.transitionToVisible();
         } else {
-            this.$el.addClass( 'hidden' );
-            this.$el.attr( 'aria-hidden', true );
+            this.transitionToHidden();
         }
+    }
+
+    transitionToHidden() {
+        this.$el.fadeOut( 500, () => {
+            this.$el.addClass( 'hidden' );
+        });
+        this.$el.attr( 'aria-hidden', true );
+    }
+
+    transitionToVisible() {
+        this.$el.fadeIn( 500, () => {
+            this.$el.removeClass( 'hidden' );
+        });
+        this.$el.attr( 'aria-hidden', false );
     }
 
 }
