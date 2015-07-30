@@ -1,0 +1,6 @@
+{
+    "testResource": [
+        { "id": 1, "testProperty": "testValue1" },
+        { "id": 2, "testProperty": "testValue2" }
+    ]
+}

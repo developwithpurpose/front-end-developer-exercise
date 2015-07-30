@@ -1,0 +1,48 @@
+.content {
+    margin-left: 370px;
+    width: 555px;
+    position: absolute;
+    background-color: #fff;
+
+    &.hidden {
+        display: none;
+    }
+
+    .content-header {
+        color: $light-blue-color;
+        line-height:32px;
+        @include source-sans-semi-bold;
+    }
+
+    .content-subheader {
+        color: $gray-text-color;
+        @include source-sans-light;
+    }
+
+    .content-footer {
+        margin-top: 40px;
+    }
+
+    .icon {
+        margin-right: 15px;
+        float: left;
+        position: relative;
+        margin-top: -7px;
+    }
+
+    $large-blue-icons: (
+        $icons-large-bs1-blue,
+        $icons-large-bs2-blue,
+        $icons-large-bs3-blue,
+        $icons-large-bs4-blue,
+        $icons-large-bs5-blue,
+        $icons-large-bs6-blue,
+        $icons-large-bs7-blue
+    );
+
+    @for $i from 1 through length($large-blue-icons) {
+        .step#{$i}-icon {
+            @include sprite( nth($large-blue-icons, $i) );
+        }
+    }
+}

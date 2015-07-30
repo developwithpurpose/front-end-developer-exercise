@@ -1,0 +1,36 @@
+@mixin outset-box-shadow($xOffset, $yOffset, $blur, $spread, $color) {
+    -webkit-box-shadow: $xOffset $yOffset $blur $spread $color;
+    -moz-box-shadow: $xOffset $yOffset $blur $spread $color;
+    box-shadow: $xOffset $yOffset $blur $spread $color;
+}
+
+@mixin inset-box-shadow($xOffset, $yOffset, $blur, $spread, $color) {
+    -webkit-box-shadow: inset $xOffset $yOffset $blur $spread $color;
+    -moz-box-shadow: inset $xOffset $yOffset $blur $spread $color;
+    box-shadow: inset $xOffset $yOffset $blur $spread $color;
+}
+
+@mixin open-sans-light() {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+@mixin open-sans-bold() {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+@mixin source-sans-semi-bold() {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+@mixin source-sans() {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+@mixin source-sans-light() {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+}

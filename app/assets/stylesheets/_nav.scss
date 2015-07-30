@@ -1,0 +1,62 @@
+.navigation {
+    width: 300px;
+    float: left;
+    padding-bottom: 200px;
+    background: #ebeced;
+    @include inset-box-shadow(-21px, 0px, 12px, -8px, #d1d5d6);
+
+    a {
+        color: $alternate-link-color;
+        line-height: 60px;
+        font-size: 18px;
+        display: block;
+        padding-left: 128px;
+        border-bottom: 1px solid #fff;
+        @include source-sans;
+
+        .icon {
+            position: absolute;
+            margin: 17px 0 0 30px;
+        }
+    }
+
+    $small-icons: (
+        $icons-small-bs1,
+        $icons-small-bs2,
+        $icons-small-bs3,
+        $icons-small-bs4,
+        $icons-small-bs5,
+        $icons-small-bs6,
+        $icons-small-bs7
+    );
+
+    $small-blue-icons: (
+        $icons-small-bs1-blue,
+        $icons-small-bs2-blue,
+        $icons-small-bs3-blue,
+        $icons-small-bs4-blue,
+        $icons-small-bs5-blue,
+        $icons-small-bs6-blue,
+        $icons-small-bs7-blue
+    );
+
+    @for $i from 1 through length($small-icons) {
+        .step#{$i} .icon {
+            @include sprite( nth($small-icons, $i) );
+        }
+
+        .step#{$i} .active .icon {
+            @include sprite( nth($small-blue-icons, $i) );
+        }
+    }
+
+    .active a {
+        background: #fff;
+        color: $light-blue-color;
+        @include source-sans-semi-bold;
+    }
+}
+
+.lt-ie9 .navigation {
+    background: url(#{$images-directory}shadow_left_nav.jpg);
+}
