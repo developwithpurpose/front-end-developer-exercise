@@ -1,0 +1,136 @@
+body {
+  background-color: #BBBFC2;
+}
+
+.container {
+  background-color: white;
+  max-width: 80%;
+  margin-left: 10%;
+  margin-top: -20px;
+  height: 100%;
+}
+
+.header-image img {
+  width: 100% !important;
+}
+
+.content-container {
+  margin: 0px auto;
+  min-height: 600px;
+}
+
+#content {
+  height: 100%;
+  margin: auto;
+  color: #333;
+  margin-top: 60px;
+}
+
+#content > ul {
+  float: left;
+  width: 30%;
+  display: block;
+  position: relative;
+  border-right-width: 0;
+  padding:0;
+  margin-right:70px;
+  height: 100%;
+}
+
+
+#content >ul >li {
+  width: 100%;
+  list-style-type: none;
+  display: block;
+  font-size: 1.11em;
+  position: relative;
+  border-right-width: 0;
+  border-bottom: 0.5px solid #DDD;
+  margin: auto;
+  background: whiteSmoke; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #f2f2f2 100%); /* IE10+ */
+  background: linear-gradient(top, #ffffff 0%, #f2f2f2 100%); /* W3C */
+}
+
+
+#content >ul >li.step >button {
+  color: #36ABE1;
+  font-weight: bold;
+  border-right: none;
+  z-index: 10;
+  background: white !important;
+  position: relative;
+  moz-box-shadow: inset 0 0 35px 5px #fafbfd;
+  -webkit-box-shadow: inset 0 0 35px 5px #fafbfd;
+  box-shadow: inset 0 0 35px 5px #fafbfd;
+}
+
+#content >ul >li.step >button >img {
+  display: none;
+}
+
+#content >ul >li >button >img.target {
+  display: none;
+}
+
+#content >ul >li.step >button >img.target {
+  display: inline;
+}
+
+.step-content >p {
+  margin-top: 24px;
+  line-height: 18px;
+}
+
+.step-content {
+  display: none;
+  margin-right: 70px;
+  font-family: Helvetica, 'sans serif';
+  font-size: 13px;
+  color: #65686F;
+  padding-top: 5px;
+}
+
+
+button {
+  height: 60px;
+  background-color: #EBECED;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  color: #9BA0A4;
+  text-align: right;
+  border: 1px solid white;
+  width: 100%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+
+button img {
+  margin-right: 24px;
+  margin-left: 24px;
+  text-align: right;
+}
+
+#result {
+  display: inline;
+  height: 50px;
+  width: 200px;
+  font-family: Helvetica, 'sans serif';
+  font-size: 13px;
+  color: #65686F;
+}
+
+#result >h4 {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  color: #6FBEE7;
+}
