@@ -1,0 +1,255 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #65686f;
+  background: #bbbfc2; }
+
+a {
+  color: #6fbee7;
+  text-decoration: none; }
+
+p {
+  font-size: 13px;
+  line-height: 18px;
+  margin-top: 24px; }
+
+h1 {
+  font-size: 32px; }
+
+h2 {
+  font-size: 30px; }
+
+h3 {
+  font-size: 18px; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.wrapper {
+  background: #fff;
+  margin: 0 auto 43px;
+  width: 980px;
+  -webkit-box-shadow: 0px 1px 10px 5px #949494;
+  -moz-box-shadow: 0px 1px 10px 5px #949494;
+  box-shadow: 0px 1px 10px 5px #949494; }
+
+.lt-ie9 .wrapper {
+  zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#949494, Strength=10, Direction=90), progid:DXImageTransform.Microsoft.Shadow(Color=#949494, Strength=10, Direction=180), progid:DXImageTransform.Microsoft.Shadow(Color=#949494, Strength=10, Direction=270); }
+
+.right {
+  float: right; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+h1 .large {
+  font-size: 50px; }
+
+.icon {
+  display: inline-block; }
+
+.page-header {
+  background: url(../img/header.jpg) 0 0 no-repeat;
+  height: 276px;
+  color: #fff;
+  margin-bottom: 60px; }
+  .page-header .main-heading {
+    margin: 50px 70px 0 0;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300; }
+    .page-header .main-heading .bold-text {
+      margin-top: 15px;
+      line-height: 48px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700; }
+
+.navigation {
+  width: 300px;
+  float: left;
+  padding-bottom: 200px;
+  background: #ebeced;
+  -webkit-box-shadow: inset -21px 0px 12px -8px #d1d5d6;
+  -moz-box-shadow: inset -21px 0px 12px -8px #d1d5d6;
+  box-shadow: inset -21px 0px 12px -8px #d1d5d6; }
+  .navigation a {
+    color: #9ba084;
+    line-height: 60px;
+    font-size: 18px;
+    display: block;
+    padding-left: 128px;
+    border-bottom: 1px solid #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400; }
+    .navigation a .icon {
+      position: absolute;
+      margin: 17px 0 0 30px; }
+  .navigation .step1 .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -90px -260px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step1 .active .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -184px -195px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step2 .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -214px -195px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step2 .active .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -244px -195px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step3 .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -274px -195px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step3 .active .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -154px -220px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step4 .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -184px -220px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step4 .active .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -214px -220px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step5 .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -244px -220px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step5 .active .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -274px -220px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step6 .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: 0px -260px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step6 .active .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -30px -260px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step7 .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -60px -260px;
+    width: 30px;
+    height: 25px; }
+  .navigation .step7 .active .icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -154px -195px;
+    width: 30px;
+    height: 25px; }
+  .navigation .active a {
+    background: #fff;
+    color: #36abe1;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600; }
+
+.lt-ie9 .navigation {
+  background: url(../img/shadow_left_nav.jpg); }
+
+.content {
+  margin-left: 370px;
+  width: 555px;
+  position: absolute;
+  background-color: #fff; }
+  .content.hidden {
+    display: none; }
+  .content .content-header {
+    color: #36abe1;
+    line-height: 32px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600; }
+  .content .content-subheader {
+    color: #5c6366;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300; }
+  .content .content-footer {
+    margin-top: 40px; }
+  .content .icon {
+    margin-right: 15px;
+    float: left;
+    position: relative;
+    margin-top: -7px; }
+  .content .step1-icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -77px -195px;
+    width: 77px;
+    height: 65px; }
+  .content .step2-icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: 0px -65px;
+    width: 77px;
+    height: 65px; }
+  .content .step3-icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -154px 0px;
+    width: 77px;
+    height: 65px; }
+  .content .step4-icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: 0px -130px;
+    width: 77px;
+    height: 65px; }
+  .content .step5-icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -154px -130px;
+    width: 77px;
+    height: 65px; }
+  .content .step6-icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: -231px -65px;
+    width: 77px;
+    height: 65px; }
+  .content .step7-icon {
+    background-image: url(../img/icon-spritesheet.png);
+    background-position: 0px -195px;
+    width: 77px;
+    height: 65px; }
