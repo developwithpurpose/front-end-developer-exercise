@@ -12,6 +12,7 @@ export default class {
     /**
      * Creates a collection to hold the baby step data and creates the container views
      *
+     * @function
      * @return {undefined} 
      */
     start() {
@@ -24,6 +25,7 @@ export default class {
     /**
      * Creates the container view for the navigation sidebar
      *
+     * @function
      * @param {module:collection/baby-step} babySteps The baby steps collection
      * @return {undefined}
      */
@@ -34,6 +36,7 @@ export default class {
     /**
      * Creates the container view for the content area
      *
+     * @function
      * @param {module:collection/baby-step} babySteps The baby steps collection
      * @return {undefined}
      */

@@ -5,13 +5,14 @@
  * notifications to subscribers, as well as the ability to subscribe to other classes
  * notifications
  *
- * @module lib/base
+ * @module framework/base
  */
 export default class {
 
     /**
      * Initializes the data property
      *
+     * @function
      * @return {undefined}
      */
     constructor() {
@@ -22,6 +23,7 @@ export default class {
     /**
      * Getter accessor for a property on the data object
      *
+     * @function
      * @param {string} property Name of the property being accessed
      */
     get( property ) {
@@ -31,7 +33,8 @@ export default class {
     /**
      * Subscribes to a given event on a given object
      *
-     * @param {module:lib/base} publisher Object that will notify of the event
+     * @function
+     * @param {module:framework/base} publisher Object that will notify of the event
      * @param {string} eventName Name of the event being subscribed to
      * @param {function} callback Function to be called when the publisher notifies
      * @returns {undefined}
@@ -49,6 +52,7 @@ export default class {
     /**
      * Notifies subscribers that an event occurred. Subscribers subcribe using their own listen method.
      *
+     * @function
      * @param {string} eventName Name of the event that has occurred
      * @returns {undefined}
      */
@@ -63,6 +67,7 @@ export default class {
     /**
      * Setter accessor for a property on the data object
      *
+     * @function
      * @param {string} property Name of the property being set
      * @param {*} value Value to set the property
      * @returns {undefined}

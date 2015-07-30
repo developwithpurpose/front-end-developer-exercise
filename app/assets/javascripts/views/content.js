@@ -14,6 +14,7 @@ export default class extends View {
     /**
      * Adds the collection to the view and sets up the content item views
      *
+     * @function
      * @param {module:collections/baby-step} babyStepCollection The baby step collection
      * @return {undefined}
      */
@@ -32,6 +33,7 @@ export default class extends View {
     /**
      * Loops over the collection and adds a child view and friends view for each model
      *
+     * @function
      * @return {undefined}
      */
     initContentItems() {
@@ -48,11 +50,18 @@ export default class extends View {
     /**
      * Adds a child view and a friends view using a model from the collection
      *
+     * @function
      * @param {module:framework/model} model The model to be attached to the view being added
+     * @return {undefined}
      */
     addContentItem( model ) {
-        this.contentItems.push( new ContentItem( model ) );
-        this.friendItems.push( new FriendItem( model, this.friendsCollection ) );
+        this.contentItems.push(
+            new ContentItem( model )
+        );
+
+        this.friendItems.push(
+            new FriendItem( model, this.friendsCollection )
+        );
     }
 
 }

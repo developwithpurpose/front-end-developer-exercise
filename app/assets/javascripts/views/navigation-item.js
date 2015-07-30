@@ -1,7 +1,20 @@
 import View from '../framework/view';
 
+/**
+ * View that handles the individual navigation items
+ *
+ * @module  views/navigation-item
+ * @augments {module:framework/view}
+ */
 export default class extends View {
 
+    /**
+     * Initializes the view and adds events
+     *
+     * @function
+     * @param {module:models/baby-step} model The baby step to associate with this view
+     * @return {undefined}
+     */
     constructor( model ) {
         super();
 
@@ -10,6 +23,12 @@ export default class extends View {
         this.addEvents();
     }
 
+    /**
+     * Adds a listener on the model change event to refresh the active state
+     *
+     * @function
+     * @return {undefined}
+     */
     addEvents() {
         this.listen( this.model, 'change', this.refresh );
 
@@ -20,6 +39,12 @@ export default class extends View {
         });
     }
 
+    /**
+     * Changes the state in the DOM to active/inactive depending on the model's state
+     *
+     * @function
+     * @returns {undefined}
+     */
     refresh() {
         const active = this.model.get( 'active' );
 

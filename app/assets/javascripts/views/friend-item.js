@@ -11,6 +11,7 @@ export default class extends View {
     /**
      * Intitializes the view
      *
+     * @function
      * @param {module:models/baby-step} babyStepModel The baby step model for this view
      * @param {module:collections/friends} friendsCollection The collection of all friends
      * @return {undefined}
@@ -25,10 +26,23 @@ export default class extends View {
         this.addEvents();
     }
 
+    /**
+     * Subscribes to the `loaded` event on the friends collection
+     *
+     * @function
+     * @return {undefined}
+     */
     addEvents() {
         this.listen( this.friendsCollection, 'loaded', this.render );
     }
 
+    /**
+     * Filters the friends collection by those in current step and inserts the appropriate
+     * HTML into the DOM
+     *
+     * @function
+     * @returns  {undefined}
+     */
     render() {
         const babyStep = this.babyStepModel.get( 'step' );
 
@@ -39,6 +53,13 @@ export default class extends View {
         this.$el.html( this.getHtml( friends, babyStep ) );
     }
 
+    /**
+     * Generates the HTML to display a friend model as a link
+     *
+     * @function
+     * @param {module:models/friend} friend The friend model to be rendered as a link
+     * @returns {string}
+     */
     getFriendLink( friend ) {
         const name = friend.get( 'firstName' ) + friend.get( 'lastName' );
         const html = '<a href="javascript:void()">' + name + '</a>';
@@ -46,6 +67,14 @@ export default class extends View {
         return html;
     }
 
+    /**
+     * Returns the HTML to be inserted into the DOM
+     *
+     * @function
+     * @param {array<module:models/friend>} friends An array of friend models filtered by step
+     * @param {number} babyStep The number of the current baby step
+     * @returns {string}
+     */
     getHtml( friends, babyStep ) {
         let html = '';
         let content = '';

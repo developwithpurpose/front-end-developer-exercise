@@ -12,10 +12,12 @@ export default class extends Collection {
     /**
      * Sets the model class for the collection and starts initialization
      *
+     * @function
      * @return {undefined}
      */
     constructor() {
         super();
+
         this.modelClass = BabyStepModel;
         this.initBabySteps();
     }
@@ -23,6 +25,7 @@ export default class extends Collection {
     /**
      * Adds 7 BabyStepModels to the collection, inits the first to active
      *
+     * @function
      * @return {undefined}
      */
     initBabySteps() {
@@ -34,7 +37,6 @@ export default class extends Collection {
             });
 
             this.push( model );
-
             this.listen( model, 'activated', this.stepActivated );
         }
     }
@@ -42,6 +44,7 @@ export default class extends Collection {
     /**
      * Sets all models `active` property to false, except for the model passed
      *
+     * @function
      * @param {module:models/baby-step} model The active model
      * @return {undefined}
      */

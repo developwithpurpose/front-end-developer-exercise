@@ -12,6 +12,7 @@ export default class extends Collection {
     /**
      * Sets the model class for the collection and starts initialization
      *
+     * @function
      * @return {undefined}
      */
     constructor() {
