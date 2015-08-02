@@ -1,7 +1,24 @@
+/* base styling */
+
+body {
+  background-color: #bbbfc2;
+}
+
+.container {
+  background-color: white;
+}
+
+p {
+  font-family: helvetica;
+}
+
 /* header */
 
 header {
-  background-color: #bbbfc2;
+  background: url("../images/header.jpg");
+  width: 980px;
+  height: 276px;
+  background-repeat: no-repeat;
 }
 
 .title-top {
@@ -9,7 +26,7 @@ header {
   font-weight: light;
   font-size: 32px;
   color: #fff;
-  /* height: 15px; */
+  height: 15px;
 }
 
 .title-bottom {
@@ -24,10 +41,19 @@ header {
 
 .nav {
   font-family: Source Sans Pro, sans-serif;
-  font-weight: semibold;
   font-size: 18px;
   line-height: 60px;
   list-style-type: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #9ba0a4;
+}
+
+.selected a {
+  font-weight: semibold;
+  color: #36abe1;
 }
 
 /* Baby Steps */
@@ -46,13 +72,4 @@ header {
   font-size: 18px;
   color: #5c6366;
   line-height: 20px;
-
-/* base styling */
-
-body {
-  background-color: #bbbfc2;
-}
-
-p {
-  font-family: helvetica;
 }
