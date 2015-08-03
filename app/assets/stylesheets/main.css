@@ -4,37 +4,30 @@ body {
   background-color: #bbbfc2;
 }
 
-.container {
-  background-color: white;
-}
-
 p {
   font-family: helvetica;
+  margin-botton: 10px;
+}
+
+.container {
+  padding: 0;
+  margin: 0 auto;
+  background: white;
+  height: 100%;
 }
 
 /* header */
 
 header {
-  background: url("../images/header.jpg");
-  width: 980px;
+  width: 960px;
   height: 276px;
+  margin: 0 auto;
   background-repeat: no-repeat;
 }
 
-.title-top {
-  font-family: Open Sans, sans-serif;
-  font-weight: light;
-  font-size: 32px;
-  color: #fff;
-  height: 15px;
-}
-
-.title-bottom {
-  font-family: Open Sans, sans-serif;
-  font-weight: bold;
-  font-size: 50px;
-  color: #fff;
-  line-height: 48px;
+header img {
+  height: 100%;
+  width: 100%;
 }
 
 /* nav bar */
@@ -44,19 +37,46 @@ header {
   font-size: 18px;
   line-height: 60px;
   list-style-type: none;
+  float: left;
+  width: 200px;
+  height: 100%;
+  transition: width ease .5s;
+  padding: 0;
+  margin: 0;
+  background-image:
+    linear-gradient(
+      to right,
+      #ebeced, #d1d5d6
+    );
 }
 
 .nav a {
   text-decoration: none;
   color: #9ba0a4;
+  padding: 0;
 }
 
-.selected a {
+.nav a img {
+  margin-left: 15px;
+}
+
+a:focus {
   font-weight: semibold;
   color: #36abe1;
 }
 
+li:focus {
+  background-color: white;
+}
+
 /* Baby Steps */
+
+.babysteps {
+  overflow: auto;
+  height: 250px;
+  width: 75%;
+  background-color: white;
+}
 
 .bs-header {
   font-family: Source Sans Pro, sans-serif;
@@ -72,4 +92,8 @@ header {
   font-size: 18px;
   color: #5c6366;
   line-height: 20px;
+}
+
+.panel {
+  height: 300px;
 }
