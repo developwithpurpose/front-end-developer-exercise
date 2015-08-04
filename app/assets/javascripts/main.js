@@ -48,7 +48,7 @@
             if (array[i][0] == undefined) {
               return;
               } else {
-                $('.bs' + (i + 1)).append('<p class="friends">' + array[i][0].firstName + array[i][0].lastName + ' is also in Baby Step ' + i + '</p>')
+                $('.bs' + (i + 1)).append('<p class="friends">' + array[i][0].firstName + ' ' + array[i][0].lastName + ' is also in Baby Step ' + i + '</p>')
               }
             } else if (array[i].length == 2) {
               $('.bs' + (i + 1)).append('<p class="friends">' + array[i][0].firstName + ' ' + array[i][0].lastName + ' and ' + array[i][1].firstName + ' ' + array[i][1].lastName + ' are also in Baby Step ' + i + '</p>')
