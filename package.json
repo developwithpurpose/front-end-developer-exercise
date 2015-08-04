@@ -16,5 +16,9 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-html-validation": "^0.1.18",
     "matchdep": "^0.3.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "jquery-smooth-scroll": "^1.5.5"
   }
 }
