@@ -42,9 +42,7 @@
       appendFriends(friends)
       function appendFriends(array) {
         for(var i = 0; i < 7; i++) {
-          //console.log(array[i]);
           if (array[i].length == 1) {
-            //console.log(array[i][0]);
             if (array[i][0] == undefined) {
               return;
               } else {
