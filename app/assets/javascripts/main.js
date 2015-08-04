@@ -3,9 +3,9 @@
 
     var target = $( $(this).attr('href') );
 
-    event.preventDefault();
-    $('.babysteps').animate({
-      scrollTop: target.offset().top - 300
+    $.smoothScroll({
+      scrollElement: $('div.babysteps'),
+      scrollTarget: target
     });
     return false;
   });
@@ -51,9 +51,9 @@
                 $('.bs' + (i + 1)).append('<p class="friends">' + array[i][0].firstName + array[i][0].lastName + ' is also in Baby Step ' + i + '</p>')
               }
             } else if (array[i].length == 2) {
-              $('.bs' + (i + 1)).append('<p class="friends">' + array[i][0].firstName + array[i][0].lastName + ' and ' + array[i][1].firstName + array[i][1].lastName + ' are also in Baby Step ' + i + '</p>')
+              $('.bs' + (i + 1)).append('<p class="friends">' + array[i][0].firstName + ' ' + array[i][0].lastName + ' and ' + array[i][1].firstName + ' ' + array[i][1].lastName + ' are also in Baby Step ' + i + '</p>')
             } else if (array[i].length > 2) {
-              $('.bs' + (i + 1)).append('<p class="friends">' + array[i][0].firstName + array[i][0].lastName + ', ' + array[i][1].firstName + array[i][1].lastName + ' and ' + (array[i].length - 2) + 'others are also in Baby Step ' + i + '</p>')
+              $('.bs' + (i + 1)).append('<p class="friends">' + array[i][0].firstName + ' ' + array[i][0].lastName + ', ' + array[i][1].firstName + ' ' + array[i][1].lastName + ' and ' + (array[i].length - 2) + 'others are also in Baby Step ' + i + '</p>')
             }
           }
         }
