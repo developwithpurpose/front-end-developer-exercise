@@ -1,0 +1,62 @@
+//main nav
+ul.steps {
+  background: #fff;
+  width: 300px;
+  float: left;
+  margin-right: 70px;
+  padding-left: 0;
+  list-style-type: none;
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+  
+  li {
+    @include linear-gradient(to right, $grayNav1 95%, $grayNav2 5%, $fallback: $grayNav1) ;    
+    padding-left: 100px;    
+    margin-bottom: 1px;
+  }
+
+  li:last-child {
+    padding: 0 0 169px 0;  
+  }
+  
+  .active {
+    font-weight: 600;
+    color: $ltBlue;
+    background: #fff;
+    transition: .2s;
+
+    //sprite position -- blue
+    .spr1 { background-position: 0 -175px; }
+    .spr2 { background-position: 0 -200px; }
+    .spr3 { background-position: 0 -225px; }
+    .spr4 { background-position: 0 -250px; }
+    .spr5 { background-position: 0 -275px; }
+    .spr6 { background-position: 0 -300px; }
+    .spr7 { background-position: 0 -325px; }
+  }
+}
+
+//small icons
+.sprite {
+  background-image: url("/build/images/assets/images/icons/sprites/icons_small.png");
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 30px;
+  float: right;
+  clear: left;
+  margin-right: 30px;
+  margin-top: 15px;
+}
+
+//sprite position --gray
+.spr1 { background-position: 0 0; }
+.spr2 { background-position: 0 -25px; }
+.spr3 { background-position: 0 -50px; }
+.spr4 { background-position: 0 -75px; }
+.spr5 { background-position: 0 -100px; }
+.spr6 { background-position: 0 -125px; }
+.spr7 { background-position: 0 -150px; }
+

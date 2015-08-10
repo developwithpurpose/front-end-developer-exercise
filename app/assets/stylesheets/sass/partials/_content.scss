@@ -1,0 +1,66 @@
+//main content
+.content {
+  font-family: "Source Sans Pro";
+  line-height: 20px;  
+  margin: 15px 70px 0 0;
+  
+  .heading {
+    font-weight: 600;
+    font-size: 30px;
+    color: $ltBlue;
+    padding-top: 20px;
+    margin: 0 0 0 0;
+  }
+
+  .subheading {
+    font-weight: 300;
+    font-size: 18px;
+    color: #5c6366;
+    margin: 0 0 0 0;
+    padding-top: 5px;
+  }
+
+  header {
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-family: "Helvetica";
+    font-size: 13px;
+    color: $darkGray;
+    line-height: 18px;
+  }
+
+  .social {
+    font-weight: 600;
+    margin-top: 40px;
+    height: 100%;
+    color: $darkGray;
+
+    .name {
+      color: #6fbee7;
+    }
+  }
+}
+
+//large icons
+.stepLogo {
+  background-image: url("/build/images/assets/images/icons/sprites/icons_large.png");
+  background-repeat: no-repeat;
+  height: 64px;
+  width: 79px;
+  float: left;
+  margin-right: 10px;
+}
+
+//sprite position
+.stepLogo1 { background-position: 0 -455px; }
+.stepLogo2 { background-position: 0 -510px; }
+.stepLogo3 { background-position: 0 -575px; }
+.stepLogo4 { background-position: 0 -645px; }
+.stepLogo5 { background-position: 0 -712px; }
+.stepLogo6 { background-position: 0 -778px; }
+.stepLogo7 { background-position: 0 -842px; }
+
+
+

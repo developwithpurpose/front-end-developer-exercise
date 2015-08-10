@@ -1,0 +1,17 @@
+.step1, .step2, .step3, .step4, .step5, .step6, .step7 {
+  @include animation(fadeIn 1s);
+}
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 1;
+  }
+}
+
+
+
+
+

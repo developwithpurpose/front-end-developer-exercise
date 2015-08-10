@@ -6,12 +6,46 @@ module.exports = function( grunt ) {
 
   grunt.initConfig({
       pkg: grunt.file.readJSON( "package.json" ),
+      cssmin: {
+        target: {
+          files: {
+            "app/assets/stylesheets/css/main.css" : "app/assets/stylesheets/css/main.css"
+          }        
+        }
+      },
+      imagemin: {
+        static: {
+          options: {
+            optimizationLevel: 3,
+          },
+          files: [{
+            expand: true,
+            cwd: "app",
+            src: ["**/*.{png,jpg,gif}", "**/**/*.{png,jpg,gif}"],
+            dest: "build/images"
+          }]
+        }
+      },
       jshint: {
-        all: [ "Gruntfile.js", "app/assets/javascripts/**/*.js", "spec/*.js" ],
+        all: [ "Gruntfile.js", "app/assets/javascripts/*.js", "spec/*.js" ],
         options: {
           jshintrc: ".jshintrc"
         }
       },
+      postcss: {
+            options: {
+                map: true,
+                processors: [
+                    require('autoprefixer-core')({
+                        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+                    })
+                ]
+            },
+            dist: {
+                src: 'app/assets/stylesheets/css/main.css',
+                dest: 'build/stylesheets/main.css'
+            }
+       },
       uglify: {
         build: {
           files: [{
@@ -45,7 +79,21 @@ module.exports = function( grunt ) {
         lint: {
           files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
           tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
-        }
+        },
+        livereload: {
+           options: {
+            livereload: true
+           },
+           files: [
+            "app/assets/stylesheets/css/main.css",
+            "app/assets/javascripts/main.js",
+            "app/index.html"
+            ]
+          }, 
+         sass: {
+          files: ["app/assets/stylesheets/sass/main.scss"],
+          tasks: ["sass:dev", "autoprefixer"]
+         }    
       },
       jasmine: {
         pivotal: {
@@ -53,7 +101,8 @@ module.exports = function( grunt ) {
           options: {
             specs: "spec/**/*.spec.js",
             vendor: [
-              "vendor/**/*.js"
+              "bower_components/jquery/dist/jquery.js",
+              "bower_components/jasmine-jquery/lib/jasmine-jquery.js"            
             ],
             template: "spec/index.tmpl"
           }
@@ -75,9 +124,47 @@ module.exports = function( grunt ) {
       strict: {
         src: [ "app/assets/stylesheets/**/*.css" ]
       }
-    }
-  });
+    },
+    sass: {
+      prod: {
+        options: {
+          outputStyle: "compressed",
+          loadPath: require("node-bourbon").includePaths
+        }, 
+        files: {
+          "app/assets/stylesheets/css/main.css" : "app/assets/stylesheets/sass/main.scss"
+        }
+      }, 
+      dev: {
+        options: {
+          sourceMap: true,
+          sourceMapEmbed: true
+        },
+        files: {
+          "app/assets/stylesheets/css/main.css" : "app/assets/stylesheets/sass/main.scss"
+        }
+      }    
+    } 
+});
 
   grunt.registerTask( "default", ["connect"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
+  grunt.registerTask( "build", [
+    "clean",
+    "sass:prod",
+    "postcss",
+    "uglify",
+    "cssmin",
+    "imagemin"
+  ]);
+  grunt.registerTask( "build-dev", [
+    "clean",
+    "sass:dev",
+    "postcss"
+  ]);
+  grunt.registerTask( "serve", [
+    "build-dev",
+    "connect",
+    "watch"    
+  ]);
 };
