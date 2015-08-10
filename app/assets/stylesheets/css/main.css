@@ -56,7 +56,7 @@ ul.steps {
     font-weight: 600;
     color: #36abe1;
     background: #fff;
-    transition: .3s; }
+    transition: .2s; }
     ul.steps .active .spr1 {
       background-position: 0 -175px; }
     ul.steps .active .spr2 {
