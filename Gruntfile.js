@@ -34,7 +34,11 @@ module.exports = function( grunt ) {
     },
     validation: {
       options: {
-        stoponerror: false
+        stoponerror: false,
+        relaxerror: [
+          "The Content-Type was “text/html”. Using the HTML parser.",
+          "Using the schema for HTML with SVG 1.1, MathML 3.0, RDFa 1.1, and ITS 2.0 support."
+        ],
       },
       files: {
         src: [ "app/**/*.html" ]
