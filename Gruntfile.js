@@ -41,7 +41,7 @@ module.exports = function( grunt ) {
       }
     },
     clean: {
-      validation: [ "validation-*.json" ]
+      validation: [ "validation-*.json", "w3cErrors" ]
     },
     watch: {
       test: {
