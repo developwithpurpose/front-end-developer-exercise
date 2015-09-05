@@ -5,75 +5,88 @@ module.exports = function( grunt ) {
     .forEach( grunt.loadNpmTasks );
 
   grunt.initConfig({
-      pkg: grunt.file.readJSON( "package.json" ),
-      jshint: {
-        all: [ "Gruntfile.js", "app/assets/javascripts/**/*.js", "spec/*.js" ],
-        options: {
-          jshintrc: ".jshintrc"
-        }
-      },
-      uglify: {
-        build: {
-          files: [{
-            expand: true,
-            cwd: "app/assets/javascripts",
-            src: "**/*.js",
-            dest: "build/javascripts",
-            reset: true
-          }]
-        }
-      },
-      validation: {
-        options: {
-          stoponerror: false
-        },
+    pkg: grunt.file.readJSON( "package.json" ),
+    appdir: "app/assets/",
+    builddir: "build/",
+    jshint: {
+      all: [ "Gruntfile.js", "<%=appdir%>javascripts/**/*.js", "spec/*.js" ],
+      options: {
+        jshintrc: ".jshintrc"
+      }
+    },
+    uglify: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: "<%=appdir%>javascripts",
+          src: "**/*.js",
+          dest: "<%=builddir%>javascripts",
+          reset: true
+        }]
+      }
+    },
+    stylus: {
+      compile: {
         files: {
-          src: [ "app/**/*.html" ]
+          "<%=builddir%>stylesheets/main.css": "<%=appdir%>stylesheets/**/*.styl"
+        }
+      }
+    },
+    validation: {
+      options: {
+        stoponerror: false
+      },
+      files: {
+        src: [ "app/**/*.html" ]
+      }
+    },
+    clean: {
+      validation: [ "validation-*.json" ]
+    },
+    watch: {
+      test: {
+        files: [ "<%= jshint.all %>" ],
+        tasks: [ "uglify", "jasmine" ],
+        options: {
+          livereload: 9000
         }
       },
-      clean: {
-        validation: [ "validation-*.json" ]
+      lint: {
+        files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
+        tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
       },
-      watch: {
-        test: {
-          files: [ "<%= jshint.all %>" ],
-          tasks: [ "uglify", "jasmine" ],
-          options: {
-            livereload: 9000
-          }
-        },
-        lint: {
-          files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
-          tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
+      styles: {
+        files: ["<%= stylus.compile.files[Object.keys(stylus.compile.files)[0]] %>"],
+        tasks: [ "stylus" ]
+      }
+    },
+    jasmine: {
+      pivotal: {
+        src: "<%=builddir%>javascripts/**/*.js",
+        options: {
+          specs: "spec/**/*.spec.js",
+          vendor: [
+            "vendor/**/*.js"
+          ],
+          template: "spec/index.tmpl"
         }
-      },
-      jasmine: {
-        pivotal: {
-          src: "build/javascripts/**/*.js",
-          options: {
-            specs: "spec/**/*.spec.js",
-            vendor: [
-              "vendor/**/*.js"
-            ],
-            template: "spec/index.tmpl"
-          }
+      }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          livereload: true,
+          keepalive: true
         }
-      },
-      connect: {
-        server: {
-          options: {
-            port: 9001,
-            livereload: true,
-            keepalive: true
-          }
-        }
-      },
+      }
+    },
     csslint: {
       options: {
         csslintrc: ".csslintrc"
       },
       strict: {
-        src: [ "app/assets/stylesheets/**/*.css" ]
+        src: [ "<%=appdir%>stylesheets/**/*.css", "<%= Object.keys(stylus.compile.files)[0] %>" ]
       }
     }
   });
