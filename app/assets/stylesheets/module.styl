@@ -1,0 +1,184 @@
+/**
+ * MAIN BLOCK CONTAINER
+ */
+.block
+  background white
+  position relative
+
+  &:before
+    content url('/app/assets/images/shadow_left.jpg')
+    position absolute
+    top 0
+    right 100%
+
+  &:after
+    content url('/app/assets/images/shadow_right.jpg')
+    position absolute
+    left 100%
+    top 0
+
+// END MAIN BLOCK CONTAINER
+
+/**
+ * PHOTOGRAPHIC HEADER
+ */
+.header
+  background url('/app/assets/images/header.jpg')
+
+  // Float caption over
+  // @todo Fix the wonky word wrap on this when zooming in / out
+  &__caption
+    color #fff
+    font-family "Open Sans"
+    font-weight 300
+    font-size 32px
+    width 55%
+    text-align right
+    line-height 1em
+    padding 50px 70px 0 0
+
+
+    & strong
+      text-transform uppercase
+      font-weight 700
+      font-size 50px
+      display block
+      margin-top 15px
+      line-height 48px
+
+  // END PHOTOGRAPHIC HEADER
+
+/**
+ * STEPS NAVIGATOR
+ */
+.steps
+  text-align right
+  font-family "Source Sans Pro"
+  font-size 18px
+  line-height 60px
+  padding-bottom 100px
+
+  &__step
+    border-bottom 1px solid white
+    display block
+    padding 0 24px
+    font-weight 400
+    color #9ba0a4
+
+    //Active State
+    &--active
+      background-color white
+      color #36abe1
+      font-weight 600
+
+    & i
+      margin-left 24px
+
+// END STEP NAVIGATOR
+
+/**
+ * STEP READER
+ */
+.stepdetail
+  padding 0 70px
+
+  &__header
+    font-family "Source Sans Pro"
+    margin-bottom 24px
+
+  &__title
+    font-size 30px
+    font-weight 600
+
+  &__subtitle
+    font-size 18px
+    font-weight 300
+
+  &__body
+    margin-bottom 18px
+
+  &__friends
+    margin-top 40px
+
+// END STEP READER
+
+/**
+ * ICON SPRITES
+ */
+.icon
+  display inline-block
+  vertical-align middle
+  width 30px
+  height 25px
+  overflow hidden
+  position relative
+
+  &:after, &:before
+    content url('/app/assets/images/icons/sprites/icons_small.png')
+    position absolute
+    zoom 1
+    top 0
+    left 0
+    transition opacity .5s
+
+  &:before
+    opacity 0
+    .ie8 &
+      display none
+
+  &:after
+    opacity 1
+    .ie8 &
+      display block
+
+  //Ugly glue between stepnav and icon state.
+  .steps__step--active &:before, &--active:before
+    opacity 1
+    .ie8 &
+      display block
+
+  //Ugly glue between stepnav and icon state.
+  .steps__step--active &:after, &--active:after
+    opacity 0
+    .ie8 &
+      display none
+
+  &--big
+    width 77px
+    height 65px
+
+    &:after, &:before
+      content url('/app/assets/images/icons/sprites/icons_large.png')
+
+  for row in 0 1 2 3 4 5 6
+    &__step{row + 1}:after
+      top -25px * row
+
+    &__step{row + 1}:before
+      top -25px * (row + 7)
+
+    &--big&__step{row + 1}:after
+      top -65px * row
+
+    &--big&__step{row + 1}:before
+      top -65px * (row + 7)
+
+// END ICON SPRITES
+
+/**
+ * MEDIA BOX
+ */
+.media
+  display block
+
+  &__content
+    display inline-block
+    vertical-align middle
+    width 77px
+
+  &__caption
+    display inline-block
+    vertical-align middle
+    padding 0 20px
+
+// END MEDIA BOX
