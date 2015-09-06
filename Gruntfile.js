@@ -27,8 +27,13 @@ module.exports = function( grunt ) {
     },
     stylus: {
       compile: {
+        options: {
+          "include css": true
+        },
         files: {
-          "<%=builddir%>stylesheets/main.css": "<%=appdir%>stylesheets/**/*.styl"
+          "<%=builddir%>stylesheets/main.css": [
+            "<%=appdir%>stylesheets/style.styl"
+          ]
         }
       }
     },
@@ -55,13 +60,13 @@ module.exports = function( grunt ) {
           livereload: 9000
         }
       },
+      styles: {
+        files: ["<%=appdir%>**/*.css", "<%=appdir%>**/*.styl"],
+        tasks: [ "stylus" ]
+      },
       lint: {
         files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
         tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
-      },
-      styles: {
-        files: ["<%= stylus.compile.files[Object.keys(stylus.compile.files)[0]] %>"],
-        tasks: [ "stylus" ]
       }
     },
     jasmine: {
@@ -90,7 +95,7 @@ module.exports = function( grunt ) {
         csslintrc: ".csslintrc"
       },
       strict: {
-        src: [ "<%=appdir%>stylesheets/**/*.css", "<%= Object.keys(stylus.compile.files)[0] %>" ]
+        src: [ "<%=builddir%>**/*.css", "<%=appdir%>**/*.css" ]
       }
     }
   });
