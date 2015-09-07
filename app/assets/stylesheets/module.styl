@@ -64,12 +64,16 @@
     padding 0 24px
     font-weight 400
     color #9ba0a4
+    transition background-color .1s
 
     //Active State
     &--active
       background-color white
       color #36abe1
       font-weight 600
+
+    &:hover
+      background-color rgba(50,50,65,.1)
 
     & i
       margin-left 24px
@@ -82,9 +86,17 @@
 .stepdetail
   padding 0 70px
 
+  &__step
+    padding-bottom 70px
+
   &__header
     font-family "Source Sans Pro"
-    margin-bottom 24px
+    // Adjusted this down 8px from the annotated mockup,
+    // as the mockup measured from baseline to X height,
+    // and this margin starts after any descenders. This
+    // adjustment puts the baseline about 24px from the
+    // next line's X height.
+    margin-bottom 16px
 
   &__title
     font-size 30px
@@ -98,7 +110,8 @@
     margin-bottom 18px
 
   &__friends
-    margin-top 40px
+    // See above justification for this 8px alteration.
+    margin-top 32px
 
 // END STEP READER
 
@@ -132,13 +145,15 @@
       display block
 
   //Ugly glue between stepnav and icon state.
-  .steps__step--active &:before, &--active:before
+  .steps__step--active &:before,
+  &--active:before
     opacity 1
     .ie8 &
       display block
 
   //Ugly glue between stepnav and icon state.
-  .steps__step--active &:after, &--active:after
+  .steps__step--active &:after,
+  &--active:after
     opacity 0
     .ie8 &
       display none
@@ -170,15 +185,18 @@
  */
 .media
   display block
+  position relative
 
   &__content
-    display inline-block
-    vertical-align middle
+    position absolute
+    display block
+    left 0
+    top 50%
+    margin-top -33px
     width 77px
 
   &__caption
-    display inline-block
-    vertical-align middle
-    padding 0 20px
+    display block
+    padding 0 20px 0 97px
 
 // END MEDIA BOX
