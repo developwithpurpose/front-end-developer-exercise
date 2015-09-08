@@ -1,0 +1,194 @@
+(
+    function (document, window)
+    {
+        "use strict";
+
+        var loadedModules = {};
+
+        if (window.bootstrap) {
+            scripts([window.bootstrap]);
+        }
+
+        /**
+         * Add a script to the document.
+         *
+         * Normally I do this type of loading through RequireJS, but as I'm only
+         * allowed jQuery for this particular code challenge, I thought it would
+         * be interesting to write a rudimentary replacement.
+         *
+         * This basically is just here for managing global dependencies, and making
+         * sure that load orders are respected, so I don't have to do so repeatedly
+         * in individual files.
+         *
+         * @param url
+         * @param callback
+         */
+        function script(url, callback)
+        {
+            var node = document.createElement("script");
+            node.async = true;
+            node.type = "text/javascript";
+            node.charset = "utf-8";
+
+            if (typeof callback === 'function') {
+                onLoad(node, callback);
+            }
+
+            node.src = url;
+            (document.head || document.getElementsByTagName('head')[0]).appendChild(node);
+            return node;
+        }
+
+        /**
+         * Add a load handler to the provided node
+         *
+         * @param node
+         * @param callback
+         */
+        function onLoad(node, callback)
+        {
+            if (node.readyState === "complete") {
+                callback();
+            } else if (node.attachEvent) {
+                node.attachEvent("onreadystatechange", function(e) {
+                    if ((e.currentTarget || e.srcElement).readyState === 'loaded') {
+                        callback();
+                    }
+                });
+            } else if(node.addEventListener) {
+                node.addEventListener("load", callback, false);
+            }
+        }
+
+        /**
+         * Add multiple scripts to the document.
+         *
+         * @param urls
+         * @param callback
+         */
+        function scripts(urls, callback) {
+            if (urls.length === 0) {
+                callback();
+            } else {
+                var loaded = 0;
+
+                for (var i = 0; i < urls.length; i++) {
+                    var url = urls[i];
+
+                    if (!loadedModules[url]) {
+                        loadedModules[url] = createModuleBuffer(url);
+                    }
+
+                    loadedModules[url].buffer(function() {
+                        loaded++;
+                        if (loaded === urls.length && typeof callback === 'function') {
+                            callback();
+                        }
+                    });
+                }
+            }
+
+        }
+
+        /**
+         * Creates a callback buffer for a particular URL, and loads the script.
+         *
+         * While the script is loading, it will hold onto any callbacks it receives.
+         * Once it is loaded, it will sequentially execute each callback in order (FIFO),
+         * and replace the buffering functionality with an immediate execution call.
+         *
+         * @param url
+         */
+        function createModuleBuffer(url) {
+            return new ModuleBuffer(url);
+        }
+
+        /**
+         * Responsible for handling how we access Modules
+         *
+         * @param url
+         * @constructor
+         */
+        function ModuleBuffer(url) {
+
+            var self = this;
+
+            self.modulesWaiting = [];
+
+            self.__delegate = function (cb) {
+                self.modulesWaiting.push(cb);
+            };
+
+            self.buffer = function(cb) {
+                self.__delegate(cb);
+            };
+
+            self.script = script(
+                url,
+                function () {
+                    //self.complete();
+                }
+            );
+
+            self.module = null;
+
+            self.url = url;
+
+        }
+
+        /**
+         * Complete the function by
+         */
+        ModuleBuffer.prototype.complete = function () {
+            for (var j = 0; j < this.modulesWaiting.length; j++) {
+                this.modulesWaiting[j]();
+                delete this.modulesWaiting[j];
+            }
+            this.__delegate = function(cb) {
+                cb();
+            };
+        };
+
+        function getActiveModuleBuffer()
+        {
+            var active = false;
+            for (var i in loadedModules) {
+                if (typeof loadedModules[i].script.readyState === "undefined" || loadedModules[i].script.readyState === "interactive") {
+                    active = loadedModules[i];
+                }
+            }
+            return active;
+        }
+
+        /**
+         * Public API.
+         *
+         * @param {[...string[]]} urls
+         * @param {function} module
+         */
+        window.use = function (urls, module) {
+            var deps = [],
+                callback;
+
+            for (var i = 0; i < arguments.length; i++) {
+                if (typeof arguments[i] === "string") {
+                    deps.push(arguments[i]);
+                } else {
+                    callback = arguments[i];
+                }
+            }
+
+            var modBuf = getActiveModuleBuffer();
+            var wrapped_fn = function()
+            {
+                if (callback) {
+                    modBuf.module = callback();
+                }
+                modBuf.complete();
+                return modBuf.module;
+            }
+            scripts(deps, wrapped_fn);
+
+        };
+    }
+) (document, window);

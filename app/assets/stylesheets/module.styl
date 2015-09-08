@@ -66,14 +66,16 @@
     color #9ba0a4
     transition background-color .1s
 
+    &:hover
+      background-color rgba(50,50,65,.1)
+
     //Active State
-    &--active
+    .js &--active, .js &--active:hover
       background-color white
       color #36abe1
       font-weight 600
-
-    &:hover
-      background-color rgba(50,50,65,.1)
+      cursor default
+      text-decoration none
 
     & i
       margin-left 24px
@@ -88,6 +90,12 @@
 
   &__step
     padding-bottom 70px
+
+    .js &
+      display none
+
+    .js &--active
+      display block
 
   &__header
     font-family "Source Sans Pro"
@@ -112,7 +120,6 @@
   &__friends
     // See above justification for this 8px alteration.
     margin-top 32px
-
 // END STEP READER
 
 /**
@@ -145,14 +152,14 @@
       display block
 
   //Ugly glue between stepnav and icon state.
-  .steps__step--active &:before,
+  .js .steps__step--active &:before,
   &--active:before
     opacity 1
     .ie8 &
       display block
 
   //Ugly glue between stepnav and icon state.
-  .steps__step--active &:after,
+  .js .steps__step--active &:after,
   &--active:after
     opacity 0
     .ie8 &
