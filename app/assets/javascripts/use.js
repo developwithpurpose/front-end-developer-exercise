@@ -30,12 +30,12 @@
             node.type = "text/javascript";
             node.charset = "utf-8";
 
-            if (typeof callback === 'function') {
+            if (typeof callback === "function") {
                 onLoad(node, callback);
             }
 
             node.src = url;
-            (document.head || document.getElementsByTagName('head')[0]).appendChild(node);
+            (document.head || document.getElementsByTagName("head")[0]).appendChild(node);
             return node;
         }
 
@@ -51,7 +51,7 @@
                 callback();
             } else if (node.attachEvent) {
                 node.attachEvent("onreadystatechange", function(e) {
-                    if ((e.currentTarget || e.srcElement).readyState === 'loaded') {
+                    if ((e.currentTarget || e.srcElement).readyState === "loaded") {
                         callback();
                     }
                 });
@@ -80,7 +80,7 @@
 
                     moduleBuffer.buffer(function() {
                         loaded++;
-                        if (loaded === urls.length && typeof callback === 'function') {
+                        if (loaded === urls.length && typeof callback === "function") {
                             callback();
                         }
                     });
@@ -180,7 +180,6 @@
 
             /**
              * Whether or not this method has loaded
-             * @todo this needs to not complete until all of my subdependencies are loaded.
              * @type {boolean}
              */
             self.loaded = false;
@@ -197,7 +196,7 @@
          * Complete the module by
          */
         ModuleBuffer.prototype.complete = function () {
-            self.loaded = true;
+            this.loaded = true;
             for (var i = 0; i < this.modulesWaiting.length; i++) {
                 if (typeof this.modulesWaiting[i] === "function") {
                     this.modulesWaiting[i]();
@@ -243,10 +242,10 @@
         /**
          * Public API.
          *
-         * @param {[...string[]]} urls
-         * @param {function} module
+         * @param {[...string[]]} deps
+         * @param {function} callback
          */
-        window.use = function (urls, module) {
+        window.use = function () {
             var deps = [],
                 callback;
 

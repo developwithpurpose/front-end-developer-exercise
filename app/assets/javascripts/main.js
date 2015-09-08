@@ -43,7 +43,7 @@ use(
         function slideTo(to, from) {
             var $to = $(to);
             var $from = $(from);
-            var $others = $to.siblings().filter(function() { return this != from; });
+            var $others = $to.siblings().filter(function() { return this !== from; });
             var $list = $(to.parentNode);
             var offset = 10;
 
@@ -61,9 +61,9 @@ use(
                         {
                             step: function(now) {
                                 if (from) {
-                                    var mod = 1 - Math.abs(normalizeAt(now,.8));
+                                    var mod = 1 - Math.abs(normalizeAt(now, 0.8));
                                     var deg = (down ? -1 : 1 ) * mod * 15;
-                                    $(this).css("transform", "perspective(500px) rotate3d(1, 0, 0, " + deg + "deg)")
+                                    $(this).css("transform", "perspective(500px) rotate3d(1, 0, 0, " + deg + "deg)");
                                 }
                             },
                             duration: 400
@@ -81,7 +81,7 @@ use(
                             $from.hide();
                             $list.css("top", offset + "px");
                         }
-                    )
+                    );
                 },
                 0
             );
@@ -95,7 +95,7 @@ use(
          * @param pin
          */
         function normalizeAt(val, pin) {
-            pin = pin || .5;
+            pin = pin || 0.5;
             var rev = val < pin;
 
             var low,
@@ -131,7 +131,7 @@ use(
                     step = friends[0].babyStep;
 
                 for (var i = 0; i < byName.length; i++) {
-                    names.push('<a href="#ABSTRACT">' + byName[i].firstName + " " + byName[i].lastName + '</a>');
+                    names.push("<a href=\"#ABSTRACT\">" + byName[i].firstName + " " + byName[i].lastName + "</a>");
                 }
 
                 if (numExtra) {
@@ -151,13 +151,14 @@ use(
          * @returns {Array}
          */
         function getRandomMembers(ary, max) {
-            var keys = [];
-            for (var i in ary) {
+            var keys = [],
+                i;
+            for (i in ary) {
                 keys.push(i);
             }
 
             var output = [];
-            for (var i = 0; i < max && keys.length; i++) {
+            for (i = 0; i < max && keys.length; i++) {
                 var key = Math.floor(Math.random() * keys.length);
                 output.push(ary[keys[key]]);
                 keys.splice(key, 1);
@@ -177,7 +178,7 @@ use(
             for (var i in ary) {
                 if (output) {
                     output += len > 2 ? ", " : " ";
-                    output += (i == len - 1) ? "and " : "";
+                    output += (parseInt(i) === len - 1) ? "and " : "";
                 }
                 output += ary[i]
             }

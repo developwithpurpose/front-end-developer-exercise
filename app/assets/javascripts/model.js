@@ -57,11 +57,11 @@ use(
             );
 
             // Get each stepdetail and link, and drop them in the steps array.
-            $('.steps__step').each(
+            $(".steps__step").each(
                 function (i, stepLink) {
                     model.steps[i + 1] = {
                         link: stepLink,
-                        detail: document.getElementById(stepLink.href.replace(/^.*#/, '')),
+                        detail: document.getElementById(stepLink.href.replace(/^.*#/, "")),
                         friends: []
                     };
                 }
@@ -86,7 +86,7 @@ use(
          * @param {int} step
          */
         function selectStep(step) {
-            if (model.activeStep != step && typeof model.steps[step] !== "undefined") {
+            if (model.activeStep !== step && typeof model.steps[step] !== "undefined") {
                 var from = model.activeStep;
                 model.activeStep = step;
                 events.trigger("change", model.steps[model.activeStep], model.steps[from]);

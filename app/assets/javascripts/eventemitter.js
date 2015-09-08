@@ -5,10 +5,10 @@ use(
         /**
          * Basic event emission.
          *
-         * @param {[...string]} eventType
+         * @param {[...string]} eventTypes
          * @constructor
          */
-        function EventEmitter(eventType) {
+        function EventEmitter() {
             var self = this;
 
             self.handlers = {};
@@ -38,11 +38,12 @@ use(
             trigger: function(event) {
                 validateEventType(event, this);
                 var args = [];
-                for (var i = 1; i < arguments.length; i++) {
+                var i;
+                for (i = 1; i < arguments.length; i++) {
                     args.push(arguments[i]);
                 }
 
-                for (var i = 0; i < this.handlers[event].length; i++)
+                for (i = 0; i < this.handlers[event].length; i++)
                 {
                     this.handlers[event][i].apply({}, args);
                 }
