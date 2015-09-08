@@ -37,6 +37,8 @@ use(
         }
 
         /**
+         * Stringy transition code.
+         *
          * @param {HTMLElement} to
          * @param {HTMLElement} from
          */
@@ -54,8 +56,8 @@ use(
             var down = from.offsetTop > to.offsetTop;
             $list.css("top", -(down ? from.offsetTop : 0) + offset + "px");
 
-            setTimeout(
-                function() {
+            //setTimeout(
+            //    function() {
                     $to.animate(
                         {"opacity": 1},
                         {
@@ -82,9 +84,9 @@ use(
                             $list.css("top", offset + "px");
                         }
                     );
-                },
-                0
-            );
+          //      },
+           //     0
+            //);
 
         }
 
@@ -135,7 +137,7 @@ use(
                 }
 
                 if (numExtra) {
-                    names.push(numExtra + " more friend" + (numExtra === 1 ? "" : "s"));
+                    names.push(numExtra + " other friend" + (numExtra === 1 ? "" : "s"));
                 }
 
                 output = oxford(names) + (total > 1 ? " are " : " is ") + "also in Baby Step " + step + ".";

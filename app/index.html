@@ -8,8 +8,15 @@
         <link rel="stylesheet" href="/build/stylesheets/main.css">
 
         <script>
+            // Note:: root can be switched between
+            //
+            // BUILD : "/build/javascripts/"
+            // SRC :   "/app/assets/javascripts/"
+            //
+            // and use() will load its relative dependencies
+            // from the declared directory.
             window.useConfig = {
-                root: "/build/javascripts/",
+                root: "/app/assets/javascripts/",
                 app: "main.js"
             };
             document.documentElement.className = document.documentElement.className.replace("no-js", "js");
