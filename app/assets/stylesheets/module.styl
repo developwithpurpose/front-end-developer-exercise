@@ -87,15 +87,14 @@
  */
 .stepdetail
   padding 0 70px
+  position relative
 
   &__step
     padding-bottom 70px
+    perspective 50em
 
     .js &
       display none
-
-    .js &--active
-      display block
 
   &__header
     font-family "Source Sans Pro"
@@ -193,9 +192,11 @@
 .media
   display block
   position relative
+  opacity inherit
 
   &__content
     position absolute
+    opacity inherit
     display block
     left 0
     top 50%
@@ -204,6 +205,7 @@
 
   &__caption
     display block
+    opacity inherit
     padding 0 20px 0 97px
 
 // END MEDIA BOX

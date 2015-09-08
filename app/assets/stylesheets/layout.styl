@@ -11,6 +11,10 @@ contentheight = blockheight - headheight - headmargin
   margin 0 auto
   min-height blockheight
 
+  .js &
+    height blockheight
+    overflow hidden
+
 /**
  * PHOTOGRAPHIC HEADER
  */
@@ -29,6 +33,9 @@ contentheight = blockheight - headheight - headmargin
   clearfix()
   min-height contentheight
   display table
+
+  .js &
+    overflow hidden
 
   &__col
     display table-cell

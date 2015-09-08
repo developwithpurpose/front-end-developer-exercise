@@ -6,22 +6,17 @@ use(
         "use strict";
 
         var activeLink = "steps__step--active",
-            activeDetail = "stepdetail__step--active",
-            link = ".steps__step",
-            detail = ".stepdetail__step";
-
-        updateUI();
+            link = ".steps__step";
 
         /**
          * Update the UI according to the current state of the model.
          */
-        function updateUI() {
-            var step = model.steps[model.activeStep];
-
-            for (var i in model.steps) {
-                setInactive (model.steps[i]);
+        function updateUI(to, from) {
+            setActive(to);
+            if (from) {
+                setInactive(from);
             }
-            setActive (step);
+            slideTo (to.detail, from ? from.detail : false);
         }
 
         /**
@@ -30,7 +25,6 @@ use(
          */
         function setInactive(step) {
             $(step.link).removeClass(activeLink);
-            $(step.detail).removeClass(activeDetail);
         }
 
         /**
@@ -40,8 +34,86 @@ use(
         function setActive(step) {
             $(step.detail).find(".stepdetail__friends").html(getFriendsHtml(step.friends));
             $(step.link).addClass(activeLink);
-            $(step.detail).addClass(activeDetail);
         }
+
+        /**
+         * @param {HTMLElement} to
+         * @param {HTMLElement} from
+         */
+        function slideTo(to, from) {
+            var $to = $(to);
+            var $from = $(from);
+            var $others = $to.siblings().filter(function() { return this != from; });
+            var $list = $(to.parentNode);
+            var offset = 10;
+
+            $others.hide();
+            $to.show().css("opacity", 0);
+            $from.show();
+
+            var down = from.offsetTop > to.offsetTop;
+            $list.css("top", -(down ? from.offsetTop : 0) + offset + "px");
+
+            setTimeout(
+                function() {
+                    $to.animate(
+                        {"opacity": 1},
+                        {
+                            step: function(now) {
+                                if (from) {
+                                    var mod = 1 - Math.abs(normalizeAt(now,.8));
+                                    var deg = (down ? -1 : 1 ) * mod * 15;
+                                    $(this).css("transform", "perspective(500px) rotate3d(1, 0, 0, " + deg + "deg)")
+                                }
+                            },
+                            duration: 400
+                        }
+                    );
+                    $from.animate(
+                        {"opacity": 0},
+                        200
+                    );
+                    $list.animate(
+                        {"top" : - (to.offsetTop - offset) + "px"},
+                        400,
+                        "swing",
+                        function() {
+                            $from.hide();
+                            $list.css("top", offset + "px");
+                        }
+                    )
+                },
+                0
+            );
+
+        }
+
+        /**
+         * Will map a 0-1 value to -1 to 1 range, with 0 being at pin.
+         *
+         * @param val
+         * @param pin
+         */
+        function normalizeAt(val, pin) {
+            pin = pin || .5;
+            var rev = val < pin;
+
+            var low,
+                high;
+            if (rev) {
+                //map low
+                low = pin;
+                high = 0;
+            } else {
+                //map
+                low = pin;
+                high = 1;
+            }
+
+            return (rev ? -1 : 1) * (val - low) / (high - low);
+        }
+
+        window.normalizeAt = normalizeAt;
 
         /**
          * Returns the markup for the friends section.
@@ -50,9 +122,9 @@ use(
          */
         function getFriendsHtml(friends) {
             var output = "",
-                total = friends.length;
+                total;
 
-            if (total) {
+            if (friends && (total = friends.length)) {
                 var byName = getRandomMembers(friends, 2),
                     numExtra = Math.max(total - 2, 0),
                     names = [],
@@ -112,6 +184,7 @@ use(
             return output;
         }
 
+        updateUI(model.steps[model.activeStep]);
         model.on("change", updateUI);
         $(".steps").on("click.updateModel", link, function() {
             model.selectStep(parseInt(this.href.replace(/^.*#step-/, "")));

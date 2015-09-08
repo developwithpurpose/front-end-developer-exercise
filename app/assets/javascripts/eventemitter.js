@@ -35,11 +35,16 @@ use(
              * @param event
              * @param data
              */
-            trigger: function(event, data) {
+            trigger: function(event) {
                 validateEventType(event, this);
+                var args = [];
+                for (var i = 1; i < arguments.length; i++) {
+                    args.push(arguments[i]);
+                }
+
                 for (var i = 0; i < this.handlers[event].length; i++)
                 {
-                    this.handlers[event][i](data);
+                    this.handlers[event][i].apply({}, args);
                 }
             }
         };

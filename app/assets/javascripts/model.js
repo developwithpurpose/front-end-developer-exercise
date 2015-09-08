@@ -36,7 +36,7 @@ use(
                  * @returns {void}
                  */
                 on: function() {
-                    return events.on.apply(events, arguments);
+                    events.on.apply(events, arguments);
                 }
             },
             events = new EventEmitter(
@@ -87,8 +87,9 @@ use(
          */
         function selectStep(step) {
             if (model.activeStep != step && typeof model.steps[step] !== "undefined") {
+                var from = model.activeStep;
                 model.activeStep = step;
-                events.trigger("change", model.steps[model.activeStep]);
+                events.trigger("change", model.steps[model.activeStep], model.steps[from]);
             }
         }
 
