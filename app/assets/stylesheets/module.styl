@@ -26,13 +26,12 @@
   background url('/app/assets/images/header.jpg')
 
   // Float caption over
-  // @todo Fix the wonky word wrap on this when zooming in / out
   &__caption
     color #fff
     font-family "Open Sans"
     font-weight 300
     font-size 32px
-    width 55%
+    width 100%
     text-align right
     line-height 1em
     padding 50px 70px 0 0
@@ -79,6 +78,12 @@
 
     & i
       margin-left 24px
+      @media screen and (max-width: mobilewidth)
+        margin-left 0
+
+  &__label
+    @media screen and (max-width: mobilewidth)
+      display none
 
 // END STEP NAVIGATOR
 
