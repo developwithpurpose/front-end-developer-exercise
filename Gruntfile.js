@@ -5,75 +5,97 @@ module.exports = function( grunt ) {
     .forEach( grunt.loadNpmTasks );
 
   grunt.initConfig({
-      pkg: grunt.file.readJSON( "package.json" ),
-      jshint: {
-        all: [ "Gruntfile.js", "app/assets/javascripts/**/*.js", "spec/*.js" ],
+    pkg: grunt.file.readJSON( "package.json" ),
+    appdir: "app/assets/",
+    builddir: "build/",
+    jshint: {
+      all: [ "Gruntfile.js", "<%=appdir%>javascripts/**/*.js", "spec/*.js" ],
+      options: {
+        jshintrc: ".jshintrc"
+      }
+    },
+    uglify: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: "<%=appdir%>javascripts",
+          src: "**/*.js",
+          dest: "<%=builddir%>javascripts",
+          reset: true
+        }]
+      }
+    },
+    stylus: {
+      compile: {
         options: {
-          jshintrc: ".jshintrc"
-        }
-      },
-      uglify: {
-        build: {
-          files: [{
-            expand: true,
-            cwd: "app/assets/javascripts",
-            src: "**/*.js",
-            dest: "build/javascripts",
-            reset: true
-          }]
-        }
-      },
-      validation: {
-        options: {
-          stoponerror: false
+          "include css": true
         },
         files: {
-          src: [ "app/**/*.html" ]
+          "<%=builddir%>stylesheets/main.css": [
+            "<%=appdir%>stylesheets/style.styl"
+          ]
+        }
+      }
+    },
+    validation: {
+      options: {
+        stoponerror: false,
+        relaxerror: [
+          "The Content-Type was “text/html”. Using the HTML parser.",
+          "Using the schema for HTML with SVG 1.1, MathML 3.0, RDFa 1.1, and ITS 2.0 support."
+        ],
+      },
+      files: {
+        src: [ "app/**/*.html" ]
+      }
+    },
+    clean: {
+      validation: [ "validation-*.json", "w3cErrors" ]
+    },
+    watch: {
+      test: {
+        files: [ "<%= jshint.all %>" ],
+        tasks: [ "uglify", "jasmine" ],
+        options: {
+          livereload: 9000
         }
       },
-      clean: {
-        validation: [ "validation-*.json" ]
+      styles: {
+        files: ["<%=appdir%>**/*.css", "<%=appdir%>**/*.styl"],
+        tasks: [ "stylus" ]
       },
-      watch: {
-        test: {
-          files: [ "<%= jshint.all %>" ],
-          tasks: [ "uglify", "jasmine" ],
-          options: {
-            livereload: 9000
-          }
-        },
-        lint: {
-          files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
-          tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
+      lint: {
+        files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
+        tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
+      }
+    },
+    jasmine: {
+      pivotal: {
+        src: "<%=builddir%>javascripts/**/*.js",
+        options: {
+          specs: "spec/**/*.spec.js",
+          vendor: [
+            "vendor/**/*.js"
+          ],
+          template: "spec/index.tmpl"
         }
-      },
-      jasmine: {
-        pivotal: {
-          src: "build/javascripts/**/*.js",
-          options: {
-            specs: "spec/**/*.spec.js",
-            vendor: [
-              "vendor/**/*.js"
-            ],
-            template: "spec/index.tmpl"
-          }
+      }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          livereload: true,
+          keepalive: true
         }
-      },
-      connect: {
-        server: {
-          options: {
-            port: 9001,
-            livereload: true,
-            keepalive: true
-          }
-        }
-      },
+      }
+    },
     csslint: {
       options: {
         csslintrc: ".csslintrc"
       },
       strict: {
-        src: [ "app/assets/stylesheets/**/*.css" ]
+        src: [ "<%=builddir%>**/*.css", "<%=appdir%>**/*.css" ]
       }
     }
   });

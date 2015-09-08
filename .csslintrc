@@ -1,1 +1,7 @@
-{}
+{
+  "outline-none": false,
+  "box-model": false,
+  "box-sizing": false,
+  "adjoining-classes": false,
+  "universal-selector": false
+}

@@ -1,0 +1,216 @@
+/**
+ * MAIN BLOCK CONTAINER
+ */
+.block
+  background white
+  position relative
+
+  &:before
+    content url('/app/assets/images/shadow_left.jpg')
+    position absolute
+    top 0
+    right 100%
+
+  &:after
+    content url('/app/assets/images/shadow_right.jpg')
+    position absolute
+    left 100%
+    top 0
+
+// END MAIN BLOCK CONTAINER
+
+/**
+ * PHOTOGRAPHIC HEADER
+ */
+.header
+  background url('/app/assets/images/header.jpg')
+
+  // Float caption over
+  &__caption
+    color #fff
+    font-family "Open Sans"
+    font-weight 300
+    font-size 32px
+    width 100%
+    text-align right
+    line-height 1em
+    padding 50px 70px 0 0
+
+
+    & strong
+      text-transform uppercase
+      font-weight 700
+      font-size 50px
+      display block
+      margin-top 15px
+      line-height 48px
+
+  // END PHOTOGRAPHIC HEADER
+
+/**
+ * STEPS NAVIGATOR
+ */
+.steps
+  text-align right
+  font-family "Source Sans Pro"
+  font-size 18px
+  line-height 60px
+  padding-bottom 100px
+
+  &__step
+    border-bottom 1px solid white
+    display block
+    padding 0 24px
+    font-weight 400
+    color #9ba0a4
+    transition background-color .1s
+
+    &:hover
+      background-color rgba(50,50,65,.1)
+
+    //Active State
+    .js &--active, .js &--active:hover
+      background-color white
+      color #36abe1
+      font-weight 600
+      cursor default
+      text-decoration none
+
+    & i
+      margin-left 24px
+      @media screen and (max-width: mobilewidth)
+        margin-left 0
+
+  &__label
+    @media screen and (max-width: mobilewidth)
+      display none
+
+// END STEP NAVIGATOR
+
+/**
+ * STEP READER
+ */
+.stepdetail
+  padding 0 70px
+  position relative
+
+  &__step
+    padding-bottom 70px
+    perspective 50em
+
+    .js &
+      display none
+
+  &__header
+    font-family "Source Sans Pro"
+    // Adjusted this down 8px from the annotated mockup,
+    // as the mockup measured from baseline to X height,
+    // and this margin starts after any descenders. This
+    // adjustment puts the baseline about 24px from the
+    // next line's X height.
+    margin-bottom 16px
+
+  &__title
+    font-size 30px
+    font-weight 600
+
+  &__subtitle
+    font-size 18px
+    font-weight 300
+
+  &__body
+    margin-bottom 18px
+
+  &__friends
+    // See above justification for this 8px alteration.
+    margin-top 32px
+// END STEP READER
+
+/**
+ * ICON SPRITES
+ */
+.icon
+  display inline-block
+  vertical-align middle
+  width 30px
+  height 25px
+  overflow hidden
+  position relative
+
+  &:after, &:before
+    content url('/app/assets/images/icons/sprites/icons_small.png')
+    position absolute
+    zoom 1
+    top 0
+    left 0
+    transition opacity .5s
+
+  &:before
+    opacity 0
+    .ie8 &
+      display none
+
+  &:after
+    opacity 1
+    .ie8 &
+      display block
+
+  //Ugly glue between stepnav and icon state.
+  .js .steps__step--active &:before,
+  &--active:before
+    opacity 1
+    .ie8 &
+      display block
+
+  //Ugly glue between stepnav and icon state.
+  .js .steps__step--active &:after,
+  &--active:after
+    opacity 0
+    .ie8 &
+      display none
+
+  &--big
+    width 77px
+    height 65px
+
+    &:after, &:before
+      content url('/app/assets/images/icons/sprites/icons_large.png')
+
+  for row in 0 1 2 3 4 5 6
+    &__step{row + 1}:after
+      top -25px * row
+
+    &__step{row + 1}:before
+      top -25px * (row + 7)
+
+    &--big&__step{row + 1}:after
+      top -65px * row
+
+    &--big&__step{row + 1}:before
+      top -65px * (row + 7)
+
+// END ICON SPRITES
+
+/**
+ * MEDIA BOX
+ */
+.media
+  display block
+  position relative
+  opacity inherit
+
+  &__content
+    position absolute
+    opacity inherit
+    display block
+    left 0
+    top 50%
+    margin-top -33px
+    width 77px
+
+  &__caption
+    display block
+    opacity inherit
+    padding 0 20px 0 97px
+
+// END MEDIA BOX
