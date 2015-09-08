@@ -1,6 +1,6 @@
 use(
     "https://code.jquery.com/jquery-1.11.3.min.js",
-    "/app/assets/javascripts/eventemitter.js",
+    "eventemitter.js",
     function ()
     {
         "use strict";

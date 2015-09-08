@@ -8,10 +8,13 @@
         <link rel="stylesheet" href="/build/stylesheets/main.css">
 
         <script>
-            window.bootstrap = "/app/assets/javascripts/main.js"
+            window.useConfig = {
+                root: "/build/javascripts/",
+                app: "main.js"
+            };
             document.documentElement.className = document.documentElement.className.replace("no-js", "js");
         </script>
-        <script src="/app/assets/javascripts/use.js"></script>
+        <script src="/build/javascripts/use.js"></script>
     </head>
     <body>
         <div class="block">

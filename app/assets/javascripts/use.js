@@ -3,11 +3,19 @@
     {
         "use strict";
 
-        var loadedModules = {};
+        var loadedModules = {},
+            root = "/";
 
-        if (window.bootstrap) {
-            scripts([window.bootstrap]);
+        if (window.useConfig) {
+            if (window.useConfig.root) {
+                setRoot(window.useConfig.root);
+            }
+            if (window.useConfig.app) {
+                scripts([filterUrl(window.useConfig.app)]);
+            }
         }
+
+
 
         /**
          * Add a script to the document.
@@ -92,13 +100,34 @@
         }
 
         /**
+         * First detect if this is an absolute or relative path, then prepend the root
+         * location if it's relative.
+         * @param {string} url
+         * @returns {string}
+         */
+        function filterUrl(url) {
+            if (!url.match(/(^\/)|(^http)/)) {
+                url = root + url;
+            }
+            return url;
+        }
+
+        /**
+         * Setter for the private root variable.
+         * @param {string} newRoot
+         */
+        function setRoot(newRoot) {
+            root = newRoot;
+        }
+
+        /**
          * Creates a callback buffer for a particular URL, and loads the script.
          *
          * While the script is loading, it will hold onto any callbacks it receives.
          * Once it is loaded, it will sequentially execute each callback in order (FIFO),
          * and replace the buffering functionality with an immediate execution call.
          *
-         * @param url
+         * @param {string} url
          * @returns {ModuleBuffer}
          */
         function getModuleBuffer(url) {
@@ -251,7 +280,7 @@
 
             for (var i = 0; i < arguments.length; i++) {
                 if (typeof arguments[i] === "string") {
-                    deps.push(arguments[i]);
+                    deps.push(filterUrl(arguments[i]));
                 } else {
                     callback = arguments[i];
                 }
@@ -270,6 +299,9 @@
             };
             scripts(deps, wrapped_fn);
 
+        };
+        window.use.root = function(url) {
+            setRoot.call(setRoot, url);
         };
     }
 ) (document, window);
