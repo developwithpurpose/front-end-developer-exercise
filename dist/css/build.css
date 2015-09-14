@@ -87,7 +87,7 @@ body {
     font-size: 18px;
     color: #9ba0a4;
     line-height: 60px;
-    padding-right: 60px;
+    padding-right: 55px;
     background-repeat: no-repeat;
     background-position: 100%; }
   .sidebar #one {
@@ -130,19 +130,19 @@ main {
     font-family: "Helvetica", sans-serif; }
   main .steps-appear {
     opacity: 0.01;
-    -webkit-transition: opacity 1s ease-in;
-    -moz-transition: opacity 1s ease-in;
-    -ms-transition: opacity 1s ease-in;
-    transition: opacity 1s ease-in; }
+    -webkit-transition: opacity 1.2s ease-in;
+    -moz-transition: opacity 1.2s ease-in;
+    -ms-transition: opacity 1.2s ease-in;
+    transition: opacity 1.2s ease-in; }
   main .steps-appear.steps-appear-active {
     opacity: 1; }
   main .steps-leave {
     opacity: 1; }
-  main .steps-leave.example-steps-active {
+  main .steps-leave.steps-leave-active {
     opacity: 0.01;
-    -webkit-transition: opacity 1s ease-out;
-    -moz-transition: opacity 1s ease-out;
-    -ms-transition: opacity 1s ease-out;
-    transition: opacity 1s ease-out; }
+    -webkit-transition: opacity 1.2s ease-out;
+    -moz-transition: opacity 1.2s ease-out;
+    -ms-transition: opacity 1.2s ease-out;
+    transition: opacity 1.2s ease-out; }
 
 /*# sourceMappingURL=build.css.map */

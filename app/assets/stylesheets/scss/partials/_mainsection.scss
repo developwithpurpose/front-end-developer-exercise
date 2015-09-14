@@ -26,7 +26,7 @@ main {
 
   .steps-appear {
     opacity: 0.01;
-    @include transition(opacity 1s ease-in);
+    @include transition(opacity 1.2s ease-in);
   }
 
   .steps-appear.steps-appear-active {
@@ -37,8 +37,8 @@ main {
    opacity: 1;
   }
 
-  .steps-leave.example-steps-active {
+  .steps-leave.steps-leave-active {
    opacity: 0.01;
-   @include transition(opacity 1s ease-out);
+   @include transition(opacity 1.2s ease-out);
   }
 }
