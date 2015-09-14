@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300italic,300);
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+body {
+  background-color: #fff;
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%; }
+  body:last-child {
+    margin-right: 0; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.header {
+  width: 100%;
+  height: 404px; }
+  .header img {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 100%; }
+    .header img:last-child {
+      margin-right: 0; }
+
+.sidebar {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 23.2317613015%;
+  background-color: #ECECEE;
+  margin-top: 60px; }
+  .sidebar:last-child {
+    margin-right: 0; }
+  .sidebar li {
+    border-bottom: 1px solid #fff;
+    -webkit-transition: ease-out 0.6s;
+    -moz-transition: ease-out 0.6s;
+    -ms-transition: ease-out 0.6s;
+    transition: ease-out 0.6s;
+    box-shadow: inset 0 0 15px rgba(185, 182, 182, 0.55); }
+    .sidebar li:hover {
+      background: #fff;
+      box-shadow: none;
+      -webkit-transition: ease-in 0.6s;
+      -moz-transition: ease-in 0.6s;
+      -ms-transition: ease-in 0.6s;
+      transition: ease-in 0.6s; }
+      .sidebar li:hover:hover a {
+        -webkit-transition: ease-in 0.6s;
+        -moz-transition: ease-in 0.6s;
+        -ms-transition: ease-in 0.6s;
+        transition: ease-in 0.6s;
+        color: #36abe1; }
+      .sidebar li:hover:hover #one {
+        background-image: url("/images/icons/individual/icons_small_bs1_blue.png"); }
+      .sidebar li:hover:hover #two {
+        background-image: url("/images/icons/individual/icons_small_bs2_blue.png"); }
+      .sidebar li:hover:hover #three {
+        background-image: url("/images/icons/individual/icons_small_bs3_blue.png"); }
+      .sidebar li:hover:hover #four {
+        background-image: url("/images/icons/individual/icons_small_bs4_blue.png"); }
+      .sidebar li:hover:hover #five {
+        background-image: url("/images/icons/individual/icons_small_bs5_blue.png"); }
+      .sidebar li:hover:hover #six {
+        background-image: url("/images/icons/individual/icons_small_bs6_blue.png"); }
+      .sidebar li:hover:hover #seven {
+        background-image: url("/images/icons/individual/icons_small_bs7_blue.png"); }
+  .sidebar a {
+    margin-left: 46.9139236491%;
+    -webkit-transition: ease-out 0.6s;
+    -moz-transition: ease-out 0.6s;
+    -ms-transition: ease-out 0.6s;
+    transition: ease-out 0.6s;
+    font-family: "Source Sans Pro", sans-serif;
+    width: 100px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #9ba0a4;
+    line-height: 60px;
+    padding-right: 55px;
+    background-repeat: no-repeat;
+    background-position: 100%; }
+  .sidebar #one {
+    background-image: url("/images/icons/individual/icons_small_bs1.png"); }
+  .sidebar #two {
+    background-image: url("/images/icons/individual/icons_small_bs2.png"); }
+  .sidebar #three {
+    background-image: url("/images/icons/individual/icons_small_bs3.png"); }
+  .sidebar #four {
+    background-image: url("/images/icons/individual/icons_small_bs4.png"); }
+  .sidebar #five {
+    background-image: url("/images/icons/individual/icons_small_bs5.png"); }
+  .sidebar #six {
+    background-image: url("/images/icons/individual/icons_small_bs6.png"); }
+  .sidebar #seven {
+    background-image: url("/images/icons/individual/icons_small_bs7.png"); }
+
+main {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 65.8807828007%;
+  margin: 60px 70px 0 70px; }
+  main:last-child {
+    margin-right: 0; }
+  main .step img {
+    margin-bottom: 24px; }
+  main .step p {
+    font-family: "Helvetica", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #65686f;
+    margin-bottom: 24px;
+    font-weight: lighter; }
+  main .step .friends {
+    margin-top: 40px; }
+  main .step a {
+    color: #67bee7;
+    text-decoration: none;
+    font-family: "Helvetica", sans-serif; }
+  main .steps-appear {
+    opacity: 0.01;
+    -webkit-transition: opacity 1.2s ease-in;
+    -moz-transition: opacity 1.2s ease-in;
+    -ms-transition: opacity 1.2s ease-in;
+    transition: opacity 1.2s ease-in; }
+  main .steps-appear.steps-appear-active {
+    opacity: 1; }
+  main .steps-leave {
+    opacity: 1; }
+  main .steps-leave.steps-leave-active {
+    opacity: 0.01;
+    -webkit-transition: opacity 1.2s ease-out;
+    -moz-transition: opacity 1.2s ease-out;
+    -ms-transition: opacity 1.2s ease-out;
+    transition: opacity 1.2s ease-out; }
+
+/*# sourceMappingURL=build.css.map */

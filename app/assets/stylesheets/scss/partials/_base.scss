@@ -1,0 +1,24 @@
+$blue : #36abe1;
+$lightblue : #67bee7;
+$lightgrey: #65686f;
+$white: #fff;
+$grey: #9ba0a4;
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+     -moz-transition: $value;
+      -ms-transition: $value;
+          transition: $value;
+}
+
+
+body {
+  background-color: #fff;
+  @include span-columns(12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

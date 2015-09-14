@@ -1,0 +1,44 @@
+main {
+  @include span-columns(8 of 12);
+  margin: 60px 70px 0 70px;
+
+  .step {
+    img {
+      margin-bottom: 24px;
+    }
+    p {
+      font-family: "Helvetica", sans-serif;
+      font-size: 13px;
+      line-height: 18px;
+      color: $lightgrey;
+      margin-bottom: 24px;
+      font-weight: lighter;
+    }
+    .friends {
+      margin-top: 40px;
+    }
+    a {
+      color: $lightblue;
+      text-decoration: none;
+      font-family: "Helvetica", sans-serif;
+    }
+  }
+
+  .steps-appear {
+    opacity: 0.01;
+    @include transition(opacity 1.2s ease-in);
+  }
+
+  .steps-appear.steps-appear-active {
+    opacity: 1;
+  }
+
+  .steps-leave {
+   opacity: 1;
+  }
+
+  .steps-leave.steps-leave-active {
+   opacity: 0.01;
+   @include transition(opacity 1.2s ease-out);
+  }
+}

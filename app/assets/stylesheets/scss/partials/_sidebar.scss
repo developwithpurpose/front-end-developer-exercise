@@ -1,0 +1,82 @@
+
+.sidebar {
+  @include span-columns(3  of 12);
+  background-color: #ECECEE;
+  margin-top: 60px;
+  li {
+    border-bottom: 1px solid $white;
+    @include transition(ease-out .6s);
+    box-shadow: inset 0 0 15px rgba(185, 182, 182, 0.55);
+    &:hover {
+      background: $white;
+      box-shadow: none;
+      @include transition(ease-in .6s);
+      &:hover a {
+        @include transition(ease-in .6s);
+        color: $blue;
+
+      }
+      &:hover #one {
+        background-image: url("/images/icons/individual/icons_small_bs1_blue.png");
+      }
+      &:hover #two {
+        background-image: url("/images/icons/individual/icons_small_bs2_blue.png");
+      }
+      &:hover #three {
+        background-image: url("/images/icons/individual/icons_small_bs3_blue.png");
+      }
+      &:hover #four {
+        background-image: url("/images/icons/individual/icons_small_bs4_blue.png");
+      }
+      &:hover #five {
+        background-image: url("/images/icons/individual/icons_small_bs5_blue.png");
+      }
+      &:hover #six {
+        background-image: url("/images/icons/individual/icons_small_bs6_blue.png");
+      }
+      &:hover #seven {
+        background-image: url("/images/icons/individual/icons_small_bs7_blue.png");
+      }
+    }
+  }
+  a {
+    @include shift(5.5);
+    @include transition(ease-out .6s);
+    font-family: "Source Sans Pro", sans-serif;
+    width:100px;
+    text-decoration: none;
+    font-size: 18px;
+    color: $grey;
+    line-height: 60px;
+    padding-right: 55px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+  }
+  #one {
+    background-image: url("/images/icons/individual/icons_small_bs1.png");
+  }
+
+  #two {
+    background-image: url("/images/icons/individual/icons_small_bs2.png");
+  }
+
+  #three {
+    background-image: url("/images/icons/individual/icons_small_bs3.png");
+  }
+
+  #four {
+    background-image: url("/images/icons/individual/icons_small_bs4.png");
+  }
+
+  #five {
+    background-image: url("/images/icons/individual/icons_small_bs5.png");
+  }
+
+  #six {
+    background-image: url("/images/icons/individual/icons_small_bs6.png");
+  }
+
+  #seven {
+    background-image: url("/images/icons/individual/icons_small_bs7.png");
+  }
+}

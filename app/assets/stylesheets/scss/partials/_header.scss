@@ -1,0 +1,7 @@
+.header {
+  width: 100%;
+  height: 404px;
+  img {
+    @include span-columns(12);
+  }
+}
