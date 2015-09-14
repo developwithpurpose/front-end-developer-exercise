@@ -1,9 +1,7 @@
 Front-end Developer Exercise
 ============================
 
-Copyright (c) 2014
- Lampo Licensing, LLC
- All rights reserved
+Copyright © 2014 Lampo Licensing, LLC. All rights reserved.
 
 Objective
 ---------
@@ -42,20 +40,28 @@ If you use a preprocessor of any kind, include the source code as well as the co
 Server
 ------
 
-This package has a `Gruntfile.js` that you can use to serve up your application. You'll first need to install [Node.js](http://nodejs.org/). Once you have Node.js installed and have cloned this repo, then you can run the following commands to get the server up and open the landing webpage.
+This package is configured with a basic web server. You'll first need to install [Node.js](http://nodejs.org/). Once you have Node.js installed and have cloned this repo, then you can run the following commands to start the server (on port 8080 by default).
 
-```
+```sh
 npm install
-grunt connect
-open http://localhost:9001/app/index.html
+npm start
 ```
+
+Alternately, if you have Python installed you can start a web server with the following command:
+
+```sh
+cd app/
+python -m SimpleHTTPServer 8080
+```
+
+Either way, you should see "The server is running!" when you visit http://localhost:8080. Use CTRL-C to stop the server when you are done.
 
 Dynamic Content
 ---------------
 
 As a user I want to be encouraged by how many friends of mine are also going through the selected baby step. I don't need to see all my friends, just a summary of who is in the same baby step.
 
-You should request the data from `./app/assets/javascript/baby-steps.json`, which includes a list of friend objects. Each object contains names and their baby step. Based on the data returned, you will need to show the following information to the user sorted by last name ascending.
+You should request the data from `/app/baby-steps.json`, which includes a list of friend objects. Each object contains names and their baby step. Based on the data returned, you will need to show the following information to the user sorted by last name ascending.
 
 ### Message Logic
 
