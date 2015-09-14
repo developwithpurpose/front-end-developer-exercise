@@ -98,7 +98,7 @@ module.exports = function( grunt ) {
           tasks: [ "browserify:specs"],
           src: ["app/assets/javascripts/**/*.js"],
           options: {
-            specs: "spec/specs.js",
+            specs: "specs/**/*.spec.js",
             template: "spec/index.tmpl"
           }
         }
