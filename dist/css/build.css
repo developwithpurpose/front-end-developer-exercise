@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300italic,300);
 html {
   box-sizing: border-box; }
 
@@ -36,25 +37,29 @@ body {
   display: block;
   margin-right: 2.3576515979%;
   width: 23.2317613015%;
-  background-color: #eee;
+  background-color: #ECECEE;
   margin-top: 60px; }
   .sidebar:last-child {
     margin-right: 0; }
   .sidebar li {
     border-bottom: 1px solid #fff;
-    -webkit-transition: ease-out 0.8s;
-    -moz-transition: ease-out 0.8s;
-    -ms-transition: ease-out 0.8s;
-    transition: ease-out 0.8s;
+    -webkit-transition: ease-out 0.6s;
+    -moz-transition: ease-out 0.6s;
+    -ms-transition: ease-out 0.6s;
+    transition: ease-out 0.6s;
     box-shadow: inset 0 0 15px rgba(185, 182, 182, 0.55); }
     .sidebar li:hover {
       background: #fff;
       box-shadow: none;
-      -webkit-transition: ease 0.8s;
-      -moz-transition: ease 0.8s;
-      -ms-transition: ease 0.8s;
-      transition: ease 0.8s; }
+      -webkit-transition: ease-in 0.6s;
+      -moz-transition: ease-in 0.6s;
+      -ms-transition: ease-in 0.6s;
+      transition: ease-in 0.6s; }
       .sidebar li:hover:hover a {
+        -webkit-transition: ease-in 0.6s;
+        -moz-transition: ease-in 0.6s;
+        -ms-transition: ease-in 0.6s;
+        transition: ease-in 0.6s;
         color: #36abe1; }
       .sidebar li:hover:hover #one {
         background-image: url("/images/icons/individual/icons_small_bs1_blue.png"); }
@@ -71,14 +76,18 @@ body {
       .sidebar li:hover:hover #seven {
         background-image: url("/images/icons/individual/icons_small_bs7_blue.png"); }
   .sidebar a {
-    margin-left: 51.178825799%;
+    margin-left: 46.9139236491%;
+    -webkit-transition: ease-out 0.6s;
+    -moz-transition: ease-out 0.6s;
+    -ms-transition: ease-out 0.6s;
+    transition: ease-out 0.6s;
     font-family: "Source Sans Pro", sans-serif;
     width: 100px;
     text-decoration: none;
     font-size: 18px;
     color: #9ba0a4;
     line-height: 60px;
-    padding-right: 35px;
+    padding-right: 60px;
     background-repeat: no-repeat;
     background-position: 100%; }
   .sidebar #one {
@@ -108,7 +117,7 @@ main {
     margin-bottom: 24px; }
   main .step p {
     font-family: "Helvetica", sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 18px;
     color: #65686f;
     margin-bottom: 24px;

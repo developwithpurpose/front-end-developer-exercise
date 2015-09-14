@@ -1,10 +1,9 @@
 /*jshint esnext: true */
 
 describe("getFriends", function() {
-  var friends = "";
-  
-
+  var friend = "";
+    
   it("should return friends", function() {
-    expect(friends).toEqual("Adam Williams");
+    expect(friend).toEqual("Adam Williams");
   });
 });

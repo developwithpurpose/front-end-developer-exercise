@@ -1,11 +1,5 @@
 /*jshint esnext: true */
 
-// import React from "react";
-// import Header from "../components/header";
-// import Sidebar from "../components/sidebar";
-// import MainSection from "../components/main-section";
-
-let ReactTestUtils;
 
 describe("App", function() {
   beforeEach(function() {

@@ -17,6 +17,7 @@ let Sidebar = React.createClass ({
           <li><Link id="five" to="stepFive">Baby Step 5 </Link></li>
           <li><Link id="six" to="stepSix">Baby Step 6 </Link></li>
           <li><Link id="seven" to="stepSeven">Baby Step 7 </Link></li>
+          <li></li>
         </ul>
 
       </div>
