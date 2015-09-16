@@ -1,0 +1,100 @@
+/*
+	Name: Developer Exercise
+	Description: 
+	Author: 
+	Author URI: 
+	Version: 2.0.1
+*/
+
+
+/* Table of Contents
+
+	- HTML5 Reset
+		- Baseline Normalize
+		- Box Sizing
+		- Float Clearing
+	- Defaults
+		- Typographical Elements
+		- Headings
+		- Objects
+		- Forms
+		- Tables
+	- Structure and Layout
+		- Site Containers
+		- Column Widths and Positions
+		- Column Classes
+	- Common Classes
+		- WordPress
+		- Genesis
+		- Titles
+	- Site Header
+		- Title Area
+		- Widget Area
+	- Content Area
+		- Entries
+		- Pagination
+		- Comments
+	- Sidebars
+	- Site Footer
+	- Media Queries
+		- max-width: 1139px
+		- max-width: 1023px
+		- max-width: 767px
+
+*/
+
+@import "partials/variables";
+@import "partials/mixins";
+
+/*
+HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
+@import "partials/reset";
+
+
+/*
+Defaults
+---------------------------------------------------------------------------------------------------- */
+@import "partials/defaults";
+
+
+/*
+Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+@import "partials/structure-layout";
+
+
+/*
+Common Classes
+---------------------------------------------------------------------------------------------------- */
+@import "partials/common-classes";
+
+
+/*
+Site Header
+---------------------------------------------------------------------------------------------------- */
+@import "partials/site-header";
+
+
+/*
+Content Area
+---------------------------------------------------------------------------------------------------- */
+@import "partials/content-area";
+
+
+/*
+Sidebars
+---------------------------------------------------------------------------------------------------- */
+@import "partials/sidebars";
+
+
+/*
+Site Footer
+---------------------------------------------------------------------------------------------------- */
+@import "partials/site-footer";
+
+
+/*
+Media Queries
+---------------------------------------------------------------------------------------------------- */
+@import "partials/media-queries";

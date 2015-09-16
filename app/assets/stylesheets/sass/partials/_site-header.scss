@@ -1,0 +1,44 @@
+.site-header {
+	background: url(/images/header.jpg) no-repeat center;
+	background-color: #fff;
+	min-height: 276px;
+	.wrap {
+		padding: 40px 0;
+	}
+}
+
+/* Title Area
+--------------------------------------------- */
+
+.title-area {
+	float: right;
+	padding: 10px 0 50px 0;
+	width: 460px;
+}
+
+.header-full-width {
+	.title-area {
+		width: 100%;
+	}
+}
+
+.site-title {
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 1.2;
+
+	a,
+	a:hover {
+		color: #000;
+	}
+}
+.site-description {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+.site-description,
+.site-title {
+	margin-bottom: 0;
+}

@@ -7,7 +7,7 @@ module.exports = function( grunt ) {
   grunt.initConfig({
       pkg: grunt.file.readJSON( "package.json" ),
       jshint: {
-        all: [ "Gruntfile.js", "app/assets/javascripts/**/*.js", "spec/*.js" ],
+        all: [ "Gruntfile.js", "<%= pkg.app %>/javascripts/**/*.js", "spec/*.js", "!<%= pkg.app %>/javascripts/vendor/*.js" ],
         options: {
           jshintrc: ".jshintrc"
         }
@@ -16,9 +16,9 @@ module.exports = function( grunt ) {
         build: {
           files: [{
             expand: true,
-            cwd: "app/assets/javascripts",
+            cwd: "<%= pkg.app %>/javascripts",
             src: "**/*.js",
-            dest: "build/javascripts",
+            dest: "<%= pkg.dist %>/js",
             reset: true
           }]
         }
@@ -28,7 +28,7 @@ module.exports = function( grunt ) {
           stoponerror: false
         },
         files: {
-          src: [ "app/**/*.html" ]
+          src: [ "app/*.html" ]
         }
       },
       clean: {
@@ -37,7 +37,7 @@ module.exports = function( grunt ) {
       watch: {
         test: {
           files: [ "<%= jshint.all %>" ],
-          tasks: [ "uglify", "jasmine" ],
+          tasks: [ "uglify", "jasmine", ],
           options: {
             livereload: 9000
           }
@@ -45,11 +45,19 @@ module.exports = function( grunt ) {
         lint: {
           files: [ "<%= jshint.all %>", "<%= csslint.strict.src %>", "app/**/*.html" ],
           tasks: [ "jshint", "csslint", "validation", "clean:validation" ]
+        },
+        sass: {
+          files: ["<%= pkg.app %>/stylesheets/sass/partials/*.scss"],
+          tasks: ["sass","copy"]
+        },
+        copy: {
+          files: ["<%= pkg.app %>/images/**"],
+          tasks: ["copy"]
         }
       },
       jasmine: {
         pivotal: {
-          src: "build/javascripts/**/*.js",
+          src: "<%= pkg.dist %>/js/**/*.js",
           options: {
             specs: "spec/**/*.spec.js",
             vendor: [
@@ -62,9 +70,11 @@ module.exports = function( grunt ) {
       connect: {
         server: {
           options: {
+            hostname: "localhost",
             port: 9001,
             livereload: true,
-            keepalive: true
+            //keepalive: true,
+            base: "<%= pkg.dist %>",
           }
         }
       },
@@ -73,11 +83,32 @@ module.exports = function( grunt ) {
         csslintrc: ".csslintrc"
       },
       strict: {
-        src: [ "app/assets/stylesheets/**/*.css" ]
+        src: [ "<%= pkg.app %>/stylesheets/**/*.css" ]
       }
+    },
+
+    sass: {
+      options: {
+          sourceMap: true
+      },
+      dist: {
+          files: {
+              "<%= pkg.dist %>/css/style.css": "<%= pkg.app %>/stylesheets/sass/style.scss"
+          }
+      }
+    },
+
+    copy: {
+      main: {
+        files: [
+          {expand: true, cwd: "<%= pkg.app %>/images", src:["**/*"], dest: "<%= pkg.dist %>/images/"},
+          {expand: true, cwd: "app/", src: ["index.html"], dest: "<%= pkg.dist %>/"}
+        ],
+      },
     }
   });
 
-  grunt.registerTask( "default", ["connect"] );
+  grunt.registerTask( "build", ["copy", "sass"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
+  grunt.registerTask( "default", ["connect", "lint" , "watch"] );
 };
