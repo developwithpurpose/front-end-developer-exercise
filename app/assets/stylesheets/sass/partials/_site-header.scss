@@ -1,9 +1,16 @@
 .site-header {
 	background: url(/images/header.jpg) no-repeat center;
-	background-color: #fff;
 	min-height: 276px;
 	.wrap {
 		padding: 40px 0;
+	}
+	h2 {
+		font-family: $font-sans;
+		font-weight: 300;
+		font-size: 32px;
+		color: #fff;
+		line-height: 30px;
+		margin-bottom: 15px;
 	}
 }
 
@@ -12,8 +19,8 @@
 
 .title-area {
 	float: right;
-	padding: 10px 0 50px 0;
-	width: 460px;
+	padding: 10px 50px 0 0;
+	width: 498px;
 }
 
 .header-full-width {
@@ -23,9 +30,13 @@
 }
 
 .site-title {
-	font-size: 32px;
-	font-weight: 400;
-	line-height: 1.2;
+		font-family: $font-sans;
+		font-weight: 600;
+		font-size: 50px;
+		color: #fff;
+		line-height: 48px;
+		text-align: right;
+		text-transform: uppercase;
 
 	a,
 	a:hover {

@@ -1,21 +1,98 @@
 .sidebar {
-	font-size: 16px;
-
+	background: url(/images/shadow_left_nav.jpg) repeat-y right;
 	li {
-		border-bottom: 1px dotted #ddd;
-		margin-bottom: 10px;
-		padding-bottom: 10px;
+		border-bottom: 1px solid #fff;
+		a {
+			font-family: $font-sans2;
+			font-size: 18px;
+			color: #9ba0a4;
+			line-height: 60px;
+			padding: 0 24px;
+			width: 100%;
+			text-align: right;
+			display: inline-block;
+			@include clearfix;
+			&:after {
+				background: url(/images/icons/sprites/icons_small.png) no-repeat;
+				display: inline-block;
+		    	vertical-align: middle;
+		    	line-height: 60px;
+		    	width: 30px;
+				margin-left: 30px;
+			}
+			&#nav-step-1:after {
+				background-position: 0 0;
+				height: 25px;
+			}
+			&#nav-step-2:after {
+				background-position: 0 -25px;
+				height: 25px;
+			}
+			&#nav-step-3:after {
+				background-position: 0 -50px;
+				height: 25px;
+			}
+			&#nav-step-4:after {
+				background-position: 0 -75px;
+				height: 25px;
+			}
+			&#nav-step-5:after {
+				background-position: 0 -100px;
+				height: 25px;
+			}
+			&#nav-step-6:after {
+				background-position: 0 -125px;
+				height: 25px;
+			}
+			&#nav-step-7:after {
+				background-position: 0 -150px;
+				height: 25px;
+			}
+		}
+		a:hover {
+			color: #36abe1;
+			font-weight: 600;
+			background: #fff;
+
+			&#nav-step-1:after {
+				background-position: 0 -175px;
+				height: 25px;
+			}
+			&#nav-step-2:after {
+				background-position: 0 -200px;
+				height: 25px;
+			}
+			&#nav-step-3:after {
+				background-position: 0 -225px;
+				height: 25px;
+			}
+			&#nav-step-4:after {
+				background-position: 0 -250px;
+				height: 25px;
+			}
+			&#nav-step-5:after {
+				background-position: 0 -275px;
+				height: 25px;
+			}
+			&#nav-step-6:after {
+				background-position: 0 -300px;
+				height: 25px;
+			}
+			&#nav-step-7:after {
+				background-position: 0 -325px;
+				height: 25px;
+			}
+		}
 	}
 
 	p:last-child,
 	ul > li:last-child {
 		margin-bottom: 0;
 	}
-
-	.widget {
-		background-color: #fff;
-		box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-		margin-bottom: 40px;
-		padding: 40px;
+	.steps-label {
+		display: inline-block;
+    	vertical-align: middle;
+		float: left;
 	}
+
 }

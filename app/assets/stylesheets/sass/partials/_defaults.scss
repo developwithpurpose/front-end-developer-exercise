@@ -4,10 +4,10 @@
 body {
 	background-color: $color-site-bg;
 	color: $color-font;
-	font-family: $font-sans;
-	font-size: 18px;
-	font-weight: 300;
-	line-height: 1.625;
+	font-family: $font-serif;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 18px;
 	margin: 0;
 }
 
@@ -98,9 +98,9 @@ h3,
 h4,
 h5,
 h6 {
-	color: $color-font;
-	font-family: $font-sans;
-	font-weight: 400;
+	color: #36abe1;
+	font-family: $font-sans2;
+	font-weight: 600;
 	line-height: 1.2;
 	margin: 0 0 10px;
 }
