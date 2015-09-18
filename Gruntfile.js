@@ -51,7 +51,7 @@ module.exports = function( grunt ) {
           tasks: ["sass","copy"]
         },
         copy: {
-          files: ["<%= pkg.app %>/images/**"],
+          files: ["<%= pkg.app %>/images/**", "<%= pkg.app %>*.html"],
           tasks: ["copy"]
         }
       },

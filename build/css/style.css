@@ -717,7 +717,7 @@ Site Header
   .site-header .wrap {
     padding: 40px 0; }
   .site-header h2 {
-    font-family: Lato, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 32px;
     color: #fff;
@@ -735,7 +735,7 @@ Site Header
   width: 100%; }
 
 .site-title {
-  font-family: Lato, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 50px;
   color: #fff;
@@ -837,7 +837,9 @@ Sidebars
       padding: 0 24px;
       width: 100%;
       text-align: right;
-      display: inline-block; }
+      display: inline-block;
+      position: relative;
+      z-index: 200; }
       .sidebar li a:after {
         content: "";
         display: table;
@@ -870,29 +872,36 @@ Sidebars
       .sidebar li a#nav-step-7:after {
         background-position: 0 -150px;
         height: 25px; }
-    .sidebar li a:hover {
+    .sidebar li a:hover,
+    .sidebar li .current_page_item {
       color: #36abe1;
-      font-weight: 600;
-      background: #fff; }
-      .sidebar li a:hover#nav-step-1:after {
+      font-weight: 600; }
+      .sidebar li a:hover#nav-step-1:after,
+      .sidebar li .current_page_item#nav-step-1:after {
         background-position: 0 -175px;
         height: 25px; }
-      .sidebar li a:hover#nav-step-2:after {
+      .sidebar li a:hover#nav-step-2:after,
+      .sidebar li .current_page_item#nav-step-2:after {
         background-position: 0 -200px;
         height: 25px; }
-      .sidebar li a:hover#nav-step-3:after {
+      .sidebar li a:hover#nav-step-3:after,
+      .sidebar li .current_page_item#nav-step-3:after {
         background-position: 0 -225px;
         height: 25px; }
-      .sidebar li a:hover#nav-step-4:after {
+      .sidebar li a:hover#nav-step-4:after,
+      .sidebar li .current_page_item#nav-step-4:after {
         background-position: 0 -250px;
         height: 25px; }
-      .sidebar li a:hover#nav-step-5:after {
+      .sidebar li a:hover#nav-step-5:after,
+      .sidebar li .current_page_item#nav-step-5:after {
         background-position: 0 -275px;
         height: 25px; }
-      .sidebar li a:hover#nav-step-6:after {
+      .sidebar li a:hover#nav-step-6:after,
+      .sidebar li .current_page_item#nav-step-6:after {
         background-position: 0 -300px;
         height: 25px; }
-      .sidebar li a:hover#nav-step-7:after {
+      .sidebar li a:hover#nav-step-7:after,
+      .sidebar li .current_page_item#nav-step-7:after {
         background-position: 0 -325px;
         height: 25px; }
   .sidebar p:last-child,
@@ -902,6 +911,17 @@ Sidebars
     display: inline-block;
     vertical-align: middle;
     float: left; }
+  .sidebar #steps-menu {
+    position: relative; }
+  .sidebar #steps-menu #menu-hover-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    background: #fff;
+    z-index: 100; }
+  .sidebar .current_page_item a {
+    color: white !important; }
 
 /*
 Site Footer

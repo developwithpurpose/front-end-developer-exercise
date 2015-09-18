@@ -11,6 +11,8 @@
 			width: 100%;
 			text-align: right;
 			display: inline-block;
+			position: relative; 
+			z-index: 200; 
 			@include clearfix;
 			&:after {
 				background: url(/images/icons/sprites/icons_small.png) no-repeat;
@@ -49,10 +51,11 @@
 				height: 25px;
 			}
 		}
-		a:hover {
+		a:hover,
+		.current_page_item {
 			color: #36abe1;
 			font-weight: 600;
-			background: #fff;
+			//background: #fff;
 
 			&#nav-step-1:after {
 				background-position: 0 -175px;
@@ -93,6 +96,20 @@
 		display: inline-block;
     	vertical-align: middle;
 		float: left;
+	}
+	#steps-menu {
+	position: relative; 
+	}
+	#steps-menu #menu-hover-bg { 
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 300px; 
+		background: #fff; 
+		z-index: 100; 
+	}
+	.current_page_item a { 
+		color: white !important; 
 	}
 
 }
