@@ -44,6 +44,12 @@
 .steps-content header {
 	padding-left: 95px;
 }
+.steps-content {
+	display: none;
+}
+.entry-content article:first-child {
+	display: block;
+}
 
 .large-icon {
 	background: url(/images/icons/sprites/icons_large.png) no-repeat;
