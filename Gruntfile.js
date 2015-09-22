@@ -102,7 +102,8 @@ module.exports = function( grunt ) {
       main: {
         files: [
           {expand: true, cwd: "<%= pkg.app %>/images", src:["**/*"], dest: "<%= pkg.dist %>/images/"},
-          {expand: true, cwd: "app/", src: ["index.html"], dest: "<%= pkg.dist %>/"}
+          {expand: true, cwd: "app/", src: ["index.html"], dest: "<%= pkg.dist %>/"},
+          {expand: true, cwd: "<%= pkg.app %>/javascripts/", src: ["*.json"], dest: "<%= pkg.dist %>/js/"}
         ],
       },
     }
@@ -110,5 +111,5 @@ module.exports = function( grunt ) {
 
   grunt.registerTask( "build", ["copy", "sass"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
-  grunt.registerTask( "default", ["connect", "lint" , "watch"] );
+  grunt.registerTask( "default", ["connect", "lint" , "watch", "build"] );
 };

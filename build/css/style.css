@@ -729,7 +729,7 @@ Site Header
 .title-area {
   float: right;
   padding: 10px 50px 0 0;
-  width: 498px; }
+  width: 510px; }
 
 .header-full-width .title-area {
   width: 100%; }
@@ -827,6 +827,9 @@ Content Area
 
 .fill-space {
   min-height: 150px; }
+
+.friendname {
+  color: #6fbee7; }
 
 /*
 Sidebars
