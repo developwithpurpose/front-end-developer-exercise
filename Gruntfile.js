@@ -37,9 +37,9 @@ module.exports = function( grunt ) {
       watch: {
         test: {
           files: [ "<%= jshint.all %>" ],
-          tasks: [ "uglify", "jasmine", ],
+          tasks: [ "uglify" ],
           options: {
-            livereload: 9000
+            livereload: 9001
           }
         },
         lint: {
@@ -52,7 +52,7 @@ module.exports = function( grunt ) {
         },
         copy: {
           files: ["<%= pkg.app %>/images/**", "<%= pkg.app %>*.html"],
-          tasks: ["copy"]
+          tasks: ["build"]
         }
       },
       jasmine: {
@@ -98,6 +98,18 @@ module.exports = function( grunt ) {
       }
     },
 
+    cssmin: {
+       target: {
+          files: [{
+            expand: true,
+            cwd: "<%= pkg.dist %>/css",
+            src: ["*.css", "!*.min.css"],
+            dest: "<%= pkg.dist %>/css",
+            ext: ".min.css"
+          }]
+      }
+    },
+
     copy: {
       main: {
         files: [
@@ -109,7 +121,7 @@ module.exports = function( grunt ) {
     }
   });
 
-  grunt.registerTask( "build", ["copy", "sass"] );
+  grunt.registerTask( "build", ["sass" , "copy", "cssmin"] );
   grunt.registerTask( "lint", ["jshint", "csslint"] );
-  grunt.registerTask( "default", ["connect", "lint" , "watch", "build"] );
+  grunt.registerTask( "default", ["connect", "lint" , "build" , "watch"] );
 };
