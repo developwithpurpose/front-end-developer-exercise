@@ -1,15 +1,16 @@
-// @import url(http://fonts.googleapis.com/css?family=Montserrat+Subrayada);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:400,600,300);
 
 // Typography
-$base-font-family: $verdana;
-$heading-font-family: 'Open Sans', $lucida-grande;
+$base-font-family: "Helvetica", "Roboto", "Arial", sans-serif;
+$title-font-family: "Open Sans", sans-serif;
+$heading-font-family: "Source Sans Pro", sans-serif;
 
 // Font Sizes
 $base-font-size: 1em;
 
 // Line height
-$base-line-height: 1.5;
-$heading-line-height: 1.2;
+$base-line-height: 1;
+$heading-line-height: 1;
 
 // Other Sizes
 $base-border-radius: 3px;
