@@ -1,0 +1,173 @@
+$tabs-v_width: 300px
+main.container
+  position: relative
+  // float: left
+  // display: block
+  width: 100%
+  height: 60vh
+  overflow: hidden
+  // background-color: #fff
+  // color: black
+
+  .tabs-v
+    background-color: #ebeced
+    @include linear-gradient(#ebeced, #d1d5d6, horizontal)
+    @include background-image(linear-gradient(left, #ebeced 95%, #d1d5d6 100%))
+
+
+    float: left
+    // display: block
+    // background-color: #ebeced
+    width: $tabs-v_width
+    height: 100%
+    //If you use compass, instead of the line below you could use + box-sizing($bs)
+    -webkit-tap-highlight-color: transparent
+    *
+      //If you use compass, instead of the line below you could use + box-sizing($bs)
+      box-sizing: border-box
+      -webkit-tap-highlight-color: transparent
+
+    >
+      input[type="radio"]
+        @include appearance(none)
+        display: none
+        &:checked + label
+          background: $white
+          background-size: 200% 200%
+          background-position-y: 0
+          color: $blue
+          &:before
+            @include transform(translate3d(0, -50%, 0))
+            -moz-transition: -moz-transform 0.35s
+            -o-transition: -o-transform 0.35s
+            -webkit-transition: -webkit-transform 0.35s
+            //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+            transition: transform 0.35s
+
+          &:after
+
+
+    @for $j from 1 through 7
+      > input[type="radio"]:nth-of-type(#{$j}):checked ~ .tab-c
+        @for $i from 1 through 7
+          &:nth-of-type(#{$i})
+            @include transform(translate3d(0, percentage($i - $j), 0))
+
+
+
+      label
+        cursor: pointer
+        border: none
+        padding: 0
+        outline: none
+        //If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+        border-radius: 0
+        -moz-transition: background-position 0.25s, box-shadow 0.25s
+        -o-transition: background-position 0.25s, box-shadow 0.25s
+        -webkit-transition: background-position 0.25s, box-shadow 0.25s
+        //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: background-position-y 2s, box-shadow 2s
+        position: relative
+        float: left
+        // display: block
+        width: 100%
+        height: 60px
+        text-align: center
+        line-height: 60px
+        margin: 0
+        color: $link-gray
+        background-size: 200% 200%
+        // background-position-x: 100%
+        background-position-y: 100%
+        //If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: inset 0 1px 0 $white
+
+        &:after
+          content: attr(data-text)
+          position: absolute
+          top: 50%
+          left: 50%
+          // display: block
+          width: 100%
+          height: 100%
+          text-align: center
+          padding-left: 50px
+          -moz-transform: translate3d(-50%, -50%, 0)
+          -ms-transform: translate3d(-50%, -50%, 0)
+          -webkit-transform: translate3d(-50%, -50%, 0)
+          //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+          transform: translate3d(-50%, -50%, 0)
+          -moz-transition: color 0.25s
+          -o-transition: color 0.25s
+          -webkit-transition: color 0.25s
+          //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+          transition: color 0.25s
+
+        &:before
+          position: absolute
+          top: 50%
+          right: 10px
+          width: 30px
+          height: 25px
+          font-family: 'ramsey'
+          speak: none
+          font-style: normal
+          font-weight: normal
+          font-variant: normal
+          text-transform: none
+          line-height: 1
+
+          /* Better Font Rendering =========== */
+          -webkit-font-smoothing: antialiased
+          -moz-osx-font-smoothing: grayscale
+
+
+      // .wrapper
+      .tab-c
+        background-color: $white
+        position: absolute
+        // display: block
+        width: calc(100% - #{$tabs-v_width})
+        height: 100%
+        left: $tabs-v_width
+        text-align: left
+        -moz-transition: -moz-transform 0.5s
+        -o-transition: -o-transform 0.5s
+        -webkit-transition: -webkit-transform 0.5s
+        //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: transform 0.5s
+        > .card
+          position: absolute
+          left: 50%
+          top: 50%
+          // display: block
+          width: 70%
+          max-height: 80%
+          overflow-x: hidden
+          overflow-y: auto
+          padding: 2rem
+          color: #5c6366
+          -webkit-overflow-scrolling: touch
+          -moz-transform: translate3d(-50%, -50%, 0) translate3d(-1.5rem, 0, 0)
+          -ms-transform: translate3d(-50%, -50%, 0) translate3d(-1.5rem, 0, 0)
+          -webkit-transform: translate3d(-50%, -50%, 0) translate3d(-1.5rem, 0, 0)
+          //If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+          transform: translate3d(-50%, -50%, 0) translate3d(-1.5rem, 0, 0)
+          > h1
+            color: $blue
+            margin-top: 0
+            &:before
+              font-family: 'ramsey'
+              speak: none
+              font-style: normal
+              font-weight: normal
+              font-variant: normal
+              text-transform: none
+              line-height: 1
+
+  ::-webkit-scrollbar
+    width: $scroll_width
+
+  ::-webkit-scrollbar-thumb
+    background: $white_50
+    border-radius: $scroll_width / 2

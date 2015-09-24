@@ -19,10 +19,14 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #477dca;
+$blue: #36abe1;
+$light-blue: #6fbee7;
 $dark-gray: #333;
 $medium-gray: #999;
-$light-gray: rgba(50, 50, 50, 0.3);
+$link-gray: #9ba0a4;
+$white: #fff;
+$color_mine_shaft_approx: #333;
+$white_50: rgba(255, 255, 255, 0.5);
 
 // Font Colors
 $base-background-color: #fff;
@@ -30,9 +34,13 @@ $base-font-color: $dark-gray;
 $action-color: $blue;
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: $white;
 $base-border: 2px solid $base-border-color;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Overflow Scrollbar
+$scroll_width: 8px
+

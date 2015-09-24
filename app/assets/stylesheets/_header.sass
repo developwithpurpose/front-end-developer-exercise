@@ -1,0 +1,55 @@
+*
+  box-sizing: border-box
+
+html, body
+  margin: 0px
+  padding: 0px
+
+body
+  background-color: #BBBFC2
+  +outer-container($local-max-width: 980px)
+
+  header
+    width: 100%
+    position: relative
+    color: #fff
+    background-color: #fff
+    padding-bottom: 60px
+    img
+      width: 100%
+
+    div
+      display: none
+      position: absolute
+      height: 50px
+      width: 70px
+      top: 0
+      right: 0
+      background-color: yellow
+    section
+      position: absolute
+      margin: 0
+      padding: 0
+      top: 50px
+      right: 70px
+      text-align: right
+      h2
+        position: relative
+        left: 2.8px
+        letter-spacing: 0.0014em
+        margin: 0
+        padding-bottom: 5px
+        font-family: $title-font-family
+        font-size: 2em
+        font-weight: normal
+        // line-height: 32px
+      h1
+        margin: 0
+        font-family: $title-font-family
+        font-size: 3.125em
+        font-weight: Bold
+        text-transform: uppercase
+        line-height: 48px
+        letter-spacing: -0.025em
+
+
