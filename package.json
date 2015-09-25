@@ -12,8 +12,5 @@
     "http-server": "^0.8.0",
     "node-sass": "^3.3.3",
     "jade": "^1.11.0"
-  },
-  "dependencies": {
-    "jquery": "^2.1.4"
   }
 }
