@@ -1,202 +1,157 @@
 $tabs-v_width: 300px
 main.container
   position: relative
-  // float: left
-  // display: block
   width: 100%
   height: 60vh
   overflow: hidden
-  // background-color: #fff
-  // color: black
 
   .tabs-v
     background-color: #ebeced
     @include linear-gradient(#ebeced, #d1d5d6, horizontal)
     @include background-image(linear-gradient(left, #ebeced 95%, #d1d5d6 100%))
 
-
     float: left
-    // display: block
-    // background-color: #ebeced
     width: $tabs-v_width
     height: 100%
-    //If you use compass, instead of the line below you could use + box-sizing($bs)
     -webkit-tap-highlight-color: transparent
 
-    *
-      //If you use compass, instead of the line below you could use + box-sizing($bs)
-      box-sizing: border-box
-      -webkit-tap-highlight-color: transparent
-
-    >
-      input[type="radio"]
-        @include appearance(none)
-        display: none
-        &:checked + label
-          // @include background-image(linear-gradient($white, $white))
-          // background-repeat: no-repeat
-          // background-size: 100% 60px
-          // background-position-y: 0px
-          // -moz-transition: background-position 0.5s, box-shadow 0.5s, color 0.5s
-          // -o-transition: background-position 0.5s, box-shadow 0.5s, color 0.5s
-          // -webkit-transition: background-position 0.5s, box-shadow 0.5s, color 0.5s
-          // transition: background-position-y 0.5s, box-shadow 0.5s, color 0.5s
-          //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-          color: $blue
-          &:after
-            -moz-transition: font-weight 0.1s, left 0.1s
-            -o-transition: font-weight 0.1s, left 0.1s
-            -webkit-transition: font-weight 0.1s, left 0.1s
-            //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-            transition: font-weight 0.1s, left 0.1s
-            font-weight: 600
-            left: 125px
-
-        @for $j from 1 through 7
-          &:nth-of-type(#{$j}):checked ~ .tab-c
-            @for $i from 1 through 7
-              &:nth-of-type(#{$i})
-                @include transform(translate3d(0, percentage($i - $j), 0))
-
-        @for $j from 1 through 7
-          &:nth-of-type(#{$j}):checked ~ .animator
-            -moz-transition: top 0.5s
-            -o-transition: top 0.5s
-            -webkit-transition: top 0.5s
-            transition: top 0.5s
-            top: #{($j - 1) * 60}px
-
-      .animator
-        position: absolute
-        background: $white
-        width: 100%
-        height: 60px
-        z-index: 1
-
-
-      label
-        z-index: 2
-        cursor: pointer
-        border: none
-        padding: 0
-        outline: none
-        border-radius: 0
-        // -moz-transition: background-position 0.5s, box-shadow 0.5s
-        // -o-transition: background-position 0.5s, box-shadow 0.5s
-        // -webkit-transition: background-position 0.5s, box-shadow 0.5s
-        // transition: background-position-y 0.5s, box-shadow 0.5s
-        //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-        position: relative
-        float: left
-        width: 100%
-        height: 60px
-        text-align: center
-        line-height: 60px
-        margin: 0
-        -moz-transition: color 0.1s
-        -o-transition: color 0.1s
-        -webkit-transition: color 0.1s
-        transition: color 0.1s
-        color: $link-gray
-        // background-size: 100% 60px
-        // background-position-y: -100px
-        box-shadow: inset 0 1px 0 $white
-
-        &:before
-          position: absolute
-          display: block
-          right: 24px
-          font-family: 'ramsey'
-          speak: none
-          font-size: 26px
-          font-style: normal
-          font-weight: normal
-          font-variant: normal
-          text-transform: none
-          line-height: 60px
-
-          /* Better Font Rendering =========== */
-          -webkit-font-smoothing: antialiased
-          -moz-osx-font-smoothing: grayscale
-
+    > input[type="radio"]
+      @include appearance(none)
+      display: none
+      &:checked + label
+        -o-transition: color 0.5s
+        @include transition(color 0.5s)
+        color: $blue
         &:after
-          content: attr(data-text)
-          position: absolute
-          display: block
-          left: 127px
-          line-height: 54px
-          -moz-transition: font-weight 0.1s, left 0.1s
           -o-transition: font-weight 0.1s, left 0.1s
-          -webkit-transition: font-weight 0.1s, left 0.1s
-          //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-          transition: font-weight 0.1s, left 0.1s
-          font-family: $title-font-family
-          font-size: 18px
-          font-weight: normal
+          @include transition(font-weight 0.1s, left 0.1s)
+          font-weight: 600
+          left: 125px
 
-      // .wrapper
-      .tab-c
-        z-index: 2
-        background-color: $white
+      @for $j from 1 through 7
+        &:nth-of-type(#{$j}):checked ~ .tab-c
+          @for $i from 1 through 7
+            &:nth-of-type(#{$i})
+              @include transform(translate3d(0, percentage($i - $j), 0))
+
+      @for $j from 1 through 7
+        &:nth-of-type(#{$j}):checked ~ .animator
+          -o-transition: top 0.5s
+          @include transition(top, 0.5s)
+          top: #{($j - 1) * 60}px
+
+    .animator
+      position: absolute
+      background: $white
+      width: 100%
+      height: 60px
+      z-index: 1
+
+
+    label
+      z-index: 2
+      cursor: pointer
+      border: none
+      padding: 0
+      outline: none
+      border-radius: 0
+      position: relative
+      float: left
+      width: 100%
+      height: 60px
+      text-align: center
+      line-height: 60px
+      margin: 0
+      -o-transition: color 0.1s
+      @include transition(color 0.1s)
+      color: $link-gray
+      box-shadow: inset 0 1px 0 $white
+
+      &:before
         position: absolute
-        // display: block
-        height: 100%
-        left: $tabs-v_width
-        text-align: left
-        -moz-transition: -moz-transform 0.5s
-        -o-transition: -o-transform 0.5s
-        -webkit-transition: -webkit-transform 0.5s
-        //If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-        transition: transform 0.5s
-        > .card
-          +row
-          overflow-x: hidden
-          overflow-y: auto
-          padding: 0 70px
-          color: #5c6366
-          -webkit-overflow-scrolling: touch
-          > h1
-            +span-columns(2)
-            color: $blue
-            margin: 2.4px 9px 0px -2.6px
-            &:before
-              font-family: 'ramsey'
-              speak: none
-              font-style: normal
-              font-size: 68px
-              font-weight: normal
-              font-variant: normal
-              text-transform: none
-              line-height: 1
-          .title
-            +span-columns(9.5)
-            margin-bottom: 19px
-            h1
-              margin: 16px 0px 0px 4px
-              font-family: $title-font-family
-              font-weight: 600
-              font-size: 30px
-              line-height: 20px
-              color: $blue
-            p
-              font-family: $title-font-family
-              font-weight: 300
-              font-size: 18px
-              margin: 5px 0px 0px 4px
-              line-height: 20px
-              color: #5c6366
-          .body
-            +span-columns(12)
-            font-family: 'Helvetica'
-            font-size: 13px
+        display: block
+        right: 24px
+        font-family: 'ramsey'
+        speak: none
+        font-size: 26px
+        font-style: normal
+        font-weight: normal
+        font-variant: normal
+        text-transform: none
+        line-height: 60px
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+
+      &:after
+        content: attr(data-text)
+        position: absolute
+        display: block
+        left: 127px
+        line-height: 54px
+        -o-transition: font-weight 0.1s, left 0.1s
+        @include transition(font-weight 0.1s, left 0.1s)
+        font-family: $title-font-family
+        font-size: 18px
+        font-weight: normal
+
+    .tab-c
+      z-index: 2
+      background-color: $white
+      position: absolute
+      height: 100%
+      left: $tabs-v_width
+      text-align: left
+      -o-transition: -o-transform 0.5s
+      @include transition(transform 0.5s)
+      > .card
+        +row
+        overflow-x: hidden
+        overflow-y: auto
+        padding: 0 70px
+        color: #5c6366
+        -webkit-overflow-scrolling: touch
+        > h1
+          +span-columns(2)
+          color: $blue
+          margin: 2.4px 9px 0px -2.6px
+          &:before
+            font-family: 'ramsey'
+            speak: none
+            font-style: normal
+            font-size: 68px
             font-weight: normal
-            color: #65686f
-            line-height: 18px
-            margin-bottom: 32px
-            > :first-child
-              margin-bottom: 18px
-            > :last-child
-              margin: 0
+            font-variant: normal
+            text-transform: none
+            line-height: 1
+        .title
+          +span-columns(9.5)
+          margin-bottom: 19px
+          h1
+            margin: 16px 0px 0px 4px
+            font-family: $title-font-family
+            font-weight: 600
+            font-size: 30px
+            line-height: 20px
+            color: $blue
+          p
+            font-family: $title-font-family
+            font-weight: 300
+            font-size: 18px
+            margin: 5px 0px 0px 4px
+            line-height: 20px
+            color: #5c6366
+        .body
+          +span-columns(12)
+          font-family: 'Helvetica'
+          font-size: 13px
+          font-weight: normal
+          color: #65686f
+          line-height: 18px
+          margin-bottom: 32px
+          > :first-child
+            margin-bottom: 18px
+          > :last-child
+            margin: 0
 
 
   ::-webkit-scrollbar
