@@ -555,8 +555,8 @@ picture {
 
 @font-face {
   font-family: "ramsey";
-  src: url("/vendor/fonts/ramsey.eot?-2w71dj");
-  src: url("/vendor/fonts/ramsey.eot?#iefix-2w71dj") format("embedded-opentype"), url("/vendor/fonts/ramsey.ttf?-2w71dj") format("truetype"), url("/vendor/fonts/ramsey.woff?-2w71dj") format("woff"), url("/vendor/fonts/ramsey.svg?-2w71dj#ramsey") format("svg");
+  src: url("/fonts/ramsey.eot?-2w71dj");
+  src: url("/fonts/ramsey.eot?#iefix-2w71dj") format("embedded-opentype"), url("/fonts/ramsey.ttf?-2w71dj") format("truetype"), url("/fonts/ramsey.woff?-2w71dj") format("woff"), url("/fonts/ramsey.svg?-2w71dj#ramsey") format("svg");
   font-weight: normal;
   font-style: normal; }
 i {
