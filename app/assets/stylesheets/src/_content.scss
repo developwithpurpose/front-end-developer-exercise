@@ -1,0 +1,11 @@
+#main{
+	max-width: $wrapWidth;
+	width: auto;
+}
+
+article{
+	background-color: white;
+	float: left;
+	width: 70%;
+	z-index: 2;
+}

@@ -1,0 +1,22 @@
+@mixin horizontalGradientBG($startColor: rgba(0,0,0,0), $endColor: rgba(0,0,0,0.5), $fallbackImage: '', $fallbackColor: rgba(0,0,0,0))
+{
+	/* fallback */
+	background-color: $fallbackColor;
+	background-image: url($fallbackImage);
+	background-repeat: repeat-y;
+
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(left, $endColor, $startColor);
+
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(left, $endColor, $startColor);
+
+	/* IE 10 */
+	background: -ms-linear-gradient(left, $endColor, $startColor);
+
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(left, $endColor, $startColor);
+}
