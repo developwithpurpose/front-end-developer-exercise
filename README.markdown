@@ -25,7 +25,7 @@ Success Criteria
 * The markup should be semantic and accessible.
 * The page should be presentable in all modern browsers as well as IE 9+, though not necessarily visually identical across the board. Please document intentional deviations.
 * You should __not__ create a mobile/responsive version, as we will not be giving any credit for it.
-* The page should be usable without JavaScript, though not necessarily functionally identical. Please document intentional deviations.
+* The page should be usable without JavaScript, though not necessarily functionally identical (e.g. the Dynamic Content user story requires JavaScript). Please document intentional deviations.
 * You should __not__ use a single-page application framework (e.g. Angular, Ember, React), though you can use any other libraries that you need (e.g. jQuery, Lodash, etc.).
 
 Resources
@@ -59,7 +59,7 @@ Dynamic Content
 
 As a user I want to be encouraged by how many friends of mine are also going through the selected baby step. I don't need to see all my friends; just a summary of who is in the same baby step.
 
-You should request the data from `/app/baby-steps.json`, which includes a list of friend objects. Each object contains names and their baby step. Based on the data returned, you will need to show the following information to the user sorted by last name ascending.
+You should make an AJAX request for the data from `/app/baby-steps.json`, which includes a list of friend objects. Each object contains names and their baby step. Based on the data returned, you will need to show the following information to the user, sorted by last name ascending.
 
 ### Message Logic
 
@@ -68,3 +68,5 @@ You should request the data from `/app/baby-steps.json`, which includes a list o
 * if 2 friends, then show "Thomas Harris and Sharon Thomas are also in Baby Step 3"
 * if 3 friends, then show "Deborah Lee, Shirley Perez, and 1 other friend are also in Baby Step 4"
 * if 4 or more friends, then show "Patricia Allen, Matthew Garcia, and 2 other friends are also in Baby Step 5"
+
+Consult the mockups about where to put this information and how to style it.
