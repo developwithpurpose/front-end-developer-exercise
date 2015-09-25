@@ -1,2 +1,2 @@
-
+window.daveCodeTest=function(a){var b={},c={navItems:a("aside nav a")};return b.onReady=function(){console.log(c.navItems)},b}(jQuery),$(document).ready(window.daveCodeTest.onReady);
 //# sourceMappingURL=app.js.map

@@ -1,1 +1,1 @@
-{"version":3,"file":"app.js","sources":[],"names":[],"mappings":""}
+{"version":3,"file":"app.js","sources":["src/app.js"],"names":["window","daveCodeTest","$","module","$el","navItems","onReady","console","log","jQuery","document","ready"],"mappings":"AAAAA,OAAOC,aAAe,SAAUC,GAE/B,GAAIC,MAEAC,GACHC,SAAUH,EAAE,eAQb,OALAC,GAAOG,QAAU,WAEhBC,QAAQC,IAAIJ,EAAIC,WAGVF,GAELM,QAEHP,EAAEQ,UAAUC,MAAMX,OAAOC,aAAaK"}

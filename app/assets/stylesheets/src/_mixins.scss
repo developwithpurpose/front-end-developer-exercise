@@ -20,3 +20,13 @@
 	/* Opera 11.10+ */
 	background: -o-linear-gradient(left, $endColor, $startColor);
 }
+
+@mixin iconSetBGPositions($xStart: 0, $yStart: 0, $xOffset: 0, $yOffset: 0, $classes: '', $prefix: '.', $in: 'px')
+{
+	@each $class in $classes {
+		$i: index($classes, $class) - 1;
+		#{$prefix}#{$class}{
+			background-position: ($xStart + ($i * $xOffset))#{$in} ($yStart + ($i * $yOffset))#{$in};
+		}
+	}
+}

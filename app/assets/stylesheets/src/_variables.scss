@@ -1,11 +1,19 @@
+$bodyBG: #bbbfc2;
+
+$colorTextBase: #65686f;
+$colorBlue: #68bbe5;
+
 $wrapWidth: 980px;
+$asideWidth: 30%;
+$contentWidth: (100% - $asideWidth);
 
 $asideBG: #ececee;
 $asideShadowStart: #d1d5d6;
 $asideShadowEnd: #ebeced;
 $asideColorOff: #aeb2b5;
-$asideColorOn: #68bbe5;
+$asideColorOn: $colorBlue;
 
+$helveticaFonts: 'Helvetica' sans-serif;
 $openSansFonts: 'Open Sans', sans-serif;
 $openSansProFonts: 'Source Sans Pro', sans-serif;
 

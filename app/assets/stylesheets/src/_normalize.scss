@@ -37,3 +37,12 @@ a{
     color: inherit;
     text-decoration: none;
 }
+
+p{
+    color: $colorTextBase;
+    font-family: $helveticaFonts;
+}
+
+p + p{
+    margin-top: 3em;
+}

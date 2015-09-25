@@ -1,3 +1,14 @@
+/* will be used for the iteration when @iconSetBGPositions() mixin is called below */
+$iconSuffixes: (
+	'money', 
+	'bubbles', 
+	'piggybank', 
+	'graph', 
+	'book', 
+	'house', 
+	'hand'
+);
+
 .ico{
 	display: inline-block;
 
@@ -10,22 +21,12 @@
 		height: $iconSizeSmall;
 		width: $iconSizeSmall;
 
-		&.ico-money{ background-position: 0 0; }
-		&.ico-bubbles{ background-position: 0 -30px; }
-		&.ico-piggybank{ background-position: 0 -60px; }
-		&.ico-graph{ background-position: 0 -90px; }
-		&.ico-book{ background-position: 0 -120px; }
-		&.ico-house{ background-position: 0 -150px; }
-		&.ico-hand{ background-position: 0 -180px; }
+		/* output background positions for each icon; e.g. will output &.ico-bubbles{background-position: 0, -30px} */
+		@include iconSetBGPositions(0, 0, 0, -30, $iconSuffixes, '&.ico-');
 
-		.active &{
-			&.ico-money{ background-position: 0 -210; }
-			&.ico-bubbles{ background-position: 0 -240px; }
-			&.ico-piggybank{ background-position: 0 -270px; }
-			&.ico-graph{ background-position: 0 -300px; }
-			&.ico-book{ background-position: 0 -330px; }
-			&.ico-house{ background-position: 0 -360px; }
-			&.ico-hand{ background-position: 0 -390px; }
+		&.active, .active &{
+			/* output background positions for each icon; e.g. will output .active .ico-bubbles{background-position: 0, -240px} */
+			@include iconSetBGPositions(0, -210, 0, -30, $iconSuffixes, '&.ico-');
 		}
 	}
 
@@ -33,5 +34,11 @@
 		background: transparent url($iconSpriteLarge) 0 0 no-repeat scroll;
 		height: $iconSizeLarge;
 		width: $iconSizeLarge;
+
+		@include iconSetBGPositions(0, 0, 0, -80, $iconSuffixes, '&.ico-');
+
+		&.active, .active &{
+			@include iconSetBGPositions(0, -560, 0, -80, $iconSuffixes, '&.ico-');
+		}
 	}
 }
