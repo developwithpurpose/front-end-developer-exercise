@@ -983,78 +983,49 @@ main.container {
         -o-transition: top 0.5s;
         -webkit-transition: top 0.5s;
         transition: top 0.5s;
-        top: 0px;
-        position: absolute;
-        background: #fff;
-        width: 100%;
-        height: 60px;
-        z-index: 1; }
+        top: 0px; }
       main.container .tabs-v > input[type="radio"]:nth-of-type(2):checked ~ .animator {
         -moz-transition: top 0.5s;
         -o-transition: top 0.5s;
         -webkit-transition: top 0.5s;
         transition: top 0.5s;
-        top: 60px;
-        position: absolute;
-        background: #fff;
-        width: 100%;
-        height: 60px;
-        z-index: 1; }
+        top: 60px; }
       main.container .tabs-v > input[type="radio"]:nth-of-type(3):checked ~ .animator {
         -moz-transition: top 0.5s;
         -o-transition: top 0.5s;
         -webkit-transition: top 0.5s;
         transition: top 0.5s;
-        top: 120px;
-        position: absolute;
-        background: #fff;
-        width: 100%;
-        height: 60px;
-        z-index: 1; }
+        top: 120px; }
       main.container .tabs-v > input[type="radio"]:nth-of-type(4):checked ~ .animator {
         -moz-transition: top 0.5s;
         -o-transition: top 0.5s;
         -webkit-transition: top 0.5s;
         transition: top 0.5s;
-        top: 180px;
-        position: absolute;
-        background: #fff;
-        width: 100%;
-        height: 60px;
-        z-index: 1; }
+        top: 180px; }
       main.container .tabs-v > input[type="radio"]:nth-of-type(5):checked ~ .animator {
         -moz-transition: top 0.5s;
         -o-transition: top 0.5s;
         -webkit-transition: top 0.5s;
         transition: top 0.5s;
-        top: 240px;
-        position: absolute;
-        background: #fff;
-        width: 100%;
-        height: 60px;
-        z-index: 1; }
+        top: 240px; }
       main.container .tabs-v > input[type="radio"]:nth-of-type(6):checked ~ .animator {
         -moz-transition: top 0.5s;
         -o-transition: top 0.5s;
         -webkit-transition: top 0.5s;
         transition: top 0.5s;
-        top: 300px;
-        position: absolute;
-        background: #fff;
-        width: 100%;
-        height: 60px;
-        z-index: 1; }
+        top: 300px; }
       main.container .tabs-v > input[type="radio"]:nth-of-type(7):checked ~ .animator {
         -moz-transition: top 0.5s;
         -o-transition: top 0.5s;
         -webkit-transition: top 0.5s;
         transition: top 0.5s;
-        top: 360px;
-        position: absolute;
-        background: #fff;
-        width: 100%;
-        height: 60px;
-        z-index: 1; }
+        top: 360px; }
+    main.container .tabs-v > .animator {
+      position: absolute;
+      background: #fff;
+      width: 100%;
+      height: 60px;
+      z-index: 1; }
     main.container .tabs-v > label {
       z-index: 2;
       cursor: pointer;
