@@ -26,10 +26,3 @@ The native jQuery.animate() function was attempted for the content scroll, but t
 JavaScript Disabled
 -------------------
 The content of all the Baby Steps are presentable when JS is disabled. The sidebar navigation is hidden, and the friends/social feature is unavailable. A small set of styles are applied to `html.no-js` children that affect the layout. 
-
-
-Asides, Caveats &amp; other Whatnots
-====================================
-
-*Deletions*   
-Files deletions from the original repo were for the purpose of providing clarity on what assets are actually being used. Images for the content headings, for instance, were not used because the design was achieved with styles.
