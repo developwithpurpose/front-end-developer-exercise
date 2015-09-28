@@ -1,31 +1,28 @@
-/* will be used for the iteration when @iconSetBGPositions() mixin is called below */
+
 $iconSuffixes: (
-	'money', 
-	'bubbles', 
-	'piggybank', 
-	'graph', 
-	'book', 
-	'house', 
+	'money',
+	'bubbles',
+	'piggybank',
+	'graph',
+	'book',
+	'house',
 	'hand'
 );
 
 .ico{
+	background-attachment: scroll;
+	background-color: transparent;
+	background-repeat: no-repeat;
 	display: inline-block;
 
 	&.ico-small{
-		background-attachment: scroll;
-		background-color: transparent;
 		background-image: url($iconSpriteSmall);
-		background-repeat: no-repeat;
-		background-size: 30px 420px;
 		height: $iconSizeSmall;
 		width: $iconSizeSmall;
 
-		/* output background positions for each icon; e.g. will output &.ico-bubbles{background-position: 0, -30px} */
 		@include iconSetBGPositions(0, 0, 0, -30, $iconSuffixes, '&.ico-');
 
-		&.active, .active &{
-			/* output background positions for each icon; e.g. will output .active .ico-bubbles{background-position: 0, -240px} */
+		.active &{
 			@include iconSetBGPositions(0, -210, 0, -30, $iconSuffixes, '&.ico-');
 		}
 	}
@@ -37,8 +34,9 @@ $iconSuffixes: (
 
 		@include iconSetBGPositions(0, 0, 0, -80, $iconSuffixes, '&.ico-');
 
-		&.active, .active &{
-			@include iconSetBGPositions(0, -560, 0, -80, $iconSuffixes, '&.ico-');
+		.active &,
+		&.active{
+			@include iconSetBGPositions(0, -550, 0, -80, $iconSuffixes, '&.ico-');
 		}
 	}
 }

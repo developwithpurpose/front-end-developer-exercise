@@ -7,15 +7,17 @@ aside{
 		background-color: $asideBG;
 		height: 100%;
 		overflow: hidden;
-		margin-top: 21.5%;
+		margin-top: 21.3%;
 		min-height: 600px;
 		width: 100%;
 
 		ul{
 			border-bottom: 1px solid white;
-			z-index: 1;
+			z-index: 2;
 			
 			li{
+				list-style-type: none;
+				
 				a{
 					color: $asideColorOff;
 					display: block;
@@ -36,7 +38,8 @@ aside{
 				}
 
 				&.active{
-					background: white;
+					// background: white;
+					
 					a{
 						color: $asideColorOn;
 						font-weight: 600;
@@ -47,7 +50,8 @@ aside{
 			li + li{
 				border-top: 1px solid white;
 			}
-		}
+		
+		} /* /ul */
 
 		&:after{
 			/* fallback for gradient backgrounds below */
@@ -65,5 +69,20 @@ aside{
 			width: 10%;
 			z-index: 0;
 		}
-	}
-}
+
+		/* will be shown, positioned with JS */
+		.active-bg{
+			background-color: white;
+			display: block;
+			height: 0;
+			left: 0;
+			padding: 1.87em 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+	
+	} /* /nav */
+
+} /* /aside */

@@ -6,7 +6,7 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "grunt server"
+    "start": "bower install && npm install && grunt server"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

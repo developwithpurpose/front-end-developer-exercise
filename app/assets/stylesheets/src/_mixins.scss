@@ -1,32 +1,31 @@
-@mixin horizontalGradientBG($startColor: rgba(0,0,0,0), $endColor: rgba(0,0,0,0.5), $fallbackImage: '', $fallbackColor: rgba(0,0,0,0))
-{
-	/* fallback */
-	background-color: $fallbackColor;
-	background-image: url($fallbackImage);
-	background-repeat: repeat-y;
-
-	/* Safari 4-5, Chrome 1-9 */
-	background: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
-
-	/* Safari 5.1, Chrome 10+ */
-	background: -webkit-linear-gradient(left, $endColor, $startColor);
-
-	/* Firefox 3.6+ */
-	background: -moz-linear-gradient(left, $endColor, $startColor);
-
-	/* IE 10 */
-	background: -ms-linear-gradient(left, $endColor, $startColor);
-
-	/* Opera 11.10+ */
-	background: -o-linear-gradient(left, $endColor, $startColor);
-}
-
-@mixin iconSetBGPositions($xStart: 0, $yStart: 0, $xOffset: 0, $yOffset: 0, $classes: '', $prefix: '.', $in: 'px')
+/**
+ * Will output a set of background-position properties, calculating the X and Y positions as 
+ * iteration occurs. This mixin is only useful for a sprite of icons that are on a grid. For 
+ * instance, a sprite in which each icon occupies a fixed, consistent dimension on either plane. 
+ * 
+ * @param 	number 	$xStart 	The base x-plane position. The first iteration will have this as its x value
+ * @param 	number 	$yStart 	The base y-plane position. The first iteration will have this as its y value
+ * @param 	number 	$xOffset 	The quantity to add with each iteration; x-plane = ($index-1 * $xOffset)
+ * @param 	number 	$yOffset 	The quantity to add with each iteration; y-plane = ($index-1 * $yOffset)
+ * @param 	array 	$classes 	Should be passed in in SASS array syntax, e.g. ('item1', 'item2')
+ * @param 	string 	$prefix 	A string to prefix each selector
+ * @param 	string 	$units 		The unit of measurement to be used, e.g. px|em|pt|%
+ * 
+ * Example output: 
+ * 	.myclass{
+ * 		@include iconSetBGPositions(1, 2, 3, 4, ('class1', 'class2', 'class3'), '.prefix-', 'px');
+ * 	} -> .myclass{
+ * 		.prefix-class1{ background-position: 1px 2px; }
+ * 		.prefix-class2{ background-position: 4px 6px; }
+ * 		.prefix-class3{ background-position: 7px 9px; }
+ *	}
+ */
+@mixin iconSetBGPositions($xStart: 0, $yStart: 0, $xOffset: 0, $yOffset: 0, $classes: '', $prefix: '.', $units: 'px')
 {
 	@each $class in $classes {
 		$i: index($classes, $class) - 1;
 		#{$prefix}#{$class}{
-			background-position: ($xStart + ($i * $xOffset))#{$in} ($yStart + ($i * $yOffset))#{$in};
+			background-position: ($xStart + ($i * $xOffset))#{$units} ($yStart + ($i * $yOffset))#{$units};
 		}
 	}
 }

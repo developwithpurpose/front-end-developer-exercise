@@ -18,6 +18,7 @@ form, fieldset, legend, label,
 input, textarea, option, .nobox{
     background-color: transparent;
     border: 0;
+    font-family: $helveticaFonts;
     font-weight: normal;
     font-size: 100%;
     height: auto;

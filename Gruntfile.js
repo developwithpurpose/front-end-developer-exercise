@@ -4,7 +4,11 @@ module.exports = function(grunt)
 {
 	require('load-grunt-tasks')(grunt);
 
-	var assetBase = 'app/assets';
+	var _assets = 'app/assets',
+		_css 	= 'app/assets/stylesheets',
+		_js 	= 'app/assets/javascripts',
+		_bower 	= grunt.file.readJSON('.bowerrc')
+	;
 
 	grunt.initConfig({
 
@@ -25,6 +29,22 @@ module.exports = function(grunt)
 			}
 		},
 
+		uglify: {
+			scripts: {
+				files: { 'app/assets/javascripts/app.js': [
+						_bower.directory + '/jquery/dist/jquery.js',
+						_bower.directory + '/jquery.easing/js/jquery.easing.js',
+						_bower.directory + '/jquery.scrollTo/jquery.scrollTo.js',
+						_bower.directory + '/modernizr/modernizr.js',
+						_js + '/src/elements.js',
+						_js + '/src/nav.js',
+						_js + '/src/social.js',
+						_js + '/src/ready.js'
+					]
+				}
+			}
+		},
+
 		sass: {
 			options: {
 				style: 'compressed'
@@ -32,49 +52,35 @@ module.exports = function(grunt)
 			dist: {
 				files: [{
 					expand: true,
-					cwd: assetBase + '/stylesheets/src',
+					cwd: _css + '/src',
 					src: '*.{scss,sass}',
-					dest: assetBase + '/stylesheets',
+					dest: _css,
 					ext: '.css'
-				}]
-			}
-		},
-
-		uglify: {
-			options: {
-				sourceMap: true
-			},
-			dist: {
-				files: [{
-					expand: true,
-					cwd: assetBase + '/javascripts/src',
-					src: '**/*.js',
-					dest: assetBase + '/javascripts'
 				}]
 			}
 		},
 
 		watch: {
 			styles: {
-				files: [assetBase + '/stylesheets/src/**/*.{scss,sass}'],
+				files: [_css + '/src/**/*.{scss,sass}'],
 				tasks: ['sass:dist']
 			},
 			scripts: {
-				files: [assetBase + '/javascripts/src/**/*.js'],
-				tasks: ['uglify:dist']
+				files: [_js + '/src/**/*.js'],
+				tasks: ['uglify:scripts']
 			},
 			livereload: {
 				options: {
 					livereload: true
 				},
 				files: [
-					assetBase + '/javascripts/src/*.js',
-					assetBase + '/stylesheets/src/*.{scss,sass}',
+					_js + '/src/*.js',
+					_css + '/src/*.{scss,sass}',
 				]
 			}
 		}
 
 	});
 
-	grunt.registerTask('server', ['express', 'open', 'watch']);
+	grunt.registerTask('server', ['uglify:scripts', 'sass:dist', 'express', 'open', 'watch']);
 };
