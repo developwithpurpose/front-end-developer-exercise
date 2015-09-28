@@ -1,0 +1,10 @@
+{
+  "name": "front-end-developer-exercise",
+  "version": "0.0.1",
+  "dependencies": {
+    "modernizr": "~2.8.3",
+    "jquery": "~2.1.4",
+    "jquery.scrollTo": "~2.1.2",
+    "jquery.easing": "~1.3"
+  }
+}

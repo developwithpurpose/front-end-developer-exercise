@@ -1,0 +1,42 @@
+
+$iconSuffixes: (
+	'money',
+	'bubbles',
+	'piggybank',
+	'graph',
+	'book',
+	'house',
+	'hand'
+);
+
+.ico{
+	background-attachment: scroll;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	display: inline-block;
+
+	&.ico-small{
+		background-image: url($iconSpriteSmall);
+		height: $iconSizeSmall;
+		width: $iconSizeSmall;
+
+		@include iconSetBGPositions(0, 0, 0, -30, $iconSuffixes, '&.ico-');
+
+		.active &{
+			@include iconSetBGPositions(0, -210, 0, -30, $iconSuffixes, '&.ico-');
+		}
+	}
+
+	&.ico-large{
+		background: transparent url($iconSpriteLarge) 0 0 no-repeat scroll;
+		height: $iconSizeLarge;
+		width: $iconSizeLarge;
+
+		@include iconSetBGPositions(0, 0, 0, -80, $iconSuffixes, '&.ico-');
+
+		.active &,
+		&.active{
+			@include iconSetBGPositions(0, -550, 0, -80, $iconSuffixes, '&.ico-');
+		}
+	}
+}

@@ -1,0 +1,24 @@
+$bodyBG: #bbbfc2;
+
+$colorBlue: #36abe1;
+$colorTextBase: #65686f;
+
+$wrapWidth: 980px;
+$asideWidth: 30%;
+$contentWidth: (100% - $asideWidth);
+
+$asideBG: #ececee;
+$asideShadowStart: #d1d5d6;
+$asideShadowEnd: #ebeced;
+$asideColorOff: #aeb2b5;
+$asideColorOn: $colorBlue;
+
+$helveticaFonts: 'helvetica', sans-serif;
+$openSansFonts: 'Open Sans', sans-serif;
+$openSansProFonts: 'Source Sans Pro', sans-serif;
+
+$iconSpriteSmall: "../images/icons.sprite-30x30.png";
+$iconSizeSmall: 30px;
+
+$iconSpriteLarge: "../images/icons.sprite-80x80.png";
+$iconSizeLarge: 80px;

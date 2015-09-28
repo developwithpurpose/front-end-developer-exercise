@@ -1,0 +1,65 @@
+article.content{
+	background-color: white;
+	display: inline-block;
+	height: auto;
+	overflow: hidden;
+	margin: 6.1% 7%;
+	vertical-align: top;
+	width: 55%;
+	z-index: 2;
+
+	.baby-step-items{
+		height: 100%;
+		overflow: hidden;
+	}
+
+	section{
+		padding: 1em 0;
+		width: 100%;
+
+		&.active{
+			display: block;
+		}
+	}
+
+	h1{
+		color: $colorBlue;
+		font-family: $openSansProFonts;
+		font-size: 1.8em;
+		font-weight: 600;
+		letter-spacing: .02em;
+
+		.ico{
+			float: left;
+			margin: -19px 10px 0 0;
+		}
+	}
+
+	h2{
+		color: lighten($colorTextBase, 10%);
+		font-family: $openSansProFonts;
+		font-size: 1.12em;
+		font-weight: 300;
+	}
+
+	p{
+		font-size: 0.8em;
+		line-height: 1.4;
+		width: 100%;
+
+		a{
+			color: lighten($colorBlue, 12%);
+		}
+	}
+
+	h1 + p, 
+	h2 + p,
+	p + p{
+		clear: both;
+		margin-top: 1.4em;
+	}
+
+	p.friends{
+		margin-top: 2.5em;
+	}
+}

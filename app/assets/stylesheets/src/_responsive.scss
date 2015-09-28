@@ -1,0 +1,7 @@
+@media only screen and (min-width: $wrapWidth) {
+
+	#main{
+		margin-left: -($wrapWidth / 2);
+		left: 50%;
+	}
+}

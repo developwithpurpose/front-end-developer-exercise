@@ -1,0 +1,23 @@
+.no-js{
+
+	article.content{
+		margin-left: 4%;
+		margin-right: 4%;
+		width: 92%;
+
+		section{
+			float: left;
+			margin-left: 4%;
+			margin-right: 4%;
+			width: 42%;
+
+			&:nth-child(2n+1){
+				clear: both;
+			}
+		}
+	}
+
+	aside{
+		display: none;
+	}
+}

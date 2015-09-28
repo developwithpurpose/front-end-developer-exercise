@@ -1,0 +1,88 @@
+aside{
+	display: inline-block;
+	width: 30.5%;
+	z-index: 1;
+
+	nav{
+		background-color: $asideBG;
+		height: 100%;
+		overflow: hidden;
+		margin-top: 21.3%;
+		min-height: 600px;
+		width: 100%;
+
+		ul{
+			border-bottom: 1px solid white;
+			z-index: 2;
+			
+			li{
+				list-style-type: none;
+				
+				a{
+					color: $asideColorOff;
+					display: block;
+					font-family: $openSansProFonts;
+					font-weight: 400;
+					font-size: 1.1em;
+					line-height: 3.3;
+					padding: 0 28% 0 0;
+					text-align: right;
+					width: 72%;
+
+					.ico{
+						margin-top: -($iconSizeSmall / 2);
+						position: absolute;
+						top: 50%;
+						right: 7.5%;
+					}
+				}
+
+				&.active{
+					// background: white;
+					
+					a{
+						color: $asideColorOn;
+						font-weight: 600;
+					}
+				}
+			}
+			
+			li + li{
+				border-top: 1px solid white;
+			}
+		
+		} /* /ul */
+
+		&:after{
+			/* fallback for gradient backgrounds below */
+			background: url(../images/nav-gradient.png) top right repeat-y;
+			background: -webkit-linear-gradient(left, rgba(0,0,0,0) 62%, rgba(0,0,0,0.02) 79%, rgba(0,0,0,0.1));
+			background: -moz-linear-gradient(left, rgba(0,0,0,0) 62%, rgba(0,0,0,0.02) 79%, rgba(0,0,0,0.1));
+			background: -ms-linear-gradient(left, rgba(0,0,0,0) 62%, rgba(0,0,0,0.02) 79%, rgba(0,0,0,0.1));
+			background: -o-linear-gradient(left, rgba(0,0,0,0) 62%, rgba(0,0,0,0.02) 79%, rgba(0,0,0,0.1));
+			content: " ";
+			display: block;
+			height: 120%;
+			position: absolute;
+			right: 0;
+			top: -10%;
+			width: 10%;
+			z-index: 0;
+		}
+
+		/* will be shown, positioned with JS */
+		.active-bg{
+			background-color: white;
+			display: block;
+			height: 0;
+			left: 0;
+			padding: 1.87em 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+	
+	} /* /nav */
+
+} /* /aside */
