@@ -1,0 +1,48 @@
+//= Paths
+@images-path: "../images";
+
+
+//== Colors
+@brand-primary: #36abe1;
+@brand-light: #6fbee7;
+
+@gray-dark: #bbbfc2;
+@gray: #d1d5d6;
+@gray-light: #ebeced;
+
+@gray-text-dark: #5c6366;
+@gray-text: #65686f;
+@gray-text-light: #9ba0a4;
+
+
+//== Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
+
+@branding-font-family: 'Open Sans', sans-serif;
+@headings-font-family: 'Source Sans Pro', sans-serif;
+@body-font-family: 'Helvetica', sans-serif;
+
+
+//== Mixins
+.hidden {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+//= Sprites
+@sm-sprite-height: 25px;
+@lg-sprite-height: 64.86px;
+.create-sprites(@total, @sprite-height, @inactive-selector, @active-selector, @counter: 1) when (@counter <= @total) {
+	&:nth-child( @{counter} ) @{inactive-selector}  {
+		background-position: 0px -( (@counter * @sprite-height) - @sprite-height );
+	}
+	&:nth-child( @{counter} ) @{active-selector} {
+		background-position: 0px -( ((@counter * @sprite-height) - @sprite-height) + (@total * @sprite-height) );
+	}
+	.create-sprites(@total, @sprite-height, @inactive-selector, @active-selector, (@counter + 1));
+}
