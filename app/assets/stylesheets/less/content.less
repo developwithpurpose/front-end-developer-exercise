@@ -1,0 +1,141 @@
+.page > .content {
+	background: url("@{images-path}/shadow_left_nav.jpg") repeat-y;
+	background: linear-gradient(to right, @gray-light 0%, @gray-light 28%, @gray 30.75%, #fff 30.75%);
+	
+	> nav {
+		display: inline-block;
+		vertical-align: top;
+		width: 31%;
+		position: relative;
+		
+		> ol {
+			list-style: none;
+			padding-left: 0;
+			margin: 0;
+			margin-top: 5px;
+			position: relative;
+			z-index: 2;
+			
+			> li {			
+				> a {
+					font-family: @headings-font-family;
+					font-weight: 400;
+					font-size: 18px;
+					color: @gray-text-light;
+					line-height: 24px;
+					text-align: right;
+					text-decoration: none;
+					display: block;
+					padding: 16px 24px;
+					border-bottom: 1px solid #fff;
+					
+					&:after {					
+						content: "";
+						display: inline-block;
+						vertical-align: middle;
+						width: 30px;
+						height: @sm-sprite-height;
+						margin-left: 25px;
+						background: url("@{images-path}/icons/sprites/icons_small.png") no-repeat;
+					}
+
+					&:hover, &.active {
+						font-weight: 700;
+					}
+					&.active {
+						color: @brand-primary;
+					}
+				}	
+				.create-sprites(7, @sm-sprite-height, ~'a:after', ~'a.active:after');
+			}
+		}
+		
+		> div.moving-bg {
+			position: absolute;
+			z-index: 0;
+			top: -1000px;
+			left: 0;
+			width: 100%;
+			font-family: @headings-font-family;
+			font-size: 18px;
+			line-height: 24px;
+			padding: 17px 0;
+			background-color: #fff;
+		}
+	}
+	
+	> section {
+		display: inline-block;
+		width: 68%;
+		
+		> article {
+			padding: 0 70px 80px 70px;
+
+			> header {
+				&:before {
+					content: "";
+					float: left;
+					width: 80px;
+					height: @lg-sprite-height;
+					margin-right: 18px;
+					background: url("@{images-path}/icons/sprites/icons_large.png") no-repeat;
+				}
+				
+				> h2 {
+					font-family: @headings-font-family;
+					font-size: 30px;
+					font-weight: 700;
+					color: @brand-primary;
+					line-height: 20px;
+					margin: 0 0 7px 0;
+					padding-top: 12px;
+				}
+				
+				> p {
+					font-family: @headings-font-family;
+					font-size: 18px;
+					font-weight: 300;
+					color: @gray-text-dark;
+					line-height: 20px;
+					margin: 7px 0 24px 0;
+				}
+			}
+			.create-sprites(7, @lg-sprite-height, ~'header.inactive:before', ~'header:before');
+			
+			> p {
+				font-family: @body-font-family;
+				font-size: 13px;
+				line-height: 18px;
+				color: @gray-text;
+			}
+			
+			a {
+				color: @brand-light;
+				text-decoration: none;
+				
+				&:hover {
+					color: @brand-primary;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+body.js > .page > .content {
+	overflow: hidden;
+	height: 450px;
+	
+	> nav {
+		> div.moving-bg {
+			top: 5px;
+		}
+	}
+	
+	> section {
+		> article {
+			height: 450px;
+			padding-bottom: 0;
+		}
+	}
+}

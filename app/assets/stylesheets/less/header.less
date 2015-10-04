@@ -1,0 +1,33 @@
+.page > header {
+	background: url("@{images-path}/header.jpg") top left no-repeat;
+	height: 276px;
+	overflow: auto;
+	color: #fff;
+	text-align: right;
+	margin-bottom: 60px;
+	
+	> h1 {
+		&:extend(.hidden);
+	}
+	
+	p {
+		margin-top: 50px;
+		margin-right: 70px;
+		margin-left: 380px;
+		
+		font-family: @branding-font-family;
+		font-size: 32px;
+		line-height: 1;
+		font-weight: 300;
+		
+		strong {
+			display: block;
+			margin-top: 6px;
+			
+			font-size: 50px;
+			font-weight: 700;
+			line-height: 48px;
+			text-transform: uppercase;
+		}
+	}
+}
