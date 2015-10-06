@@ -1,0 +1,152 @@
+body {
+    background-color: #bbbfc2;
+    margin: 0;
+}
+
+a {
+    color: #6fbee7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#wrapper {
+    width: 980px;
+    margin: 0 auto 0 auto;
+    padding: 0;
+    box-shadow: 0 0 20px #000;
+    background-color: #fff;
+}
+
+#wrapper #header {
+    background-image: url(../images/header_text.jpg);
+    height: 276px;
+    margin-bottom: 60px;
+}
+
+#real_life {
+    padding: 0;
+    margin: 0;
+    font-weight: lighter;
+    font-size: 32px;
+}
+
+#trusted_guy {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: 48px;
+    text-transform: uppercase;
+    line-height: 48px;
+}
+
+#side_nav {
+    background-image: url(../images/shadow_left_nav.jpg);
+    background-repeat: repeat-y;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 300px;
+    float: left;
+    padding-bottom: 25px;
+}
+
+#side_nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 2px 0 2px 0;
+}
+
+#side_nav ul li {
+    background-image: url(../images/shadow_left_nav_list.jpg);
+    background-repeat: repeat-y;
+    background-position: 300px, 0;
+    text-align: right;
+    margin: 0;
+    padding: 0 24px 0 0;
+    font-size: 18px;
+    line-height: 60px;
+    color: #9ba0a4;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+#side_nav ul li:hover {
+    font-weight: 600;
+    color: #36abe1;
+}
+
+#side_nav ul li img {
+    margin: 0 0 0 15px;
+    width: 30px;
+    vertical-align: middle;
+}
+
+#side_nav ul .bs_active {
+    font-weight: 600;
+    color: #36abe1;
+    background-position: 0;
+}
+
+#content {
+    padding: 0 70px;
+    width: 540px;
+    float: right;
+}
+
+.bs_content_active {
+    display: block;
+}
+
+.bs_content img {
+    float: left;
+    margin-left: -18px;
+}
+
+.bs_content header {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 15px;
+}
+
+.bs_content section, .friends {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: "Helvetica";
+    color: #65686f;
+    clear: both;
+}
+
+.bs_header_text {
+    margin: 10px 0 0 24px;
+    float: left;
+}
+
+.bs_header_text h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #36abe1;
+    line-height: 20px;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+.bs_header_text h3 {
+    font-size: 18px;
+    font-weight: lighter;
+    color: #5c6366;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.bs_content p {
+    clear: both;
+}
+
+.friends{
+    margin-top: 40px;
+}
+
+.clear {
+    clear: both;
+}
