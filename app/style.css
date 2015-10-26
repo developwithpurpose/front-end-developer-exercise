@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Source+Sans+Pro:400,600,300);
+body {
+  margin: 0;
+  background-color: #bbbfc2;
+}
+header,
+.content {
+  background-color: #ffffff;
+  max-width: 980px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 50px;
+  font-family: 'Open Sans';
+}
+h2,
+h3 {
+  font-size: 18px;
+  font-family: 'Source Sans Pro';
+}
+body {
+  font-family: 'Helvetica';
+  font-size: 13px;
+  color: #65686f;
+}
+body a {
+  color: #6fbee7;
+}
+body a:hover {
+  color: #43aae0;
+}
