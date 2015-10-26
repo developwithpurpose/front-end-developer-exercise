@@ -9,6 +9,23 @@ header, .content {
 	margin: 0 auto;
 }
 
+.content {
+	padding-top: 60px;
+	.row {
+		.make-row();
+		margin: 0;
+	}
+	.aside {
+		.make-column(3.7);
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.step-info{
+		.make-column(8.3);
+		padding: 0 70px;
+	}
+}
+
 h1 {
 	font-size: @header_size;
 	font-family: @header_font;
