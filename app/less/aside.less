@@ -1,0 +1,28 @@
+.aside {
+	text-align: right;
+	padding-bottom: 200px;
+
+	// Gradient and fallbacks
+	background: #ebeced; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ebeced 95%, #d1d5d6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(95%,#ebeced), color-stop(100%,#d1d5d6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ebeced 95%,#d1d5d6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ebeced 95%,#d1d5d6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ebeced 95%,#d1d5d6 100%); /* IE10+ */
+	background: linear-gradient(to right,  #ebeced 95%,#d1d5d6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+
+	.step {
+		border-bottom: 2px solid @white;
+		h3 {
+			display: inline-block;
+			line-height: 60px;
+			margin: 0;
+		}
+		img {
+			position: relative;
+			top: 5px;
+			padding: 0 24px;
+		}
+	}
+}
