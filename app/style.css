@@ -29,3 +29,28 @@ body a {
 body a:hover {
   color: #43aae0;
 }
+header {
+  position: relative;
+}
+header img {
+  display: block;
+}
+header .headline {
+  text-align: right;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 50px 70px;
+  width: 50%;
+}
+header .headline span {
+  font-family: 'Source Sans Pro';
+  font-weight: 200;
+  font-size: 32px;
+}
+header .headline h1 {
+  margin: 0;
+  line-height: 48px;
+  text-transform: uppercase;
+}
