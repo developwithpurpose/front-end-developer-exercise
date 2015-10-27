@@ -43,7 +43,7 @@ header,
     width: 30.83333333%;
   }
 }
-.content .step-info {
+.content .main {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
@@ -53,7 +53,7 @@ header,
   padding: 0 70px;
 }
 @media (min-width: 768px) {
-  .content .step-info {
+  .content .main {
     float: left;
     width: 69.16666667%;
   }
@@ -141,4 +141,39 @@ header .headline h1 {
   position: relative;
   top: 5px;
   padding: 0 24px;
+}
+.main .step {
+  display: none;
+}
+.main .step-3 {
+  display: block;
+}
+.main img {
+  float: left;
+  margin-right: 20px;
+}
+.main .heading {
+  padding-top: 10px;
+  margin-bottom: 24px;
+  line-height: 20px;
+}
+.main .heading h2 {
+  color: #36abe1;
+  font-size: 30px;
+  margin: 0;
+}
+.main .heading p {
+  margin: 0;
+  padding-top: 5px;
+  color: #5c6366;
+  font-family: 'Source Sans Pro';
+  font-weight: 200;
+  font-size: 18px;
+}
+.main p {
+  font-family: 13px;
+  line-height: 18px;
+}
+.main .social {
+  margin-top: 40px;
 }
