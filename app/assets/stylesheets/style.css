@@ -94,6 +94,8 @@ header {
 }
 header img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 header .headline {
   text-align: right;
