@@ -2,37 +2,33 @@ define(['jquery'], function ($) {
 
 	var $aside = $('.aside'),
 		$window = $('.window'),
-		$infoSteps = $aside.find('.step'),
+		$asideSteps = $aside.find('.step'),
 		$windowSteps = $window.find('.step'),
 		$activeTrail = $aside.find('.active-trail'),
-		asideHeight = $($infoSteps[0]).outerHeight(),
+		asideHeight = $($asideSteps[0]).outerHeight(),
 		windowHeight = $($windowSteps[0]).outerHeight(),
 		$activeStep = null,
 		position = null
 	;
 
 	function init () {
-		$infoSteps.on('click', function () {
+		$asideSteps.on('click', function () {
 			$activeStep = $(this);
-			$window.find('.intro').removeClass('active');
-			position = $infoSteps.index($activeStep);
+			position = $asideSteps.index($activeStep);
 			moveToStep();
 			revealMainStep();
 		});
 	}
 
 	function moveToStep () {
-		if ($activeTrail.css('display') === 'none') {
-			$activeTrail.css('display', 'block');
-		}
-		$infoSteps.removeClass('active');
+		$asideSteps.removeClass('active');
 		$activeStep.addClass('active');
 		var asidePos = asideHeight * position;
 		$activeTrail.css('top', asidePos);
 	}
 
 	function revealMainStep () {
-		var windowPos = -( windowHeight * (position + 1));
+		var windowPos = -( windowHeight * position);
 		$window.css('top', windowPos);
 	}
 

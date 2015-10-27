@@ -9,5 +9,6 @@ requirejs.config({
 
 requirejs([
 	'jquery',
-	'modules/steps'
+	'modules/steps',
+	'modules/social'
 ]);

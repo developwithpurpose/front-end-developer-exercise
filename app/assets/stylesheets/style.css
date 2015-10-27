@@ -143,7 +143,6 @@ header .headline h1 {
   /* IE6-9 */
 }
 .aside .active-trail {
-  display: none;
   background-color: #ffffff;
   width: 100%;
   height: 62px;
