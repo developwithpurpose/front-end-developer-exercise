@@ -43,6 +43,8 @@ body {
 
 	a {
 		color: @body_link;
+		text-decoration: none;
+		.transition(color 0.1s ease);
 		&:hover {
 			color: darken(@body_link, 10%)
 		}

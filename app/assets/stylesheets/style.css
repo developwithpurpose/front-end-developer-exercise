@@ -60,20 +60,25 @@ header,
 }
 h1 {
   font-size: 50px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'Sans Serif';
 }
 h2,
 h3 {
   font-size: 18px;
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', 'Sans Serif';
 }
 body {
-  font-family: 'Helvetica';
+  font-family: 'Helvetica', 'Sans Serif';
   font-size: 13px;
   color: #65686f;
 }
 body a {
   color: #6fbee7;
+  text-decoration: none;
+  -webkit-transition: color 0.1s ease;
+  -moz-transition: color 0.1s ease;
+  -o-transition: color 0.1s ease;
+  transition: color 0.1s ease;
 }
 body a:hover {
   color: #43aae0;
@@ -100,9 +105,10 @@ header .headline {
   width: 50%;
 }
 header .headline span {
-  font-family: 'Source Sans Pro';
-  font-weight: 200;
+  font-family: 'Open Sans', 'Sans Serif';
+  font-weight: 300;
   font-size: 32px;
+  letter-spacing: 0.7px;
 }
 header .headline h1 {
   margin: 0;
@@ -145,12 +151,15 @@ header .headline h1 {
 .main .step {
   display: none;
 }
-.main .step-3 {
+.main .active {
   display: block;
 }
 .main img {
   float: left;
   margin-right: 20px;
+}
+.main p {
+  line-height: 18px;
 }
 .main .heading {
   padding-top: 10px;
@@ -166,13 +175,9 @@ header .headline h1 {
   margin: 0;
   padding-top: 5px;
   color: #5c6366;
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', 'Sans Serif';
   font-weight: 200;
   font-size: 18px;
-}
-.main p {
-  font-family: 13px;
-  line-height: 18px;
 }
 .main .social {
   margin-top: 40px;
