@@ -122,6 +122,8 @@ header .headline h1 {
 .aside {
   text-align: right;
   padding-bottom: 200px;
+  position: relative;
+  border-top: 2px solid transparent;
   background: #ebeced;
   /* Old browsers */
   background: -moz-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
@@ -138,6 +140,18 @@ header .headline h1 {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1);
   /* IE6-9 */
+}
+.aside .active-trail {
+  background-color: #ffffff;
+  width: 100%;
+  height: 62px;
+  position: absolute;
+  top: 0;
+  top: 124px;
+  -webkit-transition: top 0.5s ease;
+  -moz-transition: top 0.5s ease;
+  -o-transition: top 0.5s ease;
+  transition: top 0.5s ease;
 }
 .aside .step {
   border-bottom: 2px solid #ffffff;
@@ -158,7 +172,6 @@ header .headline h1 {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #ffffff;
 }
 .aside .step .blue-font h3 {
   color: #36abe1;

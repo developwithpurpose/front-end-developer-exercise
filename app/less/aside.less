@@ -1,6 +1,8 @@
 .aside {
 	text-align: right;
 	padding-bottom: 200px;
+	position: relative;
+	border-top: 2px solid transparent;
 
 	// Gradient and fallbacks
 	background: #ebeced; /* Old browsers */
@@ -11,6 +13,17 @@
 	background: -ms-linear-gradient(left,  #ebeced 95%,#d1d5d6 100%); /* IE10+ */
 	background: linear-gradient(to right,  #ebeced 95%,#d1d5d6 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+
+	.active-trail {
+		// display: none;
+		background-color: @white;
+		width: 100%;
+		height: 62px;
+		position: absolute;
+		top: 0;
+		top: (62px * 2);
+		.transition( top 0.5s ease);
+	}
 
 	.step {
 		border-bottom: 2px solid @white;
@@ -30,7 +43,6 @@
 			position: absolute;
 			right: 0;
 			top: 0;
-			background-color: @white;
 			h3{ color: @header_blue; }
 		}
 		&.active {
