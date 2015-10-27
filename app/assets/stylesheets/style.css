@@ -141,6 +141,7 @@ header .headline h1 {
 }
 .aside .step {
   border-bottom: 2px solid #ffffff;
+  position: relative;
 }
 .aside .step h3 {
   display: inline-block;
@@ -151,6 +152,23 @@ header .headline h1 {
   position: relative;
   top: 5px;
   padding: 0 24px;
+}
+.aside .step .blue-font {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #ffffff;
+}
+.aside .step .blue-font h3 {
+  color: #36abe1;
+}
+.aside .step.active .gray-font {
+  display: none;
+}
+.aside .step.active .blue-font {
+  display: block;
+  position: relative;
 }
 .main .step {
   display: none;

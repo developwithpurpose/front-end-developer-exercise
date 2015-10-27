@@ -14,6 +14,7 @@
 
 	.step {
 		border-bottom: 2px solid @white;
+		position: relative;
 		h3 {
 			display: inline-block;
 			line-height: 60px;
@@ -23,6 +24,21 @@
 			position: relative;
 			top: 5px;
 			padding: 0 24px;
+		}
+		.blue-font {
+			display: none;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background-color: @white;
+			h3{ color: @header_blue; }
+		}
+		&.active {
+			.gray-font{ display: none; }
+			.blue-font{
+				display: block;
+				position: relative;
+			}
 		}
 	}
 }
