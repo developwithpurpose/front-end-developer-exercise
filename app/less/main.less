@@ -1,14 +1,29 @@
 .main {
-	.step {
-		display: none;
+	overflow: hidden;
+	height: 300px;
+	position: relative;
+
+	.step,
+	.intro {
+		height: 300px;
+		padding: 0 70px;
+
 	}
-	.active {
-		display: block;
+	.window {
+		position: absolute;
+		top: 0;
+		.transition( top 0.5s ease);
 	}
 
 	img {
 		float: left;
 		margin-right: 20px;
+	}
+
+	h2 {
+		color: @header_blue;
+		font-size: 30px;
+		margin: 0;
 	}
 
 	p {
@@ -17,14 +32,8 @@
 
 	.heading {
 		padding-top: 10px;
-		margin-bottom: 24px;
+		margin-bottom: 16px;
 		line-height: 20px;
-
-		h2 {
-			color: @header_blue;
-			font-size: 30px;
-			margin: 0;
-		}
 		p {
 			margin: 0;
 			padding-top: 5px;

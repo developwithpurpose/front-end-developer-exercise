@@ -11,6 +11,7 @@ header,
 }
 .content {
   padding-top: 60px;
+  margin-bottom: 60px;
 }
 .content .row {
   margin-left: -15px;
@@ -50,7 +51,7 @@ header,
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 70px;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .content .main {
@@ -142,12 +143,12 @@ header .headline h1 {
   /* IE6-9 */
 }
 .aside .active-trail {
+  display: none;
   background-color: #ffffff;
   width: 100%;
   height: 62px;
   position: absolute;
   top: 0;
-  top: 124px;
   -webkit-transition: top 0.5s ease;
   -moz-transition: top 0.5s ease;
   -o-transition: top 0.5s ease;
@@ -156,6 +157,7 @@ header .headline h1 {
 .aside .step {
   border-bottom: 2px solid #ffffff;
   position: relative;
+  cursor: pointer;
 }
 .aside .step h3 {
   display: inline-block;
@@ -183,28 +185,40 @@ header .headline h1 {
   display: block;
   position: relative;
 }
-.main .step {
-  display: none;
+.main {
+  overflow: hidden;
+  height: 300px;
+  position: relative;
 }
-.main .active {
-  display: block;
+.main .step,
+.main .intro {
+  height: 300px;
+  padding: 0 70px;
+}
+.main .window {
+  position: absolute;
+  top: 0;
+  -webkit-transition: top 0.5s ease;
+  -moz-transition: top 0.5s ease;
+  -o-transition: top 0.5s ease;
+  transition: top 0.5s ease;
 }
 .main img {
   float: left;
   margin-right: 20px;
+}
+.main h2 {
+  color: #36abe1;
+  font-size: 30px;
+  margin: 0;
 }
 .main p {
   line-height: 18px;
 }
 .main .heading {
   padding-top: 10px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   line-height: 20px;
-}
-.main .heading h2 {
-  color: #36abe1;
-  font-size: 30px;
-  margin: 0;
 }
 .main .heading p {
   margin: 0;
