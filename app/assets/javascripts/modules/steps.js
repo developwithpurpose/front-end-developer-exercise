@@ -12,7 +12,7 @@ define(['jquery'], function ($) {
 	;
 
 	function init () {
-		applyClasses();
+		removeClasses();
 		grabHeights();
 		$asideSteps.on('click', function () {
 			$activeStep = $(this);
@@ -22,8 +22,8 @@ define(['jquery'], function ($) {
 		});
 	}
 
-	function applyClasses () {
-		$('body').addClass('js-enabled');
+	function removeClasses () {
+		$('body').removeClass('no-js');
 	}
 
 	function grabHeights () {

@@ -211,7 +211,7 @@ header .headline h1 {
   display: block;
   position: relative;
 }
-.js-enabled .aside .active-trail {
+body:not(.no-js) .aside .active-trail {
   display: block;
   background-color: #ffffff;
   width: 100%;
@@ -265,17 +265,17 @@ header .headline h1 {
 .main .social {
   margin-top: 40px;
 }
-.js-enabled .main {
+body:not(.no-js) .main {
   overflow: hidden;
   height: 300px;
 }
-.js-enabled .main .step {
+body:not(.no-js) .main .step {
   height: 300px;
   padding: 0 70px;
   margin: 0;
   border-bottom: none;
 }
-.js-enabled .main .window {
+body:not(.no-js) .main .window {
   position: absolute;
   top: 0;
   -webkit-transition: top 0.5s ease;
