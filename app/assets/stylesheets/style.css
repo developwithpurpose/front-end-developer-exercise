@@ -11,6 +11,9 @@ body {
   -ms-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
+.legacy body {
+  opacity: 1;
+}
 header,
 .content {
   background-color: #ffffff;
@@ -171,7 +174,7 @@ header .headline h1 {
   /* IE10+ */
   background: linear-gradient(to right, #ebeced 95%, #d1d5d6 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color2', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1);
   /* IE6-9 */
 }
 .aside .active-trail {

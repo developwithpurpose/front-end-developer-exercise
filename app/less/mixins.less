@@ -7,7 +7,7 @@
 	background: -o-linear-gradient(left,  @color1 95%, @color2 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(left,  @color1 95%, @color2 100%); /* IE10+ */
 	background: linear-gradient(to right,  @color1 95%, @color2 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 ); /* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=1 ); /* IE6-9 */
 }
 
 .animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {

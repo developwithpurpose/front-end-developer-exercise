@@ -3,6 +3,10 @@ body {
 	background-color: @background;
 	opacity: 0;
 	.animation (fadeIn, 0.6s, 0.3s, ease-in-out);
+
+	.legacy & {
+		opacity: 1
+	}
 }
 
 header, .content {
