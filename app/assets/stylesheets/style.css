@@ -2,6 +2,14 @@
 body {
   margin: 0;
   background-color: #bbbfc2;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.6s 0.3s ease-in-out;
+  -moz-animation: fadeIn 0.6s 0.3s ease-in-out;
+  -ms-animation: fadeIn 0.6s 0.3s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 header,
 .content {
@@ -84,6 +92,30 @@ body a {
 body a:hover {
   color: #43aae0;
 }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*!
  * Preboot v2
  *
@@ -139,19 +171,11 @@ header .headline h1 {
   /* IE10+ */
   background: linear-gradient(to right, #ebeced 95%, #d1d5d6 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@color1', endColorstr='@color2', GradientType=1);
   /* IE6-9 */
 }
 .aside .active-trail {
-  background-color: #ffffff;
-  width: 100%;
-  height: 62px;
-  position: absolute;
-  top: 0;
-  -webkit-transition: top 0.5s ease;
-  -moz-transition: top 0.5s ease;
-  -o-transition: top 0.5s ease;
-  transition: top 0.5s ease;
+  display: none;
 }
 .aside .step {
   border-bottom: 2px solid #ffffff;
@@ -184,23 +208,30 @@ header .headline h1 {
   display: block;
   position: relative;
 }
-.main {
-  overflow: hidden;
-  height: 300px;
-  position: relative;
-}
-.main .step,
-.main .intro {
-  height: 300px;
-  padding: 0 70px;
-}
-.main .window {
+.js-enabled .aside .active-trail {
+  display: block;
+  background-color: #ffffff;
+  width: 100%;
+  height: 62px;
   position: absolute;
   top: 0;
   -webkit-transition: top 0.5s ease;
   -moz-transition: top 0.5s ease;
   -o-transition: top 0.5s ease;
   transition: top 0.5s ease;
+}
+.main {
+  position: relative;
+}
+.main .step {
+  margin: 40px 70px;
+  border-bottom: 1px solid #bbbfc2;
+}
+.main .step:first-of-type {
+  margin-top: 0;
+}
+.main .step:last-of-type {
+  border-bottom: 1px solid transparent;
 }
 .main img {
   float: left;
@@ -230,4 +261,22 @@ header .headline h1 {
 }
 .main .social {
   margin-top: 40px;
+}
+.js-enabled .main {
+  overflow: hidden;
+  height: 300px;
+}
+.js-enabled .main .step {
+  height: 300px;
+  padding: 0 70px;
+  margin: 0;
+  border-bottom: none;
+}
+.js-enabled .main .window {
+  position: absolute;
+  top: 0;
+  -webkit-transition: top 0.5s ease;
+  -moz-transition: top 0.5s ease;
+  -o-transition: top 0.5s ease;
+  transition: top 0.5s ease;
 }

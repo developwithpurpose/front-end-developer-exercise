@@ -33,7 +33,6 @@ define(['jquery'], function ($) {
 				currentFriends = grabCurrentFriends(i + 1),
 				phrase = buildPhrase(currentFriends)
 			;
-			console.log(phrase);
 			$currentSocial.html(phrase);
 		}
 	}
