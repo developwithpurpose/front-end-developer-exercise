@@ -18,7 +18,7 @@ For animations and gradients, the `mixins.less` file contains the logic that is 
 
 ##JavaScript
 
-While the JavaScript in this project is minimal, it's always a good practice to keep functionality from the global scrope. That's why [RequireJS](http://requirejs.org/) was used to modularize JS files.
+While the JavaScript in this project is minimal, it's always a good practice to keep functionality from the global scope. That's why [RequireJS](http://requirejs.org/) was used to modularize JS files.
 
 The files are loaded in via `app/assets/javascript/main.js`, which defines the names and paths of vendor and project files.
 
