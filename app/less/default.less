@@ -1,0 +1,64 @@
+body {
+	margin: 0;
+	background-color: @background;
+	opacity: 0;
+	.animation (fadeIn, 0.6s, 0.3s, ease-in-out);
+
+	.legacy & {
+		opacity: 1
+	}
+}
+
+header, .content {
+	background-color: @white;
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.content {
+	padding-top: 60px;
+	margin-bottom: 60px;
+	height: 650px;
+
+	.row {
+		.make-row();
+		height: 100%;
+		margin: 0;
+	}
+	.aside {
+		.make-column(3.7);
+		height: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.main{
+		.make-column(8.3);
+		height: 100%;
+		padding: 0;
+	}
+}
+
+h1 {
+	font-size: @header_size;
+	font-family: @header_font;
+}
+
+h2, h3 {
+	font-size: @subhead_size;
+	font-family: @subhead_font;
+}
+
+body {
+	font-family: @body_font;
+	font-size: @body_size;
+	color: @body_gray;
+
+	a {
+		color: @body_link;
+		text-decoration: none;
+		.transition(color 0.1s ease);
+		&:hover {
+			color: darken(@body_link, 10%)
+		}
+	}
+}

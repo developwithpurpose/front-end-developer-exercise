@@ -1,0 +1,46 @@
+.gradient (@color1, @color2) {
+	background: @color1;
+	background: -moz-linear-gradient(left,  @color1 95%, @color2 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(95%,@color1), color-stop(100%,@color2));
+	background: -webkit-linear-gradient(left,  @color1 95%,@color2 100%);
+	background: -o-linear-gradient(left,  @color1 95%, @color2 100%);
+	background: -ms-linear-gradient(left,  @color1 95%, @color2 100%);
+	background: linear-gradient(to right,  @color1 95%, @color2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=1 );
+}
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+	-webkit-animation: @name @duration @delay @ease;
+	-moz-animation:    @name @duration @delay @ease;
+	-ms-animation:     @name @duration @delay @ease;
+
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-ms-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
