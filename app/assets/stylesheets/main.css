@@ -1,0 +1,28 @@
+body{
+  background: #bbbfc2;
+  margin: 0px;
+}
+
+#container{
+  margin: 0 auto;
+  width: 980px;
+  height: 1000px; /*change this! */
+  background-image: url("/assets/images/header_text.jpg");
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+#content{
+  padding-top: 336px;
+}
+
+#navbar{
+  background: #ebeced;
+  width: 300px;
+  height: 500px;/*change this! */
+  float: left;
+}
+
+#mainContent{
+  margin-left: 370px;
+}
