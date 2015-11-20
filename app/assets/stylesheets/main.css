@@ -1,14 +1,14 @@
 body{
   background: #bbbfc2;
   margin: 0px;
+  margin-bottom: 50px;
 }
 
 #container{
   margin: 0 auto;
   width: 980px;
-  height: 1000px; /*change this! */
-  background-image: url("/assets/images/header_text.jpg");
-  background-repeat: no-repeat;
+  height: 1000px;
+  background: url("/assets/images/header_text.jpg") no-repeat top;
   background-color: white;
 }
 
@@ -17,12 +17,65 @@ body{
 }
 
 #navbar{
-  background: #ebeced;
   width: 300px;
-  height: 500px;/*change this! */
   float: left;
+}
+
+.navbarItem{
+  background-image: url('/assets/images/shadow_left_nav.jpg');
+  font-family: "Source Sans Pro", Arial;
+  font-style: "regular";
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1px;
+}
+
+.navbarContent{
+  float: right;
+}
+
+.iconHelper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.navbarIcon{
+  margin: 0px 24px;
+  vertical-align: middle;
+}
+
+#navbarPadding{
+  height: 237px; /*this feels hacky*/
 }
 
 #mainContent{
   margin-left: 370px;
+}
+
+.contentHeader{
+
+}
+
+.contentIcon{
+  float: left;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.contentHeadline{
+  font-family: "Source Sans Pro Semibold", Arial;
+  font-size: 30px;
+  color: #36abe1;
+  line-height: 20px;
+}
+
+.contentSubHeadline{
+  font-family: "Source Sans Pro Light";
+  font-size: 18px;
+  color: #5c6366;
+  line-height: 20px;
 }
