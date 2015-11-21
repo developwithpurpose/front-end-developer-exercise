@@ -52,14 +52,16 @@ body{
 }
 
 #headerImageSubHeading{
-  font-family: "Open Sans Light", Arial;
+  font-family: "Open Sans", Arial;
   font-size: 32px;
+  font-weight: 300;
 }
 
 #headerImageHeading{
-  font-family: "Open Sans Bold", "Arial";
+  font-family: "Open Sans", "Arial";
   font-size: 48px;
   line-height: 48px;
+  font-weight: 700;
 }
 
 #content{
@@ -128,15 +130,17 @@ a{
 }
 
 .contentHeadline{
-  font-family: "Source Sans Pro Semibold", Arial;
+  font-family: "Source Sans Pro", Arial;
   font-size: 30px;
+  font-weight: 600;
   color: #36abe1;
   line-height: 30px;
 }
 
 .contentSubHeadline{
-  font-family: "Source Sans Pro Light", Arial;
+  font-family: "Source Sans Pro", Arial;
   font-size: 18px;
+  font-weight: 300;
   color: #5c6366;
   line-height: 20px;
 }
