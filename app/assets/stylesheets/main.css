@@ -39,8 +39,28 @@ body{
   margin: 0 auto;
   width: 980px;
   height: 1000px;
-  background: url("/assets/images/header_text.jpg") no-repeat top;
+  background: url("/assets/images/header.jpg") no-repeat top;
   background-color: white;
+}
+
+#headerImageText{
+  float:right;
+  margin-right: 70px;
+  margin-top: 50px;
+  text-align: right;
+  color: #fff;
+}
+
+#headerImageSubHeading{
+  font-family: "Open Sans Light", Arial;
+  font-size: 32px;
+}
+
+#headerImageHeading{
+  font-family: "Open Sans", "Arial";
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: bold;
 }
 
 #content{
