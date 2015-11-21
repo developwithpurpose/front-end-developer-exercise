@@ -4,6 +4,37 @@ body{
   margin-bottom: 50px;
 }
 
+#shadowBox{
+  margin: 0 auto;
+  width: 1010px;
+  height: 1000px;
+  background: #bbbfc2;
+}
+
+#leftShadow{
+  float: left;
+  width: 15px;
+  height: 1000px;
+  background-size: 100% 100%;
+  background-image: url("/assets/images/shadow_left.jpg");
+  background-repeat: no-repeat;
+}
+
+#rightShadow{
+  float: right;
+  width: 15px;
+  height: 1000px;
+  background-size: 100% 100%;
+  background-image: url("/assets/images/shadow_right.jpg");
+  background-repeat: no-repeat;
+}
+
+#bottomShadow{
+  width: 980px;
+  height: 30px;
+  background: url("/assets/images/shadow_bottom.jpg") no-repeat bottom;
+}
+
 #container{
   margin: 0 auto;
   width: 980px;
@@ -49,7 +80,7 @@ body{
 }
 
 #navbarPadding{
-  height: 237px; /*this feels hacky*/
+  height: 237px;
 }
 
 #mainContent{
@@ -57,25 +88,41 @@ body{
 }
 
 .contentHeader{
-
 }
 
-.contentIcon{
+.contentHeaderIcon{
   float: left;
   vertical-align: middle;
   margin-right: 10px;
+}
+
+.contentHeaderText{
+  float: left;
+  margin-top: 10px;
 }
 
 .contentHeadline{
   font-family: "Source Sans Pro Semibold", Arial;
   font-size: 30px;
   color: #36abe1;
-  line-height: 20px;
+  line-height: 30px;
 }
 
 .contentSubHeadline{
-  font-family: "Source Sans Pro Light";
+  font-family: "Source Sans Pro Light", Arial;
   font-size: 18px;
   color: #5c6366;
   line-height: 20px;
+}
+
+.contentItem{
+  margin-right: 70px;
+}
+.contentBody{
+  float:left;
+}
+.contentBody p{
+  font-family: "Helvetica", Arial;
+  font-size: 13px;
+  line-height: 18px;
 }
