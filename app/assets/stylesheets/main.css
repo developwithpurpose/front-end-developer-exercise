@@ -52,6 +52,10 @@ body{
   float: left;
 }
 
+a{
+  color: inherit;
+}
+
 .navbarItem{
   background-image: url('/assets/images/shadow_left_nav.jpg');
   font-family: "Source Sans Pro", Arial;
@@ -62,6 +66,7 @@ body{
   display: block;
   overflow: hidden;
   margin-bottom: 1px;
+  text-decoration: none;
 }
 
 .navbarContent{
@@ -85,6 +90,8 @@ body{
 
 #mainContent{
   margin-left: 370px;
+  overflow-y: auto;
+  height: 664px;
 }
 
 .contentHeader{
@@ -117,6 +124,7 @@ body{
 
 .contentItem{
   margin-right: 70px;
+  display:inline-block;
 }
 .contentBody{
   float:left;
