@@ -57,10 +57,9 @@ body{
 }
 
 #headerImageHeading{
-  font-family: "Open Sans", "Arial";
+  font-family: "Open Sans Bold", "Arial";
   font-size: 48px;
   line-height: 48px;
-  font-weight: bold;
 }
 
 #content{
@@ -153,4 +152,5 @@ a{
   font-family: "Helvetica", Arial;
   font-size: 13px;
   line-height: 18px;
+  color: #65686f;
 }
