@@ -89,10 +89,11 @@ a{
   overflow: hidden;
   margin-bottom: 1px;
   text-decoration: none;
+  opacity: .99;
+  position: relative;
 }
 
 .active{
-  background: #fff;
   color: #36abe1;
   font-family: "Source Sans Pro";
   font-weight: 600;
@@ -102,6 +103,15 @@ a{
   color: #36abe1;
   font-family: "Source Sans Pro";
   font-weight: 600;
+}
+
+.activeBackground{
+  position: absolute;
+  right: 0;
+  height: 60px;
+  width: 0px;
+  background: #fff;
+  z-index: -1;
 }
 
 .navbarContent{
@@ -188,6 +198,8 @@ a{
 
 #navbarPadding{
   height: 237px;
+  background: url('/assets/images/shadow_left_nav.jpg');
+  display: block;
 }
 
 #mainContent{
