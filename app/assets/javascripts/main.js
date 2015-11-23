@@ -2,6 +2,7 @@ $(document).ready(function(){
   var friends;
   $('.contentItem').hide();
   $('#babyStep1').show();
+  $('.navbarItem').first().addClass('active');;
   $('.activeBackground').width('300px');
   $.ajax('/baby-steps.json', {
     success: function(data){
