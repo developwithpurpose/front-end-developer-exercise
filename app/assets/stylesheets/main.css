@@ -1,0 +1,266 @@
+body{
+  background: #bbbfc2;
+  margin: 0px;
+  margin-bottom: 50px;
+}
+
+#shadowBox{
+  margin: 0 auto;
+  width: 1010px;
+  height: 1000px;
+  background: #bbbfc2;
+}
+
+#leftShadow{
+  float: left;
+  width: 15px;
+  height: 1000px;
+  background-size: 100% 100%;
+  background-image: url("/assets/images/shadow_left.jpg");
+  background-repeat: no-repeat;
+}
+
+#rightShadow{
+  float: right;
+  width: 15px;
+  height: 1000px;
+  background-size: 100% 100%;
+  background-image: url("/assets/images/shadow_right.jpg");
+  background-repeat: no-repeat;
+}
+
+#bottomShadow{
+  width: 980px;
+  height: 30px;
+  background: url("/assets/images/shadow_bottom.jpg") no-repeat bottom;
+}
+
+#container{
+  margin: 0 auto;
+  width: 980px;
+  height: 1000px;
+  background: url("/assets/images/header.jpg") no-repeat top;
+  background-color: white;
+}
+
+#headerImageText{
+  float:right;
+  margin-right: 70px;
+  margin-top: 50px;
+  text-align: right;
+  color: #fff;
+}
+
+#headerImageSubHeading{
+  font-family: "Open Sans", Arial;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+#headerImageHeading{
+  font-family: "Open Sans", "Arial";
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+#content{
+  padding-top: 336px;
+}
+
+#navbar{
+  width: 300px;
+  float: left;
+}
+
+a{
+  color: inherit;
+  outline: none;
+}
+
+.navbarItem{
+  background: url('/assets/images/shadow_left_nav.jpg');
+  font-family: "Source Sans Pro", Arial;
+  font-style: "regular";
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1px;
+  text-decoration: none;
+  opacity: .99;
+  position: relative;
+}
+
+.active{
+  color: #36abe1;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+}
+
+.navbarItem:hover{
+  color: #36abe1;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+}
+
+.activeBackground{
+  position: absolute;
+  right: 0;
+  height: 60px;
+  width: 0px;
+  background: #fff;
+  z-index: -1;
+}
+
+.navbarContent{
+  float: right;
+}
+
+.iconHelper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.navbarIcon{
+  margin: 0px 24px;
+  vertical-align: middle;
+  height: 25px;
+  width: 30px;
+  display: inline-block;
+  background: none;
+}
+
+#navbarIcon1{
+  background: url('/assets/images/icons/individual/icons_small_bs1.png') no-repeat top left;
+}
+
+.navbarItem:hover .navbarContent #navbarIcon1,
+.navbarItem.active .navbarContent #navbarIcon1{
+  background: url('/assets/images/icons/individual/icons_small_bs1_blue.png') no-repeat top left;
+}
+
+#navbarIcon2{
+  background: url('/assets/images/icons/individual/icons_small_bs2.png') no-repeat top left;
+}
+
+.navbarItem:hover .navbarContent #navbarIcon2,
+.navbarItem.active .navbarContent #navbarIcon2{
+  background: url('/assets/images/icons/individual/icons_small_bs2_blue.png') no-repeat top left;
+}
+
+#navbarIcon3{
+  background: url('/assets/images/icons/individual/icons_small_bs3.png') no-repeat top left;
+}
+
+.navbarItem:hover .navbarContent #navbarIcon3,
+.navbarItem.active .navbarContent #navbarIcon3{
+  background: url('/assets/images/icons/individual/icons_small_bs3_blue.png') no-repeat top left;
+}
+
+#navbarIcon4{
+  background: url('/assets/images/icons/individual/icons_small_bs4.png') no-repeat top left;
+}
+
+.navbarItem:hover .navbarContent #navbarIcon4,
+.navbarItem.active .navbarContent #navbarIcon4{
+  background: url('/assets/images/icons/individual/icons_small_bs4_blue.png') no-repeat top left;
+}
+
+#navbarIcon5{
+  background: url('/assets/images/icons/individual/icons_small_bs5.png') no-repeat top left;
+}
+
+.navbarItem:hover .navbarContent #navbarIcon5,
+.navbarItem.active .navbarContent #navbarIcon5{
+  background: url('/assets/images/icons/individual/icons_small_bs5_blue.png') no-repeat top left;
+}
+
+#navbarIcon6{
+  background: url('/assets/images/icons/individual/icons_small_bs6.png') no-repeat top left;
+}
+
+.navbarItem:hover .navbarContent #navbarIcon6,
+.navbarItem.active .navbarContent #navbarIcon6{
+  background: url('/assets/images/icons/individual/icons_small_bs6_blue.png') no-repeat top left;
+}
+
+#navbarIcon7{
+  background: url('/assets/images/icons/individual/icons_small_bs7.png') no-repeat top left;
+}
+
+.navbarItem:hover .navbarContent #navbarIcon7,
+.navbarItem.active .navbarContent #navbarIcon7{
+  background: url('/assets/images/icons/individual/icons_small_bs7_blue.png') no-repeat top left;
+}
+
+#navbarPadding{
+  height: 237px;
+  background: url('/assets/images/shadow_left_nav.jpg');
+  display: block;
+}
+
+#mainContent{
+  margin-left: 370px;
+  overflow-y: auto;
+  height: 664px;
+}
+
+.contentHeader{
+}
+
+.contentHeaderIcon{
+  float: left;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.contentHeaderText{
+  float: left;
+  margin-top: 10px;
+}
+
+.contentHeadline{
+  font-family: "Source Sans Pro", Arial;
+  font-size: 30px;
+  font-weight: 600;
+  color: #36abe1;
+  line-height: 30px;
+}
+
+.contentSubHeadline{
+  font-family: "Source Sans Pro", Arial;
+  font-size: 18px;
+  font-weight: 300;
+  color: #5c6366;
+  line-height: 20px;
+}
+
+.contentItem{
+  margin-right: 70px;
+  display:inline-block;
+}
+.contentBody{
+  float:left;
+}
+.contentBody div{
+  margin-top:24px;
+  font-family: "Helvetica", Arial;
+  font-size: 13px;
+  line-height: 18px;
+  color: #65686f;
+}
+
+#socialNotification{
+  margin-top: 40px;
+  color: #65686f;
+  font-family: "Helvetica", Arial;
+  font-size: 13px;
+}
+
+#socialNotification a{
+  color: #6fbee7;
+  text-decoration: none;
+}
