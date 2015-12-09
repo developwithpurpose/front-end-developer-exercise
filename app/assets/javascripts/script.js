@@ -21,13 +21,13 @@ $(document).ready(function() {
                 case 0:
                   break;
                 case 1:
-                  $(this).html(window.steps[step][0].fullName+" is also in Baby Step "+step);
+                  $(this).html("<span>"+window.steps[step][0].fullName+"</span> is also in Baby Step "+step);
                   break;
                 case 2:
-                  $(this).html(window.steps[step][0].fullName+" and "+window.steps[step][1].fullName+" are also in Baby Step "+step);
+                  $(this).html("<span>"+window.steps[step][0].fullName+"</span> and <span>"+window.steps[step][1].fullName+"</span> are also in Baby Step "+step);
                   break;
                 default:
-                  $(this).html(window.steps[step][0].fullName+", "+ window.steps[step][1].fullName+" and "+(len - 2)+" other friends are also in Baby Step "+step);
+                  $(this).html("<span>"+window.steps[step][0].fullName+", "+ window.steps[step][1].fullName+"</span> and "+(len - 2)+" other friends are also in Baby Step "+step);
             }
         });
     });        

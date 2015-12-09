@@ -138,3 +138,4 @@ small { font-family: "Source Sans Pro"; font-weight: 300; font-size: 18px;  colo
 section.mainbody > .left ul li,h4 { font-family: "Source Sans Pro"; font-size: 18px; color: #9ba0a4; line-height: 60px; }
 p { font-family: Helvetica;  font-size: 13px; margin-bottom: 20px; color: #65686f}
 a { color: #6fbee7}
+.friends span { color: #36abe1; font-weight: bold}
