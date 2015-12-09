@@ -53,8 +53,10 @@ $(document).ready(function() {
             obj.addClass('active');
             obj.find('i').remove();
             obj.find('a').append("<i></i>");
-            obj.get(0).style.color = null;
+            /*obj.get(0).style.color = null;
             obj.get(0).style.fontWeight = null;
+            */
+            $('.left li').attr('style','');
         });
         window.curint = 300;
         window.myint = setInterval(function() { window.curint += 100; obj.css('fontWeight',window.curint); if(window.curint == 600) { clearInterval(window.myint) } },50);
