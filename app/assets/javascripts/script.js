@@ -3,6 +3,35 @@ $(document).ready(function() {
     $('.right > article.active').fadeIn();
     $('.left > ul').css('minHeight',window.innerHeight-310);
     
+    //populate names
+    $.getJSON('baby-steps.json',function(resp) {
+        var friends = resp.friends;
+        window.steps = [];
+        $.each(friends,function(ind,val) {
+            if(typeof(window.steps[val.babyStep]) === "undefined")
+                window.steps[val.babyStep] = [];
+            val.fullName = val.firstName + " " + val.lastName;
+            window.steps[val.babyStep].push(val);
+        });
+        $('.friends').each(function(e) {
+            var step  = e+1;
+            var len = window.steps[step] ? window.steps[step].length : 0;
+            
+            switch (len) {
+                case 0:
+                  break;
+                case 1:
+                  $(this).html(window.steps[step][0].fullName+" is also in Baby Step "+step);
+                  break;
+                case 2:
+                  $(this).html(window.steps[step][0].fullName+" and "+window.steps[step][1].fullName+" are also in Baby Step "+step);
+                  break;
+                default:
+                  $(this).html(window.steps[step][0].fullName+", "+ window.steps[step][1].fullName+" and "+(len - 2)+" other friends are also in Baby Step "+step);
+            }
+        });
+    });
+    
     //events
     $(document).on('click','section.mainbody > .left li',function(e) {
         var transHeight = ($(this).data('step') - 1)*61;

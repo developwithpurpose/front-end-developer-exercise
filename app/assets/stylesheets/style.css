@@ -14,7 +14,7 @@ html {
 body {
     width: 980px;    
     min-height: 100%;
-    padding: 0 15px 30px 15px;
+    padding: 0 15px 0px 15px;
     background-color: white;
     margin: auto;
     position: relative;
@@ -74,14 +74,14 @@ section.mainbody > .left ul li i {
     position: relative;
     top: 5px;
 }
-section.mainbody > .left ul li:nth-child(1) i {background-position: 50% 5px;}
+section.mainbody > .left ul li:nth-child(1) i {background-position: 50% 0px; height: 22px;}
 section.mainbody > .left ul li:nth-child(2) i {background-position: 50% -20px;}
 section.mainbody > .left ul li:nth-child(3) i {background-position: 50% -47px;}
 section.mainbody > .left ul li:nth-child(4) i {background-position: 50% -72px; height: 28px;}
 section.mainbody > .left ul li:nth-child(5) i {background-position: 50% -99px; height: 27px;}
 section.mainbody > .left ul li:nth-child(6) i {background-position: 50% -125px; height: 25px}
 section.mainbody > .left ul li:nth-child(7) i {background-position: 50% -150px;}
-section.mainbody > .left ul li:nth-child(1).active i {background-position: 50% -174px;}
+section.mainbody > .left ul li:nth-child(1).active i {background-position: 50% -175px; }
 section.mainbody > .left ul li:nth-child(2).active i {background-position: 50% -196px;}
 section.mainbody > .left ul li:nth-child(3).active i {background-position: 50% -222px;}
 section.mainbody > .left ul li:nth-child(4).active i {background-position: 50% -247px; height: 28px;}
