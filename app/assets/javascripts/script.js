@@ -30,12 +30,15 @@ $(document).ready(function() {
                   $(this).html(window.steps[step][0].fullName+", "+ window.steps[step][1].fullName+" and "+(len - 2)+" other friends are also in Baby Step "+step);
             }
         });
-    });
+    });        
     
     //events
     $(document).on('click','section.mainbody > .left li',function(e) {
         var transHeight = ($(this).data('step') - 1)*61;
         var obj = $(this);
+                
+        window.daveapp.step = $(this).data('step');
+        window.localStorage["daveapp"] = JSON.stringify(window.daveapp);
         
         $('.right > article.active').hide();
         $('.right > article.active').removeClass('active');
@@ -57,4 +60,11 @@ $(document).ready(function() {
         window.myint = setInterval(function() { window.curint += 100; obj.css('fontWeight',window.curint); if(window.curint == 600) { clearInterval(window.myint) } },50);
         
     });
+    
+    //pull back last step
+    window.localStorage["daveapp"] = window.localStorage['daveapp'] ? window.localStorage['daveapp'] : "{}";
+    try {
+        window.daveapp = JSON.parse(window.localStorage["daveapp"]);
+    } catch(e) { window.localStorage["daveapp"] = "{}"; window.daveapp = {step:1}; }
+    $('.left li[data-step='+window.daveapp.step+']').click();
 });
