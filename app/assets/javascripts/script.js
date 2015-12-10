@@ -48,7 +48,8 @@ $(document).ready(function() {
             
         });
         $('.left li.active').removeClass('active');
-        $(this).find('i').animate({'backgroundPositionY':$(this).data('iconpos')},10);
+        //$(this).find('i').animate({'backgroundPositionY':$(this).data('iconpos')},1);
+        $(this).find('i').css('backgroundPosition','50% '+$(this).data('iconpos')+"px");
         $(this).animate({color:'#36abe1',},'slow',function() {
             obj.addClass('active');
             obj.find('i').remove();
