@@ -6,6 +6,9 @@ $(document).ready(function() {
     //populate names
     $.getJSON('baby-steps.json',function(resp) {
         var friends = resp.friends;
+        friends.sort(function(a,b) {
+            return (a.lastName > b.lastName) ? 1 : ((a.lastName < b.lastName) ? -1 : 0);
+        });
         window.steps = [];
         $.each(friends,function(ind,val) {
             if(typeof(window.steps[val.babyStep]) === "undefined")
