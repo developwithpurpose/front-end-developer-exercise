@@ -1,0 +1,183 @@
+@import 'reset';
+
+$page-bg-color: #bbbfc2;
+$container-bg-color: #fff;
+
+$page-width: 980px;
+$nav-width: 300px;
+
+$number-of-steps: 7;
+
+body {
+    background-color: $page-bg-color;
+}
+.root-container {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.main-container {
+    display: table-row;
+    width: 1020px;
+}
+.shadow {
+    display: table-cell;
+    width: 15px;
+    vertical-align: top;
+    &.left {
+        background: url(../images/shadow_left.jpg) no-repeat;
+        background-size: cover;
+    }
+    &.right {
+        background: url(../images/shadow_right.jpg) no-repeat;
+        background-size: cover;
+    }
+    &.bottom {
+        display: block;
+        background: url(../images/shadow_bottom.jpg) no-repeat;
+        width: $page-width;
+        height: 30px;
+        margin: 0 auto;
+    }
+}
+
+.container {
+    display: table-cell;
+    border-collapse: collapse;
+    width: 980px;
+    background-color: $container-bg-color;
+}
+.main {
+    margin-top: 60px;
+    height: 625px;
+}
+
+nav {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: inline-block;
+        
+    width: $nav-width;
+    height: 100%;
+    
+    $bg-color: #ebeced;
+    background-color: $bg-color;
+    background: url(../images/shadow_left_nav.jpg) repeat-y;
+    
+    vertical-align: top;
+    
+    .item {
+        font-size: 18px;
+        line-height: 60px;
+        
+        border-bottom: 1px solid $container-bg-color;
+        
+        $component-spacing: 24px;
+        $icon-height: 25px;
+        
+        a {
+            display: block;
+            text-decoration: none;
+            color: #9ba094;
+            
+            text-align: right;
+            padding: 0 $component-spacing 0 100px;
+            
+            &.active, &:hover { //TODO remove hover
+                background-color: white;
+                color: #36abe1;
+                font-weight: bold;
+                
+                .icon {
+                    @for $i from 1 through $number-of-steps {
+                        &.step-#{$i} {
+                            background-position: 0px (-$icon-height * ($number-of-steps + $i - 1));
+                        }
+                    }
+                }
+            }
+        }
+        .icon {
+            display: inline-block;
+            width: 30px;
+            height: $icon-height;
+            
+            vertical-align: middle;
+            
+            background-image: url(../images/icons/sprites/icons_small.png);
+            
+            @for $i from 1 through $number-of-steps {
+                &.step-#{$i} {
+                    background-position: 0px (-$icon-height * ($i - 1));
+                }
+            }
+        }
+        .label {
+            display: inline-block;
+            width: 68%;
+            text-align: left;
+        }
+    }
+}
+
+.details {
+    $inner-margin: 70px;
+    display: inline-block;
+    width: $page-width - $nav-width - ($inner-margin * 2);
+    margin: 0 $inner-margin;
+    
+    
+    height: 300px;
+    //overflow: hidden;
+    
+    section {
+        margin-bottom: 30px;
+    }
+    
+    .heading {
+        font-family: 'Source Sans Pro', sans-serif;
+        display: table;
+        .icon {
+            $icon-height: 65px;
+            display: table-cell;
+            width: 77px;
+            height: $icon-height;
+            background-image: url(../images/icons/sprites/icons_large.png);
+            
+            // messy sprite?
+            $step-positions: (-455px -520px -580px -645px -713px -778px -842px);
+            @for $i from 1 through length($step-positions) {
+                &.step-#{$i} {
+                    background-position: 0 nth($step-positions, $i);
+                }
+            }
+            // ugh
+            &.step-6 {
+                height: 64px;
+            }
+        }
+        .title {
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 18px;
+        }
+        h1 {
+            font-size: 30px;
+            line-height: 34px; //deviation
+            color: #34abe1;
+            margin: 0px;
+        }
+        h2 {
+            font-size: 18px;
+            line-height: 20px;
+            color: #5c6366;
+            font-weight: lighter;
+            margin: 0px;
+        }
+    }
+
+    .description {
+        font-size: 13px;
+        color: #65686f;
+        line-height: 18px;
+    }
+}

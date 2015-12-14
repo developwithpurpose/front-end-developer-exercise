@@ -9,6 +9,10 @@
     "start": "http-server ./app -d false"
   },
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.1.0",
     "http-server": "^0.8.0"
   }
 }

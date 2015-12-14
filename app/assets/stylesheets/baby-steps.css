@@ -1,0 +1,154 @@
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px; }
+
+body {
+  background-color: #bbbfc2; }
+
+.root-container {
+  width: 1020px;
+  margin: 0 auto; }
+
+.main-container {
+  display: table-row;
+  width: 1020px; }
+
+.shadow {
+  display: table-cell;
+  width: 15px;
+  vertical-align: top; }
+  .shadow.left {
+    background: url(../images/shadow_left.jpg) no-repeat;
+    background-size: cover; }
+  .shadow.right {
+    background: url(../images/shadow_right.jpg) no-repeat;
+    background-size: cover; }
+  .shadow.bottom {
+    display: block;
+    background: url(../images/shadow_bottom.jpg) no-repeat;
+    width: 980px;
+    height: 30px;
+    margin: 0 auto; }
+
+.container {
+  display: table-cell;
+  border-collapse: collapse;
+  width: 980px;
+  background-color: #fff; }
+
+.main {
+  margin-top: 60px;
+  height: 625px; }
+
+nav {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: inline-block;
+  width: 300px;
+  height: 100%;
+  background-color: #ebeced;
+  background: url(../images/shadow_left_nav.jpg) repeat-y;
+  vertical-align: top; }
+  nav .item {
+    font-size: 18px;
+    line-height: 60px;
+    border-bottom: 1px solid #fff; }
+    nav .item a {
+      display: block;
+      text-decoration: none;
+      color: #9ba094;
+      text-align: right;
+      padding: 0 24px 0 100px; }
+      nav .item a.active, nav .item a:hover {
+        background-color: white;
+        color: #36abe1;
+        font-weight: bold; }
+        nav .item a.active .icon.step-1, nav .item a:hover .icon.step-1 {
+          background-position: 0px -175px; }
+        nav .item a.active .icon.step-2, nav .item a:hover .icon.step-2 {
+          background-position: 0px -200px; }
+        nav .item a.active .icon.step-3, nav .item a:hover .icon.step-3 {
+          background-position: 0px -225px; }
+        nav .item a.active .icon.step-4, nav .item a:hover .icon.step-4 {
+          background-position: 0px -250px; }
+        nav .item a.active .icon.step-5, nav .item a:hover .icon.step-5 {
+          background-position: 0px -275px; }
+        nav .item a.active .icon.step-6, nav .item a:hover .icon.step-6 {
+          background-position: 0px -300px; }
+        nav .item a.active .icon.step-7, nav .item a:hover .icon.step-7 {
+          background-position: 0px -325px; }
+    nav .item .icon {
+      display: inline-block;
+      width: 30px;
+      height: 25px;
+      vertical-align: middle;
+      background-image: url(../images/icons/sprites/icons_small.png); }
+      nav .item .icon.step-1 {
+        background-position: 0px 0px; }
+      nav .item .icon.step-2 {
+        background-position: 0px -25px; }
+      nav .item .icon.step-3 {
+        background-position: 0px -50px; }
+      nav .item .icon.step-4 {
+        background-position: 0px -75px; }
+      nav .item .icon.step-5 {
+        background-position: 0px -100px; }
+      nav .item .icon.step-6 {
+        background-position: 0px -125px; }
+      nav .item .icon.step-7 {
+        background-position: 0px -150px; }
+    nav .item .label {
+      display: inline-block;
+      width: 68%;
+      text-align: left; }
+
+.details {
+  display: inline-block;
+  width: 540px;
+  margin: 0 70px;
+  height: 300px; }
+  .details section {
+    margin-bottom: 30px; }
+  .details .heading {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: table; }
+    .details .heading .icon {
+      display: table-cell;
+      width: 77px;
+      height: 65px;
+      background-image: url(../images/icons/sprites/icons_large.png); }
+      .details .heading .icon.step-1 {
+        background-position: 0 -455px; }
+      .details .heading .icon.step-2 {
+        background-position: 0 -520px; }
+      .details .heading .icon.step-3 {
+        background-position: 0 -580px; }
+      .details .heading .icon.step-4 {
+        background-position: 0 -645px; }
+      .details .heading .icon.step-5 {
+        background-position: 0 -713px; }
+      .details .heading .icon.step-6 {
+        background-position: 0 -778px; }
+      .details .heading .icon.step-7 {
+        background-position: 0 -842px; }
+      .details .heading .icon.step-6 {
+        height: 64px; }
+    .details .heading .title {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 18px; }
+    .details .heading h1 {
+      font-size: 30px;
+      line-height: 34px;
+      color: #34abe1;
+      margin: 0px; }
+    .details .heading h2 {
+      font-size: 18px;
+      line-height: 20px;
+      color: #5c6366;
+      font-weight: lighter;
+      margin: 0px; }
+  .details .description {
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px; }

@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+    head
+        title Baby Steps
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css")
+        link(rel="stylesheet", href="assets/stylesheets/baby-steps.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,400,300")
+    body
+        .root-container
+            .main-container
+                .shadow.left
+                .container
+                    header
+                        img(src="assets/images/header_text.jpg")
+                    .main
+                        nav
+                            ul
+                                each step, index in steps
+                                    li.item
+                                        a(href="#")
+                                            span.label= step.title
+                                            span.icon(class="step-#{index+1}")
+                        .details
+                            each step, index in steps
+                                section
+                                    .heading
+                                        .icon(class="step-#{index+1}")
+                                        .title
+                                            h1= step.title
+                                            h2= step.subtitle
+                                    .description
+                                        each paragraph in step.description
+                                            p= paragraph
+                .shadow.right
+            .shadow.bottom
