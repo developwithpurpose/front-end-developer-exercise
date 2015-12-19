@@ -16,20 +16,28 @@ html(lang="en")
                         nav
                             ul
                                 each step, index in steps
-                                    li.item
-                                        a(href="#")
+                                    - var classes = ""
+                                    if index == 0
+                                        - classes = "active"
+                                    li.item(class=classes,data-step-id=index)
+                                        div.contents
                                             span.label= step.title
                                             span.icon(class="step-#{index+1}")
+                            .highlight &nbsp;
                         .details
-                            each step, index in steps
-                                section
-                                    .heading
-                                        .icon(class="step-#{index+1}")
-                                        .title
-                                            h1= step.title
-                                            h2= step.subtitle
-                                    .description
-                                        each paragraph in step.description
-                                            p= paragraph
+                            .container
+                                each step, index in steps
+                                    section
+                                        .heading
+                                            .icon(class="step-#{index+1}")
+                                            .title
+                                                h1= step.title
+                                                h2= step.subtitle
+                                        .description
+                                            each paragraph in step.description
+                                                p= paragraph
+                                            .friendStatus
                 .shadow.right
             .shadow.bottom
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js", type="text/javascript")
+        script(src="assets/javascripts/baby-steps.js", type="text/javascript")

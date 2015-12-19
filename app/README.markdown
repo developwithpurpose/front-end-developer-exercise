@@ -1,8 +1,8 @@
 Document your submission here (optional, but recommended)
 
 #### TODO
-1. add shadows around root container
-2. aria
-3. accessibility of imgs
-4. font face imports
-5. header as non-text with text overlay
+1. aria
+1. accessibility of imgs
+1. font face imports
+1. header as non-text with text overlay
+1. js structure in /lib

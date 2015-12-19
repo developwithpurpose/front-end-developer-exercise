@@ -9,10 +9,22 @@
     "start": "http-server ./app -d false"
   },
   "devDependencies": {
+    "browserify": "^12.0.1",
+    "browserify-shim": "^3.8.11",
     "grunt": "^0.4.5",
+    "grunt-browserify": "^4.0.1",
     "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-jshint": "^0.11.3",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-sass": "^1.1.0",
     "http-server": "^0.8.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:$"
   }
 }

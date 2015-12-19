@@ -8,6 +8,8 @@ $nav-width: 300px;
 
 $number-of-steps: 7;
 
+$z-index-increment: 50;
+
 body {
     background-color: $page-bg-color;
 }
@@ -53,11 +55,16 @@ body {
 }
 
 nav {
+    
+    $highlight-z-index: 100;
+    
     font-family: 'Source Sans Pro', sans-serif;
     display: inline-block;
         
     width: $nav-width;
     height: 100%;
+    
+    position: relative;
     
     $bg-color: #ebeced;
     background-color: $bg-color;
@@ -69,12 +76,17 @@ nav {
         font-size: 18px;
         line-height: 60px;
         
+        position: relative;
+        z-index: $highlight-z-index + $z-index-increment;
+        
         border-bottom: 1px solid $container-bg-color;
         
         $component-spacing: 24px;
         $icon-height: 25px;
+                
+        cursor: pointer;
         
-        a {
+        .contents {
             display: block;
             text-decoration: none;
             color: #9ba094;
@@ -82,8 +94,9 @@ nav {
             text-align: right;
             padding: 0 $component-spacing 0 100px;
             
-            &.active, &:hover { //TODO remove hover
-                background-color: white;
+        }
+        &.active {
+            .contents {
                 color: #36abe1;
                 font-weight: bold;
                 
@@ -117,6 +130,18 @@ nav {
             text-align: left;
         }
     }
+    
+    .highlight {
+        line-height: 60px;
+        width: 100%;
+        
+        position: absolute;
+        top: 0;
+        
+        z-index: $highlight-z-index;
+        
+        background-color: $container-bg-color;
+    }
 }
 
 .details {
@@ -126,11 +151,18 @@ nav {
     margin: 0 $inner-margin;
     
     
-    height: 300px;
-    //overflow: hidden;
+    height: 270px;
+    
+    position: relative;
+    overflow: hidden;
+    
+    .container {
+        position: relative;
+        top: 0;
+    }
     
     section {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
     
     .heading {
@@ -178,6 +210,15 @@ nav {
     .description {
         font-size: 13px;
         color: #65686f;
+        font-family: "Helvetica" sans-serif;
         line-height: 18px;
+        
+        .friendStatus {
+            height: 30px;
+            a, a:link, a:active, a:hover {
+                color: #6fbee7;
+                text-decoration: none;
+            }
+        }
     }
 }

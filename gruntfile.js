@@ -8,6 +8,13 @@ module.exports = function(grunt) {
                 }
             }
         },
+        browserify: {
+            compile: {
+                files: {
+                    'app/assets/javascripts/baby-steps.js': ['lib/client.js']
+                }
+            }
+        },
         jade: {
             compile: {
                 options: {
@@ -18,6 +25,9 @@ module.exports = function(grunt) {
                 }
             }
         },
+        jshint: {
+            all: ['gruntfile.js', 'lib/**/*.js']
+        },
         watch: {
             markup: {
                 files: ['lib/**/*.jade', 'lib/**/*.json'],
@@ -26,6 +36,10 @@ module.exports = function(grunt) {
             styles: {
                 files: 'lib/**/*.scss',
                 tasks: ['sass']
+            },
+            scripts: {
+                files: ['lib/**/*.js'],
+                tasks: ['browserify']
             }
         }
     });
@@ -33,10 +47,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     
     grunt.registerTask('w', ['build', 'watch']);
+    
+    grunt.registerTask('static', ['jshint']);
 
-    grunt.registerTask('build', ['sass', 'jade']);
+    grunt.registerTask('build', ['static', 'sass', 'browserify', 'jade']);
     grunt.registerTask('default', ['build']);
 
 };
