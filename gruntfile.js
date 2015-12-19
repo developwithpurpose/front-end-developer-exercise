@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         browserify: {
             compile: {
                 files: {
-                    'app/assets/javascripts/baby-steps.js': ['lib/client.js']
+                    'app/assets/javascripts/baby-steps.js': ['lib/scripts/client.js']
                 }
             }
         },

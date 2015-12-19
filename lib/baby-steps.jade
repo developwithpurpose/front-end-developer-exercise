@@ -20,7 +20,7 @@ html(lang="en")
                                     if index == 0
                                         - classes = "active"
                                     li.item(class=classes,data-step-id=index)
-                                        div.contents
+                                        a(href="#item"+index).contents
                                             span.label= step.title
                                             span.icon(class="step-#{index+1}")
                             .highlight &nbsp;
@@ -28,6 +28,7 @@ html(lang="en")
                             .container
                                 each step, index in steps
                                     section
+                                        a(name="item"+index)
                                         .heading
                                             .icon(class="step-#{index+1}")
                                             .title

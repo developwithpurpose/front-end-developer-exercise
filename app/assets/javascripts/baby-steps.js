@@ -9,15 +9,17 @@ var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefi
 var navManager = require('./nav-manager');
 var stepDetailsManager = require('./step-details-manager');
 
-var main = $('.main');
-
-navManager.init(main.find('nav'));
-stepDetailsManager.init(main.find('.details'));
-
-navManager.register(function navCallback(id) {
-    stepDetailsManager.select(id);
-});
-
+if (!location.search.match('nojs')) {
+    var main = $('.main');
+    main.addClass('animationEnabled');
+    
+    navManager.init(main.find('nav'));
+    stepDetailsManager.init(main.find('.details'));
+    
+    navManager.register(function navCallback(id) {
+        stepDetailsManager.select(id);
+    });
+}
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./nav-manager":6,"./step-details-manager":7}],3:[function(require,module,exports){
 exports.distance = function distance(current, target) {
