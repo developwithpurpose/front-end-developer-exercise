@@ -35,8 +35,8 @@ html(lang="en")
                                                 h1= step.title
                                                 h2= step.subtitle
                                         .description
-                                            each paragraph in step.description
-                                                p= paragraph
+                                            each paragraph, index in step.description
+                                                p(class=index == step.description.length - 1 ? 'last' : '')= paragraph
                                             .friendStatus
                 .shadow.right
             .shadow.bottom

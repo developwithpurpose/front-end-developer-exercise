@@ -124,7 +124,7 @@ nav {
   width: 540px;
   margin: 0 70px; }
   .animationEnabled .details {
-    height: 270px;
+    height: 275px;
     position: relative;
     overflow: hidden; }
     .animationEnabled .details .container {
@@ -163,7 +163,7 @@ nav {
     .details .heading h1 {
       font-size: 30px;
       line-height: 34px;
-      color: #34abe1;
+      color: #36abe1;
       margin: 0px; }
     .details .heading h2 {
       font-size: 18px;
@@ -174,8 +174,10 @@ nav {
   .details .description {
     font-size: 13px;
     color: #65686f;
-    font-family: "Helvetica" sans-serif;
+    font-family: "Helvetica", sans-serif;
     line-height: 18px; }
+    .details .description p.last {
+      margin-bottom: 40px; }
     .details .description .friendStatus {
       height: 30px; }
       .details .description .friendStatus a, .details .description .friendStatus a:link, .details .description .friendStatus a:active, .details .description .friendStatus a:hover {

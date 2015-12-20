@@ -3,6 +3,8 @@
 $page-bg-color: #bbbfc2;
 $container-bg-color: #fff;
 
+$page-active-color: #36abe1;
+
 $page-width: 980px;
 $nav-width: 300px;
 
@@ -79,6 +81,8 @@ nav {
     position: relative;
     
     $bg-color: #ebeced;
+    $text-color: #9ba094;
+    $text-active-color: $page-active-color;
     background: url(../images/shadow_left_nav.jpg) repeat-y $bg-color;
     
     vertical-align: top;
@@ -100,7 +104,7 @@ nav {
         .contents {
             display: block;
             text-decoration: none;
-            color: #9ba094;
+            color: $text-color;
             
             text-align: right;
             padding: 0 $component-spacing 0 100px;
@@ -108,7 +112,7 @@ nav {
         }
         .animationEnabled &.active {
             .contents {
-                color: #36abe1;
+                color: $text-active-color;
                 font-weight: bold;
                 
                 .icon {
@@ -166,7 +170,7 @@ nav {
     margin: 0 $inner-margin;
     
     .animationEnabled & {
-        height: 270px;
+        height: 275px;
         
         position: relative;
         overflow: hidden;
@@ -213,7 +217,7 @@ nav {
         h1 {
             font-size: 30px;
             line-height: 34px; //deviation
-            color: #34abe1;
+            color: $page-active-color;
             margin: 0px;
         }
         h2 {
@@ -228,8 +232,12 @@ nav {
     .description {
         font-size: 13px;
         color: #65686f;
-        font-family: "Helvetica" sans-serif;
+        font-family: "Helvetica", sans-serif;
         line-height: 18px;
+        
+        p.last {
+            margin-bottom: 40px;
+        }
         
         .friendStatus {
             height: 30px;
