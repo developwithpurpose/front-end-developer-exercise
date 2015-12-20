@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
     head
-        title Baby Steps
+        title= title
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css")
         link(rel="stylesheet", href="assets/stylesheets/baby-steps.css")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,400,300")
@@ -11,7 +11,7 @@ html(lang="en")
                 .shadow.left
                 .container
                     header
-                        img(src="assets/images/header_text.jpg")
+                        img(src="assets/images/header_text.jpg", alt=header)
                     .main
                         nav
                             ul
@@ -20,7 +20,7 @@ html(lang="en")
                                     if index == 0
                                         - classes = "active"
                                     li.item(class=classes,data-step-id=index)
-                                        a(href="#item"+index).contents
+                                        a(href="#step-details-item"+index).contents
                                             span.label= step.title
                                             span.icon(class="step-#{index+1}")
                             .highlight &nbsp;
@@ -28,7 +28,7 @@ html(lang="en")
                             .container
                                 each step, index in steps
                                     section
-                                        a(name="item"+index)
+                                        a(id="step-details-item"+index)
                                         .heading
                                             .icon(class="step-#{index+1}")
                                             .title

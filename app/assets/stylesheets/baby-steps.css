@@ -42,6 +42,10 @@ body {
   .animationEnabled .main {
     height: 625px; }
 
+header img {
+  height: 276px;
+  width: 980px; }
+
 nav {
   font-family: 'Source Sans Pro', sans-serif;
   display: inline-block;
