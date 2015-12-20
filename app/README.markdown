@@ -10,24 +10,25 @@ I was unsure as to how far we should be attempting to make this page accessible,
 Given more time, I would have likely added supporting aria tagging.
 #### browser support
 The page has been tested in the following OS/browser combinations:
-1. Windows 10 - Edge 12
-1. Windows 10 - IE 11
-1. Windows 10 - Firefox 42
-1. Windows 10 - Chrome 47
-1. Windows 10 - Opera 34
-1. Windows 8.1 - 11 Metro
-1. Window 7 - IE 10
-1. Window 7 - IE 9
-1. Window 7 - Firefox 42
-1. Window 7 - Chrome 47
-1. OS X El Capitan - Safari 9
-1. OS X El Capitan - Firefox 42
-1. OS X El Capitan - Chrome 47
-1. OS X El Capitan - Opera 34
-1. Ubuntu 14.04 - Chrome 47
-1. Ubuntu 14.04 - Firefox
-1. Samsung Galaxy S6
-1. iPhone 6 Plus
+
+- Windows 10 - Edge 12
+- Windows 10 - IE 11
+- Windows 10 - Firefox 42
+- Windows 10 - Chrome 47
+- Windows 10 - Opera 34
+- Windows 8.1 - 11 Metro
+- Window 7 - IE 10
+- Window 7 - IE 9
+- Window 7 - Firefox 42
+- Window 7 - Chrome 47
+- OS X El Capitan - Safari 9
+- OS X El Capitan - Firefox 42
+- OS X El Capitan - Chrome 47
+- OS X El Capitan - Opera 34
+- Ubuntu 14.04 - Chrome 47
+- Ubuntu 14.04 - Firefox
+- Samsung Galaxy S6
+- iPhone 6 Plus
 
 #### progressive enhancement
 The page is completely usable without javascript.  Since no design spec was provided, I decided that I would simply list all steps and use anchors to allow for navigation.
@@ -41,7 +42,8 @@ I attempted to minimize my codes direct dependency on each frameworks though, cr
 I opted to mimic the transition that was provided as an example.  Initially I attempted to use css transitions to provide the animation, but ran into some issues in IE11.  Once again I had to prioritize; and I didn't feel that displaying this skillset was worth the time spent in debugging a browser remotely.
 
 #### dynamic content
-I made a few assumptions during the coding of the dynamic content section of this site that I wanted to make known
+I made a few assumptions during the coding of the dynamic content section of this site that I wanted to make known:
+
 1. Each time a new step is selected, I re-fetch the json.  I realize that the json is on the file system and unlikely to change, but in the interest of building a robust system, I felt that it was more important to re-retrieve the data each time instead of fetching it once and caching it.  If the json was swapped out in the future for a real-time endpoint, the URL of the endpoint would be the only change needed.
 2. There are 2 individuals named Paul Taylor, on different steps.  I assumed that this was intentional, representing two different individuals with the same name.  I decided to not do any data manipulation either to the file or on the client-side.
 
