@@ -86,4 +86,4 @@ I did run into a lot of uncomfortable testing scenarios where I had trouble hand
 ###Notes
 1. To test progressive enhancement, I added a "nojs" query parameter check to my code.
 2. I would have liked to drop the use of header_text and simply style real text over the image, but again, other items were prioritized.
-3. I would have also liked to write some integration tests with a headless browser, but I have no used one of those frameworks in node, so my effort was spent elsewhere.
+3. I would have also liked to write some integration tests with a headless browser, but I have not used one of those frameworks in javascript, so my effort was spent elsewhere.
