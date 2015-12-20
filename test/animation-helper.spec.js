@@ -6,7 +6,7 @@ describe('animation helper', function () {
         helper = require('../lib/scripts/util/animation-helper.js');
     });
     
-    it('should expose an mechanism to determine animation duration', function () {
+    it('should expose a mechanism to determine animation duration', function () {
         expect(typeof helper.speed).toBe('function');
     });
     describe('#speed', function () {

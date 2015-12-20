@@ -6,7 +6,7 @@ describe('distance helper', function () {
         helper = require('../lib/scripts/util/distance-helper.js');
     });
     
-    it('should expose an mechanism to determine distance', function () {
+    it('should expose a mechanism to determine distance', function () {
         expect(typeof helper.distance).toBe('function');
     });
     describe('#distance', function () {

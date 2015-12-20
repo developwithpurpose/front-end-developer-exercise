@@ -89,7 +89,9 @@ exports.format = function format(friends, stepId) {
         return util.format('%s is also in Baby Step %s', getFriendLink(friends[0]), stepId);
     } else if (friends.length === 2) {
         return util.format('%s and %s are also in Baby Step %s', getFriendLink(friends[0]), getFriendLink(friends[1]), stepId);
-    } else if (friends.length >= 3) {
+    } else if (friends.length === 3) {
+        return util.format('%s, %s, and 1 other friend are also in Baby Step %s', getFriendLink(friends[0]), getFriendLink(friends[1]), stepId);
+    } else if (friends.length > 3) {
         var otherCount = friends.length - 2;
         return util.format('%s, %s, and %s other friends are also in Baby Step %s', getFriendLink(friends[0]), getFriendLink(friends[1]), otherCount, stepId);
     }
@@ -101,9 +103,7 @@ var ajax = require('../util/ajax');
 exports.get = function get(onSuccess, onError) {
     ajax.json(
         'baby-steps.json',
-        function success(data) {
-            onSuccess(data);
-        },
+        onSuccess,
         onError
     );
 };
@@ -121,6 +121,10 @@ exports.getFriendsInStep = function getFriendsInStep(id, onSuccess, onError) {
         onSuccess(friends);
     }, onError);
 };
+
+exports._ajax = function (aj) {
+    ajax = aj;
+}
 },{"../util/ajax":6}],5:[function(require,module,exports){
 
 var animator = require('../util/animator');
