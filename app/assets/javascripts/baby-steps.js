@@ -1,8 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-(function (global){
 if (!location.search.match('nojs')) {
     
-    var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
+    var $ = require('./util/selector');
     var navManager = require('./nav-manager');
     var stepDetailsManager = require('./step-details/step-details-manager');
     
@@ -16,8 +15,7 @@ if (!location.search.match('nojs')) {
         stepDetailsManager.select(id);
     });
 }
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./nav-manager":2,"./step-details/step-details-manager":5}],2:[function(require,module,exports){
+},{"./nav-manager":2,"./step-details/step-details-manager":5,"./util/selector":10}],2:[function(require,module,exports){
 var $ = require('./util/selector');
 var animator = require('./util/animator');
 var distanceHelper = require('./util/distance-helper');
