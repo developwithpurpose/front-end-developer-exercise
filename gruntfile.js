@@ -59,7 +59,7 @@ module.exports = function(grunt) {
             },
             scripts: {
                 files: ['lib/**/*.js'],
-                tasks: ['dist']
+                tasks: ['browserify:dist']
             }
         }
     });
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
     grunt.registerTask('static', ['jshint']);
     grunt.registerTask('test', ['browserify:test', 'jasmine', 'clean:test']);
 
-    grunt.registerTask('build', ['static', 'sass', 'browserify', 'jade']);
+    grunt.registerTask('build', ['static', 'sass', 'browserify', 'jade', 'clean:test']);
     grunt.registerTask('default', ['build']);
 
 };

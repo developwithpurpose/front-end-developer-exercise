@@ -78,7 +78,11 @@ exports.init = function init($target) {
     $highlighter = $target.find('.highlight');
     
     items.on('click touchend', itemClickHandler);
-    items.on('keypress', itemClickHandler);
+    items.keyup(function (ev) {
+        if (ev.which === 13) {
+            itemClickHandler();
+        }
+    });
 };
 },{"./util/animation-helper":8,"./util/animator":9,"./util/distance-helper":10,"./util/selector":11}],4:[function(require,module,exports){
 var util = require('util');
