@@ -176,11 +176,18 @@ exports.select = function select(id) {
 var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
 
 exports.json = function json(url, success, error) {
+    if(!success) {
+        throw new Error('no success callback specified');
+    }
     var jxhr = $.getJSON(url, success);
     if (error !== undefined) {
         jxhr.fail(error);
     }
 };
+
+exports._jquery = function (jquery) {
+    $ = jquery;
+}
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],7:[function(require,module,exports){
 exports.speed = function speed(distance) {
@@ -193,6 +200,10 @@ var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefi
 exports.animate = function (object, options, time, cb) {
     $(object).animate(options, time, cb);
 };
+
+exports._jquery = function (jquery) {
+    $ = jquery;
+}
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],9:[function(require,module,exports){
 exports.distance = function distance(current, target) {
