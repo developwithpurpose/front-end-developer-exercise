@@ -18,8 +18,8 @@ if (!location.search.match('nojs')) {
 }
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./nav-manager":2,"./step-details/step-details-manager":5}],2:[function(require,module,exports){
-(function (global){
-var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
+var $ = require('./util/selector');
+var animator = require('./util/animator');
 var distanceHelper = require('./util/distance-helper');
 var animationHelper = require('./util/animation-helper');
 
@@ -46,9 +46,13 @@ function select(target) {
     var distance = distanceHelper.distance($currentActive.data('step-id'), $target.data('step-id'));
     
     $currentActive = $target;
-    $highlighter.animate({
-        top: destination
-    }, animationHelper.speed(distance));
+    animator.animate(
+        $highlighter,
+        {
+            top: destination
+        },
+        animationHelper.speed(distance)
+    );
 }
 
 function itemClickHandler(ev) {
@@ -73,8 +77,7 @@ exports.init = function init($target) {
     items.on('click touchend', itemClickHandler);
     items.on('keypress', itemClickHandler);
 };
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./util/animation-helper":6,"./util/distance-helper":7}],3:[function(require,module,exports){
+},{"./util/animation-helper":7,"./util/animator":8,"./util/distance-helper":9,"./util/selector":10}],3:[function(require,module,exports){
 var util = require('util');
 
 function getFriendLink(friend) {
@@ -92,16 +95,17 @@ exports.format = function format(friends, stepId) {
     }
     return '';
 };
-},{"util":11}],4:[function(require,module,exports){
+},{"util":14}],4:[function(require,module,exports){
+var ajax = require('../util/ajax');
+
 exports.get = function get(onSuccess, onError) {
-    var jxhr = $.getJSON('baby-steps.json', function success(data) {
-        onSuccess(data);
-    });
-    if (onError !== undefined) {
-        jxhr.fail(function error() {
-            onError();
-        });
-    }
+    ajax.json(
+        'baby-steps.json',
+        function success(data) {
+            onSuccess(data);
+        },
+        onError
+    );
 };
 
 exports.getFriendsInStep = function getFriendsInStep(id, onSuccess, onError) {
@@ -117,7 +121,9 @@ exports.getFriendsInStep = function getFriendsInStep(id, onSuccess, onError) {
         onSuccess(friends);
     }, onError);
 };
-},{}],5:[function(require,module,exports){
+},{"../util/ajax":6}],5:[function(require,module,exports){
+
+var animator = require('../util/animator');
 var distanceHelper = require('../util/distance-helper');
 var animationHelper = require('../util/animation-helper');
 var friends = require('./friends');
@@ -151,26 +157,54 @@ exports.select = function select(id) {
     
     var oldIndex = index;
     
-    $stepDetails.animate({
-        scrollTop: top
-    },
-    animationHelper.speed(distance),
-    function () {
-        getFriendStatusElement(oldIndex).html('');
-    });
+    animator.animate(
+        $stepDetails,
+        {
+            scrollTop: top
+        },
+        animationHelper.speed(distance),
+        function () {
+            getFriendStatusElement(oldIndex).html('');
+        }
+    );
     
     index = id;
     updateFriendsForSelectedStep();
 };
-},{"../util/animation-helper":6,"../util/distance-helper":7,"./friends":4,"./friends-helper":3}],6:[function(require,module,exports){
+},{"../util/animation-helper":7,"../util/animator":8,"../util/distance-helper":9,"./friends":4,"./friends-helper":3}],6:[function(require,module,exports){
+(function (global){
+var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
+
+exports.json = function json(url, success, error) {
+    var jxhr = $.getJSON(url, success);
+    if (error !== undefined) {
+        jxhr.fail(error);
+    }
+};
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],7:[function(require,module,exports){
 exports.speed = function speed(distance) {
     return Math.min(0.4 * distance, 1) + 's';
 };
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
+(function (global){
+var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
+
+exports.animate = function (object, options, time, cb) {
+    $(object).animate(options, time, cb);
+};
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],9:[function(require,module,exports){
 exports.distance = function distance(current, target) {
     return Math.abs(parseInt(current, 10) - parseInt(target, 10));
 };
-},{}],8:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
+(function (global){
+var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
+// test
+module.exports = $;
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],11:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -195,7 +229,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],9:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -288,14 +322,14 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],10:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],11:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -885,4 +919,4 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":10,"_process":9,"inherits":8}]},{},[1]);
+},{"./support/isBuffer":13,"_process":12,"inherits":11}]},{},[1]);
