@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+    head
+        title= title
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css")
+        link(rel="stylesheet", href="assets/stylesheets/baby-steps.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,400,300")
+    body
+        .root-container
+            .main-container
+                .shadow.left
+                .container
+                    header
+                        img(src="assets/images/header_text.jpg", alt=header)
+                    .main
+                        nav
+                            ul
+                                each step, index in steps
+                                    - var classes = ""
+                                    if index == 0
+                                        - classes = "active"
+                                    li.item(class=classes,data-step-id=index)
+                                        a(href="#step-details-item"+index).contents
+                                            span.label= step.title
+                                            span.icon(class="step-#{index+1}")
+                            .highlight &nbsp;
+                        .details
+                            .container
+                                each step, index in steps
+                                    section
+                                        a(id="step-details-item"+index)
+                                        .heading
+                                            .icon(class="step-#{index+1}")
+                                            .title
+                                                h1= step.title
+                                                h2= step.subtitle
+                                        .description
+                                            each paragraph, index in step.description
+                                                p(class=index == step.description.length - 1 ? 'last' : '')= paragraph
+                                            .friendStatus
+                .shadow.right
+            .shadow.bottom
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js", type="text/javascript")
+        script(src="assets/javascripts/baby-steps.js", type="text/javascript")

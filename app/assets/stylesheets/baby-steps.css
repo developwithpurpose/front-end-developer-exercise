@@ -1,0 +1,185 @@
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px; }
+
+body {
+  background-color: #bbbfc2; }
+
+.root-container {
+  width: 1020px;
+  margin: 0 auto; }
+
+.main-container {
+  display: table-row;
+  width: 1020px; }
+
+.shadow {
+  display: table-cell;
+  width: 15px;
+  vertical-align: top; }
+  .shadow.left {
+    background: url(../images/shadow_left.jpg) no-repeat; }
+  .shadow.right {
+    background: url(../images/shadow_right.jpg) no-repeat; }
+  .fixedHeight .shadow.left, .fixedHeight .shadow.right {
+    background-size: cover; }
+  .shadow.bottom {
+    display: block;
+    background: url(../images/shadow_bottom.jpg) no-repeat;
+    width: 980px;
+    height: 30px;
+    margin: 0 auto; }
+
+.container {
+  display: table-cell;
+  border-collapse: collapse;
+  width: 980px;
+  background-color: #fff; }
+
+.main {
+  margin-top: 60px; }
+  .animationEnabled .main {
+    height: 625px; }
+
+header img {
+  height: 276px;
+  width: 980px; }
+
+nav {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: inline-block;
+  width: 300px;
+  height: 100%;
+  position: relative;
+  background: url(../images/shadow_left_nav.jpg) repeat-y #ebeced;
+  vertical-align: top; }
+  nav .item {
+    font-size: 18px;
+    line-height: 60px;
+    position: relative;
+    z-index: 150;
+    border-bottom: 1px solid #fff;
+    cursor: pointer; }
+    nav .item .contents {
+      display: block;
+      text-decoration: none;
+      color: #9ba094;
+      text-align: right;
+      padding: 0 24px 0 100px; }
+    .animationEnabled nav .item.active .contents {
+      color: #36abe1;
+      font-weight: bold; }
+      .animationEnabled nav .item.active .contents .icon.step-1 {
+        background-position: 0px -175px; }
+      .animationEnabled nav .item.active .contents .icon.step-2 {
+        background-position: 0px -200px; }
+      .animationEnabled nav .item.active .contents .icon.step-3 {
+        background-position: 0px -225px; }
+      .animationEnabled nav .item.active .contents .icon.step-4 {
+        background-position: 0px -250px; }
+      .animationEnabled nav .item.active .contents .icon.step-5 {
+        background-position: 0px -275px; }
+      .animationEnabled nav .item.active .contents .icon.step-6 {
+        background-position: 0px -300px; }
+      .animationEnabled nav .item.active .contents .icon.step-7 {
+        background-position: 0px -325px; }
+    nav .item .icon {
+      display: inline-block;
+      width: 30px;
+      height: 25px;
+      vertical-align: middle;
+      background-image: url(../images/icons/sprites/icons_small.png); }
+      nav .item .icon.step-1 {
+        background-position: 0px 0px; }
+      nav .item .icon.step-2 {
+        background-position: 0px -25px; }
+      nav .item .icon.step-3 {
+        background-position: 0px -50px; }
+      nav .item .icon.step-4 {
+        background-position: 0px -75px; }
+      nav .item .icon.step-5 {
+        background-position: 0px -100px; }
+      nav .item .icon.step-6 {
+        background-position: 0px -125px; }
+      nav .item .icon.step-7 {
+        background-position: 0px -150px; }
+    nav .item .label {
+      display: inline-block;
+      width: 68%;
+      text-align: left; }
+  nav .highlight {
+    display: none; }
+  .animationEnabled nav .highlight {
+    display: block;
+    line-height: 60px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    background-color: #fff; }
+
+.details {
+  display: inline-block;
+  width: 540px;
+  margin: 0 70px; }
+  .animationEnabled .details {
+    height: 300px;
+    position: relative;
+    overflow: hidden; }
+    .animationEnabled .details .container {
+      position: relative;
+      top: 0; }
+    .animationEnabled .details section {
+      margin-bottom: 50px; }
+  .details .heading {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: table; }
+    .details .heading .icon {
+      display: table-cell;
+      width: 77px;
+      height: 65px;
+      background-image: url(../images/icons/sprites/icons_large.png); }
+      .details .heading .icon.step-1 {
+        background-position: 0 -455px; }
+      .details .heading .icon.step-2 {
+        background-position: 0 -520px; }
+      .details .heading .icon.step-3 {
+        background-position: 0 -580px; }
+      .details .heading .icon.step-4 {
+        background-position: 0 -645px; }
+      .details .heading .icon.step-5 {
+        background-position: 0 -713px; }
+      .details .heading .icon.step-6 {
+        background-position: 0 -778px; }
+      .details .heading .icon.step-7 {
+        background-position: 0 -842px; }
+      .details .heading .icon.step-6 {
+        background: url(../images/icons/individual/icons_large_bs6_blue.png) no-repeat 0 0; }
+    .details .heading .title {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 18px; }
+    .details .heading h1 {
+      font-size: 30px;
+      line-height: 34px;
+      color: #36abe1;
+      margin: 0px; }
+    .details .heading h2 {
+      font-size: 18px;
+      line-height: 20px;
+      color: #5c6366;
+      font-weight: lighter;
+      margin: 0px; }
+  .details .description {
+    font-size: 13px;
+    color: #65686f;
+    font-family: "Helvetica", sans-serif;
+    line-height: 18px; }
+    .details .description p.last {
+      margin-bottom: 40px; }
+    .details .description .friendStatus {
+      height: 30px; }
+      .details .description .friendStatus a, .details .description .friendStatus a:link, .details .description .friendStatus a:active, .details .description .friendStatus a:hover {
+        color: #6fbee7;
+        text-decoration: none; }
