@@ -1,15 +1,10 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-exports.speed = function speed(distance) {
-    return Math.min(0.4 * distance, 1) + 's';
-};
-},{}],2:[function(require,module,exports){
 (function (global){
-
 if (!location.search.match('nojs')) {
     
     var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
     var navManager = require('./nav-manager');
-    var stepDetailsManager = require('./step-details-manager');
+    var stepDetailsManager = require('./step-details/step-details-manager');
     
     var root = $('.root-container');
     root.addClass('animationEnabled fixedHeight');
@@ -22,58 +17,11 @@ if (!location.search.match('nojs')) {
     });
 }
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./nav-manager":6,"./step-details-manager":7}],3:[function(require,module,exports){
-exports.distance = function distance(current, target) {
-    return Math.abs(parseInt(current, 10) - parseInt(target, 10));
-};
-},{}],4:[function(require,module,exports){
-var util = require('util');
-
-function getFriendLink(friend) {
-    return util.format('<a href="#">%s %s</a>',friend.firstName, friend.lastName);
-}
-
-exports.format = function format(friends, stepId) {
-    if (friends.length === 1) {
-        return util.format('%s is also in Baby Step %s', getFriendLink(friends[0]), stepId);
-    } else if (friends.length === 2) {
-        return util.format('%s and %s are also in Baby Step %s', getFriendLink(friends[0]), getFriendLink(friends[1]), stepId);
-    } else if (friends.length >= 3) {
-        var otherCount = friends.length - 2;
-        return util.format('%s, %s, and %s other friends are also in Baby Step %s', getFriendLink(friends[0]), getFriendLink(friends[1]), otherCount, stepId);
-    }
-    return '';
-};
-},{"util":11}],5:[function(require,module,exports){
-exports.get = function get(onSuccess, onError) {
-    var jxhr = $.getJSON('baby-steps.json', function success(data) {
-        onSuccess(data);
-    });
-    if (onError !== undefined) {
-        jxhr.fail(function error() {
-            onError();
-        });
-    }
-};
-
-exports.getFriendsInStep = function getFriendsInStep(id, onSuccess, onError) {
-    this.get(function (data) {
-        var friends = [];
-        data.friends.sort(function (a, b) {
-            return a.lastName.localeCompare(b.lastName);
-        }).forEach(function(friend) {
-            if(id === friend.babyStep) {
-                friends.push(friend);
-            }
-        });
-        onSuccess(friends);
-    }, onError);
-};
-},{}],6:[function(require,module,exports){
+},{"./nav-manager":2,"./step-details/step-details-manager":5}],2:[function(require,module,exports){
 (function (global){
 var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
-var distanceHelper = require('./distance-helper');
-var animationHelper = require('./animation-helper');
+var distanceHelper = require('./util/distance-helper');
+var animationHelper = require('./util/animation-helper');
 
 var listeners = {};
 var listenerCounter = 0;
@@ -126,9 +74,52 @@ exports.init = function init($target) {
     items.on('keypress', itemClickHandler);
 };
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./animation-helper":1,"./distance-helper":3}],7:[function(require,module,exports){
-var distanceHelper = require('./distance-helper');
-var animationHelper = require('./animation-helper');
+},{"./util/animation-helper":6,"./util/distance-helper":7}],3:[function(require,module,exports){
+var util = require('util');
+
+function getFriendLink(friend) {
+    return util.format('<a href="#">%s %s</a>',friend.firstName, friend.lastName);
+}
+
+exports.format = function format(friends, stepId) {
+    if (friends.length === 1) {
+        return util.format('%s is also in Baby Step %s', getFriendLink(friends[0]), stepId);
+    } else if (friends.length === 2) {
+        return util.format('%s and %s are also in Baby Step %s', getFriendLink(friends[0]), getFriendLink(friends[1]), stepId);
+    } else if (friends.length >= 3) {
+        var otherCount = friends.length - 2;
+        return util.format('%s, %s, and %s other friends are also in Baby Step %s', getFriendLink(friends[0]), getFriendLink(friends[1]), otherCount, stepId);
+    }
+    return '';
+};
+},{"util":11}],4:[function(require,module,exports){
+exports.get = function get(onSuccess, onError) {
+    var jxhr = $.getJSON('baby-steps.json', function success(data) {
+        onSuccess(data);
+    });
+    if (onError !== undefined) {
+        jxhr.fail(function error() {
+            onError();
+        });
+    }
+};
+
+exports.getFriendsInStep = function getFriendsInStep(id, onSuccess, onError) {
+    this.get(function (data) {
+        var friends = [];
+        data.friends.sort(function (a, b) {
+            return a.lastName.localeCompare(b.lastName);
+        }).forEach(function(friend) {
+            if(id === friend.babyStep) {
+                friends.push(friend);
+            }
+        });
+        onSuccess(friends);
+    }, onError);
+};
+},{}],5:[function(require,module,exports){
+var distanceHelper = require('../util/distance-helper');
+var animationHelper = require('../util/animation-helper');
 var friends = require('./friends');
 var friendsHelper = require('./friends-helper');
 
@@ -171,7 +162,15 @@ exports.select = function select(id) {
     index = id;
     updateFriendsForSelectedStep();
 };
-},{"./animation-helper":1,"./distance-helper":3,"./friends":5,"./friends-helper":4}],8:[function(require,module,exports){
+},{"../util/animation-helper":6,"../util/distance-helper":7,"./friends":4,"./friends-helper":3}],6:[function(require,module,exports){
+exports.speed = function speed(distance) {
+    return Math.min(0.4 * distance, 1) + 's';
+};
+},{}],7:[function(require,module,exports){
+exports.distance = function distance(current, target) {
+    return Math.abs(parseInt(current, 10) - parseInt(target, 10));
+};
+},{}],8:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -886,4 +885,4 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":10,"_process":9,"inherits":8}]},{},[2]);
+},{"./support/isBuffer":10,"_process":9,"inherits":8}]},{},[1]);
