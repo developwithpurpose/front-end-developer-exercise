@@ -17,7 +17,10 @@ exports.init = function init() {
         });
     }
 };
-},{"./nav-manager":2,"./step-details/step-details-manager":5,"./util/selector":10}],2:[function(require,module,exports){
+},{"./nav-manager":3,"./step-details/step-details-manager":6,"./util/selector":11}],2:[function(require,module,exports){
+var client = require('./client');
+client.init();
+},{"./client":1}],3:[function(require,module,exports){
 var $ = require('./util/selector');
 var animator = require('./util/animator');
 var distanceHelper = require('./util/distance-helper');
@@ -77,7 +80,7 @@ exports.init = function init($target) {
     items.on('click touchend', itemClickHandler);
     items.on('keypress', itemClickHandler);
 };
-},{"./util/animation-helper":7,"./util/animator":8,"./util/distance-helper":9,"./util/selector":10}],3:[function(require,module,exports){
+},{"./util/animation-helper":8,"./util/animator":9,"./util/distance-helper":10,"./util/selector":11}],4:[function(require,module,exports){
 var util = require('util');
 
 function getFriendLink(friend) {
@@ -97,7 +100,7 @@ exports.format = function format(friends, stepId) {
     }
     return '';
 };
-},{"util":14}],4:[function(require,module,exports){
+},{"util":15}],5:[function(require,module,exports){
 var ajax = require('../util/ajax');
 
 exports.get = function get(onSuccess, onError) {
@@ -124,8 +127,8 @@ exports.getFriendsInStep = function getFriendsInStep(id, onSuccess, onError) {
 
 exports._ajax = function (aj) {
     ajax = aj;
-}
-},{"../util/ajax":6}],5:[function(require,module,exports){
+};
+},{"../util/ajax":7}],6:[function(require,module,exports){
 
 var animator = require('../util/animator');
 var distanceHelper = require('../util/distance-helper');
@@ -175,7 +178,7 @@ exports.select = function select(id) {
     index = id;
     updateFriendsForSelectedStep();
 };
-},{"../util/animation-helper":7,"../util/animator":8,"../util/distance-helper":9,"./friends":4,"./friends-helper":3}],6:[function(require,module,exports){
+},{"../util/animation-helper":8,"../util/animator":9,"../util/distance-helper":10,"./friends":5,"./friends-helper":4}],7:[function(require,module,exports){
 (function (global){
 var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
 
@@ -191,13 +194,13 @@ exports.json = function json(url, success, error) {
 
 exports._jquery = function (jquery) {
     $ = jquery;
-}
+};
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 exports.speed = function speed(distance) {
     return Math.min(0.4 * distance, 1) + 's';
 };
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 (function (global){
 var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
 
@@ -207,19 +210,19 @@ exports.animate = function (object, options, time, cb) {
 
 exports._jquery = function (jquery) {
     $ = jquery;
-}
+};
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 exports.distance = function distance(current, target) {
     return Math.abs(parseInt(current, 10) - parseInt(target, 10));
 };
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 (function (global){
 var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
 // test
 module.exports = $;
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -244,7 +247,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -337,14 +340,14 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -934,4 +937,4 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":13,"_process":12,"inherits":11}]},{},[1]);
+},{"./support/isBuffer":14,"_process":13,"inherits":12}]},{},[2]);

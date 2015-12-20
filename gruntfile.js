@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         browserify: {
             dist: {
                 files: {
-                    'app/assets/javascripts/baby-steps.js': ['lib/scripts/client.js']
+                    'app/assets/javascripts/baby-steps.js': ['lib/scripts/index.js']
                 }
             },
             test: {
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
     grunt.registerTask('w', ['build', 'watch']);
     
     grunt.registerTask('static', ['jshint']);
-    grunt.registerTask('test', ['browserify:test', 'jasmine', 'clean:test'])
+    grunt.registerTask('test', ['browserify:test', 'jasmine', 'clean:test']);
 
     grunt.registerTask('build', ['static', 'sass', 'browserify', 'jade']);
     grunt.registerTask('default', ['build']);

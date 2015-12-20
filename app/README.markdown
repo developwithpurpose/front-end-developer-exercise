@@ -10,8 +10,24 @@ I was unsure as to how far we should be attempting to make this page accessible,
 Given more time, I would have likely added supporting aria tagging.
 #### browser support
 The page has been tested in the following OS/browser combinations:
+1. Windows 10 - Edge
+1. Windows 10 - IE 11
+1. Windows 10 - Firefox 42
+1. Windows 10 - Chrome 47
+1. Windows 10 - Opera 34
+1. Windows 8.1 - 11 Metro
+1. Window 7 - IE 10
+1. Window 7 - IE 9
+1. Window 7 - Firefox 42
+1. Window 7 - Chrome 47
+1. OS X El Capitan - Safari 9
+1. OS X El Capitan - Firefox 42
+1. OS X El Capitan - Chrome 47
+1. OS X El Capitan - Opera 34
 1. Ubuntu 14.04 - Chrome 47
-2. Ubuntu 14.04 - Firefox
+1. Ubuntu 14.04 - Firefox
+1. Samsung Galaxy S6
+1. iPhone 6 Plus
 
 #### progressive enhancement
 The page is completely usable without javascript.  Since no design spec was provided, I decided that I would simply list all steps and use anchors to allow for navigation.
@@ -31,6 +47,10 @@ I made a few assumptions during the coding of the dynamic content section of thi
 
 #### deviations from design
 There was only one major deviation from the design spec provided and that was in the "baby step heading" line-height.  What is defined as font-size 30px and line-height 20px was changed to a line-height of 34px.
+
+Helvetica font is at the discretion of the OS that the browser is running on since it is not available on CDNs.  `san-sarif` is used as a fallback in those cases.
+
+In the annotated mock-up, the shadows on left and right of the main container show as if they are only extending as long as the height of shadow_[left/right].jpg.  I felt that when I implemented that, it looked to be a hard cut at the 724px line.  I decided to scale the shadows to the size of the container.  This is slighly off from the green highlighting in the annotated-mockup.jpg, but looks visually more like what is in the mockup.jpg
 
 I will also note that the large blue icon sprite was not compiled with correct spacing.  While not a deviation from the visual design, it is a deviation from the designer's resource set.
 
@@ -72,3 +92,4 @@ I did run into a lot of uncomfortable testing scenarios where I had trouble hand
 #### TODO
 1. readme updates with test browser support
 1. check enter key
+2. deviation in bg cover
