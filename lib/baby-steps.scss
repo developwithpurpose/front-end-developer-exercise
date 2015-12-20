@@ -28,11 +28,14 @@ body {
     vertical-align: top;
     &.left {
         background: url(../images/shadow_left.jpg) no-repeat;
-        background-size: cover;
     }
     &.right {
         background: url(../images/shadow_right.jpg) no-repeat;
-        background-size: cover;
+    }
+    .fixedHeight & {
+        &.left, &.right {
+            background-size: cover;
+        }
     }
     &.bottom {
         display: block;
@@ -51,7 +54,7 @@ body {
 }
 .main {
     margin-top: 60px;
-    &.animationEnabled {
+    .animationEnabled & {
         height: 625px;
     }
 }
@@ -69,8 +72,7 @@ nav {
     position: relative;
     
     $bg-color: #ebeced;
-    background-color: $bg-color;
-    background: url(../images/shadow_left_nav.jpg) repeat-y;
+    background: url(../images/shadow_left_nav.jpg) repeat-y $bg-color;
     
     vertical-align: top;
     
@@ -189,9 +191,11 @@ nav {
                     background-position: 0 nth($step-positions, $i);
                 }
             }
-            // ugh
+            
+            // this one was messing with me, so I used the individual as a work around
+            // I'm not sure if my math is off or the sprite is messy
             &.step-6 {
-                height: 64px;
+                background: url(../images/icons/individual/icons_large_bs6_blue.png) no-repeat 0 0;
             }
         }
         .title {

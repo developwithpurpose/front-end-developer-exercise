@@ -5,16 +5,17 @@ exports.speed = function speed(distance) {
 },{}],2:[function(require,module,exports){
 (function (global){
 
-var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
-var navManager = require('./nav-manager');
-var stepDetailsManager = require('./step-details-manager');
-
 if (!location.search.match('nojs')) {
-    var main = $('.main');
-    main.addClass('animationEnabled');
     
-    navManager.init(main.find('nav'));
-    stepDetailsManager.init(main.find('.details'));
+    var $ = (typeof window !== "undefined" ? window['$'] : typeof global !== "undefined" ? global['$'] : null);
+    var navManager = require('./nav-manager');
+    var stepDetailsManager = require('./step-details-manager');
+    
+    var root = $('.root-container');
+    root.addClass('animationEnabled fixedHeight');
+    
+    navManager.init(root.find('nav'));
+    stepDetailsManager.init(root.find('.details'));
     
     navManager.register(function navCallback(id) {
         stepDetailsManager.select(id);

@@ -19,10 +19,10 @@ body {
   width: 15px;
   vertical-align: top; }
   .shadow.left {
-    background: url(../images/shadow_left.jpg) no-repeat;
-    background-size: cover; }
+    background: url(../images/shadow_left.jpg) no-repeat; }
   .shadow.right {
-    background: url(../images/shadow_right.jpg) no-repeat;
+    background: url(../images/shadow_right.jpg) no-repeat; }
+  .fixedHeight .shadow.left, .fixedHeight .shadow.right {
     background-size: cover; }
   .shadow.bottom {
     display: block;
@@ -39,7 +39,7 @@ body {
 
 .main {
   margin-top: 60px; }
-  .main.animationEnabled {
+  .animationEnabled .main {
     height: 625px; }
 
 nav {
@@ -48,8 +48,7 @@ nav {
   width: 300px;
   height: 100%;
   position: relative;
-  background-color: #ebeced;
-  background: url(../images/shadow_left_nav.jpg) repeat-y;
+  background: url(../images/shadow_left_nav.jpg) repeat-y #ebeced;
   vertical-align: top; }
   nav .item {
     font-size: 18px;
@@ -152,7 +151,7 @@ nav {
       .details .heading .icon.step-7 {
         background-position: 0 -842px; }
       .details .heading .icon.step-6 {
-        height: 64px; }
+        background: url(../images/icons/individual/icons_large_bs6_blue.png) no-repeat 0 0; }
     .details .heading .title {
       display: table-cell;
       vertical-align: middle;
