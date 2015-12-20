@@ -10,7 +10,7 @@ I was unsure as to how far we should be attempting to make this page accessible,
 Given more time, I would have likely added supporting aria tagging.
 #### browser support
 The page has been tested in the following OS/browser combinations:
-1. Windows 10 - Edge
+1. Windows 10 - Edge 12
 1. Windows 10 - IE 11
 1. Windows 10 - Firefox 42
 1. Windows 10 - Chrome 47
@@ -87,9 +87,3 @@ I did run into a lot of uncomfortable testing scenarios where I had trouble hand
 1. To test progressive enhancement, I added a "nojs" query parameter check to my code.
 2. I would have liked to drop the use of header_text and simply style real text over the image, but again, other items were prioritized.
 3. I would have also liked to write some integration tests with a headless browser, but I have no used one of those frameworks in node, so my effort was spent elsewhere.
-
-
-#### TODO
-1. readme updates with test browser support
-1. check enter key
-2. deviation in bg cover
