@@ -1,0 +1,186 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans Pro:200italic,200,300italic,300,400italic,400,600italic,600,700italic,700,900italic,900);
+
+body {
+background-color: #bbbfc2;
+margin-top: 0px;
+}
+
+
+#content {
+	width: 77%;
+	height: 1002px;
+	position: relative;
+	margin: auto;
+	background-color: #fff;
+	background-image: url(../images/header.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	box-shadow: 0px 0px 10px 2px #888888;
+}
+
+#Subline {
+	color: #fff;
+	font-family: 'Open Sans';
+	font-weight: lighter;
+	font-size: 32px;
+	z-index: 999;
+	text-align: right;
+	padding-top: 50px;
+	padding-right: 70px;
+	margin-bottom: 15px;
+}
+#Mainline {
+	color: #fff;
+	font-family: 'Open Sans';
+	font-size: 50px;
+	line-height: 48px;
+	font-weight: bold;
+	text-align: right;
+	z-index: 998;
+	padding-right: 70px;
+	margin-bottom: 70px;
+
+}
+#HeaderPadding {
+	padding-top: 60px;
+}
+#SubHeaderPadding {
+	margin-top: 24px;
+}
+
+#ContainerLeft {
+    width: 33%;
+    float: left;
+    height: 66.7%;
+}
+
+/*Everything above this line should not be changed --------------------- */
+
+
+.BabyStepBox {
+	float: left;
+	margin-bottom: 1px;
+	width:100%;
+	color: #9ba0a4;
+	cursor: pointer;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebeced+0,ebeced+81,d1d5d6+100 */
+	background: #ebeced; /* Old browsers */
+	background: -moz-linear-gradient(left, #ebeced 0%, #ebeced 81%, #d1d5d6 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #ebeced 0%,#ebeced 81%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #ebeced 0%,#ebeced 81%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+}
+
+.BabyStepBox.selected {
+	background:#FFF;
+	color:#36abe1;
+}
+
+
+.BabyStepBox:hover {
+
+}
+
+.BabyStepText {
+	font-family: Source Sans Pro;
+	font-size: 18px;
+	line-height: 60px;
+	text-align: center;
+	float: right;
+}
+.SmallIcon1 {
+	float: right;
+	height: 30px;
+	padding: 15px 24px;
+}
+.SmallIcon2 {
+	float: right;
+	height: 30px;
+	padding: 15px 24px;
+}
+.SmallIcon3 {
+	float: right;
+	height: 30px;
+	padding: 15px 24px;
+}
+.SmallIcon4 {
+	float: right;
+	height: 30px;
+	padding: 15px 24px;
+}
+.SmallIcon5 {
+	float: right;
+	height: 30px;
+	padding: 15px 24px;
+}
+.SmallIcon6 {
+	float: right;
+	height: 30px;
+	padding: 15px 24px;
+}
+.SmallIcon7 {
+	float: right;
+	height: 30px;
+	padding: 15px 24px;
+}
+
+.BabyStepBoxLast {
+	float: left;
+	height: 241px;
+	width: 100%;
+	background: #ebeced; /* Old browsers */
+	background: -moz-linear-gradient(left, #ebeced 0%, #ebeced 81%, #d1d5d6 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #ebeced 0%,#ebeced 81%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #ebeced 0%,#ebeced 81%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+}
+#ContainerRight {
+    width: 67%;
+    float: left;
+    height: 66.7%;
+}
+#ContainerPadding {
+	margin-right: 70px;
+	margin-left: 70px;
+
+}
+.HeaderImage {
+	float: left;
+	position: relative;
+	margin-top: 5px;
+}
+.HeadingText {
+	font-family: Source Sans Pro;
+	font-weight: semi-bold;
+	font-size: 30px;
+	color: #36abe1;
+	line-height: 20px;
+	padding-left: 95px;
+}
+.TextBody {
+	font-family: Helvetica;
+	color: #65686f;
+	font-size: 13px;
+	line-height: 18px;
+}
+.OtherFriend {
+	font-family: Helvetica;
+	color: #65686f;
+	font-size: 13px;
+	line-height: 18px;
+	padding-top: 40px;
+}
+
+.SubHeadingText {
+	font-family: Source Sans Pro;
+	font-weight: lighter;
+	font-size: 18px;
+	color: #5c6366;
+	line-height: 20px;
+	padding-left: 95px;
+	padding-top: 8px;
+}
+.Links {
+	color: #6fbee7;
+}
