@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #bbbfc2; }
+
+.siteContainer {
+  height: auto;
+  width: 980px;
+  margin: 0 auto 50px;
+  position: relative; }
+  .siteContainer:after {
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    background: url("../images/shadow_bottom.jpg") no-repeat;
+    content: '';
+    display: block;
+    height: 30px;
+    width: 100%; }
+
+.siteContent {
+  background-color: #ffffff;
+  height: auto;
+  width: 980px;
+  position: relative;
+  margin: auto; }
+  .siteContent:before {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    background: url("../images/shadow_left.jpg") no-repeat;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 15px; }
+  .siteContent:after {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: url("../images/shadow_right.jpg") no-repeat;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 15px; }
+
+.siteHeader {
+  background: url("../images/header_text.jpg") no-repeat;
+  height: 276px;
+  width: 980px; }
+
+.babyContent:after {
+  clear: both;
+  content: '';
+  display: block; }
+
+.stepList {
+  float: left;
+  list-style-type: none;
+  background-color: #ffffff;
+  height: auto;
+  width: 300px;
+  padding-top: 60px;
+  padding-left: 0;
+  margin: 0; }
+
+.stepList li {
+  padding: 5px;
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 60px;
+  color: grey;
+  cursor: pointer;
+  background: #ebeced;
+  /*For browsers that do not support gradients*/
+  /*92% = 24px gradient in a 300px wide ul*/
+  background: -webkit-linear-gradient(right, #ebeced 92%, #d1d5d6);
+  background: -webkit-linear-gradient(right, #ebeced 92%, #d1d5d6);
+  /*For Safari 5.1 to 6.0*/
+  background: -o-linear-gradient(right, #ebeced 92%, #d1d5d6);
+  background: -o-linear-gradient(right, #ebeced 92%, #d1d5d6);
+  /*For Opera 11.1 to 12.0*/
+  background: -moz-linear-gradient(right, #ebeced 92%, #d1d5d6);
+  background: -moz-linear-gradient(right, #ebeced 92%, #d1d5d6);
+  /*For Firefox 3.6 to 15*/
+  background: -webkit-linear-gradient( left , #ebeced 92%, #d1d5d6);
+  background: linear-gradient(to right, #ebeced 92%, #d1d5d6);
+  /*Standard syntax*/
+  text-align: right;
+  /*All list item links share the same attributes including the same background-image*/ }
+  .stepList li:not(:last-child) {
+    margin-bottom: 1px; }
+  .stepList li:hover {
+    color: #36abe1;
+    background: #ffffff;
+    /*For browsers that do not support gradients*/
+    background: -webkit-linear-gradient(left, #ffffff, #ffffff);
+    background: -webkit-linear-gradient(left, #ffffff, #ffffff);
+    /*For Safari 5.1 to 6.0*/
+    background: -o-linear-gradient(right, #ffffff, #ffffff);
+    background: -o-linear-gradient(right, #ffffff, #ffffff);
+    /*For Opera 11.1 to 12.0*/
+    background: -moz-linear-gradient(right, #ffffff, #ffffff);
+    background: -moz-linear-gradient(right, #ffffff, #ffffff);
+    /*For Firefox 3.6 to 15*/
+    background: -webkit-linear-gradient( left , #ffffff, #ffffff);
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    /*Standard syntax*/ }
+  .stepList li.active {
+    color: #36abe1;
+    background: #ffffff;
+    /*For browsers that do not support gradients*/
+    background: -webkit-linear-gradient(left, #ffffff, #ffffff);
+    background: -webkit-linear-gradient(left, #ffffff, #ffffff);
+    /*For Safari 5.1 to 6.0*/
+    background: -o-linear-gradient(right, #ffffff, #ffffff);
+    background: -o-linear-gradient(right, #ffffff, #ffffff);
+    /*For Opera 11.1 to 12.0*/
+    background: -moz-linear-gradient(right, #ffffff, #ffffff);
+    background: -moz-linear-gradient(right, #ffffff, #ffffff);
+    /*For Firefox 3.6 to 15*/
+    background: -webkit-linear-gradient( left , #ffffff, #ffffff);
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    /*Standard syntax*/ }
+  .stepList li a {
+    line-height: 60px;
+    padding-left: 90px;
+    background: url("../images/icons/sprites/icons_small.png") no-repeat;
+    /*As all link share the same background-image*/ }
+
+ul.stepList li.step1 a {
+  background-position: 40px 0; }
+
+ul.stepList li.step1:hover a {
+  background-position: 40px -175px; }
+
+ul.stepList li.step2 a {
+  background-position: 40px -25px; }
+
+ul.stepList li.step2:hover a {
+  background-position: 40px -200px; }
+
+ul.stepList li.step3 a {
+  background-position: 40px -50px; }
+
+ul.stepList li.step3:hover a {
+  background-position: 40px -225px; }
+
+ul.stepList li.step4 a {
+  background-position: 40px -75px; }
+
+ul.stepList li.step4:hover a {
+  background-position: 40px -250px; }
+
+ul.stepList li.step5 a {
+  background-position: 40px -100px; }
+
+ul.stepList li.step5:hover a {
+  background-position: 40px -275px; }
+
+ul.stepList li.step6 a {
+  background-position: 40px -125px; }
+
+ul.stepList li.step6:hover a {
+  background-position: 40px -300px; }
+
+ul.stepList li.step7 a {
+  background-position: 40px -150px; }
+
+ul.stepList li.step7:hover a {
+  background-position: 40px -325px; }
+
+.stepContent {
+  float: right;
+  background-color: #ffffff;
+  padding: 60px 70px;
+  height: auto;
+  width: 680px; }
+
+.stepContent p {
+  font-family: 'Helvetica sans-serif';
+  line-height: 18px;
+  font-size: 13px;
+  color: #65686f; }
+
+.friendList {
+  font-family: 'Helvetica sans-serif';
+  font-size: 13px;
+  color: #65686f;
+  font-weight: normal;
+  padding-top: 40px; }
+  .friendList a {
+    color: #6fbee7; }
+
+/*# sourceMappingURL=steps.css.map */
