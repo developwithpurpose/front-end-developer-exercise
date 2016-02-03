@@ -1,0 +1,22 @@
+{
+  "name": "front-end-developer-exercise",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Shawn Cothran <asliceofpizza@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/shawncothran/front-end-developer-exercise",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3",
+    "neat": "~1.7.2"
+  }
+}
