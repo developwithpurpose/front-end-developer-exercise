@@ -364,9 +364,10 @@ html {
   font-size: 10px; }
 
 body {
+  background: #bbbfc2;
+  color: #65686f;
   font-family: 'Helvetica', 'Arial', sans-serif;
-  font-size: 1.6rem;
-  background: #bbbfc2; }
+  font-size: 1.3rem; }
 
 main {
   max-width: 980px;
@@ -386,7 +387,7 @@ main {
     background: url(/assets/images/header.jpg) no-repeat;
     color: #ffffff;
     height: 276px;
-    margin-bottom: 60px; }
+    margin-bottom: 62px; }
     main header:last-child {
       margin-right: 0; }
     main header h1 {
@@ -406,21 +407,22 @@ main {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
+    width: 30.56739%;
     height: 680px;
     background: #eeeeee;
-    background: -moz-linear-gradient(left, #efeff1 93%, #d1d5d6 100%);
-    background: -webkit-linear-gradient(left, #efeff1 93%, #d1d5d6 100%);
-    background: linear-gradient(to right, #efeff1 93%, #d1d5d6 100%); }
+    background: -moz-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
+    background: -webkit-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
+    background: linear-gradient(to right, #ebeced 95%, #d1d5d6 100%); }
     main nav:last-child {
       margin-right: 0; }
   main section.babySteps {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 65.88078%;
+    width: 67.07496%;
     height: 680px;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
     main section.babySteps:last-child {
       margin-right: 0; }
   main article.babyStep {
@@ -433,33 +435,87 @@ main:before {
   max-width: 980px;
   margin-left: auto;
   margin-right: auto;
-  content: "\0020";
-  display: block;
-  position: absolute;
-  top: -20px;
-  width: 100%;
-  height: 975px;
-  -webkit-box-shadow: 0 0 12px #333;
-  box-shadow: 0 0 12px #333;
-  z-index: -2;
-  /* Rounded corners, browser-specific for compatibility. */
-  -webkit-border-radius: 9px;
-  -webkit-border-bottom-right-radius: 10px 150px;
-  -webkit-border-bottom-left-radius: 10px 150px;
-  -moz-border-radius: 9px;
-  -moz-border-radius-bottomright: 10px 150px;
-  -moz-border-radius-bottomleft: 10px 150px;
-  /* CSS3 standard rounded corners */
   border-radius: 9px;
-  /* Slightly larger border-radius than the note */
-  border-bottom-right-radius: 10px 150px;
-  /* Small x + big y = nice tapered shape */
-  border-bottom-left-radius: 10px 150px;
-  /* Ditto above */ }
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-bottom-right-radius: 220px 620px;
+  -moz-border-radius-bottomright: 220px 620px;
+  -webkit-border-bottom-right-radius: 220px 620px;
+  border-bottom-left-radius: 220px 620px;
+  -moz-border-radius-bottomleft: 220px 620px;
+  -webkit-border-bottom-left-radius: 220px 620px;
+  box-shadow: 0 0 24px #555;
+  -webkit-box-shadow: 0 0 24px #555;
+  content: " ";
+  display: block;
+  height: 1025px;
+  position: absolute;
+  top: -9px;
+  width: 100%;
+  z-index: -1; }
   main:before::after {
     clear: both;
     content: "";
     display: table; }
 
+ul {
+  padding: 0;
+  margin: 0; }
+
+li {
+  padding: 0;
+  margin: 0; }
+
 .smoothScroll {
-  margin: 24px; }
+  border-bottom: 1px solid #ffffff;
+  display: block;
+  line-height: 60px;
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%; }
+
+a.smoothScroll:active {
+  background-color: #fff; }
+
+.aStep1 {
+  background: url(/assets/images/icons/individual/icons_small_bs1.png) no-repeat 256px 18px; }
+
+.aStep1:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs1_blue.png) no-repeat 256px 18px; }
+
+.aStep2 {
+  background: url(/assets/images/icons/individual/icons_small_bs2.png) no-repeat 256px 18px; }
+
+.aStep2:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs2_blue.png) no-repeat 256px 18px; }
+
+.aStep3 {
+  background: url(/assets/images/icons/individual/icons_small_bs3.png) no-repeat 256px 18px; }
+
+.aStep3:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs3_blue.png) no-repeat 256px 18px; }
+
+.aStep4 {
+  background: url(/assets/images/icons/individual/icons_small_bs4.png) no-repeat 256px 18px; }
+
+.aStep4:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs4_blue.png) no-repeat 256px 18px; }
+
+.aStep5 {
+  background: url(/assets/images/icons/individual/icons_small_bs5.png) no-repeat 256px 18px; }
+
+.aStep5:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs5_blue.png) no-repeat 256px 18px; }
+
+.aStep6 {
+  background: url(/assets/images/icons/individual/icons_small_bs6.png) no-repeat 256px 18px; }
+
+.aStep6:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs6_blue.png) no-repeat 256px 18px; }
+
+.aStep7 {
+  background: url(/assets/images/icons/individual/icons_small_bs7.png) no-repeat 256px 18px; }
+
+.aStep7:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs7_blue.png) no-repeat 256px 18px; }
