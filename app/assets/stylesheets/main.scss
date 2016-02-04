@@ -4,7 +4,7 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 html {
-  font-size: 1rem;
+  font-size: 10px;
 }
 body {
   background: #bbbfc2;
@@ -28,7 +28,7 @@ main {
       font-weight: 300;
       line-height: 4.4rem;
       margin: 0;
-      padding: 4.4rem 6.7rem 0 30rem;
+      padding: 4.4rem 6.7rem 0 30.0rem;
       text-align: right;
     }
     span.mainHeader {
@@ -40,7 +40,7 @@ main {
   }
   nav {
     @include span-columns(3.86);
-    height: 68rem;
+    height: 68.0rem;
     background: #eeeeee;
     background: -moz-linear-gradient(left,  #ebeced 95%, #d1d5d6 100%);
     background: -webkit-linear-gradient(left,  #ebeced 95%,#d1d5d6 100%);
@@ -50,16 +50,16 @@ main {
   }
 }
 main:before {
-  @include outer-container(98rem);
+  @include outer-container(98.0rem);
     border-radius: .9rem;
     -moz-border-radius: .9rem;
     -webkit-border-radius: .9rem;
-    border-bottom-right-radius: 22rem 62rem; // small x + big y = taper
-    -moz-border-radius-bottomright: 22rem 62rem;
-    -webkit-border-bottom-right-radius: 22rem 62rem;
-    border-bottom-left-radius: 22rem 62rem; // small x + big y = taper
-    -moz-border-radius-bottomleft: 22rem 62rem;
-    -webkit-border-bottom-left-radius: 22rem 62rem;
+    border-bottom-right-radius: 22.0rem 62.0rem; // small x + big y = taper
+    -moz-border-radius-bottomright: 22.0rem 62.0rem;
+    -webkit-border-bottom-right-radius: 22.0rem 62.0rem;
+    border-bottom-left-radius: 22.0rem 62.0rem; // small x + big y = taper
+    -moz-border-radius-bottomleft: 22.0rem 62.0rem;
+    -webkit-border-bottom-left-radius: 22.0rem 62.0rem;
     box-shadow: 0 0 2.4rem #555;
     -webkit-box-shadow: 0 0 2.4rem #555;
     content: " ";
@@ -72,15 +72,15 @@ main:before {
 }
 section.babySteps {
   @include span-columns(8.14);
-  height: 68rem;
+  height: 68.0rem;
   overflow: hidden;
   position: relative;
-  padding: 0 7rem 0 4.6rem;
+  padding: 0 7.0rem 0 4.6rem;
   img {
     @include span-columns(0.14);
     width: 7.9rem;
     height: 6.2rem;
-    padding-right: 0.2rem;
+    padding-right: .2rem;
   }
   h1 {
     @include span-columns(8);
@@ -108,8 +108,8 @@ section.babySteps {
   }
 }
 article.babyStep {
-  height: 68rem;
-  padding-top: 0.7rem;
+  height: 68.0rem;
+  padding-top: .7rem;
 }
 ul {
   list-style: none;
@@ -122,38 +122,24 @@ li {
 }
 .aStep1 {
   background: url(/assets/images/icons/individual/icons_small_bs1_blue.png) no-repeat 24.6rem 1.8rem;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
 }
 .aStep2 {
   background: url(/assets/images/icons/individual/icons_small_bs2_blue.png) no-repeat 24.6rem 1.8rem;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
 }
 .aStep3 {
   background: url(/assets/images/icons/individual/icons_small_bs3_blue.png) no-repeat 24.6rem 1.8rem;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
 }
 .aStep4 {
   background: url(/assets/images/icons/individual/icons_small_bs4_blue.png) no-repeat 24.6rem 1.8rem;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
 }
 .aStep5 {
   background: url(/assets/images/icons/individual/icons_small_bs5_blue.png) no-repeat 24.6rem 1.8rem;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
 }
 .aStep6 {
   background: url(/assets/images/icons/individual/icons_small_bs6_blue.png) no-repeat 24.6rem 1.8rem;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
 }
 .aStep7 {
   background: url(/assets/images/icons/individual/icons_small_bs7_blue.png) no-repeat 24.6rem 1.8rem;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
 }
 .smoothScroll {
   border-bottom: .1rem solid #ffffff;
@@ -162,13 +148,15 @@ li {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
-  line-height: 6rem;
-  height: 6rem;
+  line-height: 6.0rem;
+  height: 6.0rem;
   padding-left: 12.7rem;
   text-align: left;
   text-decoration: none;
   width: 100%;
   z-index: 3;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
 }
 .active {
   color: #36abe1;
@@ -178,8 +166,8 @@ li {
 }
 .slider {
   position: absolute;
-  top: 0;
-  height: 6rem;
+  top: 0px;
+  height: 6.0rem;
   width: 100%;
   left: 0;
   background: #ffffff;

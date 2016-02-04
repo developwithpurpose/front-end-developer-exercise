@@ -17,9 +17,25 @@ $(function() {
     }
   });
 });
+
 $('a[href*="#"]:not([href="#"])').click(function() {
   $("[href]").each(function() {
     $(this).removeClass("active");
   });
   $(this).addClass("active");
+});
+
+$.ajax('assets/baby-steps.json').done(function(friendList){
+  console.log(friendList);
+
+  // friendList.forEach(function(arr, index, array){
+  //   var friends = $('.friends');
+  //   friends.append(
+  //     "<p class='friends'><a href='#'>"
+  //     + arr.firstName arr.lastname +
+  //     "</a> and "
+  //     + arr.length +
+  //     "are on this step</p>"
+  //   );
+  // })
 });
