@@ -25,17 +25,24 @@ $('a[href*="#"]:not([href="#"])').click(function() {
   $(this).addClass("active");
 });
 
-$.ajax('assets/baby-steps.json').done(function(friendList){
-  console.log(friendList);
+$.ajax('../../baby-steps.json').done(function(friendList){
+  var data = friendList.friends
 
-  // friendList.forEach(function(arr, index, array){
-  //   var friends = $('.friends');
-  //   friends.append(
-  //     "<p class='friends'><a href='#'>"
-  //     + arr.firstName arr.lastname +
-  //     "</a> and "
-  //     + arr.length +
-  //     "are on this step</p>"
-  //   );
-  // })
+  var sorted = _.chain(data)
+                .groupBy("babyStep")
+                .pairs()
+                .map(function (currentItem) {
+                  return _.object(_.zip(["babyStep", "friends"], currentItem));
+                })
+                .value();
+  console.log(sorted);
+
+  sorted.forEach(function(current, index, array){
+    if (babyStep == ) {
+  
+    }
+    $('.babyStep').append(`<p>${ arr.length }</p>`
+      `<p class='friends'<a href='#'>${ arr }</a> and ${ also } are on this step</p>`
+    );
+  })
 });
