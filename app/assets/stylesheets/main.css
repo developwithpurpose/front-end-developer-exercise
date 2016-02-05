@@ -365,8 +365,8 @@ html {
 
 body {
   background: #bbbfc2;
-  color: #65686f;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #9ba0a4;
+  font-family: 'Helvetica', 'Open Sans', 'Arial', sans-serif;
   font-size: 1.3rem; }
 
 main {
@@ -374,7 +374,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   background: #ffffff;
-  margin-bottom: 45px; }
+  margin-bottom: 4.5rem; }
   main::after {
     clear: both;
     content: "";
@@ -386,21 +386,21 @@ main {
     width: 100%;
     background: url(/assets/images/header.jpg) no-repeat;
     color: #ffffff;
-    height: 276px;
-    margin-bottom: 62px; }
+    height: 27.6rem;
+    margin-bottom: 6.2rem; }
     main header:last-child {
       margin-right: 0; }
     main header h1 {
       font-family: 'Open Sans','Helvetica', 'Arial', sans-serif;
-      font-size: 32px;
+      font-size: 3.2rem;
       font-weight: 300;
-      line-height: 44px;
+      line-height: 4.4rem;
       margin: 0;
-      padding: 44px 67px 0 300px;
+      padding: 4.4rem 6.7rem 0 30rem;
       text-align: right; }
     main header span.mainHeader {
       font-family: 'Open Sans','Helvetica', 'Arial', sans-serif;
-      font-size: 48px;
+      font-size: 4.8rem;
       font-weight: 700;
       text-transform: uppercase; }
   main nav {
@@ -408,7 +408,7 @@ main {
     display: block;
     margin-right: 2.35765%;
     width: 30.56739%;
-    height: 680px;
+    height: 61.7rem;
     background: #eeeeee;
     background: -moz-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
     background: -webkit-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
@@ -419,25 +419,25 @@ main {
       margin-right: 0; }
 
 main:before {
-  max-width: 980px;
+  max-width: 98rem;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 9px;
-  -moz-border-radius: 9px;
-  -webkit-border-radius: 9px;
-  border-bottom-right-radius: 220px 620px;
-  -moz-border-radius-bottomright: 220px 620px;
-  -webkit-border-bottom-right-radius: 220px 620px;
-  border-bottom-left-radius: 220px 620px;
-  -moz-border-radius-bottomleft: 220px 620px;
-  -webkit-border-bottom-left-radius: 220px 620px;
-  box-shadow: 0 0 24px #555;
-  -webkit-box-shadow: 0 0 24px #555;
+  border-radius: .9rem;
+  -moz-border-radius: .9rem;
+  -webkit-border-radius: .9rem;
+  border-bottom-right-radius: 22rem 62rem;
+  -moz-border-radius-bottomright: 22rem 62rem;
+  -webkit-border-bottom-right-radius: 22rem 62rem;
+  border-bottom-left-radius: 22rem 62rem;
+  -moz-border-radius-bottomleft: 22rem 62rem;
+  -webkit-border-bottom-left-radius: 22rem 62rem;
+  box-shadow: 0 0 2.4rem #555;
+  -webkit-box-shadow: 0 0 2.4rem #555;
   content: " ";
   display: block;
-  height: 1025px;
+  height: 96.4rem;
   position: absolute;
-  top: -9px;
+  top: -.9rem;
   width: 100%;
   z-index: -1; }
   main:before::after {
@@ -450,10 +450,10 @@ section.babySteps {
   display: block;
   margin-right: 2.35765%;
   width: 67.07496%;
-  height: 680px;
+  height: 61.7rem;
   overflow: hidden;
   position: relative;
-  padding: 0 70px 0 46px; }
+  padding: 0 7rem 0 4.6rem; }
   section.babySteps:last-child {
     margin-right: 0; }
   section.babySteps img {
@@ -496,10 +496,16 @@ section.babySteps {
     clear: both;
     line-height: 1.85rem;
     margin: 1.8rem 0 0 0.2rem; }
+  section.babySteps p.friends {
+    font-weight: 600;
+    margin-top: 3.3rem; }
+    section.babySteps p.friends a {
+      color: #6fbee7;
+      text-decoration: none; }
 
 article.babyStep {
-  height: 680px;
-  padding-top: 7px; }
+  height: 68.0rem;
+  padding-top: .7rem; }
 
 ul {
   list-style: none;
@@ -511,54 +517,42 @@ li {
   margin: 0; }
 
 .aStep1 {
-  background: url(/assets/images/icons/individual/icons_small_bs1_blue.png) no-repeat 246px 18px;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1); }
+  background: url(/assets/images/icons/individual/icons_small_bs1_blue.png) no-repeat 24.6rem 1.8rem; }
 
 .aStep2 {
-  background: url(/assets/images/icons/individual/icons_small_bs2_blue.png) no-repeat 246px 18px;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1); }
+  background: url(/assets/images/icons/individual/icons_small_bs2_blue.png) no-repeat 24.6rem 1.8rem; }
 
 .aStep3 {
-  background: url(/assets/images/icons/individual/icons_small_bs3_blue.png) no-repeat 246px 18px;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1); }
+  background: url(/assets/images/icons/individual/icons_small_bs3_blue.png) no-repeat 24.6rem 1.8rem; }
 
 .aStep4 {
-  background: url(/assets/images/icons/individual/icons_small_bs4_blue.png) no-repeat 246px 18px;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1); }
+  background: url(/assets/images/icons/individual/icons_small_bs4_blue.png) no-repeat 24.6rem 1.8rem; }
 
 .aStep5 {
-  background: url(/assets/images/icons/individual/icons_small_bs5_blue.png) no-repeat 246px 18px;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1); }
+  background: url(/assets/images/icons/individual/icons_small_bs5_blue.png) no-repeat 24.6rem 1.8rem; }
 
 .aStep6 {
-  background: url(/assets/images/icons/individual/icons_small_bs6_blue.png) no-repeat 246px 18px;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1); }
+  background: url(/assets/images/icons/individual/icons_small_bs6_blue.png) no-repeat 24.6rem 1.8rem; }
 
 .aStep7 {
-  background: url(/assets/images/icons/individual/icons_small_bs7_blue.png) no-repeat 246px 18px;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1); }
+  background: url(/assets/images/icons/individual/icons_small_bs7_blue.png) no-repeat 24.6rem 1.8rem; }
 
 .smoothScroll {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: .1rem solid #ffffff;
   color: #9ba0a4;
   display: block;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
-  line-height: 60px;
-  height: 60px;
-  padding-left: 127px;
+  line-height: 6.0rem;
+  height: 6.0rem;
+  padding-left: 12.7rem;
   text-align: left;
   text-decoration: none;
   width: 100%;
-  z-index: 3; }
+  z-index: 3;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1); }
 
 .active {
   color: #36abe1;
@@ -569,7 +563,7 @@ li {
 .slider {
   position: absolute;
   top: 0px;
-  height: 60px;
+  height: 6.0rem;
   width: 100%;
   left: 0;
   background: #ffffff;

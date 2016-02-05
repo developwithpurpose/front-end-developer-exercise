@@ -1,15 +1,15 @@
-@import '../../bower_components/normalize-css/normalize';
-@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../../../bower_components/normalize-css/normalize';
+@import '../../../bower_components/bourbon/app/assets/stylesheets/bourbon';
 // $visual-grid: true;
-@import '../../bower_components/neat/app/assets/stylesheets/neat';
+@import '../../../bower_components/neat/app/assets/stylesheets/neat';
 
 html {
   font-size: 10px;
 }
 body {
   background: #bbbfc2;
-  color: #65686f;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #9ba0a4;
+  font-family: 'Helvetica', 'Open Sans', 'Arial', sans-serif;
   font-size: 1.3rem;
 }
 main {
@@ -40,7 +40,7 @@ main {
   }
   nav {
     @include span-columns(3.86);
-    height: 68.0rem;
+    height: 61.7rem;
     background: #eeeeee;
     background: -moz-linear-gradient(left,  #ebeced 95%, #d1d5d6 100%);
     background: -webkit-linear-gradient(left,  #ebeced 95%,#d1d5d6 100%);
@@ -64,7 +64,7 @@ main:before {
     -webkit-box-shadow: 0 0 2.4rem #555;
     content: " ";
     display: block;
-    height: 102.5rem;
+    height: 96.4rem;
     position: absolute;
     top: -.9rem;
     width: 100%;
@@ -72,7 +72,7 @@ main:before {
 }
 section.babySteps {
   @include span-columns(8.14);
-  height: 68.0rem;
+  height: 61.7rem;
   overflow: hidden;
   position: relative;
   padding: 0 7.0rem 0 4.6rem;
@@ -105,6 +105,14 @@ section.babySteps {
     clear: both;
     line-height: 1.85rem;
     margin: 1.8rem 0 0 0.2rem;
+  }
+  p.friends {
+    font-weight: 600;
+    margin-top: 3.3rem;
+    a {
+      color: #6fbee7;
+      text-decoration: none;
+    }
   }
 }
 article.babyStep {
