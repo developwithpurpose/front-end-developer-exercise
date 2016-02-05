@@ -1,4 +1,74 @@
 /*
   styles.css
-  v1.0 | 20160205
+  v1 | 20160205
 */
+
+
+/* reset styles */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+
+/* main styles */
+html {
+  background-color: #bbbfc2;
+}
+body {
+  width: 980px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+/* header */
+header {
+  height: 276px;
+  background:url('../images/header.jpg') no-repeat left top;
+  color: white;
+}
+
+h1 {
+  width: 50%;
+  float: right;
+  padding: 50px 70px 0 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  text-align: right;
+}
+
+h1 .mega {
+  display:block;
+  margin-top: 5px;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 48px;
+  text-transform: uppercase;
+}
