@@ -6,9 +6,18 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
-  },
-  "devDependencies": {
-    "http-server": "^0.8.0"
+    "start": "http-server ./app -d false",
+    "build-css": "node-sass --include-path scss build/scss/main.scss app/assets/stylesheets/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "lint": "jshint build/js/**.js"
+    },
+   "devDependencies": {
+    "http-server": "^0.8.0",
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.8.1",
+    "jshint": "latest",
+    "browserify": "latest",
+    "uglify-js": "latest",
+    "uglifycss": "latest"
   }
 }
