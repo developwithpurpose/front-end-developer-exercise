@@ -3,7 +3,6 @@
   v1 | 20160205
 */
 
-
 /* reset styles */
 
 html, body, div, span, applet, object, iframe,
@@ -26,49 +25,133 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
 
 /* main styles */
+
 html {
   background-color: #bbbfc2;
 }
+
 body {
   width: 980px;
   margin: 0 auto;
   background-color: #ffffff;
 }
 
-/* header */
-header {
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+h2, h3 {
+  margin-bottom: 5px;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 20px;
+}
+
+h2 {
+  margin-bottom: 5px;
+  color: #36abe1;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h3 {
+  color: #5c6366;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+p {
+  margin-bottom: 18px;
+  color: #65686f;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* aka. clearfix */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* hero section */
+
+#hero {
   height: 276px;
+  margin-bottom: 60px;
   background:url('../images/header.jpg') no-repeat left top;
   color: white;
 }
 
-h1 {
+#hero h1 {
   width: 50%;
   float: right;
   padding: 50px 70px 0 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 32px;
-  font-weight: 300;
   letter-spacing: -0.01em;
   text-align: right;
 }
 
-h1 .mega {
+#hero h1 .mega {
   display:block;
-  margin-top: 5px;
+  padding-top: 5px;
   font-size: 50px;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   line-height: 48px;
   text-transform: uppercase;
 }
+
+/* main tabbed content */
+.tabs-nav, .tabs-content {
+  float: left;
+  margin-right: 70px;
+}
+.tabs-nav {
+  width: 300px;
+}
+.tabs-nav ul {
+  list-style: none;
+}
+.tabs-content {
+  width: 540px;
+}
+
+.hgroup {
+  overflow: hidden;
+  height: 65px;
+  margin-bottom: 19px;
+  padding-left: 87px;
+}
+.hgroup h2 {
+  margin-top: 15px;
+}
+
+/* sprites
+*/
+
+/* seven steps large icons */
+.sprite-steps-lg {
+  background-image: url(../images/icons/sprites/icons_large.png);
+  background-repeat: no-repeat;
+}
+.sprite-steps-lg.blue-dollar {background-position: 0px -454px;}
+.sprite-steps-lg.blue-coins  {background-position: 0px -514px;}
+.sprite-steps-lg.blue-piggy  {background-position: 0px -581px;}
+.sprite-steps-lg.blue-chart  {background-position: 0px -646px;}
+.sprite-steps-lg.blue-book   {background-position: 0px -713px;}
+.sprite-steps-lg.blue-house  {background-position: 0px -778px;}
+.sprite-steps-lg.blue-hand   {background-position: 0px -844px;}
