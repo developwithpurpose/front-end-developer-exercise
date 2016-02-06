@@ -18,6 +18,7 @@
     "jshint": "latest",
     "browserify": "latest",
     "uglify-js": "latest",
-    "uglifycss": "latest"
+    "uglifycss": "latest",
+    "normalize.css": "latest"
   }
 }
