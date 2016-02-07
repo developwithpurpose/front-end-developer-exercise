@@ -7,11 +7,13 @@
 // Variables
 $fonts-head:	'Open Sans', sans-serif;
 $fonts-body:	Helvetica, sans-serif;
-$fonts-nav:		'Source Sans Pro', sans-serif;
+$fonts-steps:	'Source Sans Pro', sans-serif;
 $nav-grey:		#9ba0a4;
 $nav-blue:		#36abe1;
 $link-blue:		#6fbee7;
+$title-grey:	#5c6366;
 $body-grey:		#65686f;
+$bg-color:      #bbbfc2;
 
 // CSS
 
@@ -22,9 +24,8 @@ body, html {
 	font-size: 13px;
 	line-height: 18px;
 	color: $body-grey;
+	background-color: $bg-color;
 	}
-
-.clear { clear:both }
 
 .uppercase { 
 	text-transform: uppercase;
@@ -32,10 +33,22 @@ body, html {
 
 //Page wrapper for fixed width
 
+#outer-wrapper {
+    width: 1010px;
+    margin: auto;
+    padding-bottom: 45px;
+    }
+
 #main-wrapper {
     width: 980px;
     margin: auto;
+    background-color: #fff;
+    float: left;
     }
+
+.shadow-left { float: left; }
+.shadow-right { float: left; }
+.shadow-bottom { }
 
 //Header section
 
@@ -44,10 +57,10 @@ header {
     }
 
 header #banner {
-    height: 206px;
+    height: 226px;
     background: url('/assets/images/header.jpg');
-    padding-top: 70px;
-    padding-right: 50px;
+    padding-top: 50px;
+    padding-right: 70px;
     text-align: right;
     }
 
@@ -56,20 +69,38 @@ header #banner {
 	font-size: 32px;
 	font-weight: 100;
 	color: #fff;
+	padding-bottom: 15px;
 	}
 
 .header-text-main {
 	font-family: $fonts-head;
 	font-weight: 700;
 	font-size: 50px;
+	line-height: 48px;
 	color: #fff;
+    letter-spacing: -1px;
 	}
 
+// wrapper for the NAV and body content
+
+#content-wrapper:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;    
+    }
 
 //navigation and step icons
 
 nav {
     float: left; 
+    height: 618px;
+    background: #ebeced; //for old browsers that don't support gradients
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI5NiUiIHN0b3AtY29sb3I9IiNlYmVjZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZDFkNWQ2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-linear-gradient(right, #ebeced 96%, #d1d5d6 100%); 
+    background: -webkit-linear-gradient(rigbt, #ebeced 96%,#d1d5d6 100%); 
+    background: linear-gradient(to right, #ebeced 96%,#d1d5d6 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=0 ); /* IE6-8 */
     
     ul {
         margin: 0;
@@ -77,54 +108,88 @@ nav {
         width: 300px;
         list-style: none;
         text-align: right;
-        background: #ebeced; //for old browsers that don't support gradients
-        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI5NiUiIHN0b3AtY29sb3I9IiNlYmVjZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZDFkNWQ2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-        background: -moz-linear-gradient(right, #ebeced 96%, #d1d5d6 100%); 
-        background: -webkit-linear-gradient(rigbt, #ebeced 96%,#d1d5d6 100%); 
-        background: linear-gradient(to right, #ebeced 96%,#d1d5d6 100%); 
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=0 ); /* IE6-8 */
     }
 
     li { 
         display: inline-block; 
         border-bottom: 1px solid #fff;
     }
-
+    
+    li:hover .small-icon-1 { background-position-y: -530px;}
+    li:hover .small-icon-2 { background-position-y: -530px - 25px + 1; }
+    li:hover .small-icon-3 { background-position-y: -530px - 25px * 2; }
+    li:hover .small-icon-4 { background-position-y: -530px - 25px * 3 + 1; }
+    li:hover .small-icon-5 { background-position-y: -530px - 25px * 4 - 1; } 
+    li:hover .small-icon-6 { background-position-y: -530px - 25px * 5 - 1; } 
+    li:hover .small-icon-7 { background-position-y: -530px - 25px * 6 - 1; }
+    
     a {
         display: block;
         text-decoration: none;
         font-size: 18px;
         line-height: 60px;
-        font-family: $fonts-nav;
-        font-weight: 700;
-        color: $nav-blue;
+        font-family: $fonts-steps;
+        font-weight: 400;
+        color: $nav-grey;
         width: 300px;
         transition: background-color .5s ease;
-    }
-    a:active { background: #fff }
-    a:hover { background-color: rgba(255,255,255,.5) }
+        }
+        
+    a:hover { 
+        background: #fff;
+        font-weight: 600;
+        color: $nav-blue;
+        }
+    
+    a:hover { background-color: rgba(255,255,255,.3); }
+
 }
+
 .step-icon {
     background-image: url("/assets/images/icons/sprites/icons_large.png");
+    display: inline-block;
+    vertical-align: middle;
+	}
+	
+.small-icon {
     width: 30px;
     height: 25px;
-    display: inline-block;
     background-size: 30px;
-    vertical-align: middle;
     margin-right: 24px;
     margin-left: 27px;
-	}
+    background-size: 30px;
+    }
 
-.step-icon-1 { background-position-y: 0px; }
-.step-icon-2 { background-position-y: -25px; }
-.step-icon-3 { background-position-y: -50px; }
-.step-icon-4 { background-position-y: -75px; }
-.step-icon-5 { background-position-y: -101px; }
-.step-icon-6 { background-position-y: -126px; }
-.step-icon-7 { background-position-y: -152px; }
+.big-icon {
+    width: 77px;
+    height: 65px;
+    margin-right: 15px;
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+    }
+
+// the sprite is off just a bit after icon 4
+// the +1 compensates for the creep
+
+.small-icon-1 { background-position-y: 0px; }
+.small-icon-2 { background-position-y: 0px - 25px; }
+.small-icon-3 { background-position-y: 0px - 25px * 2; }
+.small-icon-4 { background-position-y: 0px - 25px * 3; }
+.small-icon-5 { background-position-y: 0px - 25px * 4 - 1; } 
+.small-icon-6 { background-position-y: 0px - 25px * 5 - 1; } 
+.small-icon-7 { background-position-y: 0px - 25px * 6 - 2; }
+
+.big-icon-1 { background-position-y: -454px; }
+.big-icon-2 { background-position-y: -454px - 65px; }
+.big-icon-3 { background-position-y: -454px - 65px * 2; }
+.big-icon-4 { background-position-y: -454px - 65px * 3 + 1; }
+.big-icon-5 { background-position-y: -454px - 65px * 4 + 1; }
+.big-icon-6 { background-position-y: -454px - 65px * 5 + 2; } 
+.big-icon-7 { background-position-y: -454px - 65px * 6 + 2; }
 
 // Baby steps content
-
+    
 #baby-steps {
     width: 540px;
     float: left;
@@ -134,6 +199,46 @@ nav {
     overflow: hidden;
     }
 
-#baby-steps section {
-    display: inline;
+#baby-steps > section {
+    margin-bottom: 100%;
+    }   
+ 
+ #baby-steps p:first-child {
+    margin-top: 5px;
+    }
+    
+.step-title-block {
+    margin-top: 10px;
+    display: table;
+    }    
+
+.step-title {
+    display: table-cell;
+    vertical-align: middle;
+    }
+    
+.step-title:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    }
+     
+#baby-steps h1 {
+    font-family: $fonts-steps;
+    color: $nav-blue;
+    font-size: 30px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    }
+    
+#baby-steps h2 {
+    font-family: $fonts-steps;
+    color: $title-grey;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 18px;
     }
