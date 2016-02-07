@@ -3,8 +3,8 @@
   v1 | 20160205
 */
 
-/* reset styles */
-
+/* reset styles
+*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,21 +26,24 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
+/* HTML5 for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-body {
-  line-height: 1;
+body { line-height: 1; }
+
+/* clearfix */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* main styles */
-
-html {
-  background-color: #bbbfc2;
-}
+/* global styles
+*/
+html { background-color: #bbbfc2; }
 
 body {
   width: 980px;
@@ -81,23 +84,18 @@ p {
   line-height: 18px;
 }
 
-/* aka. clearfix */
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+a { color: #6fbee7; text-decoration: none; }
 
-/* hero section */
-
-#hero {
+/* header styles
+*/
+header {
   height: 276px;
   margin-bottom: 60px;
   background:url('../images/header.jpg') no-repeat left top;
   color: white;
 }
 
-#hero h1 {
+header h1 {
   width: 50%;
   float: right;
   padding: 50px 70px 0 0;
@@ -105,7 +103,7 @@ p {
   text-align: right;
 }
 
-#hero h1 .mega {
+header h1 .mega {
   display:block;
   padding-top: 5px;
   font-size: 50px;
@@ -115,43 +113,108 @@ p {
   text-transform: uppercase;
 }
 
-/* main tabbed content */
-.tabs-nav, .tabs-content {
+/* tabbed section styles
+*/
+
+/* tab navigation */
+.tabs-nav {
   float: left;
   margin-right: 70px;
-}
-.tabs-nav {
   width: 300px;
+  background: #ebeced;
+  background: -moz-linear-gradient(left,  #ebeced 95%, #d1d5d6 100%);
+  background: -webkit-linear-gradient(left,  #ebeced 95%,#d1d5d6 100%);
+  background: linear-gradient(to right,  #ebeced 95%,#d1d5d6 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
 }
-.tabs-nav ul {
-  list-style: none;
+
+.tabs-nav ul { list-style: none; }
+
+.tabs-nav li {
+  border-bottom: 1px solid white;
+  text-align: right;
+  cursor: pointer;
 }
-.tabs-content {
+
+.no-js .tabs-nav li {
+  cursor: default;
+}
+
+.tabs-nav li.active { background: #ffffff; }
+
+.tabs-nav li.active .tabs-link {
+  color: #36abe1;
+  font-weight: 600;
+}
+
+.tabs-nav .tabs-link {
+  padding: 1px 0;
+  margin-right: 24px;
+  color: #9ba0a4;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.tabs-nav .tabs-link-icon {
+  display: inline-block;
+  margin-right: 24px;
+  vertical-align: middle;
+}
+
+/* tab content */
+.tabs-body, .tabs-content { height: 300px; }
+
+.tabs-body {
   width: 540px;
+  float: left;
+  overflow: hidden;
 }
 
 .hgroup {
   overflow: hidden;
   height: 65px;
   margin-bottom: 19px;
-  padding-left: 87px;
-}
-.hgroup h2 {
-  margin-top: 15px;
 }
 
-/* sprites
+.hgroup .sprite { float: left; margin-right: 15px; }
+
+.hgroup h2 { margin-top: 15px; }
+
+/* 7 steps icon sprites
 */
-
-/* seven steps large icons */
-.sprite-steps-lg {
-  background-image: url(../images/icons/sprites/icons_large.png);
+.sprite {
+  background-image: url(../images/icons/sprites/icons_all.png);
   background-repeat: no-repeat;
+  display: block;
 }
-.sprite-steps-lg.blue-dollar {background-position: 0px -454px;}
-.sprite-steps-lg.blue-coins  {background-position: 0px -514px;}
-.sprite-steps-lg.blue-piggy  {background-position: 0px -581px;}
-.sprite-steps-lg.blue-chart  {background-position: 0px -646px;}
-.sprite-steps-lg.blue-book   {background-position: 0px -713px;}
-.sprite-steps-lg.blue-house  {background-position: 0px -778px;}
-.sprite-steps-lg.blue-hand   {background-position: 0px -844px;}
+
+.sprite-icons_large_bs1      { width: 77px; height: 65px; background-position: -2px -2px; }
+.sprite-icons_large_bs1.blue { width: 77px; height: 65px; background-position: -2px -71px; }
+.sprite-icons_large_bs2      { width: 77px; height: 65px; background-position: -2px -140px; }
+.sprite-icons_large_bs2.blue { width: 77px; height: 65px; background-position: -2px -209px; }
+.sprite-icons_large_bs3      { width: 77px; height: 65px; background-position: -2px -278px; }
+.sprite-icons_large_bs3.blue { width: 77px; height: 65px; background-position: -2px -347px; }
+.sprite-icons_large_bs4      { width: 77px; height: 65px; background-position: -2px -416px; }
+.sprite-icons_large_bs4.blue { width: 77px; height: 65px; background-position: -2px -485px; }
+.sprite-icons_large_bs5      { width: 77px; height: 65px; background-position: -2px -554px; }
+.sprite-icons_large_bs5.blue { width: 77px; height: 65px; background-position: -2px -623px; }
+.sprite-icons_large_bs6      { width: 77px; height: 65px; background-position: -2px -692px; }
+.sprite-icons_large_bs6.blue { width: 77px; height: 65px; background-position: -2px -761px; }
+.sprite-icons_large_bs7      { width: 77px; height: 65px; background-position: -2px -830px; }
+.sprite-icons_large_bs7.blue { width: 77px; height: 65px; background-position: -2px -899px; }
+
+.sprite-icons_small_bs1      { width: 30px; height: 25px; background-position: -2px -968px; }
+.sprite-icons_small_bs1.blue { width: 30px; height: 25px; background-position: -2px -997px; }
+.sprite-icons_small_bs2      { width: 30px; height: 25px; background-position: -2px -1026px; }
+.sprite-icons_small_bs2.blue { width: 30px; height: 25px; background-position: -2px -1055px; }
+.sprite-icons_small_bs3      { width: 30px; height: 25px; background-position: -2px -1084px; }
+.sprite-icons_small_bs3.blue { width: 30px; height: 25px; background-position: -2px -1113px; }
+.sprite-icons_small_bs4      { width: 30px; height: 25px; background-position: -2px -1142px; }
+.sprite-icons_small_bs4.blue { width: 30px; height: 25px; background-position: -2px -1171px; }
+.sprite-icons_small_bs5      { width: 30px; height: 25px; background-position: -2px -1200px; }
+.sprite-icons_small_bs5.blue { width: 30px; height: 25px; background-position: -2px -1229px; }
+.sprite-icons_small_bs6      { width: 30px; height: 25px; background-position: -2px -1258px; }
+.sprite-icons_small_bs6.blue { width: 30px; height: 25px; background-position: -2px -1287px; }
+.sprite-icons_small_bs7      { width: 30px; height: 25px; background-position: -2px -1316px; }
+.sprite-icons_small_bs7.blue { width: 30px; height: 25px; background-position: -2px -1345px; }
