@@ -9,7 +9,8 @@
     "start": "http-server ./app -d false",
     "build-css": "node-sass --include-path scss build/scss/main.scss app/assets/stylesheets/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-    "lint": "jshint build/js/**.js"
+    "lint": "jshint build/js/**.js",
+    "min-css": "uglifycss app/assets/stylesheets/main.css > app/assets/stylesheets/main.css > output"
     },
    "devDependencies": {
     "http-server": "^0.8.0",
@@ -18,7 +19,6 @@
     "jshint": "latest",
     "browserify": "latest",
     "uglify-js": "latest",
-    "uglifycss": "latest",
-    "normalize.css": "latest"
+    "uglifycss": "latest"
   }
 }

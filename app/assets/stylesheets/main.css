@@ -364,16 +364,23 @@ body, html {
 .uppercase {
   text-transform: uppercase; }
 
-#outer-wrapper {
-  width: 1010px;
-  margin: auto;
-  padding-bottom: 45px; }
+#back-shadow {
+  width: 980px;
+  height: 954px;
+  position: absolute;
+  left: 50%;
+  margin-left: -490px;
+  border-bottom-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+  box-shadow: 0px 0px 16px 5px #999;
+  z-index: 0; }
 
 #main-wrapper {
   width: 980px;
   margin: auto;
   background-color: #fff;
-  float: left; }
+  margin-bottom: 45px;
+  position: relative; }
 
 .shadow-left {
   float: left; }
