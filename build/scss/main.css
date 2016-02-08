@@ -382,12 +382,6 @@ body, html {
   margin-bottom: 45px;
   position: relative; }
 
-.shadow-left {
-  float: left; }
-
-.shadow-right {
-  float: left; }
-
 header {
   margin-bottom: 60px; }
 
@@ -398,6 +392,7 @@ header #banner {
   padding-right: 70px;
   text-align: right; }
 
+f
 .header-text-sub {
   font-family: "Open Sans", sans-serif;
   font-size: 32px;
@@ -422,6 +417,7 @@ header #banner {
 nav {
   float: left;
   height: 618px;
+  position: relative;
   background: #ebeced;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI5NiUiIHN0b3AtY29sb3I9IiNlYmVjZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZDFkNWQ2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
   background: -moz-linear-gradient(right, #ebeced 96%, #d1d5d6 100%);
@@ -429,29 +425,38 @@ nav {
   background: linear-gradient(to right, #ebeced 96%, #d1d5d6 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=0 );
   /* IE6-8 */ }
+  nav .highlight {
+    position: absolute;
+    width: 300px;
+    height: 58px;
+    background: #fff;
+    top: 2px;
+    display: none;
+    transition: all .5s ease; }
   nav ul {
     margin: 0;
     padding: 0;
     width: 300px;
     list-style: none;
-    text-align: right; }
+    text-align: right;
+    position: relative; }
   nav li {
     display: inline-block;
     border-bottom: 1px solid #fff; }
-  nav li:hover .small-icon-1 {
-    background-position-y: -530px; }
-  nav li:hover .small-icon-2 {
-    background-position-y: -554px; }
-  nav li:hover .small-icon-3 {
-    background-position-y: -580px; }
-  nav li:hover .small-icon-4 {
-    background-position-y: -604px; }
-  nav li:hover .small-icon-5 {
-    background-position-y: -631px; }
-  nav li:hover .small-icon-6 {
-    background-position-y: -656px; }
-  nav li:hover .small-icon-7 {
-    background-position-y: -681px; }
+  nav a.active > .small-icon-1, nav li:hover .small-icon-1 {
+    background-position-y: -175px; }
+  nav a.active > .small-icon-2, nav li:hover .small-icon-2 {
+    background-position-y: -200px; }
+  nav a.active > .small-icon-3, nav li:hover .small-icon-3 {
+    background-position-y: -225px; }
+  nav a.active > .small-icon-4, nav li:hover .small-icon-4 {
+    background-position-y: -250px; }
+  nav a.active > .small-icon-5, nav li:hover .small-icon-5 {
+    background-position-y: -275px; }
+  nav a.active > .small-icon-6, nav li:hover .small-icon-6 {
+    background-position-y: -300px; }
+  nav a.active > .small-icon-7, nav li:hover .small-icon-7 {
+    background-position-y: -325px; }
   nav a {
     display: block;
     text-decoration: none;
@@ -461,20 +466,21 @@ nav {
     font-weight: 400;
     color: #9ba0a4;
     width: 300px;
-    transition: background-color .5s ease; }
+    transition: background-color .5s ease;
+    transition: color .5s ease; }
   nav a:hover {
-    background: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #36abe1; }
+  nav a.active {
     font-weight: 600;
     color: #36abe1; }
-  nav a:hover {
-    background-color: rgba(255, 255, 255, 0.3); }
 
 .step-icon {
-  background-image: url("/assets/images/icons/sprites/icons_large.png");
   display: inline-block;
   vertical-align: middle; }
 
 .small-icon {
+  background-image: url("/assets/images/icons/sprites/icons_small.png");
   width: 30px;
   height: 25px;
   background-size: 30px;
@@ -483,6 +489,7 @@ nav {
   background-size: 30px; }
 
 .big-icon {
+  background-image: url("/assets/images/icons/sprites/icons_large.png");
   width: 77px;
   height: 65px;
   margin-right: 15px;
@@ -503,13 +510,13 @@ nav {
   background-position-y: -75px; }
 
 .small-icon-5 {
-  background-position-y: -101px; }
+  background-position-y: -100px; }
 
 .small-icon-6 {
-  background-position-y: -126px; }
+  background-position-y: -125px; }
 
 .small-icon-7 {
-  background-position-y: -152px; }
+  background-position-y: -150px; }
 
 .big-icon-1 {
   background-position-y: -454px; }
@@ -537,11 +544,14 @@ nav {
   float: left;
   padding-left: 70px;
   padding-right: 70px;
-  height: 427px;
+  height: 250px;
   overflow: hidden; }
 
-#baby-steps > section {
-  margin-bottom: 100%; }
+#smooth-scroll {
+  transition: all .5s ease; }
+
+#smooth-scroll > section {
+  margin-bottom: 20%; }
 
 #baby-steps p:first-child {
   margin-top: 5px; }

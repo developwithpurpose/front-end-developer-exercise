@@ -7,18 +7,21 @@
   },
   "scripts": {
     "start": "http-server ./app -d false",
-    "build-css": "node-sass --include-path scss build/scss/main.scss app/assets/stylesheets/main.css",
+    "build-css": "node-sass --include-path scss build/scss/main.scss build/scss/main.css && npm run min-css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-    "lint": "jshint build/js/**.js",
-    "min-css": "uglifycss app/assets/stylesheets/main.css > app/assets/stylesheets/main.css > output"
+    "min-css": "uglifycss build/scss/*.css > app/assets/stylesheets/main.min.css",
+    "lint": "jslint build/js/**.js -browser true",
+    "min-js": "uglifyjs build/js/*.js > app/assets/javascripts/main.min.js",
+    "build-js": "npm run lint && npm run min-js",
+    "watch-js": "nodemon --watch build/js/*.js -e js -x \"npm run build-js\"",
+    "watch-dev": "npm run watch-js & npm run watch-css & npm start"
     },
    "devDependencies": {
     "http-server": "^0.8.0",
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
-    "jshint": "latest",
-    "browserify": "latest",
-    "uglify-js": "latest",
+    "jslint": "latest",
+    "uglifyjs": "latest",
     "uglifycss": "latest"
   }
 }
