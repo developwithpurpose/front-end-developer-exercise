@@ -134,17 +134,26 @@ header h1 .mega {
   border-bottom: 1px solid white;
   text-align: right;
   cursor: pointer;
+
+  -webkit-transition: background-color 0.35s;
+  -moz-transition: background-color 0.35s;
+  -o-transition: background-color 0.35s;
+  transition: background-color 0.35s;
 }
 
 .no-js .tabs-nav li {
   cursor: default;
 }
 
-.tabs-nav li.active { background: #ffffff; }
+.tabs-nav li.active {
+  background: #ffffff; 
+  cursor:default;
+}
 
 .tabs-nav li.active .tabs-link {
   color: #36abe1;
   font-weight: 600;
+  cursor: default;
 }
 
 .tabs-nav .tabs-link {
@@ -160,12 +169,18 @@ header h1 .mega {
   display: inline-block;
   margin-right: 24px;
   vertical-align: middle;
+
+  -webkit-transition: background-position 0.5s;
+  -moz-transition: background-position 0.5s;
+  -o-transition: background-position 0.5s;
+  transition: background-position 0.5s;
 }
 
 /* tab content */
 .tabs-body, .tabs-content { height: 300px; }
 
 .tabs-body {
+  position: relative;
   width: 540px;
   float: left;
   overflow: hidden;
