@@ -6,7 +6,12 @@
  */
     $(function () {
         $('body').removeClass('no-js');
+
+        $('.tabs-nav').find('li').first().addClass('active')
+            .children('.tabs-link-icon').addClass('blue');
+
         showFriends($('.tabs-content'));
+
     });
 
 /*
@@ -17,18 +22,16 @@
         var $this = $(this);
         var href = $this.children().first('a').attr('href');
 
-        if (!isElementInViewport($(href)[0])) {
+        if (!$this.hasClass('active')) {
             $tabsBody.animate(
                 {opacity: 0},
                 150,
                 function () {
-                    $(href)[0].scrollIntoView();
+                    $tabsBody.scrollTop($(href).position().top);
                     $tabsBody.animate({opacity: 1}, 150);
                 }
             );
-        }
 
-        if (!$this.hasClass('active')) {
             $('.tabs-nav').find('li').removeClass('active');
             $('.tabs-link-icon').removeClass('blue');
             $this.addClass('active');
@@ -64,10 +67,12 @@
             var $span;
             var i;
 
-            friendsData.sort(sortBy('babyStep', false, parseInt));
+            friendsData.sort(function compareStep (a, b) {
+                return a.babyStep - b.babyStep;
+            });
 
             for (i = 0; i < $el.length; i++) {
-                $span = $('<span>', {class: 'my-friends'});
+                $span = $('<span>', {'class': 'my-friends'});
                 friends = [];
                 done = false;
 
@@ -82,7 +87,11 @@
                 }
 
                 if (friends.length) {
-                    friends.sort(sortBy('lastName', false));
+                    friends.sort(function compareLastName (a, b) {
+                        if (a.lastName < b.lastName) return -1;
+                        if (a.lastName > b.lastName) return 1;
+                        return 0;
+                    });
                     msg = getFriendMessage(friends, i);
                     $span.html(msg);
                     $el.eq(i).append($span);
@@ -96,60 +105,26 @@
         case 0:
             break;
         case 1:
-            return getFriendLink(friends[0]) + ' is also in Baby Step ' + (i + 1);
+            return getFriendLink(friends[0], true) + ' is also in Baby Step ' + (i + 1);
         case 2:
-            return getFriendLink(friends[0]) + ' and ' + getFriendLink(friends[1]) +
+            return getFriendLink(friends[0], true) + ' and ' + getFriendLink(friends[1], true) +
                     ' are also in Baby Step ' + (i + 1);
         case 3:
-            return getFriendLink(friends[0]) + ', ' + getFriendLink(friends[1]) +
+            return getFriendLink(friends[0], true) + ', ' + getFriendLink(friends[1], true) +
                     ', and 1 other friend are also in Baby Step ' + (i + 1);
         default:
-            return getFriendLink(friends[0]) + ', ' + getFriendLink(friends[1]) +
+            return getFriendLink(friends[0], true) + ', ' + getFriendLink(friends[1], true) +
                     ', and ' + (friends.length - 2) +
                     ' other friends are also in Baby Step ' + (i + 1);
         }
     };
 
-    var getFriendLink = function (friend, returnObj) {
-        var $a = $('<a>');
+    var getFriendLink = function (friend, toString) {
+        var $a = $('<a>', {'href': '#'});
 
         $a.text(friend.firstName + ' ' + friend.lastName);
 
-        if (friend.href) {
-            $a.attr('href', friend.href);
-        } else {
-            $a.attr('href', '#');
-        }
-
-        if (returnObj) {
-            return $a;
-        } else {
-            return $a[0].outerHTML;
-        }
+        return toString ? $a[0].outerHTML : $a;
     };
 
-    // stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-    var isElementInViewport = function (el) {
-        var rect = el.getBoundingClientRect();
-
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    };
-
-    // stackoverflow.com/questions/979256/how-to-sort-an-array-of-javascript-objects
-    var sortBy = function (field, reverse, primer) {
-        var key = function (x) {
-            return primer ? primer(x[field]) : x[field];
-        };
-
-        return function (a, b) {
-            var A = key(a);
-            var B = key(b);
-            return ((A < B) ? -1 : ((A > B) ? 1 : 0)) * [-1,1][+!reverse];
-        };
-    };
 }(window.jQuery, window, document));

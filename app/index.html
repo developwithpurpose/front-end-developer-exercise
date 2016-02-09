@@ -11,37 +11,40 @@
 </head>
 <body class="no-js">
   <header>
-    <h1>Real Life, Love, and Money with <span class="mega">America&rsquo;s Most Trusted Guy</span></h1>
+    <h1 class="heading-right">
+      <span class="small">Real Life, Love, and Money with</span>
+      <span class="big">America&rsquo;s Most Trusted Guy</span>
+    </h1>
   </header>
 
   <main class="tabs group">
     <nav class="tabs-nav">
       <ul>
-        <li class="active">
+        <li class="tabs-nav-item">
           <a class="tabs-link" href="#step-1" title="Baby Step 1">Baby Step 1</a>
-          <span class="tabs-link-icon sprite sprite-icons_small_bs1 blue"></span>
+          <span class="tabs-link-icon sprite sprite-icons_small_bs1"></span>
         </li>
-        <li>
+        <li class="tabs-nav-item">
           <a class="tabs-link" href="#step-2" title="Baby Step 2">Baby Step 2</a>
           <span class="tabs-link-icon sprite sprite-icons_small_bs2"></span>
         </li>
-        <li>
+        <li class="tabs-nav-item">
           <a class="tabs-link" href="#step-3" title="Baby Step 3">Baby Step 3</a>
           <span class="tabs-link-icon sprite sprite-icons_small_bs3"></span>
         </li>
-        <li>
+        <li class="tabs-nav-item">
           <a class="tabs-link" href="#step-4" title="Baby Step 4">Baby Step 4</a>
           <span class="tabs-link-icon sprite sprite-icons_small_bs4"></span>
         </li>
-        <li>
+        <li class="tabs-nav-item">
           <a class="tabs-link" href="#step-5" title="Baby Step 5">Baby Step 5</a>
           <span class="tabs-link-icon sprite sprite-icons_small_bs5"></span>
         </li>
-        <li>
+        <li class="tabs-nav-item">
           <a class="tabs-link" href="#step-6" title="Baby Step 6">Baby Step 6</a>
           <span class="tabs-link-icon sprite sprite-icons_small_bs6"></span>
         </li>
-        <li>
+        <li class="tabs-nav-item">
           <a class="tabs-link" href="#step-7" title="Baby Step 7">Baby Step 7</a>
           <span class="tabs-link-icon sprite sprite-icons_small_bs7"></span>
         </li>
@@ -104,7 +107,7 @@
           <h3>College funding for children</h3>
         </div>
 
-        <p>By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.</p>
+        <p>By this point, you should have already started Baby Step 4&ndash;investing 15% of your income&ndash;before saving for college. Whether you are saving for you or your child to go to college, you need to start now.</p>
 
         <p>In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!</p>
       </section>
@@ -134,7 +137,11 @@
       </section>
     </article>
   </main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script type="text/javascript" src="/assets/javascripts/scripts.js"></script>
+<script type="text/javascript" src="/assets/javascripts/LAB.min.js"></script>
+<script type="text/javascript">
+  $LAB
+    .script('//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js').wait()
+    .script('/assets/javascripts/scripts.js');
+</script>
 </body>
 </html>
