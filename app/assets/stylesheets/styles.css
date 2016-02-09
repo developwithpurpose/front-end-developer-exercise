@@ -3,8 +3,10 @@
   v1 | 20160205
 */
 
-/* reset styles
+/*
+  reset styles
 */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -32,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-body { line-height: 1; }
+body {line-height: 1; }
 
 /* clearfix */
 .group:after {
@@ -41,14 +43,21 @@ body { line-height: 1; }
   clear: both;
 }
 
-/* global styles
+/* 
+  global styles
 */
+
 html { background-color: #bbbfc2; }
 
 body {
+  position: relative;
   width: 980px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
   background-color: #ffffff;
+  color: #65686f;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 h1 {
@@ -77,17 +86,15 @@ h3 {
 }
 
 p {
-  margin-bottom: 18px;
-  color: #65686f;
-  font-family: 'Helvetica', sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  margin-bottom: 15px;
 }
 
 a { color: #6fbee7; text-decoration: none; }
 
-/* header styles
+/* 
+  header styles
 */
+
 header {
   height: 276px;
   margin-bottom: 60px;
@@ -113,7 +120,8 @@ header h1 .mega {
   text-transform: uppercase;
 }
 
-/* tabbed section styles
+/* 
+  tabbed section styles
 */
 
 /* tab navigation */
@@ -135,10 +143,10 @@ header h1 .mega {
   text-align: right;
   cursor: pointer;
 
-  -webkit-transition: background-color 0.35s;
-  -moz-transition: background-color 0.35s;
-  -o-transition: background-color 0.35s;
-  transition: background-color 0.35s;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .no-js .tabs-nav li {
@@ -176,7 +184,7 @@ header h1 .mega {
   transition: background-position 0.5s;
 }
 
-/* tab content */
+/* tab body and content */
 .tabs-body, .tabs-content { height: 300px; }
 
 .tabs-body {
@@ -186,18 +194,53 @@ header h1 .mega {
   overflow: hidden;
 }
 
-.hgroup {
+.tabs-content .hgroup {
   overflow: hidden;
   height: 65px;
   margin-bottom: 19px;
 }
 
-.hgroup .sprite { float: left; margin-right: 15px; }
+.tabs-content .hgroup .sprite { float: left; margin-right: 15px; }
 
-.hgroup h2 { margin-top: 15px; }
+.tabs-content .hgroup h2 { margin-top: 15px; }
 
-/* 7 steps icon sprites
+.tabs-content p:last-of-type { margin-bottom: 40px; }
+
+.tabs-content .my-friends { display:block; }
+
+/* 
+  page drop shadow
 */
+
+header::before {
+  content:url('../images/shadow_left.jpg');
+  position:absolute;
+  z-index: -1;
+  left: -14px;
+  top: 0px;
+}
+
+header::after {
+  content:url('../images/shadow_right.jpg');
+  position:absolute;
+  z-index: -1;
+  right: -14px;
+  top: 0px;
+}
+
+body::after {
+  content:url('../images/shadow_bottom.jpg');
+  display: block;
+  position: absolute;
+  z-index: -1;
+  bottom: -30px;
+  left: 0;
+}
+
+/*
+  7 steps icon sprites
+*/
+
 .sprite {
   background-image: url(../images/icons/sprites/icons_all.png);
   background-repeat: no-repeat;
