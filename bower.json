@@ -1,0 +1,19 @@
+{
+  "name": "front-end-developer-exercise",
+  "version": "1.0.0",
+  "authors": [
+    "Jeremy Grondahl <jeremygrondahl@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  },
+  "homepage": "https://github.com/Jergron/front-end-developer-exercise.git"
+}
