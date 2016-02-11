@@ -1,0 +1,35 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #bbbfc2;
+}
+
+.banner {
+  width: 100%;
+  clear: both;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.leftShadow {
+  float: left;
+}
+
+.main {
+  max-width: 980px;
+  min-width: 980px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 100%;
+  background-color: white;
+
+}
+
+.rightShadow {
+  float: right;
+}
+
