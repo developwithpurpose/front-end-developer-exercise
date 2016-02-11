@@ -6,22 +6,24 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false",
+    "start": "http-server ./app -d false -o",
     "build-css": "node-sass --include-path scss build/scss/main.scss build/scss/main.css && npm run min-css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "min-css": "uglifycss build/scss/*.css > app/assets/stylesheets/main.min.css",
     "lint": "jslint build/js/**.js -browser true",
-    "min-js": "uglifyjs build/js/*.js > app/assets/javascripts/main.min.js",
+    "min-js": "uglifyjs2 build/js/*.js > app/assets/javascripts/main.min.js",
     "build-js": "npm run lint && npm run min-js",
     "watch-js": "nodemon --watch build/js/*.js -e js -x \"npm run build-js\"",
     "watch-dev": "npm run watch-js & npm run watch-css & npm start"
-    },
-   "devDependencies": {
-    "http-server": "^0.8.0",
-    "node-sass": "^3.4.2",
-    "nodemon": "^1.8.1",
+  },
+  "devDependencies": {
+    "http-server": "^0.8.0"
+  },
+  "dependencies": {
+    "uglify-js2": "^2.1.11",
+    "uglifycss": "latest",
     "jslint": "latest",
-    "uglifyjs": "latest",
-    "uglifycss": "latest"
+    "nodemon": "^1.8.1",
+    "node-sass": "^3.4.2"
   }
 }

@@ -69,7 +69,7 @@ header #banner {
     padding-top: 50px;
     padding-right: 70px;
     text-align: right;
-    }f
+    }
 
 .header-text-sub {
 	font-family: $fonts-head;
@@ -194,9 +194,6 @@ nav {
     float: left;
     }
 
-// the sprite is off just a bit after icon 4
-// the +1 compensates for the creep
-
 .small-icon-1 { background-position-y: 0px; }
 .small-icon-2 { background-position-y: 0px - 25px; }
 .small-icon-3 { background-position-y: 0px - 25px * 2; }
@@ -204,6 +201,8 @@ nav {
 .small-icon-5 { background-position-y: 0px - 25px * 4; } 
 .small-icon-6 { background-position-y: 0px - 25px * 5; } 
 .small-icon-7 { background-position-y: 0px - 25px * 6; }
+
+// the sprite is off just a bit after icon 4 the +1 compensates for the creep
 
 .big-icon-1 { background-position-y: -454px; }
 .big-icon-2 { background-position-y: -454px - 65px; }
@@ -213,29 +212,26 @@ nav {
 .big-icon-6 { background-position-y: -454px - 65px * 5 + 2; } 
 .big-icon-7 { background-position-y: -454px - 65px * 6 + 2; }
 
-// Baby steps content
+// Baby steps conten
     
 #baby-steps {
     width: 540px;
     float: left;
     padding-left: 70px;
     padding-right: 70px;
-    height: 250px;
+    height: 300px;
     overflow: hidden;
     }
 
-#smooth-scroll {
-    transition: all .5s ease;
+#baby-steps p a {
+    color: $link-blue;
+    text-decoration: none;
     }
-
-#smooth-scroll > section {
+    
+#baby-steps section {
     margin-bottom: 20%;
     }   
  
- #baby-steps p:first-child {
-    margin-top: 5px;
-    }
-    
 .step-title-block {
     margin-top: 10px;
     display: table;
@@ -270,4 +266,16 @@ nav {
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 18px;
+    }
+    
+section article p:first-of-type{
+    margin-top: 14px;
+    }
+    
+section article p:last-of-type{
+    margin-top: 27px;
+    }
+    
+.friends {
+   // font-weight: 600;
     }

@@ -392,7 +392,6 @@ header #banner {
   padding-right: 70px;
   text-align: right; }
 
-f
 .header-text-sub {
   font-family: "Open Sans", sans-serif;
   font-size: 32px;
@@ -544,17 +543,15 @@ nav {
   float: left;
   padding-left: 70px;
   padding-right: 70px;
-  height: 250px;
+  height: 300px;
   overflow: hidden; }
 
-#smooth-scroll {
-  transition: all .5s ease; }
+#baby-steps p a {
+  color: #6fbee7;
+  text-decoration: none; }
 
-#smooth-scroll > section {
+#baby-steps section {
   margin-bottom: 20%; }
-
-#baby-steps p:first-child {
-  margin-top: 5px; }
 
 .step-title-block {
   margin-top: 10px;
@@ -586,3 +583,9 @@ nav {
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 18px; }
+
+section article p:first-of-type {
+  margin-top: 14px; }
+
+section article p:last-of-type {
+  margin-top: 27px; }
