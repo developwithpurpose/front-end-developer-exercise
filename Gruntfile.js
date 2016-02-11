@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      files: ['./app/javascripts/**/*.js'],
+      files: ['./app/assets/javascripts/**/*.js'],
       options: {
         esnext: true
       }
@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     },
     watch: {
       javascripts: {
-        files: ['./app/javascripts/**/*.js'],
+        files: ['./app/assets/javascripts/**/*.js'],
         tasks: ['jshint']
       },
       sassy: {
