@@ -1,12 +1,20 @@
 body, html {
   margin: 0;
   padding: 0;
-  background-color: #bbbfc2;
+  background-color: #bbbfc2 !important;
 }
 
 .banner {
   width: 100%;
   clear: both;
+}
+
+.bottomShadow {
+  margin-left: -50px;
+}
+
+.container {
+  max-width: 890px;
 }
 
 .content {
@@ -16,20 +24,18 @@ body, html {
 }
 
 .leftShadow {
+  margin-left: -15px;
   float: left;
 }
 
-.main {
-  max-width: 980px;
-  min-width: 980px;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-bottom: 100%;
-  background-color: white;
-
+.rightShadow {
+  margin-right: -15px;
+  float: right;
 }
 
-.rightShadow {
-  float: right;
+.main {
+  padding-bottom: 95%;
+  background-color: white;
+
 }
 
