@@ -12,7 +12,7 @@ For me, every minute that can be spent on the front end to create a development 
 Directory Structure for Development
 -----------------------------------
 
-I added a directory entitled **build** at the top level. This directory contains my scss files, js development files, and any other components I anticipated working with along the way. Additionaly, I moved any unused images back into the **resources** folder.
+I added a directory entitled **build** at the top level. This directory contains my scss files, js development files, and any other components I anticipated working with along the way. Additionally, I moved any unused images back into the **resources** folder.
 
 
 Wait a Second, Where's Grunt or Gulp?
@@ -35,7 +35,7 @@ HTML Structure
 --------------
 
 * I utilized the `<nav>` tag instead of `<aside>` for the sidebar menu because, technically, this is the primary navigation of the site and `<aside>` should be used for actual aside content.
-* For the baby steps content structure, I created a heirachy of `<section><article><h1>Step Title</h1></article></section>`. My reasoning for doing this instead of placing all of the step titles as `<h2>` elements was because I felt like each step could stand on its own. For screen readers and other devices that won't be using CSS, I _wanted_ those baby steps to show up as their own top-level heading.
+* For the baby steps content structure, I created a hierarchy of `<section><article><h1>Step Title</h1></article></section>`. My reasoning for doing this instead of placing all of the step titles as `<h2>` elements was because I felt like each step could stand on its own. For screen readers and other devices that won't be using CSS, I _wanted_ those baby steps to show up as their own top-level heading.
 * I considered adding a hidden `<h1>` with the title _Baby Steps to Financial Freedom_ and making all of the subsequent individual steps `<h2>` tags, but decided against this since it felt superfluous.
 * I'm not defining a `<footer>` since there's technically not any content that would constitute an actual footer for the page.
 
@@ -52,7 +52,7 @@ The Rundown on My CSS
 Deviations for IE9
 ------------------
 
-I tried to keep the design and layout as consistent as possible in IE9 with only a few minor deviations. 
+I tried to keep the design and layout as consistent in IE9 with only a few minor deviations. 
 
 * The highlight no longer animates for the navigation since I utilized the CSS3 `transition:` property to achieve this.
 * The Google fonts used in the header render differently in IE9 causing a slight shift.
@@ -60,7 +60,7 @@ I tried to keep the design and layout as consistent as possible in IE9 with only
 Animations
 ----------
 
-To try and keep my code as simple as possible, I opted for utilizing `transition: all .5s ease;` on my navigation highlight element and simply changing the position utilizing JavaScript. Although this did not translate for IE9, I still made the choice to go this route since it's supported in IE10 and above.
+To try and keep my code simple, I opted for utilizing `transition: all .5s ease;` on my navigation highlight element and simply changing the position utilizing JavaScript. Although this did not translate for IE9, I still made the choice to go this route since it's supported in IE10 and above.
 
 Instead of sliding the articles for the Baby Steps content, I chose a more subtle `$.fadeIn()` and `$.fadeOut()` animation. I initially created the sliding movement, but felt that having two prominent moving objects on the screen created a distraction for the user. This way, the content still has animation applied, but I don't have two competing animations happening on screen at the same time.
 
@@ -82,11 +82,11 @@ My development files are located in `build/js/` for review.
 Why jQuery?
 -----------
 
-I tend to like doing things in the simplest way possible. Although I'm almost always certain there's a more clever way to accomplish what I write, I try to filter everything through the lens of handing it off to another person. And, not knowing who is going to have to pick up that code 6, 12, or 36 months from now, I want to make sure it's as straight-forward as posisble for even a less-seasoned developer. 
+I tend to like doing things in the simplest way possible. Although I'm almost always certain there's a more clever way to accomplish what I write, I try to filter everything through the lens of handing it off to another person. And, not knowing who is going to have to pick up that code 6, 12, or 36 months from now, I want to make sure it's straight-forward for even a less-seasoned developer. 
 
 Why? Because I've been on both sides of the equation and have experienced first-hand over the years what it's like to pick up someone else's code--regardless of how cleverly it was written--and try to debug or add to it. And while there are some incredible rock-star developers out there, there are a lot more who aren't (myself included!). In my experience, there is a large pool of individuals who can make sense of code that has utilized jQuery, but wouldn't recognize the underlying JavaScript functions they're calling. On a more selfish level, sacrificing the 86KB jQuery brings to the table more than makes up for itself with the fewer lines of code I have to write. It seems trivial, but when you're trying to fire out code on short deadlines, being able to write `$.getJson` instead of `$.ajax({  dataType: "json", url: ..., data: ..., success: ... });` makes a big difference.
 
-So, you'll notice that I've utilized jQuery functions throughout my code for any places where it made sense and would help shorten my time developing. Some folks may argue that things like `$.each()` should always be written as a for/in loop simply bnecause it would process faster, but I tend to look at the scale of what I'm writing and the over size of the project to determine the time writing code vs. the actual payoff. While I love optimization, I love keeping things simple even more.
+So, you'll notice that I've utilized jQuery functions throughout my code for any places where it made sense and would help shorten my time developing. Some folks may argue that things like `$.each()` should always be written as a for/in loop simply because it would process faster, but I tend to look at the scale of what I'm writing and the over size of the project to determine the time writing code vs. the actual payoff. While I love optimization, I love keeping things simple even more.
 
 No JavaScript? No Problem.
 --------------------------
