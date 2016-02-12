@@ -24,6 +24,9 @@
     "uglifycss": "latest",
     "jslint": "latest",
     "nodemon": "^1.8.1",
-    "node-sass": "^3.4.2"
+    "node-sass": "^3.4.2",
+    "mocha": "*",
+    "should": "^0.0.1"
   }
 }
+

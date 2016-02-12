@@ -355,7 +355,7 @@ th {
   padding: 0; }
 
 body, html {
-  font-family: Helvetica, sans-serif;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #65686f;
@@ -365,6 +365,7 @@ body, html {
   text-transform: uppercase; }
 
 #back-shadow {
+  content: '';
   width: 980px;
   height: 954px;
   position: absolute;
@@ -417,12 +418,11 @@ nav {
   float: left;
   height: 618px;
   position: relative;
-  background: #ebeced;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI5NiUiIHN0b3AtY29sb3I9IiNlYmVjZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZDFkNWQ2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-  background: -moz-linear-gradient(right, #ebeced 96%, #d1d5d6 100%);
-  background: -webkit-linear-gradient(rigbt, #ebeced 96%, #d1d5d6 100%);
+  background: url("/assets/images/shadow_left_nav.jpg") repeat-y;
+  background: -moz-linear-gradient(left, #ebeced 96%, #d1d5d6 100%);
+  background: -webkit-linear-gradient(left, #ebeced 96%, #d1d5d6 100%);
   background: linear-gradient(to right, #ebeced 96%, #d1d5d6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
   /* IE6-8 */ }
   nav .highlight {
     position: absolute;
@@ -550,8 +550,8 @@ nav {
   color: #6fbee7;
   text-decoration: none; }
 
-#baby-steps section {
-  margin-bottom: 20%; }
+#baby-steps article {
+  margin-bottom: 50%; }
 
 .step-title-block {
   margin-top: 10px;
@@ -584,8 +584,8 @@ nav {
   margin-bottom: 0px;
   font-size: 18px; }
 
-section article p:first-of-type {
+article p:first-of-type {
   margin-top: 14px; }
 
-section article p:last-of-type {
+article p:last-of-type {
   margin-top: 27px; }
