@@ -1,0 +1,276 @@
+// Google Fonts Import
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Source+Sans+Pro:600,400,300');
+
+// Normalize.css import
+@import 'normalize';
+
+// Variables
+$fonts-head:	'Open Sans', sans-serif;
+$fonts-body:	Helvetica, Arial, Verdana, sans-serif;
+$fonts-steps:	'Source Sans Pro', sans-serif;
+$nav-grey:		#9ba0a4;
+$nav-blue:		#36abe1;
+$link-blue:		#6fbee7;
+$title-grey:	#5c6366;
+$body-grey:		#65686f;
+$bg-color:      #bbbfc2;
+
+// General selectors used throughout the site
+
+body, html {
+	font-family: $fonts-body;
+	font-size: 13px;
+	line-height: 18px;
+	color: $body-grey;
+	background-color: $bg-color;
+	}
+
+.uppercase { 
+	text-transform: uppercase;
+	}
+
+//Page wrapper for fixed width
+
+#back-shadow{
+    content: '';
+    width: 980px;
+    height: 954px;
+    position: absolute;
+    left: 50%;
+    margin-left: -490px;
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    box-shadow: 0px 0px 16px 5px #999;
+    z-index: 0;
+    }
+
+#main-wrapper {
+    width: 980px;
+    margin: auto;
+    background-color: #fff;
+    margin-bottom: 45px;
+    position: relative;
+    }
+
+//Header section
+
+header {
+    margin-bottom: 60px;
+    }
+
+header #banner {
+    height: 226px;
+    background: url('/assets/images/header.jpg');
+    padding-top: 50px;
+    padding-right: 70px;
+    text-align: right;
+    }
+
+.header-text-sub {
+	font-family: $fonts-head;
+	font-size: 32px;
+	font-weight: 100;
+	color: #fff;
+	padding-bottom: 15px;
+	}
+
+.header-text-main {
+	font-family: $fonts-head;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 48px;
+	color: #fff;
+    letter-spacing: -1px;
+	}
+
+// wrapper for the NAV and body content
+
+#content-wrapper:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;    
+    }
+
+//navigation and step icons
+
+nav {
+    float: left; 
+    height: 618px;
+    position: relative;
+    background: url("/assets/images/shadow_left_nav.jpg") repeat-y;
+    background: -moz-linear-gradient(left,  #ebeced 96%, #d1d5d6 100%); 
+    background: -webkit-linear-gradient(left,  #ebeced 96%,#d1d5d6 100%);
+    background: linear-gradient(to right,  #ebeced 96%,#d1d5d6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-8 */
+
+    
+    .highlight {
+        position: absolute;
+        width: 300px;
+        height: 58px;
+        background: #fff;
+        top: 2px;
+        display: none; //initial placement for non-javascript clients
+        transition: all .5s ease;
+        }  
+         
+    ul {
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        list-style: none;
+        text-align: right;
+        position: relative;
+        }
+
+    li { 
+        display: inline-block; 
+        border-bottom: 1px solid #fff;
+     }
+    
+    
+    a.active > .small-icon-1, li:hover .small-icon-1 { background-position-y: -175px;}
+    a.active > .small-icon-2, li:hover .small-icon-2 { background-position-y: -175px - 25px; }
+    a.active > .small-icon-3, li:hover .small-icon-3 { background-position-y: -175px - 25px * 2; }
+    a.active > .small-icon-4, li:hover .small-icon-4 { background-position-y: -175px - 25px * 3; }
+    a.active > .small-icon-5, li:hover .small-icon-5 { background-position-y: -175px - 25px * 4; } 
+    a.active > .small-icon-6, li:hover .small-icon-6 { background-position-y: -175px - 25px * 5; } 
+    a.active > .small-icon-7, li:hover .small-icon-7 { background-position-y: -175px - 25px * 6; }
+    
+    a {
+        display: block;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 60px;
+        font-family: $fonts-steps;
+        font-weight: 400;
+        color: $nav-grey;
+        width: 300px;
+        transition: background-color .5s ease;
+        transition: color .5s ease;
+        }
+        
+    a:hover { 
+        background-color: rgba(255,255,255,.3);
+        //font-weight: 600;
+        color: $nav-blue;
+        }
+    
+    a.active { 
+        font-weight: 600;
+        color: $nav-blue;
+        }
+    
+}
+
+.step-icon {
+    display: inline-block;
+    vertical-align: middle;
+	}
+	
+.small-icon {
+    background-image: url("/assets/images/icons/sprites/icons_small.png");
+    width: 30px;
+    height: 25px;
+    background-size: 30px;
+    margin-right: 24px;
+    margin-left: 27px;
+    background-size: 30px;
+    }
+
+.big-icon {
+    background-image: url("/assets/images/icons/sprites/icons_large.png");
+    width: 77px;
+    height: 65px;
+    margin-right: 15px;
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+    }
+
+.small-icon-1 { background-position-y: 0px; }
+.small-icon-2 { background-position-y: 0px - 25px; }
+.small-icon-3 { background-position-y: 0px - 25px * 2; }
+.small-icon-4 { background-position-y: 0px - 25px * 3; }
+.small-icon-5 { background-position-y: 0px - 25px * 4; } 
+.small-icon-6 { background-position-y: 0px - 25px * 5; } 
+.small-icon-7 { background-position-y: 0px - 25px * 6; }
+
+// the sprite is off just a bit after icon 4 the +1 compensates for the creep
+
+.big-icon-1 { background-position-y: -454px; }
+.big-icon-2 { background-position-y: -454px - 65px; }
+.big-icon-3 { background-position-y: -454px - 65px * 2; }
+.big-icon-4 { background-position-y: -454px - 65px * 3 + 1; }
+.big-icon-5 { background-position-y: -454px - 65px * 4 + 1; }
+.big-icon-6 { background-position-y: -454px - 65px * 5 + 2; } 
+.big-icon-7 { background-position-y: -454px - 65px * 6 + 2; }
+
+// Baby steps conten
+    
+#baby-steps {
+    width: 540px;
+    float: left;
+    padding-left: 70px;
+    padding-right: 70px;
+    height: 300px;
+    overflow: hidden;
+    }
+
+#baby-steps p a {
+    color: $link-blue;
+    text-decoration: none;
+    }
+    
+#baby-steps article {
+    margin-bottom: 50%;
+    }   
+ 
+.step-title-block {
+    margin-top: 10px;
+    display: table;
+    }    
+
+.step-title {
+    display: table-cell;
+    vertical-align: middle;
+    }
+    
+.step-title:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    }
+     
+#baby-steps h1 {
+    font-family: $fonts-steps;
+    color: $nav-blue;
+    font-size: 30px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    }
+    
+#baby-steps h2 {
+    font-family: $fonts-steps;
+    color: $title-grey;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    }
+    
+article p:first-of-type{
+    margin-top: 14px;
+    }
+
+article p:last-of-type{
+    margin-top: 27px;
+    }
+    
+.friends {
+   // font-weight: 600;
+    }
