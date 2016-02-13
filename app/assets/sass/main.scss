@@ -10,7 +10,7 @@ body, html {
 }
 
 .bottomShadow {
-  margin-left: -50px;
+  width: 100%;
 }
 
 .container {
@@ -19,17 +19,19 @@ body, html {
 
 .content {
   width: 100%;
-  height: 100%;
-  background-color: white;
+  height: 60px;
+  border: 2px solid red;
 }
 
 .leftShadow {
   margin-left: -15px;
+  height: 100%;
   float: left;
 }
 
 .rightShadow {
   margin-right: -15px;
+  height: 100%;
   float: right;
 }
 
