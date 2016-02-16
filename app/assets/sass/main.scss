@@ -4,9 +4,63 @@ body, html {
   background-color: #bbbfc2 !important;
 }
 
+span {
+  display: none;
+}
+.showBS1:hover ~ span {
+  display: block;
+}
+
+.babyStepsNav{
+  li {
+    margin-top: -10px;
+    padding: 0px;
+    height: 50px;
+  } 
+  p:hover {
+   background-color: white;
+   height: 61px;
+   color: #36abe1;
+   font-weight: 400;
+  }
+  p {
+    margin: 0px;
+    padding: 0px;
+    color: #9ba0a4;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  p > img {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  padding-left: 0;
+  list-style-type: none;
+  background-image: linear-gradient(to right, #ebeced 90%, #d1d5d6);
+  text-align: right;
+  margin-right: 70px;
+  cursor: pointer; 
+  padding-left: 0;
+  float: left;
+}
+
+.babyStepsNav > img {
+  margin: 0px;
+  padding: 0px;
+  filter: contrast(2);
+  -webkit-filter: contrast(2);
+  -moz-filter: contrast(2);
+  -o-filter: contrast(2);
+  -ms-filter: contrast(2);
+}
+
+
+
 .banner {
   width: 100%;
-  clear: both;
+  margin-bottom: 60px;
 }
 
 .bottomShadow {
@@ -17,10 +71,8 @@ body, html {
   max-width: 890px;
 }
 
-.content {
-  width: 100%;
-  height: 60px;
-  border: 2px solid red;
+.description{
+  margin-right: 70px;
 }
 
 .leftShadow {
@@ -29,14 +81,22 @@ body, html {
   float: left;
 }
 
+
 .rightShadow {
   margin-right: -15px;
   height: 100%;
   float: right;
 }
 
+.stepTitle {
+  color: #36abe1;
+  margin-bottom: 24px;
+  font-size: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 .main {
-  padding-bottom: 95%;
+  padding-bottom: 83.7%;
   background-color: white;
 
 }
