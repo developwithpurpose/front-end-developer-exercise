@@ -1,0 +1,131 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+body:before, body:after {
+    content: "";
+    background: #bbbfc2;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+body:before {
+    top: 0;
+}
+body:after {
+    bottom: 0;
+}
+body {
+	color:#65686f;
+	font-size:13px;
+	font-family:Helvetica;
+	line-height:18px;
+	width:980px;
+	background-color:#bbbfc2;
+	margin-left:5%;
+	height:100%;
+}
+nav{
+	padding-top:60px;
+	float:left;
+	width:30%;
+	font-family:"Source Sans Pro",sans-serif;
+	font-size:18px;
+	color:#9ba0a4;
+	line-height:60px;
+	text-align:right;
+	background-color:#FFFFFF;
+	height:100%;
+}
+nav ul{padding:0;margin:0;}
+nav li{
+	list-style-type:none;
+	color:#acb1b5;
+	padding-right:24px;
+	margin-bottom:1px;
+	cursor:pointer;
+	background: #ececee;
+	background: -webkit-linear-gradient(left,#ebeced,#d1d5d6);
+	background: -o-linear-gradient(right,#ebeced,#d1d5d6);
+	background: -moz-linear-gradient(right,#ebeced,#d1d5d6);
+	background: linear-gradient(to right, #ebeced,#d1d5d6);
+}
+nav li img{
+	height:100%;
+	vertical-align:middle;
+	margin:0 2px 0 25px;
+}
+nav li.active{
+	background:#FFFFFF;
+	color:#36abe1;
+	font-weight:550;
+}
+nav li a{
+	color:#acb1b5;
+	text-decoration:none;
+}
+nav li.active a{
+	color:#36abe1;
+}
+nav li.active img.unselected{
+	display:none;
+}
+nav li.active img.selected{
+	display:inline;
+}
+#content{
+	margin:60px 0 0 70px;
+	float:left;
+	width:60%;
+	/*
+	height:400px;
+	overflow:auto;
+	*/
+}
+.baby_step_container{
+	height:100%;
+	width:100%;
+	min-height:400px;
+}
+#borderDiv{
+	background-color:#a1a5a8;
+	padding:5px;
+}
+h3{
+	font-family:"Source Sans Pro",sans-serif;
+	font-weight:550;
+	font-size:30px;
+	color:#36abe1;
+	line-height:20px;
+	margin:0;
+}
+h4{
+	font-family:"Source Sans Pro",sans-serif;
+	font-weight:100;
+	font-size:18px;
+	line-height:20px;
+	margin-top:5px;
+}
+header{width:100%;}
+header img{width:100%;}
+#wrapper{
+	background-color:#FFFFFF;
+	width:100%;
+	height:100%;
+}
+.clear{clear:both;}
+#baby_step_header_img,#baby_step_header{
+	float:left;
+}
+#baby_step_header{
+	margin:15px 0 0 10px;
+}
+#content p{line-height:18px;}
+#content p.friends{margin-top:40px;}
+#content p.friends a{color:#6fbee7;}
+.show{display:block;}
+.unselected{display:none;}
+.selected{display:none;}
+.unselected{display:inline;}
