@@ -2,9 +2,10 @@
 @import 'base/fonts';
 @import 'base/colors';
 @import 'base/mixins';
-@import 'component/base';
-@import 'component/header/page-header';
-@import 'component/page/page-container';
-@import 'component/page/page-content';
-@import 'component/steps/step-tabs';
-@import 'component/steps/step-content';
+@import 'components/base';
+@import 'components/header/page-header';
+@import 'components/page/page-container';
+@import 'components/page/page-content';
+@import 'components/steps/step-tabs';
+@import 'components/steps/step-tab';
+@import 'components/steps/step-content';

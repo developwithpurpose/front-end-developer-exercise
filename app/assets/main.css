@@ -12,7 +12,7 @@ div {
   margin: 0; }
 
 body {
-  height: 200%;
+  height: 100%;
   background-color: #bbbfc2; }
 
 header.page-header {
@@ -22,28 +22,29 @@ header.page-header {
   padding: 0;
   margin: 0 auto;
   width: 100%; }
-  header.page-header .page-header-title {
-    color: white;
-    padding: 0;
-    position: absolute;
+
+.page-header-title {
+  color: white;
+  padding: 0;
+  position: absolute;
+  margin: 0;
+  right: 70px;
+  text-align: right;
+  top: 50px; }
+  .page-header-title h1 {
+    font-weight: 300;
+    font-family: 'Open Sans', sans serif;
+    font-size: 32px;
+    line-height: 1;
+    margin: 0 0 15px 0;
+    padding: 0; }
+  .page-header-title h2 {
+    font-weight: 700;
+    font-family: 'Open Sans', sans serif;
+    font-size: 50px;
+    line-height: 48px;
     margin: 0;
-    right: 70px;
-    text-align: right;
-    top: 50px; }
-    header.page-header .page-header-title h1 {
-      font-weight: 300;
-      font-family: 'Open Sans', sans serif;
-      font-size: 32px;
-      line-height: 1;
-      margin: 0 0 15px 0;
-      padding: 0; }
-    header.page-header .page-header-title h2 {
-      font-weight: 700;
-      font-family: 'Open Sans', sans serif;
-      font-size: 50px;
-      line-height: 48px;
-      margin: 0;
-      padding: 0; }
+    padding: 0; }
 
 .page-container {
   height: 600px;
@@ -74,7 +75,7 @@ header.page-header {
 .page-content {
   background-color: #fff;
   padding: 60px 0 0 0;
-  height: 600px;
+  height: 700px;
   width: 100%;
   position: relative; }
 
@@ -95,7 +96,7 @@ header.page-header {
     padding: 0;
     text-align: right; }
 
-.step-tabs ul li {
+li.step-tab {
   font-weight: 400;
   font-family: 'Source Sans Pro', sans serif;
   font-size: 18px;
@@ -103,20 +104,20 @@ header.page-header {
   color: #36abe1;
   height: 60px;
   line-height: 60px; }
-  .step-tabs ul li label {
+  li.step-tab label {
     display: inline-block;
     height: 100%;
     width: 100%; }
-  .step-tabs ul li img {
+  li.step-tab img {
     padding-left: 24px;
     padding-right: 24px; }
-    .step-tabs ul li img.selected {
+    li.step-tab img.selected {
       display: none; }
-    .step-tabs ul li img.unselected {
+    li.step-tab img.unselected {
       display: inline-block; }
-  .step-tabs ul li input[type=radio] {
+  li.step-tab input[type=radio] {
     display: none; }
-  .step-tabs ul li input[type=radio]:checked ~ label {
+  li.step-tab input[type=radio]:checked ~ label {
     -moz-transition: background-color 1s ease;
     -webkit-transition: background-color 1s ease;
     -ms-transition: background-color 1s ease;
@@ -127,7 +128,7 @@ header.page-header {
     font-size: 18px;
     background-color: #fff;
     color: #36abe1; }
-    .step-tabs ul li input[type=radio]:checked ~ label .step-content {
+    li.step-tab input[type=radio]:checked ~ label .step-content {
       -moz-transition-duration: 1s;
       -webkit-transition-duration: 1s;
       -ms-transition-duration: 1s;
@@ -139,10 +140,11 @@ header.page-header {
       -o-transition-property: opacity top;
       transition-property: opacity top;
       opacity: 1;
-      top: 60px; }
-    .step-tabs ul li input[type=radio]:checked ~ label img.selected {
+      top: 60px;
+      z-index: 1; }
+    li.step-tab input[type=radio]:checked ~ label img.selected {
       display: inline-block; }
-    .step-tabs ul li input[type=radio]:checked ~ label img.unselected {
+    li.step-tab input[type=radio]:checked ~ label img.unselected {
       display: none; }
 
 .step-content {
@@ -186,3 +188,7 @@ header.page-header {
     padding: 0; }
   .step-content .step-body {
     margin-top: 24px; }
+  .step-content .friends {
+    margin-top: 40px; }
+    .step-content .friends a {
+      color: #6fbee7; }

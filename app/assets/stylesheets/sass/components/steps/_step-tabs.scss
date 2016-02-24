@@ -1,0 +1,15 @@
+.step-tabs {
+  display: inline-block;
+  height: 100%;
+  width: $step-tabs-width;
+  vertical-align: top;
+
+  ul {
+    @include gradient-horizontal($step-tab-bg-light-color, $step-tab-bg-dark-color, 97%, 100%);
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+}

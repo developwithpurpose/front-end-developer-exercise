@@ -44,4 +44,12 @@
   .step-body {
     margin-top: 24px;
   }
+
+  .friends {
+    margin-top: 40px;
+
+    a {
+      color: $step-content-link-color;
+    }
+  }
 }
