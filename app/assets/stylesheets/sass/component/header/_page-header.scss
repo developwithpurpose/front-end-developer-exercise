@@ -1,31 +1,27 @@
 header.page-header {
-  width: 100%;
+  background: url(images/header.jpg) no-repeat center top;
   display: block;
+  height: 276px;
   padding: 0;
   margin: 0 auto;
-  height: auto;
-  img {
-    width: 100%;
-    height: auto;
-    padding: 0;
-    border: 0;
-    margin: 0;
-    display: block;
-  }
+  width: 100%;
+
   .page-header-title {
+    color: white;
+    padding: 0;
     position: absolute;
+    margin: 0;
+    right: 70px;
     text-align: right;
     top: 50px;
-    right: 70px;
-    color: white;
-    margin: 0;
-    padding: 0;
+
     h1 {
       @include open-sans(32px, 'light');
       line-height: 1;
       margin: 0 0 15px 0;
       padding: 0;
     }
+
     h2 {
       @include open-sans(50px, 'bold');
       line-height: 48px;

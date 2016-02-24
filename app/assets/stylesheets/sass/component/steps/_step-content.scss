@@ -1,44 +1,46 @@
-$step-title-img-width: 60px;
-$step-header-margin-left: $step-title-img-width + 15px;
-
 .step-content {
   @include helvetica(13px, 'normal');
-  display: none;
-  position: absolute;
-  top: $page-content-top-padding;
+  color: $step-content-text-color;
   left: $step-tabs-width;
+  top: $page-content-top-padding * 1.5; // top is multiplied for fade in animation
+  line-height: 18px;
+  opacity: 0;
   padding-left: 70px;
   padding-right: 70px;
-  color: #65686f;
-  line-height: 18px;
+  position: absolute;
   text-align: left;
+
   .step-title {
+
     .step-title-img {
       display: inline-block;
-      top: 0;
-      left: 0;
-      width: $step-title-img-width;
-      padding: 0;
-      margin: 0 15px 0 0;
       float: left;
+      left: 0;
+      margin: 0 15px 0 0;
+      padding: 0;
+      top: 0;
+      width: $step-title-img-width;
     }
+
     h3.step-header {
       @include source-sans(30px, 'semibold');
-      line-height: 20px;
-      color: #36abe1;
-      padding: 0;
-      margin: 0 $step-header-margin-left 0 0;
+      color: $step-tab-header-color;
       display: inline-block;
+      line-height: 20px;
+      margin: 0 $step-header-margin-left 0 0;
+      padding: 0;
     }
+
     h5.step-subheader {
       @include source-sans(18px, 'light');
-      line-height: 20px;
-      color: #5c6366;
-      padding: 0;
-      margin: 0 $step-header-margin-left 0 0;
+      color: $step-tab-subheader-color;
       display: inline-block;
+      line-height: 20px;
+      margin: 0 $step-header-margin-left 0 0;
+      padding: 0;
     }
   }
+
   .step-body {
     margin-top: 24px;
   }

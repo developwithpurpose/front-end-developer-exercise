@@ -6,3 +6,12 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
 }
+
+// inspired by https://css-tricks.com/snippets/sass/mixin-prefix-properties/
+@mixin prefix($property, $value) {
+  #{'-moz-' + $property}: $value;
+  #{'-webkit-' + $property}: $value;
+  #{'-ms-' + $property}: $value;
+  #{'-o-' + $property}: $value;
+  #{$property}: $value;
+}

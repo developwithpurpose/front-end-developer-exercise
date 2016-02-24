@@ -1,21 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
+@mixin helvetica($font-size, $font-weight) {
+  @include fontweight($font-weight);
+  font-family: 'Helvetica', sans serif;
+  font-size: $font-size;
+}
+
 @mixin open-sans($font-size, $font-weight) {
   @include fontweight($font-weight);
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans serif;
   font-size: $font-size;
 }
 
 @mixin source-sans($font-size, $font-weight) {
   @include fontweight($font-weight);
-  font-family: 'Source Sans Pro';
-  font-size: $font-size;
-}
-
-@mixin helvetica($font-size, $font-weight) {
-  @include fontweight($font-weight);
-  font-family: 'Helvetica';
+  font-family: 'Source Sans Pro', sans serif;
   font-size: $font-size;
 }
 
