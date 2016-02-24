@@ -1,0 +1,45 @@
+$step-title-img-width: 60px;
+$step-header-margin-left: $step-title-img-width + 15px;
+
+.step-content {
+  @include helvetica(13px, 'normal');
+  display: none;
+  position: absolute;
+  top: $page-content-top-padding;
+  left: $step-tabs-width;
+  padding-left: 70px;
+  padding-right: 70px;
+  color: #65686f;
+  line-height: 18px;
+  text-align: left;
+  .step-title {
+    .step-title-img {
+      display: inline-block;
+      top: 0;
+      left: 0;
+      width: $step-title-img-width;
+      padding: 0;
+      margin: 0 15px 0 0;
+      float: left;
+    }
+    h3.step-header {
+      @include source-sans(30px, 'semibold');
+      line-height: 20px;
+      color: #36abe1;
+      padding: 0;
+      margin: 0 $step-header-margin-left 0 0;
+      display: inline-block;
+    }
+    h5.step-subheader {
+      @include source-sans(18px, 'light');
+      line-height: 20px;
+      color: #5c6366;
+      padding: 0;
+      margin: 0 $step-header-margin-left 0 0;
+      display: inline-block;
+    }
+  }
+  .step-body {
+    margin-top: 24px;
+  }
+}

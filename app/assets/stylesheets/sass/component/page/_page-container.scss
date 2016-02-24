@@ -1,0 +1,30 @@
+.page-container {
+  width: 75%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+.page-container-shadow {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+
+#page-container-left-shadow {
+  top: 0;
+  left: -15px;
+}
+
+#page-container-right-shadow {
+  top: 0;
+  right: -15px;
+}
+
+#page-container-bottom-shadow {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+}
