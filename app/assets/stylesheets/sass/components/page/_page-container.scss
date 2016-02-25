@@ -1,0 +1,29 @@
+.page-container {
+  height: 600px;
+  padding: 0;
+  position: relative;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.page-container::before {
+  content: url(images/shadow_left.jpg);
+  left: -15px;
+  position: absolute;
+  top: 0;
+}
+
+.page-container::after {
+  content: url(images/shadow_right.jpg);
+  position: absolute;
+  right: -15px;
+  top: 0;
+}
+
+#page-container-bottom-shadow {
+  left: 0;
+  position: absolute;
+  margin: 0 auto;
+  right: 0;
+  width: 100%;
+}

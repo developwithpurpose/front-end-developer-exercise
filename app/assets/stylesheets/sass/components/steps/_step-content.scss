@@ -1,0 +1,55 @@
+.step-content {
+  @include helvetica(13px, 'normal');
+  color: $step-content-text-color;
+  left: $step-tabs-width;
+  top: $page-content-top-padding * 1.5; // top is multiplied for fade in animation
+  line-height: 18px;
+  opacity: 0;
+  padding-left: 70px;
+  padding-right: 70px;
+  position: absolute;
+  text-align: left;
+
+  .step-title {
+
+    .step-title-img {
+      display: inline-block;
+      float: left;
+      left: 0;
+      margin: 0 15px 0 0;
+      padding: 0;
+      top: 0;
+      width: $step-title-img-width;
+    }
+
+    h3.step-header {
+      @include source-sans(30px, 'semibold');
+      color: $step-tab-header-color;
+      display: inline-block;
+      line-height: 20px;
+      margin: 0 $step-header-margin-left 0 0;
+      padding: 0;
+    }
+
+    h5.step-subheader {
+      @include source-sans(18px, 'light');
+      color: $step-tab-subheader-color;
+      display: inline-block;
+      line-height: 20px;
+      margin: 0 $step-header-margin-left 0 0;
+      padding: 0;
+    }
+  }
+
+  .step-body {
+    margin-top: 24px;
+  }
+
+  .friends {
+    margin-top: 40px;
+
+    a {
+      color: $step-content-link-color;
+    }
+  }
+}

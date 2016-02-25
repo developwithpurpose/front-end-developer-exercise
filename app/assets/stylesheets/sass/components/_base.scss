@@ -1,0 +1,23 @@
+$page-content-top-padding: 60px;
+$step-tabs-width: 30%;
+$step-tabs-height: 60px;
+$step-tab-font-size: 18px;
+$step-title-img-width: 60px;
+$step-header-margin-left: $step-title-img-width + 15px;
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  background-color: $bg-grey-color;
+}
