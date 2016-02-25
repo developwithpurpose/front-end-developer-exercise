@@ -105,6 +105,7 @@ li.step-tab {
   height: 60px;
   line-height: 60px; }
   li.step-tab label {
+    cursor: pointer;
     display: inline-block;
     height: 100%;
     width: 100%; }
@@ -127,7 +128,8 @@ li.step-tab {
     font-family: 'Source Sans Pro', sans serif;
     font-size: 18px;
     background-color: #fff;
-    color: #36abe1; }
+    color: #36abe1;
+    cursor: auto; }
     li.step-tab input[type=radio]:checked ~ label .step-content {
       -moz-transition-duration: 1s;
       -webkit-transition-duration: 1s;
