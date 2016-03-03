@@ -1,0 +1,175 @@
+/*TAGS*/
+body {
+	background-color: #bbbfc2;
+	margin: 0px;
+}
+h3 {
+	font-family: SourceSansPro-SemiBold;
+	color: #36abe1;
+	font-size: 30px;
+	margin: 0px;
+}
+h4 {
+	font-family: SourceSansPro-Light;
+	color: #5c6366;
+	font-size: 18px;
+	margin-top: -5px;
+	margin-bottom: -4px;
+}
+li a {
+    display: block;
+    position: relative;
+	font-family: SourceSansPro-Regular;
+	font-size: 18px;
+	color: #9ba0a4;
+	text-decoration: none;
+	width: 300px; 
+	height: 60px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+} 
+p {
+	font-family: Helvetica;
+	margin: 24px 70px auto 70px;
+	font-size: 13px;
+	color: #65686f;
+	line-height: 18px;
+}
+
+/*IDS*/
+#side-bar-menu {
+	width: 300px;
+	height: 500px;
+	float: left;
+	background: #ebeced;
+	background: -moz-linear-gradient(left,  #ebeced 96%, #d1d5d6 100%);
+	background: -webkit-linear-gradient(left,  #ebeced 96%,#d1d5d6 100%);
+	background: linear-gradient(to right,  #ebeced 96%,#d1d5d6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
+	padding-top: 3px;
+}
+#slideSelect {
+	position: absolute;
+	z-index: 1;
+	width: 680px;
+	top: 334;
+}
+#tabSelect {
+	position: absolute;
+	z-index: 1;
+	background-color: #ffffff;
+	width: 300px;
+	height: 60px;
+	top: 334;
+}
+
+/*CLASSES*/
+.container {
+	width: 980px;
+	height: 100%;
+	margin: auto;
+	background-color: #ffffff;
+}
+.header {
+	background-image: url('/assets/images/header.jpg');
+	background-repeat: no-repeat;
+	width: 980px;
+	height: 270px;
+	margin-bottom: 60px;
+}
+.header > h1 {
+	float: right;
+	clear: both;
+	font-family: OpenSans-Bold;
+	font-size: 50px;
+	line-height: 48px;
+	color: #ffffff;
+	margin: 0px 70px auto auto;
+}
+.header > h2 {
+	float: right;
+	clear: both;
+	font-family: OpenSans-Light;
+	font-size: 32px;
+	color: #ffffff;
+	margin: 50px 70px auto 15px;
+}
+.lg-img {
+	margin-left: 70px;
+	margin-right: 10px;
+	margin-bottom: -10px;
+}
+.main-display {
+	width: 100%;
+	height: 503px;
+	background-color: #ffffff;
+}
+.main-display-friends {
+	margin-bottom: 60px;
+	font-family: Helvetica;
+	font-size: 13px;
+	color: #65686f;
+	padding-left: 70px;
+	height: 13px;
+	min-width: 2px;
+}
+.main-display-friends > a{
+	color: #6fbee7;
+	text-decoration: none;
+}
+.main-display-screen {
+	position: relative;
+	width: 680px;
+	height: 306px;
+	overflow: hidden;
+}
+.main-display-table-space {
+	margin-bottom: 40px;
+}
+.side-bar-menu-tab {
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #ffffff;
+	text-align: right;
+}
+.side-bar-menu-text {
+	position: relative;
+	top: 18px;
+	z-index: 2;
+}
+.sm-img {
+	margin: 0px 24px -6px 24px;
+}
+.steps {
+	margin-left: 70px;
+}
+
+/*FONTS*/
+@font-face {
+    font-family: OpenSans-Bold;
+    src: url('/assets/fonts/OpenSans-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: OpenSans-Light;
+    src: url('/assets/fonts/OpenSans-Light.ttf');
+    font-weight: 900;
+}
+@font-face {
+    font-family: SourceSansPro-Light;
+    src: url('/assets/fonts/SourceSansPro-Light.ttf');
+    font-weight: 900;
+}
+@font-face {
+    font-family: SourceSansPro-Regular;
+    src: url('/assets/fonts/SourceSansPro-Regular.ttf');
+}
+@font-face {
+    font-family: SourceSansPro-SemiBold;
+    src: url('/assets/fonts/SourceSansPro-Semibold.ttf');
+    font-weight: 300;
+}
