@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var tabSelect = document.createElement('div'),
 		tab1 = document.getElementById('tab1'),
-		list = document.getElementById("side-bar-menu"),
+		list = document.getElementById("sideBarMenu"),
 		btnTxt = document.getElementsByClassName('side-bar-menu-text'),
 		smImg = document.getElementsByClassName('sm-img');
 	tabSelect.id = 'tabSelect';
