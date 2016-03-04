@@ -1,0 +1,270 @@
+@import '../fonts/source-sans-pro/source-sans-pro.css';
+@import '../fonts/open-sans/open-sans.css';
+
+html, 
+body {
+	background-color: #bbbfc2;
+	color: #65686f;
+	padding: 0;
+	margin: 0;
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	font-size: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #6fbee7;
+	&:focus,
+	&:hover,
+	&:visited {
+		text-decoration: none;
+		color: #6fbee7;
+	}
+}
+
+.container {
+	width: 980px;
+	margin: 0 auto 50px auto;
+	background-color: #ffffff;
+	position: relative;
+
+	&:before {
+		display: block;
+		height: 100%;
+		width: 20px;
+		background-image: url('../images/shadow_left.jpg');
+		background-repeat: no-repeat;
+		position: absolute;
+		left: -15px;
+		top: 0px;
+		content: "";
+	}
+
+	&:after {
+		display: block;
+		height: 100%;
+		width: 20px;
+		background-image: url('../images/shadow_right.jpg');
+		background-repeat: no-repeat;
+		position: absolute;
+		right: -20px;
+		top: 0px;
+		content: "";
+	}
+
+	.header {
+		position: relative;
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+
+		.title {
+			display: block;
+			position: absolute;
+			width: 600px;
+			top: 50px;
+			right: 70px;
+			text-align: right;
+
+			color: #fff;
+			font-size: 50px;
+			font-weight: 700;
+			line-height: 48px;
+			small {
+				font-size: 32px;
+				font-weight: 300;
+			}
+		}
+	}
+
+	.body {
+		height: auto;
+		padding-top: 60px;
+
+		&:before,
+		&:after {
+			display: table;
+			content: "";
+			height: 100%;
+		}
+
+		&:after {
+			clear: both;
+			display: block;
+			height: 20px;
+			width: 100%;
+			background-image: url('../images/shadow_bottom.jpg');
+			background-repeat: no-repeat;
+			position: absolute;
+			bottom: -20px;
+			left: 0px;
+			content: "";
+		}
+	}
+
+}
+
+.step-navigation {
+	display: table-cell;
+	height: 100%;
+	width: 300px;
+	vertical-align: top;
+	background-color: #ebeced;
+	box-shadow: inset -10px 0 10px #d1d5d6;
+	padding-bottom: 180px;
+
+	ul,
+	li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+
+		a {
+			display: block;
+			font-size: 18px;
+			line-height: 60px;
+			text-align: right;
+			padding-right: 82px;
+			color: #9ba0a4;
+			border-bottom: 1px solid #ffffff;
+			position: relative;
+
+			&:hover {
+
+			}
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 19px;
+				right: 24px;
+				width: 30px;
+				height: 25px;
+				background-repeat: no-repeat;
+				background-image: url('../images/icons/sprites/icons_small.png');
+			}
+
+			&.step-1:after {
+				background-position: 0px 0px;
+			}
+			&.step-2:after {
+				background-position: 0px -25px;
+			}
+			&.step-3:after {
+				background-position: 0px -50px;
+			}
+			&.step-4:after {
+				background-position: 0px -75px;
+			}
+			&.step-5:after {
+				background-position: 0px -100px;
+			}
+			&.step-6:after {
+				background-position: 0px -125px;
+			}
+			&.step-7:after {
+				background-position: 0px -150px;
+			}
+
+			&.active {
+				color: #36abe1;
+				font-weight: 600;
+				background-color: #ffffff;
+
+				&.step-1:after {
+					background-position: 0px -175px;
+				}
+				&.step-2:after {
+					background-position: 0px -200px;
+				}
+				&.step-3:after {
+					background-position: 0px -225px;
+				}
+				&.step-4:after {
+					background-position: 0px -250px;
+				}
+				&.step-5:after {
+					background-position: 0px -275px;
+				}
+				&.step-6:after {
+					background-position: 0px -300px;
+				}
+				&.step-7:after {
+					background-position: 0px -325px;
+				}
+
+			}
+		}
+
+	}
+
+}
+
+.steps-container {
+	display: table-cell;
+	height: 100%;
+	width: 680px;
+	vertical-align: top;
+	padding: 0 70px;
+
+	.viewing-pane {
+		overflow: hidden;
+		height: 230px;
+	}
+
+	.steps {
+		position: relative;
+		-webkit-transition: top 1s cubic-bezier(0.13,1,.25,1);
+		transition: top 1s cubic-bezier(0.13,1,.25,1);
+		top: 0px;
+	}
+
+	.step {
+		display: block;
+		font-family: Helvetica, Arial, sans-serif;
+		height: 230px;		
+
+		.icon {
+			display: inline-block;
+			float: left;
+			margin-right: 15px;
+			width: 75px;
+			height: auto;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		h2 {
+			font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+			color: #36abe1;
+			line-height: 20px;
+			font-weight: 600;
+			font-size: 30px;
+			margin: 0;
+			padding: 12px 0;
+			small {
+				font-size: 18px;
+				font-weight: 300;
+				color: #5c6366;
+			}
+		}
+
+		p {
+			font-size: 13px;
+			line-height: 18px;
+			padding: 10px 0;
+			margin: 0;
+		}
+
+	}
+
+
+	.friends {
+		font-size: 13px;
+		padding-top: 30px;
+		padding-bottom: 50px;
+	}
+}
