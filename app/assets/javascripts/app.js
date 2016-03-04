@@ -79,9 +79,7 @@
 			takeStep(nextStep);
 		});
 
-
 		$('.step-navigation li:first-child a').addClass('active');
-
 
 		getFriends('/assets/data/baby-steps.json', function () {
 			friends = sortFriends();
