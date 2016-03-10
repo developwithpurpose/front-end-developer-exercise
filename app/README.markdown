@@ -1,1 +1,5 @@
-Document your submission here (optional, but recommended)
+Front-end Developer Exercise
+============================
+
+Style
+---------
