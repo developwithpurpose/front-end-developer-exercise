@@ -1,9 +1,6 @@
 Front-end Developer Exercise
 ============================
 
-Quick Notes
-------
-
 Style
 ------
 For this project I went ahead and used plain css. It has a pretty small footprint and thought it was best. I broke it down into each section of the page.
@@ -27,7 +24,7 @@ I created a setup() that would run once the page was ready to setup all the base
 
 HTML
 ------
-I sadly hand wrote the html as well. You will see that it is very semantic and accessible.
+I sadly hand wrote the html as well. Nothing super special here but you will see that it is semantic and accessible.
 
 Thanks
 ------
