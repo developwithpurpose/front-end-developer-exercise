@@ -1,0 +1,135 @@
+html {
+  background-color: #bbbfc2;
+}
+body {
+  background-color: white;
+  margin-top: 0;
+  width: 980px;
+  height: 957px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 8px 0 8px -4px rgba(65, 65, 65, 0.8), -8px 0 8px -4px rgba(92, 92, 92, 0.8);
+
+}
+
+header {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.header-image {
+
+  display: inline;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
+.body-text {
+  text-align: left;
+  padding-top: 60px;
+  display: inline;
+  background-color: white;
+  font-size: 13px;
+  float: right;
+  width: 540px;
+  height: 650px;
+  padding-left: 70px;
+  padding-right: 70px;
+
+}
+
+.side-nav {
+  margin-top: 60px;
+  width: 300px;
+  height: 650px;
+  display: inline;
+  float: left;
+  background: #eaebed; /* Old browsers */
+  background: -moz-linear-gradient(left,  #eaebed 0%, #ececee 93%, #eaeaec 95%, #e5e5e7 97%, #dbdcde 99%, #d3d4d6 100%, #ffffff 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #eaebed 0%,#ececee 93%,#eaeaec 95%,#e5e5e7 97%,#dbdcde 99%,#d3d4d6 100%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #eaebed 0%,#ececee 93%,#eaeaec 95%,#e5e5e7 97%,#dbdcde 99%,#d3d4d6 100%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaebed', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+.steps {
+
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #9ba0a4;
+  line-height: 60px;
+  font-size: 18px;
+  border-bottom: 1px solid white;
+  padding-left: 130px;
+
+}
+.title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #36abe1;
+  line-height: 20px;
+  padding-left: 100px;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.subtitle {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #5c6366;
+  line-height: 20px;
+  font-size: 18px;
+  margin-top: 10px;
+  padding-left: 100px;
+  margin-bottom: 0;
+}
+.baby-step-text {
+  margin-top: 24px;
+  font-family: Helvetica;
+  font-size: 13px;
+  line-height: 18px;
+  color: #65686f;
+
+}
+.title-icon {
+  display: inline;
+  float: left;
+}
+.step-icon {
+  height: 25px;
+  float: right;
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+}
+.selected {
+  background-color: white;
+  color: #36abe1;
+  line-height: 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  border-bottom: 1px solid white;
+  padding-left: 130px;
+}
+.friends-list {
+  height: 360px;
+}
+#stepNum {
+  display: none;
+}
+.friends-list a {
+
+  font-size: 13px;
+  text-decoration: none;
+  color: #6fbee7;
+
+}
+.friends-list {
+  color: #65686f;
+   padding-top: 18px;
+   font-family: Helvetica;
+   font-size: 13px;
+}
