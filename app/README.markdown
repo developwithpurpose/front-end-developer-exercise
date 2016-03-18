@@ -1,1 +1,1 @@
-Document your submission here (optional, but recommended)
+I've replaced the index.html file with my build of the index page. The CSS is found at assets/stylesheets/styles.css. I was able to get the content swapped out with CSS, but couldn't get the anchor to keep the header visible. I have only been working with Javascript for a short time, so I couldn't figure out how to get the animation working. With the additional task of making it also work without JS, I was unable to complete this portion of the challenge. THank you for your time!
