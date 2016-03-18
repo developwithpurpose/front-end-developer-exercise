@@ -1,0 +1,215 @@
+
+
+
+body {
+	background-color: #bbbfc2;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	display: block;
+	margin: 0 auto;
+	width: 1010px;
+	font-size: 0;
+	word-spacing: 0;
+	letter-spacing: 0;
+}
+
+.main {
+	width: 980px;
+	height: auto;
+	background-color: #ffffff;
+	vertical-align: top;
+	position: relative;
+	margin: 0 auto;
+	display: inline-block;
+	padding: 0px;
+}
+
+.header {
+	position: relative;
+	width: 100%;
+}
+
+.headerText {
+	position: absolute;
+	display: block;
+	float: right;
+	top: 50px;
+	right: 70px;
+	margin: 0;
+	padding: 0;
+}
+
+#tag1 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 32px;
+	color: #ffffff;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+
+#tag2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 50px;
+	color: #ffffff;
+	text-align: right;
+	padding: 5px 0 0;
+	margin: 0 auto;
+}
+
+.leftNav {
+	float: left;
+	margin-top: 60px;
+	width: 300px;
+	height: 600px;
+	background-image: url(../images/shadow_left_nav.jpg);
+	background-repeat: repeat-y;
+}
+
+a.nav {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	display: block;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	text-align: right;
+	color: #9ba0a4;
+	line-height: 60px;
+}
+
+a.nav:hover {
+	font-weight: 600;
+	background-color: #ffffff;
+	color: #36abe1;
+	/* background-image: url(../images/icons/individual/icons_small_bs1_blue.png); */
+}
+
+a.nav img {
+	padding: 17px 24px 14px 24px;
+	float: right;
+	display: block;
+	font-weight: 0;
+	font-size: 0;
+	margin: auto 0;
+}
+
+a.nav img:last-child {
+	display: none;
+}
+
+a.nav:hover img:first-child {
+	display: none;
+}
+
+a.nav:hover img:last-child {
+	display: inline-block;
+}
+
+a.nav:active img:last-child {
+	display: inline-block;
+}
+
+#leftShadow {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+
+h1.small {
+	line-height: 32px;
+}
+
+h2.small {
+	line-height: 50px;
+}
+
+.bodyText {
+	display: block;
+	float: left;
+	padding: 0 70px 60px 70px;
+	width: 540px;
+}
+
+.bodyHeading {
+	width: 100%;
+}
+
+img.bodyIcon {
+	float: left;
+	display: block;
+	padding: 0 0 19px;
+}
+
+.bodyHeadText {
+	padding: 0 0 19px 15px;
+	display: block;
+	position: relative;
+	float: left;
+	height: 65px;
+	max-width: 400px;
+}
+
+h1.bodyHeadline {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 20px;
+	color: #36abe1;
+	display: block;
+	float: left;
+	padding: 10px 5px 5px 5px;
+	margin: 0;
+	width: 100%;
+}
+
+h2.bodyTagline {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 20px;
+	color: #5c6366;
+	display: block;
+	float: left;
+	padding: 5px 5px 0 5px;
+	margin: 0;
+}
+
+p.content {
+	font-family: Helvetica;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 18px;
+	display: block;
+	float: left;
+	color: #65686f;
+	margin: 0 0 24px 0;
+}
+
+#swap {
+	height: 250px;
+	width: 680px;
+	overflow: hidden;
+	margin-top: 60px;
+	margin-left: 300px;
+	position: absolute;
+}
+
+.anchor{
+  display: block;
+  height: 336px; /*same height as header*/
+  margin-top: -336px; /*same height as header*/
+  visibility: hidden;
+}
+
