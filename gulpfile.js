@@ -2,21 +2,39 @@
 
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
-      clean = require("gulp-clean"),
-      prefix = require("gulp-autoprefixer");
+      clean = require('gulp-clean'),
+      browserSync = require('browser-sync').create(),
+      prefix = require('gulp-autoprefixer'),
+      babel = require("gulp-babel"),
+      watch = require('gulp-watch');
 
 gulp.task('cssify', function(){
   return gulp.src('build/sass/*.scss')
   .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-  .pipe(gulp.dest('app/assets/stylesheets/'));
+  .pipe(prefix())
+  .pipe(gulp.dest('app/assets/stylesheets/'))
+  .pipe(browserSync.stream());
 });
-gulp.task('sass', function() {
-    return gulp.src('./build/**/*.scss')
-               .pipe(sass({
-                    outputStyle: 'compressed'
-                }))
-               .pipe(prefix())
-               .pipe(gulp.dest('./app/assets/stylesheets/'));
+
+gulp.task('babelify', function(){
+  return gulp.src('build/javascripts/main.js')
+  .pipe(babel({
+      presets : ['es2015']
+  }))
+  .pipe(gulp.dest('app/assets/javascripts/'));
+});
+
+gulp.task('browser-sync', function(){
+  browserSync.init({
+    server: {
+      baseDir: './app'
+    }
+  });
+});
+
+gulp.task('watch', function(){
+  gulp.watch('build/sass/*.scss', ['clean','cssify','browser-sync']);
+  gulp.watch('build/javascripts/*.js', ['babelify','browser-sync']);
 });
 
 gulp.task('clean', function(){
@@ -24,4 +42,4 @@ gulp.task('clean', function(){
   .pipe(clean());
 });
 
-gulp.task('default', ['clean', 'cssify']);
+gulp.task('default', ['clean', 'cssify', 'browser-sync', 'watch']);
