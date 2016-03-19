@@ -1,1 +1,1 @@
-body{background-color:whitesmoke;color:black}
+*{margin:0px}#wrapper{width:980px;position:relative;left:50%;margin-left:-490px}header #header-text{font-family:'Open Sans', sans-serif;position:absolute;color:#fff;font-size:48px;top:50px;right:70px;width:50%;text-align:right;font-weight:300;font-size:32px}header #header-text span{margin-top:15px;font-weight:700;font-size:50px;line-height:48px}
