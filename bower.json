@@ -1,0 +1,21 @@
+{
+  "name": "front-end-developer-exercise",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Ben Bledsoe <bledsoedesigns@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/bbleds/front-end-developer-exercise",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2"
+  }
+}
