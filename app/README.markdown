@@ -1,1 +1,6 @@
-Document your submission here (optional, but recommended)
+#Title
+#Objective
+#Development Decisions
+There are a few areas that I would like to note regarding specific decisions that may or may not be best practice but made sense in this project context:
+  1. According to the instructions, this page was to be treated as though it were going to deployed into production. For this reason, jQuery (jquery.min.js) was installed directly into the javascripts directory. Usually, I would use bower to install such dependencies for future flexibility, but I needed only the jquery.min.js file and no other files that are usually are installed with the package so I included it directly.
+  2. I used gulp as a build tool for the purpose of using scss and es6. All source files are located in the ```build``` directory, and in order to use gulp for future use, there are two things i'd like to note. Firstly, if this project were going directly to production, these files would not necessarily be included on the production server. Secondly, since dev dependencies are not installed with ```npm install --production``` or when the production envrionment variable is set, to develop locally and make use of gulp, the team would have to be sure that dev dependencies were installed. Following this, the team could run ```npm run build``` for fresh gulp builds.  
