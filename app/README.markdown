@@ -1,6 +1,6 @@
-#Front-end Developer Exercise
+#Front-End Developer Exercise
 
-#Objective: Build a web page that will provide information about The 7 Baby Steps.
+#Objective: Build a web page that will provide information about the 7 baby steps.
 
 #Development Decisions
 There are a few areas that I would like to note regarding specific decisions that may or may not be best practice but made sense in this project context:
