@@ -2,12 +2,13 @@
 *
 *   Front-end Exercise! Stylesheet
 *	
-*	Baby Blue     : #5c6366
+*	Baby Blue     : #36abe1
 *	Gradiant	    : #ebeced - #d1d5d6
 *	Gray (dark)	  : #bbbfc2
 *	Gray (lt-dark): #9ba0a4
 *	Gray (medium) : #65686f
 *	Gray (light)  : #6c6366
+* Gray (lightest): #5c6366
 *	White         : #fff
 *
 *************************************************/
@@ -29,7 +30,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-	margin: 0;
+	font-size: 13px;
+	margin: 16px 0;
 	padding: 0;
 }
 
@@ -44,13 +46,14 @@ li {
 }
 
 a {
-
+	color: #9ba0a4;
+	text-decoration: none;
 }
 
 a:hover,
 a:active,
 a:focus {
-
+	color: #36abe1;
 }
 
 /*-----------------------------------------------
@@ -61,6 +64,8 @@ a:focus {
 	font-family: 'Open Sans', sans-serif;
 	color: #fff;
 	text-align: right;
+	background-image: url('../images/header.jpg');
+	height: 276px;
 }
 
 .title {
@@ -83,11 +88,6 @@ a:focus {
 	max-width: 980px;
 }
 
-.hero .container {
-	background-image: url('../images/header.jpg');
-	height: 276px;
-}
-
 .title-container {
 	width: 50%;
 	float: right;
@@ -102,6 +102,16 @@ a:focus {
 
 .page-content-container {
 	padding: 0 70px;
+}
+
+/*-----------------------------------------------
+*   CONTENT
+-----------------------------------------------*/
+
+.content {
+	background-color: #fff;
+	display: flex;
+	padding-top: 60px;
 }
 
 /*-----------------------------------------------
@@ -121,10 +131,16 @@ a:focus {
 }
 
 .step-item {
-	color: #9ba0a4;
+	border-bottom: 1px solid #fff;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-style: 18px;
+	font-size: 18px;
 	line-height: 60px;
+	text-align: right;
+}
+
+img.step-img {
+	display: inline-block;
+	padding: 0 24px;
 }
 
 /*-----------------------------------------------
@@ -134,5 +150,4 @@ a:focus {
 .page-content {
   float: left;
   width: 75%;
-  background: #fff;
 }
