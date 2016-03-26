@@ -85,6 +85,7 @@ a:focus {
 
 .container {
 	margin: 0 auto;
+	margin-bottom: 40px;
 	max-width: 980px;
 }
 
@@ -138,9 +139,21 @@ a:focus {
 	text-align: right;
 }
 
+.step-item:last-child {
+	border-bottom: none;
+}
+
 img.step-img {
 	display: inline-block;
 	padding: 0 24px;
+}
+
+/*-----------------------------------------------
+*   STATES
+-----------------------------------------------*/
+
+.is-current {
+	background-color: #fff;
 }
 
 /*-----------------------------------------------
