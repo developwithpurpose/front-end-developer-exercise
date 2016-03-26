@@ -1,1 +1,94 @@
-style.css
+/*************************************************
+*
+*   Front-end Exercise! Stylesheet
+*	
+*	Baby Blue     : #5c6366
+*	Gradiant	  : #ebeced - #d1d5d6
+*	Gray (dark)	  : #bbbfc2
+*	Gray (lt-dark): #9ba0a4
+*	Gray (medium) : #65686f
+*	Gray (light)  : #6c6366
+*	White         : #fff
+*
+*************************************************/
+/*-----------------------------------------------
+*   Base
+-----------------------------------------------*/
+
+body {
+	background-color: #bbbfc2;
+	color: #65686f;
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+ol, ul {
+
+}
+
+li {
+
+}
+
+a {
+
+}
+
+a:hover,
+a:active,
+a:focus {
+
+}
+
+/*-----------------------------------------------
+*   HERO
+-----------------------------------------------*/
+
+.hero {
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	text-align: right;
+}
+
+.title {
+	font-size: 32px;
+	font-weight: 300;
+}
+
+.sub-title {
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 48px;
+}
+
+/*-----------------------------------------------
+*   CONTAINER
+-----------------------------------------------*/
+
+.container {
+	margin: 0 auto;
+	max-width: 980px;
+}
+
+.hero .container {
+	background-image: url('../images/header.jpg');
+	height: 276px;
+}
+
+.title-container {
+	width: 50%;
+	float: right;
+	padding-top: 50px;
+	padding-right: 70px;
+}
