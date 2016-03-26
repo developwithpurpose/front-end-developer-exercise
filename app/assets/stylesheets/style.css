@@ -3,7 +3,7 @@
 *   Front-end Exercise! Stylesheet
 *	
 *	Baby Blue     : #5c6366
-*	Gradiant	  : #ebeced - #d1d5d6
+*	Gradiant	    : #ebeced - #d1d5d6
 *	Gray (dark)	  : #bbbfc2
 *	Gray (lt-dark): #9ba0a4
 *	Gray (medium) : #65686f
@@ -34,7 +34,9 @@ p {
 }
 
 ol, ul {
-
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 
 li {
@@ -91,4 +93,46 @@ a:focus {
 	float: right;
 	padding-top: 50px;
 	padding-right: 70px;
+}
+
+.content .container {
+	background-color: #fff;
+	padding-top: 60px;
+}
+
+.page-content-container {
+	padding: 0 70px;
+}
+
+/*-----------------------------------------------
+*   NAV
+-----------------------------------------------*/
+
+.steps-nav {
+	background-color: #d1d5d6;
+  background-image:
+    linear-gradient(
+      to left,
+      #d1d5d6,
+      #ebeced 5%
+    );
+  width: 25%;
+  float: left;
+}
+
+.step-item {
+	color: #9ba0a4;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-style: 18px;
+	line-height: 60px;
+}
+
+/*-----------------------------------------------
+*   PAGE CONTENT
+-----------------------------------------------*/
+
+.page-content {
+  float: left;
+  width: 75%;
+  background: #fff;
 }
