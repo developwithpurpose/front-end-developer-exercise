@@ -156,6 +156,10 @@ img.step-img {
 	background-color: #fff;
 }
 
+.is-current .step-link {
+	color: #36abe1;
+}
+
 /*-----------------------------------------------
 *   PAGE CONTENT
 -----------------------------------------------*/
