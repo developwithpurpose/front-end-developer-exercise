@@ -154,6 +154,8 @@ img.step-img {
 
 .is-current {
 	background-color: #fff;
+	transform: translate(0%, 0%);
+	transition: 0.4s ease-in-out;
 }
 
 .is-current .step-link {
