@@ -18,7 +18,9 @@ $(document).ready(function(){
 	  }
 	});
 
-	$('.step-item').on('click', Step);
+	$('.step-item').on('click', laodStep());
+
+	var step = new Step($('.step-item'));
 
 
 	$.ajax('../../templates/step-3', {
@@ -56,13 +58,22 @@ function Step(el) {
 			}
 		});
 	}
-	console.log(this.el);
-	//el.on('click', this.loadStep);
+	this.el.on('click', this.loadStep);
 }
 
-// function Step() {  
-// 	var step = $(this).closest('.step-item');
-// 	var num = step.data('step');
-// 	var details = $("<p>You've selected step # "+(num)+"</p>");
-// 	console.log(details);
-// }
+function laodStep(el) {
+	var step = $(this).closest('.step-item');
+	var num = step.data('step');
+	this.el = el;
+	console.log(num);
+
+	$.ajax('../../templates/step-'+num,{
+		success: function(response){
+			$('.page-content-container').html(response);
+		},
+		error: function(){
+			$('.page-content-container')
+			.html('<h3>There was an error in loading this step</h3>')
+		}
+	});
+}
