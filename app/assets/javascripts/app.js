@@ -7,7 +7,9 @@ $(document).ready(function(){
 	// ACTIVE NAVAGATION
 	//-----------------------------------------------
 
-	$('.step-item').click(function() {
+	$('.step-item').click(function(event) {
+		event.preventDefault();
+
 		var step = $(this).closest('.step-item');
 		var num = step.data('step');
     // If this isn't already is-current
