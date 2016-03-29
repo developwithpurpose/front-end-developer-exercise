@@ -32,7 +32,9 @@ $(document).ready(function(){
 function loadStep(num) {
  $.ajax('../../templates/step-'+num,{
    success: function(response){
-     $('.page-content-container').html(response);
+     // $('.page-content-container').html(response);
+     var Div = $(response).find('.page-content-body');
+     $('.page-content-container').html(Div);
    },
    error: function(){
 	   $('.page-content-container')

@@ -166,7 +166,7 @@ img.step-img {
 *   PAGE CONTENT
 -----------------------------------------------*/
 
-.page-content {
+#page-content {
   float: left;
   width: 75%;
 }
