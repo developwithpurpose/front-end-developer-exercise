@@ -8,6 +8,8 @@ $(document).ready(function(){
 	//-----------------------------------------------
 
 	$('.step-item').click(function() {
+		var step = $(this).closest('.step-item');
+		var num = step.data('step');
     // If this isn't already is-current
 	  if (!$(this).hasClass("is-current")) {
 	    // Remove the class from anything that is is-current
@@ -16,64 +18,23 @@ $(document).ready(function(){
 	    $(this).addClass("is-current");
 	    console.log(this);
 	  }
+	  loadStep(num);
 	});
 
-	$('.step-item').on('click', laodStep());
-
-	var step = new Step($('.step-item'));
-
-
-	$.ajax('../../templates/step-3', {
-		data: {location: $('.step-item').data('step')},
-		success: function(response){
-			//console.log(response);
-			$('.page-content-container').html(response);
-		},
-		error: function(){
-			$('.page-content-container')
-			.html('<h3>There was an error in loading this step</h3>')
-		}
-	});
 });
 
 //----------------------
 // FUNCTIONS
 //----------------------
 
-function Step(el) {
-	var step = $(this).closest('.step-item');
-	var num = step.data('step');
-	this.el = el;
-	console.log(num);
-
-	//helper method
-	this.loadStep = function() {
-		$.ajax('../../templates/step-'+num,{
-			success: function(response){
-				$('.page-content-container').html(response);
-			},
-			error: function(){
-				$('.page-content-container')
-				.html('<h3>There was an error in loading this step</h3>')
-			}
-		});
-	}
-	this.el.on('click', this.loadStep);
-}
-
-function laodStep(el) {
-	var step = $(this).closest('.step-item');
-	var num = step.data('step');
-	this.el = el;
-	console.log(num);
-
-	$.ajax('../../templates/step-'+num,{
-		success: function(response){
-			$('.page-content-container').html(response);
-		},
-		error: function(){
-			$('.page-content-container')
-			.html('<h3>There was an error in loading this step</h3>')
-		}
-	});
+function loadStep(num) {
+ $.ajax('../../templates/step-'+num,{
+   success: function(response){
+     $('.page-content-container').html(response);
+   },
+   error: function(){
+	   $('.page-content-container')
+	   .html('<h3>There was an error in loading this step</h3>')
+   }
+ });
 }
