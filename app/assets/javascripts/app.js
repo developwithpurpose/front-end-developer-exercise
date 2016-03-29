@@ -20,7 +20,6 @@ $(document).ready(function(){
 
 	$('.step-item').on('click', Step);
 
-	var newStep = new Step($('.step-item'));
 
 	$.ajax('../../templates/step-3', {
 		data: {location: $('.step-item').data('step')},
