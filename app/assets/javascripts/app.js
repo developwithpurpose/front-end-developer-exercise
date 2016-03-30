@@ -53,14 +53,29 @@ function showFriends(num) {
 			var friends = result.friends;
 			var friendCount = 0;
 			var friendList = [];
+			var message = $('.friends');
 			for (var i = 0; i<friends.length; i++){
 				if (friends[i].babyStep === num) {
 					friendCount+= 1;
 					friendList.push(friends[i].firstName + ' ' + friends[i].lastName);
 				}
 			}
-			console.log(friendCount);
-			console.log(friendList);
+			switch (friendCount) {
+				case 0:
+					break;
+				case 1:
+					console.log(friendList[0] + " is also in Baby Step " + num);
+					break;
+				case 2:
+					console.log(friendList[0] + " and " + friendList[1] + " are also in Baby Step " + num);
+					break;
+				case 3:
+					console.log(friendList[0] + ", " + friendList[1] + ", and " + (friendCount-2) + " other friend are also in Baby Step " + num);
+					break;
+				default:
+					console.log(friendList[0] + ", " + friendList[1] + ", and " + (friendCount-2) + " other friends are also in Baby Step " + num);
+					break;
+			}
 		}
 	});
 }
