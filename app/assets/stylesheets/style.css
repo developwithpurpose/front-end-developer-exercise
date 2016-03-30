@@ -159,8 +159,6 @@ div.step-img {
 
 .is-current {
 	background-color: #fff;
-	/*transform: translate(0%, 3%);
-	transition: 0.2s ease-in-out;*/
 	-webkit-animation: fadeInDown 0.5s;
   animation: fadeInDown 0.5s;
 }
@@ -322,8 +320,8 @@ div.step-img {
 @-webkit-keyframes fadeInDown {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
   }
 
   to {
@@ -339,7 +337,7 @@ div.step-img {
     -webkit-transform: translate3d(0, -10%, 0);
     transform: translate3d(0, -10%, 0);
   }
-10
+  
   to {
     opacity: 1;
     -webkit-transform: none;

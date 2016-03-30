@@ -22,6 +22,7 @@ $(document).ready(function(){
 	  }
 	  loadStep(num);
 	  showFriends(num);
+	  //getFriends(num);
 	});
 
 });
@@ -35,6 +36,7 @@ function loadStep(num) {
    success: function(response){
      // $('.page-content-container').html(response);
      var Div = $(response).find('.page-content-body');
+     // How to make a function of makeCurrent()???
      $('.page-content-container').html(Div);
      if (!$('.page-content-body').hasClass("is-current")) {
      	$("div.page-content-body").removeClass("is-current");
@@ -88,5 +90,22 @@ function showFriends(num) {
 		error: function() {
 			message.html('There was an error in retrieving friends!');
 		}
+	});
+}
+
+// Trying to figure out how the $.map function 
+// might apply to showFriends Function
+function getFriends(num) {
+	$.getJSON('../../baby-steps.json', function(results){
+		var friends = results.friends;
+		var msgEls = $.map(friends, function(f, i){
+			var message = $('<p></p>');
+			var friendCount = 0;
+			var friendList = [];
+			if (f.babyStep === num) {
+				friendCount+= 1;
+				friendList.push(f.firstName + ' ' + f.lastName);
+			}
+		});
 	});
 }
