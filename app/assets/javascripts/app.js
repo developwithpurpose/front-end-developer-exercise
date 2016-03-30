@@ -64,16 +64,20 @@ function showFriends(num) {
 				case 0:
 					break;
 				case 1:
-					console.log(friendList[0] + " is also in Baby Step " + num);
+					console.log('<p><a href="#">'+ friendList[0] + "</a> is also in Baby Step " + num + "</p>");
+					message.html('<p><a href="#">'+ friendList[0] + "</a> is also in Baby Step " + num + "</p>");
 					break;
 				case 2:
-					console.log(friendList[0] + " and " + friendList[1] + " are also in Baby Step " + num);
+					console.log('<p><a href="#">'+ friendList[0] + '</a> and <a href="#">' + friendList[1] + "</a> are also in Baby Step " + num + '</p>');
+					message.html('<p><a href="#">'+ friendList[0] + '</a> and <a href="#">' + friendList[1] + "</a> are also in Baby Step " + num + '</p>');
 					break;
 				case 3:
-					console.log(friendList[0] + ", " + friendList[1] + ", and " + (friendCount-2) + " other friend are also in Baby Step " + num);
+					console.log('<p><a href="#">'+ friendList[0] + '</a>, <a href="#">' + friendList[1] + "</a>, and " + (friendCount-2) + " other friend are also in Baby Step " + num + '</p>');
+					message.html('<p><a href="#">'+ friendList[0] + '</a>, <a href="#">' + friendList[1] + "</a>, and " + (friendCount-2) + " other friend are also in Baby Step " + num + '</p>');
 					break;
 				default:
-					console.log(friendList[0] + ", " + friendList[1] + ", and " + (friendCount-2) + " other friends are also in Baby Step " + num);
+					console.log('<p><a href="#">'+ friendList[0] + '</a>, <a href="#">' + friendList[1] + "</a>, and " + (friendCount-2) + " other friends are also in Baby Step " + num + '</p>');
+					message.html('<p><a href="#">'+ friendList[0] + '</a>, <a href="#">' + friendList[1] + "</a>, and " + (friendCount-2) + " other friends are also in Baby Step " + num + '</p>');
 					break;
 			}
 		}
