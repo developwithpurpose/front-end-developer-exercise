@@ -168,31 +168,31 @@ div.step-img {
 }
 
 .is-current #step-1 {
-	background-position-y: 54%;
+	background-position: 0 175px;
 }
 
 .is-current #step-2 {
-	background-position-y: 61%;
+	background-position: 0 151px;
 }
 
 .is-current #step-3 {
-	background-position-y: 69%;
+	background-position: 0 126px;
 }
 
 .is-current #step-4 {
-	background-position-y: 77%;
+	background-position: 0 100px;
 }
 
 .is-current #step-5 {
-	background-position-y: 85%;
+	background-position: 0 74px;
 }
 
 .is-current #step-6 {
-	background-position-y: 92%;
+	background-position: 0 50px;
 }
 
 .is-current #step-7 {
-	background-position-y: 100%;
+	background-position: 0 25px;
 	height: 25px;
 }
 
@@ -240,31 +240,38 @@ div.step-img {
 -----------------------------------------------*/
 
 #step-1 {
-	background: url(../images/icons/sprites/icons_small.png) 0 0%;
+	background: url(../images/icons/sprites/icons_small.png);
+	background-position: 0 0;
 }
 
 #step-2 {
-	background: url(../images/icons/sprites/icons_small.png) 0 7%;
+	background: url(../images/icons/sprites/icons_small.png);
+	background-position: 0 -24px;
 }
 
 #step-3 {
-	background: url(../images/icons/sprites/icons_small.png) 0 15%;
+	background: url(../images/icons/sprites/icons_small.png);
+	background-position: 0 -52px;
 }
 
 #step-4 {
-	background: url(../images/icons/sprites/icons_small.png) 0 23%;
+	background: url(../images/icons/sprites/icons_small.png);
+	background-position: 0 -75px;
 }
 
 #step-5 {
-	background: url(../images/icons/sprites/icons_small.png) 0 31%;
+	background: url(../images/icons/sprites/icons_small.png);
+	background-position: 0 -101px;
 }
 
 #step-6 {
-	background: url(../images/icons/sprites/icons_small.png) 0 39%;
+	background: url(../images/icons/sprites/icons_small.png);
+	background-position: 0 -126px;
 }
 
 #step-7 {
-	background: url(../images/icons/sprites/icons_small.png) 0 46%;
+	background: url(../images/icons/sprites/icons_small.png);
+	background-position: 0 -150px;
 }
 
 /*-----------------------------------------------
@@ -337,7 +344,7 @@ div.step-img {
     -webkit-transform: translate3d(0, -10%, 0);
     transform: translate3d(0, -10%, 0);
   }
-  
+
   to {
     opacity: 1;
     -webkit-transform: none;

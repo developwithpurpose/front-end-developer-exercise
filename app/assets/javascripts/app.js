@@ -6,6 +6,7 @@ $(document).ready(function(){
 	//-----------------------------------------------
 	// ACTIVE NAVAGATION
 	//-----------------------------------------------
+	loadStep(1);
 
 	$('.step-item').click(function(event) {
 		event.preventDefault();
