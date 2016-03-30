@@ -21,6 +21,7 @@ $(document).ready(function(){
 	    console.log(this);
 	  }
 	  loadStep(num);
+	  showFriends(num);
 	});
 
 });
@@ -41,4 +42,25 @@ function loadStep(num) {
 	   .html('<h3>There was an error in loading this step</h3>')
    }
  });
+}
+
+function showFriends(num) {
+	$.ajax('../../baby-steps.json', {
+		contentType: 'application/json',
+		dataType: 'json',
+		success: function(result){
+			//console.log(result.friends);
+			var friends = result.friends;
+			var friendCount = 0;
+			var friendList = [];
+			for (var i = 0; i<friends.length; i++){
+				if (friends[i].babyStep === num) {
+					friendCount+= 1;
+					friendList.push(friends[i].firstName + ' ' + friends[i].lastName);
+				}
+			}
+			console.log(friendCount);
+			console.log(friendList);
+		}
+	});
 }
