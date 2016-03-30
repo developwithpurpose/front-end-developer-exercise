@@ -36,6 +36,10 @@ function loadStep(num) {
      // $('.page-content-container').html(response);
      var Div = $(response).find('.page-content-body');
      $('.page-content-container').html(Div);
+     if (!$('.page-content-body').hasClass("is-current")) {
+     	$("div.page-content-body").removeClass("is-current");
+     	$('.page-content-body').addClass("is-current");
+     }
    },
    error: function(){
 	   $('.page-content-container')

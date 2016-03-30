@@ -159,8 +159,10 @@ div.step-img {
 
 .is-current {
 	background-color: #fff;
-	transform: translate(0%, 0%);
-	transition: 0.4s ease-in-out;
+	/*transform: translate(0%, 3%);
+	transition: 0.2s ease-in-out;*/
+	-webkit-animation: fadeInDown 0.5s;
+  animation: fadeInDown 0.5s;
 }
 
 .is-current .step-link {
@@ -311,4 +313,36 @@ div.step-img {
 #step7 {
 	background: url(../images/icons/sprites/icons_large.png) 0 100%;
 	height: 65px;
+}
+
+/*-----------------------------------------------
+*   ANIMATION
+-----------------------------------------------*/
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
 }
