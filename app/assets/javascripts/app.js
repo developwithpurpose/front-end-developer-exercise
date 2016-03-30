@@ -64,22 +64,25 @@ function showFriends(num) {
 				case 0:
 					break;
 				case 1:
-					console.log('<p><a href="#">'+ friendList[0] + "</a> is also in Baby Step " + num + "</p>");
+					//console.log('<p><a href="#">'+ friendList[0] + "</a> is also in Baby Step " + num + "</p>");
 					message.html('<p><a href="#">'+ friendList[0] + "</a> is also in Baby Step " + num + "</p>");
 					break;
 				case 2:
-					console.log('<p><a href="#">'+ friendList[0] + '</a> and <a href="#">' + friendList[1] + "</a> are also in Baby Step " + num + '</p>');
+					//console.log('<p><a href="#">'+ friendList[0] + '</a> and <a href="#">' + friendList[1] + "</a> are also in Baby Step " + num + '</p>');
 					message.html('<p><a href="#">'+ friendList[0] + '</a> and <a href="#">' + friendList[1] + "</a> are also in Baby Step " + num + '</p>');
 					break;
 				case 3:
-					console.log('<p><a href="#">'+ friendList[0] + '</a>, <a href="#">' + friendList[1] + "</a>, and " + (friendCount-2) + " other friend are also in Baby Step " + num + '</p>');
+					//console.log('<p><a href="#">'+ friendList[0] + '</a>, <a href="#">' + friendList[1] + "</a>, and " + (friendCount-2) + " other friend are also in Baby Step " + num + '</p>');
 					message.html('<p><a href="#">'+ friendList[0] + '</a>, <a href="#">' + friendList[1] + "</a>, and " + (friendCount-2) + " other friend are also in Baby Step " + num + '</p>');
 					break;
 				default:
-					console.log('<p><a href="#">'+ friendList[0] + '</a>, <a href="#">' + friendList[1] + "</a>, and " + (friendCount-2) + " other friends are also in Baby Step " + num + '</p>');
+					//console.log('<p><a href="#">'+ friendList[0] + '</a>, <a href="#">' + friendList[1] + "</a>, and " + (friendCount-2) + " other friends are also in Baby Step " + num + '</p>');
 					message.html('<p><a href="#">'+ friendList[0] + '</a>, <a href="#">' + friendList[1] + "</a>, and " + (friendCount-2) + " other friends are also in Baby Step " + num + '</p>');
 					break;
 			}
+		},
+		error: function() {
+			message.html('There was an error in retrieving friends!');
 		}
 	});
 }

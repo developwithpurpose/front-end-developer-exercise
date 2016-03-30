@@ -2,14 +2,14 @@
 *
 *   Front-end Exercise! Stylesheet
 *	
-*	Baby Blue     : #36abe1
-*	Gradiant	    : #ebeced - #d1d5d6
-*	Gray (dark)	  : #bbbfc2
-*	Gray (lt-dark): #9ba0a4
-*	Gray (medium) : #65686f
-*	Gray (light)  : #6c6366
-* Gray (lightest): #5c6366
-*	White         : #fff
+*	Baby Blue     	: #36abe1
+*	Gradiant	  	: #ebeced - #d1d5d6
+*	Gray (dark)	  	: #bbbfc2
+*	Gray (lt-dark)	: #9ba0a4
+*	Gray (medium) 	: #65686f
+*	Gray (light)  	: #6c6366
+* 	Gray (lightest) : #5c6366
+*	White         	: #fff
 *
 *************************************************/
 /*-----------------------------------------------
@@ -31,7 +31,8 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
 	font-size: 13px;
-	margin: 16px 0;
+	margin: 0;
+	margin-bottom: 16px;
 	padding: 0;
 }
 
@@ -112,6 +113,7 @@ a:focus {
 .content {
 	background-color: #fff;
 	display: flex;
+	padding-bottom: 120px;
 	padding-top: 60px;
 }
 
@@ -127,6 +129,7 @@ a:focus {
       #d1d5d6,
       #ebeced 5%
     );
+  height: 600px;
   width: 25%;
   float: left;
 }
@@ -143,9 +146,11 @@ a:focus {
 	border-bottom: none;
 }
 
-img.step-img {
+div.step-img {
 	display: inline-block;
-	padding: 0 24px;
+	margin: 0 24px;
+	height: 24px;
+	width: 30px;
 }
 
 /*-----------------------------------------------
@@ -162,6 +167,35 @@ img.step-img {
 	color: #36abe1;
 }
 
+.is-current #step-1 {
+	background-position-y: 54%;
+}
+
+.is-current #step-2 {
+	background-position-y: 61%;
+}
+
+.is-current #step-3 {
+	background-position-y: 69%;
+}
+
+.is-current #step-4 {
+	background-position-y: 77%;
+}
+
+.is-current #step-5 {
+	background-position-y: 85%;
+}
+
+.is-current #step-6 {
+	background-position-y: 92%;
+}
+
+.is-current #step-7 {
+	background-position-y: 100%;
+	height: 25px;
+}
+
 /*-----------------------------------------------
 *   PAGE CONTENT
 -----------------------------------------------*/
@@ -169,4 +203,112 @@ img.step-img {
 #page-content {
   float: left;
   width: 75%;
+}
+
+.friends a {
+	color: #36abe1;
+}
+
+/*-----------------------------------------------
+*   STEP HEADING
+-----------------------------------------------*/
+.body-heading {
+	font-family: 'Source Sans Pro', sans-serif;
+	padding-bottom: 24px;
+}
+
+.heading-titles {
+	display: inline-block;
+	width: 75%;
+	line-height: 1;
+}
+
+.step-title {
+	color: #36abe1;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.step-subtitle {
+	color: #5c6366;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+/*-----------------------------------------------
+*   NAV STEP IMAGES
+-----------------------------------------------*/
+
+#step-1 {
+	background: url(../images/icons/sprites/icons_small.png) 0 0%;
+}
+
+#step-2 {
+	background: url(../images/icons/sprites/icons_small.png) 0 7%;
+}
+
+#step-3 {
+	background: url(../images/icons/sprites/icons_small.png) 0 15%;
+}
+
+#step-4 {
+	background: url(../images/icons/sprites/icons_small.png) 0 23%;
+}
+
+#step-5 {
+	background: url(../images/icons/sprites/icons_small.png) 0 31%;
+}
+
+#step-6 {
+	background: url(../images/icons/sprites/icons_small.png) 0 39%;
+}
+
+#step-7 {
+	background: url(../images/icons/sprites/icons_small.png) 0 46%;
+}
+
+/*-----------------------------------------------
+*   STEP IMAGES
+-----------------------------------------------*/
+
+.body-heading .image {
+	display: inline-block;
+	width: 77px;
+	height: 65px;
+	margin-right: 20px;
+}
+
+#step1 {
+	background: url(../images/icons/sprites/icons_large.png) 0 54%;
+	height: 45px;
+}
+
+#step2 {
+	background: url(../images/icons/sprites/icons_large.png) 0 61%;
+	height: 56px;
+}
+
+#step3 {
+	background: url(../images/icons/sprites/icons_large.png) 0 69%;
+	height: 50px;
+}
+
+#step4 {
+	background: url(../images/icons/sprites/icons_large.png) 0 77%;
+	height: 65px;
+}
+
+#step5 {
+	background: url(../images/icons/sprites/icons_large.png) 0 85%;
+	height: 68px;
+}
+
+#step6 {
+	background: url(../images/icons/sprites/icons_large.png) 0 92%;
+	height: 61px;
+}
+
+#step7 {
+	background: url(../images/icons/sprites/icons_large.png) 0 100%;
+	height: 65px;
 }
