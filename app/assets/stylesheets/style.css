@@ -138,7 +138,6 @@ a:focus {
 	border-bottom: 1px solid #fff;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 18px;
-	line-height: 60px;
 	text-align: right;
 }
 
@@ -146,10 +145,17 @@ a:focus {
 	border-bottom: none;
 }
 
+.step-link {
+	line-height: 60px;
+	padding: 0.95rem 1.5rem;
+	padding-left: 3.0rem;
+	width: 60%;
+}
+
 div.step-img {
 	display: inline-block;
-	margin: 0 24px;
 	height: 24px;
+	margin-left: 24px;
 	width: 30px;
 }
 
