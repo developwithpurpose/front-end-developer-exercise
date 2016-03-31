@@ -52,7 +52,7 @@ function loadStep(num) {
 }
 
 function showFriends(num) {
-	$.ajax('../../baby-steps.json', {
+	$.ajax('../baby-steps.json', {
 		contentType: 'application/json',
 		dataType: 'json',
 		success: function(result){
