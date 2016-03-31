@@ -12,6 +12,7 @@ Requirements
 * Followed the mockup requirements as closely as possible, with the required google fonts, and efficient CSS file, with headers of various id's and classes.
 * Tested application in Firefox and Chrome, used BrowserStack to test in IE9, however could get my local files to load the AJAX calls.
 * Completed the "Dynamic Content" when javascript is enabled. Figured I'd have to set up the server for dynamic content without javascript.
+	* issue: When javascript disable, step 1 doesn't automatically load to the page (3/30).
 * Did not use SPA frameworks, or any frameworks. Used JQuery and Normalize. Looked into using Modernizer.
 * Began refactoring code to make it more readable/efficient. In app.js I started working on a getFriends Function that would utilize $.map to loop through friends.
 
