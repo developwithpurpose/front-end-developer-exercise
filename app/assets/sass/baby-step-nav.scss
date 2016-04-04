@@ -17,15 +17,20 @@
             color: #9ba0a4;
             line-height: 60px;
             border-bottom: solid 1px #fff;
-            padding-right: 24px;
             
             a {
                 display: block;
                 color: inherit;
                 text-decoration: none;
                 
+                &.active {
+                    color: #36abe1;
+                    font-weight: 600;
+                }
+                
                 img {
-                    max-width: 24px;
+                    float: right;
+                    padding: 17px 24px;
                 }
             }
         }
