@@ -9,6 +9,11 @@
     .baby-step {
         padding-left: 70px;
         padding-right: 70px;
+        display: none;
+        
+        &.active {
+            display: block;
+        }
         
         header {
             padding-bottom: 24px;
