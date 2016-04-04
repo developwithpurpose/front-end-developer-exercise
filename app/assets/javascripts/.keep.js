@@ -1,7 +1,6 @@
 
 
-$(document).ready( function() {
-    
+$(document).ready( function() { 
     // Render
     $.ajax({
         type: 'GET',
@@ -18,19 +17,18 @@ $(document).ready( function() {
             //console.log('Friends', person)
             $('#babystep-' + person["babyStep"]).append("<div><span>" + person["firstName"] + ' ' +  person["lastName"] + "</span></div>");
         }
-        
     });
     
-    
-    // Transition Functions 
-    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    tabTransition();
+});
+
+var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+function tabTransition() {
     $('#tabTrans li').click( function() {
         $(this).addClass('animated slideInDown').one(animationEnd, function() {
             $(this).removeClass('animated slideInDown')
         });
-        $('div.active').addClass('animated slideOutUp').one(animationEnd, function() {
-            $('div.active').removeClass('animated slideOutUp');
-        });
     });
-});
-    
+};
+   

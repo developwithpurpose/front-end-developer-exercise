@@ -10,7 +10,14 @@ body {
 .content-bg {
     background-color: #fff;
 }
-
+.left-shadow {
+    float: right;
+    text-align: right;
+    margin-right: -15px;
+}
+.right-shadow {
+    margin-left: -15px;
+}
 .footer {
     margin-top: 60px;
 }
@@ -58,12 +65,22 @@ body {
 /* base tab design */
 .bs-tabs {
     border-right: 1px solid #ddd;    
-    background-color: #dedede;
     min-height: 80vh;
+    background: #ebeced; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ebeced 95%, #d1d5d6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ebeced 95%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ebeced 95%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
 }
 .bs-tabs li  {
-  border-bottom: 1px solid #fff;
-  padding-top: 0px;
+    border-bottom: 1px solid #fff;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebeced+91,d1d5d6+100 */
+    background: #ebeced; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ebeced 95%, #d1d5d6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ebeced 95%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ebeced 95%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+
 }
 .bs-tabs>li {
   float: none;
@@ -71,19 +88,28 @@ body {
 }
 .bs-tabs>li {
   margin-right: -1px;
+    text-align: right;
+    margin-right: 25px;
 }
 
 /* active tabs */
 .bs-tabs>li.active>a,
 .bs-tabs>li.active>a:hover,
 .bs-tabs>li.active>a:focus {
-  border-bottom-color: #ddd;
+  border-bottom-color: transparent;
   border-right-color: transparent;
 }
 
 .bs-tabs>li>a {
-  border-radius: 0px;
-  margin-right: 0;
+    border-radius: 0px;
+    
+}
+.bs-tabs> li> a> span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #9ba0a6;
+    line-height: 40px;
 }
 
 /* Baby step content */
