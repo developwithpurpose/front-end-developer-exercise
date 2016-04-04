@@ -2,19 +2,36 @@
     Typography Styles for Baby Steps Front-end Developer Exercise
 */
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:400,600,300);
+
 body {
     font-size: 18px;
 }
 
 h1 {
     font-size: 50px;
-    font-weight: 800;
+    font-weight: 700;
     font-family: 'Open Sans', 'Arial', sans-serif;
     line-height: 48px;
+    margin-top: 0;
+    margin-bottom: 0;
     color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
 }
 
 h2 {
+    font-size: 32px;
+    font-weight: 300;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    margin-top: 43px; // Mockup stated 50px, but 43px lines up with the actual image.
+    margin-bottom: 0;
+    color: #fff;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+h3 {
     font-size: 30px;
     font-family: 'Source Sans Pro', 'Arial', sans-serif;
     font-weight: 600;
@@ -24,7 +41,7 @@ h2 {
     margin-bottom: 5px;
 }
 
-h3 {
+h4 {
     font-size: 18px;
     font-family: 'Source Sans Pro', 'Arial', sans-serif;
     font-weight: 100;
