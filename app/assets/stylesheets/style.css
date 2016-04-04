@@ -87,9 +87,8 @@ body {
   margin-bottom: 2px;
 }
 .bs-tabs>li {
-  margin-right: -1px;
+  margin-right: -2px;
     text-align: right;
-    margin-right: 25px;
 }
 
 /* active tabs */
