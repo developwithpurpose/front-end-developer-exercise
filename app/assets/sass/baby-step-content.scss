@@ -1,0 +1,33 @@
+/*
+    Baby Steps Content Styles for Baby Steps Front-end Developer Exercise
+*/
+
+.baby-steps-content {
+    float: left;
+    width: 75%;
+    
+    .baby-step {
+        padding-left: 70px;
+        padding-right: 70px;
+        
+        header {
+            padding-bottom: 24px;
+            overflow: hidden;
+        }
+        
+        img {
+            float: left;
+            padding-right: 15px;
+        }
+        
+        a {
+            color: #6fbee7;
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+}

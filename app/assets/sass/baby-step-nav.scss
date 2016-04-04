@@ -1,0 +1,33 @@
+/*
+    Baby Steps Navigation Styles for Baby Steps Front-end Developer Exercise
+*/
+
+.baby-steps-nav {
+    width: 25%;
+    float: left;
+    background: linear-gradient(to right, #ebeced, #d1d5d6);
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+            text-align: right;
+            color: #9ba0a4;
+            line-height: 60px;
+            border-bottom: solid 1px #fff;
+            padding-right: 24px;
+            
+            a {
+                display: block;
+                color: inherit;
+                text-decoration: none;
+                
+                img {
+                    max-width: 24px;
+                }
+            }
+        }
+    }
+}
