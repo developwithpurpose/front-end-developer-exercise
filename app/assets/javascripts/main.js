@@ -1,7 +1,8 @@
 jQuery(document).ready(function ($) {
     
-    $(".baby-step").slideUp();
-    $(".baby-step.active").slideDown();
+    // Make sure intial Baby Step content will slide smoothly
+    $(".baby-step").slideUp(0);
+    $(".baby-step.active").slideDown(0);
 
     // Tabbed Navigation for the Baby Steps
     $("nav a.tab").click(function () {
