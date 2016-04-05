@@ -23,14 +23,63 @@
                 color: inherit;
                 text-decoration: none;
                 
-                &.active {
-                    color: #36abe1;
-                    font-weight: 600;
+                & .nav-icon {
+                    background-image: url("../images/icons/sprites/icons_small.png");
+                    background-repeat: no-repeat;
+                    float: right;
+                    margin: 17px 24px 0;
+                    width: 30px;
+                    height: 25px;
                 }
                 
-                img {
-                    float: right;
-                    padding: 17px 24px;
+                &#baby_step_1 .nav-icon {
+                    background-position: 0 0;
+                }
+                &#baby_step_2 .nav-icon {
+                    background-position: 0 -25px;
+                }
+                &#baby_step_3 .nav-icon {
+                    background-position: 0 -50px;
+                }
+                &#baby_step_4 .nav-icon {
+                    background-position: 0 -75px;
+                }
+                &#baby_step_5 .nav-icon {
+                    background-position: 0 -100px;
+                }
+                &#baby_step_6 .nav-icon {
+                    background-position: 0 -125px;
+                }
+                &#baby_step_7 .nav-icon {
+                    background-position: 0 -150px;
+                }
+                
+                &.active {
+                    color: #36abe1;
+                    background-color: #fff;
+                    font-weight: 600;
+                    
+                    &#baby_step_1 .nav-icon {
+                        background-position: 0 -175px;
+                    }
+                    &#baby_step_2 .nav-icon {
+                        background-position: 0 -200px;
+                    }
+                    &#baby_step_3 .nav-icon {
+                        background-position: 0 -225px;
+                    }
+                    &#baby_step_4 .nav-icon {
+                        background-position: 0 -250px;
+                    }
+                    &#baby_step_5 .nav-icon {
+                        background-position: 0 -275px;
+                    }
+                    &#baby_step_6 .nav-icon {
+                        background-position: 0 -300px;
+                    }
+                    &#baby_step_7 .nav-icon {
+                        background-position: 0 -325px;
+                    }
                 }
             }
         }
