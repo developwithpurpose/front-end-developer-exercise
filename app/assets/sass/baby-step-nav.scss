@@ -6,11 +6,12 @@
     width: 250px;
     height: inherit;
     float: left;
-    background: linear-gradient(to right, #ebeced, #d1d5d6);
+    background: linear-gradient(to right, #ebeced 95%, #d1d5d6);
+    background: -moz-linear-gradient(left, #ebeced 95%, #d1d5d6);
     
     ul {
         list-style: none;
-        padding: 0;
+        padding: 1px 0;
         margin: 0;
         
         li {
@@ -18,6 +19,10 @@
             color: #9ba0a4;
             line-height: 60px;
             border-bottom: solid 1px #fff;
+            
+            &:last-of-type {
+                border-bottom: none;
+            }
             
             a {
                 display: block;
