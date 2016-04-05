@@ -12,8 +12,8 @@ jQuery(document).ready(function ($) {
         $(".baby-step").slideUp();
 
         var content_show = $(this).attr("title");
-        $("#" + content_show).slideDown();
-        $("#" + content_show).addClass("active");
+        $("#" + content_show + "_content").slideDown($slideDuration);
+        $("#" + content_show + "_content").addClass("active");
         
         return false;
     });
