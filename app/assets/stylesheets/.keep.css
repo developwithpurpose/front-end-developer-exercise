@@ -19,7 +19,7 @@ body {
     margin-left: -15px;
 }
 .footer {
-    margin-top: 60px;
+    margin-top: -20px;
 }
 .content-height img {
     max-height: 90vh;
@@ -87,17 +87,19 @@ body {
   margin-bottom: 2px;
 }
 .bs-tabs>li {
-  margin-right: -1px;
+  margin-right: -2px;
     text-align: right;
-    margin-right: 25px;
 }
 
 /* active tabs */
 .bs-tabs>li.active>a,
 .bs-tabs>li.active>a:hover,
 .bs-tabs>li.active>a:focus {
-  border-bottom-color: transparent;
-  border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    margin-right: 0px;
+    border-top: 0px !important;
+    color: #36abe1 !important;
 }
 
 .bs-tabs>li>a {
@@ -129,9 +131,9 @@ body {
 }
 .friendsName {
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 100;
+    font-weight: 600;
     font-size: 14px;
-    color: #5c6366;
+    color: #36abe1;
     line-height: 20px;
 }
 .bs-icon {
