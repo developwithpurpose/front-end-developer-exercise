@@ -1,0 +1,148 @@
+body {
+    background-color: #bbbfc2;
+    margin-bottom: 20px;
+}
+.main-heading {
+    min-height: 280px;
+    min-width: 100%;
+}
+
+.content-bg {
+    background-color: #fff;
+}
+.left-shadow {
+    float: right;
+    text-align: right;
+    margin-right: -15px;
+}
+.right-shadow {
+    margin-left: -15px;
+}
+.footer {
+    margin-top: -20px;
+}
+.content-height img {
+    max-height: 90vh;
+}
+/* Header image and text*/
+.header-bg {
+    background: url(../images/header.jpg) no-repeat;
+    min-height: 296px;
+    max-height: 300px;
+    background-size: 100% 100%;
+    background-position: center top;
+}
+.bs-header {
+    padding-right: 50px;
+}
+.bs-heading {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    color: #fff;
+    line-height: 48px;
+    text-shadow: 4px 3px 10px #555;
+}
+.bs-subhead {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+    color: #fff;
+}
+/* Margins */
+.top-20 { margin-top: 20px;}
+.top-40 {margin-top: 40px;}
+.left-40 {margin-left: 40px;}
+.top-70 {margin-top: 70px;}
+.lt-pad-2 {padding-left: 2px;}
+
+/* Baby Step Tabs and Side-bar*/
+.bs-sidebar {
+    margin-left: 0px;
+    padding: 0px;
+}
+
+/* base tab design */
+.bs-tabs {
+    border-right: 1px solid #ddd;    
+    min-height: 80vh;
+    background: #ebeced; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ebeced 95%, #d1d5d6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ebeced 95%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ebeced 95%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+}
+.bs-tabs li  {
+    border-bottom: 1px solid #fff;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebeced+91,d1d5d6+100 */
+    background: #ebeced; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ebeced 95%, #d1d5d6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ebeced 95%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ebeced 95%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+
+}
+.bs-tabs>li {
+  float: none;
+  margin-bottom: 2px;
+}
+.bs-tabs>li {
+  margin-right: -2px;
+    text-align: right;
+}
+
+/* active tabs */
+.bs-tabs>li.active>a,
+.bs-tabs>li.active>a:hover,
+.bs-tabs>li.active>a:focus {
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    margin-right: 0px;
+    border-top: 0px !important;
+    color: #36abe1 !important;
+}
+
+.bs-tabs>li>a {
+    border-radius: 0px;
+    
+}
+.bs-tabs> li> a> span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #9ba0a6;
+    line-height: 40px;
+}
+
+/* Baby step content */
+.bs-title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    color:#36abe1;
+    font-size: 30px;
+    /*line-height: 20px;*/
+}
+.bs-subtitle {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    color: #5c6366;
+    line-height: 20px;
+}
+.friendsName {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #36abe1;
+    line-height: 20px;
+}
+.bs-icon {
+    float: left;
+    vertical-align: top;
+    margin: 0px 10px 0px 0px; 
+}
+.bs-content {
+    font-size: 13px;
+    line-height: 18px;
+    color: #65686F;
+}
