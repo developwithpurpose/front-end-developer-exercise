@@ -8,7 +8,7 @@ However there are a few things that I should have done that I did not do.
 * I was unable to change the font color and icon on the tabs.
 * I would have resolved this effect by either doing a hover effect or hasClass.
 * Tab-content Transition, I spend some time researching best practices to achieve this using JQuery. I ended up using the bootstrap fade-in class to give it a smooth transition. 
-* I added animate css package that I intially planed of just adding the classes to the .active tab-pane.
+* I added animate css package that I intially planned of just adding the classes to the .active tab-pane.
 
 ### Background
 I have been in the tech industry since October 2015. I am a full time product manager and support. I started coding around December 2015 working on simple html and css. I started a side project that was a Django/RESTfull/html/css SaaS. So I have learned the these languages from asking questions to friends, and searching google, docs, and stackoverflow. I was able to get the side project to BETA release in 1 year with the assistance of 1 partner. I wanted to build the skills to assist engineering at my full-time job to meet deadlines, innovate new products, and improve the overall user experience.
@@ -17,8 +17,3 @@ For the past couple months at my full-time job I have been working 4 8hr days co
 ### Thank you for the opportunity and Looking forward for the feedback
 
 ### Nick Daniel | ndaniel@statelinesolutions.com 
-
-
-
-
-### Thank you for the opportunity and email if there are any questions.
