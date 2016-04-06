@@ -15,7 +15,7 @@ $(document).ready( function() {
         for (friend in friends) {
             person = friends[friend]
             //console.log('Friends', person)
-            $('#babystep-' + person["babyStep"]).append("<div><span>" + person["firstName"] + ' ' +  person["lastName"] + "</span></div>");
+            $('#babystep-' + person["babyStep"]).append("<div><span class='friendsName'>" + person["firstName"] + ' ' +  person["lastName"] + "</span></div>");
         }
     });
     

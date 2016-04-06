@@ -127,6 +127,13 @@ body {
     color: #5c6366;
     line-height: 20px;
 }
+.friendsName {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    color: #5c6366;
+    line-height: 20px;
+}
 .bs-icon {
     float: left;
     vertical-align: top;
