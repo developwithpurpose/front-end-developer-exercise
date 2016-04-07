@@ -1,23 +1,28 @@
 jQuery(document).ready(function ($) {
-    
-    var $slideDuration = 400;
-    
-    // Make sure intial Baby Step content will slide smoothly
+
+    var slideDuration = 400;
+    var lastClickedTab;
+
+    // Make sure intial baby step content will slide smoothly
     $(".baby-step").slideUp(0);
     $(".baby-step.active").slideDown(0);
 
-    // Tabbed Navigation for the Baby Steps
+    // Tabbed slide navigation for the baby steps
     $("nav a.tab").click(function () {
-        
-        $(".baby-step.active").slideUp($slideDuration);
-        
-        $(".active").removeClass("active");
-        $(this).addClass("active");
 
-        var content_show = $(this).attr("title");
-        $("#" + content_show + "_content").slideDown($slideDuration);
-        $("#" + content_show + "_content").addClass("active");
-        
+        if (lastClickedTab !== this) {
+            $(".baby-step.active").slideUp(slideDuration);
+
+            $(".active").removeClass("active");
+            $(this).addClass("active");
+
+            var content_show = $(this).attr("id");
+            $("#" + content_show + "_content").slideDown(slideDuration);
+            $("#" + content_show + "_content").addClass("active");
+
+            lastClickedTab = this;
+        }
+
         return false;
     });
 
