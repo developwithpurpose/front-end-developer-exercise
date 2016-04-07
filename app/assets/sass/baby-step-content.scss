@@ -6,11 +6,11 @@
     float: left;
     width: 730px;
     height: inherit;
+    overflow-y: auto;
     
     .baby-step {
         padding-left: 70px;
         padding-right: 70px;
-        display: none;
         
         &.active {
             display: block;
