@@ -1,0 +1,16 @@
+/*
+    Header Styles for Baby Steps Front-end Developer Exercise
+*/
+
+.page-header {
+    background-image: url('../images/header.jpg');
+    height: 276px;
+    margin-bottom: 60px;
+    padding-right: 70px;
+    
+    h1, h2 {
+        float: right;
+        text-align: right;
+        width: 60%;
+    }
+}

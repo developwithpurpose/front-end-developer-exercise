@@ -1,0 +1,50 @@
+/*
+    Page Styles for Baby Steps Front-end Developer Exercise
+*/
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    background-color: #bbbfc2;
+}
+
+.page-container {
+    width: 980px;
+    margin: 0 auto 40px;
+    position: relative;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 10px #7C8083;
+    box-shadow: 0 0 10px #7C8083;
+    
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -webkit-box-shadow: 0 0 25px #7C8083;
+        box-shadow: 0 0 25px #7C8083;
+        width: 100%;
+        height: 60%;
+        -moz-border-radius: 100%;
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+    }
+    
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -webkit-box-shadow: 0 0 50px #7C8083;
+        box-shadow: 0 0 50px #7C8083;
+        left: 10%;
+        right: 10%;
+        bottom: 0;
+        width: 80%;
+        height: 50%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+    }
+}
+
+.page-content {
+    height: 584px;
+}
