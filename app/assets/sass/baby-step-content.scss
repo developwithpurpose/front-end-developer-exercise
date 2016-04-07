@@ -21,9 +21,17 @@
             overflow: hidden;
         }
         
+        footer.friend-list .friend {
+            color: #6fbee7;
+        }
+        
         img {
             float: left;
             padding-right: 15px;
+        }
+        
+        p:last-of-type {
+            margin-bottom: 40px;
         }
         
         a {
