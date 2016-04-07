@@ -11,7 +11,7 @@
     
     ul {
         list-style: none;
-        padding: 1px 0;
+        padding: 2px 0;
         margin: 0;
         
         li {
@@ -28,6 +28,7 @@
                 display: block;
                 color: inherit;
                 text-decoration: none;
+                transition: color 400ms, background-color 400ms;
                 
                 & .nav-icon {
                     background-image: url("../images/icons/sprites/icons_small.png");
