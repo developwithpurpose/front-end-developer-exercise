@@ -1,3 +1,143 @@
 <!doctype html>
-<title>Front-End Developer Exercise</title>
-The server is running!
+<head>
+    <title>Baby Steps</title>
+    <script src="assets/javascripts/jquery-2.2.3.min.js"></script>
+    <link href="assets/stylesheets/index.css" rel="stylesheet">
+</head>
+<body>
+    <div id="page">
+        <img class="shadow" src="assets/images/shadow_left.jpg"><div id="content">
+            <img id="header" src="assets/images/header_text.jpg">
+            <div style="position:relative;">
+                <div id="nav-holder">
+                    <input id="bs1" class="invis" name="bs" type="radio" checked>
+                    <label for="bs1" class="nav">
+                        <div class="nav-content">
+                            <span class="nav-name">Baby Step 1</span>
+                            <img class="inactive" src="assets/images/icons/individual/icons_small_bs1.png">
+                            <img class="active" src="assets/images/icons/individual/icons_small_bs1_blue.png">
+                        </div>
+                    </label>
+                    <input id="bs2" class="invis" name="bs" type="radio">
+                    <label for="bs2" class="nav">
+                        <div class="nav-content">
+                            <span class="nav-name">Baby Step 2</span>
+                            <img class="inactive" src="assets/images/icons/individual/icons_small_bs2.png">
+                            <img class="active" src="assets/images/icons/individual/icons_small_bs2_blue.png">
+                        </div>
+                    </label>
+                    <input id="bs3" class="invis" name="bs" type="radio">
+                    <label for="bs3" class="nav">
+                        <div class="nav-content">
+                            <span class="nav-name">Baby Step 3</span>
+                            <img class="inactive" src="assets/images/icons/individual/icons_small_bs3.png">
+                            <img class="active" src="assets/images/icons/individual/icons_small_bs3_blue.png">
+                        </div>
+                    </label>
+                    <input id="bs4" class="invis" name="bs" type="radio">
+                    <label for="bs4" class="nav">
+                        <div class="nav-content">
+                            <span class="nav-name">Baby Step 4</span>
+                            <img class="inactive" src="assets/images/icons/individual/icons_small_bs4.png">
+                            <img class="active" src="assets/images/icons/individual/icons_small_bs4_blue.png">
+                        </div>
+                    </label>
+                    <input id="bs5" class="invis" name="bs" type="radio">
+                    <label for="bs5" class="nav">
+                        <div class="nav-content"><span class="nav-name">Baby Step 5</span>
+                            <img class="inactive" src="assets/images/icons/individual/icons_small_bs5.png">
+                            <img class="active" src="assets/images/icons/individual/icons_small_bs5_blue.png">
+                        </div>
+                    </label>
+                    <input id="bs6" class="invis" name="bs" type="radio">
+                    <label for="bs6" class="nav">
+                        <div class="nav-content">
+                            <span class="nav-name">Baby Step 6</span>
+                            <img class="inactive" src="assets/images/icons/individual/icons_small_bs6.png">
+                            <img class="active" src="assets/images/icons/individual/icons_small_bs6_blue.png">
+                        </div>
+                    </label>
+                    <input id="bs7" class="invis" name="bs" type="radio">
+                    <label for="bs7" class="nav">
+                        <div class="nav-content">
+                            <span class="nav-name">Baby Step 7</span>
+                            <img class="inactive" src="assets/images/icons/individual/icons_small_bs7.png">
+                            <img class="active" src="assets/images/icons/individual/icons_small_bs7_blue.png">
+                        </div>
+                    </label>
+                    <div id="copy-holder">
+                        <div class="step">
+                            <img src="assets/images/headings/heading_bs1.png">
+                            <div class="para">An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.</div>
+                            <div class="para">This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!</div>
+                            <div class="dynamic-content" id="dynamic-content-1"></div>
+                        </div>
+                        <div for="bs2" class="step">
+                            <img src="assets/images/headings/heading_bs2.png">
+                            <div class="para">List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first.</div>
+                            <div class="para">The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.</div>
+                            <div class="dynamic-content" id="dynamic-content-2"></div>
+                        </div>
+                        <div class="step">
+                            <img src="assets/images/headings/heading_bs3.png">
+                            <div class="para">Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra” money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?” Your answer to that question is how much you should save.</div>
+                            <div class="para">Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you’re paying to yourself, a buffer between you and life.</div>
+                            <div class="dynamic-content" id="dynamic-content-3"></div>
+                        </div>
+                        <div class="step">
+                            <img src="assets/images/headings/heading_bs4.png">
+                            <div class="para">When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.</div>
+                            <div class="para">Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.</div>
+                            <div class="dynamic-content" id="dynamic-content-4"></div>
+                        </div>
+                        <div class="step">
+                            <img src="assets/images/headings/heading_bs5.png">
+                            <div class="para">By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.</div>
+                            <div class="para">In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!</div>
+                            <div class="dynamic-content" id="dynamic-content-5"></div>
+                        </div>
+                        <div class="step">
+                            <img src="assets/images/headings/heading_bs6.png">
+                            <div class="para">Now it’s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.</div>
+                            <div class="para">As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!</div>
+                            <div class="dynamic-content" id="dynamic-content-6"></div>
+                        </div>
+                        <div class="step">
+                            <img src="assets/images/headings/heading_bs7.png">
+                            <div class="para">It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!</div>
+                            <div class="para">Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.</div>
+                            <div class="dynamic-content" id="dynamic-content-7"></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div><img class="shadow" src="assets/images/shadow_right.jpg">
+        <img id="bottom-shadow" src="assets/images/shadow_bottom.jpg">
+    </div>
+
+    <script>
+        $.ajax("baby-steps.json").done(function(data) {
+            friends = [[], [], [], [], [], [], []];
+            for (i = 0; i < data.friends.length; i++) {
+                friends[data.friends[i].babyStep - 1].push(data.friends[i].firstName + " " + data.friends[i].lastName);
+            }
+            for (i = 0; i < friends.length; i++) {
+                switch(friends[i].length) {
+                    case 0: break;
+                    case 1:
+                        $("#dynamic-content-" + (i + 1)).html('<a class="dynamic-name">' + friends[i][0] + '</a> is also in Baby Step ' + (i+1));
+                        break;
+                    case 2:
+                        $("#dynamic-content-" + (i + 1)).html('<a class="dynamic-name">' + friends[i][0] + '</a> and <a class="dynamic-name">' + friends[i][1] + '</a> are also in Baby Step ' + (i+1));
+                        break;
+                    case 3:
+                        $("#dynamic-content-" + (i + 1)).html('<a class="dynamic-name">' + friends[i][0] + '</a> and <a class="dynamic-name">' + friends[i][1] + '</a> and 1 other friend are also in Baby Step ' + (i+1));
+                        break;
+                    default:
+                        $("#dynamic-content-" + (i + 1)).html('<a class="dynamic-name">' + friends[i][0] + '</a> and <a class="dynamic-name">' + friends[i][1] + '</a> and ' + (friends[i].length-2) + ' other friends are also in Baby Step ' + (i+1));
+                        break;
+                }
+            }
+        });
+    </script>
+</body>
