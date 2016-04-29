@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// ------
+// Colors
+// ------
+
+$blue-light		:	#6fbee7;
+$blue-med		:	#36abe1;
+
+$grey-light		:	#ebeced;
+$grey-med		:	#bbbfc2;
+$grey-med-2		:	#9ba0a4;
+$grey-med-3		:	#5c6366;
+$grey-med-4		:	#65686f;
+
+
+// -----
+// Fonts
+// -----
+
+$font-main			: 'Open Sans', sans-serif;
+// weights: light 300, bold 700
+
+$font-secondary		: 'Source Sans Pro', sans-serif;
+// weights: light 300, normal 400, semi-bold 600
+
+$font-body			: 'Helvetica', helvetica, sans-serif;
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

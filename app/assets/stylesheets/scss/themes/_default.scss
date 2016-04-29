@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+.main-wrapper {
+	background-color: $grey-med;
+	padding-bottom: 60px;
+}
+
+.container {
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
+	background-color: white;
+}
+
+.body-section {
+	margin-top: 60px;
+}
+
+.content-container {
+	position: relative;
+}
+
+.content-section {
+	padding: 0 70px;
+	display: inline-block;
+	width: 100%;
+	max-width: 680px;
+	vertical-align: top;
+}
+
+.content-component {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	@include transition(0.2s);
+
+	&.active {
+		@include transition-delay(0.35s);
+		opacity: 1.0;
+		visibility: visible;
+	}
+}
+
+.title-icon {
+	color: $blue-med;
+	width: 77px;
+	height: 65px;
+	text-align: center;
+	float: left;
+	margin-right: 15px;
+	font-size: 50px;
+
+	&:before {
+		vertical-align: middle;
+	}
+
+	&.icon-currency {
+		font-size: 38px;
+	}
+
+	&.icon-bars {
+		font-size: 58px;
+	}
+
+	&.icon-book {
+		font-size: 66px;
+	}
+
+	&.icon-house {
+		font-size: 60px;
+	}
+
+	&.icon-hand {
+		font-size: 64px;
+	}
+}

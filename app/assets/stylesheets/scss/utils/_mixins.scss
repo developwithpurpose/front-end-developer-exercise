@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin transition ($duration) {
+    -moz-transition: $duration;
+      -o-transition: $duration;
+     -ms-transition: $duration;
+ -webkit-transition: $duration;
+         transition: $duration;
+}
+
+@mixin transition-delay ($duration) {
+-webkit-transition-delay: $duration;
+   -moz-transition-delay: $duration;
+     -o-transition-delay: $duration;
+    	transition-delay: $duration;
+}
+
+@mixin box-shadow ($left, $top, $blur, $color, $inset:"") {
+  -webkit-box-shadow:$left $top $blur $color #{$inset};
+  -moz-box-shadow:$left $top $blur $color #{$inset};
+  box-shadow:$left $top $blur $color #{$inset};
+}

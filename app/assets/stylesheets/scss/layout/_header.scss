@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+header {
+	height: 276px;
+	background-image: url(../images/header.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+.header-container {
+	padding: 50px 70px;
+	text-align: right;
+}

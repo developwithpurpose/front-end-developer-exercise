@@ -1,0 +1,42 @@
+nav {
+	background-color: $grey-light;
+	display: inline-block;
+	width: 100%;
+	max-width: 300px;
+	margin-right: -5px;
+	vertical-align: top;
+
+	li {
+
+		a {
+			display: block;
+			background-color: none;
+			text-align: right;
+			font-family: $font-secondary;
+			font-size: 18px;
+			line-height: 60px;
+			font-weight: 400;
+			color: $grey-med-2;
+			border-bottom: 1px solid white;
+
+			@include transition(0.2s)
+
+			&:hover {
+				text-decoration: none;
+				padding-right: 10px;
+			}
+
+			&.active {
+				font-weight: 600;
+				color: $blue-med;
+				background-color: white;
+			}
+
+			[class*="icon-"] {
+				padding: 0 24px;
+				position: relative;
+				pointer-events: none;
+			}
+		}
+	}
+}

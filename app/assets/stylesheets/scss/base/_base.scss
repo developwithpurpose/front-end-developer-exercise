@@ -1,0 +1,85 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+  background-color: $grey-med;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, *::before, *::after {
+  box-sizing: inherit;
+} 
+
+h1,
+h2 {
+	font-family: $font-main;
+	color: white;
+	margin: 0;
+}
+h1 {
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 48px;
+	margin-top: 5px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 32px;
+	line-height: 1;
+}
+
+h3 {
+	font-family: $font-secondary;
+	font-size: 30px;
+	line-height: 20px;
+	font-weight: 600;
+	color: $blue-med;
+	margin: 0;
+	padding: 4px 0 6px;
+}
+
+h4 {
+	font-family: $font-secondary;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 300;
+	color: $grey-med-3;
+	margin: 0;
+}
+
+p {
+	font-family: $font-body;
+	font-size: 13px;
+	line-height: 18px;
+	color: $grey-med-4;	
+	margin: 16px 0 22px;
+}
+
+a {
+	color: $blue-light;
+	text-decoration: none;
+	// @include transition(0.2s);
+	
+	&:hover {
+		text-decoration: underline;
+		color: $blue-med;
+	}
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
