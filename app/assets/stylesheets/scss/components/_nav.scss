@@ -1,10 +1,11 @@
 nav {
 	background-color: $grey-light;
-	display: inline-block;
-	width: 100%;
+	position: absolute;
+	width: 30%;
 	max-width: 300px;
-	margin-right: -5px;
-	vertical-align: top;
+	top: 0;
+	left: 0;
+	bottom: 0;
 
 	li {
 
@@ -18,24 +19,44 @@ nav {
 			font-weight: 400;
 			color: $grey-med-2;
 			border-bottom: 1px solid white;
-
+			position: relative;
+			z-index: 1;
 			@include transition(0.2s)
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 50%;
+				height: 100%;
+				opacity: 0;
+				background-color: white;
+				@include transition(0.2s);
+				z-index: -1;
+			}
 
 			&:hover {
 				text-decoration: none;
-				padding-right: 10px;
+				background-color: rgba(255,255, 255, 0.35);
+				// padding-right: 10px;
 			}
 
 			&.active {
-				font-weight: 600;
+				font-weight: 600;				
 				color: $blue-med;
-				background-color: white;
+				// background-color: white;
+
+				&:before {
+					opacity: 1;
+					width: 100%;
+				}
 			}
 
 			[class*="icon-"] {
 				padding: 0 24px;
 				position: relative;
-				pointer-events: none;
+				z-index: -1;
 			}
 		}
 	}

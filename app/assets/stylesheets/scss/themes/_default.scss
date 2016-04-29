@@ -17,18 +17,22 @@
 
 .body-section {
 	margin-top: 60px;
-}
-
-.content-container {
 	position: relative;
 }
 
 .content-section {
 	padding: 0 70px;
-	display: inline-block;
-	width: 100%;
+	display: block;
+	// float: right;
+	margin-left: 30%;
+	width: 70%;
 	max-width: 680px;
 	vertical-align: top;
+}
+
+.content-container {
+	position: relative;
+	min-height: 600px;
 }
 
 .content-component {
@@ -37,14 +41,17 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
 	@include transition(0.2s);
 
 	&.active {
 		@include transition-delay(0.35s);
+		display: block;
 		opacity: 1.0;
 		visibility: visible;
+	}
+
+	&.hidden {
+		display: none;
 	}
 }
 

@@ -528,6 +528,15 @@ ul {
   content: "\e906";
 }
 
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
 header {
   height: 276px;
   background-image: url(../images/header.jpg);
@@ -542,11 +551,12 @@ header {
 
 nav {
   background-color: #ebeced;
-  display: inline-block;
-  width: 100%;
+  position: absolute;
+  width: 30%;
   max-width: 300px;
-  margin-right: -5px;
-  vertical-align: top;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
 
 nav li a {
@@ -559,6 +569,8 @@ nav li a {
   font-weight: 400;
   color: #9ba0a4;
   border-bottom: 1px solid white;
+  position: relative;
+  z-index: 1;
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
   -ms-transition: 0.2s;
@@ -566,21 +578,42 @@ nav li a {
   transition: 0.2s;
 }
 
+nav li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  background-color: white;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: -1;
+}
+
 nav li a:hover {
   text-decoration: none;
-  padding-right: 10px;
+  background-color: rgba(255, 255, 255, 0.35);
 }
 
 nav li a.active {
   font-weight: 600;
   color: #36abe1;
-  background-color: white;
+}
+
+nav li a.active:before {
+  opacity: 1;
+  width: 100%;
 }
 
 nav li a [class*="icon-"] {
   padding: 0 24px;
   position: relative;
-  pointer-events: none;
+  z-index: -1;
 }
 
 .main-wrapper {
@@ -597,18 +630,21 @@ nav li a [class*="icon-"] {
 
 .body-section {
   margin-top: 60px;
-}
-
-.content-container {
   position: relative;
 }
 
 .content-section {
   padding: 0 70px;
-  display: inline-block;
-  width: 100%;
+  display: block;
+  margin-left: 30%;
+  width: 70%;
   max-width: 680px;
   vertical-align: top;
+}
+
+.content-container {
+  position: relative;
+  min-height: 600px;
 }
 
 .content-component {
@@ -617,8 +653,6 @@ nav li a [class*="icon-"] {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
   -ms-transition: 0.2s;
@@ -631,8 +665,13 @@ nav li a [class*="icon-"] {
   -moz-transition-delay: 0.35s;
   -o-transition-delay: 0.35s;
   transition-delay: 0.35s;
+  display: block;
   opacity: 1.0;
   visibility: visible;
+}
+
+.content-component.hidden {
+  display: none;
 }
 
 .title-icon {
