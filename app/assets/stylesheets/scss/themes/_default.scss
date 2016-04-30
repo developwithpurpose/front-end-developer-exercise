@@ -13,17 +13,50 @@
 	max-width: 980px;
 	margin: 0 auto;
 	background-color: white;
+	position: relative;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 15px;
+		height: 100%;
+		top: 0;
+		background-repeat: no-repeat;
+		background-position: top;
+	}
+
+	&:before {
+		background-image: url(../images/shadow_left.jpg);
+		left: -15px;
+	}
+
+	&:after {
+		background-image: url(../images/shadow_right.jpg);
+		right: -15px;
+	}
 }
 
 .body-section {
 	margin-top: 60px;
 	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		bottom: -30px;
+		left: 0;
+		height: 30px;
+		background-image: url(../images/shadow_bottom.jpg);
+		background-position: bottom;
+		background-size: cover;
+	}
 }
 
 .content-section {
 	padding: 0 70px;
 	display: block;
-	// float: right;
 	margin-left: 30%;
 	width: 70%;
 	max-width: 680px;

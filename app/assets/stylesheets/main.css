@@ -557,6 +557,9 @@ nav {
   top: 0;
   left: 0;
   bottom: 0;
+  background-image: url(../images/shadow_left_nav.jpg);
+  background-position: right;
+  background-repeat: repeat-y;
 }
 
 nav li a {
@@ -611,9 +614,13 @@ nav li a.active:before {
 }
 
 nav li a [class*="icon-"] {
-  padding: 0 24px;
   position: relative;
+  display: inline-block;
+  vertical-align: baseline;
   z-index: -1;
+  width: 85px;
+  text-align: center;
+  padding: 0 24px;
 }
 
 .main-wrapper {
@@ -626,11 +633,44 @@ nav li a [class*="icon-"] {
   max-width: 980px;
   margin: 0 auto;
   background-color: white;
+  position: relative;
+}
+
+.container:before, .container:after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.container:before {
+  background-image: url(../images/shadow_left.jpg);
+  left: -15px;
+}
+
+.container:after {
+  background-image: url(../images/shadow_right.jpg);
+  right: -15px;
 }
 
 .body-section {
   margin-top: 60px;
   position: relative;
+}
+
+.body-section:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: -30px;
+  left: 0;
+  height: 30px;
+  background-image: url(../images/shadow_bottom.jpg);
+  background-position: bottom;
+  background-size: cover;
 }
 
 .content-section {
