@@ -57,11 +57,12 @@ nav {
 			[class*="icon-"] {
 				position: relative;
 			    display: inline-block;
-			    vertical-align: baseline;
+			    vertical-align: middle;
 			    z-index: -1;
 			    width: 85px;
 			    text-align: center;
 			    padding: 0 24px;
+			    font-size: 30px;
 			}
 		}
 	}

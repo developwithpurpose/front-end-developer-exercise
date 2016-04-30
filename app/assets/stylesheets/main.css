@@ -616,11 +616,12 @@ nav li a.active:before {
 nav li a [class*="icon-"] {
   position: relative;
   display: inline-block;
-  vertical-align: baseline;
+  vertical-align: middle;
   z-index: -1;
   width: 85px;
   text-align: center;
   padding: 0 24px;
+  font-size: 30px;
 }
 
 .main-wrapper {
@@ -714,36 +715,31 @@ nav li a [class*="icon-"] {
   display: none;
 }
 
+.title-block {
+  display: inline-block;
+}
+
 .title-icon {
   color: #36abe1;
   width: 77px;
-  height: 65px;
+  height: 60px;
   text-align: center;
-  float: left;
+  display: inline-block;
   margin-right: 15px;
-  font-size: 50px;
+  font-size: 80px;
+  position: relative;
 }
 
 .title-icon:before {
-  vertical-align: middle;
+  position: absolute;
+  top: -5px;
+  left: 0;
 }
 
-.title-icon.icon-currency {
-  font-size: 38px;
+.other-users {
+  padding: 10px 0;
 }
 
-.title-icon.icon-bars {
-  font-size: 58px;
-}
-
-.title-icon.icon-book {
-  font-size: 66px;
-}
-
-.title-icon.icon-house {
-  font-size: 60px;
-}
-
-.title-icon.icon-hand {
-  font-size: 64px;
+.other-users p {
+  margin: 0;
 }

@@ -88,36 +88,31 @@
 	}
 }
 
+.title-block {
+	display: inline-block;
+}
+
 .title-icon {
 	color: $blue-med;
 	width: 77px;
-	height: 65px;
+	height: 60px;
 	text-align: center;
-	float: left;
+	display: inline-block;
 	margin-right: 15px;
-	font-size: 50px;
+	font-size: 80px;
+	position: relative;
 
 	&:before {
-		vertical-align: middle;
+		position: absolute;
+		top: -5px;
+		left: 0;
 	}
+}
 
-	&.icon-currency {
-		font-size: 38px;
-	}
+.other-users {
+	padding: 10px 0;
 
-	&.icon-bars {
-		font-size: 58px;
-	}
-
-	&.icon-book {
-		font-size: 66px;
-	}
-
-	&.icon-house {
-		font-size: 60px;
-	}
-
-	&.icon-hand {
-		font-size: 64px;
+	p {
+		margin: 0;
 	}
 }
