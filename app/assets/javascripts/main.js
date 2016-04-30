@@ -59,7 +59,7 @@ var ramsey = {
 
 	// Jquery - AJAX method for getting our friend's baby steps
 	getFriendsBabySteps: function() {
-		console.log("Baby steps!");
+		// console.log("Baby steps!");
 
 		$.ajax({
 			url: './baby-steps.json',
@@ -75,10 +75,6 @@ var ramsey = {
 
 	// Now we sort through our "friends" object and organize them by step
 	organizeFriendsBabySteps: function(friends) {
-		// Iterate through our friend list
-		// If this baby step = next baby step,
-		// Create a "users" object & add them
-		// Otherwise, send off to our display function!
 		var friendList = [];
 		var currentStep = friends[0]["babyStep"];
 
@@ -114,7 +110,7 @@ var ramsey = {
 
 	// Displaying our friend's baby steps
 	displayFriendsBabySteps: function(friends) {
-		console.log(friends);
+		// console.log(friends);
 		var currentStep = friends[0]["babyStep"];
 		var $babyStepDiv = $('.content-component[data-baby-step="' + currentStep + '"] .other-users');
 		var usersText = '';

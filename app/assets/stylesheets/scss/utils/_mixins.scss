@@ -3,18 +3,18 @@
 // -----------------------------------------------------------------------------
 
 @mixin transition ($duration) {
-    -moz-transition: $duration;
-      -o-transition: $duration;
-     -ms-transition: $duration;
- -webkit-transition: $duration;
-         transition: $duration;
+ //    -moz-transition: $duration;
+ //      -o-transition: $duration;
+ //     -ms-transition: $duration;
+ // -webkit-transition: $duration;
+ //         transition: $duration;
 }
 
 @mixin transition-delay ($duration) {
--webkit-transition-delay: $duration;
-   -moz-transition-delay: $duration;
-     -o-transition-delay: $duration;
-    	transition-delay: $duration;
+// -webkit-transition-delay: $duration;
+//    -moz-transition-delay: $duration;
+//      -o-transition-delay: $duration;
+//     	transition-delay: $duration;
 }
 
 @mixin box-shadow ($left, $top, $blur, $color, $inset:"") {

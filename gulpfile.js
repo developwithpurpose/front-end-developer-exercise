@@ -6,7 +6,11 @@
 // ----------
 
 var gulp            = require('gulp'),
-    srcPath         = "app/assets/";
+    srcPath         = "app/assets/",
+    scriptsArray    = [
+        srcPath + '/javascripts/main.js',
+        srcPath + '/javascripts/modernizr-custom.js'
+    ];
 
 // Additional packages
 var concat      = require('gulp-concat'),
@@ -59,7 +63,7 @@ gulp.task('styles',function(){
 
 // Scripts
 gulp.task('scripts', function() {
-    gulp.src(srcPath + '/javascripts/main.js')
+    gulp.src(scriptsArray)
         .pipe(maps.init())
         .pipe(concat('main.js'))
         .pipe(uglify())
