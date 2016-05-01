@@ -1,0 +1,105 @@
+@import 'normalize';
+
+$bg-color: #bbbfc2;
+$txt-color: #65686f;
+$container-bg-color: #fff;
+$content-nav-bg-color: #ebeced;
+$content-nav-bg-color-dark: #d1d5d6;
+$nav-font-color: #9ba0a4;
+$selected-color: #36abe1;
+
+html {
+  background-color: $bg-color;
+  color: $txt-color;
+}
+
+.container {
+  background-color: $container-bg-color;
+  height: 900px;
+  margin: 0 auto;
+  width: 980px;
+
+  & > header {
+    padding-bottom: 60px;
+  }
+
+  .bs-content {
+    height: 559px;
+    overflow: hidden;
+  }
+}
+
+.content-nav {
+  background: $content-nav-bg-color;
+  background: linear-gradient(to right, $content-nav-bg-color 96%, $content-nav-bg-color-dark);
+  float: left;
+  height: 100%;
+  width: 30%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      border-bottom: 1px solid $container-bg-color;
+      font: 18px/60px 'Source Sans Pro', sans-serif;
+      list-style: none;
+      text-align: right;
+
+      a {
+        color: $nav-font-color;
+        text-decoration: none;
+      }
+
+      .image {
+        display: inline-block;
+        height: 25px;
+        margin: 0 25px -7px;
+        width: 30px;
+      }
+    }
+
+    .nav-bs1 .image {
+        background: url("../images/icons/sprites/icons_small.png") 0 0;
+    }
+
+    .nav-bs2 .image {
+      background: url("../images/icons/sprites/icons_small.png") 0 -25px;
+    }
+
+    .nav-bs3 .image {
+      background: url("../images/icons/sprites/icons_small.png") 0 -50px;
+    }
+
+    .nav-bs4 .image {
+      background: url("../images/icons/sprites/icons_small.png") 0 -75px;
+    }
+
+    .nav-bs5 .image {
+      background: url("../images/icons/sprites/icons_small.png") 0 -100px;
+    }
+
+    .nav-bs6 .image {
+      background: url("../images/icons/sprites/icons_small.png") 0 -125px;
+    }
+
+    .nav-bs7 .image {
+      background: url("../images/icons/sprites/icons_small.png") 0 -150px;
+    }
+  }
+}
+
+.content {
+  float: right;
+  height: 100%;
+  width: 69%;
+
+  & > section:target ~ section:last-child, & > section {
+    padding: 0 70px 40px;
+    display: none;
+  }
+
+  & > :last-child, & > section:target {
+    display: block;
+  }
+}
