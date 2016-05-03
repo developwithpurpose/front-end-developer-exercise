@@ -1,0 +1,130 @@
+@import 'normalize';
+
+$bg-color: #bbbfc2;
+$txt-color: #65686f;
+$container-bg-color: #fff;
+$content-nav-bg-color: #ebeced;
+$content-nav-bg-color-dark: #d1d5d6;
+$nav-font-color: #9ba0a4;
+$selected-color: #36abe1;
+
+html {
+  background-color: $bg-color;
+  color: $txt-color;
+}
+
+.container {
+  background-color: $container-bg-color;
+  box-shadow: 0 4px 8px -2px $txt-color, 0 -150px 20px -1px $txt-color;
+  height: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 980px;
+
+  & > header {
+    padding-bottom: 60px;
+  }
+
+  .bs-content {
+    background: $content-nav-bg-color;
+    background: linear-gradient(to right, $content-nav-bg-color 96%, $content-nav-bg-color-dark);
+    height: 559px;
+    position: relative;
+    width: 290px;
+
+    [type=radio] {
+      display: none;
+    }
+
+    @for $i from 1 through 7 {
+      $inactive-height: ($i - 1) * -25px;
+      $active-height: 175px + ($i - 1) * -25px;
+
+      #nav-bs#{$i} + label .image {
+        background: url("../images/icons/sprites/icons_small.png") 0 $inactive-height;
+      }
+
+      #nav-bs#{$i}:checked + label {
+        color: $selected-color;
+        font-weight: 600;
+
+        .image {
+          background: url("../images/icons/sprites/icons_small.png") 0 $active-height;
+        }
+      }
+
+      #nav-bs#{$i}:checked ~ .content .content-view {
+        $content-height: ($i - 1) * -559px;
+        top: $content-height;
+      }
+
+      #nav-bs#{$i}:checked ~ .bs-selector {
+        $selector-top: ($i - 1) * 61px;
+
+        top: $selector-top;
+      }
+    }
+
+    .bs-selector {
+      background-color: $container-bg-color;
+      height: 61px;
+      position: absolute;
+      transition: top 1s ease-in-out;
+      width: 100%;
+    }
+
+    label {
+      border-bottom: 1px solid $container-bg-color;
+      color: $nav-font-color;
+      cursor: pointer;
+      display: block;
+      font: 18px/60px 'Source Sans Pro', sans-serif;
+      position: relative;
+      text-align: right;
+      z-index: 1;
+
+      .nav-txt {
+        position: relative;
+        z-index: 2;
+      }
+
+      .image {
+        display: inline-block;
+        height: 25px;
+        margin: 0 25px -7px;
+        width: 30px;
+      }
+    }
+
+    .content {
+      height: 559px;
+      left: 290px;
+      overflow: hidden;
+      position: absolute;
+      top: 0px;
+      width: 690px;
+
+      .content-view {
+        position: absolute;
+        top: 0px;
+        transition: top 1s ease-in-out;
+      }
+
+      section {
+        height: 559px;
+        overflow: hidden;
+        padding-left: 70px;
+        padding-right: 70px;
+
+        .bs-friends {
+          margin-top: 40px;
+
+          a {
+            color: $selected-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

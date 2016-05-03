@@ -6,9 +6,15 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
+    "build-css": "node-sass --output-style compressed --include-path app/assets/scss app/assets/scss/style.scss app/assets/stylesheets/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "build-js": "./node_modules/uglify-js/bin/uglifyjs app/assets/javascripts/dynamic-content.js -o app/assets/javascripts/dynamic-content.min.js --compress",
     "start": "http-server ./app -d false"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "http-server": "^0.8.0",
+    "node-sass": "^3.6.0",
+    "nodemon": "^1.9.2",
+    "uglify-js": "^2.6.2"
   }
 }
