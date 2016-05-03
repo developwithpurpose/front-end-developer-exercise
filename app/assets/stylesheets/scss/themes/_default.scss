@@ -61,6 +61,7 @@
 	width: 70%;
 	max-width: 680px;
 	vertical-align: top;
+	overflow: hidden;
 }
 
 .content-container {
@@ -69,25 +70,27 @@
 }
 
 .content-component {
-	opacity: 0;
-	visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
-	@include transition(0.2s);
-
-	&.active {
-		@include transition-delay(0.35s);
-		display: block;
-		opacity: 1.0;
-		visibility: visible;
-	}
-
-	&.hidden {
-		display: none;
-	}
 }
 
+.step-fade-container {
+	.step-fade {
+		position: relative;
+		opacity: 0;
+		visibility: hidden;
+		@include transition(0.3s);
+		@include transform(translate(10%, 0));
+
+		&.active {
+			@include transition-delay(0.35s);
+			@include transform(translate(0, 0));
+			opacity: 1.0;
+			visibility: visible;
+		}
+	}
+}
 .title-block {
 	display: inline-block;
 }

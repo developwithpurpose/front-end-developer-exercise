@@ -574,6 +574,11 @@ nav li a {
   border-bottom: 1px solid white;
   position: relative;
   z-index: 1;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 nav li a:before {
@@ -585,6 +590,11 @@ nav li a:before {
   height: 100%;
   opacity: 0;
   background-color: white;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   z-index: -1;
 }
 
@@ -671,6 +681,7 @@ nav li a [class*="icon-"] {
   width: 70%;
   max-width: 680px;
   vertical-align: top;
+  overflow: hidden;
 }
 
 .content-container {
@@ -679,21 +690,39 @@ nav li a [class*="icon-"] {
 }
 
 .content-component {
-  opacity: 0;
-  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.content-component.active {
-  display: block;
-  opacity: 1.0;
-  visibility: visible;
+.step-fade-container .step-fade {
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -moz-transform: translate(10%, 0);
+  -o-transform: translate(10%, 0);
+  -ms-transform: translate(10%, 0);
+  -webkit-transform: translate(10%, 0);
+  transform: translate(10%, 0);
 }
 
-.content-component.hidden {
-  display: none;
+.step-fade-container .step-fade.active {
+  -webkit-transition-delay: 0.35s;
+  -moz-transition-delay: 0.35s;
+  -o-transition-delay: 0.35s;
+  transition-delay: 0.35s;
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1.0;
+  visibility: visible;
 }
 
 .title-block {
