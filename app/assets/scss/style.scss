@@ -15,8 +15,10 @@ html {
 
 .container {
   background-color: $container-bg-color;
+  box-shadow: 0 4px 8px -2px $txt-color, 0 -150px 20px -1px $txt-color;
   height: 900px;
   margin: 0 auto;
+  overflow: hidden;
   width: 980px;
 
   & > header {
@@ -24,31 +26,66 @@ html {
   }
 
   .bs-content {
+    background: $content-nav-bg-color;
+    background: linear-gradient(to right, $content-nav-bg-color 96%, $content-nav-bg-color-dark);
     height: 559px;
-    overflow: hidden;
-  }
-}
+    position: relative;
+    width: 290px;
 
-.content-nav {
-  background: $content-nav-bg-color;
-  background: linear-gradient(to right, $content-nav-bg-color 96%, $content-nav-bg-color-dark);
-  float: left;
-  height: 100%;
-  width: 30%;
+    [type=radio] {
+      display: none;
+    }
 
-  ul {
-    margin: 0;
-    padding: 0;
+    @for $i from 1 through 7 {
+      $inactive-height: ($i - 1) * -25px;
+      $active-height: 175px + ($i - 1) * -25px;
 
-    li {
+      #nav-bs#{$i} + label .image {
+        background: url("../images/icons/sprites/icons_small.png") 0 $inactive-height;
+      }
+
+      #nav-bs#{$i}:checked + label {
+        color: $selected-color;
+        font-weight: 600;
+
+        .image {
+          background: url("../images/icons/sprites/icons_small.png") 0 $active-height;
+        }
+      }
+
+      #nav-bs#{$i}:checked ~ .content .content-view {
+        $content-height: ($i - 1) * -559px;
+        top: $content-height;
+      }
+
+      #nav-bs#{$i}:checked ~ .bs-selector {
+        $selector-top: ($i - 1) * 61px;
+
+        top: $selector-top;
+      }
+    }
+
+    .bs-selector {
+      background-color: $container-bg-color;
+      height: 61px;
+      position: absolute;
+      transition: top 1s ease-in-out;
+      width: 100%;
+    }
+
+    label {
       border-bottom: 1px solid $container-bg-color;
+      color: $nav-font-color;
+      cursor: pointer;
+      display: block;
       font: 18px/60px 'Source Sans Pro', sans-serif;
-      list-style: none;
+      position: relative;
       text-align: right;
+      z-index: 1;
 
-      a {
-        color: $nav-font-color;
-        text-decoration: none;
+      .nav-txt {
+        position: relative;
+        z-index: 2;
       }
 
       .image {
@@ -59,47 +96,35 @@ html {
       }
     }
 
-    .nav-bs1 .image {
-        background: url("../images/icons/sprites/icons_small.png") 0 0;
+    .content {
+      height: 559px;
+      left: 290px;
+      overflow: hidden;
+      position: absolute;
+      top: 0px;
+      width: 690px;
+
+      .content-view {
+        position: absolute;
+        top: 0px;
+        transition: top 1s ease-in-out;
+      }
+
+      section {
+        height: 559px;
+        overflow: hidden;
+        padding-left: 70px;
+        padding-right: 70px;
+
+        .bs-friends {
+          margin-top: 40px;
+
+          a {
+            color: $selected-color;
+            text-decoration: none;
+          }
+        }
+      }
     }
-
-    .nav-bs2 .image {
-      background: url("../images/icons/sprites/icons_small.png") 0 -25px;
-    }
-
-    .nav-bs3 .image {
-      background: url("../images/icons/sprites/icons_small.png") 0 -50px;
-    }
-
-    .nav-bs4 .image {
-      background: url("../images/icons/sprites/icons_small.png") 0 -75px;
-    }
-
-    .nav-bs5 .image {
-      background: url("../images/icons/sprites/icons_small.png") 0 -100px;
-    }
-
-    .nav-bs6 .image {
-      background: url("../images/icons/sprites/icons_small.png") 0 -125px;
-    }
-
-    .nav-bs7 .image {
-      background: url("../images/icons/sprites/icons_small.png") 0 -150px;
-    }
-  }
-}
-
-.content {
-  float: right;
-  height: 100%;
-  width: 69%;
-
-  & > section:target ~ section:last-child, & > section {
-    padding: 0 70px 40px;
-    display: none;
-  }
-
-  & > :last-child, & > section:target {
-    display: block;
   }
 }
