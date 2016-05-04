@@ -11,15 +11,18 @@ var ramsey = {
 	// Initalize allllll dem functions
 	init: function() {
 		// console.log("Initialize");
+		console.log("Hey there, Ramsey Solutions!");
 		this.javascriptEnabled();
 		this.listeners();
 		this.getFriendsBabySteps();
 	},
 
+
 	// This will run if the browser has javascript enabled. Obviously.
 	javascriptEnabled: function() {
 		$('body').addClass('javascript-enabled');
 	},
+
 
 	// This is where we set up our scene listeners
 	listeners: function() {
@@ -27,28 +30,28 @@ var ramsey = {
 		$('.main-navigation a').on('click', this.navToggle);
 	},
 
+
 	// Toggle navigation items, obtain content target
 	navToggle: function(e) {
-		// console.log("navToggle");
+		// console.log("Nav toggle");
 		e.preventDefault();
 		var $currentNav = $(e.target),
 			$lastNav,
 			$targetContent = $($currentNav.attr('href'));
 
 		if ($lastNav == null) {
-			$lastNav = $('.main-navigation a.active');
+			$lastNav = $('.main-navigation li.active');
 		}
 
 		$lastNav.removeClass('active');
-		$currentNav.addClass('active');
-		$lastNav = $currentNav;
+		$currentNav.parent().addClass('active');
+		$lastNav = $currentNav.parent();
 		ramsey.contentToggle.toggleNow($targetContent);
-
 	},
+
 
 	// Swap out the content based on the navigation item selected
 	contentToggle: {
-		// console.log("Target " + element.attr("id"));
 		$currentContent: null,
 		$lastContent: null,
 
@@ -60,8 +63,6 @@ var ramsey = {
 			}
 
 			if (!this.$lastContent) {
-				console.log("Last-child default");
-				console.log($currentContent);
 				this.$lastContent = $('.content-component.active');
 			}
 
@@ -80,6 +81,7 @@ var ramsey = {
 		}
 	},
 
+
 	// Sequential fader for a nice transition effect!
 	stepFader: function(index, element, fadeIn) {
 		setTimeout(function() {
@@ -87,15 +89,17 @@ var ramsey = {
 		}, 100 * index);
 	},
 
+
 	// Jquery - AJAX method for getting our friend's baby steps
 	getFriendsBabySteps: function() {
 		// console.log("Baby steps!");
 
 		$.ajax({
 			url: './baby-steps.json',
+			// url: './baby-steps-unsorted.json',
 			success: function(response) {
-				// console.log("Success!");
-				ramsey.organizeFriendsBabySteps(response["friends"]);
+				console.log("Success!");
+				ramsey.reorderFriendsBabySteps(response["friends"]);
 			},
 			error: function(response) {
 				console.log(response.status + " " + response.statusText);
@@ -103,8 +107,25 @@ var ramsey = {
 		});
 	},
 
-	// Now we sort through our "friends" object and organize them by step
-	organizeFriendsBabySteps: function(friends) {
+
+	// Let's first ensure that our friends are
+	// listed by their baby step in ascending order
+	reorderFriendsBabySteps: function(friends) {
+		console.log("Reorder baby steps");
+		friends.sort(function(a, b) {
+			var stepA = a.babyStep;
+			var stepB = b.babyStep;
+			return stepA - stepB;
+		});
+
+		this.groupFriendsBabySteps(friends);
+	},
+
+
+	// Now we sort through our "friends" object
+	// and group them together by their step
+	groupFriendsBabySteps: function(friends) {
+		// console.log("group baby steps");
 		var friendList = [];
 		var currentStep = friends[0]["babyStep"];
 
@@ -115,32 +136,50 @@ var ramsey = {
 			} else {
 
 				// sort by last name ascending
-				this.sortFriendsBabySteps(friendList);
-				this.displayFriendsBabySteps(friendList);
+				this.alphabetizeFriends(friendList);
 				friendList = [];
 				friendList.push(friends[i]);
 				currentStep ++;
 			}
 		}
 
-		// sort by last name ascending
-		this.sortFriendsBabySteps(friendList);
-		this.displayFriendsBabySteps(friendList);
-
+		this.alphabetizeFriends(friendList);
 	},
 
+
 	// Sort the list alphabetically by their last names
-	sortFriendsBabySteps: function(friends) {
+	alphabetizeFriends: function(friends) {
+		// console.log("Alphabetize friends");
 		friends.sort(function(a, b) {
 			var textA = a.lastName.toUpperCase();
 	    	var textB = b.lastName.toUpperCase();
-	    	return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+	    	var textAFirst = a.firstName.toUpperCase();
+	    	var textBFirst = b.firstName.toUpperCase();
+
+	    	// Sort by last name
+	    	if (textA < textB) {
+	    		return -1;
+	    	} else if (textA > textB) {
+	    		return 1;
+	    	}
+
+	    	// Then if necessary, sort by first name
+	    	if (textAFirst < textBFirst) {
+	    		return -1;
+	    	} else if (textAFirst > textBFirst) {
+	    		return 1;
+	    	} else {
+	    		return 0;
+	    	}
 		});
+
+		this.displayFriendsBabySteps(friends);
 	},
+
 
 	// Displaying our friend's baby steps
 	displayFriendsBabySteps: function(friends) {
-		// console.log(friends);
+		// console.log("Display baby steps");
 		var currentStep = friends[0]["babyStep"];
 		var $babyStepDiv = $('.content-component[data-baby-step="' + currentStep + '"] .other-users');
 		var usersText = '';
@@ -165,7 +204,6 @@ var ramsey = {
 		}
 
 		usersText += ' in Baby Step ' + currentStep + '</p>';
-
 		$babyStepDiv.html(usersText);
 	}
 }

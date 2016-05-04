@@ -562,7 +562,7 @@ nav {
   background-repeat: repeat-y;
 }
 
-nav li a {
+nav li {
   display: block;
   background-color: none;
   text-align: right;
@@ -581,33 +581,46 @@ nav li a {
   transition: 0.2s;
 }
 
-nav li a:hover {
+nav li:hover {
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.35);
 }
 
-nav li a [class*="icon-"] {
+nav li a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+nav li [class*="icon-"] {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  z-index: -1;
   width: 85px;
   text-align: center;
   padding: 0 24px;
   font-size: 30px;
+  color: #9ba0a4;
 }
 
-.javascript-enabled nav li a.active {
+.javascript-enabled nav li.active {
   font-weight: 600;
   color: #36abe1;
 }
 
-.javascript-enabled nav li a.active:before {
+.javascript-enabled nav li.active:before {
   opacity: 1;
   width: 100%;
 }
 
-.javascript-enabled nav li a:before {
+.javascript-enabled nav li.active [class*="icon-"] {
+  color: #36abe1;
+}
+
+.javascript-enabled nav li:before {
   content: '';
   position: absolute;
   top: 0;
