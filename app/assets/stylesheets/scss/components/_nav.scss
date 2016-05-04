@@ -26,32 +26,9 @@ nav {
 			z-index: 1;
 			@include transition(0.2s)
 
-			&:before {
-				content: '';
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 50%;
-				height: 100%;
-				opacity: 0;
-				background-color: white;
-				@include transition(0.2s);
-				z-index: -1;
-			}
-
 			&:hover {
 				text-decoration: none;
 				background-color: rgba(255,255, 255, 0.35);
-			}
-
-			&.active {
-				font-weight: 600;				
-				color: $blue-med;
-
-				&:before {
-					opacity: 1;
-					width: 100%;
-				}
 			}
 
 			[class*="icon-"] {
@@ -65,5 +42,30 @@ nav {
 			    font-size: 30px;
 			}
 		}
+	}
+}
+
+.javascript-enabled nav li a {
+	&.active {
+		font-weight: 600;				
+		color: $blue-med;
+
+		&:before {
+			opacity: 1;
+			width: 100%;
+		}
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+		opacity: 0;
+		background-color: white;
+		@include transition(0.2s);
+		z-index: -1;
 	}
 }

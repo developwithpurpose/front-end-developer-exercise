@@ -581,7 +581,33 @@ nav li a {
   transition: 0.2s;
 }
 
-nav li a:before {
+nav li a:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+nav li a [class*="icon-"] {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: -1;
+  width: 85px;
+  text-align: center;
+  padding: 0 24px;
+  font-size: 30px;
+}
+
+.javascript-enabled nav li a.active {
+  font-weight: 600;
+  color: #36abe1;
+}
+
+.javascript-enabled nav li a.active:before {
+  opacity: 1;
+  width: 100%;
+}
+
+.javascript-enabled nav li a:before {
   content: '';
   position: absolute;
   top: 0;
@@ -596,32 +622,6 @@ nav li a:before {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   z-index: -1;
-}
-
-nav li a:hover {
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.35);
-}
-
-nav li a.active {
-  font-weight: 600;
-  color: #36abe1;
-}
-
-nav li a.active:before {
-  opacity: 1;
-  width: 100%;
-}
-
-nav li a [class*="icon-"] {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  z-index: -1;
-  width: 85px;
-  text-align: center;
-  padding: 0 24px;
-  font-size: 30px;
 }
 
 .main-wrapper {
@@ -690,12 +690,16 @@ nav li a [class*="icon-"] {
 }
 
 .content-component {
+  margin-bottom: 35px;
+}
+
+.javascript-enabled .content-component {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.step-fade-container .step-fade {
+.javascript-enabled .step-fade-container .step-fade {
   position: relative;
   opacity: 0;
   visibility: hidden;
@@ -711,7 +715,7 @@ nav li a [class*="icon-"] {
   transform: translate(10%, 0);
 }
 
-.step-fade-container .step-fade.active {
+.javascript-enabled .step-fade-container .step-fade.active {
   -webkit-transition-delay: 0.35s;
   -moz-transition-delay: 0.35s;
   -o-transition-delay: 0.35s;

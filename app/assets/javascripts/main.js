@@ -11,8 +11,14 @@ var ramsey = {
 	// Initalize allllll dem functions
 	init: function() {
 		// console.log("Initialize");
+		this.javascriptEnabled();
 		this.listeners();
 		this.getFriendsBabySteps();
+	},
+
+	// This will run if the browser has javascript enabled. Obviously.
+	javascriptEnabled: function() {
+		$('body').addClass('javascript-enabled');
 	},
 
 	// This is where we set up our scene listeners
@@ -107,7 +113,7 @@ var ramsey = {
 			if (friends[i]["babyStep"] == currentStep) {
 				friendList.push(friends[i]);
 			} else {
-				
+
 				// sort by last name ascending
 				this.sortFriendsBabySteps(friendList);
 				this.displayFriendsBabySteps(friendList);
@@ -120,7 +126,7 @@ var ramsey = {
 		// sort by last name ascending
 		this.sortFriendsBabySteps(friendList);
 		this.displayFriendsBabySteps(friendList);
-		
+
 	},
 
 	// Sort the list alphabetically by their last names

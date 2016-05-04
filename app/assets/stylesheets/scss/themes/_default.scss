@@ -70,12 +70,18 @@
 }
 
 .content-component {
+	// padding-bottom: 25px;
+	margin-bottom: 35px;
+	// border-bottom: 1px solid $grey-med;
+}
+
+.javascript-enabled .content-component {
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 
-.step-fade-container {
+.javascript-enabled .step-fade-container {
 	.step-fade {
 		position: relative;
 		opacity: 0;
