@@ -90,7 +90,8 @@ var ramsey = {
 	},
 
 
-	// Jquery - AJAX method for getting our friend's baby steps
+	// Jquery - AJAX method for getting our friend's baby steps,
+	// which sounds pretty odd when you say it out loud to yourself.
 	getFriendsBabySteps: function() {
 		// console.log("Baby steps!");
 
