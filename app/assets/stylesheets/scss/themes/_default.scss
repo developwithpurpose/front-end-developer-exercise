@@ -1,0 +1,127 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+.main-wrapper {
+	background-color: $grey-med;
+	padding-bottom: 60px;
+}
+
+.container {
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
+	background-color: white;
+	position: relative;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		width: 15px;
+		height: 100%;
+		top: 0;
+		background-repeat: no-repeat;
+		background-position: top;
+	}
+
+	&:before {
+		background-image: url(../images/shadow_left.jpg);
+		left: -15px;
+	}
+
+	&:after {
+		background-image: url(../images/shadow_right.jpg);
+		right: -15px;
+	}
+}
+
+.body-section {
+	margin-top: 60px;
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		bottom: -30px;
+		left: 0;
+		height: 30px;
+		background-image: url(../images/shadow_bottom.jpg);
+		background-position: bottom;
+		background-size: cover;
+	}
+}
+
+.content-section {
+	padding: 0 70px;
+	display: block;
+	margin-left: 30%;
+	width: 70%;
+	max-width: 680px;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.content-container {
+	position: relative;
+	min-height: 600px;
+}
+
+.content-component {
+	// padding-bottom: 25px;
+	margin-bottom: 35px;
+	// border-bottom: 1px solid $grey-med;
+}
+
+.javascript-enabled .content-component {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.javascript-enabled .step-fade-container {
+	.step-fade {
+		position: relative;
+		opacity: 0;
+		visibility: hidden;
+		@include transition(0.3s);
+		@include transform(translate(10%, 0));
+
+		&.active {
+			@include transition-delay(0.35s);
+			@include transform(translate(0, 0));
+			opacity: 1.0;
+			visibility: visible;
+		}
+	}
+}
+.title-block {
+	display: inline-block;
+}
+
+.title-icon {
+	color: $blue-med;
+	width: 77px;
+	height: 60px;
+	text-align: center;
+	display: inline-block;
+	margin-right: 15px;
+	font-size: 80px;
+	position: relative;
+
+	&:before {
+		position: absolute;
+		top: -5px;
+		left: 0;
+	}
+}
+
+.other-users {
+	padding: 10px 0;
+
+	p {
+		margin: 0;
+	}
+}
