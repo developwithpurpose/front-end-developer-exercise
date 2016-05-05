@@ -6,9 +6,16 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+    "start": "http-server ./app -d false",
+    "test": "node_modules/.bin/jasmine-node spec/main_spec.js",
+    "eslint": "node_modules/.bin/eslint app/assets/javascripts/main.js",
+    "eslint-tests": "node_modules/.bin/eslint app/assets/tests/tests.js"
   },
   "devDependencies": {
     "http-server": "^0.8.0"
+  },
+  "dependencies": {
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb-es5": "^1.0.8"
   }
 }
