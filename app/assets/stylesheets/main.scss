@@ -1,0 +1,214 @@
+/*
+Project Name: Front End Developer Exercise
+Author: Adam Ferras
+Author URI: http://adferras.github.io
+*/
+
+/***   Imports and variables   ***/
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+$main-background: #bbbfc2;
+$nav-light-gray: #ebeced;
+$nav-dark-gray: #d1d5d6;
+$nav-text-gray: #9ba0a4;
+$nav-text-blue: #36abe1;
+$body-text: #65686f;
+$links: #6fbee7;
+
+/***   General Styles   ***/
+
+body {
+  background-color: $main-background;
+}
+
+.main-content{
+  position: relative;
+  top: 55px;
+  width: 300px;
+  height: 615px;
+  background: $nav-light-gray;
+  background: -webkit-linear-gradient(left, $nav-light-gray 95%, $nav-dark-gray 100%);
+  background: -moz-linear-gradient(right, $nav-light-gray 95%, $nav-dark-gray 100%);
+  background: -o-linear-gradient(right, $nav-light-gray 95%, $nav-dark-gray 100%);
+  background: linear-gradient(to right, $nav-light-gray 95%, $nav-dark-gray 100%);
+}
+
+.dynamic-body{
+	position: absolute;
+  left: 360px;
+  top: 0px;
+	height: 400px;
+	width: 550px;
+  line-height: 18px;
+  font-family: 'Helvetica Reg', sans-serif;
+  font-size: 13px;
+  color: $body-text;
+
+  img{
+    margin-bottom: -7px;
+  }
+}
+
+.contentDiv{
+  position: absolute;
+  top: -1600px;
+  display: block;
+	height: 400px;
+  width: 550px;
+  -webkit-transition: top 600ms;
+  -moz-transition: top 600ms;
+  -o-transition: top 600ms;
+  -ms-transition: top 600ms;
+  transition: top 600ms;
+}
+
+.moving-highlight{
+  position: absolute;
+  background-color: white;
+  top: -2px;
+  height: 60px;
+  width: 300px;
+  -webkit-transition: all 600ms;
+  -moz-transition: all 600ms;
+  -o-transition: all 600ms;
+  -ms-transition: all 600ms;
+  transition: all 600ms;
+}
+
+.link {
+  color: $links;
+}
+
+#wrap{
+  width: 980px;
+  height: 950px;
+  margin: auto;
+  background-color: white;
+}
+
+/***   Header Style   ***/
+#header{
+	position: relative;
+	margin: auto;
+	width: 980px;
+  z-index: 1;
+}
+
+/***   Navigation Style   ***/
+.radio-label{
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  color: $nav-text-gray;
+  border-bottom: 2px solid white;
+  text-align: left;
+  line-height: 60px;
+  text-indent: 128px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;
+  img{
+    position: absolute;
+    right: 24px;
+    top: 18px;
+    width: 30px;
+  }
+  .nav-icon-blue{
+    display: none;
+    z-index: 1;
+  }
+}
+
+.main-content .state{
+  position: absolute;
+  left: -10000px;
+}
+
+.radio-labels{
+  left: 300px;
+  line-height: 60px;
+  border-top: 2px solid white;
+}
+
+.nav-icon{
+  height: 24px;
+  padding-right: 24px;
+  float: right;
+  margin-top: 18px;
+}
+
+/*** Checkbox Control Style   ***/
+
+#r1:checked ~ .moving-highlight{
+  top: 0px;
+}
+#r2:checked ~ .moving-highlight{
+  top: 62px;
+}
+#r3:checked ~ .moving-highlight{
+  top: 124px;
+}
+#r4:checked ~ .moving-highlight{
+  top: 186px;
+}
+#r5:checked ~ .moving-highlight{
+  top: 248px;
+}
+#r6:checked ~ .moving-highlight{
+  top: 310px;
+}
+#r7:checked ~ .moving-highlight{
+  top: 372px;
+}
+
+#r1:checked ~ #step1-tab,
+#r2:checked ~ #step2-tab,
+#r3:checked ~ #step3-tab,
+#r4:checked ~ #step4-tab,
+#r5:checked ~ #step5-tab,
+#r6:checked ~ #step6-tab,
+#r7:checked ~ #step7-tab{
+  color: $nav-text-blue;
+  font-family: 'Source Sans Pro Semibold', sans-serif;
+}
+
+#r1:checked ~ .dynamic-body #step1,
+#r2:checked ~ .dynamic-body #step2,
+#r3:checked ~ .dynamic-body #step3,
+#r4:checked ~ .dynamic-body #step4,
+#r5:checked ~ .dynamic-body #step5,
+#r6:checked ~ .dynamic-body #step6,
+#r7:checked ~ .dynamic-body #step7{
+  top: 0px;
+  -webkit-transition: top 600ms;
+  -moz-transition: top 600ms;
+  -o-transition: top 600ms;
+  -ms-transition: top 600ms;
+  transition: top 600ms;
+}
+
+#r1:checked ~ #step1-tab img.nav-icon-blue{
+  display: block;
+}
+#r2:checked ~ #step2-tab img.nav-icon-blue{
+  display: block;
+}
+#r3:checked ~ #step3-tab img.nav-icon-blue{
+  display: block;
+}
+#r4:checked ~ #step4-tab img.nav-icon-blue{
+  display: block;
+}
+#r5:checked ~ #step5-tab img.nav-icon-blue{
+  display: block;
+}
+#r6:checked ~ #step6-tab img.nav-icon-blue{
+  display: block;
+}
+#r7:checked ~ #step7-tab img.nav-icon-blue{
+  display: block;
+}
