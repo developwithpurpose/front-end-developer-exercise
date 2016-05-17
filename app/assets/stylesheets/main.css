@@ -185,7 +185,7 @@ main {
 .component-baby-steps-tabs .content {
   background: #fff;
   bottom: 0;
-  left: 400px;
+  left: 200px;
   opacity: 0;
   overflow: hidden;
   padding: 0 70px;
@@ -200,9 +200,6 @@ main {
   -ms-transition: all ease-out 0.2s 0.1s;
   transition: all ease-out 0.2s 0.1s;
   z-index: 2;
-}
-.component-baby-steps-tabs .baby-steps-wrap > section:nth-child(odd) .content {
-  left: 200px;
 }
 .component-baby-steps-tabs #baby-step-1 .content {
   left: 300px;
