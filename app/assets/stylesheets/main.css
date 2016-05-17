@@ -1,0 +1,189 @@
+body {
+  background: #bbbfc2;
+  margin: auto;
+  width: 980px;
+}
+body > header {
+  text-align: right;
+}
+main {
+  background: #fff;
+  overflow: auto;
+}
+.masthead {
+  background: url('../images/header.jpg') center center no-repeat;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #fff;
+  height: 267px;
+  padding: 50px 70px;
+  width: 980px;
+}
+.masthead h1 {
+  font: 700 50px/48px 'Open Sans', sans-serif;
+  margin: 0;
+}
+.masthead h1:first-line {
+  font: 300 32px/1.4 'Open Sans', sans-serif;
+}
+.component-baby-steps-tabs {
+  height: 600px;
+  overflow-x: hidden;
+  margin-top: 60px;
+  position: relative;
+  width: 980px;
+}
+.component-baby-steps-tabs .content header h2 {
+  background: transparent url('../images/icons/sprites/icons_large.png') no-repeat;
+  background-position: 0px -460px;
+  color: #5c6366;
+  font: 300 18px/20px 'Source Sans Pro', sans-serif;
+  margin: 0 0 14px 0;
+  padding: 0 0 10px 100px;
+}
+.component-baby-steps-tabs .content header h2:first-line {
+  color: #36abe1;
+  font: 700 30px/1 'Source Sans Pro', sans-serif;
+}
+.component-baby-steps-tabs #baby-step-2 header h2 {
+  background-position: 0px -523px;
+}
+.component-baby-steps-tabs #baby-step-3 header h2 {
+  background-position: 0px -590px;
+}
+.component-baby-steps-tabs #baby-step-4 header h2 {
+  background-position: 0px -650px;
+}
+.component-baby-steps-tabs #baby-step-5 header h2 {
+  background-position: 0px -712px;
+  margin: 0 0 8px 0;
+  padding: 0 0 16px 100px;
+}
+.component-baby-steps-tabs #baby-step-6 header h2 {
+  background-position: 0px -780px;
+  margin: 0 0 12px 0;
+  padding: 0 0 12px 100px;
+}
+.component-baby-steps-tabs #baby-step-7 header h2 {
+  background-position: 0px -842px;
+  margin: 0 0 9px 0;
+  padding: 0 0 15px 100px;
+}
+.component-baby-steps-tabs p {
+  color: #65686f;
+  font: normal 13px/18px 'Helvetica', sans-serif;
+  margin-top: 0;
+}
+.component-baby-steps-tabs .baby-steps-wrap {
+  background: #ebeced;
+  box-shadow: inset -15px 0 20px -5px #d1d5d6;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 100%;
+  width: 300px;
+}
+.component-baby-steps-tabs a[id^='step'] {
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #9ba0a4;
+  display: block;
+  font: normal 18px/60px 'Source Sans Pro', sans-serif;
+  padding: 0 24px 0 120px;
+  text-decoration: none;
+}
+.component-baby-steps-tabs section:target a[id^='step'],
+.component-baby-steps-tabs a[id^='step']:active,
+.component-baby-steps-tabs a[id^='step']:focus,
+.component-baby-steps-tabs a[id^='step'].active {
+  background: #fff;
+  color: #36abe1;
+  font-weight: bold;
+}
+.component-baby-steps-tabs a[id^='step']:after {
+  content: "";
+  display: block;
+  float: right;
+  height: 25px;
+  width: 30px;
+  padding: 15px 0;
+  background: transparent url('../images/icons/sprites/icons_small.png') no-repeat;
+  background-clip: content-box;
+  background-position: 0px 15px;
+}
+.component-baby-steps-tabs section:target a[id^='step']:after,
+.component-baby-steps-tabs a[id^='step'].active:after {
+  background-position-y: -160px;
+}
+.component-baby-steps-tabs #step2Tab:after {
+  background-position: 0px -7px;
+}
+.component-baby-steps-tabs #step3Tab:after {
+  background-position: 0px -33px;
+}
+.component-baby-steps-tabs #step4Tab:after {
+  background-position: 0px -59px;
+}
+.component-baby-steps-tabs #step5Tab:after {
+  background-position: 0px -85px;
+}
+.component-baby-steps-tabs #step6Tab:after {
+  background-position: 0px -110px;
+}
+.component-baby-steps-tabs #step7Tab:after {
+  background-position: 0px -135px;
+}
+.component-baby-steps-tabs .content {
+  background: #fff;
+  bottom: 0;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 2;
+  left: 370px;
+  position: absolute;
+  right: 70px;
+  top: 0;
+  -ms-transform: scale(1, 1);
+  /* IE 9 */
+  -webkit-transform: perspective(1px) scale(1, 1);
+  /* Safari */
+  transform: perspective(1px) scale(1, 1);
+  /* Standard syntax */
+}
+.component-baby-steps-tabs #baby-step-1 .content {
+  opacity: 1;
+  z-index: 2;
+}
+.component-baby-steps-tabs section:target .content {
+  display: block;
+  opacity: 1;
+  animation-name: babyStepsContent;
+  animation-duration: .5s;
+  top: 0;
+  z-index: 3;
+}
+@keyframes babyStepsContent {
+  0% {
+    opacity: 0;
+    top: 0px;
+  }
+  10% {
+    -ms-transform: scale(0.5, 0.5);
+    /* IE 9 */
+    -webkit-transform: perspective(1px) scale(0.5, 0.5);
+    /* Safari */
+    transform: perspective(1px) scale(0.8, 0.8);
+    /* Standard syntax */
+    top: 25px;
+  }
+  100% {
+    -ms-transform: scale(1, 1);
+    /* IE 9 */
+    -webkit-transform: perspective(1px) scale(1, 1);
+    /* Safari */
+    transform: perspective(1px) scale(1, 1);
+    /* Standard syntax */
+    opacity: 1;
+    top: 0;
+  }
+}
