@@ -1,0 +1,172 @@
+article, aside, footer, header, hgroup, main, nav, section {
+    display: inline-block;
+}
+/* PAGE STYLES */
+body {
+  background-color: #bbbfc2;
+  margin: 0;
+}
+
+img {
+  max-height: 100%;
+}
+
+.container {
+  background-color: #FFF;
+  width: 980px;
+  height: 890px;
+  display: block;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 35px 9px rgba(148,148,148,1);
+  -moz-box-shadow: 0px 0px 35px 9px rgba(148,148,148,1);
+  box-shadow: 0px 0px 35px 9px rgba(148,148,148,1);
+}
+
+.page-content {
+  margin-top: 60px;
+}
+/* HEADER STYLES */
+#header-image img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* NAV STYLES */
+nav {
+  height: 554px;
+  width: 300px;
+  background: rgba(235,236,237,1);
+  background: -moz-linear-gradient(left, rgba(235,236,237,1) 0%, rgba(222,222,222,1) 99%, rgba(219,219,219,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(235,236,237,1)), color-stop(99%, rgba(222,222,222,1)), color-stop(100%, rgba(219,219,219,1)));
+  background: -webkit-linear-gradient(left, rgba(235,236,237,1) 0%, rgba(222,222,222,1) 99%, rgba(219,219,219,1) 100%);
+  background: -o-linear-gradient(left, rgba(235,236,237,1) 0%, rgba(222,222,222,1) 99%, rgba(219,219,219,1) 100%);
+  background: -ms-linear-gradient(left, rgba(235,236,237,1) 0%, rgba(222,222,222,1) 99%, rgba(219,219,219,1) 100%);
+  background: linear-gradient(to right, rgba(235,236,237,1) 0%, rgba(222,222,222,1) 99%, rgba(219,219,219,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#dbdbdb', GradientType=1 );
+}
+
+#nav {
+  margin: 0;
+  padding: 3px 0;
+  list-style: none;
+  height: 554px;
+  width: 300px;
+  -webkit-box-shadow: inset -10px 0px 35px -10px rgba(148,148,148,0.95);
+  -moz-box-shadow: inset -10px 0px 35px -10px rgba(148,148,148,0.95);
+  box-shadow: inset -10px 0px 35px -10px rgba(148,148,148,0.95);
+}
+
+#nav li a {
+  text-decoration: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  font-size 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+  display: block;
+  border-bottom: 1px solid #FFF;
+  text-align: right;
+  transition-duration: 800ms;
+}
+
+#nav li a.selected {
+  font-weight: 600;
+  color: #36abe1;
+  background-color: #FFF;
+  transition-duration: 800ms;
+}
+
+.icon {
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 24px;
+}
+
+.icon.dollar {
+  background: url('../images/icons/sprites/icons_small.png') 0 0;
+}
+
+.selected .icon.dollar {
+  background: url('../images/icons/sprites/icons_small.png') 0 175px;
+}
+
+.icon.coins {
+  background: url('../images/icons/sprites/icons_small.png') 0 -25px;
+}
+
+.selected .icon.coins {
+  background: url('../images/icons/sprites/icons_small.png') 0 150px;
+}
+
+.icon.piggy {
+  background: url('../images/icons/sprites/icons_small.png') 0 -50px;
+}
+
+.selected .icon.piggy {
+  background: url('../images/icons/sprites/icons_small.png') 0 125px;
+}
+
+.icon.graph {
+  background: url('../images/icons/sprites/icons_small.png') 0 -75px;
+}
+
+.selected .icon.graph {
+  background: url('../images/icons/sprites/icons_small.png') 0 100px;
+}
+
+.icon.book {
+  background: url('../images/icons/sprites/icons_small.png') 0 -100px;
+}
+
+.selected .icon.book {
+  background: url('../images/icons/sprites/icons_small.png') 0 75px;
+}
+
+.icon.home {
+  background: url('../images/icons/sprites/icons_small.png') 0 -125px;
+}
+
+.selected .icon.home {
+  background: url('../images/icons/sprites/icons_small.png') 0 50px;
+}
+
+.icon.hand {
+  background: url('../images/icons/sprites/icons_small.png') 0 -150px;
+}
+
+.selected .icon.hand {
+  background: url('../images/icons/sprites/icons_small.png') 0 25px;
+}
+
+/* BABY STEP CONTENT */
+#content {
+  width: 540px;
+  display: inline-block;
+  float: right;
+  padding: 0px 70px;
+}
+
+.article-content {
+  margin-bottom: 40px;
+}
+
+.article-content p {
+  font-family: Helvetica;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+}
+
+.name {
+  color: #6fbee7;
+  font-family: Helvetica;
+  font-size: 13px;
+}
+
+.babystep-social {
+  font-family: Helvetica;
+  font-size: 13px;
+  color: #65686f;  
+}
