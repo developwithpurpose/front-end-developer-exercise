@@ -102,27 +102,24 @@ main {
   z-index: 9;
 }
 .component-baby-steps-tabs section:target a[id^='step'],
-.component-baby-steps-tabs a[id^='step']:active,
-.component-baby-steps-tabs a[id^='step']:focus,
 .component-baby-steps-tabs a[id^='step'].active {
   animation-duration: .5s;
   animation-name: tabs;
   background: #fff;
-  border-bottom: 1px solid #fff;
   box-shadow: none;
   color: #36abe1;
   font-weight: bold;
 }
 .component-baby-steps-tabs a[id^='step']:after {
+  background: transparent url('../images/icons/sprites/icons_small.png') no-repeat;
+  background-clip: content-box;
+  background-position: 0px 15px;
   content: "";
   display: block;
   float: right;
   height: 25px;
-  width: 30px;
   padding: 15px 0;
-  background: transparent url('../images/icons/sprites/icons_small.png') no-repeat;
-  background-clip: content-box;
-  background-position: 0px 15px;
+  width: 30px;
 }
 .component-baby-steps-tabs section:target a[id^='step']:after,
 .component-baby-steps-tabs a[id^='step'].active:after {
@@ -132,54 +129,42 @@ main {
   background-position: 0px -7px;
 }
 .component-baby-steps-tabs section:target #step2Tab:after,
-.component-baby-steps-tabs #step2Tab:active:after,
-.component-baby-steps-tabs #step2Tab:focus:after,
-.component-baby-steps-tabs #step2Tab.active:after {
+.component-baby-steps-tabs #step2Tab:active:after {
   background-position-y: -182px;
 }
 .component-baby-steps-tabs #step3Tab:after {
   background-position: 0px -33px;
 }
 .component-baby-steps-tabs section:target #step3Tab:after,
-.component-baby-steps-tabs #step3Tab:active:after,
-.component-baby-steps-tabs #step3Tab:focus:after,
-.component-baby-steps-tabs #step3Tab.active:after {
+.component-baby-steps-tabs #step3Tab:active:after {
   background-position-y: -208px;
 }
 .component-baby-steps-tabs #step4Tab:after {
   background-position: 0px -59px;
 }
 .component-baby-steps-tabs section:target #step4Tab:after,
-.component-baby-steps-tabs #step4Tab:active:after,
-.component-baby-steps-tabs #step4Tab:focus:after,
-.component-baby-steps-tabs #step4Tab.active:after {
+.component-baby-steps-tabs #step4Tab:active:after {
   background-position-y: -234px;
 }
 .component-baby-steps-tabs #step5Tab:after {
   background-position: 0px -85px;
 }
 .component-baby-steps-tabs section:target #step5Tab:after,
-.component-baby-steps-tabs #step5Tab:active:after,
-.component-baby-steps-tabs #step5Tab:focus:after,
-.component-baby-steps-tabs #step5Tab.active:after {
+.component-baby-steps-tabs #step5Tab:active:after {
   background-position-y: -260px;
 }
 .component-baby-steps-tabs #step6Tab:after {
   background-position: 0px -110px;
 }
 .component-baby-steps-tabs section:target #step6Tab:after,
-.component-baby-steps-tabs #step6Tab:active:after,
-.component-baby-steps-tabs #step6Tab:focus:after,
-.component-baby-steps-tabs #step6Tab.active:after {
+.component-baby-steps-tabs #step6Tab:active:after {
   background-position-y: -285px;
 }
 .component-baby-steps-tabs #step7Tab:after {
   background-position: 0px -135px;
 }
 .component-baby-steps-tabs section:target #step7Tab:after,
-.component-baby-steps-tabs #step7Tab:active:after,
-.component-baby-steps-tabs #step7Tab:focus:after,
-.component-baby-steps-tabs #step7Tab.active:after {
+.component-baby-steps-tabs #step7Tab:active:after {
   background-position-y: -310px;
 }
 .component-baby-steps-tabs .content {
@@ -191,9 +176,6 @@ main {
   padding: 0 70px;
   position: absolute;
   top: 0;
-  /*-ms-transform: scale(1.0, 1.0);
-    -webkit-transform: perspective(1px) scale(1.0, 1.0);
-    transform: perspective(1px) scale(1.0, 1.0);*/
   -webkit-transition: all ease-out 0.2s 0.1s;
   -moz-transition: all ease-out 0.2s 0.1s;
   -o-transition: all ease-out 0.2s 0.1s;
@@ -201,12 +183,8 @@ main {
   transition: all ease-out 0.2s 0.1s;
   z-index: 2;
 }
-.component-baby-steps-tabs #baby-step-1 .content {
-  left: 300px;
-  opacity: 1;
-  z-index: 2;
-}
-.component-baby-steps-tabs .baby-steps-wrap > section:target .content {
+.component-baby-steps-tabs .baby-steps-wrap > section:target .content,
+.component-baby-steps-tabs .baby-steps-wrap .active + .content {
   left: 300px;
   opacity: 1;
   -webkit-transition: all ease-out 0.5s;
@@ -216,32 +194,10 @@ main {
   transition: all ease-out 0.5s;
   z-index: 3;
 }
-@keyframes babyStepsContent {
-  0% {
-    opacity: 0;
-    top: 0px;
-  }
-  10% {
-    -ms-transform: scale(0.5, 0.5);
-    /* IE 9 */
-    -webkit-transform: perspective(1px) scale(0.5, 0.5);
-    /* Safari */
-    transform: perspective(1px) scale(0.8, 0.8);
-    /* Standard syntax */
-    top: 25px;
-  }
-  100% {
-    -ms-transform: scale(1, 1);
-    /* IE 9 */
-    -webkit-transform: perspective(1px) scale(1, 1);
-    /* Safari */
-    transform: perspective(1px) scale(1, 1);
-    /* Standard syntax */
-    opacity: 1;
-    top: 0;
-  }
-}
 @keyframes tabs {
+  0% {
+    background: transparent;
+  }
   33% {
     padding-left: 80px;
     padding-right: 64px;
@@ -249,5 +205,8 @@ main {
   67% {
     padding-left: 130px;
     padding-right: 14px;
+  }
+  100% {
+    background: #fff;
   }
 }
