@@ -6,6 +6,11 @@
     width: 980px;
 }
 
+.component-baby-steps-tabs mark {
+    background: none;
+    color: #6fbee7;
+}
+
 .component-baby-steps-tabs .content header h2 {
 	background: transparent url('../images/icons/sprites/icons_large.png') no-repeat;
 	background-position: 0px -460px;
@@ -169,7 +174,9 @@
 
 .component-baby-steps-tabs .content {
     background: #fff;
-    bottom: 0; 
+    bottom: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     left: 200px;
     opacity: 0;
     overflow: hidden;
@@ -181,6 +188,7 @@
     -o-transition: all ease-out 0.2s 0.1s;
     -ms-transition: all ease-out 0.2s 0.1s;
     transition: all ease-out 0.2s 0.1s;
+    width: 680px;
     z-index: 2;
 }
 
