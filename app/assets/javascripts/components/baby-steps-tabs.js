@@ -63,10 +63,8 @@ $(function() {
 				$tabContent = $this.next(".content"),
 				$allTabContent = $component.find(".content").not($tabContent);
 
-			$tabs.each(function() {
-				$this.removeClass("active");
-			});
-
+			$tabs.removeClass("active");
+			
 			if ($("html").hasClass("no-cssanimations")) {
 				$this
 				 .animate({
