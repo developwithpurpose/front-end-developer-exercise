@@ -10,6 +10,8 @@ var eslint = require('gulp-eslint');
 
 var componentJs = './app/assets/javascripts/components/**/*.js';
 var vendorJs = './app/assets/javascripts/vendor/**/*.js';
+var html5Shiv = './app/assets/javascripts/vendor/html5shiv.js';
+var excludeHtml5Shiv = '!./app/assets/javascripts/vendor/html5shiv.js';
 var jsDest = './app/assets/javascripts/';
 var cssDest = './app/assets/stylesheets/';
 
@@ -24,17 +26,31 @@ gulp.task('compile-less', function() {
 
 gulp.task('lint', function () {
     return gulp.src([componentJs,'!node_modules/**']) 
-        .pipe(eslint())
+        .pipe(eslint({
+            extends: 'eslint:recommended',
+            globals: {
+                'jQuery':false,
+                '$':true
+            },
+            envs: ['browser']
+        }))
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
 });
 
 gulp.task('scripts', function() {  
-    return gulp.src([vendorJs, componentJs])
+    return gulp.src([vendorJs, excludeHtml5Shiv, componentJs])
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(rename("main.min.js"))
         .pipe(gulp.dest(jsDest));
 });
 
-gulp.task('default', ['compile-less', 'scripts', 'lint']);
+gulp.task('html5Shiv', function() {  
+    return gulp.src([html5Shiv])
+        .pipe(uglify())
+        .pipe(rename("html5shiv.min.js"))
+        .pipe(gulp.dest(jsDest));
+});
+
+gulp.task('default', ['compile-less', 'scripts', 'html5Shiv', 'lint']);
