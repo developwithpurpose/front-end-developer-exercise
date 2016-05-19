@@ -2,8 +2,21 @@ html {
   background: #bbbfc2;
 }
 body {
+  background: url("../images/shadow_bottom.jpg") no-repeat center bottom;
   margin: auto;
+  padding-bottom: 30px;
+  position: relative;
   width: 980px;
+}
+body > .page-shadow {
+  position: absolute;
+  top: 0;
+}
+body > .page-shadow:first-of-type {
+  left: -15px;
+}
+body > .page-shadow + .page-shadow {
+  right: -15px;
 }
 main {
   background: #fff;
@@ -42,7 +55,7 @@ main {
   color: #5c6366;
   font: 300 18px/20px 'Source Sans Pro', sans-serif;
   margin: 0 0 14px 0;
-  padding: 0 0 10px 100px;
+  padding: 0 0 10px 90px;
 }
 .component-baby-steps-tabs .content header h2:first-line {
   color: #36abe1;
@@ -60,22 +73,25 @@ main {
 .component-baby-steps-tabs #baby-step-5 header h2 {
   background-position: 0px -712px;
   margin: 0 0 8px 0;
-  padding: 0 0 16px 100px;
+  padding: 0 0 16px 90px;
 }
 .component-baby-steps-tabs #baby-step-6 header h2 {
   background-position: 0px -780px;
   margin: 0 0 12px 0;
-  padding: 0 0 12px 100px;
+  padding: 0 0 12px 90px;
 }
 .component-baby-steps-tabs #baby-step-7 header h2 {
   background-position: 0px -842px;
   margin: 0 0 9px 0;
-  padding: 0 0 15px 100px;
+  padding: 0 0 15px 90px;
 }
 .component-baby-steps-tabs p {
   color: #65686f;
   font: normal 13px/18px 'Helvetica', sans-serif;
   margin-top: 0;
+}
+.component-baby-steps-tabs .content footer {
+  margin-top: 40px;
 }
 .component-baby-steps-tabs .baby-steps-wrap {
   box-sizing: border-box;
