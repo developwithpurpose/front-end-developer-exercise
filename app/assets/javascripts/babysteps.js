@@ -22,13 +22,14 @@ $(document).ready(function() {
         fullName,
         message;
 
+        friends.html('');
+        friends.find('.names').html('');
+
     $.ajax({
       url: url,
       dataType: 'json',
       success: function(data) {
-        friends.html('');
 
-        friends.find('.names').html('');
         friends.append('<span class="names"></span>');
 
         var newArray = [];
