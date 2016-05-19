@@ -19,7 +19,8 @@ $(document).ready(function() {
 
     var friends = $('div.step' + tabId + ' p.friends'),
         total,
-        fullName;
+        fullName,
+        message;
 
     $.ajax({
       url: url,
@@ -43,19 +44,20 @@ $(document).ready(function() {
           }
         });
 
-        if (total > 2) {
+        if (total >= 1) {
           var otherFriends = total - 2,
               visible = friends.find('.fullName').slice(2);
 
           visible.hide();
-
+          if(total == 1) message = ' is also in Baby Step '+tabId+'.';
+          if(total == 2) message = ' are also in Baby Step '+tabId+'.';
           if(otherFriends == 1) {
-            var message = ' and ' + otherFriends + ' other friend are also in Baby Step '+tabId+'.';
+            message = ' and '+otherFriends+' other friend are also in Baby Step '+tabId+'.';
           }
           else if(otherFriends > 1) {
-            var message = ' and ' + otherFriends + ' other friends are also in Baby Step '+tabId+'.';
+            message = ' and '+otherFriends+' other friends are also in Baby Step '+tabId+'.';
           }
-          if (otherFriends > 0) $('<span class="others">' + message + '</span>').insertAfter('.names');
+          if (total > 0) $('<span class="others">' + message + '</span>').insertAfter('.names');
         }
       },
       error: function() {
