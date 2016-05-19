@@ -6,8 +6,19 @@ $(function() {
 		hash 			= window.location.hash.substring(1),
 		friendsPerStep 	= [[],[],[],[],[],[],[]];
 
+		function setAccessibilityAttributes($activeTab) {
+			var $tabContent 	= $activeTab.next(".content"),
+				$allTabContent 	= $component.find(".content").not($tabContent);
+
+			$tabs.not($activeTab).attr("aria-selected", "false");
+			$activeTab.attr("aria-selected", "true");
+			$allTabContent.attr("aria-hidden", "true");
+			$tabContent.attr("aria-hidden", "false");
+		}
+
 		function activateTab1() {
 			$tab1.addClass("active");
+			setAccessibilityAttributes($tab1);
 		}
 
 		function getFriendStepSummary(arr, step) {
@@ -15,9 +26,9 @@ $(function() {
 
 			if (numOfFriends) {
 				var friendStepSummary = "",
-					firstFriend = "<mark>" + arr[0][1] + " " +arr[0][0] +"</mark>";
+					firstFriend = arr[0][1] + " " +arr[0][0];
 
-				if (numOfFriends > 1) secondFriend = "<mark>" + arr[1][1] + " " +arr[1][0] +"</mark>";
+				if (numOfFriends > 1) secondFriend = arr[1][1] + " " +arr[1][0];
 				
 				switch (numOfFriends) {
 					case 1:
@@ -41,6 +52,7 @@ $(function() {
 		}
 
 		if (hash) {
+
 			switch (hash) {
 				case "baby-step-1":
 				case "baby-step-2":
@@ -49,6 +61,7 @@ $(function() {
 				case "baby-step-5":
 				case "baby-step-6":
 				case "baby-step-7":
+					setAccessibilityAttributes($("#step"+hash.split("").pop()+"Tab"));
 					break;
 				default :
 					activateTab1();
@@ -63,11 +76,8 @@ $(function() {
 				$allTabContent = $component.find(".content").not($tabContent);
 
 			$tabs.removeClass("active");
-			$tabs.attr("aria-selected", "false").attr("tabindex", "-1");
-			$this.attr("aria-selected", "true").attr("tabindex", "0");
-			$allTabContent.attr("aria-hidden", "true");
-			$tabContent.attr("aria-hidden", "false");
-			
+			setAccessibilityAttributes($this);
+
 			if ($("html").hasClass("no-cssanimations")) {
 				$this
 				 .animate({
@@ -94,14 +104,6 @@ $(function() {
 					"left": "200px",
 					"opacity": "0"
 				}, 300);
-			}
-		});
-
-		$tabs.is(":focus").on("onkeydown", function(e) {
-			if(e.keyCode == 37) { // left & down
-				// trigger click to next left tab (if exists) or last tab
-			} else if(e.keyCode == 39) { // right & up
-				// trigger click to next right tab (if exists) or 1st tab
 			}
 		});
 

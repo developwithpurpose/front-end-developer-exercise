@@ -32,9 +32,9 @@ main {
   position: relative;
   width: 980px;
 }
-.component-baby-steps-tabs mark {
-  background: none;
+.component-baby-steps-tabs .content a {
   color: #6fbee7;
+  text-decoration: none;
 }
 .component-baby-steps-tabs .content header h2 {
   background: transparent url('../images/icons/sprites/icons_large.png') no-repeat;
