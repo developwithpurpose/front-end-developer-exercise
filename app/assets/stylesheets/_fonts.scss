@@ -1,0 +1,133 @@
+/* -----------------------------------------
+   Open Sans
+----------------------------------------- */
+@font-face {
+    font-family: 'Open Sans'; font-weight: 300; font-style: normal;
+    src: url('fonts/OpenSans/opensans-light-webfont.eot');
+    src: url('fonts/OpenSans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans/opensans-light-webfont.woff') format('woff'),
+         url('fonts/OpenSans/opensans-light-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans/opensans-light-webfont.svg#open_sanslight') format('svg');
+}
+@font-face {
+    font-family: 'Open Sans'; font-weight: 700; font-style: normal;
+    src: url('fonts/OpenSans/opensans-bold-webfont.eot');
+    src: url('fonts/OpenSans/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans/opensans-bold-webfont.woff') format('woff'),
+         url('fonts/OpenSans/opensans-bold-webfont.ttf') format('truetype'),
+         url('opensans-bold-webfont.svg#open_sansbold') format('svg');
+}
+
+
+
+/* -----------------------------------------
+   Source Sans Pro
+----------------------------------------- */
+@font-face {
+    font-family: 'Source Sans Pro'; font-weight: 300; font-style: normal;
+    src: url('fonts/SourceSansPro/sourcesanspro-light-webfont.eot');
+    src: url('fonts/SourceSansPro/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SourceSansPro/sourcesanspro-light-webfont.woff') format('woff'),
+         url('fonts/SourceSansPro/sourcesanspro-light-webfont.ttf') format('truetype'),
+         url('fonts/SourceSansPro/sourcesanspro-light-webfont.svg#source_sans_prolight') format('svg');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro'; font-weight: 400; font-style: normal;
+    src: url('fonts/SourceSansPro/sourcesanspro-regular-webfont.eot');
+    src: url('fonts/SourceSansPro/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SourceSansPro/sourcesanspro-regular-webfont.woff') format('woff'),
+         url('fonts/SourceSansPro/sourcesanspro-regular-webfont.ttf') format('truetype'),
+         url('fonts/SourceSansPro/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro'; font-weight: 600; font-style: normal;
+    src: url('fonts/SourceSansPro/sourcesanspro-semibold-webfont.eot');
+    src: url('fonts/SourceSansPro/sourcesanspro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SourceSansPro/sourcesanspro-semibold-webfont.woff') format('woff'),
+         url('fonts/SourceSansPro/sourcesanspro-semibold-webfont.ttf') format('truetype'),
+         url('fonts/SourceSansPro/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold') format('svg');
+}
+
+
+
+
+
+/* -----------------------------------------
+   Font Mixins
+----------------------------------------- */
+@mixin helvetica() { font-family: 'helvetica', sans-serif; }
+
+
+
+
+
+/* -----------------------------------------
+    Icons
+------------------------------------------- */
+@font-face {
+  font-family: 'icons';
+  src: url('fonts/icons.eot?31374506');
+  src: url('fonts/icons.eot?31374506#iefix') format('embedded-opentype'),
+       url('fonts/icons.woff2?31374506') format('woff2'),
+       url('fonts/icons.woff?31374506') format('woff'),
+       url('fonts/icons.ttf?31374506') format('truetype'),
+       url('fonts/icons.svg?31374506#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'icons';
+    src: url('fonts/icons.svg?31374506#icons') format('svg');
+  }
+}
+
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icons";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  vertical-align: middle;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  font-variant: normal;
+  text-transform: none;
+
+  line-height: 1em;
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// .icon-icons-01:before { content: '\e800'; }
+// .icon-icons-02:before { content: '\e801'; }
+// .icon-icons-03:before { content: '\e802'; }
+// .icon-icons-04:before { content: '\e803'; }
+// .icon-icons-05:before { content: '\e804'; }
+// .icon-icons-06:before { content: '\e805'; }
+// .icon-icons-07:before { content: '\e806'; }
+
+.icon-babystep6:before { content: '\e800'; }
+.icon-babystep7:before { content: '\e801'; }
+.icon-babystep5:before { content: '\e802'; }
+.icon-babystep4:before { content: '\e803'; }
+.icon-babystep3:before { content: '\e804'; }
+.icon-babystep2:before { content: '\e805'; }
+.icon-babystep1:before { content: '\e806'; }
