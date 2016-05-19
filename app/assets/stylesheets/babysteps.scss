@@ -1,0 +1,206 @@
+/* -----------------------------
+  Import styles
+-------------------------------- */
+@import 'fonts';
+
+
+
+/* -----------------------------
+  Colors
+-------------------------------- */
+$blue: #36abe1;
+$light-blue: #6fbee7;
+$gray: #65686f;
+$light-gray: #5c6366;
+$white: #ffffff;
+$grayBG: #bbbfc2;
+
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+html { font-size: 16px; }
+body { @include helvetica(); line-height: 20px; color: $gray; background: $grayBG; margin:0 auto; }
+
+h1 { font-family: 'Open Sans'; font-weight: 300; font-size: 32px; }
+h2, h3 { font-family: 'Source Sans Pro'; }
+
+
+h3 { color: $blue; font-size: 30px; line-height: 20px; font-weight: 600; }
+h4 { color: $light-gray; font-weight: 300; font-size: 18px; line-height: 20px; margin-bottom: 24px;}
+p { margin-bottom: 24px;}
+
+
+div.container {
+	margin:0 auto;
+	width: 980px;
+	-webkit-box-shadow: 0px 3px 19px -2px rgba(0,0,0,0.65);
+	-moz-box-shadow: 0px 3px 19px -2px rgba(0,0,0,0.65);
+	box-shadow: 0px 3px 19px -2px rgba(0,0,0,0.65);
+	background: $white;
+}
+
+header {
+	background:url(../images/header.jpg) #000000 no-repeat; width:100%; height:276px;
+
+	h1 {
+		color: $white; display:block; text-align:right; margin:0px; width:50%; float:right; padding:55px 50px 0 0;
+
+		span {
+			text-transform: uppercase;
+			margin-top: 15px;
+			font-size: 50px;
+			font-weight: 700;
+			display: block;
+			line-height: 48px;
+		}
+	}
+
+}
+
+
+div.content {
+	background: $white;
+	padding-top: 60px;
+
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+
+}
+
+div.tabs {
+	background: #ebeced;
+	background: -webkit-linear-gradient(left, #ebeced , #d1d5d6); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #ebeced , #d1d5d6); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #ebeced , #d1d5d6); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #ebeced , #d1d5d6); /* Standard syntax */
+
+	width:25%;
+	float: left;
+	display: block;
+	padding-bottom: 150px;
+
+	li {
+		font-family: 'Source Sans Pro'; font-size: 18px; color: #9ba0a4; text-align: right; line-height: 60px; padding-right: 24px; cursor:pointer; border-bottom: 2px solid white;
+
+		[class^="icon-"]:before, [class*=" icon-"]:before {
+			padding-left: 10px;
+		}
+
+		&.active { background: $white; color: $blue; }
+	}
+
+}
+div.babySteps {
+	width:60%; display: inline-block; padding: 0 70px;
+
+	div.step {
+		display: none;
+
+		h3 { margin: 10px 0 5px 0; display: inline-block; }
+		[class^="icon-"]:before, [class*=" icon-"]:before {
+			margin-top: 0px;
+    	display: inline-block;
+    	font-size: 350%;
+    	float: left;
+    	margin-bottom: 0px;
+			color: $blue;
+		}
+
+
+		&.active { display: block; }
+
+		p.friends {
+			margin-top: 40px;
+
+			.names, .name { color: $light-blue; }
+		}
+	}
+}
+
+
+@media only screen and (max-width: 40em) {
+	div.container {
+		width: 100%;
+
+		h1 {
+			font-size: 35px; line-height: 35px; width: 98%; padding: 20px 15px 20px 0px; width: 98%;
+
+			span { margin-top: 10px; font-size: 43px; }
+		}
+
+		div.content { padding-top: 20px; }
+
+		.tabs li {
+			line-height: 21px;
+    	padding: 5px;
+			display: inline-block;
+			text-align: center;
+			font-size: 18px;
+
+			[class^="icon-"]:before, [class*=" icon-"]:before { padding-left: 0px; }
+		}
+
+		div.babySteps {
+			width: 65%; padding: 0 15px 0 20px;
+
+			[class^="icon-"]:before, [class*=" icon-"]:before { margin-left: 0px; }
+			p.friends { margin-top: 20px; }
+
+		}
+
+	}
+
+}
