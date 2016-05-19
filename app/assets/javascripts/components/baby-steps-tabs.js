@@ -1,12 +1,16 @@
 $(function() {
-	$(".component-baby-steps-tabs").each(function() {
+	$(".component-baby-steps-tabs").each(DR.babyStepsTabs);
+});
+
+var DR = {
+		babyStepsTabs: function($$tabs) {
 		var $component 	= $(this),
 		$tabs 			= $component.find("a[id^='step']"),
 		$tab1 			= $component.find("#step1Tab"),
 		hash 			= window.location.hash.substring(1),
 		friendsPerStep 	= [[],[],[],[],[],[],[]];
 
-		function setAccessibilityAttributes($activeTab) {
+		var setAccessibilityAttributes = function($activeTab) {
 			var $tabContent 	= $activeTab.next(".content"),
 				$allTabContent 	= $component.find(".content").not($tabContent);
 
@@ -16,12 +20,12 @@ $(function() {
 			$tabContent.attr("aria-hidden", "false");
 		}
 
-		function activateTab1() {
+		var activateTab1 = function() {
 			$tab1.addClass("active");
 			setAccessibilityAttributes($tab1);
 		}
 
-		function getFriendStepSummary(arr, step) {
+		var getFriendStepSummary = function(arr, step) {
 			var numOfFriends = arr.length;
 
 			if (numOfFriends) {
@@ -51,69 +55,10 @@ $(function() {
 			}
 		}
 
-		if (hash) {
+		var appendSummariesToDom = function(babyStepData) {
 
-			switch (hash) {
-				case "baby-step-1":
-				case "baby-step-2":
-				case "baby-step-3":
-				case "baby-step-4":
-				case "baby-step-5":
-				case "baby-step-6":
-				case "baby-step-7":
-					setAccessibilityAttributes($("#step"+hash.split("").pop()+"Tab"));
-					break;
-				default :
-					activateTab1();
-			}
-		} else {
-			activateTab1();
-		}
-
-		$tabs.on('click', function() {
-			var $this = $(this),
-				$tabContent = $this.next(".content"),
-				$allTabContent = $component.find(".content").not($tabContent);
-
-			$tabs.removeClass("active");
-			setAccessibilityAttributes($this);
-
-			if ($("html").hasClass("no-cssanimations")) {
-				$this
-				 .animate({
-				 	"padding-left":"80px",
-				 	"padding-right":"64px"
-				 },167)
-				 .animate({
-				 	"padding-left": "130px",
-				 	"padding-right":"14px"        
-				 },167)
-				 .animate({
-				 	"padding-left": "120px",
-				 	"padding-right":"24px"        
-				 },167);
-			}
-
-			if ($("html").hasClass("no-csstransitions")) {
-				$tabContent.animate({
-					"left": "300px",
-					"opacity": "1"
-				}, 300);
-
-				$allTabContent.animate({
-					"left": "200px",
-					"opacity": "0"
-				}, 300);
-			}
-		});
-
-		$.ajax({
-            url: "/baby-steps.json",
-            type: 'GET',
-            success: function(data) {
-                var babyStepData = data["friends"];
-
-                babyStepData.forEach(function(val, i, arr) {
+			if (babyStepData) {
+				babyStepData.forEach(function(val, i, arr) {
 					var friend = arr[i];
 
 					friendsPerStep[friend["babyStep"]-1].push([friend["lastName"], friend["firstName"]]);
@@ -131,10 +76,105 @@ $(function() {
 						$component.find("#step"+stepCnt+"Tab").next(".content").append("<footer><p>"+summary+"</p></footer>");
 					}
 				});
-            },
-            failure: function() {
-            	console.log("no steps returned");
-            }
-        });
-	});
-});
+			}
+		}
+
+		var animateTabsWithJQuery = function(tab, tabContent, allTabContent) {
+
+			if ($("html").hasClass("no-cssanimations")) {
+				tab
+				 .animate({
+				 	"padding-left":"80px",
+				 	"padding-right":"64px"
+				 },167)
+				 .animate({
+				 	"padding-left": "130px",
+				 	"padding-right":"14px"        
+				 },167)
+				 .animate({
+				 	"padding-left": "120px",
+				 	"padding-right":"24px"        
+				 },167);
+			}
+
+			if ($("html").hasClass("no-csstransitions")) {
+				tabContent.animate({
+					"left": "300px",
+					"opacity": "1"
+				}, 300);
+
+				allTabContent.animate({
+					"left": "200px",
+					"opacity": "0"
+				}, 300);
+			}
+		}
+
+		var initStartingTab = function() {
+			if (hash) {
+
+				switch (hash) {
+					case "baby-step-1":
+					case "baby-step-2":
+					case "baby-step-3":
+					case "baby-step-4":
+					case "baby-step-5":
+					case "baby-step-6":
+					case "baby-step-7":
+						setAccessibilityAttributes($("#step"+hash.split("").pop()+"Tab"));
+						break;
+					default :
+						activateTab1();
+				}
+			} else {
+				activateTab1();
+			}
+		}
+
+		var getBabyStepData = function() {
+			$.ajax({
+		        url: "/baby-steps.json",
+		        type: 'GET',
+		        success: function(data) {
+		     
+		            appendSummariesToDom(data["friends"]);
+		        },
+		        failure: function() {
+		        	console.log("no steps returned");
+		        }
+		    });
+		}
+
+		var handleTabClicks = function() {
+			$tabs.on('click', function() {
+				var $this = $(this),
+					$tabContent = $this.next(".content"),
+					$allTabContent = $component.find(".content").not($tabContent);
+
+				$tabs.removeClass("active");
+				setAccessibilityAttributes($this);
+				animateTabsWithJQuery($this, $tabContent, $allTabContent);
+			});
+		}
+
+		var init = function() {
+			initStartingTab();
+			getBabyStepData();
+			handleTabClicks();
+		}
+
+		var that = {};
+
+		that.setAccessibilityAttributes = setAccessibilityAttributes;
+		that.activateTab1 = activateTab1;
+		that.getFriendStepSummary = getFriendStepSummary;
+		that.appendSummariesToDom = appendSummariesToDom;
+		that.animateTabsWithJQuery = animateTabsWithJQuery;
+		that.initStartingTab = initStartingTab;
+		that.getBabyStepData = getBabyStepData;
+		that.handleTabClicks = handleTabClicks;
+		that.init = init;
+		
+		return that;
+	}
+};
