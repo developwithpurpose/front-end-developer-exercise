@@ -34,7 +34,6 @@ $(function() {
 				}
 
 				return friendStepSummary + "also in Baby Step " + step;
-
 				
 			} else {
 				return false;
@@ -64,6 +63,10 @@ $(function() {
 				$allTabContent = $component.find(".content").not($tabContent);
 
 			$tabs.removeClass("active");
+			$tabs.attr("aria-selected", "false").attr("tabindex", "-1");
+			$this.attr("aria-selected", "true").attr("tabindex", "0");
+			$allTabContent.attr("aria-hidden", "true");
+			$tabContent.attr("aria-hidden", "false");
 			
 			if ($("html").hasClass("no-cssanimations")) {
 				$this
@@ -91,6 +94,14 @@ $(function() {
 					"left": "200px",
 					"opacity": "0"
 				}, 300);
+			}
+		});
+
+		$tabs.is(":focus").on("onkeydown", function(e) {
+			if(e.keyCode == 37) { // left & down
+				// trigger click to next left tab (if exists) or last tab
+			} else if(e.keyCode == 39) { // right & up
+				// trigger click to next right tab (if exists) or 1st tab
 			}
 		});
 
