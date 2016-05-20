@@ -24,11 +24,11 @@ Styles
 JS
 --
 - main Baby Step tab script is exposed and namespaced in the global DaveRamsey object (this was chosen over an anonymous function to better faciliate unit tests)
-- jquery, a 2 feature modernizer build, and html5shiv are vendor scripts
+- jquery, a 2 feature modernizer build, and html5shiv are the vendor scripts
 
 Masthead
 --------
-- background image and HTML text were chosen over just an <img>
+- background image and HTML text were chosen over just an `<img>`
 - for better site-wide design unity, accessibilty, and SEO
 
 Baby Steps Tabs
@@ -37,11 +37,15 @@ Baby Steps Tabs
 	- this enables off page linking to specific steps
 	- non JS functionality
 	- and tabbing navigability
-- icons are background images to utilize the spritesheets and limit http requests
+- icons are background images, utilizing the spritesheets and limiting http requests
 - tab transitions are done with CSS3 transitions and animations. A jQuery fallback is also present for browsers that don't support CSS transitions and animations.
-- friends in dynamic summary story were composed in blue in the mockup, but because they are not links, they are not blue. Link styles are present in the CSS though.
+- friends in the dynamic summary user story were composed in blue in the mockup, but because they are not links, they are not blue. Link styles are present in the CSS though.
 
 When JS is turned off
 ---------------------
-- and page anchor (or hash) is not present, 1st tab does not look "active" but content is initialized correctly
+- when page anchor (or hash) is not present, 1st tab does not look "active" but content is initialized correctly
 - 1st tab animation is not exactly the same as the rest (but close)
+
+Jasmine Unit Tests
+------------------
+- These can be found at (http://localhost:8080/jasmine/jasmine-standalone-2.4.1/SpecRunner.html)
