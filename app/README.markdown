@@ -32,7 +32,7 @@ Styles
 
 JS
 --
-- main Baby Step tab script is exposed and namespaced in the global DaveRamsey object (this was chosen over an anonymous function to better faciliate unit tests)
+- main Baby Step tab script is exposed and namespaced in the global DaveRamsey object (this was chosen over an anonymous function to better faciliate unit testing)
 - jquery, a 2 feature modernizer build, and html5shiv are the vendor scripts
 
 Masthead
@@ -58,3 +58,7 @@ When JS is turned off
 Jasmine Unit Tests
 ------------------
 - these can be found at [http://localhost:8080/jasmine/jasmine-standalone-2.4.1/SpecRunner.html](http://localhost:8080/jasmine/jasmine-standalone-2.4.1/SpecRunner.html)
+
+Accessibility
+-------------
+Various [ARIA roles](https://www.w3.org/TR/wai-aria/roles) are attribites within html tags for added accessibility concerns.
