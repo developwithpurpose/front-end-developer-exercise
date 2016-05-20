@@ -28,6 +28,7 @@ Styles
 ------
 - these are composed in less
 - modular, by component, element or variables
+- rules are in alphabetical order
 
 JS
 --
