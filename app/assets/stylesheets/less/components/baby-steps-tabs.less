@@ -1,0 +1,219 @@
+.component-baby-steps-tabs {
+    height: 600px;
+    overflow-x: hidden;
+    margin-top: 60px;
+    position: relative;
+    width: 980px;
+}
+
+.component-baby-steps-tabs .content a {
+    color: @babyStepsLinkColor;
+    text-decoration: none;
+}
+
+.component-baby-steps-tabs .content header h2 {
+	background: transparent url('../images/icons/sprites/icons_large.png') no-repeat;
+	background-position: 0px -460px;
+	color: @tabContentHeaderColor;
+	font: @tabContentHeaderFont;
+	margin: 0 0 14px 0;
+    padding: 0 0 10px 90px;
+}
+
+.component-baby-steps-tabs .content header h2:first-line {
+	color: #36abe1;
+	font: @tabContentHeaderFirstLineFont;
+}
+
+.component-baby-steps-tabs #baby-step-2 header h2 {
+	background-position: 0px -523px;
+}
+
+.component-baby-steps-tabs #baby-step-3 header h2 {
+	background-position: 0px -590px;
+}
+
+.component-baby-steps-tabs #baby-step-4 header h2 {
+	background-position: 0px -650px;
+}
+
+.component-baby-steps-tabs #baby-step-5 header h2 {
+	background-position: 0px -712px;
+	margin: 0 0 8px 0;
+    padding: 0 0 16px 90px;
+}
+
+.component-baby-steps-tabs #baby-step-6 header h2 {
+	background-position: 0px -780px;
+	margin: 0 0 12px 0;
+    padding: 0 0 12px 90px;
+}
+
+.component-baby-steps-tabs #baby-step-7 header h2 {
+	background-position: 0px -842px;
+	margin: 0 0 9px 0;
+    padding: 0 0 15px 90px;	
+}
+.component-baby-steps-tabs p {
+	color: #65686f;
+	font: @tabParagraphFont;
+	margin-top: 0;
+}
+
+.component-baby-steps-tabs .content footer {
+    margin-top: 40px;    
+}
+
+.component-baby-steps-tabs .baby-steps-wrap {
+    box-sizing: border-box;
+    height: 100%;
+    width: 300px;
+}
+
+.component-baby-steps-tabs a[id^='step'] {
+    border-bottom: 1px solid #fff;
+    box-sizing: border-box;
+    color: #9ba0a4;
+    display: block;
+    font: normal 18px/60px 'Source Sans Pro', sans-serif;
+    padding: 0 24px 0 130px;
+    position: relative;
+    text-decoration: none;
+    -webkit-transform: translateZ(0);
+    z-index: 10;
+}
+
+.component-baby-steps-tabs:after {
+    background: #ebeced;
+    bottom: 0;
+    box-shadow: inset -15px 0 20px -5px #d1d5d6;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 300px;
+    z-index: 9;
+}
+
+.component-baby-steps-tabs section:target a[id^='step'],
+.component-baby-steps-tabs a[id^='step'].active {
+	animation-duration: .5s;
+    animation-name: tabs;
+    background: #fff;
+    box-shadow: none;
+	color: #36abe1;
+	font-weight: bold;
+}
+
+.component-baby-steps-tabs a[id^='step']:after {
+    background: transparent url('../images/icons/sprites/icons_small.png') no-repeat;
+    background-clip: content-box;
+    background-position: 0px 15px;
+	content: "";
+	display: block;
+	float: right;
+	height: 25px;
+	padding: 15px 0;
+    position: relative;
+    top: 2px;
+    width: 30px;
+}
+
+.component-baby-steps-tabs section:target a[id^='step']:after,
+.component-baby-steps-tabs a[id^='step'].active:after {
+	background-position: 0px -160px;
+}
+
+.component-baby-steps-tabs #step2Tab:after {
+	background-position: 0px -7px;
+}
+
+.component-baby-steps-tabs section:target #step2Tab:after,
+.component-baby-steps-tabs #step2Tab:active:after {
+    background-position: 0px -182px;
+}
+
+.component-baby-steps-tabs #step3Tab:after {
+	background-position: 0px -33px;
+}
+
+.component-baby-steps-tabs section:target #step3Tab:after,
+.component-baby-steps-tabs #step3Tab:active:after {
+    background-position: 0px -208px;
+}
+
+.component-baby-steps-tabs #step4Tab:after {
+	background-position: 0px -59px;
+}
+
+.component-baby-steps-tabs section:target #step4Tab:after,
+.component-baby-steps-tabs #step4Tab:active:after {
+    background-position: 0px -234px;
+}
+
+.component-baby-steps-tabs #step5Tab:after {
+	background-position: 0px -85px;
+}
+
+.component-baby-steps-tabs section:target #step5Tab:after,
+.component-baby-steps-tabs #step5Tab:active:after {
+    background-position: 0px -260px;
+}
+
+.component-baby-steps-tabs #step6Tab:after {
+	background-position: 0px -110px;
+}
+
+.component-baby-steps-tabs section:target #step6Tab:after,
+.component-baby-steps-tabs #step6Tab:active:after {
+    background-position: 0px -285px;
+}
+
+.component-baby-steps-tabs #step7Tab:after {
+	background-position: 0px -135px;
+}
+
+.component-baby-steps-tabs section:target #step7Tab:after,
+.component-baby-steps-tabs #step7Tab:active:after {
+    background-position: 0px -310px;
+}
+
+.component-baby-steps-tabs .content {
+    background: #fff;
+    bottom: 0;
+    box-sizing: border-box;
+    left: 200px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 70px;
+    position: absolute;
+    top: 0;
+    transition: all ease-out 0.2s 0.1s;
+    width: 680px;
+    z-index: 2;
+}
+
+.component-baby-steps-tabs .baby-steps-wrap > section:target .content,
+.component-baby-steps-tabs .baby-steps-wrap .active + .content {
+    left: 300px;
+    opacity: 1;
+    transition: all ease-out 0.5s;
+    z-index: 3;
+}
+
+@keyframes tabs {
+    0% {
+        background: transparent;
+    }
+    33% {
+        padding-left: 80px;
+        padding-right: 64px;
+    }
+
+    67% {
+        padding-left: 130px;
+        padding-right: 14px;
+    }
+    100% {
+        background: #fff;
+    }
+}

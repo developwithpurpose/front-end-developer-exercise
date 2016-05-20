@@ -6,9 +6,19 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+    "prestart": "gulp",
+    "start": "http-server ./app -d false",
+    "lint": "gulp lint"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-jasmine": "^2.3.0",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
     "http-server": "^0.8.0"
   }
 }

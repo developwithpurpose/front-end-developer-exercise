@@ -1,0 +1,24 @@
+html {
+	background: @bodyBkgr;
+}
+
+body {
+	background: #fff url("../images/shadow_bottom.jpg") no-repeat center bottom;
+    margin: auto;
+    padding-bottom: 30px;
+    position: relative;
+    width: 980px;
+}
+
+body > .page-shadow {
+	position: absolute;
+	top: 0;
+}
+
+body > .page-shadow:first-of-type {
+	left: -15px;
+}
+
+body > .page-shadow + .page-shadow {
+	right: -15px;
+}
