@@ -7,8 +7,11 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var autoprefixer = require('gulp-autoprefixer');
 var eslint = require('gulp-eslint');
+var jasmine = require('gulp-jasmine');
 
+var modulesJs = './app/assets/javascripts/modules/**/*.js';
 var componentJs = './app/assets/javascripts/components/**/*.js';
+var babyStepsTabsTest = './app/assets/javascripts/components/baby-steps-tabs-test.js';
 var vendorJs = './app/assets/javascripts/vendor/**/*.js';
 var html5Shiv = './app/assets/javascripts/vendor/html5shiv.js';
 var excludeHtml5Shiv = '!./app/assets/javascripts/vendor/html5shiv.js';
@@ -39,7 +42,7 @@ gulp.task('lint', function () {
 });
 
 gulp.task('scripts', function() {  
-    return gulp.src([vendorJs, excludeHtml5Shiv, componentJs])
+    return gulp.src([vendorJs, excludeHtml5Shiv, modulesJs, componentJs])
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(rename("main.min.js"))
