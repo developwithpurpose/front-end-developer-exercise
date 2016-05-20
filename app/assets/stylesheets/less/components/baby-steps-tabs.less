@@ -7,22 +7,22 @@
 }
 
 .component-baby-steps-tabs .content a {
-    color: #6fbee7;
+    color: @babyStepsLinkColor;
     text-decoration: none;
 }
 
 .component-baby-steps-tabs .content header h2 {
 	background: transparent url('../images/icons/sprites/icons_large.png') no-repeat;
 	background-position: 0px -460px;
-	color: #5c6366;
-	font: 300 18px/20px 'Source Sans Pro', sans-serif;
+	color: @tabContentHeaderColor;
+	font: @tabContentHeaderFont;
 	margin: 0 0 14px 0;
     padding: 0 0 10px 90px;
 }
 
 .component-baby-steps-tabs .content header h2:first-line {
 	color: #36abe1;
-	font: 700 30px/1 'Source Sans Pro', sans-serif;
+	font: @tabContentHeaderFirstLineFont;
 }
 
 .component-baby-steps-tabs #baby-step-2 header h2 {
@@ -56,7 +56,7 @@
 }
 .component-baby-steps-tabs p {
 	color: #65686f;
-	font: normal 13px/18px 'Helvetica', sans-serif;
+	font: @tabParagraphFont;
 	margin-top: 0;
 }
 
@@ -76,7 +76,7 @@
     color: #9ba0a4;
     display: block;
     font: normal 18px/60px 'Source Sans Pro', sans-serif;
-    padding: 0 24px 0 120px;
+    padding: 0 24px 0 130px;
     position: relative;
     text-decoration: none;
     -webkit-transform: translateZ(0);
@@ -113,6 +113,8 @@
 	float: right;
 	height: 25px;
 	padding: 15px 0;
+    position: relative;
+    top: 2px;
     width: 30px;
 }
 
