@@ -16,6 +16,14 @@ npm Scripts
 - lint
 	- lints JS
 
+Remember to run:
+
+```sh
+npm install
+npm start
+```
+to install the devDependencies.
+
 Styles
 ------
 - these are composed in less
@@ -48,4 +56,4 @@ When JS is turned off
 
 Jasmine Unit Tests
 ------------------
-- These can be found at (http://localhost:8080/jasmine/jasmine-standalone-2.4.1/SpecRunner.html)
+- these can be found at [http://localhost:8080/jasmine/jasmine-standalone-2.4.1/SpecRunner.html](http://localhost:8080/jasmine/jasmine-standalone-2.4.1/SpecRunner.html)
