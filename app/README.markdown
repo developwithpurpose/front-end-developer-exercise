@@ -61,4 +61,4 @@ Jasmine Unit Tests
 
 Accessibility
 -------------
-Various [ARIA roles](https://www.w3.org/TR/wai-aria/roles) are attribites within html tags for added accessibility concerns.
+Various [ARIA roles](https://www.w3.org/TR/wai-aria/roles) were added to the html for added accessibility concerns.
