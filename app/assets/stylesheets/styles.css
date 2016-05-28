@@ -1,0 +1,228 @@
+html {
+	background-color: #bbbfc2;
+	height: 1000px;
+}
+
+body {
+	height: 955px;
+	width: 980px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: white;
+	overflow-y: hidden;
+}
+
+#borderLeft {
+	position: absolute;
+	top: 0;
+	left: -15px;
+}
+
+#borderRight {
+	position: absolute;
+	top: 0;
+	right: -15px;
+}
+
+#borderBottom {
+	position: absolute;
+	bottom: -30px;
+}
+
+#headerText {
+	position: absolute;
+	top: 50px;
+	right: 70px;
+	text-align: right;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+}
+
+#headTextLg {
+	display: block;
+	font-size: 50px;
+	line-height: 48px;
+	font-weight: bold;
+}
+
+#headTextSm {
+	display: block;
+	font-size: 32px;
+	font-weight: 300;
+}
+
+#sidebar {
+	width: 300px;
+	height: 619px;
+	display: inline-block;
+	position: absolute;
+	top: 336px;
+	left: 0;
+	background: linear-gradient(to right, #ebeced 280px, #d1d5d6 300px);
+}
+
+#menu {
+	position: relative;	
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+
+#menuActive {
+	width: 300px;
+	height: 60px;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	background-color: white;
+	display: none;
+	transition: all 1s;
+}
+
+.menuItem {
+	position: relative;
+	z-index: 0;
+	font-family: 'Source Sans Pro', sans-serif;	
+	font-size: 18px;
+	line-height: 60px;
+	list-style-type: none;
+	transition: all .5s;
+}
+
+.menuItem:hover {
+	background-color: rgba(0,0,0,.1);
+}
+
+.menuItem:active {
+	background-color: rgba(255,255,255,.7);
+	transform: scale(1.01);
+}
+
+.menuItem a {
+	display: block;
+	padding-right: 24px;
+	text-decoration: none;
+	color: #9ba0a4;
+}
+
+.menuItem.on a {
+	color: #36abe1;
+}
+
+.menuItem:not(:nth-last-child(1)) {
+	border-bottom: 1px solid white;
+}
+
+.menuSprite {
+	width: 30px;
+	height: 25px;
+	display: inline-block;
+	margin-left: 24px;
+	vertical-align: middle;
+	background-image: url('../images/icons/sprites/icons_small.png');
+	background-repeat: no-repeat;
+}
+.menuItem.on #menuSprite1 {
+	background-position-y: -175px;
+}
+#menuSprite2 {
+	background-position-y: -25px;
+}
+.menuItem.on #menuSprite2 {
+	background-position-y: -200px;
+}
+#menuSprite3 {
+	background-position-y: -50px;
+}
+.menuItem.on #menuSprite3 {
+	background-position-y: -225px;
+}
+#menuSprite4 {
+	background-position-y: -75px;
+}
+.menuItem.on #menuSprite4 {
+	background-position-y: -250px;
+}
+#menuSprite5 {
+	background-position-y: -100px;
+}
+.menuItem.on #menuSprite5 {
+	background-position-y: -275px;
+}
+#menuSprite6 {
+	background-position-y: -125px;
+}
+.menuItem.on #menuSprite6 {
+	background-position-y: -300px;
+}
+#menuSprite7 {
+	background-position-y: -150px;
+}
+.menuItem.on #menuSprite7 {
+	background-position-y: -325px;
+}
+
+content {
+	height: 619px;
+	width: 540px;
+	display: block;
+	margin-left: 370px;
+	margin-top: 60px;
+	padding-right: 70px;
+	overflow: hidden;
+}
+
+.step {
+	height: 100%;
+}
+
+.stepNo {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 20px;
+	color: #36abe1;
+}
+.stepImg {
+	margin-right: 12px;
+	vertical-align: middle
+}
+.stepHead {
+	display: inline-block;
+	vertical-align: middle;
+}
+.subHead {
+	margin-bottom: 24px;
+	line-height: 20px;
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #5c6366;
+}
+
+content p {
+	margin-bottom: 40px;
+	font-family: Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #65686f;
+	transition: all .5s;
+}
+
+#friendsInStep {
+	font-family: Helvetica, sans-serif;
+	font-size: 13px;
+	color: #65686f;
+}
+#friendsInStep a {
+	text-decoration: none;
+	color: #6fbee7;
+}
+
+a[ id= "babyStep1" ]:target ~ content {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
+	transition: all 1s;
+}
