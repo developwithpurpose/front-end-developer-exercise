@@ -15,6 +15,16 @@ body {
 .header-container, .content-container {
   width: 1010px; }
 
+.left-shadow, .right-shadow {
+  width: 15px;
+  height: 724px; }
+
+.left-shadow {
+  float: left; }
+
+.right-shadow {
+  float: right; }
+
 header {
   width: 980px;
   height: 336px;
