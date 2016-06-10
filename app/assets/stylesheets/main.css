@@ -148,3 +148,13 @@ header h1 {
   color: #5c6366;
   font-size: 18px;
   font-weight: 300; }
+
+.step-content .friends-notice {
+  padding-top: 40px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #65686f;
+  font-weight: bold; }
+
+.step-content .friends-notice span {
+  color: #6fbee7; }
