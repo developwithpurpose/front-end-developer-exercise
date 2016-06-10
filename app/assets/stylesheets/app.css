@@ -1,0 +1,107 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #bbbfc2;
+	overflow:auto;
+}
+
+#wrapper {
+	background-color: #fff;
+	width: 90%;
+	height: 1000px;
+	margin:0 auto;
+	margin-bottom: 75px;
+	box-shadow: 0px 0px 18px 6px rgba(0,0,0,0.75);
+}
+
+#banner {
+	width: 100%;
+}
+
+#sidebar {
+	background: -webkit-linear-gradient(left, #ebeced, #d1d5d6);
+	background: linear-gradient(to right, #ebeced, #d1d5d6);
+	float: left;
+	width: 300px;
+	min-height: 300px;
+}
+
+#main-content {
+	float:right;
+	margin-top: 60px;
+	background-color: #fff;
+}
+
+#sidebar div {
+	font-family: "Source Sans Pro", Regular;
+	font-size: 18px;
+	color: #9ba0a4;
+	line-height: 60px;
+	border-top: #fff solid 1px;
+	border-bottom: #fff solid 1px;
+	text-align: right;
+	padding-right: 24px;
+}
+
+#sidebar div img {
+	padding-left: 24px;
+	vertical-align: middle;
+}
+
+#bs-content {
+	padding-right: 70px;
+}
+
+.bsh {
+	margin-bottom: 24px;
+}
+
+#bs-content .bsh .bs-icon {
+	padding-left: 70px;
+	vertical-align: middle;
+}
+
+#bs-content .bsh .bs-title {
+	font-family: "Source Sans Pro", semi-bold;
+	font-size: 30px;
+	color: #36abe1;
+	line-height: 20px;
+} 
+#bs-content .bsh .bs-desc {
+	font-family: "Source Sans Pro", light;
+	font-size: 18px;
+	color: #5c6366;
+	line-height: 20px;
+} 
+
+#bs-content .bs-content p {
+	padding-left: 300px;
+	font-family: "Helvetica", Regular;
+	font-size: 13px;
+	color: #65686f;
+	line-height: 18px;
+} 
+
+#bs-content .friends-count {
+	padding-left: 370px;
+	margin-top: 40px;
+	font-family: "Helvetica", Regular;
+	font-size: 13px;
+	color: #65686f;
+} 
+
+#bs-content .friends-count a {
+	color: #6fbee7;
+	text-decoration: none;
+}
+
+.bs-content {
+	padding-left: 70px;
+}
+
+#highlight-friends {
+	font-family: "Source Sans Pro", semi-bold;
+	color: #6fbee7;
+}
