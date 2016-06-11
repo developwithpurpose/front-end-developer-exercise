@@ -1,6 +1,6 @@
-6/10/16
-Front-end Developer Exercise
-David Joel Stevenson
+6/10/16 - Front-end Developer Exercise
+
+David Joel Stevenson 
 david@lookdadcreative.com
 
 I'm not used to commenting in a separate document than the code, so I apologize if I'm not thorough.  Or too thorough, which what I'm thinking now that I'm done...  Sorry for the book I've written.  I'm nervous.
