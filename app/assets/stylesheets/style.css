@@ -1,0 +1,68 @@
+/***CSS RESET***/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {  margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; }
+ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; }
+/***END RESET***/
+
+
+body {background-color:#bbbfc2;font-family:helvetica, sans-serif;font-size:13px;color:#65686f;line-height:18px;}
+p {margin: 1em 0;}
+a {color:#6fbee7;cursor:pointer;text-decoration:none;}
+.clear {clear:both;}
+
+h1,h2 {font-family: 'Source Sans Pro', sans-serif;line-height:20px;}
+h1 {font-weight:600;color:#6fbee7;font-size:30px;padding-top:10px;margin-bottom:8px;}
+h2 {font-weight:300;font-size:18px;color:#5c6366;margin-bottom:24px;}
+
+
+#outer {width:1010px;margin:0 auto;}
+#shadow-left,#shadow-right {width:15px;height:724px;background:url('../images/shadow_left.jpg') no-repeat;float:left;}
+#shadow-right {background:url('../images/shadow_right.jpg') no-repeat;}
+#main {margin:0 auto;float:left;width:980px;overflow:auto;background: #ebeced;background: #ebeced;background: -moz-linear-gradient(left,  #ebeced 28%, #d1d5d6 30%, 30%, #ffffff 30%); background: -webkit-linear-gradient(left,  #ebeced 28%,#d1d5d6 30%,#ffffff 30%);background: linear-gradient(to right,  #ebeced 28%,#d1d5d6 30%,#ffffff 30%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#ffffff',GradientType=1 );}
+#header {width:980px;height:276px;background:#ffffff url('../images/header.jpg') no-repeat;color:#ffffff;text-align:right;padding-bottom:60px;}
+#header-pad {padding:50px 70px 0 0;font-family: 'Open Sans',sans-serif;font-weight:300;font-size:32px;}
+#head-tag {font-weight:700;text-transform:uppercase;font-size:50px;line-height:48px;display:block;margin-top:15px;}
+
+#nav {float:left;width:30%;font-family: 'Source Sans Pro', sans-serif;font-size:18px;text-align:right;line-height:60px;margin-bottom:100px;}
+#nav a {color:#9ba0a4;}
+#nav ul li {padding-right:24px;border-top:1px solid #ffffff;border-bottom:1px solid #ffffff;background-color:transparent;-webkit-transition:background-color 1s;transition:background-color 1s;}
+#nav .active {background-color:#ffffff;}
+#nav .active a {font-weight:600;color:#36abe1;}
+
+.baby-step-icon {width:30px;height:25px;float:right;margin:18px 0 0 24px;background-image:url('../images/icons/sprites/icons_small.png');}
+#link1 .baby-step-icon {background-position:0 0;}
+.active #link1 .baby-step-icon {background-position:0 -175px;}
+#link2 .baby-step-icon {background-position:0 -25px;}
+.active #link2 .baby-step-icon {background-position:0 -200px;}
+#link3 .baby-step-icon {background-position:0 -50px;}
+.active #link3 .baby-step-icon {background-position:0 -225px;}
+#link4 .baby-step-icon {background-position:0 -75px;}
+.active #link4 .baby-step-icon {background-position:0 -250px;}
+#link5 .baby-step-icon {background-position:0 -100px;}
+.active #link5 .baby-step-icon {background-position:0 -275px;}
+#link6 .baby-step-icon {background-position:0 -125px;}
+.active #link6 .baby-step-icon {background-position:0 -300px;}
+#link7 .baby-step-icon {background-position:0 -150px;}
+.active #link7 .baby-step-icon {background-position:0 -325px;}
+
+#content {float:right;width:70%;background-color:#ffffff;}
+#content-pad {padding: 0 70px;}
+.baby-step {height:400px;}
+
+.baby-step-image {width:77px;height:65px;float:left;margin-right:20px;background-image:url('../images/icons/sprites/icons_large.png');}
+#bs1 .baby-step-image {background-position:0 -455px;}
+#bs2 .baby-step-image {background-position:0 -520px;}
+#bs3 .baby-step-image {background-position:0 -585px;}
+#bs4 .baby-step-image {background-position:0 -648px;}
+#bs5 .baby-step-image {background-position:0 -713px;}
+#bs6 .baby-step-image {background-position:0 -778px;height:64px;}
+#bs7 .baby-step-image {background-position:0 -842px;}
+
+#bottom-shadow {width:980px;height:30px;margin:0 auto;background:url('../images/shadow_bottom.jpg') no-repeat;}
