@@ -34,10 +34,7 @@ $(document).ready(function() {
 
         }
 
-        /* The code below is still pesudo code. At the moment, the results I would like to
-        see are in the console, but it's been tricky appending them to the dom. At the moment,
-        they are not included in the 'final' code, but I will continue to work on this
-        code test until I have accomplished this task. */
+        /* SEE README */
 
 
         // else if (num <= 2) {
