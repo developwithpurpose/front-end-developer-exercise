@@ -7,6 +7,7 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
+    "start": "gulp"
   },
   "devDependencies": {
     "browser-sync": "^2.9.12",

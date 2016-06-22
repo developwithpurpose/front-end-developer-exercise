@@ -1,0 +1,128 @@
+.fleft{
+	float:	left;
+}
+
+.fright{
+	float:	right;
+}
+
+.page-wrap{
+	width:	$containerwidth + ($gutter-width *2);
+	margin:	0 auto;
+	position:	relative;
+}
+
+.shadow{
+	position:	absolute;
+	z-index:	1;
+	height:	$page_height;
+
+	background:{
+		repeat:	no-repeat;
+	}
+
+	&.left{
+		width:	20px;
+		left:	-20px;
+		@extend .img.img-shadow_left;
+		background:{
+			position:	top right;
+		}
+	}
+
+	&.right{
+		width:	20px;
+		right:	-20px;
+		@extend .img.img-shadow_right;
+		background:{
+			position:	top left;
+		}
+	}
+
+	&.bottom{
+		width:	100%;
+		height:	30px;
+		bottom:	-30px;
+
+		@extend .img.img-shadow_bottom;
+		background:{
+			position:	top left;
+		}
+	}
+}
+
+.container{
+	padding:	0 $gutter-width;
+	position:	relative;
+	z-index:	10;
+
+	&#head-content{
+		height: 276px;
+
+
+		.content-inner{
+			padding:{
+				top:	$padding-header-top;
+			}
+		}
+	}
+
+	&#main-content{
+		background: $white;
+		height:	$main_height;
+		padding:{
+			top:	$main_pad;
+			left:	0;
+			right:	0;
+		}
+	}
+}
+
+#step-nav{
+	width:	$sidenav_width;
+	height:	$main_height;
+	float:	left;
+}
+
+#baby-steps{
+	width:	$content_width;
+	padding:	0 $gutter-width;
+
+	.content-inner{
+		max:{
+			height:	233px;
+		}
+
+		overflow: hidden;
+	}
+
+	.baby-step{
+		position:	relative;
+		padding:{
+			bottom:	26px;
+		}
+	}
+
+	.step-title{
+		margin:{
+			bottom:	24px;
+		}
+
+		padding:{
+			top:	20px;
+		}
+
+		h2{
+			padding:{
+				left:	96px;
+			}
+		}
+		position:	relative;
+	}
+}
+
+.footnote{
+	margin:{
+		top:	40px;
+	}
+}

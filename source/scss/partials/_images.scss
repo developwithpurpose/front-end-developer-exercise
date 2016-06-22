@@ -1,0 +1,44 @@
+#head-content{
+	background:{
+		image:	url('../images/header.jpg');
+	}
+}
+
+@mixin babytitle($step: 1){
+	.step-icon{
+		@extend	.img.img-icons_large_bs#{$step}_blue;
+		background:{
+			repeat:	no-repeat;
+			position:	center left;
+		}
+		position:	absolute;
+		left:	0; top:	0;
+		
+		width:	77px;
+		height:	65px;
+	}
+}
+
+#baby-steps{
+	#baby-1{
+		@include babytitle;
+	}
+	#baby-2{
+		@include babytitle(2);
+	}
+	#baby-3{
+		@include babytitle(3);
+	}
+	#baby-4{
+		@include babytitle(4);
+	}
+	#baby-5{
+		@include babytitle(5);
+	}
+	#baby-6{
+		@include babytitle(6);
+	}
+	#baby-7{
+		@include babytitle(7);
+	}
+}

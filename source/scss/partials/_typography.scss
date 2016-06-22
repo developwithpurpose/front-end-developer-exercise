@@ -1,0 +1,80 @@
+h1{
+	font:{
+		family:	$headerfont;
+	}
+	text:{
+		align:	right;
+	}
+	color:	$white;
+	span{
+		&.heavy{
+			font:{
+				weight:	700;
+				size:	em(50);
+			}
+			line:{
+				height:	48px;
+			}
+			text:{
+				transform: uppercase;
+			}
+		}
+		&.light{
+			font:{
+				size:	em(32);
+			}
+			line:{
+				height:	43px;
+			}
+		}
+	}
+}
+
+h2, ul{
+	font:{
+		family:	$contentfont;
+	}
+}
+
+h2{
+	color:	$bluesteps;
+	font:{
+		size:	em(30);
+		weight:	600;
+	}
+	line:{
+		height:	20px;
+	}
+	.subtitle{
+		color:	$greysubtext;
+		font:{
+			weight:	300;
+			size:	em(18, 30);
+		}
+	}
+}
+
+p{
+	color:	$greytext;
+	font:{
+		size:	em(13);
+	}
+	line:{
+		height:	18px;
+	}
+	margin:{
+		bottom:	20px;
+	}
+}
+
+.footnote{
+	font:{
+		weight:	600;
+	}
+	a{
+		text:{
+			decoration:	none;
+		}
+		color:	$bluelinks;
+	}
+}

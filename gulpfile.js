@@ -71,7 +71,7 @@ gulp.task('initOpts', function(){
 	},
 
 	imguri = {
-		in: source + 'inline/*',
+		in: source + 'inline-image/*',
 		out: source + 'scss/images/',
 		filename: '_datauri.scss',
 		namespace: 'img'

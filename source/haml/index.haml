@@ -1,0 +1,124 @@
+!!! 5
+%html{ :lang => "en"}
+	%head
+		%title= "Dave Ramsey - Front End Exercise"
+		%meta{ :charset => "utf-8" }
+		%meta{ 'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"}
+		%link{ :charset => "utf-8", :href => "css/main.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }	
+
+	%body
+		.page-wrap
+			.shadow.left
+			.shadow.right
+			.shadow.bottom
+			%header.container#head-content
+				.content-inner
+					%h1
+						%span.light
+							Real Life, Live and Money with</br>
+						%span.heavy
+							America's Most<br/> Trusted Guy
+
+			%section.container#main-content
+				%aside.sidebar.fleft#step-nav
+					%ul
+						- (1..7).each do |i|
+							%li
+								%a.step{ :id => "step-#{i}", :href => "#baby-#{i}"}= "Baby Step #{i}"
+							
+				%main.fleft#baby-steps
+					.content-inner
+						.baby-step#baby-1
+							.step-icon
+							.step-title
+								%h2
+									Baby Step 1<br/>
+									%span.subtitle
+										$1,000 Emergency Fund
+							.step-content
+								%p
+									An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.
+								%p
+									This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!
+						.baby-step#baby-2
+							.step-icon
+							.step-title
+								%h2
+									Baby Step 2<br/>
+									%span.subtitle
+										Pay off all debt using the Debt Snowball
+							.step-content
+								%p
+									List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first.
+								%p
+									The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.
+						.baby-step#baby-3
+							.step-icon
+							.step-title
+								%h2
+									Baby Step 3<br/>
+									%span.subtitle
+										3 to 6 months of exepenses in savings
+							.step-content
+								%p
+									Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra” money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?” Your answer to that question is how much you should save.
+								%p
+									Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you’re paying to yourself, a buffer between you and life.
+						.baby-step#baby-4
+							.step-icon
+							.step-title
+								%h2
+									Baby Step 4<br/>
+									%span.subtitle
+										Invest 15% of household income for retirement
+							.step-content
+								%p
+									When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.
+								%p
+									Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.
+						.baby-step#baby-5
+							.step-title
+								.step-icon
+								%h2
+									Baby Step 5<br/>
+									%span.subtitle
+										College funding for children
+							.step-content
+								%p
+									When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.
+								%p
+									Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.
+						.baby-step#baby-6
+							.step-title
+								.step-icon
+								%h2
+									Baby Step 6<br/>
+									%span.subtitle
+										Pay off your house early
+							.step-content
+								%p
+									When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.
+								%p
+									Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.
+						.baby-step#baby-7
+							.step-title
+								.step-icon
+								%h2
+									Baby Step 7<br/>
+									%span.subtitle
+										Build wealth and give!
+							.step-content
+								%p
+									When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.
+								%p
+									Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.
+					.footnote
+						%p
+							<a href="#">Kathleen Baker</a> and 4 other friends are on this step
+
+
+	%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/ScrollToPlugin.min.js" }
+	%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/ColorPropsPlugin.min.js" }
+	%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js" }
+	%script{ :src => "js/main.js" }

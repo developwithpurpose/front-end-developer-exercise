@@ -1,0 +1,76 @@
+@mixin babynav($step: 1, $state: ''){
+		@extend	.img.img-icons_small_bs#{$step};
+		background:{
+			repeat:	no-repeat;
+			position:	center right;
+		}
+		padding:{
+			right:	60px;
+		}
+		
+		&.active, &:focus, &:active{
+			@extend	.img.img-icons_small_bs#{$step}_blue;
+			color:	$bluesteps;
+			font:{
+				weight:	400;
+			}
+		}
+}
+
+#step-nav{
+	@extend	.img.img-shadow_left_nav;
+	background:{
+		color:	$greygradstart;
+		position:	top right;
+		repeat:	repeat-y;
+	}
+
+	li{
+		border:{
+			bottom:	1px solid $white;
+		}
+		text:{
+			align:	right;
+		}
+		padding:{
+			right:	24px;
+		}
+	}
+
+	a{
+		color:	$greylinks;
+		font:{
+			size:	em(18);
+		}
+		line:{
+			height:	60px;
+		}
+		text:{
+			decoration:	none;
+		}
+
+		&#step-1{
+			@include babynav;
+		}
+
+		&#step-2{
+			@include babynav(2);
+		}
+
+		&#step-3{
+			@include babynav(3);
+		}
+		&#step-4{
+			@include babynav(4);
+		}
+		&#step-5{
+			@include babynav(5);
+		}
+		&#step-6{
+			@include babynav(6);
+		}
+		&#step-7{
+			@include babynav(7);
+		}
+	}
+}
