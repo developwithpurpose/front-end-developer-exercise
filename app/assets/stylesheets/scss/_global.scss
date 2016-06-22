@@ -1,0 +1,165 @@
+@import "config";
+@import "functions";
+@import "mixins";
+//@import "normalize";
+
+html,
+body {
+	font-size: $base-font-size;
+	height: 100%;
+}
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+body {
+  background: $body-bg;
+  color: $body-font-color;
+  font-family: $body-font-family;
+  line-height: $base-line-height; // Set to $base-line-height to take on browser default of 150%
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+a {
+	color:$anchor-font-color;
+}
+
+p {
+	margin-top:0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	-ms-interpolation-mode: bicubic;
+	display: inline-block;
+  vertical-align: middle;
+}
+
+h1 { font-size:$h1-font-size; }
+h2 { font-size:$h2-font-size; }
+h3 { font-size:$h3-font-size; }
+h4 { font-size:$h4-font-size; }
+h5 { font-size:$h5-font-size; }
+h6 { font-size:$h6-font-size; }
+
+/** Font smoothing **/
+// Antialiased font smoothing works best for light text on a dark background.
+// Apply to single elements instead of globally to body.
+// Note this only applies to webkit-based desktop browsers and Firefox 25 (and later) on the Mac.
+.antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/** Miscellaneous useful HTML classes **/
+.left { float: left !important; }
+.right { float: right !important; }
+.clearfix { @include clearfix; }
+.hide { display: none; } //Hide visually and from screen readers
+.invisible { visibility: hidden; } //Hide visually and from screen readers, but maintain layout
+
+/** ICONS **/
+.icon {
+	background-repeat:no-repeat;
+	background-position-x: 0;
+	background-position-y: 0;
+	display:inline-block;
+	&.icon-small {
+		background-image: url('../../images/icons/sprites/icons_small.png');
+		width:rem-calc($small-icon-width);
+		height:rem-calc($small-icon-height);
+		&.money {
+			@include sprite-grid($y:0, $height:$small-icon-height);
+			&.active {
+				@include sprite-grid($y:7, $height:$small-icon-height);
+			}
+		}
+		&.snowball {
+			@include sprite-grid($y:1, $height:$small-icon-height);
+			&.active {
+				@include sprite-grid($y:8, $height:$small-icon-height);
+			}
+		}
+		&.bank {
+			@include sprite-grid($y:2, $height:$small-icon-height);
+			&.active {
+				@include sprite-grid($y:9, $height:$small-icon-height);
+			}
+		}
+		&.chart {
+			@include sprite-grid($y:3, $height:$small-icon-height);
+			&.active {
+				@include sprite-grid($y:10, $height:$small-icon-height);
+			}
+		}
+		&.book {
+			@include sprite-grid($y:4, $height:$small-icon-height);
+			&.active {
+				@include sprite-grid($y:11, $height:$small-icon-height);
+			}
+		}
+		&.home {
+			@include sprite-grid($y:5, $height:$small-icon-height);
+			&.active {
+				@include sprite-grid($y:12, $height:$small-icon-height);
+			}
+		}
+		&.hand {
+			@include sprite-grid($y:6, $height:$small-icon-height);
+			&.active {
+				@include sprite-grid($y:13, $height:$small-icon-height);
+			}
+		}
+	}//&.icon-small
+	&.icon-large {
+		background-image: url('../../images/icons/sprites/icons_large.png');
+		width:rem-calc($large-icon-width);
+		height:rem-calc($large-icon-height);
+		&.money {
+			@include sprite-grid($y:0, $height:$large-icon-height);
+			&.active {
+				@include sprite-grid($y:7, $height:$large-icon-height);
+			}
+		}
+		&.snowball {
+			@include sprite-grid($y:1, $height:$large-icon-height);
+			&.active {
+				@include sprite-grid($y:8, $height:$large-icon-height);
+			}
+		}
+		&.bank {
+			@include sprite-grid($y:2, $height:$large-icon-height);
+			&.active {
+				@include sprite-grid($y:9, $height:$large-icon-height);
+			}
+		}
+		&.chart {
+			@include sprite-grid($y:3, $height:$large-icon-height);
+			&.active {
+				@include sprite-grid($y:10, $height:$large-icon-height);
+			}
+		}
+		&.book {
+			@include sprite-grid($y:4, $height:$large-icon-height);
+			&.active {
+				@include sprite-grid($y:11, $height:$large-icon-height);
+			}
+		}
+		&.home {
+			@include sprite-grid($y:5, $height:$large-icon-height);
+			&.active {
+				@include sprite-grid($y:12, $height:$large-icon-height);
+			}
+		}
+		&.hand {
+			@include sprite-grid($y:6, $height:$large-icon-height);
+			&.active {
+				@include sprite-grid($y:13, $height:$large-icon-height);
+			}
+		}
+	}//&.icon-large
+}//.icon
