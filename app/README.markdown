@@ -26,6 +26,7 @@ I chose the popular jQuery library for the functionality of the project. Other t
 
 1. Enlarge the font sizes and increase the line-height (leading) for the body copy to make the design more legible.
 1. Depending on the final usage and data source, it would be advisable to refactor by splitting the AJAX call out of the tab slider and make it a standalone script. This would ensure that just the UI features of the tab slider could be utilized. However, for this project this seemed like the most direct approach. Optimization could also be performed to avoid making the same AJAX call each time a tab is loaded.
+1. Converting the icons to an SVG format would be advisable. This would ensure that the colors and other properties could be changed directly within CSS without the need to maintain separate images/sprites.
 
 ## Using the tab slider
 
