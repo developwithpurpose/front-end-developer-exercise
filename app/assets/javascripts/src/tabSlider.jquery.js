@@ -116,7 +116,7 @@
 			var tabPosition = $(base.getTab(index)).position();
 			base.elements.tabs.$wrapper.animate({
 				top: tabPosition.top*-1
-			});
+			}, 600);
 			base.loadTabContent(index);
 			
 			//Slide the nav
@@ -240,12 +240,6 @@
 
 			//Set the initial styles
 			base.$el.addClass('tabSlider-initialized');
-			
-			//Load the dynamic tab content
-//			base.elements.tabs.$items.each(function(i, el) {
-//				index = base.getTabIndex($(this).attr('id'));
-//				base.loadTabContent(index);
-//			});
 			
 			//Insert the active indicator
 			$('<span class="pointer" />').insertBefore($(base.getTabNav(1)));
