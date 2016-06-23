@@ -3,9 +3,9 @@
 	%head
 		%title= "Dave Ramsey - Front End Exercise"
 		%meta{ :charset => "utf-8" }
-		%meta{ 'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+		%meta{ 'http-equiv' => "X-UA-Compatible", :content => "IE=edge" }
 		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"}
-		%link{ :charset => "utf-8", :href => "assets/stylesheets/main.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }	
+		%link{ :href => "assets/stylesheets/main.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }	
 
 	%body
 		.page-wrap
@@ -16,11 +16,11 @@
 				.content-inner
 					%h1
 						%span.light
-							Real Life, Love and Money with</br>
+							Real Life, Love and Money with<br/>
 						%span.heavy
 							Americaʼs Most<br/> Trusted Guy
 
-			%section.container#main-content
+			.container#main-content
 				%nav.sidebar.fleft#step-nav
 					%ul
 						%li.slider
@@ -120,7 +120,7 @@
 							<a href="#">Kathleen Baker</a> and 4 other friends are on this step
 
 
-	%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/ScrollToPlugin.min.js" }
-	%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/ColorPropsPlugin.min.js" }
-	%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js" }
-	%script{ :src => "assets/javascripts/main.js" }
+		%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/ScrollToPlugin.min.js" }
+		%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/ColorPropsPlugin.min.js" }
+		%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js" }
+		%script{ :src => "assets/javascripts/main.js" }
