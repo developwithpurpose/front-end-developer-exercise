@@ -1,18 +1,35 @@
 @mixin babynav($step: 1, $state: ''){
-		@extend	.img.img-icons_small_bs#{$step};
-		background:{
-			repeat:	no-repeat;
-			position:	center right;
+		position:	relative;
+		z-index: 10;
+		a{
+			@extend	.img.img-icons_small_bs#{$step};
+	
+			color:	$greylinks;
+			font:{
+				size:	em(18);
+			}
+			line:{
+				height:	60px;
+			}
+			text:{
+				decoration:	none;
+			}
+
+			padding:{
+				right:	60px;
+			}
+			background:{
+				repeat:	no-repeat;
+				position:	center right;
+			}
 		}
-		padding:{
-			right:	60px;
-		}
+
 		
-		&.active, &:focus, &:active{
+		&.active a, a:focus, a:active{
 			@extend	.img.img-icons_small_bs#{$step}_blue;
 			color:	$bluesteps;
 			font:{
-				weight:	400;
+				weight:	600;
 			}
 		}
 }
@@ -25,6 +42,8 @@
 		repeat:	repeat-y;
 	}
 
+	position:	relative;
+
 	li{
 		border:{
 			bottom:	1px solid $white;
@@ -35,18 +54,14 @@
 		padding:{
 			right:	24px;
 		}
-	}
 
-	a{
-		color:	$greylinks;
-		font:{
-			size:	em(18);
-		}
-		line:{
+		&.slider{
 			height:	60px;
-		}
-		text:{
-			decoration:	none;
+			position:	absolute;
+
+			background:	#fff;
+			width:	100%;
+			z-index: 1;
 		}
 
 		&#step-1{
@@ -73,4 +88,6 @@
 			@include babynav(7);
 		}
 	}
+
+	
 }

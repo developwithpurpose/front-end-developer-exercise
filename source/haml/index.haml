@@ -16,16 +16,18 @@
 				.content-inner
 					%h1
 						%span.light
-							Real Life, Live and Money with</br>
+							Real Life, Love and Money with</br>
 						%span.heavy
 							America's Most<br/> Trusted Guy
 
 			%section.container#main-content
 				%aside.sidebar.fleft#step-nav
 					%ul
+						%li.slider
 						- (1..7).each do |i|
-							%li
-								%a.step{ :id => "step-#{i}", :href => "#baby-#{i}"}= "Baby Step #{i}"
+							%li{ :id => "step-#{i}"}
+								%a.step{ :href => "#baby-#{i}"}= "Baby Step #{i}"
+							
 							
 				%main.fleft#baby-steps
 					.content-inner
@@ -121,4 +123,5 @@
 	%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/ScrollToPlugin.min.js" }
 	%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/ColorPropsPlugin.min.js" }
 	%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js" }
-	%script{ :src => "js/main.js" }
+	%script{ :src => "js/utilLayer.js" }
+	%script{ :src => "js/eventLayer.js" }
