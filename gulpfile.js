@@ -61,13 +61,13 @@ gulp.task('initOpts', function(){
 
 	js = {
 		in: source + 'js/**/*',
-		out: dest + 'js/',
+		out: dest + 'assets/javascripts/',
 		filename: 'main.js'
 	},
 
 	images = {
 		in: source + 'images/**/*',
-		out: dest + 'images'
+		out: dest + 'assets/images'
 	},
 
 	imguri = {
@@ -80,7 +80,7 @@ gulp.task('initOpts', function(){
 	css = {
 		in: source + 'scss/main.scss',
 		watch: [source + 'scss/**/*', '!' + imguri.out + imguri.filename],
-		out: dest + 'css/',
+		out: dest + 'assets/stylesheets/',
 		pleeeaseOpts: {
 			autoprefixer: { browsers: ['last 2 versions', '> 2%']},
 			rem: ['16px'],

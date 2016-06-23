@@ -1,0 +1,50 @@
+@mixin babytitle($step: 1){
+	.step-icon{
+		@extend	.img.img-icons_large_bs#{$step}_blue;
+		background:{
+			repeat:	no-repeat;
+			position:	center left;
+		}
+		position:	absolute;
+		left:	0; top:	0;
+		
+		width:	77px;
+		height:	65px;
+	}
+}
+
+@mixin babynav($step: 1, $state: ''){
+		position:	relative;
+		z-index: 10;
+		a{
+			@extend	.img.img-icons_small_bs#{$step};
+	
+			color:	$greylinks;
+			font:{
+				size:	em(18);
+			}
+			line:{
+				height:	60px;
+			}
+			text:{
+				decoration:	none;
+			}
+
+			padding:{
+				right:	60px;
+			}
+			background:{
+				repeat:	no-repeat;
+				position:	center right;
+			}
+		}
+
+		
+		&.active a, a:focus, a:active{
+			@extend	.img.img-icons_small_bs#{$step}_blue;
+			color:	$bluesteps;
+			font:{
+				weight:	600;
+			}
+		}
+}

@@ -1,3 +1,4 @@
+//requires polyfills.js
 
 //lightweight utility acts as a jQuery replacement for element manipulation
 //this utility also includes methods for selecting dynamic feed content
@@ -12,8 +13,15 @@ var util = (function() {
             $parent.appendChild($child);
             return $child;
         },
-        'ajax': function($req){
-
+        'ajax': function($req, $success){
+            var xh = new XMLHttpRequest();
+            xh.onreadystatechange = function(){
+                if(xh.readyState === 4 && xh.status === 200){
+                    $success(xh.responseText);                   
+                }
+            };
+            xh.open("GET", $req, true);
+            xh.send();
         },
         'appendClass': function($el, $classname) {
             if(!util.hasClass($el, $classname))
@@ -70,32 +78,17 @@ var util = (function() {
             var $elem = $target || document;
             return $elem.querySelectorAll($selector);
         },
+        'sort': function(a, b){
+             if (a.lastName < b.lastName)
+                return -1;
+              if (a.lastName > b.lastName)
+                return 1;
+              return 0; 
+        },
         'tag': function($tag, $target) {
             var $elem = $target || document;
             return $elem.getElementsByTagName($tag);
-        },
-        'contentSelect': function(obj) {
-            var feed = obj.feed;
-            var selector = obj.selector;
-            var selectorID = obj.selectorID;
-            
-            console.log('selecting content... ' + feed + ' :: '  + selector + ' :: ' + selectorID);
-            for (var i = 0; i < dynamicContent[feed].length; ++i) { 
-                console.log('looping feeds');
-                if (dynamicContent[feed][i][selector] === selectorID) {
-                    console.log('selector matched');
-                    for (var id in dynamicContent[feed][i]) {
-                        var fvalue = dynamicContent[feed][i][id];
-                        console.log('fvalue = ' + fvalue);
-
-                        if (id === selector && fvalue === selectorID) {
-                            return dynamicContent[feed][i];
-                        }
-
-                    }
-                }
-            }
-        },
+        }
     };
 
 })();

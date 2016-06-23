@@ -4,9 +4,11 @@
 	var navlinks = util.selectAll('.step'),
 		pane = util.select('.content-inner', util.select('#baby-steps')),
 		slider = util.select('.slider'),
-		prevlink = null;
+		stepEvent = new CustomEvent('stepChange'),
+		prevlink = navlinks[0];
 
 	function activateListeners(){
+		util.addClass(util.parent(navlinks[0]), 'active');
 		for(var i = 0; i < navlinks.length; i++){
 			navlinks[i].addEventListener('click', animateNav);
 		}
@@ -27,6 +29,8 @@
 		
 		TweenMax.to(pane, 1.8, {scrollTo:{y: pane_y}});
 		TweenMax.to(slider, 2.1, {y: slider_y});
+
+		window.dispatchEvent(stepEvent);
 	}
 
 	activateListeners();

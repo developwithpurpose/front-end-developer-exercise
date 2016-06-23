@@ -4,41 +4,49 @@
 	}
 }
 
-@mixin babytitle($step: 1){
-	.step-icon{
-		@extend	.img.img-icons_large_bs#{$step}_blue;
+.shadow{
+	position:	absolute;
+	z-index:	1;
+	height:	$page_height;
+
+	background:{
+		repeat:	no-repeat;
+	}
+
+	&.left{
+		width:	20px;
+		left:	-20px;
+		@extend .img.img-shadow_left;
 		background:{
-			repeat:	no-repeat;
-			position:	center left;
+			position:	top right;
 		}
-		position:	absolute;
-		left:	0; top:	0;
-		
-		width:	77px;
-		height:	65px;
+	}
+
+	&.right{
+		width:	20px;
+		right:	-20px;
+		@extend .img.img-shadow_right;
+		background:{
+			position:	top left;
+		}
+	}
+
+	&.bottom{
+		width:	100%;
+		height:	30px;
+		bottom:	-30px;
+
+		@extend .img.img-shadow_bottom;
+		background:{
+			position:	top left;
+		}
 	}
 }
 
 #baby-steps{
-	#baby-1{
-		@include babytitle;
-	}
-	#baby-2{
-		@include babytitle(2);
-	}
-	#baby-3{
-		@include babytitle(3);
-	}
-	#baby-4{
-		@include babytitle(4);
-	}
-	#baby-5{
-		@include babytitle(5);
-	}
-	#baby-6{
-		@include babytitle(6);
-	}
-	#baby-7{
-		@include babytitle(7);
+	@for $i from 1 through 7 {
+		#baby-#{$i}{
+			@include babytitle(#{$i});
+		}
 	}
 }

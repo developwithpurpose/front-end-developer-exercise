@@ -5,7 +5,7 @@
 		%meta{ :charset => "utf-8" }
 		%meta{ 'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
 		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"}
-		%link{ :charset => "utf-8", :href => "css/main.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }	
+		%link{ :charset => "utf-8", :href => "assets/stylesheets/main.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }	
 
 	%body
 		.page-wrap
@@ -18,7 +18,7 @@
 						%span.light
 							Real Life, Love and Money with</br>
 						%span.heavy
-							America's Most<br/> Trusted Guy
+							Americaʼs Most<br/> Trusted Guy
 
 			%section.container#main-content
 				%aside.sidebar.fleft#step-nav
@@ -123,5 +123,7 @@
 	%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/ScrollToPlugin.min.js" }
 	%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/ColorPropsPlugin.min.js" }
 	%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js" }
-	%script{ :src => "js/utilLayer.js" }
-	%script{ :src => "js/eventLayer.js" }
+	%script{ :src => "assets/javascripts/polyfills.js" }
+	%script{ :src => "assets/javascripts/utilLayer.js" }
+	%script{ :src => "assets/javascripts/dynLayer.js" }
+	%script{ :src => "assets/javascripts/eventLayer.js" }
