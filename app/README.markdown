@@ -18,9 +18,9 @@ Ruby Dependencies
 
 Outside of the dependencies managed by npm, the project is has 3 gem depedencies.
 
-* [Haml](https://rubygems.org/gems/haml/versions/4.0.7)
-* [Sass](https://rubygems.org/gems/sass)
-* [Compass](https://rubygems.org/gems/compass)
+* [Haml](https://rubygems.org/gems/haml/versions/4.0.7)```gem install haml```
+* [Sass](https://rubygems.org/gems/sass)```gem install sass```
+* [Compass](https://rubygems.org/gems/compass)```gem install compass```
 
 
 Server
@@ -33,10 +33,11 @@ Running the project
 
 Before installing project dependencies, you should install Gulp as a global.
 
-```npm install -g gulp
-npm install
-npm start
-```
+
+```npm install -g gulp```
+```npm install```
+```npm start```
+
 
 If you did not receive any compilation errors, Browsersync will output a message notifying you of what the internal and external URLs for the local build are.  Default port is 3030.
 
