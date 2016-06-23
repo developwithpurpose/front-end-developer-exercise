@@ -92,7 +92,7 @@ gulp.task('initOpts', function(){
 			sourcemap: true
 		},
 		compassOpts: {
-			css: dest + 'css',
+			css: dest + 'assets/stylesheets',
 			sass: source + 'scss',
 			require: []
 		}
