@@ -41,13 +41,13 @@ My approach was to make the tab slider script as modular as possible, by ensurin
 
 All of the elements that relate to the animation are only loaded when the jQuery plugin is instantiated. This ensures the cleanest markup for screen readers, search crawlers and those using assistive devices or browsers where JavaScript is unavailable.
 
-The index that's used to name tabs can be configured on a per-usage basis by assigning the "data-tabSliderIndex" property in the HTML. This allows future flexibility should the tab slider UI be used for something other than baby steps. In the project files we're using a tab index named "step" to ensure that each tab has a logical name/anchor associated with it (eg. "step1" and "step2"). The default option is to use a tab index imaginatively named "tab". This gives anchors like "tab1" and "tab2".
+The index that's used to name tabs can be configured on a per-usage basis by assigning the `data-tabSliderIndex` property in the HTML. This allows future flexibility should the tab slider UI be used for something other than baby steps. In the project files we're using a tab index named "step" to ensure that each tab has a logical name/anchor associated with it (eg. "step1" and "step2"). The default option is to use a tab index imaginatively named "tab". This gives anchors like "tab1" and "tab2".
 
 ### Initialization & Configuration
 
-1. Initialize by attaching the "data-tabSlider" property to any HTML element.
-1. Required sub-elements are (1) a '.tabNav' element, containing a list of tab elements, and (2) a '.tabContents' element, containing a hierarchy of elements with corresponding id attributes. See the first example below.
-1. Set the height of your tab content ('tabContents > article' in the following example) explicitly in your CSS. Each tab should have the same height.
+1. Initialize by attaching the `data-tabSlider` property to any HTML element.
+1. Required sub-elements are (1) a `.tabNav` element, containing a list of tab elements, and (2) a `.tabContents` element, containing a hierarchy of elements with corresponding id attributes. See the first example below.
+1. Set the height of your tab content (`tabContents > article` in the following example) explicitly in your CSS. Each tab should have the same height.
 
 #### Default Usage Example
 
@@ -68,7 +68,7 @@ The index that's used to name tabs can be configured on a per-usage basis by ass
 
 #### Customized Tab Names Example
 
-Follow the same convention as above, but add the data-tabSliderIndex property to the containing element. See the example below to provide anchors named "step1" and "step2":
+Follow the same convention as above, but add the `data-tabSliderIndex` property to the containing element. See the example below to provide anchors named "step1" and "step2":
 
 ```html
 <section data-tabSlider data-tabSliderIndex="step">
