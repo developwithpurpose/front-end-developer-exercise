@@ -54,6 +54,7 @@ gulp.task('initOpts', function(){
 		watch: source + 'haml/**/*',
 		out: dest,
 		args: {
+			require: ['./source/controllers/babysteps.rb'],
 			escapeHtml: true,
 			doubleQuoteAttributes: true
 		}

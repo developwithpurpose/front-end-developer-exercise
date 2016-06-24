@@ -30,7 +30,7 @@ h1{
 	}
 }
 
-h2, ul{
+h2, h3, ul{
 	font:{
 		family:	$contentfont;
 	}
@@ -45,12 +45,19 @@ h2{
 	line:{
 		height:	20px;
 	}
-	.subtitle{
-		color:	$greysubtext;
-		font:{
-			weight:	300;
-			size:	em(18, 30);
-		}
+	margin:{
+		bottom:	5px;
+	}
+}
+
+h3{
+	color:	$greysubtext;
+	font:{
+		weight:	300;
+		size:	em(18);
+	}
+	line:{
+		height:	20px;
 	}
 }
 
@@ -66,6 +73,13 @@ p{
 		bottom:	20px;
 	}
 }
+
+#baby-2 p{
+	font:{
+		size:	em(12.5);
+	}
+}
+
 
 .footnote{
 	font:{

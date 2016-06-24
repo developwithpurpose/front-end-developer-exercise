@@ -12,6 +12,13 @@ Key Notes
 * All UI elements are embedded within the stylesheet as Base64 URIs.
 * While the page is fully accessible with JS disabled, the sliding bar does not follow the active step.
 * The only big difference in appearance between Windows and Mac is Helvetica font stack support.
+* _Updated 06/24/16_ Removed all Baby Step content from Haml markup and migrated into a Ruby controller to eliminate tagging redundancy.  Did this as a learning exploration as it was my first Ruby controller/helper ever written.
+
+
+Intentional Deviations
+----------------
+
+* The paragraph copy in Baby Step 2 has been reduced by 0.5.  The reasoning behind this was to eliminate the word "debt" from being a widow.
 
 Ruby Dependencies
 ----------------
