@@ -1,0 +1,88 @@
+.fleft{
+	float:	left;
+}
+
+.page-wrap{
+	width:	$containerwidth + ($gutter-width *2);
+	margin:	0 auto;
+	position:	relative;
+}
+
+.container{
+	padding:	0 $gutter-width;
+	position:	relative;
+	z-index:	10;
+
+	&#head-content{
+		height: 276px;
+
+
+		.content-inner{
+			padding:{
+				top:	$padding-header-top;
+			}
+		}
+	}
+
+	&#main-content{
+		background: $white;
+		height:	$main_height;
+		padding:{
+			top:	$main_pad;
+			left:	0;
+			right:	0;
+		}
+	}
+}
+
+#step-nav{
+	width:	$sidenav_width;
+	height:	$main_height;
+	float:	left;
+}
+
+#baby-steps{
+	width:	$content_width;
+	padding:	0 $gutter-width;
+
+	.content-inner{
+		max:{
+			height:	233px;
+		}
+
+		overflow: hidden;
+	}
+
+	.baby-step{
+		position:	relative;
+		padding:{
+			bottom:	26px;
+		}
+	}
+
+	.step-title{
+		margin:{
+			bottom:	24px;
+		}
+
+		padding:{
+			top:	20px;
+		}
+
+		line-height: 20px;
+
+		h2, h3{
+			padding:{
+				left:	96px;
+			}
+		}
+		position:	relative;
+	}
+}
+
+.footnote{
+	visibility:	hidden;
+	margin:{
+		top:	40px;
+	}
+}

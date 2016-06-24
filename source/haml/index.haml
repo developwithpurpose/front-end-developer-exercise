@@ -1,0 +1,46 @@
+!!! 5
+%html{ :lang => "en"}
+	%head
+		%title= "Dave Ramsey - Front End Exercise"
+		%meta{ :charset => "utf-8" }
+		%meta{ 'http-equiv' => "X-UA-Compatible", :content => "IE=edge" }
+		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"}
+		%link{ :href => "assets/stylesheets/main.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }	
+
+	%body
+		.page-wrap
+			.shadow.left
+			.shadow.right
+			.shadow.bottom
+			%header.container#head-content
+				.content-inner
+					%h1
+						%span.light
+							Real Life, Love and Money with<br/>
+						%span.heavy
+							Americaʼs Most<br/> Trusted Guy
+
+			%main.container#main-content
+				%nav.sidebar.fleft#step-nav
+					%ul
+						%li.slider
+						- $steps.each do |step|
+							%li{ :id => "step-#{step.count}"}
+								%a.step{ :href => "#baby-#{step.count}"}= "Baby Step #{step.count}"
+							
+				%section.fleft#baby-steps
+					.content-inner
+						- $steps.each do |step|
+							%article.baby-step{ :id => "baby-#{step.count}"}
+								.step-title
+									.step-icon
+									%h2= step.name
+									%h3.subtitle= step.subtitle
+								.step-content
+									%p!= step.para1
+									%p!= step.para2
+					%aside.footnote
+
+		%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/ScrollToPlugin.min.js" }
+		%script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js" }
+		%script{ :src => "assets/javascripts/main.js" }

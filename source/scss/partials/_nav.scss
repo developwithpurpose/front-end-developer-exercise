@@ -1,0 +1,41 @@
+
+#step-nav{
+	@extend	.img.img-shadow_left_nav;
+	background:{
+		color:	$greygradstart;
+		position:	top right;
+		repeat:	repeat-y;
+	}
+
+	position:	relative;
+
+	li{
+		border:{
+			bottom:	1px solid $white;
+		}
+		text:{
+			align:	right;
+		}
+		padding:{
+			right:	24px;
+		}
+
+		&.slider{
+			height:	60px;
+			position:	absolute;
+
+			background:	#fff;
+			width:	100%;
+			z-index: 1;
+		}
+
+		@for $i from 1 through 7 {
+			&#step-#{$i}{
+				@include babynav(#{$i});
+			}
+		}
+
+	}
+
+	
+}

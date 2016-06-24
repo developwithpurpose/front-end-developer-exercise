@@ -1,14 +1,37 @@
 {
-  "name": "front-end-developer-exercise",
-  "version": "1.0.0",
+  "name": "front-end-developer-exercise-theopizza",
+  "version": "1.0.1",
+  "main": "app/index.html",
   "repository": {
     "type": "git",
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+    "start": "gulp"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "browser-sync": "^2.9.12",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-deporder": "^1.1.0",
+    "gulp-git": "^1.6.0",
+    "gulp-haml": "^0.1.6",
+    "gulp-htmlclean": "^2.6.4",
+    "gulp-imacss": "^1.0.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-newer": "^0.5.1",
+    "gulp-pleeease": "^2.0.1",
+    "gulp-preprocess": "^1.2.0",
+    "gulp-ruby-haml": "0.0.9",
+    "gulp-ruby-sass": "^2.0.5",
+    "gulp-size": "^2.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-strip-debug": "^1.0.2",
+    "gulp-uglify": "^1.4.2",
+    "run-sequence": "^1.1.4",
+    "st": "^1.0.0"
   }
 }

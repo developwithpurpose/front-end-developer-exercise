@@ -1,0 +1,17 @@
+/*
+	I typically setup a susy + breakpoint map here.
+	Since this is a simple LP w/ a static layout
+	I've just defined some static widths and gutters
+*/
+
+
+$page_height:	955px;
+$padding-header-top:	50px;
+$gutter-width:	70px;
+
+$containerwidth:	982px - ($gutter-width * 2);
+$sidenav_width:	300px;
+$content_width:	$containerwidth - $sidenav_width;
+
+$main_height:	616px;
+$main_pad:	60px;

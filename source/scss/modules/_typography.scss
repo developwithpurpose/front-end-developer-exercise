@@ -1,0 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300);
+
+//converts px to em
+@function em($px:16, $base:16){
+	@return ($px/$base) * 1em;
+}
+
+$contentfont:	'Source Sans Pro', sans-serif;
+$headerfont:	'Open Sans', sans-serif;
+$defaultstack:	'Helvetica Neue', Helvetica, Arial, sans-serif;
