@@ -1,6 +1,6 @@
 {
   "name": "front-end-developer-exercise",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
@@ -9,6 +9,13 @@
     "start": "http-server ./app -d false"
   },
   "devDependencies": {
+    "bower": "^1.7.9",
+    "grunt": "~0.4.5",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.0",
     "http-server": "^0.8.0"
   }
 }

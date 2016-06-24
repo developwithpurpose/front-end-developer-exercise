@@ -1,0 +1,194 @@
+/***********************************************************************
+* !TYPOGRAPHY
+/***********************************************************************/
+@mixin headings($from: 1, $to: 6){
+    @for $i from $from through $to {
+      h#{$i}{
+        @content
+      }
+    }
+}
+
+@mixin scale-headings($amount, $from:1, $to:6) {
+	@for $i from $from through $to {
+		@if $i == 1 { h1 { font-size: $h1-font-size + $amount; } }
+		@if $i == 2 { h2 { font-size: $h2-font-size + $amount; } }
+		@if $i == 3 { h3 { font-size: $h3-font-size + $amount; } }
+		@if $i == 4 { h4 { font-size: $h4-font-size + $amount; } }
+		@if $i == 5 { h5 { font-size: $h5-font-size + $amount; } }
+		@if $i == 6 { h6 { font-size: $h6-font-size + $amount; } }
+	}
+}
+
+/***********************************************************************
+* !COLORS
+/***********************************************************************/
+/**
+* GRADIENT
+*
+* @see http://codepen.io/Hornebom/pen/epqmGx/
+* @param string $bgColor Background color of element and gradient start color
+* @param int $angle Gradient angle
+* @param string $gradientColor Gradient end color
+* @param float $opacityStart A float percentage between 0 and 1
+* @param float $opacityEnd A float percentage between 0 and 1
+*/
+@mixin gradient (
+$bgColor,       // background-color
+$angle,         // gradient angle
+$gradientColor, // gradient color
+$opacityStart,  // opacity at start > 1 - 0
+$opacityEnd     // opacity at end > 1 - 0
+) {
+  background-color: $bgColor;
+  background-image: linear-gradient(
+    ($angle * 1deg),
+    rgba($gradientColor, $opacityStart),
+    rgba($gradientColor, $opacityEnd)
+  );
+  background-size: 100% 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+/***********************************************************************
+* !ICONS & SPRITES
+/***********************************************************************/
+/**
+* SPRITE GRID
+* Given the width and height of the grid, calculates the position of sprite
+* that's placed on a grid. Grid starts from a zero-based index.
+*
+* @param int $x The width of the icon grid
+* @param int $y The height of the icon grid
+*/
+@mixin sprite-grid($x:1, $y:1, $width:0, $height:0) {
+	background-position-x: ($x * $width)*-1;
+	background-position-y: ($y * $height)*-1;
+}
+
+/***********************************************************************
+* !LAYOUT & GRID
+/***********************************************************************/
+// Clearfix
+//
+// We use this to clear floats
+@mixin clearfix {
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
+
+// Box Sizing
+//
+// We use this to add box-sizing across browser prefixes
+@mixin box-sizing($type:border-box) {
+	-webkit-box-sizing: $type; // Android < 2.3, iOS < 4
+	-moz-box-sizing: $type; // Firefox < 29
+	box-sizing: $type; // Chrome, IE 8+, Opera, Safari 5.1
+}
+
+/***********************************************************************
+* !ACCESSIBILITY
+/***********************************************************************/
+// Element Invisible
+//
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
+
+// Element Invisible Off
+//
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  clip: auto;
+}
+
+/***********************************************************************
+* !TRANSITIONS & EFFECTS
+/***********************************************************************/
+// Single Transition
+//
+// We use this to add transitions to elements
+// $property - Default: all, Options: http://www.w3.org/TR/css3-transitions/#animatable-properties
+// $speed - Default: 300ms
+// $ease - Default: ease-out, Options: http://css-tricks.com/almanac/properties/t/transition-timing-function/
+@mixin single-transition($property:all, $speed:300ms, $ease:ease-out) {
+  @include transition($property, $speed, $ease);
+}
+
+// Transition
+//
+// We use this to add single or multiple transitions to elements
+// $property - Default: all, Options: http://www.w3.org/TR/css3-transitions/#animatable-properties
+// $speed - Default: 300ms
+// $ease - Default: ease-out, Options: http://css-tricks.com/almanac/properties/t/transition-timing-function/
+// $delay - Default: null (0s)
+@mixin transition($property:all, $speed:300ms, $ease:ease-out, $delay:null) {
+  $transition: none;
+
+  @if length($property) > 1 {
+
+    @each $transition_list in $property {
+
+      @for $i from 1 through length($transition_list) {
+
+        @if $i == 1 {
+          $_property: nth($transition_list, $i);
+        }
+
+        @if length($transition_list) > 1 {
+          @if $i == 2 {
+            $_speed: nth($transition_list, $i);
+          }
+        } @else {
+          $_speed: $speed;
+        }
+
+        @if length($transition_list) > 2 {
+          @if $i == 3 {
+            $_ease: nth($transition_list, $i);
+          }
+        } @else {
+          $_ease: $ease;
+        }
+
+        @if length($transition_list) > 3 {
+          @if $i == 4 {
+            $_delay: nth($transition_list, $i);
+          }
+        } @else {
+          $_delay: $delay;
+        }
+      }
+
+      @if $transition == none {
+        $transition: $_property $_speed $_ease $_delay;
+      } @else {
+        $transition: $transition, $_property $_speed $_ease $_delay;
+      }
+    }
+  }
+  @else {
+
+    @each $prop in $property {
+
+      @if $transition == none {
+        $transition: $prop $speed $ease $delay;
+      } @else {
+        $transition: $transition, $prop $speed $ease $delay;
+      }
+    }
+  }
+
+  transition: $transition;
+}

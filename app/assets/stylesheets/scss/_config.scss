@@ -1,0 +1,38 @@
+@import "functions";
+
+//Colors
+$body-bg:#bbbfc2;
+$body-font-color:#65686f;
+$anchor-font-color:#6fbee7;
+$heading-color:#36abe1;
+
+$white:#ffffff;
+$black:#000000;
+
+//Layout
+$container-width:980px;
+
+//Fonts
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-smoothing: antialiased !default;
+
+$body-font-family:Helvetica,'Helvetica Neue','Lucida Sans','Lucida Grande','Lucida Unicode','Lucida',Arial,Verdana,sans-serif;
+$font-open-sans:'Open Sans',Tahoma,Arial,Segoe,sans-serif;
+$font-source-sans-pro:'Source Sans Pro',Tahoma,Arial,Segoe,sans-serif;
+
+//Headings
+$h1-font-size:rem-calc(50);
+$h2-font-size:rem-calc(30);
+$h3-font-size:rem-calc(18);
+$h4-font-size:rem-calc(18);
+$h5-font-size:rem-calc(16);
+$h6-font-size:rem-calc(16);
+
+//Icon Sprite Sizes
+$small-icon-width:30px;
+$small-icon-height:25px;
+$large-icon-width:77px;
+$large-icon-height:65px;
