@@ -1,0 +1,24 @@
+☐	Document Work throughout creation in ./app/readme.md
+☐ Mock out the webpage
+☐ Add animation when navigating the Baby Steps
+☐	Unit test the Dynamic Content User story
+☐	Deploy application for production
+☐	Include the source code as well as the compiled output
+Add Friend Integration:
+	☐	Display summary of which friend are on this baby step
+	☐	Display names on the baby step by last name in ascending order
+	☐	if 0 friends, then don’t show any message
+	☐	if 1 friend, then show “Paul Taylor is also in Baby Step 2”
+	☐	if 2 friends, then show “Thomas Harris and Sharon Thomas are also in Baby Step 3”
+	☐	if 3 friends, then show “Deborah Lee, Shirley Perez, and 1 other friend are also in Baby Step 4”
+	☐	if 4 or more friends, then show “Patricia Allen, Matthew Garcia, and 2 other friends are also in Baby Step 5”
+Success:
+	☐	Semantic Markup
+	☐	Accessible Markup
+	☐	Should work in all modern browsers as well as IE 9+.
+		☐	Document intentional deviations
+	☐	Do not create mobile version
+	☐	The page should be usable without JavaScript
+		☐	Document intentional deviations
+	☐	Do not use a single-page application framework
+	☐	The page must still be accessible by running `npm start`

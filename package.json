@@ -9,6 +9,11 @@
     "start": "http-server ./app -d false"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "basscss-sass": "^4.0.0",
+    "bourbon": "^4.2.7",
+    "gulp": "^3.9.1",
+    "http-server": "^0.8.0",
+    "jquery": "^3.0.0",
+    "laravel-elixir": "^5.0.0"
   }
 }
