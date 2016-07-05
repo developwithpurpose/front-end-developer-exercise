@@ -4,6 +4,7 @@
 ☐	Unit test the Dynamic Content User story
 ☐	Deploy application for production
 ☐	Include the source code as well as the compiled output
+☐	Ensure animation works without Javascript
 Add Friend Integration:
 	☐	Display summary of which friend are on this baby step
 	☐	Display names on the baby step by last name in ascending order
