@@ -1,0 +1,85 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; display:block }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { display: block }
+body { line-height: 1; background:#bbbfc2 }
+ol, ul { list-style: none }
+blockquote, q { quotes: none }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none }
+table { border-collapse: collapse; border-spacing: 0 }
+
+/*Clearfix*/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0 }
+.clearfix { display: inline-block }
+* html .clearfix { height: 1% }
+.clearfix { display: block }
+
+/*Page Styles*/
+#shadow { background: url(../images/shadow_leftright.png) no-repeat; width:1010px; margin:0 auto }
+#bottomshadow { background: url(../images/shadow_bottom.jpg) center; height:30px; width:980px; margin:0 auto }
+#container { width:980px; margin:0 auto; background:#fff; position:relative }
+
+/*Header*/
+header { background: url(../images/header.jpg); width:100%; height:276px; margin:0 0 60px 0; position:relative }
+header h1 { color:#fff; position:absolute; line-height:15px; top:50px; right:70px; font-size:32px; font-family: 'Open Sans', sans-serif; font-weight:300; text-align:right; line-height:48px }
+header span { font-size:50px; font-weight:bold }
+
+/*Body*/
+#main { float:left; display:block; width:540px; padding-right:70px; height:500px; overflow:hidden }
+#main, #main #message { font-size:13px; font-family:Helvetica, Arial, sans-serif; color:#65686f; line-height:18px; margin:0 0 40px 0 }
+#nav { float:left; margin:0 70px 0 0; width:300px; background:url(../images/shadow_left_nav.jpg) repeat-y }
+
+/*Main Content*/
+#main div { height:100% }
+#main h2 { font-family: 'Source Sans Pro', sans-serif; font-weight:600; font-size:30px; line-height:20px; color:#36abe1; margin:0 0 5px 0 }
+#main .subtitle { font-family: 'Source Sans Pro', sans-serif; font-size:18px; line-height:20px; color:#5c6366 }
+#main .contentheader { background:url(../images/icons/sprites/icons_large.png) no-repeat; height:60px; padding:10px 0 0 90px; margin:0 0 24px 0 }
+#main #babystep1 .contentheader { background-position:0px -455px; height:55px }
+#main #babystep2 .contentheader { background-position:0px -520px; height:55px }
+#main #babystep3 .contentheader { background-position:0px -585px; height:55px }
+#main #babystep4 .contentheader { background-position:0px -650px; height:50px }
+#main #babystep5 .contentheader { background-position:0px -710px; height:60px }
+#main #babystep6 .contentheader { background-position:0px -780px; height:52px }
+#main #babystep7 .contentheader { background-position:0px -842px }
+#main .message { font-size:13px; height:auto; margin:40px 0 0 0 }
+#main .message span { color:#36abe1; display:inline }
+
+
+/*Baby Step Links*/
+#nav ul li a:link, #nav ul li a:visited { position:relative; text-decoration:none; display:block; padding:0 84px 0 24px; text-align:right; border-bottom:1px solid #fff; font-size:18px; line-height:60px; color:#9ba0a4; font-family: 'Source Sans Pro', sans-serif; cursor:pointer }
+.smallicon { width:30px; height:25px; position:absolute; top:20px; right:25px; background:url(../images/icons/sprites/icons_small.png) no-repeat 0 0  }
+#nav ul li .icon1 { background-position:0px 0px }
+#nav ul li .icon2 { background-position:0px -25px }
+#nav ul li .icon3 { background-position:0px -50px }
+#nav ul li .icon4 { background-position:0px -75px }
+#nav ul li .icon5 { background-position:0px -100px }
+#nav ul li .icon6 { background-position:0px -125px }
+#nav ul li .icon7 { background-position:0px -150px }
+
+#nav ul { margin:0 0 130px 0 }
+#nav ul li:hover a { color:#36abe1; background:#fff; font-weight:600 }
+#nav ul li:hover a .icon1 { background-position:0px -175px }
+#nav ul li:hover a .icon2 { background-position:0px -200px }
+#nav ul li:hover a .icon3 { background-position:0px -225px }
+#nav ul li:hover a .icon4 { background-position:0px -250px }
+#nav ul li:hover a .icon5 { background-position:0px -275px }
+#nav ul li:hover a .icon6 { background-position:0px -300px }
+#nav ul li:hover a .icon7 { background-position:0px -325px }
