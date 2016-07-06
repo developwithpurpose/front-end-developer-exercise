@@ -10,7 +10,22 @@ html {
 
 body {
   font-family: Helvetica, 'Source Sans Pro', sans-serif;
+  background-color: white;
   color: #65686f;
   width: 980px;
   margin: 0 auto;
 }
+
+main {
+  position: relative;
+  margin: 60px 0 40px 0;
+  height: $main-height;
+}
+
+section {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
