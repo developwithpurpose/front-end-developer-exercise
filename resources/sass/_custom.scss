@@ -78,3 +78,49 @@ input.steps__hidden {
   @include animation-fill-mode(forwards);
   @include transition(0.6s top .05s ease-in-out);
 }
+
+.body-copy {
+  @include animation-timing-function(ease-out);
+  @include animation-duration(0.7s);
+  @include animation-fill-mode(forwards);
+  @include transition(0.6s transform .05s ease-in-out);
+}
+
+article {
+  height: $section-height;
+  width: 730px;
+}
+
+@for $i from 1 through 7 {
+  $proportion: (100 / 7);
+  $percentage: ($i - 1) * $proportion;
+  $distance: ($i - 1) * ($section-height * -1);
+
+  #nav__step#{$i}:checked {
+    & ~ #nav__slider {
+      @include animation-name(nav-step#{$i});
+      top: $percentage * 1%;
+    }
+
+    & ~ .body-copy {
+      @include animation-name(selectedParagraph#{$i});
+      @include transform(translateY($distance));
+    }
+
+  }
+
+  @include keyframes(nav-step#{$i}) {
+    30%,
+    70% {
+      @include transform(scale(0.8));
+      opacity: 0.4;
+    }
+  }
+
+  @include keyframes(selectedParagraph#{$i}) {
+    30%,
+    70% {
+      opacity: 0.4;
+    }
+  }
+}
