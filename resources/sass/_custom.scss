@@ -41,3 +41,40 @@ section {
   }
 }
 
+nav.steps {
+  position: relative;
+  z-index: 10;
+  width: $navigation-width;
+
+  label {
+    display: block;
+    width: $navigation-width;
+    height: 60px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+
+    h1 {
+      margin: 0;
+    }
+  }
+}
+
+// get rid of the radio buttons
+input.steps__hidden {
+  position: absolute;
+  right: 1000%;
+}
+
+
+#nav__slider {
+  position: absolute;
+  left: 0;
+  top: 0%;
+  width: $navigation-width;
+  height: 60px;
+  background: white;
+  @include animation-timing-function(ease-out);
+  @include animation-duration(0.7s);
+  @include animation-fill-mode(forwards);
+  @include transition(0.6s top .05s ease-in-out);
+}
