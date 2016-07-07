@@ -1,1 +1,7 @@
 node_modules/
+app/assets/stylesheets/*.map
+app/assets/stylesheets/main.css
+app/assets/javascripts/*.map
+app/assets/javascripts/bundle.js
+app/assets/javascripts/app.js
+app/rev-manifest.json

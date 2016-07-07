@@ -1,0 +1,87 @@
+.icon {
+  background-image: url($large-icons);
+  display: inline-block;
+  width: 77px;
+  height: 65px;
+  margin-bottom: -7px;
+
+  &.dollar-bill {
+    background-position: 0px 453px;
+  }
+
+  &.snowballs {
+    background-position: 0px 390px;
+  }
+
+  &.piggy-bank {
+    background-position: 0px 325px;
+  }
+
+  &.bar-chart {
+    background-position: 0px 260px;
+  }
+
+  &.book {
+    background-position: 0px 195px;
+  }
+
+  &.house {
+    background-position: 0px 130px;
+  }
+
+  &.hand {
+    background-position: 0px 65px;
+  }
+
+  &.small {
+    position: absolute;
+    right: 24px;
+    top: 16px;
+    width: 30px;
+    height: 25px;
+    margin: 0 0 -7px 24px;
+    background-image: url($small-icons);
+
+    &.dollar-bill {
+      background-position: 0px 0px;
+    }
+
+    &.snowballs {
+      background-position: 0px -25px;
+    }
+
+    &.piggy-bank {
+      background-position: 0px -50px;
+    }
+
+    &.bar-chart {
+      background-position: 0px -75px;
+    }
+
+    &.book {
+      background-position: 0px -100px;
+    }
+
+    &.house {
+      background-position: 0px -125px;
+    }
+
+    &.hand {
+      background-position: 0px -150px;
+    }
+  }
+
+}
+
+@for $i from 1 through 7 {
+  $distance: (8 - $i) * 25px;
+
+  #nav__step#{$i}:checked {
+    & ~ nav.steps #label__step#{$i} {
+      .icon {
+        background-position: 0 $distance;
+        margin: 0 0 -7px 19px;
+      }
+    }
+  }
+}

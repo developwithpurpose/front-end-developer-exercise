@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #bbbfc2;
+}
+
+body {
+  font-family: Helvetica, 'Source Sans Pro', sans-serif;
+  background-color: white;
+  color: #65686f;
+  width: 980px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-size: 13px;
+  margin-top: 16px;
+  line-height: 18px;
+
+  &.friend_info {
+    margin-top: 32px;
+  }
+}
+
+a {
+  color: #6fbee7;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    color: #53A8D4;
+  }
+  &:visited {
+    color: #53A8D4;
+  }
+}
+
+.main {
+  position: relative;
+  margin: 60px 0 40px 0;
+  height: $main-height;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyOSUiIHN0b3AtY29sb3I9IiNlYmVjZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIzMCUiIHN0b3AtY29sb3I9IiNkMWQ1ZDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIzMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+  @include linear-gradient(to right,  #ebeced 29%,#d1d5d6 30.6%,#ffffff 30.6%,#ffffff 100%, $fallback: #ebeced);
+}
+
+section {
+
+  &.body {
+    position: relative;
+  }
+
+  &.content {
+    height: $section-height;
+    overflow: hidden;
+  }
+}
+
+nav.steps {
+  position: relative;
+  z-index: 10;
+  width: $navigation-width;
+  float: left;
+
+  label {
+    display: block;
+    position: relative;
+    width: $navigation-width;
+    height: 60px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+
+    h1 {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      margin: 0 0 0 130px;
+      line-height: 60px;
+      color: #9ba0a4;
+      @include transition(0.6s color .05s ease-in-out);
+    }
+  }
+}
+
+// get rid of the radio buttons
+input.steps__hidden {
+  position: absolute;
+  right: 1000%;
+}
+
+
+#nav__slider {
+  position: absolute;
+  left: 0;
+  top: 0%;
+  width: $navigation-width;
+  height: 60px;
+  background: white;
+  @include animation-timing-function(ease-out);
+  @include animation-duration(0.7s);
+  @include animation-fill-mode(forwards);
+  @include transition(0.6s top .05s ease-in-out);
+}
+
+.body-copy {
+  padding: 0 70px;
+  @include animation-timing-function(ease-out);
+  @include animation-duration(0.7s);
+  @include animation-fill-mode(forwards);
+  @include transition(0.6s transform .05s ease-in-out);
+}
+
+article {
+  height: $section-height;
+
+  header {
+    font-family: 'Source Sans Pro', sans-serif;
+
+    h1 {
+      display: inline-block;
+      // line-height: 20px;
+      font-weight: 600;
+      font-size: 30px;
+      color: #36abe1;
+      margin-left: 12px;
+
+      small {
+        display: block;
+        font-weight: 200;
+        font-size: 18px;
+        color: #9ba0a4;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 7 {
+  $proportion: (100 / 7);
+  $percentage: ($i - 1) * $proportion;
+  $distance: ($i - 1) * ($section-height * -1);
+
+  #nav__step#{$i}:checked {
+    & ~ #nav__slider {
+      @include animation-name(nav-step#{$i});
+      top: $percentage * 1%;
+    }
+
+    & ~ nav.steps #label__step#{$i} {
+      h1 {
+        color: #36abe1;
+        font-weight: 600;
+      }
+    }
+
+    & ~ section.content .body-copy {
+      @include animation-name(selectedStep#{$i});
+      @include transform(translateY($distance));
+    }
+
+  }
+
+  @include keyframes(nav-step#{$i}) {
+    30%,
+    70% {
+      @include transform(scale(0.8));
+      opacity: 0.4;
+    }
+  }
+
+  @include keyframes(selectedStep#{$i}) {
+    30%,
+    70% {
+      opacity: 0.4;
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
