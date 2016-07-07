@@ -105,7 +105,7 @@
 
     app.fn.addMessageToSteps = function(baby_step, message)
     {
-      $('#step' + baby_step).append('<p class="friend_list">' + message + '</p>');
+      $('#step' + baby_step).append('<p class="friend_info">' + message + '</p>');
     };
 
     return app;
