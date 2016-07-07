@@ -1,0 +1,15 @@
+.icon {
+  background-image: url($large-icons);
+  display: inline-block;
+  width: 80px;
+  height: 65px;
+
+
+  &.small {
+    background-image: url($small-icons);
+    width: 30px;
+    height: 25px;
+    margin: 0 0 -7px 24px;
+  }
+
+}
