@@ -68,3 +68,16 @@
   }
 
 }
+
+@for $i from 1 through 7 {
+  $distance: (8 - $i) * 25px;
+
+  #nav__step#{$i}:checked {
+    & ~ nav.steps #label__step#{$i} {
+      .icon {
+        background-position: 0 $distance;
+        margin: 0 0 -7px 19px;
+      }
+    }
+  }
+}
