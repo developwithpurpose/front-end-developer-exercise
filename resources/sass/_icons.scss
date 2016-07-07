@@ -10,6 +10,34 @@
     width: 30px;
     height: 25px;
     margin: 0 0 -7px 24px;
+
+    &.dollar-bill {
+      background-position: 0px 0px;
+    }
+
+    &.snowballs {
+      background-position: 0px -25px;
+    }
+
+    &.piggy-bank {
+      background-position: 0px -50px;
+    }
+
+    &.bar-chart {
+      background-position: 0px -75px;
+    }
+
+    &.book {
+      background-position: 0px -100px;
+    }
+
+    &.house {
+      background-position: 0px -125px;
+    }
+
+    &.hand {
+      background-position: 0px -150px;
+    }
   }
 
 }
