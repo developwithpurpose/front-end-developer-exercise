@@ -157,7 +157,7 @@ article {
     }
 
     & ~ section.content .body-copy {
-      @include animation-name(selectedParagraph#{$i});
+      @include animation-name(selectedStep#{$i});
       @include transform(translateY($distance));
     }
 
@@ -171,7 +171,7 @@ article {
     }
   }
 
-  @include keyframes(selectedParagraph#{$i}) {
+  @include keyframes(selectedStep#{$i}) {
     30%,
     70% {
       opacity: 0.4;
