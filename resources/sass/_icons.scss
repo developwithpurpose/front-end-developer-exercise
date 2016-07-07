@@ -4,6 +4,33 @@
   width: 80px;
   height: 65px;
 
+  &.dollar-bill {
+    background-position: 0px 453px;
+  }
+
+  &.snowballs {
+    background-position: 0px 390px;
+  }
+
+  &.piggy-bank {
+    background-position: 0px 325px;
+  }
+
+  &.bar-chart {
+    background-position: 0px 260px;
+  }
+
+  &.book {
+    background-position: 0px 195px;
+  }
+
+  &.house {
+    background-position: 0px 130px;
+  }
+
+  &.hand {
+    background-position: 0px 65px;
+  }
 
   &.small {
     background-image: url($small-icons);
