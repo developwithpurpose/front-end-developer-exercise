@@ -44,17 +44,12 @@ main {
 }
 
 section {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  width: 100%;
 
   &.body {
-    // height: $main-height;
+    position: relative;
   }
 
   &.content {
-    padding-left: $navigation-width;
     height: $section-height;
     overflow: hidden;
   }
@@ -64,6 +59,7 @@ nav.steps {
   position: relative;
   z-index: 10;
   width: $navigation-width;
+  float: left;
 
   label {
     display: block;
