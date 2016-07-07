@@ -102,6 +102,26 @@ input.steps__hidden {
 
 article {
   height: $section-height;
+
+  header {
+    font-family: 'Source Sans Pro', sans-serif;
+
+    h1 {
+      display: inline-block;
+      // line-height: 20px;
+      font-weight: 600;
+      font-size: 30px;
+      color: #36abe1;
+      margin-left: 12px;
+
+      small {
+        display: block;
+        font-weight: 200;
+        font-size: 18px;
+        color: #9ba0a4;
+      }
+    }
+  }
 }
 
 @for $i from 1 through 7 {
