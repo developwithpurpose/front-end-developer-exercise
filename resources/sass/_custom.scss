@@ -18,8 +18,12 @@ body {
 
 p {
   font-size: 13px;
-  margin-top: 24px;
+  margin-top: 16px;
   line-height: 18px;
+
+  &.friend_info {
+    margin-top: 32px;
+  }
 }
 
 a {
