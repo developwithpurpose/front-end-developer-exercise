@@ -1,9 +1,6 @@
 (function() {
   "use strict";
 
-  //-- get current selected input
-  $('.radios input')
-  .filter(':checked').val();
 
 
   var Application = function()
@@ -18,15 +15,13 @@
 
     app.run = function()
     {
-      //-- set up the event listener
-      $(document).on('click', app.config.query_selector, app.fn.updateFriendsMessage);
 
       //-- grab the json from the API
       $.get('/baby-steps.json', function(response)
       {
         console.log('response', response);
         app.data.response = response;
-        app.fn.updateFriendsMessage();
+        app.fn.updateFriendMessages();
       })
       .fail(function()
       {
@@ -34,7 +29,7 @@
       });
     };
 
-    app.fn.updateFriendsMessage = function()
+    app.fn.updateFriendMessages = function()
     {
       if(app.data.response === undefined)
       {
