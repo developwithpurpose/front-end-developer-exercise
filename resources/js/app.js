@@ -1,8 +1,6 @@
 (function() {
   "use strict";
 
-
-
   var Application = function()
   {
     var app = this;
@@ -15,11 +13,9 @@
 
     app.run = function()
     {
-
       //-- grab the json from the API
       $.get('/baby-steps.json', function(response)
       {
-        console.log('response', response);
         app.data.response = response;
         app.fn.updateFriendMessages();
       })
