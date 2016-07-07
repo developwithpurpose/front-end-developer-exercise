@@ -86,6 +86,7 @@ input.steps__hidden {
 }
 
 .body-copy {
+  padding: 0 70px;
   @include animation-timing-function(ease-out);
   @include animation-duration(0.7s);
   @include animation-fill-mode(forwards);
