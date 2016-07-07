@@ -33,10 +33,13 @@
   }
 
   &.small {
-    background-image: url($small-icons);
+    position: absolute;
+    right: 24px;
+    top: 16px;
     width: 30px;
     height: 25px;
     margin: 0 0 -7px 24px;
+    background-image: url($small-icons);
 
     &.dollar-bill {
       background-position: 0px 0px;

@@ -54,6 +54,7 @@ nav.steps {
 
   label {
     display: block;
+    position: relative;
     width: $navigation-width;
     height: 60px;
     border-bottom: 1px solid white;
@@ -63,7 +64,7 @@ nav.steps {
       font-family: 'Source Sans Pro', sans-serif;
       font-weight: 400;
       font-size: 18px;
-      margin: 0 0 0 120px;
+      margin: 0 0 0 130px;
       line-height: 60px;
       color: #9ba0a4;
       @include transition(0.6s color .05s ease-in-out);
