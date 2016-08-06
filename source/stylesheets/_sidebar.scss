@@ -1,41 +1,62 @@
-@include b(sidebar) {
+.sidebar {
+  // layout
+  -webkit-flex-basis: 300px;
+  flex-basis: 300px;
+  display: inline-block;
+  background-color: #ebeced;
+  background: #ebeced; /* Old browsers */
+  background: -moz-linear-gradient(left,  #ebeced 0%, #ebeced 95%, #d1d5d6 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #ebeced 0%,#ebeced 95%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #ebeced 0%,#ebeced 95%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+
+
   // formatting
   color: $sideBarFontColor;
   font-family: $sideBarFont;
   font-size: 18px;
   font-weight: $fontRegular;
-
-  @include e(item) {
-    // layout
-    display: flex;
-    justify-content: flex-end;
-  }
-  @include e(text) {
-    // layout
-    display: block;
-
-    // formatting
-    line-height: 60px;
-
-  }
-  @include e(icon) {
-    // layout
-    margin: 15px 24px 15px 0;
-    height: 60px;
-  }
 }
 
-@include b(item) {
-  @include m(selected) {
+.sidebar__item {
+  // layout
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: flex-end;
 
+  // formatting
+  color: $baseColor;
+  text-decoration: none;
+
+  // transitions
+  transition: all 243ms ease;
+
+  &--selected {
+    font-weight: $fontSemiBold;
+    color: $sideBarSelectedFontColor;
+    background: #fff;
   }
 }
+.sidebar__text {
+  // layout
+  display: block;
 
-.item:hover,
-.item:active,
-.item:focus {
+  // formatting
+  line-height: 60px;
+  text-align: right;
+
+}
+.sidebar__icon {
+  // layout
+  margin: 15px 24px 15px;
+  height: 30px;
+}
+
+.sidebar__item:hover,
+.sidebar__item:active,
+.sidebar__item:focus {
   font-weight: $fontSemiBold;
-  color: $sideBarFontColorSelected;
+  color: $sideBarSelectedFontColor;
   background: #fff;
 }
 

@@ -1,37 +1,54 @@
-@include b(content) {
+.content {
   //layout
+  padding: 0 70px 40px;
+  width: 540px;
+  display: inline-block;
+}
+
+.content__icon {
+  display: inline-block;
+  width: auto;
+  height: 65px;
+  margin-right: 16px;
+}
+.content__asset {
+
+}
+.content__title {
+  // layout
   display: flex;
-  margin: 60px 70px 40px;
-  @include e(icon) {
-    display: inline-block;
-    width: 77px;
-    height: 65px;
-    margin-right: 10px;
-  }
-  @include e(asset) {
+  width: 100%;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 
-  }
-  @include e(title) {
-    font-family: $contentHeaderFont;
-    font-weight: $fontSemiBold;
-    font-size: 30px;
-    line-height: 20px;
-    display: inline-block;
-    width: 100%;
-  }
-  @include e(subtitle) {
-    // formatting
-    font-family: $contentHeaderFont;
-    font-weight: $fontLight;
-    font-size: 18px;
-    line-height: 20px;
-  }
-  @include e(body) {
-    margin-bottom: 40px;
-  }
+  // formatting
+  font-family: $contentHeaderFont;
+  font-weight: $fontSemiBold;
+  font-size: 30px;
+  line-height: 30px;
+}
 
-  @include e(text) {
-    line-height: 18px;
-    margin-top: 24px;
-  }
+.content__title-text {
+  display: block;
+  padding-top: 10px;
+}
+
+.content__subtitle {
+  // layout
+  display: block;
+  width: 100%;
+
+  // formatting
+  font-family: $contentHeaderFont;
+  font-weight: $fontLight;
+  font-size: 18px;
+  line-height: 20px;
+}
+.content__body {
+  margin-bottom: 40px;
+}
+
+.content__text {
+  line-height: 18px;
+  margin-top: 24px;
 }
