@@ -1,0 +1,62 @@
+@include b(sidebar) {
+  // formatting
+  color: $sideBarFontColor;
+  font-family: $sideBarFont;
+  font-size: 18px;
+  font-weight: $fontRegular;
+
+  @include e(item) {
+    // layout
+    display: flex;
+    justify-content: flex-end;
+  }
+  @include e(text) {
+    // layout
+    display: block;
+
+    // formatting
+    line-height: 60px;
+
+  }
+  @include e(icon) {
+    // layout
+    margin: 15px 24px 15px 0;
+    height: 60px;
+  }
+}
+
+@include b(item) {
+  @include m(selected) {
+
+  }
+}
+
+.item:hover,
+.item:active,
+.item:focus {
+  font-weight: $fontSemiBold;
+  color: $sideBarFontColorSelected;
+  background: #fff;
+}
+
+.bs-1__asset {
+  background-position: 0px 0px;
+}
+.bs-2__asset {
+  background-position: 0px 0px;
+}
+.bs-3__asset {
+  background-position: 0px 0px;
+}
+.bs-4__asset {
+  background-position: 0px 0px;
+}
+.bs-5__asset {
+  background-position: 0px 0px;
+}
+.bs-6__asset {
+  background-position: 0px 0px;
+}
+.bs-7__asset {
+  background-position: 0px 0px;
+}

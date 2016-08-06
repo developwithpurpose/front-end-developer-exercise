@@ -1,0 +1,54 @@
+@function selectorToString($selector) {
+    $selector: inspect($selector); //cast to string
+    $selector: str-slice($selector, 2, -2); //remove bracket
+    @return $selector;
+}
+
+@function containsModifier($selector) {
+    $selector: selectorToString($selector);
+    @if str-index($selector, $modifierSeparator) {
+        @return true;
+    }
+    @else {
+        @return false;
+    }
+}
+
+@function getBlock($selector) {
+    $selector: selectorToString($selector);
+    $modifierStart: str-index($selector, $modifierSeparator);
+    @return str-slice($selector, 0, $modifierStart - 1);
+}
+
+@mixin b($block) {
+   .#{$block} {
+       @content;
+   }
+}
+@mixin e($element) {
+    $selector: &;
+    $block: getBlock($selector);
+    @if containsModifier($selector) {
+        @at-root {
+            #{$selector} {
+                #{$block+$elementSeparator+$element} {
+                    @content;
+                }
+            }
+       }
+    }
+    @else {
+        @at-root {
+            #{$selector+$elementSeparator+$element} {
+                @content;
+            }
+        }
+    }
+}
+@mixin m($modifier) {
+    @at-root {
+        #{&}#{$modifierSeparator+$modifier} {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@include b(header) {
+  // layout
+  background: #000;
+  height: 276px;
+  margin: 50px 70px;
+  width: 100%;
+
+  // formatting
+  color: $headerFontColor;
+  font-family: $headerFont;
+
+  @include e(title) {
+    // formatting
+    font-size: 32px;
+    font-weight: $fontLight;
+    line-height: 32px;
+  }
+  @include e(subtitle) {
+    // layout
+    margin-bottom: 15px;
+
+    // formatting
+    font-size: 50px;
+    font-weight: $fontBold;
+    line-height: 48px;
+  }
+}

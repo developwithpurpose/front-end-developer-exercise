@@ -1,0 +1,37 @@
+@include b(content) {
+  //layout
+  display: flex;
+  margin: 60px 70px 40px;
+  @include e(icon) {
+    display: inline-block;
+    width: 77px;
+    height: 65px;
+    margin-right: 10px;
+  }
+  @include e(asset) {
+
+  }
+  @include e(title) {
+    font-family: $contentHeaderFont;
+    font-weight: $fontSemiBold;
+    font-size: 30px;
+    line-height: 20px;
+    display: inline-block;
+    width: 100%;
+  }
+  @include e(subtitle) {
+    // formatting
+    font-family: $contentHeaderFont;
+    font-weight: $fontLight;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  @include e(body) {
+    margin-bottom: 40px;
+  }
+
+  @include e(text) {
+    line-height: 18px;
+    margin-top: 24px;
+  }
+}

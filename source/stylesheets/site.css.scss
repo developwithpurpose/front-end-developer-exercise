@@ -1,0 +1,58 @@
+@charset "utf-8";
+@import "normalize";
+@import "variables";
+@import "mixins";
+@import "header";
+@import "sidebar";
+@import "content";
+
+body {
+  background-color: $backgroundColor;
+  color: $baseColor;
+  font-family: $contentBodyFont;
+  font-size: 13px;
+  font-weight: $fontRegular;
+  line-height: 18px;
+}
+
+.baby-steps {
+  width: 980px;
+  margin: auto;
+}
+
+.friends {
+  font-family: $contentBodyFont;
+  font-size: 13px;
+}
+
+.link {
+  color: $linkColor;
+}
+
+.item {
+
+}
+
+.asset {
+  width: 100%;
+  height: auto;
+}
+
+@-webkit-keyframes welcome {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+   -webkit-transform: scale(0);
+   opacity: 0;
+  }
+  82.5% {
+    -webkit-transform: scale(1.03);
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}

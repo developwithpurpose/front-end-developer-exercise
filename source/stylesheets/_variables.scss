@@ -1,0 +1,23 @@
+// BEM Setup
+$elementSeparator: '__';
+$modifierSeparator: '--';
+
+// Colors
+$backgroundColor: #bbbfc2;
+$baseColor: #65686f;
+$headerFontColor: #fff;
+$linkColor: #6fbee7;
+$sideBarFontColor: #9ba0a4;
+$sideBarSelectedFontColor: #36abe1;
+
+// Font Family
+$headerFont: "Open Sans", Helvetica, Arial, sans-serif;
+$contentBodyFont: Helvetica, Arial, sans-serif;
+$contentHeaderFont: "Source Sans Pro", Helvetica, Arial, sans-serif;
+$sideBarFont: "Source Sans Pro", Helvetica, Arial, sans-serif;
+
+// Font Weight
+$fontBold: 700;
+$fontSemiBold: 600;
+$fontRegular: 400;
+$fontLight: 100;
