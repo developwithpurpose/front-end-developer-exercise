@@ -16,8 +16,9 @@ Once I was done with the JS, I wanted to add a way to show the friends dynamical
 
 ### Steps to build the project
 
-1. In the terminal run `bundle install`.
-2. Then run `webpack`.
-3. After you run the previous step, `middleman build` or `middleman server` if you wish to view the project dynamically.
-4. Once built, the project outputs to the `app` directory and mimics the file structure initially outlined in the project.
-5. A tool such as MAMP, Passenger, or Anvil can be used to view the production ready build files locally as it uses relative pathing.
+1. In the terminal run `bundle install` to add necessary Ruby gems.
+2. Then run `npm install` to add all of the node dependencies.
+3. Then run `webpack` to compile the JavaScript files.
+4. After you run the previous step, `middleman build` or `middleman server` if you wish to view the project dynamically.
+5. Once built, the project outputs to the `app` directory and mimics the file structure initially outlined in the project.
+6. A tool such as MAMP, Passenger, or Anvil can be used to view the production ready build files locally as it uses relative pathing.
