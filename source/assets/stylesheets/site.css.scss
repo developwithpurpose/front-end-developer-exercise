@@ -47,10 +47,14 @@ body {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-
 .friends {
+  // formatting
   font-family: $contentBodyFont;
   font-size: 13px;
+  // transitions
+  transition: all 500ms ease;
+  transition-delay: 500ms;
+  opacity: 1;
 }
 
 .icon {
@@ -75,7 +79,6 @@ body {
   overflow: hidden;
 }
 
-
 .wrapper::before,
 .wrapper::after {
   content: '';
@@ -92,4 +95,15 @@ body {
 .wrapper::after {
   background: transparent url('../images/shadow_right.jpg') no-repeat -2px 0;
   float: right;
+}
+
+// Settings
+
+.fade-in {
+  opacity: 0;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
 }

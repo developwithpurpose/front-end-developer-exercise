@@ -1,0 +1,10 @@
+      <div class="sidebar">
+          <div class="sidebar-wrapper">
+            <% (1..7).each do |n| %>
+              <a class="item sidebar__item <%= "sidebar__item--selected" if n === 1 %>" data-step="<%= n %>" href="#baby-step-<%= n %>">
+                <span class="sidebar__text">Baby Step <%= n %></span>
+                <div class="sidebar__icon bs-<%= n %>__asset"></div>
+              </a>
+            <% end %>
+          </div>
+        </div>
