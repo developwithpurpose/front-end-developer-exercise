@@ -1,0 +1,114 @@
+.sidebar {
+  // layout
+  -webkit-flex-basis: 300px;
+  flex-basis: 300px;
+  display: inline-block;
+  background-color: #ebeced;
+  background: #ebeced; /* Old browsers */
+  background: -moz-linear-gradient(left,  #ebeced 0%, #ebeced 95%, #d1d5d6 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #ebeced 0%,#ebeced 95%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #ebeced 0%,#ebeced 95%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+  // formatting
+  color: $sideBarFontColor;
+  font-family: $sideBarFont;
+  font-size: 18px;
+  font-weight: $fontRegular;
+}
+
+.sidebar-wrapper {
+  width: 300px;
+}
+
+.sidebar__icon {
+  // layout
+  margin: 15px 24px 15px;
+  height: 25px;
+  width: 30px;
+  background: transparent url('../images/icons/sprites/icons_small.png') no-repeat 0 0;
+  overflow: hidden;
+}
+
+.sidebar__item {
+  // layout
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: flex-end;
+  // formatting
+  color: $baseColor;
+  text-decoration: none;
+  // transitions
+  transition: all 243ms ease;
+
+  &--selected {
+    font-weight: $fontSemiBold;
+    color: $sideBarSelectedFontColor;
+    background: #fff;
+  }
+}
+
+.sidebar__item:hover,
+.sidebar__item:active,
+.sidebar__item:focus {
+  font-weight: $fontSemiBold;
+  color: $sideBarSelectedFontColor;
+  background: #fff;
+}
+
+.sidebar__text {
+  // layout
+  display: block;
+  cursor: pointer;
+  // formatting
+  line-height: 60px;
+  text-align: right;
+}
+
+.bs-1__asset {
+  background-position: 0px 0px;
+}
+.bs-2__asset {
+  background-position: 0px -25px;
+}
+.bs-3__asset {
+  background-position: 0px -50px;
+}
+.bs-4__asset {
+  background-position: 0px -75px;
+}
+.bs-5__asset {
+  background-position: 0px -100px;
+}
+.bs-6__asset {
+  background-position: 0px -125px;
+}
+.bs-7__asset {
+  background-position: 0px -150px;
+}
+
+.sidebar__item--selected,
+.sidebar__item:hover,
+.sidebar__item:active,
+.sidebar__item:focus {
+  .bs-1__asset {
+    background-position: 0px -175px;
+  }
+  .bs-2__asset {
+    background-position: 0px -200px;
+  }
+  .bs-3__asset {
+    background-position: 0px -225px;
+  }
+  .bs-4__asset {
+    background-position: 0px -250px;
+  }
+  .bs-5__asset {
+    background-position: 0px -275px;
+  }
+  .bs-6__asset {
+    background-position: 0px -300px;
+  }
+  .bs-7__asset {
+    background-position: 0px -325px;
+  }
+}

@@ -1,0 +1,27 @@
+                <noscript>
+                  <% friends = get_friends["friends"] %>
+                  <%
+                    sorted_friends = friends.sort_by{ |friend| friend["lastName"] }
+                    sorted_friends_on_step = sorted_friends.select{ |friend| friend["babyStep"] == step }
+                    first_two_sorted_friends_on_step = sorted_friends.take( 2)
+                    remaining_friends_on_step = sorted_friends_on_step.size - first_two_sorted_friends_on_step.size;
+                    
+                    friends_list = first_two_sorted_friends_on_step.map do |friend|
+                      "<a href='#' class='link'>#{friend['firstName']} #{friend['lastName']}</a>";
+                      # '<a href="#" class="link">${friend.firstName} ${friend.lastName}</a>`;
+                    end
+
+                    if sorted_friends_on_step.length === 0
+                      message = ""
+                    elsif sorted_friends_on_step.length === 1
+                      message = "#{friends_list[0]} is also in Baby Step #{step}"
+                    elsif remaining_friends_on_step <= 0
+                      message = "#{friends_list.join(" and ")} are also in Baby Step #{step}"
+                    elsif remaining_friends_on_step === 1
+                      message = "#{friends_list.join(", ")}, and #{remaining_friends_on_step} other friend are also in Baby Step #{step}"
+                    else
+                      message = "#{friends_list.join(", ")}, and #{remaining_friends_on_step} other friends are also in Baby Step #{step}"
+                    end
+                  %>
+                  <%= message %>
+                </noscript>

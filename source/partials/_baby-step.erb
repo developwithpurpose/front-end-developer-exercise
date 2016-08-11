@@ -1,0 +1,28 @@
+          <% get_content["steps"].each_with_index do |step, index| %>
+            <% n = index + 1 %>
+            <article class="baby-step" id="baby-step-<%= n %>">
+              <header class="content__title">
+                <div class="icon content__icon">
+                  <img class="asset" src="/assets/images/icons/individual/icons_large_bs<%= n %>_blue.png" />
+                </div>
+                <h3 class="content__title-text">
+                  <span>
+                    <%= step["title"] %>
+                  </span>
+                  <span class="content__subtitle">
+                    <%= step["subtitle"] %>
+                  </span>
+                </h3>
+              </header>
+              <div class="content__body">
+                <% step["content"].each do |content| %>
+                  <p class="content__text">
+                    <%= content %>
+                  </p>
+                <% end %>
+                <p class="content__text friends">
+                  <span></span><%= partial 'partials/friends', :locals => { :step => n } %>
+                </p>
+              </div>
+            </article>
+          <% end %>
