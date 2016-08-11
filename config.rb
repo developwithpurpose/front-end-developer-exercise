@@ -29,6 +29,25 @@ page '/*.txt', layout: false
 #   end
 # end
 
+helpers do
+  def get_content
+    json_file = File.read('source/baby-steps-content.json')
+    json_data = JSON.parse(json_file)
+  end
+
+  def get_friends
+    json_file = File.read('source/baby-steps.json')
+    json_data = JSON.parse(json_file)
+  end
+end
+
+ignore 'assets/javascripts/base.js'
+ignore 'baby-steps-content.json'
+
+activate :sprockets do |s|
+  s.supported_output_extensions << '.es6'
+end
+
 set :partials_dir, 'assets/partials'
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
@@ -37,8 +56,8 @@ set :images_dir, 'assets/images'
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 end

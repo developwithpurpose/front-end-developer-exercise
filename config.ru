@@ -1,8 +1,10 @@
 require 'middleman-core/load_paths'
 ::Middleman.setup_load_paths
 
+require 'json'
 require 'middleman-core'
 require 'middleman-core/rack'
+require 'sprockets/es6'
 
 require 'fileutils'
 FileUtils.mkdir('log') unless File.exist?('log')
