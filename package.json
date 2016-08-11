@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "http-server": "^0.8.0"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0"
   }
 }

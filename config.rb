@@ -29,6 +29,11 @@ page '/*.txt', layout: false
 #   end
 # end
 
+set :partials_dir, 'assets/partials'
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
