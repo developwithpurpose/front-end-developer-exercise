@@ -1,3 +1,309 @@
 <!doctype html>
-<title>Front-End Developer Exercise</title>
-The server is running!
+<html>
+<head>
+    <title>Front-End Developer Exercise</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-2.1.1.js"></script>
+
+    <style>        
+
+        body { background-color: #BBBFC2; font-family: 'Source Sans Pro', sans-serif;}
+        header { }
+        .container { max-width: 1040px; text-align:center;}
+                                                                
+        #page {background-color: #BBBFC2; background-image: url(assets/images/shadow_left.jpg), url(assets/images/shadow_right.jpg);
+            background-position: left top, right top;
+            background-repeat: no-repeat;}
+        #footer {background-color: #BBBFC2; background-image: url(assets/images/shadow_bottom.jpg);
+            background-position: center bottom;
+            background-repeat: no-repeat;}                
+        article {padding-top:60px; background-color:white;}
+        article,footer { text-align:left;width:980px;margin-left:15px; }  
+        label.icon {            
+            background-image: url(assets/images/icons/sprites/icons_small.png);
+            background-repeat: no-repeat;                            
+            display:inline-block;
+            width:64px;
+            height:25px;
+            vertical-align:middle;            
+        }        
+
+        #tab-1 + span label.icon { background-position: 0 0; }
+        #tab-2 + span label.icon { background-position: 0 -25px; }
+        #tab-3 + span label.icon { background-position: 0 -50px; }
+        #tab-4 + span label.icon { background-position: 0 -75px; }
+        #tab-5 + span label.icon { background-position: 0 -100px; }
+        #tab-6 + span label.icon { background-position: 0 -125px; }
+        #tab-7 + span label.icon { background-position: 0 -150px; }
+
+        #tab-1:checked + span label.icon { background-position: 0 -175px; }
+        #tab-2:checked + span label.icon { background-position: 0 -200px; }
+        #tab-3:checked + span label.icon { background-position: 0 -225px; }
+        #tab-4:checked + span label.icon { background-position: 0 -250px; }
+        #tab-5:checked + span label.icon { background-position: 0 -275px; }
+        #tab-6:checked + span label.icon { background-position: 0 -300px; }
+        #tab-7:checked + span label.icon { background-position: 0 -325px; }
+
+        label.icon-large {            
+            background-image: url(assets/images/icons/sprites/icons_large.png);
+            background-repeat: no-repeat;                                                    
+            width:80px;
+            height:50px;            
+            vertical-align:top;
+        }        
+
+        .tab-content p label {float:left;}
+        h2 {float:left;color:#36abe1;}
+        p {clear:both;}
+        .dynamic-content-container {margin-top:40px; }
+
+        .ease {
+	        -webkit-transition: all 2.5s;
+	           -moz-transition: all 2.5s;
+		         -o-transition: all 2.5s;
+			        transition: all 2.5s;
+        }    
+
+        .tabs {
+	        background: #fff;
+	        position: relative;
+        }
+
+        .tabs > input,
+        .tabs > span {
+	        width: 300px;
+	        height: 58px;
+	        line-height: 60px;
+	        position: absolute;
+	        top: 0;
+        }
+
+        .tabs > input {
+	        cursor: pointer;
+	        filter: alpha(opacity=0);
+	        opacity: 0;
+	        position: absolute;
+	        z-index: 99;
+        }
+
+        .tabs > span {
+	        background: #f0f0f0;
+	        text-align: right;
+	        overflow: hidden;
+        }
+
+        .tabs > span i,
+        .tabs > span {
+	        -webkit-transition: all .5s;
+	           -moz-transition: all .5s;
+		         -o-transition: all .5s;
+			        transition: all .5s;
+        }
+
+        .tabs > input:hover + span {  }
+        .tabs > input:checked + span { background: #fff; font-weight:bold; }
+        .tabs > input:checked + span,
+        .tabs > input:hover + span { color: #3498DB; }
+    
+        #tab-1, #tab-1 + span { left: 0;  }
+        #tab-2, #tab-2 + span { top:60px; }
+        #tab-3, #tab-3 + span { top:120px; }
+        #tab-4, #tab-4 + span { top:180px; }
+        #tab-5, #tab-5 + span { top:240px; }
+        #tab-6, #tab-6 + span { top:300px; }
+        #tab-7, #tab-7 + span { top:360px; }
+        #tab-8 { top:420px; height:80px; }
+
+        .tab-content {
+	        padding: 0px 20px 20px 0;	    
+	        min-height: 500px;
+            margin-left:350px;
+            position:relative;
+        }
+            
+        .tab-content section {
+            visibility: hidden;
+            position:absolute;
+            padding-right:70px;
+        }
+
+        #tab-1:checked ~ .tab-content #tab-item-1  { visibility: visible; opacity:1; transition: all ease-out 1s;}
+        #tab-2:checked ~ .tab-content #tab-item-2  { visibility: visible; opacity:1; transition: all ease-out 1s;}
+        #tab-3:checked ~ .tab-content #tab-item-3  { visibility: visible; opacity:1; transition: all ease-out 1s;}
+        #tab-4:checked ~ .tab-content #tab-item-4  { visibility: visible; opacity:1; transition: all ease-out 1s;}
+        #tab-5:checked ~ .tab-content #tab-item-5  { visibility: visible; opacity:1; transition: all ease-out 1s;}
+        #tab-6:checked ~ .tab-content #tab-item-6  { visibility: visible; opacity:1; transition: all ease-out 1s;}
+        #tab-7:checked ~ .tab-content #tab-item-7  { visibility: visible; opacity:1; transition: all ease-out 1s;}
+
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+            <div id="page">
+                <header>
+                    <img src="assets/images/header_text.jpg" alt="Real life, Love, and Money with America's Most Trusted Guy" />
+                </header>
+                <article>
+
+                    <div class="tabs">
+                        <!-- tab-title -->
+
+                        <input type="radio" id="tab-1" name="tab" checked="checked">
+                        <span href="#tab-item-1">Baby Step 1 <label class="icon" /> </span>
+                        <input type="radio" id="tab-2" name="tab">
+                        <span href="#tab-item-2">Baby Step 2 <label class="icon" /> </span>
+                        <input type="radio" id="tab-3" name="tab">
+                        <span href="#tab-item-3">Baby Step 3 <label class="icon" /> </span>
+                        <input type="radio" id="tab-4" name="tab">
+                        <span href="#tab-item-4">Baby Step 4 <label class="icon" /> </span>
+                        <input type="radio" id="tab-5" name="tab">
+                        <span href="#tab-item-5">Baby Step 5 <label class="icon" /> </span>
+                        <input type="radio" id="tab-6" name="tab">
+                        <span href="#tab-item-6">Baby Step 6 <label class="icon" /> </span>
+                        <input type="radio" id="tab-7" name="tab">
+                        <span href="#tab-item-7">Baby Step 7 <label class="icon" /> </span>
+                                                
+                        <span id="tab-8"> </span>
+
+                        <!-- tab-content -->
+                        <div class="tab-content">
+                            <section id="tab-item-1">
+                                <img src="assets/images/headings/heading_bs1.png" />
+                                <div>
+                                    <p>An emergency fund is for those unexpected events in life that you can't plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It's not a matter of if these events will happen; it's simply a matter of when they will happen.</p>
+                                    <p>This beginning emergency fund will keep life's little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It's time to break the cycle of debt!</p>
+                                </div>
+                                <div class="dynamic-content-container"> <span class="dynamic-content">No friends</span> on this step. </div>
+                            </section>
+                            <section id="tab-item-2">
+                                <img src="assets/images/headings/heading_bs2.png" />
+                                <p>List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don't worry about interest rates unless two debts have similar payoffs. If that's the case, then list the higher interest rate debt first.</p>
+                                <p>The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It's about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.</p>
+                                <div class="dynamic-content-container"> <span class="dynamic-content">No friends</span> on this step. </div>
+                            </section>
+                            <section id="tab-item-3">
+                                <img src="assets/images/headings/heading_bs3.png" />
+                                <p>Once you complete the first two baby steps, you will have built serious momentum. But don't start throwing all your "extra" money into investments quite yet. It's time to build your full emergency fund. Ask yourself, "What would it take for me to live for three to six months if I lost my income?" Your answer to that question is how much you should save.</p>
+                                <p>Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you're paying to yourself, a buffer between you and life.</p>
+                                <div class="dynamic-content-container"> <span class="dynamic-content">No friends</span> on this step. </div>
+                            </section>
+                            <section id="tab-item-4">
+                                <img src="assets/images/headings/heading_bs4.png" />
+                                <p>When you reach this step, you'll have no payments - except the house - and a fully funded emergency fund. Now it's time to get serious about building wealth.</p>
+                                <p>Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don't invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.</p>
+                                <div class="dynamic-content-container"> <span class="dynamic-content">No friends</span> on this step. </div>
+                            </section>
+                            <section id="tab-item-5">
+                                <img src="assets/images/headings/heading_bs5.png" />
+                                <p>By this point, you should have already started Baby Step 4 - investing 15% of your income - before saving for college. Whether you are saving for you or your child to go to college, you need to start now.</p>
+                                <p>In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!</p>
+                                <div class="dynamic-content-container"> <span class="dynamic-content">No friends</span> on this step. </div>
+                            </section>
+                            <section id="tab-item-6">
+                                <img src="assets/images/headings/heading_bs6.png" />
+                                <p>Now it's time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.</p>
+                                <p>As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!</p>
+                                <div class="dynamic-content-container"> <span class="dynamic-content">No friends</span> on this step. </div>
+                            </section>
+                            <section id="tab-item-7">
+                                <img src="assets/images/headings/heading_bs7.png" />
+                                <p>It's time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!</p>
+                                <p>Golda Meir says, "You can't shake hands with a clenched fist." Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family's future, and be gracious enough to bless others. You can do all three at the same time.</p>
+                                <div class="dynamic-content-container"> <span class="dynamic-content">No friends</span> on this step. </div>
+                            </section>                            
+
+                            
+                                
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                </article>
+            </div>
+            <footer id="footer" class="container">
+                <img src="assets/images/shadow_bottom.jpg" />
+            </footer>
+
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            // declare variables
+            var total_friends;
+            var friend_names;
+            var current_step = 1;
+
+            //hook up events
+            $(".tabs input").on("click", loadDynamicContent);
+
+            // fire initial load
+            loadDynamicContent();
+
+            function loadDynamicContent() {
+                var id = this.id;
+                if (id != undefined)
+                    current_step = id.slice(-1);                
+
+                $.ajax({
+                    url: "baby-steps.json",
+                    type: "GET",
+                    dataType: "json",
+                })
+                  .done(function (json) {
+                      var response
+                      total_friends = 0;                      
+                      friend_names = "";
+
+                      var friends = json.friends;
+                      friends.forEach(stepTest);                      
+                      friend_names = friend_names.slice(0, -2);
+                      
+                      if (total_friends == 2)
+                          friend_names = friend_names.replace(",", " and");
+
+                      if (total_friends == 0)
+                          response = "No friends ";
+                      else if (total_friends <= 2)                          
+                          response = friend_names;
+                      else if (total_friends == 3)                          
+                          response = friend_names + " and " + (total_friends - 2) + " other friend ";
+                      else                       
+                          response = friend_names + " and " + (total_friends - 2) + " other friends ";
+
+                      if (total_friends == 1)
+                          response += " is ";
+                      else if (total_friends > 1)
+                          response += " are ";
+
+                      $(".dynamic-content").text(response);
+                  })
+                  .fail(function (xhr, status, errorThrown) {
+                      alert("Sorry, there was a problem!");
+                      console.log("Error: " + errorThrown);
+                      console.log("Status: " + status);
+                      console.dir(xhr);
+                  })
+                  .always(function (xhr, status) {                      
+                  });
+            }
+
+            function stepTest(item) {                
+                var name = item.firstName + ' ' + item.lastName;
+                
+                if (item.babyStep == current_step) {
+                    total_friends++;
+
+                    if (total_friends <= 2)
+                        friend_names += name + ", ";                                        
+                }
+            }
+        });
+    </script>
+</body>
+</html>
