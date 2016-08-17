@@ -1,0 +1,173 @@
+html,
+body {
+    height: 100%;
+}
+
+h2 {
+    color: #36abe1;
+    line-height: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    animation-name: In;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    -webkit-animation-name: In;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+}
+
+h1 {
+    color: #5c6366;
+    line-height: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: -20px;
+    font-size: 18px;
+    font-weight: lighter;
+    animation-name: In;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    -webkit-animation-name: In;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+}
+
+.mainImage {
+    animation-name: In;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    -webkit-animation-name: In;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+}
+
+.subHead {
+    margin-left: 100px;
+    margin-top: -78px;
+}
+
+.menu {
+    color: #333;
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #ccc;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    margin-left: -10px;
+}
+
+.menu input[name="sections"] {
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+}
+
+.menu section {
+    display: block;
+}
+
+.menu section label {
+    color: #989898;
+    background: #ebeced;
+    border: .5px solid #fff;
+    text-align: right;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 15px 20px;
+    position: relative;
+    width: 290px;
+    z-index: 100;
+    height: 100%;
+    -moz-box-shadow: inset -4px 0 4px -2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset -4px 0 4px -2px rgba(0, 0, 0, .4);
+    box-shadow: inset -4px 0 4px -2px rgba(0, 0, 0, .4);
+}
+
+.labelText {
+    margin-right: 80px;
+    margin-bottom: -38px;
+}
+
+.image {
+    width: 40px;
+    height: auto;
+    margin-right: 4px;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+
+.menu section label.final {
+    height: 280px;
+    cursor: default;
+}
+
+.menu section article {
+    display: none;
+    left: 330px;
+    min-width: 300px;
+    padding: 0 70px 0 70px;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    height: 100%;
+}
+
+p {
+    font-size: 13px;
+    color: #65686f;
+    font-family: "Helvetica", sans-serif;
+    animation-name: In;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    -webkit-animation-name: In;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+}
+
+a {
+    color: #6fbee7;
+}
+
+.menu section article:after {
+    background-color: #ccc;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: -229px;
+    position: absolute;
+    top: 0;
+    width: 220px;
+    z-index: 1;
+}
+
+.menu input[name="sections"]:checked + label {
+    background: #fff;
+    color: #36abe1;
+    font-weight: 700;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.menu input[name="sections"]:checked ~ article {
+    display: block;
+}
+
+.headerImage {
+    padding-bottom: 60px;
+    width: 100%
+}
+
+@keyframes In {
+    0% {
+        -webkit-transform: scale(.01);
+        transform: scale(.01);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
