@@ -1,0 +1,79 @@
+@import "neat-helpers"; // or "../neat/neat-helpers" when not in Rails
+
+// ------------------------------------------------------------
+// Set Bourbon's flex-grid variables to match what Neat is doing
+// http://bourbon.io/docs/#flex-grid
+//http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat/
+// ------------------------------------------------------------
+
+$fg-column: $column;
+$fg-gutter: $gutter;
+
+// ------------------------------------------------------------
+// Omega Reset
+// ------------------------------------------------------------
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+
+// Neat Overrides
+// $column: 90px;
+// $gutter: 30px;
+// $grid-columns: 12;
+$max-width: 1280px;
+
+// Neat Breakpoints
+$medium-screen: 640px;
+$large-screen: 860px;
+
+// $medium-screen-up: new-breakpoint(min-width $medium-screen 4);
+// $large-screen-up: new-breakpoint(min-width $large-screen 8);
+
+
+// BETTER BREAKPOINT METHOD
+// Method from https://davidwalsh.name/write-media-queries-sass
+
+// Breakpoint naming and sizes adopted from bootstrap v4
+$sm-width: 544px;
+$md-width: 768px;
+$lg-width: 992px;
+$xl-width: $max-width;
+
+@mixin sm {
+	@media screen and (min-width: #{$sm-width}) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media screen and (min-width: #{$md-width}) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media screen and (min-width: #{$lg-width}) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media screen and (min-width: #{$xl-width}) {
+		@content;
+	}
+}
+
+@mixin hi-res {
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) {
+		@content;
+	}
+}

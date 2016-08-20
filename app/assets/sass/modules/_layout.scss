@@ -1,0 +1,219 @@
+
+body {
+	background-color: $background-gray;
+}
+
+a {
+	color: $link-color;
+
+	@include on-event {
+		color: darken($link-color, 10%);
+	}
+}
+
+.page-wrapper {
+	width: 100%;
+	height: 100%;
+	background-color: $white;
+	max-width: 980px;
+	margin: 0 auto 50px auto;
+	box-shadow: 0px -5px 26px 0px rgba(129,131,133,1);
+}
+	.main-header {
+		position: relative;
+
+		&_title {
+			position: absolute;
+			top: 50px;
+			right: 70px;
+			text-align: right;
+			color: $white;
+
+			h2 {
+				font-size: 32px;
+				font-family: $open-sans;
+				font-weight: 300;
+				margin-bottom: 15px;
+			}
+			h1 {
+				margin: 0;
+				font-size: 50px;
+				font-family: $open-sans;
+				font-weight: 700;
+				line-height: 48px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.main-content-wrapper {
+		padding-top: 60px;
+	}
+		.sidebar {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 30%;
+			height: 100%;
+			background: #ebeced;
+			background: linear-gradient(to right, #ebeced 90%, #d1d5d6);
+			padding-bottom: 200px;
+
+			&-active-background {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 60px;
+				background-color: $white;
+				z-index: 0;
+				@include transition(top .3s);
+
+				.no-js & {
+					display: none;
+				}
+			}
+		}
+			.sidebar_nav {
+
+				&-item {
+					position: relative;
+					z-index: 1;
+					display: block;
+					text-align: right;
+					padding-right: 30%;
+					font-family: $source-sans-pro;
+					font-weight: 400;
+					font-size: 18px;
+					color: $menu-text-gray;
+					line-height: 60px;
+					border-bottom: 2px solid $white;
+
+					background-repeat: no-repeat;
+					background-position: 90% center;
+
+					&:hover {
+						color: darken($menu-text-gray, 10%);
+					}
+
+					&.active {
+						color: $blue;
+
+						.no-js & {
+							color: $menu-text-gray;
+						}
+					}
+
+
+					@mixin baby-step-icon($icon, $active-icon) {
+						background-image: url('/assets/images/icons/individual/' + $icon);
+
+						&.active {
+							background-image: url('/assets/images/icons/individual/' + $active-icon);
+
+							.no-js & {
+								background-image: url('/assets/images/icons/individual/' + $icon);
+							}
+						}
+					}
+
+					&.nav-item--bs1 {
+						@include baby-step-icon('icons_small_bs1.png', 'icons_small_bs1_blue.png');
+					}
+					&.nav-item--bs2 {
+						@include baby-step-icon('icons_small_bs2.png', 'icons_small_bs2_blue.png');
+					}
+					&.nav-item--bs3 {
+						@include baby-step-icon('icons_small_bs3.png', 'icons_small_bs3_blue.png');
+					}
+					&.nav-item--bs4 {
+						@include baby-step-icon('icons_small_bs4.png', 'icons_small_bs4_blue.png');
+					}
+					&.nav-item--bs5 {
+						@include baby-step-icon('icons_small_bs5.png', 'icons_small_bs5_blue.png');
+					}
+					&.nav-item--bs6 {
+						@include baby-step-icon('icons_small_bs6.png', 'icons_small_bs6_blue.png');
+					}
+					&.nav-item--bs7 {
+						@include baby-step-icon('icons_small_bs7.png', 'icons_small_bs7_blue.png');
+					}
+				}
+			}
+
+
+		.main-content {
+			display: inline-block;
+			vertical-align: top;
+			width: 70%;
+			height: 100%;
+			padding-left: 70px;
+			padding-right: 70px;
+		}
+			.baby-step {
+				display: none;
+
+				.no-js & {
+					display: block;
+					margin-bottom: 60px;
+				}
+
+				&.active {
+					display: block;
+				}
+
+				&_title {
+					margin-bottom: 10px;
+
+					&-img {
+						display: inline-block;
+						vertical-align: middle;
+						margin-right: 15px;
+					}
+
+					&-text {
+						display: inline-block;
+						vertical-align: middle;
+						h2 {
+							font-family: $source-sans-pro;
+							font-weight: 600;
+							font-size: 30px;
+							color: $blue;
+							line-height: 30px;
+							margin: 0;
+						}
+						h4 {
+							font-family: $source-sans-pro;
+							font-weight: 300;
+							font-size: 18px;
+							color: $title-gray;
+							line-height: 20px;
+						}
+					}
+
+				}
+
+				&_descr {
+					p {
+						font-size: 13px;
+						color: $copy-gray;
+						line-height: 18px;
+						margin-bottom: 16px;
+					}
+
+					.friends {
+						margin-top: 40px;
+					}
+				}
+			}
+
+			.friend-details {
+				display: none;
+				margin-top: 40px;
+				font-size: 13px;
+				color: $copy-gray;
+				line-height: 18px;
+				margin-bottom: 16px;
+			}
+
+

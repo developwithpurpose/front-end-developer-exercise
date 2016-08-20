@@ -1,0 +1,62 @@
+@function noCache($image) {
+    $ran: random(100);
+
+    @return $image +"?v="+ $ran;
+}
+
+@mixin font-size($fs-map) {
+	@each $fs-breakpoint, $fs-font-size in $fs-map {
+    	@if $fs-breakpoint == null {
+      		font-size: $fs-font-size;
+    	}
+    	@else {
+    		@media screen and (min-width: $fs-breakpoint) {
+        		font-size: $fs-font-size;
+      		}
+    	}
+	}
+}
+
+.clear-fix {
+	clear: both;
+}
+
+.hide, .hidden {
+	display: none;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+// SASS BOILERPLATE MIXINS
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+	@if $self {
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+	}
+	} @else {
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+	}
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+	#{$context} & {
+		@content;
+	}
+}
