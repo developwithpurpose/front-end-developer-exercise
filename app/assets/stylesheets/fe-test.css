@@ -14,6 +14,24 @@ h1 {
   padding: 0;
 }
 
+h2 {
+  font-family: "Source Sans Pro";
+  font-weight: "Semi-bold";
+  font-size: 30px;
+  line-height: 20px;
+  color: #36abe1;
+  margin-bottom: 7px;
+}
+
+section em {
+  font-family: "Source Sans Pro";
+  font-weight: "Light";
+  font-size: 18px;
+  font-style: normal;
+  line-height: 20px;
+  color: #5c6366;
+}
+
 nav {
   width: 276px;
   float: left;
