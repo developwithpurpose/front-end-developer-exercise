@@ -1,4 +1,5 @@
 body {
+  width: 980px;
   margin: 0;
   padding: 0;
 }
@@ -9,6 +10,22 @@ h1 {
   height: 276px;
   text-indent:-9999px;
   background: url('/assets/images/header_text.jpg');
-  margin: 0;
+  margin: 0 0 60px 0;
   padding: 0;
 }
+
+nav {
+  width: 276px;
+  float: left;
+
+  #baby-step-nav {
+    text-align: right;
+    padding-right: 24px;
+  }
+}
+
+main {
+  float: left;
+  width: 704px;
+}
+
