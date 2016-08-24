@@ -58,6 +58,21 @@ nav {
   text-decoration: none;
 }
 
+#baby-step-nav li {
+  padding-right: 44px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: 188px 20px;
+}
+
+li#step1 { background-image: url(/assets/images/icons/individual/icons_large_bs1_blue.png); }
+li#step2 { background-image: url(/assets/images/icons/individual/icons_large_bs2_blue.png); }
+li#step3 { background-image: url(/assets/images/icons/individual/icons_large_bs3_blue.png); }
+li#step4 { background-image: url(/assets/images/icons/individual/icons_large_bs4_blue.png); }
+li#step5 { background-image: url(/assets/images/icons/individual/icons_large_bs5_blue.png); }
+li#step6 { background-image: url(/assets/images/icons/individual/icons_large_bs6_blue.png); }
+li#step7 { background-image: url(/assets/images/icons/individual/icons_large_bs7_blue.png); }
+
 main {
   float: left;
   width: 564px;
