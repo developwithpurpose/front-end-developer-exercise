@@ -49,6 +49,10 @@ nav {
   border-bottom: 1px solid #fff;
 }
 
+#baby-step-nav li.last {
+  border-bottom: none;
+}
+
 #baby-step-nav li a {
   font-family: "Source Sans Pro";
   font-weight: "Regular";
@@ -58,6 +62,14 @@ nav {
   text-decoration: none;
 }
 
+li#step1, div.step1 { background-image: url(/assets/images/icons/individual/icons_large_bs1_blue.png); }
+li#step2, div.step2 { background-image: url(/assets/images/icons/individual/icons_large_bs2_blue.png); }
+li#step3, div.step3 { background-image: url(/assets/images/icons/individual/icons_large_bs3_blue.png); }
+li#step4, div.step4 { background-image: url(/assets/images/icons/individual/icons_large_bs4_blue.png); }
+li#step5, div.step5 { background-image: url(/assets/images/icons/individual/icons_large_bs5_blue.png); }
+li#step6, div.step6 { background-image: url(/assets/images/icons/individual/icons_large_bs6_blue.png); }
+li#step7, div.step7 { background-image: url(/assets/images/icons/individual/icons_large_bs7_blue.png); }
+
 #baby-step-nav li {
   padding-right: 44px;
   background-repeat: no-repeat;
@@ -65,17 +77,19 @@ nav {
   background-position: 188px 20px;
 }
 
-li#step1 { background-image: url(/assets/images/icons/individual/icons_large_bs1_blue.png); }
-li#step2 { background-image: url(/assets/images/icons/individual/icons_large_bs2_blue.png); }
-li#step3 { background-image: url(/assets/images/icons/individual/icons_large_bs3_blue.png); }
-li#step4 { background-image: url(/assets/images/icons/individual/icons_large_bs4_blue.png); }
-li#step5 { background-image: url(/assets/images/icons/individual/icons_large_bs5_blue.png); }
-li#step6 { background-image: url(/assets/images/icons/individual/icons_large_bs6_blue.png); }
-li#step7 { background-image: url(/assets/images/icons/individual/icons_large_bs7_blue.png); }
+div.step-header {
+  padding-left: 94px;
+  background-repeat: no-repeat;
+  background-size: 78px;
+  background-position: 0 0;
+  height: 72px;
+}
 
 main {
+  overflow: hidden;
   float: left;
   width: 564px;
+  height: 250px;
   padding: 0 70px;
   margin: 0;
 }
