@@ -18,14 +18,32 @@ nav {
   width: 276px;
   float: left;
 
-  #baby-step-nav {
-    text-align: right;
-    padding-right: 24px;
-  }
+}
+
+#baby-step-nav {
+  text-align: right;
+  padding-right: 24px;
+  background-color: #ebeced;
+}
+
+#baby-step-nav li {
+  display: block;
+  border-bottom: 1px solid #fff;
+}
+
+#baby-step-nav li a {
+  font-family: "Source Sans Pro";
+  font-weight: "Regular";
+  font-size: 18px;
+  line-height: 60px;
+  color: #9ba0a4;
+  text-decoration: none;
 }
 
 main {
   float: left;
-  width: 704px;
+  width: 564px;
+  padding: 0 70px;
+  margin: 0;
 }
 
