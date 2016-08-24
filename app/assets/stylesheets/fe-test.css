@@ -1,2 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
+  display: block;
+  width: 980px;
+  height: 276px;
+  text-indent:-9999px;
+  background: url('/assets/images/header_text.jpg');
+  margin: 0;
+  padding: 0;
 }
