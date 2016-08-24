@@ -65,3 +65,17 @@ main {
   margin: 0;
 }
 
+main p {
+  font-family: "Helvetica";
+  font-weight: "Regular";
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 22px;
+  color: #65686f;
+}
+
+main a {
+  color: #6fbee7;
+  text-decoration: none;
+}
+
