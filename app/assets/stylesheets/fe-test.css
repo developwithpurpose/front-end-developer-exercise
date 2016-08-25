@@ -47,9 +47,8 @@ nav a {
   position: absolute;
   z-index: -1;
   background-color: #fff;
-  height: 60px;
+  height: 61px;
   opacity: .75;
-  margin-top: 10px;
 }
 
 #nav-bg {

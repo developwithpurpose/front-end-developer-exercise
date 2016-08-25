@@ -14,11 +14,13 @@ var animateNav = function (id) {
   var anchorLocation = $("li[id='" + id + "']").offset().top;
   $("#nav-box").animate(
     { top: anchorLocation },
-    1000
+    600
   );
 }
 
 var setUp = function () {
+  animateNav('step1');
+
   $("nav li a").on("click", function (e) {
     e.preventDefault();
     resetLinkColors();
