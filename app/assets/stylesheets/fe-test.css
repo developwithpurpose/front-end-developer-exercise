@@ -38,10 +38,32 @@ nav {
 
 }
 
+nav a {
+  z-index: 1;
+}
+
+#nav-box {
+  width: 276px;
+  position: absolute;
+  z-index: -1;
+  background-color: #fff;
+  height: 60px;
+  opacity: .75;
+  margin-top: 10px;
+}
+
+#nav-bg {
+  position: absolute;
+  z-index: -3;
+  width: 276px;
+  display: block;
+  height: 450px;
+  background-color: #ebeced;
+}
+
 #baby-step-nav {
   text-align: right;
   padding-right: 24px;
-  background-color: #ebeced;
 }
 
 #baby-step-nav li {
