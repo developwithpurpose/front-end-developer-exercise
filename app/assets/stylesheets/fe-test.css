@@ -70,6 +70,14 @@ li#step5, div.step5 { background-image: url(/assets/images/icons/individual/icon
 li#step6, div.step6 { background-image: url(/assets/images/icons/individual/icons_large_bs6_blue.png); }
 li#step7, div.step7 { background-image: url(/assets/images/icons/individual/icons_large_bs7_blue.png); }
 
+li#step1.active { background-image: url(/assets/images/icons/individual/icons_large_bs1.png); }
+li#step2.active { background-image: url(/assets/images/icons/individual/icons_large_bs2.png); }
+li#step3.active { background-image: url(/assets/images/icons/individual/icons_large_bs3.png); }
+li#step4.active { background-image: url(/assets/images/icons/individual/icons_large_bs4.png); }
+li#step5.active { background-image: url(/assets/images/icons/individual/icons_large_bs5.png); }
+li#step6.active { background-image: url(/assets/images/icons/individual/icons_large_bs6.png); }
+li#step7.active { background-image: url(/assets/images/icons/individual/icons_large_bs7.png); }
+
 #baby-step-nav li {
   padding-right: 44px;
   background-repeat: no-repeat;
