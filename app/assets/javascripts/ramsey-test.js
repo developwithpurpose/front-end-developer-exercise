@@ -3,9 +3,9 @@ var resetLinkColors = function () {
 };
 
 var moveToAnchor = function (id) {
-  var anchorLocation = $("a[name='a-"+ id +"']").offset().top;
+  var locId = "a-" + id;
   $("main").animate(
-    { scrollTop: anchorLocation },
+    { scrollTop: locations[locId] - 260 },
     1000
   );
 }
@@ -18,8 +18,19 @@ var animateNav = function (id) {
   );
 }
 
+setAnchorLocations = function () {
+  var locName;
+  for (var i = 1; i < 8; i++) {
+    locName = "a-step" + i;
+    var anchorLocation = $("a[name='" + locName + "']").offset().top;
+    window.locations[locName] = anchorLocation;
+  };
+}
+
 var setUp = function () {
+  window.locations = {};
   animateNav('step1');
+  setAnchorLocations();
 
   $("nav li a").on("click", function (e) {
     e.preventDefault();
