@@ -123,6 +123,11 @@ main {
   margin: 0;
 }
 
+#friends-alert {
+  float: left;
+  padding: 15px 70px;
+}
+
 main p {
   font-family: "Helvetica";
   font-weight: "Regular";
