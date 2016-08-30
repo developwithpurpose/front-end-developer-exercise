@@ -78,11 +78,25 @@ var displayFriendsInfoFor = function (step) {
   if (friends[step] === undefined) {
     displayText = "";
   } else {
-    displayText = friends[step];
+    displayText = displaySubject(step);
   }
   displayText += displayPredicate(step);
   return displayText;
 };
+
+var displaySubject = function (step) {
+  var subject = "";
+
+  for (var i = 0; i < friends[step].length; i++) {
+    if (friends[step].length > 1 && i == (friends[step].length - 1)) {
+      subject += " and "
+      subject += friends[step][i];
+    } else {
+      subject += friends[step][i];
+    }
+  };
+  return subject;
+}
 
 var displayPredicate = function (step) {
   if(window.friends[step] === undefined) {
@@ -98,7 +112,7 @@ var displayPredicate = function (step) {
       tense = "are also"
       break;
   }
-  return " " + tense + " in " + step;
+  return " " + tense + " in baby " + step.replace("step", "step ");
 }
 
 $(function () {

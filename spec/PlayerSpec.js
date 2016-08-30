@@ -9,7 +9,16 @@ describe("displayFriendsInfoFor", function() {
     }
   });
 
-  it("returns default text", function() {
+  it("returns default display text", function() {
     expect(displayFriendsInfoFor('step1')).toEqual("");
   });
+
+  it("returns display text for a result of one friend", function() {
+    expect(displayFriendsInfoFor('step2')).toEqual("Fred is also in baby step 2");
+  });
+
+  it("returns display text for a result of two friends", function() {
+    expect(displayFriendsInfoFor('step3')).toEqual("Wilma and Bamm-Bamm are also in baby step 3");
+  });
+
 });
