@@ -25,4 +25,7 @@ describe("displayFriendsInfoFor", function() {
     expect(displayFriendsInfoFor('step4')).toEqual("Barney, Gazoo and Betty are also in baby step 4");
   });
 
+  it("returns display text for a result of more than four friends", function() {
+    expect(displayFriendsInfoFor('step5')).toEqual("George, Judy and 3 other friends are also in baby step 5");
+  });
 });

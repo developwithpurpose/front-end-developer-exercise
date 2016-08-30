@@ -87,17 +87,26 @@ var displayFriendsInfoFor = function (step) {
 var displaySubject = function (step) {
   var subject = "";
 
-  for (var i = 0; i < friends[step].length; i++) {
-    if (friends[step].length > 1 && i != (friends[step].length - 1) && i != 0) {
-      subject += ", "
+  if(friends[step].length < 4) {
+    for (var i = 0; i < friends[step].length; i++) {
+      if (friends[step].length > 1 && i != (friends[step].length - 1) && i != 0) {
+        subject += ", "
+      } else if (friends[step].length > 1 && i == (friends[step].length - 1)) {
+        subject += " and "
+      }
       subject += friends[step][i];
-    } else if (friends[step].length > 1 && i == (friends[step].length - 1)) {
-      subject += " and "
+    };
+  } else {
+    for (var i = 0; i < 2; i++) {
+      if (friends[step].length > 1 && i != (friends[step].length - 1) && i != 0) {
+        subject += ", "
+      } else if (friends[step].length > 1 && i == (friends[step].length - 1)) {
+        subject += " and "
+      }
       subject += friends[step][i];
-    } else {
-      subject += friends[step][i];
-    }
-  };
+    };
+      subject += " and " + (friends[step].length - 2) + " other friends"
+  }
   return subject;
 }
 
