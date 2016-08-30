@@ -119,13 +119,13 @@ var displayPredicate = function (step) {
   var tense;
   switch (window.friends[step] != undefined && window.friends[step].length) {
     case 1:
-      tense = "is also"
+      tense = "is "
       break;
     default:
-      tense = "are also"
+      tense = "are "
       break;
   }
-  return " " + tense + " in baby " + step.replace("step", "step ");
+  return " " + tense + "also in baby " + step.replace("step", "step ");
 }
 
 $(function () {
