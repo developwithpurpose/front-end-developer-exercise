@@ -40,7 +40,7 @@ var setUp = function () {
     var targetId = $(this).parent().attr('id')
     moveToAnchor(targetId);
     animateNav(targetId);
-    displayFriendsInfoFor(targetId);
+    $("#friends-alert").text(displayFriendsInfoFor(targetId));
   });
 };
 
@@ -81,7 +81,7 @@ var displayFriendsInfoFor = function (step) {
     displayText = friends[step];
   }
   displayText += displayPredicate(step);
-  $("#friends-alert").text(displayText);
+  return displayText;
 };
 
 var displayPredicate = function (step) {
