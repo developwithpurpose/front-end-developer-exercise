@@ -21,4 +21,8 @@ describe("displayFriendsInfoFor", function() {
     expect(displayFriendsInfoFor('step3')).toEqual("Wilma and Bamm-Bamm are also in baby step 3");
   });
 
+  it("returns display text for a result of three friends", function() {
+    expect(displayFriendsInfoFor('step4')).toEqual("Barney, Gazoo and Betty are also in baby step 4");
+  });
+
 });

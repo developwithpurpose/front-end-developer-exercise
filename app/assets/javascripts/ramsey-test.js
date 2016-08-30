@@ -88,7 +88,10 @@ var displaySubject = function (step) {
   var subject = "";
 
   for (var i = 0; i < friends[step].length; i++) {
-    if (friends[step].length > 1 && i == (friends[step].length - 1)) {
+    if (friends[step].length > 1 && i != (friends[step].length - 1) && i != 0) {
+      subject += ", "
+      subject += friends[step][i];
+    } else if (friends[step].length > 1 && i == (friends[step].length - 1)) {
       subject += " and "
       subject += friends[step][i];
     } else {
