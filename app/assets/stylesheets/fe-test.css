@@ -128,7 +128,7 @@ main {
   padding: 15px 70px;
 }
 
-main p {
+p {
   font-family: "Helvetica";
   font-weight: "Regular";
   font-size: 13px;
@@ -137,7 +137,7 @@ main p {
   color: #65686f;
 }
 
-main a {
+main a, strong {
   color: #6fbee7;
   text-decoration: none;
 }

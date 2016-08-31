@@ -40,8 +40,17 @@ var setUp = function () {
     var targetId = $(this).parent().attr('id')
     moveToAnchor(targetId);
     animateNav(targetId);
-    $("#friends-alert").text(displayFriendsInfoFor(targetId));
+    $("#friends-alert p").html(formatDisplay(displayFriendsInfoFor(targetId)));
   });
+};
+
+var formatDisplay = function (text) {
+  if (text === "") {
+    return "";
+  } else {
+    var splitDisplay = text.split(/(\sand\s\d.*|\sare\s.*|\sis\s.*)/);
+    return "<strong>" + splitDisplay[0] + "</strong>" + splitDisplay[1];
+  }
 };
 
 var processReturnedData = function ( data ) {
