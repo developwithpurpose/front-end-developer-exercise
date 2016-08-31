@@ -23,8 +23,11 @@ Given the time constraints, my goal was to get as much of the plumbing to work w
 
 Here are convenience links to each of the tags:
 [Commits at 1:11](https://github.com/phirefly/front-end-developer-exercise/releases/tag/1_11)
+
 [Commits at 2:03](https://github.com/phirefly/front-end-developer-exercise/releases/tag/2_03)
+
 [Commits at 3:35](https://github.com/phirefly/front-end-developer-exercise/releases/tag/3_35)
+
 [Commits at 4:03](https://github.com/phirefly/front-end-developer-exercise/releases/tag/4_03)
 
 
@@ -44,13 +47,13 @@ To see the specs run, go to `SpecRunner.html?random=true` in your browser.
 
 ## Next Steps and Improvements
 The following are immediate considerations for continued development:
-* Additional visual design tweaks. Example: a simple fade in animation of the main content may be more appropriate than a scroller
+* **Additional visual design tweaks.** Example: a simple fade in animation of the main content may be more appropriate than a scroller
 Reference: https://github.com/phirefly/front-end-developer-exercise/blob/master/app/assets/javascripts/ramsey-test.js#L5-L11
-* Browser considerations: test in multiple versions, based on usage data
-* Pull code out of the global namespace into an object
+* **Browser considerations.** Test in multiple versions, based on usage data
+* **Pull code out of the global namespace.**
 Reference: https://github.com/phirefly/front-end-developer-exercise/blob/master/app/assets/javascripts/ramsey-test.js#L148-L150
-* Add more automated tests. For example, this method is noteworthy https://github.com/phirefly/front-end-developer-exercise/blob/master/app/assets/javascripts/ramsey-test.js#L47 because it separates the markup from the text output in https://github.com/phirefly/front-end-developer-exercise/blob/master/app/assets/javascripts/ramsey-test.js#L85-L94
-* Make the code reusable. The JSON loader/parser and Friends Callout would be good candidates for using in other places
+* **Add more automated tests.** For example, this method is noteworthy https://github.com/phirefly/front-end-developer-exercise/blob/master/app/assets/javascripts/ramsey-test.js#L47 because it separates the markup from the text output in https://github.com/phirefly/front-end-developer-exercise/blob/master/app/assets/javascripts/ramsey-test.js#L85-L94
+* **Make the code reusable.** The JSON loader/parser and Friends Callout would be good candidates for using in other places
 References:
 https://github.com/phirefly/front-end-developer-exercise/blob/master/app/assets/javascripts/ramsey-test.js#L56
 https://github.com/phirefly/front-end-developer-exercise/blob/master/app/assets/javascripts/ramsey-test.js#L85-L94
