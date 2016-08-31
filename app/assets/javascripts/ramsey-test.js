@@ -5,10 +5,10 @@ var resetLinkColors = function () {
 var moveToAnchor = function (id) {
   var locId = "a-" + id;
   $("main").animate(
-    { scrollTop: locations[locId] - 260 },
+    { scrollTop: locations[locId] - 360 },
     1000
   );
-}
+};
 
 var animateNav = function (id) {
   var anchorLocation = $("li[id='" + id + "']").offset().top;
@@ -25,7 +25,7 @@ setAnchorLocations = function () {
     var anchorLocation = $("a[name='" + locName + "']").offset().top;
     window.locations[locName] = anchorLocation;
   };
-}
+};
 
 var setUp = function () {
   window.locations = {};
@@ -118,7 +118,7 @@ var displaySubject = function (step) {
       subject += " and " + (friends[step].length - numNamesToDisplay) + " other friends"
   }
   return subject;
-}
+};
 
 var displayPredicate = function (step) {
   if(window.friends[step] === undefined) {
@@ -135,9 +135,17 @@ var displayPredicate = function (step) {
       break;
   }
   return " " + tense + "also in baby " + step.replace("step", "step ");
-}
+};
+
+var showContent = function () {
+  $("main").show();
+  $("nav").show();
+  $("#nav-box").show();
+  $("#nav-bg").show();
+};
 
 $(function () {
+  showContent();
   setUp();
   fetchData();
 });

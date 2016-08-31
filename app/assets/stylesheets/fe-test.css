@@ -33,9 +33,9 @@ section em {
 }
 
 nav {
+  display: none;
   width: 276px;
   float: left;
-
 }
 
 nav a {
@@ -43,6 +43,7 @@ nav a {
 }
 
 #nav-box {
+  display: none;
   width: 276px;
   position: absolute;
   z-index: -1;
@@ -55,9 +56,9 @@ nav a {
   position: absolute;
   z-index: -3;
   width: 276px;
-  display: block;
   height: 450px;
   background-color: #ebeced;
+  display: none;
 }
 
 #baby-step-nav {
@@ -115,12 +116,17 @@ div.step-header {
 }
 
 main {
+  display: none;
   overflow: hidden;
   float: left;
   width: 564px;
   height: 350px;
   padding: 0 70px;
   margin: 0;
+}
+
+.main-noscript {
+  padding: 0 50px;
 }
 
 #friends-alert {
