@@ -18,7 +18,7 @@ var animateNav = function (id) {
   );
 }
 
-setAnchorLocations = function () {
+var setAnchorLocations = function () {
   var locName;
   for (var i = 1; i < 8; i++) {
     locName = "a-step" + i;
