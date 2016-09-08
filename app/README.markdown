@@ -14,7 +14,7 @@ Built using the html5 doctype, leveraging css3 (animations, transitions) where I
 
 Imported two fonts used for the project: Open Sans and Source Sans Pro from Google fonts cdn.
 
-Integrated SASS to speed up my workflow a bit: a few variables, a mixin, nothing major. It's also compressed and minified.
+Integrated SASS to speed up my workflow a bit: a few variables, a mixin, nothing major.
 
 
 
