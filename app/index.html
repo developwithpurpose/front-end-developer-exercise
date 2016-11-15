@@ -1,3 +1,252 @@
-<!doctype html>
-<title>Front-End Developer Exercise</title>
-The server is running!
+<!DOCTYPE html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="assets/stylesheets/styles.css">
+
+    <noscript>
+        <style>
+            .slide {
+                display: block;
+            }
+            nav a.active { color: #9ba0a4; }
+            #menu-indicator { display: none; }
+            .active .icon-bill { background-position: center 0px; }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="header-text">
+                <div style="margin-bottom: 7px;">Real Life, Love and Money with</div>
+                <div class="bold">America's Most</div>
+                <div class="bold">Trusted Guy</div>
+            </div>
+        </header>
+        <div class="main">
+            <nav>
+                <div id="menu-indicator"></div>
+                <a href="#baby-step-1" class="active">Baby Step 1<span class="icon-bill"></span></a>
+                <a href="#baby-step-2">Baby Step 2<span class="icon-coins"></span></a>
+                <a href="#baby-step-3">Baby Step 3<span class="icon-pig"></span></a>
+                <a href="#baby-step-4">Baby Step 4<span class="icon-signal"></span></a>
+                <a href="#baby-step-5">Baby Step 5<span class="icon-book"></span></a>
+                <a href="#baby-step-6">Baby Step 6<span class="icon-house"></span></a>
+                <a href="#baby-step-7">Baby Step 7<span class="icon-hand"></span></a>
+            </nav>
+            <main>
+                <div class="slide active" id="baby-step-1" data-step="1">
+                    <div class="slide-header">
+                        <span class="icon-bill large blue"></span>
+                        <div class="text">
+                            <h3>Baby Step 1</h3>
+                            <div class="sub-header">$1,000 Emergency Fund</div>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <p>An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job,
+                            an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter
+                            of if these events will happen; it’s simply a matter of when they will happen.</p>
+
+                        <p>This beginning emergency fund will keep life’s little Murphies from turning into new debt while you
+                            work off the old debt. If a real emergency happens, you can handle it with your emergency fund.
+                            No more borrowing. It’s time to break the cycle of debt!</p>
+                    </div>
+                    <div class="slide-footer"></div>
+                </div>
+
+                <div class="slide" id="baby-step-2" data-step="2">
+                    <div class="slide-header">
+                        <span class="icon-coins large blue"></span>
+                        <div class="text">
+                            <h3>Baby Step 2</h3>
+                            <div class="sub-header">Pay off all debt using the Debt Snowball</div>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <p>List your debts, excluding the house, in order. The smallest balance should be your number one priority.
+                            Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then
+                            list the higher interest rate debt first.</p>
+
+                        <p>The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up
+                            about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal
+                            finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts,
+                            you will see results and you will stay motivated to dump your debt.</p>
+                    </div>
+                    <div class="slide-footer"></div>
+                </div>
+
+                <div class="slide" id="baby-step-3" data-step="3">
+                    <div class="slide-header">
+                        <span class="icon-pig large blue"></span>
+                        <div class="text">
+                            <h3>Baby Step 3</h3>
+                            <div class="sub-header">3 to 6 months of exepenses in savings</div>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <p>Once you complete the first two baby steps, you will have built serious momentum. But don’t start
+                            throwing all your “extra” money into investments quite yet. It’s time to build your full emergency
+                            fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?”
+                            Your answer to that question is how much you should save.</p>
+
+                        <p>Use this money for emergencies only: incidents that would have a major impact on you and your family.
+                            Keep these savings in a money market account. Remember, this stash of money is not an investment;
+                            it is insurance you’re paying to yourself, a buffer between you and life.</p>
+                    </div>
+                    <div class="slide-footer"></div>
+                </div>
+
+                <div class="slide" id="baby-step-4" data-step="4">
+                    <div class="slide-header">
+                        <span class="icon-signal large blue"></span>
+                        <div class="text">
+                            <h3>Baby Step 4</h3>
+                            <div class="sub-header">Invest 15% of household income for retirement</div>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <p>When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund.
+                            Now it’s time to get serious about building wealth.</p>
+
+                        <p>Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans.
+                            Don’t invest more than that because the extra money will help you complete the next two steps:
+                            college savings and paying off your home early.</p>
+                    </div>
+                    <div class="slide-footer"></div>
+                </div>
+
+                <div class="slide" id="baby-step-5" data-step="5">
+                    <div class="slide-header">
+                        <span class="icon-book large blue"></span>
+                        <div class="text">
+                            <h3>Baby Step 5</h3>
+                            <div class="sub-header">College funding for children</div>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <p>When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund.
+                            Now it’s time to get serious about building wealth.</p>
+
+                        <p>Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans.
+                            Don’t invest more than that because the extra money will help you complete the next two steps:
+                            college savings and paying off your home early.</p>
+                    </div>
+                    <div class="slide-footer"></div>
+                </div>
+
+                <div class="slide" id="baby-step-6" data-step="6">
+                    <div class="slide-header">
+                        <span class="icon-house large blue"></span>
+                        <div class="text">
+                            <h3>Baby Step 6</h3>
+                            <div class="sub-header">Pay off your house early</div>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <p>When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund.
+                            Now it’s time to get serious about building wealth.</p>
+
+                        <p>Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans.
+                            Don’t invest more than that because the extra money will help you complete the next two steps:
+                            college savings and paying off your home early.</p>
+                    </div>
+                    <div class="slide-footer"></div>
+                </div>
+
+                <div class="slide" id="baby-step-7" data-step="7">
+                    <div class="slide-header">
+                        <span class="icon-hand large blue"></span>
+                        <div class="text">
+                            <h3>Baby Step 7</h3>
+                            <div class="sub-header">Build wealth and give!</div>
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <p>When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund.
+                            Now it’s time to get serious about building wealth.</p>
+
+                        <p>Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans.
+                            Don’t invest more than that because the extra money will help you complete the next two steps:
+                            college savings and paying off your home early.</p>
+                    </div>
+                    <div class="slide-footer"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('main').css('height',$('#baby-step-1').outerHeight());
+            $('.slide').css('display','block');
+
+            $.get("baby-steps.json", function( data ) {
+                var friendsInBabyStep = {};
+
+                for (var index in data.friends) {
+                    if (!friendsInBabyStep[data.friends[index]['babyStep']]) {
+                        friendsInBabyStep[data.friends[index]['babyStep']] = [];
+                    }
+                    
+                    friendsInBabyStep[data.friends[index]['babyStep']].push(data.friends[index]);
+                }
+
+                console.log(friendsInBabyStep);
+
+                var index = 1;
+                while (index <= 7) {
+                    if (friendsInBabyStep[index]) {
+                        switch(friendsInBabyStep[index].length) {
+                            case 1:
+                                var friend = friendsInBabyStep[index][0];
+                                $('*[data-step="'+index+'"] .slide-footer').html(friend.firstName + ' ' + friend.lastName + ' is also in Baby Step ' + index);
+                                break;
+                            case 2:
+                                var friend1 = friendsInBabyStep[index][0];
+                                var friend2 = friendsInBabyStep[index][1];
+                                $('*[data-step="'+index+'"] .slide-footer').html(friend1.firstName + ' ' + friend1.lastName + ' and ' + friend2.firstName + ' ' + friend2.lastName + ' are also in Baby Step ' + index);
+                                break;
+                            default:
+                                var friend1 = friendsInBabyStep[index][0];
+                                var friend2 = friendsInBabyStep[index][1];
+                                console.log(friendsInBabyStep[index]);
+                                $('*[data-step="'+index+'"] .slide-footer').html(friend1.firstName + ' ' + friend1.lastName + ', ' + friend2.firstName + ' ' + friend2.lastName + ' and ' + (friendsInBabyStep[index].length-2)  + ' other friends are also in Baby Step ' + index);
+                                break;
+                        }
+                    }
+
+                    index++;
+                }
+            });
+
+            $('nav a').click(function (event) { 
+                event.preventDefault();
+                event.stopImmediatePropagation();
+
+                var clickedAnchor = $(event.currentTarget);
+                var newSlide = $(clickedAnchor.attr('href'));
+                var slideWindow = $('main');
+                
+                $('nav a.active').removeClass("active");
+                clickedAnchor.addClass("active");
+
+                $('#menu-indicator').animate({
+                    "top" : clickedAnchor.offset().top - $('nav').offset().top + 1
+                }, { queue: false });
+
+                slideWindow.animate({
+                    'height' : newSlide.outerHeight(),
+                    "scrollTop" : (slideWindow.scrollTop() + (newSlide.offset().top - slideWindow.offset().top))
+                }, { queue: false });
+            });
+        });
+    </script>
+</body>
