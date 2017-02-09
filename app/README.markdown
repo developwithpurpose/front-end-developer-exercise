@@ -36,7 +36,7 @@ Instead of loading 22 separate resources for all the icons and hero image, I cho
 IE9
 ------------
 
-Looks very similar. I drop the nav gradient and active item transitions. I lose Flexbox and am setting my step wrapper to a static size to accomodate. I had to change my icon position to pixel values instead of percentage. From a quick glance this will not be noticeable but would've been had the content had greater size inconsistency.
+Looks very similar. I drop the nav gradient and active item transitions. I lose Flexbox and am setting my step wrapper to a static size to accomodate. I had to change my icon position to pixel values instead of percentage. From a quick glance this will not be noticeable but would've been had the content had greater size inconsistency. I did have to add a conditional ie9 css file to account for a no-js version.
 
 
 In Additon
@@ -57,3 +57,4 @@ If I had More Time I Would Have
 * Used Handlebars or Vue.js to render my data in the primary template allowing me to possibly improve my code semantics
 * Fixed Window Location to be pertinent and direct to correct step
 * Refactored JS and reconsidered logic flow
+* Added IE9 CSS to gulp build process

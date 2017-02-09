@@ -1,0 +1,11 @@
+.steps-wrapper {
+    height: 487px;
+}
+.step__icon {
+	top: -2px;
+    transform: translateY(0);
+}
+nav li .nav-icon {
+	top: 17px;
+	transform: translateY(0);
+}
