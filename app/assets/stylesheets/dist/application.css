@@ -1307,12 +1307,13 @@ nav {
     nav li a,
     nav li a:hover {
       color: #9BA0A4;
-      -webkit-transition: .3s;
-              transition: .3s; }
+      -webkit-transition: 0s;
+              transition: 0s; }
     .js nav li.nav-active-step::before {
       width: 100%;
       opacity: 1; }
     .js nav li.nav-active-step a {
+      font-weight: 600;
       color: #36ABE1; }
     nav li .nav-icon {
       position: absolute;

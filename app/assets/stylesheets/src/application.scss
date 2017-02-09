@@ -60,7 +60,7 @@ nav {
         a,
         a:hover {
             color: $gray--nav;
-            transition: .3s;
+            transition: 0s;
         }
         .js &.nav-active-step {
             &::before {
@@ -68,6 +68,7 @@ nav {
                 opacity: 1;
             }
             a {
+                font-weight: 600;
                 color: $gray--nav-hover;
             }
         }
