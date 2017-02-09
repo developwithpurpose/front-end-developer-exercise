@@ -80,6 +80,10 @@ nav {
             background: url("../../images/icons/sprites/icons_small.png");
             content: "";
             transform: translateY(-50%);
+            .no-flexbox.no-flexboxlegacy & {
+                top: 17px;
+                transform: translateY(0);
+            }
         }
         @for $i from 1 through 7 {
             $sprite-sm-x: 0;
@@ -120,6 +124,9 @@ main {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    .no-flexbox.no-flexboxlegacy & {
+        height: 487px;
+    }
 }
 
 .step {
@@ -168,6 +175,10 @@ main {
         background: url("../../images/icons/sprites/icons_large.png");
         content: "";
         transform: translateY(-50%);
+        .no-flexbox.no-flexboxlegacy & {
+            top: -2px;
+            transform: translateY(0);
+        }
     }
     &__message {
         @extend p;

@@ -1324,6 +1324,10 @@ nav {
       content: "";
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%); }
+      .no-flexbox.no-flexboxlegacy nav li .nav-icon {
+        top: 17px;
+        -webkit-transform: translateY(0);
+                transform: translateY(0); }
     nav li:nth-child(1) .nav-icon {
       background-position: 0 0px; }
     .js nav li:nth-child(1).nav-active-step .nav-icon {
@@ -1375,6 +1379,8 @@ main .row {
   width: 100%;
   height: 100%;
   overflow: hidden; }
+  .no-flexbox.no-flexboxlegacy .steps-wrapper {
+    height: 487px; }
 
 .step {
   height: 100%;
@@ -1421,6 +1427,10 @@ main .row {
     content: "";
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
+    .no-flexbox.no-flexboxlegacy .step__icon {
+      top: -2px;
+      -webkit-transform: translateY(0);
+              transform: translateY(0); }
   .step__message {
     -webkit-transition: -webkit-transform .4s ease-out;
             transition: transform .4s ease-out; }
