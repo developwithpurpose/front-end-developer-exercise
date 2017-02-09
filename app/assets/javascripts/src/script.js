@@ -22,20 +22,24 @@ var wb = {
                     case 0:
                         break;
                     case 1:
-                        message = "<a href=\"#!\">Paul Taylor</a> is also in Baby Step " + stepIndex;
+                        message = "<a href=\"#!\">" + returnName(friendsOnStep[0]) + "</a> is also in Baby Step " + stepIndex;
                         activeStep.html(message);
                         break;
                     case 2:
-                        message = "<a href=\"#!\">Thomas Harris</a> and <a href=\"#!\">Sharon Thomas</a> are also in Baby Step " + stepIndex;
+                        message = "<a href=\"#!\">" + returnName(friendsOnStep[0]) + "</a> and <a href=\"#!\">" + returnName(friendsOnStep[1]) + "</a> are also in Baby Step " + stepIndex;
                         activeStep.html(message);
                         break;
                     case 3:
-                        message = "<a href=\"#!\">Deborah Lee</a>, <a href=\"#!\">Shirley Perez</a>, and 1 other friend are also in Baby Step " + stepIndex;
+                        message = "<a href=\"#!\">" + returnName(friendsOnStep[0]) + "</a>, <a href=\"#!\">" + returnName(friendsOnStep[1]) + "</a>, and 1 other friend are also in Baby Step " + stepIndex;
                         activeStep.html(message);
                         break;
                     default:
-                        message = "<a href=\"#!\">Patricia Allen</a>, <a href=\"#!\">Matthew Garcia</a>, and 2 other friends are also in Baby Step " + stepIndex;
+                        message = "<a href=\"#!\">" + returnName(friendsOnStep[0]) + "</a>, <a href=\"#!\">" + returnName(friendsOnStep[1]) + "</a>, and " + (friendsOnStep.length - 2) + " other friends are also in Baby Step " + stepIndex;
                         activeStep.html(message);
+                }
+
+                function returnName(friendObject) {
+                    return friendObject.firstName + " " + friendObject.lastName;
                 }
             }
 
@@ -46,10 +50,15 @@ var wb = {
             }
 
             $("nav li a").on("click", function(e) {
-                $("nav li").removeClass("active-step");
-                $(this).parent().addClass("active-step");
+                var itemIndex = $(this).parent().index();
 
-                fetchFriendsOnStep($(this).parent().index() + 1);
+                $("nav li").removeClass("nav-active-step");
+                $(".step").removeClass("step-active-step");
+
+                $(this).parent().addClass("nav-active-step");
+                $(".step:eq(" + itemIndex + ")").addClass("step-active-step");
+
+                fetchFriendsOnStep(itemIndex + 1);
             });
         }
     }

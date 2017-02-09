@@ -19,6 +19,7 @@ header {
     left: -15px;
     width: calc(100% + 30px);
     padding: 50px 70px 130px;
+    text-align: right;
 }
 
 nav {
@@ -40,17 +41,32 @@ nav {
     }
     li {
         position: relative;
+        z-index: 1;
         padding-right: 80px;
         text-align: right;
         border-bottom: 1px solid $light;
-        a {
-            color: $gray--nav;
-            &:hover {
-                color: $gray--nav;
-            }
-        }
-        &.active-step {
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            width: 0;
+            height: 100%;
             background-color: $light;
+            content: "";
+            opacity: 0;
+            transition: .3s;
+        }
+        a,
+        a:hover {
+            color: $gray--nav;
+            transition: .3s;
+        }
+        .js &.nav-active-step {
+            &::before {
+                width: 100%;
+                opacity: 1;
+            }
             a {
                 color: $gray--nav-hover;
             }
@@ -73,7 +89,7 @@ nav {
                 .nav-icon {
                     background-position: $sprite-sm-x $sprite-sm-y;
                 }
-                &.active-step {
+                .js &.nav-active-step {
                     .nav-icon {
                         background-position: $sprite-sm-x ($sprite-sm-y + $sprite-sm-hover);
                     }
@@ -111,17 +127,37 @@ main {
     min-height: 300px;
     padding-top: 5px;
     margin: 0 70px;
-    transition: .6s;
+    transition: opacity .6s ease;
+    .js & {
+        opacity: 0;
+    }
+    &.step-active-step {
+        opacity: 1;
+    }
     &__header {
         position: relative;
         padding: 6px 0 6px 85px;
         margin-bottom: 24px;
+        transition: transform .4s ease-out;
+        .js & {
+            transform: translateY(15px);
+        }
+        .step-active-step & {
+            transform: translateY(0);
+        }
     }
     &__subtitle {
         margin-bottom: 0;
     }
     &__body {
         margin-bottom: 20px;
+        transition: transform .4s ease-out;
+        .js & {
+            transform: translateY(25px);
+        }
+        .step-active-step & {
+            transform: translateY(0);
+        }
     }
     &__icon {
         position: absolute;
@@ -135,6 +171,13 @@ main {
     }
     &__message {
         @extend p;
+        transition: transform .4s ease-out;
+        .js & {
+            transform: translateY(35px);
+        }
+        .step-active-step & {
+            transform: translateY(0);
+        }
     }
     @for $i from 1 through 7 {
         $sprite-lg-x: -2px;
