@@ -1270,15 +1270,6 @@ header {
   width: calc(100% + 30px);
   padding: 50px 70px 130px;
   text-align: right; }
-  header::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    content: "";
-    box-shadow: 0 0 30px -10px #000; }
 
 nav {
   height: 100%;
@@ -1362,40 +1353,52 @@ nav {
     .js nav li:nth-child(7).nav-active-step .nav-icon {
       background-position: 0 25px; }
 
-main .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 60px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row; }
+main {
+  position: relative; }
+  main .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 60px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  main::before {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-image: url("../../images/shadow_bottom.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: ""; }
 
 .primary-wrapper {
   position: relative;
   margin-bottom: 50px; }
-  .primary-wrapper::after {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    width: 90%;
-    height: 300px;
-    margin: 0 auto;
-    border-radius: 40%;
-    content: "";
-    box-shadow: 0 0 40px -7px #000; }
-  .primary-wrapper::before {
+  .primary-wrapper::after, .primary-wrapper::before {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -12px;
     z-index: -1;
-    width: 100%;
-    height: 75%;
-    content: "";
-    box-shadow: 0 0 30px -10px #000; }
+    display: block;
+    width: 15px;
+    height: 100%;
+    background-image: url("../../images/shadow_left.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: ""; }
+  .primary-wrapper::before {
+    right: -12px;
+    left: inherit;
+    background-image: url("../../images/shadow_right.jpg");
+    background-position: top left; }
 
 .steps-wrapper {
   position: absolute;

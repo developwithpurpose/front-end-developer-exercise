@@ -30,7 +30,7 @@ Site and data scope in combination with limited time did not warrant unnecessary
 Images
 ------------
 
-Instead of loading 22 separate resources for all the icons and hero image, I chose to use the two sprite sheets and hero bringing my image resource count to 3. I prefer this as it prevents the image-load flash on menu active state. I also decided to use css for the primary container box-shadow and menu gradient instead of images.
+Instead of loading 25 separate resources for all the icons, shadows and hero image, I chose to use the two sprite sheets and hero bringing my image resource count to 6. I prefer this as it prevents the image-load flash on menu active state. I also decided to use css for the primary menu gradient instead of an image. I did, however, elect to use the 3 shadow gradient images for the primary container since it offered the greatest flexibility.
 
 
 IE9
