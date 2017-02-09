@@ -1,0 +1,50 @@
+h1,
+.h1 {
+    font-family: $font-family-os;
+    font-size: 3.125rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: $light;
+}
+h2,
+.h2 {
+    margin-bottom: 10px;
+    font-family: $font-family-os;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1;
+    color: $light;
+}
+h3,
+.h3 {
+    font-family: $font-family-ssp;
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    color: $primary;
+}
+h4,
+.h4 {
+    font-family: $font-family-ssp;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.25rem;
+    color: $gray;
+}
+
+p {
+    margin-bottom: 20px;
+    font-family: $font-family-base;
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    color: $dark;
+}
+
+a {
+    color: $primary;
+    transition: .2s;
+    &:hover {
+        color: $secondary;
+        text-decoration: none;
+    }
+}

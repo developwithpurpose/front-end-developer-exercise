@@ -1,0 +1,19 @@
+$dark:                       #65686F;
+$light:                      #FFF;
+$primary:                    #36ABE1;
+$secondary:                  #6FBEE7;
+$gray:                       #5C6366;
+$gray--nav:                  #9BA0A4;
+$gray--nav-hover:            #36ABE1;
+
+$font-family-os:             "Open Sans", Helvetica, Arial, sans-serif;
+$font-family-ssp:            "Source Sans Pro", Helvetica, Arial, sans-serif;
+$font-family-h:              Helvetica, Arial, sans-serif;
+$font-family-base:           $font-family-h;
+
+$container-max-widths: (
+    sm: 576px,
+    md: 720px,
+    lg: 940px,
+    xl: 1000px
+);
