@@ -1,0 +1,33 @@
+.u-abs-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+
+.u-bg {
+    &__img {
+        z-index: 0;
+        background-color: fade-out($gray-lighter, .6);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__pos {
+        &--bottom-center {
+            background-position: bottom center;
+        }
+    }
+    &__color {
+        &--light {
+            background-color: $light;
+        }
+    }
+}
+
+.p-0 {
+    padding: 0;
+}
