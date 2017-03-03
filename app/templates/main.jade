@@ -1,0 +1,22 @@
+main.container
+  aside.tabs-v
+
+    each val, index in fonts
+      if index + 1 === 1
+        input(id='rad#{index + 1}' checked name='rad', type='radio')
+      else
+        input(id='rad#{index + 1}' name='rad', type='radio')
+      label(data-text='Baby Step #{index + 1}', class='ra-#{val}', for='rad#{index + 1}')
+
+    .animator
+
+    each val, index in fonts
+      article.tab-c
+        .card
+          h1(class='ra-#{val}')
+          .title
+            h1 Baby Step #{index + 1}
+            p #{heading[index][0]}
+          .body
+            p #{heading[index][1]}
+            p #{heading[index][2]}

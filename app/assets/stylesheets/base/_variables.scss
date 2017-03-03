@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:400,600,300);
+
+// Typography
+$base-font-family: "Helvetica", "Roboto", "Arial", sans-serif;
+$heading-font-family: "Open Sans", sans-serif;
+$title-font-family: "Source Sans Pro", sans-serif;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1;
+$heading-line-height: 1;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #36abe1;
+$light-blue: #6fbee7;
+$dark-gray: #333;
+$medium-gray: #999;
+$link-gray: #9ba0a4;
+$white: #fff;
+$color_mine_shaft_approx: #333;
+$white_50: rgba(255, 255, 255, 0.5);
+
+// Font Colors
+$base-background-color: #fff;
+$base-font-color: $dark-gray;
+$action-color: $blue;
+
+// Border
+$base-border-color: $white;
+$base-border: 2px solid $base-border-color;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Overflow Scrollbar
+$scroll_width: 8px
+
