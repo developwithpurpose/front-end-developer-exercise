@@ -1,0 +1,248 @@
+body, html {
+    background-color: #bbbfc2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 980px;
+    margin: 0 auto !important;
+}
+
+#main-banner {
+    background-image: url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    height: 276px;
+}
+
+#title-tag {
+    height: 50px;
+}
+
+.title {
+    font-weight: 300;
+    font-size: 32px;
+    color: #fff;
+    text-align: right;
+    padding: 50px 70px 0 0;
+    margin: 0;
+    
+}
+
+.tag {
+    font-weight: 700;
+    line-height: 48px;
+    font-size: 50px;
+    color: #fff;
+    text-align: right;
+    padding: 0px 70px 0 0;
+    margin: 0;
+}
+
+section#main-content.container {
+    padding-top: 60px;
+    background-color: #fff;
+    height: 550px;
+}
+
+#baby-steps-nav {
+    float: left;
+    background-color: aqua;
+    width: 300px;
+    
+    background: #ebeced; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #ebeced , #d1d5d6); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ebeced , #d1d5d6); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ebeced , #d1d5d6); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #ebeced , #d1d5d6); /* Standard syntax */
+
+}
+
+ul#take-baby-steps {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 0;
+    width: 300px;
+    height: 550px;
+    
+    background-image: url(../images/shadow_left_nav.jpg);
+    background-repeat:repeat-y;
+    background-position:center;
+}
+
+ul#take-baby-steps li {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    line-height: 60px;
+    color: #9ba0a4;
+    position: relative;
+    padding: 0 24px 0 124px;
+    border-bottom: 1px solid #fff;
+}
+
+ul#take-baby-steps li:hover, ul#take-baby-steps li.active {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    -weight: 600;
+    line-height: 60px;
+    color: #36abe1;
+    background-color: #fff;
+    padding: 0 24px 0 124px;
+    border-bottom: 1px solid #fff;
+}
+
+section[id|=baby-step] {
+    float: right;
+    width: 540px;
+    padding: 0 70px 0 70px;
+}
+
+figure {
+    margin:0 0 24px 0;
+    position: relative;
+}
+
+figcaption {
+    display:inline-block;
+    margin: 0 0 0 10px;
+}
+
+figure img {
+    position: absolute;
+    top: 0;
+}
+
+figcaption h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    weight: 600;
+    line-height: 20px;
+    color: #36abe1;
+    padding-left: 85px;
+    margin: 14px 0 0 0;
+}
+
+figcaption p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    weight: 300;
+    line-height: 20px;
+    color: #5c6366;
+    padding-left: 85px;
+    margin: 14px 0 0 0;
+}
+
+article.step-details {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #65686f;
+}
+
+aside.friends-on-step {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    margin: 40px 0 0 0;
+    font-weight: bold;
+}
+
+aside.friends-on-step a {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #6fbee7;
+    margin: 40px 0 0 0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#take-baby-steps img {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right:24px;
+}
+
+li[class|=baby-nav] {
+    background-repeat:no-repeat;
+    background-position: 246px;
+}
+
+li[class|=baby-nav]:hover {
+    background-repeat:no-repeat;
+    cursor: pointer;
+}
+
+.baby-nav-1 {
+    background-image: url(../images/icons/individual/icons_small_bs1.png);
+}
+.baby-nav-1:hover, .baby-nav-1.active {
+    background-image: url(../images/icons/individual/icons_small_bs1_blue.png);
+}
+
+.baby-nav-2 {
+    background-image: url(../images/icons/individual/icons_small_bs2.png);
+}
+.baby-nav-2:hover, .baby-nav-2.active {
+    background-image: url(../images/icons/individual/icons_small_bs2_blue.png);
+}
+
+.baby-nav-3 {
+    background-image: url(../images/icons/individual/icons_small_bs3.png);
+}
+.baby-nav-3:hover, .baby-nav-3.active {
+    background-image: url(../images/icons/individual/icons_small_bs3_blue.png);
+}
+
+.baby-nav-4 {
+    background-image: url(../images/icons/individual/icons_small_bs4.png);
+}
+.baby-nav-4:hover, .baby-nav-4.active {
+    background-image: url(../images/icons/individual/icons_small_bs4_blue.png);
+}
+
+.baby-nav-5 {
+    background-image: url(../images/icons/individual/icons_small_bs5.png);
+}
+.baby-nav-5:hover, .baby-nav-5.active {
+    background-image: url(../images/icons/individual/icons_small_bs5_blue.png);
+}
+
+.baby-nav-6 {
+    background-image: url(../images/icons/individual/icons_small_bs6.png);
+}
+.baby-nav-6:hover, .baby-nav-6.active {
+    background-image: url(../images/icons/individual/icons_small_bs6_blue.png);
+}
+
+.baby-nav-7 {
+    background-image: url(../images/icons/individual/icons_small_bs7.png);
+}
+.baby-nav-7:hover, .baby-nav-7.active {
+    background-image: url(../images/icons/individual/icons_small_bs7_blue.png);
+}
+
+.steps {
+    visibility: collapse;
+    opacity: 0;
+    transition: .5s opacity;
+}
+
+.steps.active {
+    opacity: 1;
+    visibility: visible;
+    float: left;
+    position: absolute;
+    top:340px;
+    left: 770px;
+    transition: 1s linear all;
+    transition-delay: .5s;
+}
+
+.friends-on-step.show {
+    transition: 1s linear all;
+    transition-delay: .5s;
+}
