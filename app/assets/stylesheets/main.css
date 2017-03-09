@@ -8,6 +8,7 @@ body, html {
 .container {
     width: 980px;
     margin: 0 auto !important;
+    overflow: hidden;
 }
 
 #main-banner {
@@ -32,6 +33,17 @@ body, html {
     
 }
 
+header {
+-webkit-box-shadow: 2px 7px 8px 3px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    2px 7px 8px 3px rgba(50, 50, 50, 0.75);
+box-shadow:         2px 7px 8px 3px rgba(50, 50, 50, 0.75);
+}
+
+#bottom-img img {
+    top:0;
+    margin: 0 25%;
+}
+
 .tag {
     font-weight: 700;
     line-height: 48px;
@@ -42,7 +54,7 @@ body, html {
     margin: 0;
 }
 
-section#main-content.container {
+div#main-content.container {
     padding-top: 60px;
     background-color: #fff;
     height: 550px;
@@ -94,7 +106,7 @@ ul#take-baby-steps li:hover, ul#take-baby-steps li.active {
     border-bottom: 1px solid #fff;
 }
 
-section[id|=baby-step] {
+div[id|=baby-step] {
     float: right;
     width: 540px;
     padding: 0 70px 0 70px;
@@ -118,7 +130,7 @@ figure img {
 figcaption h1 {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 30px;
-    weight: 600;
+    /*weight: 600;*/
     line-height: 20px;
     color: #36abe1;
     padding-left: 85px;
@@ -128,14 +140,14 @@ figcaption h1 {
 figcaption p {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
-    weight: 300;
+    /*weight: 300;*/
     line-height: 20px;
     color: #5c6366;
     padding-left: 85px;
     margin: 14px 0 0 0;
 }
 
-article.step-details {
+div.step-details {
     font-family: Helvetica, sans-serif;
     font-size: 13px;
     line-height: 18px;
@@ -227,6 +239,7 @@ li[class|=baby-nav]:hover {
 
 .steps {
     visibility: collapse;
+    overflow: hidden;
     opacity: 0;
     transition: .5s opacity;
 }

@@ -2,6 +2,7 @@
             var text = $(selector).text();
             return parseInt(text.replace(/[^0-9\.]{1}/g, ''), 10);
         }
+
         (function () {
             var friends = [];
             $('.active').show();
@@ -41,7 +42,9 @@ if 4 or more friends, then show "Patricia Allen, Matthew Garcia, and 2 other fri
             }
 
             $('.step').on('click', function () {
+                
                 message = null;
+                $('.friends-on-step').html('');
                 $('.steps').removeClass('active');
                 $('.step').removeClass('active');
                 page = getPage('.' + $(this).attr('class').split(' ')[0]);
@@ -49,11 +52,9 @@ if 4 or more friends, then show "Patricia Allen, Matthew Garcia, and 2 other fri
                 $('.baby-nav-' + page).addClass('active');
                 
                 message = getMsg(friends, page);
-                if (message != 0){
-                    $('.friends-on-step').addClass('show');
+                console.log(message.length)
+                if (message.length > 0){
                     $('.friends-on-step').html(message);
-                } else {
-                    $('.friends-on-step').removeClass('show');
-                }
+                } 
             });
         } ());
