@@ -6,6 +6,8 @@ function getPage(selector) {
 }
 
 (function () {
+    $('.baby-nav-1').click();
+
     var friends = [];
     $('.active').show();
     page = getPage('input[type="radio"]:checked:first-of-type + label');
@@ -36,12 +38,7 @@ function getPage(selector) {
     $('.step').on('click', function () {
         message = null;
         $('.friends-on-step').html('');
-        $('.steps').removeClass('active');
-        $('.step').removeClass('active');
         page = getPage('.' + $(this).attr('class').split(' ')[0]);
-        $('#baby-step-' + page).addClass('active');
-        $('.baby-nav-' + page).addClass('active');
-
         message = getMsg(friends, page);
         if (message.length > 0) {
             setTimeout(function () {
