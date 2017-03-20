@@ -1,0 +1,176 @@
+#main {
+	background-color: #fff;
+}
+#friends {
+	margin-top: 60px;
+}
+#step-1 {
+	
+text-align: left;
+}
+#content {
+	margin-top: 24px;
+}
+#main {
+	margin: 0 auto;width:980px;
+}
+body
+{
+    font-family: Arial;
+    font-size: 10pt;
+    padding : 10px;
+	background-color: #bbbfc2;
+	
+}
+p {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+}
+
+.daveshouse {
+    width: 100%;
+    height: 900px;
+    margin: auto;
+    padding: 0px;
+}
+.one {
+    width: 25%;
+    height: auto;
+
+    float: left;
+}
+.two {
+    margin-left: 25%;
+    height: auto;
+  
+}
+
+
+ul.menu {
+    list-style-type: none;
+	padding-left: 0px;
+}
+ul.menu li {
+    padding: 0px;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+	
+}
+ul.menu li a {
+    height: auto;
+    line-height: 60px;
+    display: inline-block;
+    padding-left: 0px; /* To sift text off the background-image */
+    color: #3E789F;
+    background: url("/app/assets/images/icons/sprites/result.png") no-repeat; /* As all link share the same background-image */
+	width: 100%;
+	color: #9ba0a4;
+	text-decoration: none;
+	background-color: #ebeced;
+}
+     ul.menu li.step1 a {
+        background-position: 180px 12px;
+    }
+	 ul.menu li.step2 a {
+        background-position: 180px -75px;
+    }
+    ul.menu li.step3 a {
+        background-position: 180px -166px;
+    }
+    ul.menu li.step4 a {
+        background-position: 180px -253px;
+    }
+    ul.menu li.step5 a {
+        background-position: 180px -342px;
+    }
+	  ul.menu li.step6 a {
+        background-position: 180px -434px;
+    }
+	  ul.menu li.step7 a {
+        background-position: 180px -525px;
+    }
+
+    ul.menu li.step1 a:hover {
+        background-position: 180px -31px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+    }
+	ul.menu li.step1 a.selected {
+     background-position: 180px -31px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+}
+    ul.menu li.step2 a:hover {
+        background-position: 180px -121px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+    }
+	 ul.menu li.step2 a.selected {
+        background-position: 180px -121px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+    }
+    ul.menu li.step3 a:hover {
+        background-position: 180px -211px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+    }
+	    ul.menu li.step3 a.selected {
+        background-position: 180px -211px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+    }
+    ul.menu li.step4 a:hover {
+        background-position: 180px -300px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+    }
+	    ul.menu li.step4 a.selected {
+        background-position: 180px -300px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+    }
+    ul.menu li.step5 a:hover {
+        background-position: 180px -391px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+	}
+	    ul.menu li.step5 a.selected {
+        background-position: 180px -391px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+	}
+    ul.menu li.step6 a:hover {
+        background-position: 180px -478px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+	}
+	    ul.menu li.step6 a.selected {
+        background-position: 180px -478px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+	}
+	 ul.menu li.step7 a:hover {
+        background-position: 180px -568px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+	}
+		 ul.menu li.step7 a.selected {
+        background-position: 180px -568px;
+		color: #36abe1;
+	    font-weight: bold;
+		background-color: white;
+	}

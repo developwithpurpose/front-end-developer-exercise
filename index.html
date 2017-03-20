@@ -1,0 +1,85 @@
+<!doctype html>
+<!-- Dennis Baker Example -->
+<html>
+	<head>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+		<title>Baby Steps Exercise</title>
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css">
+		<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="assets/javascripts/modernizr.js"></script> <!-- Modernizr -->
+	</head>
+	
+
+<div id="main" ><img src="assets/images/header_text.jpg">
+   <div  style="margin-top:60px;width:100%">
+
+   
+<div class="daveshouse">
+    <div class="one">
+				<ul id="menu" class="menu">
+				<li class="step1" ><a href="step-1"   onclick="friends('1');"><span style="padding-left:60px">Baby Step 1</span></a></li>
+				<li class="step2"><a href="step-2"   onclick="friends('2');"><span style="padding-left:60px">Baby Step 2</span></a></li>
+				<li class="step3"><a href="step-3"   onclick="friends('3');"><span style="padding-left:60px">Baby Step 3</span></a></li>
+				<li class="step4"><a href="step-4"   onclick="friends('4');"><span style="padding-left:60px">Baby Step 4</span></a></li>
+				<li class="step5"><a href="step-5"   onclick="friends('5');"><span style="padding-left:60px">Baby Step 5</span></a></li>
+				<li class="step6"><a href="step-6"   onclick="friends('6');"><span style="padding-left:60px">Baby Step 6</span></a></li>
+				<li class="step7"><a href="step-7"   onclick="friends('7');"><span style="padding-left:60px">Baby Step 7</span></a></li>
+				</ul>
+		<!-- end of menu -->
+		
+		
+	</div><!-- end of div one -->
+    <div class="two" style="padding-left:70px;padding-right:70px;position:relative"> 
+		<div id="content" >
+		<div id="step-1">
+<img src="assets/images/headings/heading_bs1.png">
+<p>An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.</p>
+
+<pThis beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!</p>
+</div>
+		</div>
+		<div id="friends"></div>
+	</div><!-- end of div 2 -->
+</div>
+   
+   
+   </div><!-- end of margin-top 60 -->
+</div><!-- end of main -->
+</html>
+<script>
+function friends(stepNum){
+var num = stepNum;
+$.getJSON('baby-steps.json', function(data) {
+
+        var output="<p><span style='color: #00BFFF;font-weight:bold;'>";
+		
+        for (var i in data.friends) {
+		if (data.friends[i].babyStep == num)
+            output+= data.friends[i].firstName + " " + data.friends[i].lastName + "," ;
+        }
+		if(num >1)
+        output+= "</span> is also on Baby Step" + num +".</p>";
+		
+        document.getElementById("friends").innerHTML=output;
+		
+  });
+  }
+			$(document).ready(function(){
+				
+				$('#menu  a').click(function(){
+					$('#content').load('babySteps.html #' + $(this).attr('href'));
+					return false;
+				});
+				// set the active menu div
+			$(document).ready(function(){
+  $('ul.menu li a').click(function(){
+    $('li a').removeClass("selected");
+    $(this).addClass("selected");
+});
+});
+				
+			});
+
+			
+</script>
+
