@@ -2,8 +2,8 @@ body {
 	background-color: #BBBFC2;
 }
 
-h1, h2, h3 {
-	font-family: "Open Sans";
+h1, h2 {
+	font-family: 'Open Sans', sans-serif;
 	color: #FFF;
 	margin: 0;
 }
@@ -19,8 +19,56 @@ h2 {
 	margin-bottom: 15px;
 }
 
-h3 {
+nav {
+	width: 300px;
+	background: #ebeced; /* Old browsers */
+	background: -moz-linear-gradient(left, #ebeced 97%, #d1d5d6 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #ebeced 97%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #ebeced 97%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+}
 
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	border-bottom: solid white 1px;
+	text-align: right;
+	line-height: 60px;
+}
+
+li > a {
+	color: #9BA0A4;
+}
+
+li.active > a {
+	color: #36ABE1;
+}
+
+li > img {
+	margin: 0 24px;
+	vertical-align: middle;
 }
 
 #container {
@@ -40,4 +88,9 @@ h3 {
 #header-text {
 	padding-top: 50px;
 	padding-right: 70px; 
+}
+
+.active {
+	font-weight: 600;
+	background-color: #FFF;
 }
