@@ -2,6 +2,42 @@ body {
 	background-color: #BBBFC2;
 }
 
+h1, h2, h3 {
+	font-family: "Open Sans";
+	color: #FFF;
+	margin: 0;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 48px;
+}
+
+h2 {
+	font-weight: lighter;
+	margin-bottom: 15px;
+}
+
+h3 {
+
+}
+
 #container {
 	width: 960px;
+	margin: 0 auto;
+	background-color: #FFF;
+}
+
+#header {
+	background-image: url('../images/header.jpg');
+	background-repeat: no-repeat;
+	text-align: right;
+	height: 276px;
+	margin-bottom: 60px;
+}
+
+#header-text {
+	padding-top: 50px;
+	padding-right: 70px; 
 }
