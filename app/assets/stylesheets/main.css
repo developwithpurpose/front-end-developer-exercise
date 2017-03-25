@@ -1,0 +1,149 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #BBBFC2;
+}
+
+h1, h2 {
+	font-family: 'Open Sans', sans-serif;
+	color: #FFF;
+	margin: 0;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 48px;
+}
+
+h2 {
+	font-weight: lighter;
+	margin-bottom: 15px;
+}
+
+p {
+	margin: 0;
+}
+
+nav {
+	width: 300px;
+	height: 500px;
+	float: left;
+	background: #ebeced; /* Old browsers */
+	background: -moz-linear-gradient(left, #ebeced 97%, #d1d5d6 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #ebeced 97%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #ebeced 97%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+}
+
+header {
+	background-image: url('../images/header.jpg');
+	background-repeat: no-repeat;
+	text-align: right;
+	height: 276px;
+	margin-bottom: 60px;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	border-bottom: solid white 1px;
+	text-align: right;
+	line-height: 60px;
+}
+
+li > a {
+	color: #9BA0A4;
+}
+
+li > img {
+	margin: 0 24px;
+	vertical-align: middle;
+}
+
+#container {
+	width: 960px;
+	margin: 0 auto;
+	background-color: #FFF;
+	overflow: hidden;
+}
+
+#content {
+	width: 660px;
+	float: right;
+	height: 500px;
+}
+
+#content-wrapper {
+	margin: 0 70px;
+}
+
+#header-text {
+	padding-top: 50px;
+	padding-right: 70px; 
+}
+
+.bs-body {
+	display: none;
+}
+
+.image {
+	float: left;
+	display: inline-block;
+}
+
+.body-heading {
+	margin: 0 0 0 12px;
+	font-family: 'Source Sans Pro', sans-serif;
+	display: inline-block;
+	line-height: 18px;
+}
+
+.title {
+	font-size: 30px;
+	color: #36ABE1;
+	font-weight: 600;
+}
+
+.desc {
+	margin-bottom: 24px;
+	font-weight: lighter;
+	color: #5C6366;
+}
+
+.text, .friends {
+	font-family: 'Helvetica';
+	font-size: 13px;
+	line-height: 18px;
+	color: #65686F;
+}
+
+.text {
+	margin-bottom: 40px;
+}
+
+.friend {
+	color: #6FBEE7;
+}
