@@ -87,6 +87,13 @@ li > img {
 	Body CSS
 */
 
+#container {
+	width: 960px;
+	margin: 0 auto;
+	background-color: #FFF;
+	overflow: hidden;
+}
+
 #content {
 	width: 660px;
 	float: right;
@@ -95,6 +102,19 @@ li > img {
 
 #content-wrapper {
 	margin: 0 70px;
+}
+
+#header {
+	background-image: url('../images/header.jpg');
+	background-repeat: no-repeat;
+	text-align: right;
+	height: 276px;
+	margin-bottom: 60px;
+}
+
+#header-text {
+	padding-top: 50px;
+	padding-right: 70px; 
 }
 
 .bs-body {
@@ -136,31 +156,6 @@ li > img {
 	margin-bottom: 40px;
 }
 
-/*
-	ID and Class CSS
-*/
-
-#container {
-	width: 960px;
-	margin: 0 auto;
-	background-color: #FFF;
-	overflow: hidden;
-}
-
-#header {
-	background-image: url('../images/header.jpg');
-	background-repeat: no-repeat;
-	text-align: right;
-	height: 276px;
-	margin-bottom: 60px;
-}
-
-#header-text {
-	padding-top: 50px;
-	padding-right: 70px; 
-}
-
 .friend {
 	color: #6FBEE7;
 }
-
