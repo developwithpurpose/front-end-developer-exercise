@@ -57,6 +57,8 @@ This will count each friend on the chosen Step, add their data into an array, an
 
 I added in some extra calculations for a better display of friends. If the chosen Step has more than 2 friends, it will display the first 2 friends and then a count of the remaining friends on that Step. If the step chosen has only 2 friends, it will display just those 2 with a message that fits. And lastly, if there is only 1 friend on the chosen step, it will display just that friend with a message that fits.
 
+Lastly, the site doesn't function properly with JavaScript disabled. My reason for not going that route is because this site was meant to be a single page site. The animations and changing content would need to be spread out to multiple pages using an active CSS class for the navigation.
+
 ___
 
 ### Notes
