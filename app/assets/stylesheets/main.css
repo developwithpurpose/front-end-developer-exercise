@@ -4,10 +4,6 @@ body {
 	background-color: #BBBFC2;
 }
 
-/*
-	Header CSS
-*/
-
 h1, h2 {
 	font-family: 'Open Sans', sans-serif;
 	color: #FFF;
@@ -29,10 +25,6 @@ p {
 	margin: 0;
 }
 
-/*
-	Nav CSS
-*/
-
 nav {
 	width: 300px;
 	height: 500px;
@@ -42,6 +34,14 @@ nav {
 	background: -webkit-linear-gradient(left, #ebeced 97%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right, #ebeced 97%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+}
+
+header {
+	background-image: url('../images/header.jpg');
+	background-repeat: no-repeat;
+	text-align: right;
+	height: 276px;
+	margin-bottom: 60px;
 }
 
 a:link {
@@ -83,10 +83,6 @@ li > img {
 	vertical-align: middle;
 }
 
-/*
-	Body CSS
-*/
-
 #container {
 	width: 960px;
 	margin: 0 auto;
@@ -102,14 +98,6 @@ li > img {
 
 #content-wrapper {
 	margin: 0 70px;
-}
-
-#header {
-	background-image: url('../images/header.jpg');
-	background-repeat: no-repeat;
-	text-align: right;
-	height: 276px;
-	margin-bottom: 60px;
 }
 
 #header-text {
