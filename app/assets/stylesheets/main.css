@@ -1,6 +1,12 @@
 body {
+	padding: 0;
+	margin: 0;
 	background-color: #BBBFC2;
 }
+
+/*
+	Header CSS
+*/
 
 h1, h2 {
 	font-family: 'Open Sans', sans-serif;
@@ -19,8 +25,18 @@ h2 {
 	margin-bottom: 15px;
 }
 
+p {
+	margin: 0;
+}
+
+/*
+	Nav CSS
+*/
+
 nav {
 	width: 300px;
+	height: 500px;
+	float: left;
 	background: #ebeced; /* Old browsers */
 	background: -moz-linear-gradient(left, #ebeced 97%, #d1d5d6 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(left, #ebeced 97%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
@@ -62,19 +78,73 @@ li > a {
 	color: #9BA0A4;
 }
 
-li.active > a {
-	color: #36ABE1;
-}
-
 li > img {
 	margin: 0 24px;
 	vertical-align: middle;
 }
 
+/*
+	Body CSS
+*/
+
+#content {
+	width: 660px;
+	float: right;
+	height: 500px;
+}
+
+#content-wrapper {
+	margin: 0 70px;
+}
+
+.bs-body {
+	display: none;
+}
+
+.image {
+	float: left;
+	display: inline-block;
+}
+
+.body-heading {
+	margin: 0 0 0 12px;
+	font-family: 'Source Sans Pro', sans-serif;
+	display: inline-block;
+	line-height: 18px;
+}
+
+.title {
+	font-size: 30px;
+	color: #36ABE1;
+	font-weight: 600;
+}
+
+.desc {
+	margin-bottom: 24px;
+	font-weight: lighter;
+	color: #5C6366;
+}
+
+.text, .friends {
+	font-family: 'Helvetica';
+	font-size: 13px;
+	line-height: 18px;
+	color: #65686F;
+}
+
+.text {
+	margin-bottom: 40px;
+}
+
+/*
+	ID and Class CSS
+*/
+
 #container {
 	width: 960px;
 	margin: 0 auto;
 	background-color: #FFF;
+	overflow: hidden;
 }
 
 #header {
@@ -90,7 +160,7 @@ li > img {
 	padding-right: 70px; 
 }
 
-.active {
-	font-weight: 600;
-	background-color: #FFF;
+.friend {
+	color: #6FBEE7;
 }
+
