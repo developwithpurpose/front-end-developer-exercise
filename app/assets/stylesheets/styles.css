@@ -1,0 +1,270 @@
+body  {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, Sans-serif;
+	background-color: #bbbfc2;
+}
+
+body * {
+	box-sizing: border-box;
+}
+
+header, nav, main, section {
+	display: block;
+}
+
+#container {
+	margin: 0 auto;
+	position: relative;
+	width: 1012px;
+	overflow: hidden;
+	padding: 0 16px 30px;
+	margin-bottom: 25px;
+	background: #fff url(../images/shadow_bottom.jpg) no-repeat 50% 100%;
+}
+
+#container:before,
+#container:after {
+	content: '';
+	background: #bbbfc2 url(../images/shadow_left.jpg) no-repeat 100% 0;
+	height: 100%;
+	width: 16px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#container:after {
+	background-image: url(../images/shadow_right.jpg);
+	background-position: 0 0;
+	left: auto;
+	right: 0;
+}
+
+header {
+	font-family: 'Open Sans', Helvetica, Arial, Sans-serif;
+	background: url(../images/header.jpg) no-repeat 0 0;
+	overflow: hidden;
+	height: 276px;
+	color: white;
+	margin-bottom: 60px;
+}
+
+header .header-content {
+	float: right;
+	width: 520px;
+	padding-right: 70px;
+	padding-top: 50px;
+	text-align: right;
+}
+
+header .header-content h1 {
+	margin: 0;
+	font-size: 50px;
+	line-height: 48px;
+	font-weight: 700;
+}
+
+header .header-content h2 {
+	margin: 0;
+	font-size: 32px;
+	font-weight: 300;
+}
+
+nav {
+	font-family: 'Source Sans Pro', Helvetica, Arial, Sans-serif;
+	width: 300px;
+	float: left;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+nav ul li a {
+	display: block;
+	line-height: 60px;
+	font-size: 18px;
+	text-align: right;
+	padding-right: 24px;
+	overflow: hidden;
+	background-color: #ececee;
+	text-decoration: none;
+	color: #9ba0a4;
+	margin-bottom: 1px;
+	font-weight: 400;
+	transition: all 1s ease 0s;
+}
+
+nav ul li a.active {
+	background-color: white;
+	color: #36abe1;
+}
+
+nav ul li a:after {
+	content: '';
+	background-image: url(../images/icons/sprites/icons_small.png);
+	height: 25px;
+	width: 30px;
+	display: inline-block;
+	margin-left: 30px;
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
+nav ul li a#step-1:after {
+	background-position: 50% 0;
+}
+
+nav ul li a#step-2:after {
+	background-position: 50% -25px;
+}
+
+nav ul li a#step-3:after {
+	background-position: 50% -50px;
+}
+
+nav ul li a#step-4:after {
+	background-position: 50% -75px;
+}
+
+nav ul li a#step-5:after {
+	background-position: 50% -100px;
+}
+
+nav ul li a#step-6:after {
+	background-position: 50% -125px;
+}
+
+nav ul li a#step-7:after {
+	background-position: 50% -150px;
+}
+
+nav ul li a#step-1.active:after,
+nav ul li a#step-1:active:after {
+	background-position: 50% 175px;
+}
+
+nav ul li a#step-2.active:after,
+nav ul li a#step-2:active:after {
+	background-position: 50% 150px;
+}
+
+nav ul li a#step-3.active:after,
+nav ul li a#step-3:active:after {
+	background-position: 50% 125px;
+}
+
+nav ul li a#step-4.active:after,
+nav ul li a#step-4:active:after {
+	background-position: 50% 100px;
+}
+
+nav ul li a#step-5.active:after,
+nav ul li a#step-5:active:after {
+	background-position: 50% 75px;
+}
+
+nav ul li a#step-6.active:after,
+nav ul li a#step-6:active:after {
+	background-position: 50% 50px;
+}
+
+nav ul li a#step-7.active:after,
+nav ul li a#step-7:active:after {
+	background-position: 50% 25px;
+}
+
+main {
+	width: 680px;
+	float: left;
+	padding: 0 70px;
+}
+
+main {
+	overflow: hidden;
+}
+
+body.has-js main,
+body.has-js main h2.main-heading,
+body.has-js main section.step-content {
+	height: 320px;
+}
+
+main div.scroll-area {
+	position: relative;
+	transition: all 2s ease 0s;
+	top: 0;
+}
+
+main section.step-content h3 {
+	color: #36abe1;
+	font-family: 'Source Sans Pro', Helvetica, Arial, Sans-serif;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 20px;
+	margin: 12px 0;
+}
+
+main section.step-content h3:before {
+	content: '';
+	float: left;
+	height: 65px;
+	width: 77px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../images/icons/sprites/icons_large.png) repeat-y 50% 452px;
+	margin-top: -10px;
+	margin-right: 20px;
+}
+
+main section#step-2-content.step-content h3:before {
+	background-position: 50% 390px;
+}
+
+main section#step-3-content.step-content h3:before {
+	background-position: 50% 325px;
+}
+
+main section#step-4-content.step-content h3:before {
+	background-position: 50% 260px;
+}
+
+main section#step-5-content.step-content h3:before {
+	background-position: 50% 195px;
+}
+
+main section#step-6-content.step-content h3:before {
+	background-position: 50% 130px;
+}
+
+main section#step-7-content.step-content h3:before {
+	background-position: 50% 65px;
+}
+
+main section.step-content h3 span {
+	display: block;
+	font-weight: 300;
+	font-size: 18px;
+	color: #5c6366;
+	padding-top: 4px;
+}
+
+main section.step-content div {
+	padding: 12px 0;
+	font-size: 13px;
+	line-height: 18px;
+	color: #65686f;
+}
+
+main div.step-friends {
+	padding-top: 28px;
+}
+
+main div.step-friends a {
+	color: #6fbee7;
+	text-decoration: none;
+}
