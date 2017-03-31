@@ -1,1 +1,9 @@
-Document your submission here (optional, but recommended)
+This is the Front-End Developer Exercise for Christopher Matthews.
+
+The image folder came with two options for image headers.  One with text and one without.  I chose to use the one without text for few reasons.  First, using the image with text was just lazy.  Second, using a text overlay gives you the ability to make minor adjustments in the CSS if you need to.  Third, if the task was to convert this page to a mobile-friendly version, you would be able to modify the text layout with media queries as opposed to having the text hardcoded on the image.  Any time you can make something dynamic, you should.
+
+The mockup had images of border shadows highlighted to use as necessary.  I chose to forego the images and use the "box-shadow" property on the elements which called for shadows.  Proper CSS prefixes have been applied in the style sheet to include legacy browsers.  I chose this route for the same reasons as above.  Dynamic is always better.  Also, loading less images means a faster loading page and less room for something to go wrong.
+
+The navigation animation uses a CSS transition with proper prefixes and jQuery to add and remove a class named "current" to the proper elements and switch icons from the gray images to the blue images.  While the animation would be disabled if the user had JavaScript turned off, the navigation itself would be fully functional.
+
+The dynamic content uses the jQuery getJSON AJAX call to retrieve the friend information from the external file.  I use a for loop to iterate through the friends and separate them into arrays based on the step they are on.  I then use jQuery to find all elements with the class "friends" and use .each() to perform a function that identifies which step to look for, sorts the array alphabetically by last name, and inserts the proper html inside the "friends" elements based on how many friends are in the array for the respective step.
