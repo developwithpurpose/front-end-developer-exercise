@@ -1,8 +1,8 @@
 {
     "assetsPath": "resources/assets",
-    "publicPath": "", // path to public folder
-    "appPath": "", // path to app folder (set to same as public for simple basic web applications)
-    "viewPath": "", // path to view folder (set to same as public for simple basic web application)
+    "publicPath": "app",
+    "appPath": "app",
+    "viewPath": "app",
     "notifications": true,
     "css": {
         "folder": "css",
