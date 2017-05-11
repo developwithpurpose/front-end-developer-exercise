@@ -1,0 +1,26 @@
+{
+    "assetsPath": "resources/assets",
+    "publicPath": "", // path to public folder
+    "appPath": "", // path to app folder (set to same as public for simple basic web applications)
+    "viewPath": "", // path to view folder (set to same as public for simple basic web application)
+    "notifications": true,
+    "css": {
+        "folder": "css",
+        "outputFolder": "css",
+        "sass": {
+            "folder": "sass",
+            "search": "/**/*.+(sass|scss)"
+        },
+        "less": {
+            "folder": "less",
+            "search": "/**/*.less"
+        }
+    },
+    "js": {
+        "folder": "js",
+        "outputFolder": "js"
+    },
+    "versioning": {
+        "buildFolder": "build"
+    }
+}
