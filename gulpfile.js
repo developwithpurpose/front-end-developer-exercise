@@ -26,10 +26,6 @@ const elixir = require('basic-elixir');
  |
  */
 elixir(mix => {
-        // Example
-		//mix.del(["build", "css", "js"])
-    	//.sass('default.scss').version('css/default.css')
-        //.webpack('default.js').version('js/default.js');
-
-        mix.sass('default.scss');
+	mix.sass('default.scss')
+		.webpack('default.js').version('js/default.js');
 });
