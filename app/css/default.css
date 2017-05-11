@@ -3597,7 +3597,7 @@ select[multiple].input-lg,
 .btn {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: normal;
+  font-weight: 400;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -5606,7 +5606,7 @@ a.label:hover, a.label:focus {
   min-width: 10px;
   padding: 3px 7px;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 600;
   color: #fff;
   line-height: 1;
   vertical-align: middle;
@@ -5749,7 +5749,7 @@ a.thumbnail.active {
 }
 
 .alert .alert-link {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .alert > p,
@@ -6670,7 +6670,7 @@ button.list-group-item-danger.active:focus {
 .close {
   float: right;
   font-size: 19.5px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
@@ -7668,6 +7668,87 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+
+.container-page {
+  background: #fff;
+  margin: auto;
+  min-height: 724px;
+  position: relative;
+  width: 980px;
+}
+
+.container-page .shadow-page-left,
+.container-page .shadow-page-right,
+.container-page .shadow-page-bottom {
+  display: block;
+  position: absolute;
+}
+
+.container-page .shadow-page-left,
+.container-page .shadow-page-right {
+  height: 724px;
+  top: 0;
+  width: 15px;
+}
+
+.container-page .shadow-page-left {
+  background-image: url("/assets/images/shadow_left.jpg");
+  left: -15px;
+}
+
+.container-page .shadow-page-right {
+  background-image: url("/assets/images/shadow_right.jpg");
+  right: -15px;
+}
+
+.container-page .shadow-page-bottom {
+  background-image: url("/assets/images/shadow_bottom.jpg");
+  bottom: -30px;
+  height: 30px;
+  left: 0;
+  width: 980px;
+}
+
+header {
+  background: url("/assets/images/header_text.jpg") no-repeat top left;
+  height: 276px;
+  margin: auto;
+  width: 980px;
+}
+
+.container-main {
+  padding-top: 60px;
+}
+
+.container-main .nav-main {
+  background: url("/assets/images/shadow_left_nav.jpg") repeat-y;
+  display: inline-block;
+  float: left;
+  width: 300px;
+}
+
+.container-main .content-main {
+  float: left;
+  line-height: 18px;
+  padding: 0 70px;
+  width: 680px;
+}
+
+.container-main .content-main h1, .container-main .content-main h2 {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+}
+
+.container-main .content-main h1 {
+  font-size: 30px;
+}
+
+.container-main .content-main h2 {
+  color: #fc6366;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=default.css.map */

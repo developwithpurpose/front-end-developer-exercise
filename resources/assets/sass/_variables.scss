@@ -1,5 +1,13 @@
 @import 'fonts';
 
+// custom variables
+$content-bg: #fff;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$gray-light-custom: #fc6366;
+
+// bootstrap variables
 $gray-base: #000;
 $gray-darker: lighten($gray-base, 13.5%);
 $gray-dark: lighten($gray-base, 20%);
@@ -62,7 +70,7 @@ $table-bg-accent: #f9f9f9;
 $table-bg-hover: #f5f5f5;
 $table-bg-active: $table-bg-hover;
 $table-border-color: #ddd;
-$btn-font-weight: normal;
+$btn-font-weight: 400;
 $btn-default-color: #333;
 $btn-default-bg: #fff;
 $btn-default-border: #ccc;
@@ -275,7 +283,7 @@ $modal-md: 600px;
 $modal-sm: 300px;
 $alert-padding: 15px;
 $alert-border-radius: $border-radius-base;
-$alert-link-font-weight: bold;
+$alert-link-font-weight: 600;
 $alert-success-bg: $state-success-bg;
 $alert-success-text: $state-success-text;
 $alert-success-border: $state-success-border;
@@ -348,7 +356,7 @@ $badge-link-hover-color: #fff;
 $badge-bg: $gray-light;
 $badge-active-color: $link-color;
 $badge-active-bg: #fff;
-$badge-font-weight: bold;
+$badge-font-weight: 600;
 $badge-line-height: 1;
 $badge-border-radius: 10px;
 $breadcrumb-padding-vertical: 8px;
@@ -365,7 +373,7 @@ $carousel-control-font-size: 20px;
 $carousel-indicator-active-bg: #fff;
 $carousel-indicator-border-color: #fff;
 $carousel-caption-color: #fff;
-$close-font-weight: bold;
+$close-font-weight: 600;
 $close-color: #000;
 $close-text-shadow: 0 1px 0 #fff;
 $code-color: #c7254e;
