@@ -7741,40 +7741,40 @@ header {
 
 .nav-main li a .nav-icon {
   display: inline-block;
-  width: 77px;
-  height: 65px;
-  background-image: url(/assets/images/icons/sprites/icons_large.png);
+  width: 30px;
+  height: 25px;
+  background-image: url(/assets/images/icons/sprites/icons_small.png);
   background-repeat: no-repeat;
   vertical-align: middle;
   margin: 0 24px;
 }
 
 .nav-main li a .nav-icon-step1 {
-  background-position: 0 -65px;
+  background-position: 0 -25px;
 }
 
 .nav-main li a .nav-icon-step2 {
-  background-position: 0 -130px;
+  background-position: 0 -50px;
 }
 
 .nav-main li a .nav-icon-step3 {
-  background-position: 0 -194px;
+  background-position: 0 -75px;
 }
 
 .nav-main li a .nav-icon-step4 {
-  background-position: 0 -259px;
+  background-position: 0 -100px;
 }
 
 .nav-main li a .nav-icon-step5 {
-  background-position: 0 -324px;
+  background-position: 0 -125px;
 }
 
 .nav-main li a .nav-icon-step6 {
-  background-position: 0 -389px;
+  background-position: 0 -150px;
 }
 
 .nav-main li a .nav-icon-step7 {
-  background-position: 0 -1px;
+  background-position: 0 0;
 }
 
 .nav-main li a:hover {
@@ -7782,31 +7782,31 @@ header {
 }
 
 .nav-main li a:hover .nav-icon-step1 {
-  background-position: 0 -518px;
+  background-position: 0 -200px;
 }
 
 .nav-main li a:hover .nav-icon-step2 {
-  background-position: 0 -584px;
+  background-position: 0 -225px;
 }
 
 .nav-main li a:hover .nav-icon-step3 {
-  background-position: 0 -647px;
+  background-position: 0 -250px;
 }
 
 .nav-main li a:hover .nav-icon-step4 {
-  background-position: 0 -713px;
+  background-position: 0 -275px;
 }
 
 .nav-main li a:hover .nav-icon-step5 {
-  background-position: 0 -777px;
+  background-position: 0 -300px;
 }
 
 .nav-main li a:hover .nav-icon-step6 {
-  background-position: 0 -842px;
+  background-position: 0 -325px;
 }
 
 .nav-main li a:hover .nav-icon-step7 {
-  background-position: 0 -454px;
+  background-position: 0 -175px;
 }
 
 .content-main {
