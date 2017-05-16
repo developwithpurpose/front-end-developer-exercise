@@ -2,8 +2,30 @@
 
 // Header
 header {
-  background: url('/assets/images/header_text.jpg') no-repeat top left;
+  background: url('/assets/images/header.jpg') no-repeat top left;
   height: 276px;
   margin: 0 auto 60px;
+  position: relative;
   width: 980px;
+
+  h1 {
+  	color: #fff;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 32px;
+		font-weight: $font-weight-light;
+		line-height: normal;
+		margin: 0;
+  	right: 70px;
+  	position: absolute;
+  	text-align: right;
+  	top: 50px;
+
+  	strong {
+  		font-size: 50px;
+  		line-height: 48px;
+  		position: relative;
+  		text-transform: uppercase;
+  		top: -2px;
+  	}
+  }
 }

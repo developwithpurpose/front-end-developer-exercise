@@ -7715,10 +7715,32 @@ button.close {
 }
 
 header {
-  background: url("/assets/images/header_text.jpg") no-repeat top left;
+  background: url("/assets/images/header.jpg") no-repeat top left;
   height: 276px;
   margin: 0 auto 60px;
+  position: relative;
   width: 980px;
+}
+
+header h1 {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0;
+  right: 70px;
+  position: absolute;
+  text-align: right;
+  top: 50px;
+}
+
+header h1 strong {
+  font-size: 50px;
+  line-height: 48px;
+  position: relative;
+  text-transform: uppercase;
+  top: -2px;
 }
 
 .nav-main {
