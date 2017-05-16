@@ -162,13 +162,69 @@ header {
       margin: 0;
     }
 
-    h1 {
-      font-size: 30px;
+    .title {
+      margin-bottom: 24px;
+
+      .title-icon {
+        background-image: url(/assets/images/icons/sprites/icons_large.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        float: left;
+        height: 65px;
+        margin: 0 24px;
+        vertical-align: middle;
+        width: 77px;
+
+        &.title-icon-step1 {
+          background-position: 0 -518px;
+        }
+
+        &.title-icon-step2 {
+          background-position: 0 -584px;
+        }
+
+        &.title-icon-step3 {
+          background-position: 0 -647px;
+        }
+
+        &.title-icon-step4 {
+          background-position: 0 -713px;
+        }
+
+        &.title-icon-step5 {
+          background-position: 0 -777px;
+        }
+
+        &.title-icon-step6 {
+          background-position: 0 -842px;
+        }
+
+        &.title-icon-step7 {
+          background-position: 0 -454px;
+        }
+      }
+
+      .title-content {
+        float: left;
+        line-height: 20px;
+
+        .title-text {
+          font-size: 30px;
+          margin: 8px 0;
+        }
+
+        .title-sub {
+          color: $gray-lighter-custom;
+          display:block;
+          font-size: 18px;
+          font-weight: $font-weight-light;
+          margin: 0;
+        }
+      }
     }
 
-    h2 {
-      color: $gray-lighter-custom;
-      font-size: 18px;
+    .body {
+      
     }
   }
 }
