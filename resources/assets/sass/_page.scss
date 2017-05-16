@@ -1,0 +1,42 @@
+@import 'variables';
+
+// Page Container & Shadows
+.container-page {
+  background: $content-bg;
+  margin: auto;
+  min-height: 724px;
+  position: relative;
+  width: 980px;
+
+  .shadow-page-left,
+  .shadow-page-right,
+  .shadow-page-bottom {
+    display: block;
+    position: absolute;
+  }
+
+  .shadow-page-left,
+  .shadow-page-right {
+    height: 724px;
+    top: 0;
+    width: 15px;
+  }
+
+  .shadow-page-left {
+    background-image: url('/assets/images/shadow_left.jpg');
+    left: -15px;
+  }
+
+  .shadow-page-right {
+    background-image: url('/assets/images/shadow_right.jpg');
+    right: -15px;
+  }
+
+  .shadow-page-bottom {
+    background-image: url('/assets/images/shadow_bottom.jpg');
+    bottom: -30px;
+    height: 30px;
+    left: 0;
+    width: 980px;
+  }
+}
