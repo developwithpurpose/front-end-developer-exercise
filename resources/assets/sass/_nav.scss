@@ -18,6 +18,7 @@
       font-weight: $font-weight-regular;
       line-height: 60px;
       text-align: right;
+      transition: all 750ms;
 
       .nav-icon {
         display: inline-block;
@@ -58,7 +59,9 @@
       }
     }
 
-    a:hover {
+    a:hover,
+    a.active {
+    	background: #fff;
       color: $link-hover-color;
 
       .nav-icon-step1 {

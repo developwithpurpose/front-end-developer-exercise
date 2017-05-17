@@ -7674,6 +7674,81 @@ button.close {
   }
 }
 
+.carousel-inner.vertical {
+  height: 100%;
+}
+
+.carousel-inner.vertical > .item {
+  transition: .6s ease-in-out top;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-inner.vertical > .item {
+    transition: -webkit-transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
+    transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+  }
+  .carousel-inner.vertical > .item.next,
+  .carousel-inner.vertical > .item.active.right {
+    top: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  .carousel-inner.vertical > .item.prev,
+  .carousel-inner.vertical > .item.active.left {
+    top: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  .carousel-inner.vertical > .item.next.left,
+  .carousel-inner.vertical > .item.prev.right,
+  .carousel-inner.vertical > .item.active {
+    top: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.carousel-inner.vertical > .active {
+  top: 0;
+}
+
+.carousel-inner.vertical > .next,
+.carousel-inner.vertical > .prev {
+  top: 0;
+  height: 100%;
+  width: auto;
+}
+
+.carousel-inner.vertical > .next {
+  left: 0;
+  top: 100%;
+}
+
+.carousel-inner.vertical > .prev {
+  left: 0;
+  top: -100%;
+}
+
+.carousel-inner.vertical > .next.left,
+.carousel-inner.vertical > .prev.right {
+  top: 0;
+}
+
+.carousel-inner.vertical > .active.left {
+  left: 0;
+  top: -100%;
+}
+
+.carousel-inner.vertical > .active.right {
+  left: 0;
+  top: 100%;
+}
+
 .container-page {
   background: #fff;
   margin: auto;
@@ -7759,6 +7834,7 @@ header h1 strong {
   font-weight: 400;
   line-height: 60px;
   text-align: right;
+  transition: all 750ms;
 }
 
 .nav-main li a .nav-icon {
@@ -7799,35 +7875,44 @@ header h1 strong {
   background-position: 0 0;
 }
 
-.nav-main li a:hover {
+.nav-main li a:hover,
+.nav-main li a.active {
+  background: #fff;
   color: #36abe1;
 }
 
-.nav-main li a:hover .nav-icon-step1 {
+.nav-main li a:hover .nav-icon-step1,
+.nav-main li a.active .nav-icon-step1 {
   background-position: 0 -200px;
 }
 
-.nav-main li a:hover .nav-icon-step2 {
+.nav-main li a:hover .nav-icon-step2,
+.nav-main li a.active .nav-icon-step2 {
   background-position: 0 -225px;
 }
 
-.nav-main li a:hover .nav-icon-step3 {
+.nav-main li a:hover .nav-icon-step3,
+.nav-main li a.active .nav-icon-step3 {
   background-position: 0 -250px;
 }
 
-.nav-main li a:hover .nav-icon-step4 {
+.nav-main li a:hover .nav-icon-step4,
+.nav-main li a.active .nav-icon-step4 {
   background-position: 0 -275px;
 }
 
-.nav-main li a:hover .nav-icon-step5 {
+.nav-main li a:hover .nav-icon-step5,
+.nav-main li a.active .nav-icon-step5 {
   background-position: 0 -300px;
 }
 
-.nav-main li a:hover .nav-icon-step6 {
+.nav-main li a:hover .nav-icon-step6,
+.nav-main li a.active .nav-icon-step6 {
   background-position: 0 -325px;
 }
 
-.nav-main li a:hover .nav-icon-step7 {
+.nav-main li a:hover .nav-icon-step7,
+.nav-main li a.active .nav-icon-step7 {
   background-position: 0 -175px;
 }
 
@@ -7849,7 +7934,7 @@ header h1 strong {
   margin-bottom: 24px;
 }
 
-.content-main .title .title-icon {
+.content-main .title .icon {
   background-image: url(/assets/images/icons/sprites/icons_large.png);
   background-repeat: no-repeat;
   display: inline-block;
@@ -7860,45 +7945,45 @@ header h1 strong {
   width: 77px;
 }
 
-.content-main .title .title-icon.title-icon-step1 {
+.content-main .title .icon.icon-step1 {
   background-position: 0 -518px;
 }
 
-.content-main .title .title-icon.title-icon-step2 {
+.content-main .title .icon.icon-step2 {
   background-position: 0 -584px;
 }
 
-.content-main .title .title-icon.title-icon-step3 {
+.content-main .title .icon.icon-step3 {
   background-position: 0 -647px;
 }
 
-.content-main .title .title-icon.title-icon-step4 {
+.content-main .title .icon.icon-step4 {
   background-position: 0 -713px;
 }
 
-.content-main .title .title-icon.title-icon-step5 {
+.content-main .title .icon.icon-step5 {
   background-position: 0 -777px;
 }
 
-.content-main .title .title-icon.title-icon-step6 {
+.content-main .title .icon.icon-step6 {
   background-position: 0 -842px;
 }
 
-.content-main .title .title-icon.title-icon-step7 {
+.content-main .title .icon.icon-step7 {
   background-position: 0 -454px;
 }
 
-.content-main .title .title-content {
+.content-main .title .content {
   float: left;
   line-height: 20px;
 }
 
-.content-main .title .title-content .title-text {
+.content-main .title .content .text {
   font-size: 30px;
   margin: 8px 0;
 }
 
-.content-main .title .title-content .title-sub {
+.content-main .title .content .subtitle {
   color: #5c6366;
   display: block;
   font-size: 18px;

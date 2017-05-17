@@ -17,7 +17,7 @@
   .title {
     margin-bottom: 24px;
 
-    .title-icon {
+    .icon {
       background-image: url(/assets/images/icons/sprites/icons_large.png);
       background-repeat: no-repeat;
       display: inline-block;
@@ -27,45 +27,45 @@
       vertical-align: middle;
       width: 77px;
 
-      &.title-icon-step1 {
+      &.icon-step1 {
         background-position: 0 -518px;
       }
 
-      &.title-icon-step2 {
+      &.icon-step2 {
         background-position: 0 -584px;
       }
 
-      &.title-icon-step3 {
+      &.icon-step3 {
         background-position: 0 -647px;
       }
 
-      &.title-icon-step4 {
+      &.icon-step4 {
         background-position: 0 -713px;
       }
 
-      &.title-icon-step5 {
+      &.icon-step5 {
         background-position: 0 -777px;
       }
 
-      &.title-icon-step6 {
+      &.icon-step6 {
         background-position: 0 -842px;
       }
 
-      &.title-icon-step7 {
+      &.icon-step7 {
         background-position: 0 -454px;
       }
     }
 
-    .title-content {
+    .content {
       float: left;
       line-height: 20px;
 
-      .title-text {
+      .text {
         font-size: 30px;
         margin: 8px 0;
       }
 
-      .title-sub {
+      .subtitle {
         color: $gray-lighter-custom;
         display: block;
         font-size: 18px;
