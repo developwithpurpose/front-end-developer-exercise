@@ -6,7 +6,7 @@
     "notifications": true,
     "css": {
         "folder": "css",
-        "outputFolder": "css",
+        "outputFolder": "assets/stylesheets",
         "sass": {
             "folder": "sass",
             "search": "/**/*.+(sass|scss)"
@@ -18,9 +18,9 @@
     },
     "js": {
         "folder": "js",
-        "outputFolder": "js"
+        "outputFolder": "assets/javascripts"
     },
     "versioning": {
-        "buildFolder": "build"
+        "buildFolder": "assets/build"
     }
 }

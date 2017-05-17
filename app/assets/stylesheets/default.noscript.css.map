@@ -1,0 +1,1 @@
+{"version":3,"sources":["default.noscript.scss"],"names":[],"mappings":"AAAA;EACC,eAAe;EACf,oBAAoB;CACpB","file":"default.noscript.css","sourcesContent":[".carousel-inner > .item {\r\n\tdisplay: block;\r\n\tmargin-bottom: 70px;\r\n}"]}
