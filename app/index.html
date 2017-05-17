@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/stylesheets/styles.min.css">
     <title>Front-End Developer Exercise - Keith Solution</title>
   </head>
   <body>
@@ -12,41 +13,42 @@
            <img src="/assets/images/header_text.jpg " alt="Dave Ramsey Header">
          </header>
          <!-- Message for browsers without JavaScript -->
-         <div id="without-js-containter">
+         <div id="without-js-message">
+           <h2> Hello, Please enable Javascript for the best dynamic experience for this site </h2>
          </div>
          <!-- End of without JavaScript message -->
-         <!-- Main content for JavaScript -->
+         <!-- Main content -->
          <div id="main-content">
            <!-- Left navigation -->
            <nav>
              <ul>
-               <li>
-                 <a href="#" id="1">Baby Step 1<span class="baby-step-icon one"></span></a>
+               <li class="active">
+                 <a href="/" id="1" class="active">Baby Step 1<span class="baby-step-icon one"></span></a>
                </li>
                <li>
-                 <a href="#" id="2">Baby Step 2<span class="baby-step-icon two"></span></a>
+                 <a href="/pages/baby-step-2" id="2">Baby Step 2<span class="baby-step-icon two"></span></a>
                </li>
                <li>
-                 <a href="#" id="3">Baby Step 3<span class="baby-step-icon three"></span></a>
+                 <a href="/pages/baby-step-3" id="3">Baby Step 3<span class="baby-step-icon three"></span></a>
                </li>
                <li>
-                 <a href="#" id="4">Baby Step 4<span class="baby-step-icon four"></span></a>
+                 <a href="/pages/baby-step-4" id="4">Baby Step 4<span class="baby-step-icon four"></span></a>
                </li>
                <li>
-                 <a href="#" id="5">Baby Step 5<span class="baby-step-icon five"></span></a>
+                 <a href="/pages/baby-step-5" id="5">Baby Step 5<span class="baby-step-icon five"></span></a>
                </li>
                <li>
-                 <a href="#" id="6">Baby Step 6<span class="baby-step-icon six"></span></a>
+                 <a href="/pages/baby-step-6" id="6">Baby Step 6<span class="baby-step-icon six"></span></a>
                </li>
                <li>
-                 <a href="#" id="7">Baby Step 7<span class="baby-step-icon seven"></span></a>
+                 <a href="/pages/baby-step-7" id="7">Baby Step 7<span class="baby-step-icon seven"></span></a>
                </li>
              </ul>
 
            </nav>
            <div class="baby-step-content">
              <!-- Baby Step 1 -->
-             <section id="baby-step-1-content">
+             <section id="baby-step-1-content" class="active">
                <img src="/assets/images/headings/heading_bs1.png" alt="Baby Step 1 $1000 Emergency Fund" />
                <p>
                  An emergency fund is for those unexpected events in life that you can’t
