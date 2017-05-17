@@ -9,6 +9,13 @@
     "start": "http-server ./app -d false"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "http-server": "^0.8.0",
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1",
+    "basic-elixir": "^1.0.1",
+    "laravel-elixir-del": "^0.1.1",
+    "laravel-elixir-webpack-official": "^1.0.2",
+    "lodash": "^4.16.2"
   }
 }

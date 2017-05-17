@@ -1,0 +1,79 @@
+@import 'variables';
+
+// Main Content
+.content-main {
+  float: left;
+  line-height: 18px;
+  padding: 0 70px;
+  width: 680px;
+
+  h1, h2 {
+    font-family: 'Source Sans Pro';
+    font-weight: $font-weight-semibold;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  .title {
+    margin-bottom: 24px;
+
+    .icon {
+      background-image: url(/assets/images/icons/sprites/icons_large.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      float: left;
+      height: 65px;
+      margin: 0 24px;
+      vertical-align: middle;
+      width: 77px;
+
+      &.icon-step1 {
+        background-position: 0 -518px;
+      }
+
+      &.icon-step2 {
+        background-position: 0 -584px;
+      }
+
+      &.icon-step3 {
+        background-position: 0 -647px;
+      }
+
+      &.icon-step4 {
+        background-position: 0 -713px;
+      }
+
+      &.icon-step5 {
+        background-position: 0 -777px;
+      }
+
+      &.icon-step6 {
+        background-position: 0 -842px;
+      }
+
+      &.icon-step7 {
+        background-position: 0 -454px;
+      }
+    }
+
+    .content {
+      float: left;
+      line-height: 20px;
+
+      .text {
+        font-size: 30px;
+        margin: 8px 0;
+      }
+
+      .subtitle {
+        color: $gray-lighter-custom;
+        display: block;
+        font-size: 18px;
+        font-weight: $font-weight-light;
+        margin: 0;
+      }
+    }
+  }
+
+  .body {}
+}

@@ -1,0 +1,96 @@
+@import 'variables';
+
+// Main Container Nav
+
+.nav-main {
+  background: url('/assets/images/shadow_left_nav.jpg') repeat-y;
+  display: inline-block;
+  float: left;
+  min-height: 617px;
+  width: 300px;
+
+  li {
+    a {
+      border-bottom: 1px solid #fff;
+      color: $gray-light-custom;
+      font-family: 'Source Sans Pro';
+      font-size: 18px;
+      font-weight: $font-weight-regular;
+      line-height: 60px;
+      text-align: right;
+      transition: all 750ms;
+
+      .nav-icon {
+        display: inline-block;
+        width: 30px;
+        height: 25px;
+        background-image: url(/assets/images/icons/sprites/icons_small.png);
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        margin: 0 24px;
+      }
+
+      .nav-icon-step1 {
+        background-position: 0 -25px;
+      }
+
+      .nav-icon-step2 {
+        background-position: 0 -50px;
+      }
+
+      .nav-icon-step3 {
+        background-position: 0 -75px;
+      }
+
+      .nav-icon-step4 {
+        background-position: 0 -100px;
+      }
+
+      .nav-icon-step5 {
+        background-position: 0 -125px;
+      }
+
+      .nav-icon-step6 {
+        background-position: 0 -150px;
+      }
+
+      .nav-icon-step7 {
+        background-position: 0 0;
+      }
+    }
+
+    a:hover,
+    a.active {
+    	background: #fff;
+      color: $link-hover-color;
+
+      .nav-icon-step1 {
+        background-position: 0 -200px;
+      }
+
+      .nav-icon-step2 {
+        background-position: 0 -225px;
+      }
+
+      .nav-icon-step3 {
+        background-position: 0 -250px;
+      }
+
+      .nav-icon-step4 {
+        background-position: 0 -275px;
+      }
+
+      .nav-icon-step5 {
+        background-position: 0 -300px;
+      }
+
+      .nav-icon-step6 {
+        background-position: 0 -325px;
+      }
+
+      .nav-icon-step7 {
+        background-position: 0 -175px;
+      }
+    }
+  }
+}
