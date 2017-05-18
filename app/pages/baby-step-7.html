@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/stylesheets/styles.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/styles.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js" type="text/javascript"></script>
-    <script src="/assets/javascripts/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js" type="text/javascript">
+
+    </script>
+    <script src="/assets/javascripts/script.js"></script>
     <title>Front-End Developer Exercise - Keith Solution</title>
   </head>
   <body>
@@ -25,8 +27,8 @@
            <!-- Left navigation -->
            <nav>
              <ul>
-               <li class="active">
-                 <a href="/" id="1" class="active">Baby Step 1<span class="baby-step-icon one"></span></a>
+               <li>
+                 <a href="/" id="1">Baby Step 1<span class="baby-step-icon one"></span></a>
                </li>
                <li>
                  <a href="/pages/baby-step-2" id="2">Baby Step 2<span class="baby-step-icon two"></span></a>
@@ -43,15 +45,15 @@
                <li>
                  <a href="/pages/baby-step-6" id="6">Baby Step 6<span class="baby-step-icon six"></span></a>
                </li>
-               <li>
-                 <a href="/pages/baby-step-7" id="7">Baby Step 7<span class="baby-step-icon seven"></span></a>
+               <li class="active">
+                 <a href="/pages/baby-step-7" id="7" class="active">Baby Step 7<span class="baby-step-icon seven"></span></a>
                </li>
              </ul>
 
            </nav>
            <div class="baby-step-content">
              <!-- Baby Step 1 -->
-             <section id="baby-step-1-content" class="active">
+             <section id="baby-step-1-content">
                <img src="/assets/images/headings/heading_bs1.png" alt="Baby Step 1 $1000 Emergency Fund" />
                <p>
                  An emergency fund is for those unexpected events in life that you can’t
@@ -149,7 +151,7 @@
                </p>
              </section>
              <!-- Baby Step 7 -->
-             <section id="baby-step-7-content">
+             <section id="baby-step-7-content" class="active no-js">
                <img src="/assets/images/headings/heading_bs7.png" alt="Baby Step 7 Build wealth and give!"/>
                <p>
                  It’s time to build wealth and give like never before. Leave an
