@@ -7,10 +7,16 @@
   },
   "scripts": {
     "start": "http-server ./app -d false",
-    "autoprefixer": "postcss -u autoprefixer -r app/assets/stylesheets/*"
+    "autoprefixer": "postcss -u autoprefixer -r app/assets/stylesheets/*",
+    "uglify": "uglifyjs app/assets/javascripts/*.js -m -o app/assets/javascripts/script.min.js",
+    "minification": "cleancss -o app/assets/stylesheets/styles.min.css app/assets/stylesheets/styles.css",
+    "build": "npm run autoprefixer && npm run uglify && npm run minification"
   },
   "devDependencies": {
     "http-server": "^0.8.0",
-    "autoprefixer": "^7.1.0"
+    "autoprefixer": "^7.1.0",
+    "clean-css-cli": "^4.1.2",
+    "postcss-cli": "^4.0.0",
+    "uglify-js": "^3.0.7"
   }
 }
