@@ -6,9 +6,19 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+    "start": "cross-env NODE_ENV=development http-server ./app -d false",
+    "server:prod": "cross-env NODE_ENV=production pushstate-server ./app"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "http-server": "^0.8.0",
+    "aurelia-tools": "^1.0.0",
+    "eslint": "^3.19.0",
+    "html-hint": "^0.2.4",
+    "stylelint": "^7.8.0",
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "dependencies": {
+    "pushstate-server": "^3.0.0",
+    "cross-env": "^4.0.0"
   }
 }
