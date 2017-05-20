@@ -87,12 +87,12 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
     ]
   },
   plugins: [
-    //new AureliaPlugin(),
-    // new ModuleDependenciesPlugin({
-    //   'aurelia-auth': ['./auth-filter'],
-    //   'aurelia-polymer': ['./au-select-custom-attribute'],
-    //   'au-table': ['./au-table', './au-table-select', './au-table-sort']
-    // }),
+  //new AureliaPlugin(),
+  // new ModuleDependenciesPlugin({
+  //   'aurelia-auth': ['./auth-filter'],
+  //   'aurelia-polymer': ['./au-select-custom-attribute'],
+  //   'au-table': ['./au-table', './au-table-select', './au-table-sort']
+  // }),
     new ProvidePlugin({
       'Promise': 'bluebird',
       '$': 'jquery',
@@ -112,8 +112,9 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
     }),
     new CopyWebpackPlugin(
       [{ from: 'app/assets/favicon.ico', to: 'favicon.ico' },
-     { from: 'app/assets/javascripts', to: 'assets/javascripts' },
-          { from: 'app/assets/stylesheets', to: 'assets/stylesheets' },
+    { from: 'app/assets/javascripts', to: 'assets/javascripts' },
+    { from: 'app/assets/stylesheets', to: 'assets/stylesheets' },
+    { from: 'app/baby-steps.json', to: 'baby-steps.json' },
     { from: 'app/assets/images', to: 'assets/images' }]
   ),
     new webpack.EnvironmentPlugin(['NODE_ENV', 'PORT']),
@@ -134,9 +135,9 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
 //   filename: 'polymer-micro.html',
 //   template: 'bower_components/polymer/polymer-micro.html'
 // }),
-  //   new CopyWebpackPlugin([
-  // { from: 'bower_components/webcomponentsjs/webcomponents.min.js', to: 'webcomponents.min.js' }
-  //   ]),
+//   new CopyWebpackPlugin([
+// { from: 'bower_components/webcomponentsjs/webcomponents.min.js', to: 'webcomponents.min.js' }
+//   ]),
     ...when(extractCss, new ExtractTextPlugin({
       filename: production ? '[contenthash].css' : '[id].css',
       allChunks: true
