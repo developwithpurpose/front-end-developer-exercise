@@ -8,7 +8,6 @@
   "scripts": {
     "start": "nps",
     "start:old": "cross-env NODE_ENV=development http-server ./app -d false",
-    "server:prod": "cross-env NODE_ENV=production pushstate-server ./app",
     "prod": "npm start -- build && npm start -- serve"
   },
   "devDependencies": {

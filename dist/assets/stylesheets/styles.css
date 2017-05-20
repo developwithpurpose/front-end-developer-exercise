@@ -28,7 +28,9 @@ h3 {
   font-weight: 600;
   line-height: 20px;
   margin-top: 18px;
-  margin-left: 400px;
+  margin-left: 200px;
+  margin-bottom: 0;
+  padding-top: 20px;
   /*margin-right: 70px;
 
   text-align: right;
@@ -46,6 +48,47 @@ h4 {
   background-color: #ebeced;
 }
 
+h5 {
+  margin-left: 200px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+  color: #5c6366;
+  line-height: 20px;
+}
+
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+
+a:focus,
+a:visited {
+  text-decoration: underline;
+  color: #6fbee7;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #6fbee7;
+}
+
+a:active {
+  text-decoration: underline;
+  color: #6fbee7;
+}
+
+p {
+  margin-left: 70px;
+  margin-right: 70px;
+  font-family: helvetica;
+  font-size: 13px;
+  color: #65696f;
+  line-height: 18px;
+}
+
 .header {
   background-image: url(/assets/images/header.jpg);
   height: 276px;
@@ -57,7 +100,7 @@ h4 {
 
 .grey {
   background-color: #bbbfc2;
-  height: 900px;
+  height: 764px;
   width: 1200px;
   position: absolute;
   top: 0;
@@ -76,4 +119,19 @@ h4 {
 .nav {
   width: 200px;
   float: left;
+}
+
+.content {
+  height: 427px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.babyS {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.peeps {
+  margin-bottom: 174px;
 }

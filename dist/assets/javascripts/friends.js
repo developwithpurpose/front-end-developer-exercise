@@ -3,5 +3,5 @@ console.log('hello friends');
 function navigate(id) {
   //var babystep = document.getElementById(id);
   console.log(id);
-  id.style.display = 'none';
+  id.scrollIntoView();
 }
