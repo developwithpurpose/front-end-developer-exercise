@@ -6,8 +6,10 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development http-server ./app -d false",
-    "server:prod": "cross-env NODE_ENV=production pushstate-server ./app"
+    "start": "nps",
+    "start:old": "cross-env NODE_ENV=development http-server ./app -d false",
+    "server:prod": "cross-env NODE_ENV=production pushstate-server ./app",
+    "prod": "npm start -- build && npm start -- serve"
   },
   "devDependencies": {
     "http-server": "^0.8.0",
@@ -15,10 +17,41 @@
     "eslint": "^3.19.0",
     "html-hint": "^0.2.4",
     "stylelint": "^7.8.0",
-    "stylelint-config-standard": "^16.0.0"
+    "stylelint-config-standard": "^16.0.0",
+    "babel-eslint": "^7.2.3",
+    "webpack-dev-server": "2.4.5"
   },
   "dependencies": {
+    "babel-core": "next",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "next",
+    "babel-plugin-transform-decorators": "next",
+    "babel-polyfill": "next",
+    "babel-preset-env": "next",
+    "babel-register": "next",
+    "babel7-jest": "github:niieani/babel7-jest",
     "pushstate-server": "^3.0.0",
-    "cross-env": "^4.0.0"
+    "cross-env": "^4.0.0",
+    "nps": "^5.1.0",
+    "nps-utils": "^1.2.0",
+    "autoprefixer": "^7.0.0",
+    "bluebird": "3.5.0",
+    "bootstrap": "3.3.7",
+    "copy-webpack-plugin": "4.0.1",
+    "css-loader": "^0.28.1",
+    "dotenv": "^4.0.0",
+    "expose-loader": "0.7.3",
+    "extract-text-webpack-plugin": "2.1.0",
+    "file-loader": "0.11.1",
+    "font-awesome": "4.7.0",
+    "html-webpack-plugin": "2.28.0",
+    "isomorphic-fetch": "2.2.1",
+    "jquery": "3.2.1",
+    "json-loader": "^0.5.4",
+    "postcss-loader": "^1.3.3",
+    "style-loader": "^0.17.0",
+    "url-loader": "0.5.8",
+    "wait-on": "2.0.2",
+    "webpack": "^2.5.1"
   }
 }
