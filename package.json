@@ -5,6 +5,10 @@
     "type": "git",
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
+  "engines": {
+    "node": "7.10.0",
+    "npm": "4.2.0"
+  },
   "scripts": {
     "start": "nps",
     "start:old": "cross-env NODE_ENV=development http-server ./app -d false",
