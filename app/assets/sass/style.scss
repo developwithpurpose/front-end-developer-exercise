@@ -1,0 +1,17 @@
+/* 
+	Author: Mark Fasel
+	Copyright 2017. All Rights Reserved.
+	Project: Front End Developer Exercise.
+	Last Modified: 05/20/2017	
+*/
+
+/* Import Helpers */
+@import 'helpers/animations';
+
+/* Import Base Styles */
+@import 'base/layout';
+@import 'base/header';
+@import 'base/footer';
+
+/* Import View Styles */
+@import 'views/home';
