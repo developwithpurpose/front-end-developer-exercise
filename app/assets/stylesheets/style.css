@@ -120,12 +120,7 @@ body {
             position: absolute;
             top: 50%;
             margin-top: -12.5px;
-            right: 24px;
-            -webkit-transition: all .4s ease-in-out;
-            -moz-transition: all .4s ease-in-out;
-            -ms-transition: all .4s ease-in-out;
-            -o-transition: all .4s ease-in-out;
-            transition: all .4s ease-in-out; }
+            right: 24px; }
             #content .content--navigation ul li a i.nav-icon {
               width: 30px;
               height: 25px;
