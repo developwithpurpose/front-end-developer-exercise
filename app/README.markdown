@@ -16,7 +16,7 @@ The site features CSS3 transitions that get applied with JavaScript by the use o
 
 Solution: I implement Modernizr to check for various css3 properties such as transitions, flexbox, and calc. This allows me to set CSS specific properties for browsers that lack support as well as animate with jQuery instead of CSS3. 
 
-```
+```javascript
 // Let's check modernizr to see if the browser supports css transitions. 
 // If not, let's animate with JS, if it does we'll animate using CSS3
 if(!Modernizr.csstransitions) { 
@@ -29,7 +29,7 @@ if(!Modernizr.csstransitions) {
 ```
 In the above code block, I check for csstransitions and if it doesn't exist I control the animation for the content block with jQuery animate. If it does exist, then I add or remove classes that contain the transition.
 
-```
+```sass
 // Has CSS Transitions - Class applied to HTML with Modernizr
 .csstransitions {
 	.content--main-step {
@@ -58,9 +58,7 @@ The only dilemma I see with this is lack of Ajax support for the friends data im
 
 ## Semantic Structure
 
-Since the site is built using HTML5, I focused on building out a semantic structure that encapsulated how the site should look based on the provided mockups.
-
-I chose HTML5 because it has become a standard in the industry. 
+Since the site is built using HTML5, I focused on building out a semantic structure that encapsulated how the site should look based on the provided mockups. I chose HTML5 because it has become a standard in the industry. 
 
 The site header is contained in a ``<header>`` tag that contains the header image (without text) and an h1 that contains the header text. I used this over the image with the text on it as its more semantically correct and focuses on accessibility as well as SEO. While you can apply text to an alt tag on the image, this provides screen readers better experience.
 
@@ -70,3 +68,7 @@ The main content of the site is broken down into two pieces: the navigation area
 The main content is built using the main tag and assigns the role main to it ``<main role="main" class="content--main">``
 
 In side the navigation I use an unordered list and control the styling thru CSS. Inside the main content area, I use section tags for each baby step. I also use the single icon for the baby step heading and implement HTML for the heading as its better from a structural / semantic standpoint as well as accessibility.
+
+## Styling / SASS
+
+## Conclusion
