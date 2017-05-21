@@ -8,21 +8,11 @@
 .content--main-step {
 	position: absolute;
 	&.active {
-	/* This timing applies on the way IN */
-	transition-timing-function: ease-out;
-	
-	/* A litttttle slower on the way in */
-	transition: 1s;
-		transform: translateY(0);
-	    opacity: 1;
+		top: 0;
+		opacity: 1;
     }
     &.hidden {
-	/* This timing applies on the way IN */
-	transition-timing-function: ease-in;
-	
-	/* A litttttle slower on the way in */
-	transition: 1s;
-	    transform: translateY(-500px);
+		top: -500px;
 	    opacity: 0;
 	}
 	.step-heading {
@@ -63,6 +53,23 @@
 			line-height: 18px;
 			font-weight: normal;
 			margin-bottom: 24px;
+		}
+	}
+}
+// Has CSS Transitions - Class applied to HTML with Modernizr
+.csstransitions {
+	.content--main-step {
+		&.active {
+			/* This timing applies on the way IN */
+			transition-timing-function: ease-out;
+			/* A litttttle slower on the way in */
+			transition: 1s;
+	    }
+	    &.hidden {
+			/* This timing applies on the way IN */
+			transition-timing-function: ease-in;
+			/* A litttttle slower on the way in */
+			transition: 1s;
 		}
 	}
 }

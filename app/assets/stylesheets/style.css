@@ -11,7 +11,7 @@
   transition-timing-function: ease-in;
   /* A litttttle slower on the way in */
   transition: 1s;
-  transform: translateY(-500px);
+  top: -500px;
   opacity: 0; }
 
 /* Import Base Styles */
@@ -172,18 +172,10 @@ body {
 .content--main-step {
   position: absolute; }
   .content--main-step.active {
-    /* This timing applies on the way IN */
-    transition-timing-function: ease-out;
-    /* A litttttle slower on the way in */
-    transition: 1s;
-    transform: translateY(0);
+    top: 0;
     opacity: 1; }
   .content--main-step.hidden {
-    /* This timing applies on the way IN */
-    transition-timing-function: ease-in;
-    /* A litttttle slower on the way in */
-    transition: 1s;
-    transform: translateY(-500px);
+    top: -500px;
     opacity: 0; }
   .content--main-step .step-heading {
     display: flex;
@@ -217,3 +209,15 @@ body {
     line-height: 18px;
     font-weight: normal;
     margin-bottom: 24px; }
+
+.csstransitions .content--main-step.active {
+  /* This timing applies on the way IN */
+  transition-timing-function: ease-out;
+  /* A litttttle slower on the way in */
+  transition: 1s; }
+
+.csstransitions .content--main-step.hidden {
+  /* This timing applies on the way IN */
+  transition-timing-function: ease-in;
+  /* A litttttle slower on the way in */
+  transition: 1s; }
