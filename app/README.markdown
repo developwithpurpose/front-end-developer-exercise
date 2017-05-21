@@ -1,4 +1,4 @@
-# Front End Developer Exercie
+# Front End Developer Exercise
 
 Hi there, thank you for allowing me to submit this Front End Developer Exercise and be considered as a candidate for the Front End Developer position. This is an overview and documentation of how I approached this exercise, the techniques I used, and some of the technologies implemented.
 
