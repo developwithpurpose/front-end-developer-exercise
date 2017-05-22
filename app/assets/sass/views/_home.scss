@@ -45,7 +45,7 @@
 			}
 		}
 	}
-	.step-heading--content {
+	.step--content {
 		p {
 			color: #65686f;
 			font-family: Helvetica, sans-serif;
@@ -53,6 +53,12 @@
 			line-height: 18px;
 			font-weight: normal;
 			margin-bottom: 24px;
+			a {
+				color: #6fbee7;
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }
