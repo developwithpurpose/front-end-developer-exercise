@@ -16,8 +16,12 @@
 	    opacity: 0;
 	}
 	.step-heading {
+		display: block;
 		display: flex;
+		display: -ms-flexbox;
 		margin-bottom: 24px;
+		overflow: hidden;
+		width: 100%;
 		figure {
 			float: left;
 			width: 77px;

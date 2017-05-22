@@ -45,9 +45,10 @@ body {
 	}
 }
 #content {
-	display: table-cell;
+	display: block;
 	display: flex; //Current browsers (IE11, Chrome, etc)
     display: -ms-flexbox; //IE10 implementation
+    overflow: hidden;
 	padding-top: 60px;
 	position: relative;
 	
@@ -59,8 +60,10 @@ body {
 		height: 500px;
 		order: 2;
 		width: 66.666%;
+		margin-left: 33.333%;
 		margin-left: calc(33.333% + 70px);
 		margin-right: 70px;
+		position: relative;
 	}
 	
 	/**
@@ -191,5 +194,31 @@ body {
 				}
 			}
 		}
+	}
+}
+// Support for ie 9 / browsers the don't support CSS3
+.no-flexbox {
+	.content--navigation {
+		height: 500px;
+		position: relative!important;
+		top: 0!important;
+	}
+	.content--main { 
+		margin-left: 70px!important;
+		height: 400px!important;
+		width: calc(66.666% - 140px)!important;
+	}
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   /* IE10-specific styles go here */  
+   .content--navigation {
+		height: 500px;
+		position: relative!important;
+		top: 0!important;
+	}
+	.content--main { 
+		margin-left: 70px!important;
+		height: 400px!important;
+		width: calc(66.666% - 140px)!important;
 	}
 }

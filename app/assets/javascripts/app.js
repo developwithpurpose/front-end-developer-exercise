@@ -121,9 +121,8 @@ var app = {
 			  "</a> and " + (friends.length - 2) + " other friends are also in Baby Step "
 			  + step;
 			} 
-			
 			// Append the messge to the content of the step
-			$("#step" + step + ' .step--content').append( "<p class='friends'>" + msg + "</p>");
+			$( "<p class='friends'>" + msg + "</p>").appendTo("#step" + step + ' .step--content');
         });
 	}
     

@@ -57,9 +57,10 @@ body {
           display: block; }
 
 #content {
-  display: table-cell;
+  display: block;
   display: flex;
   display: -ms-flexbox;
+  overflow: hidden;
   padding-top: 60px;
   position: relative;
   /**
@@ -73,8 +74,10 @@ body {
     height: 500px;
     order: 2;
     width: 66.666%;
+    margin-left: 33.333%;
     margin-left: calc(33.333% + 70px);
-    margin-right: 70px; }
+    margin-right: 70px;
+    position: relative; }
   #content .content--navigation {
     background: #ebeced;
     background: -moz-linear-gradient(left, #ebeced 0%, #ebeced 90%, #d1d5d6 100%);
@@ -159,6 +162,27 @@ body {
         #content .content--navigation ul li.active.active--step7 .nav-icon--step7 {
           background-position: 0 -325px; }
 
+.no-flexbox .content--navigation {
+  height: 500px;
+  position: relative !important;
+  top: 0 !important; }
+
+.no-flexbox .content--main {
+  margin-left: 70px !important;
+  height: 400px !important;
+  width: calc(66.666% - 140px) !important; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* IE10-specific styles go here */
+  .content--navigation {
+    height: 500px;
+    position: relative !important;
+    top: 0 !important; }
+  .content--main {
+    margin-left: 70px !important;
+    height: 400px !important;
+    width: calc(66.666% - 140px) !important; } }
+
 /* Import View Styles */
 /* Homepage Styles */
 .content--main {
@@ -174,8 +198,12 @@ body {
     top: -500px;
     opacity: 0; }
   .content--main-step .step-heading {
+    display: block;
     display: flex;
-    margin-bottom: 24px; }
+    display: -ms-flexbox;
+    margin-bottom: 24px;
+    overflow: hidden;
+    width: 100%; }
     .content--main-step .step-heading figure {
       float: left;
       width: 77px;
