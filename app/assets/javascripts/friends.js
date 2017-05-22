@@ -1,21 +1,31 @@
-// "use strict";
 console.log('hello friends');
 function navigate(id) {
-  //var babystep = document.getElementById(id);
   console.log(id);
   id.scrollIntoView();
 }
 
 function friends() {
-  //TODO get the data from baby-steps.json
   fetchJSONFile('baby-steps.json', function(data){
-    // do something with your data
     console.log(data);
+    console.log('trying to reference the baby step ' + JSON.stringify(data.friends[1].babyStep));
+    let arrLength = data.friends.length;
+    let eyed = '';
+    let fullName = '';
+    let step;
+    let friendLinks = '';
+    console.log(arrLength);
+    for (i = 0; i < arrLength; i++){
+      fullName = data.friends[i].firstName + ' ' + data.friends[i].lastName + ', ';
+      console.log(fullName);
+      step = data.friends[i].babyStep;
+      console.log(step);
+      eyed = step + 'peeps';
+      console.log('eyed ' + eyed);
+      friendLinks = document.getElementById(eyed).innerHTML;
+      document.getElementById(eyed).innerHTML = friendLinks + fullName;
+      friendLinks = '';
+    }
   });
-  //do a loop, get the link element by id using the step number
-  //if the step number contains any peeps then add them to the link
-  //if the step contains more than two peeps then list the number in excess of two peeps
-  return;
 }
 
 function fetchJSONFile(path, callback) {

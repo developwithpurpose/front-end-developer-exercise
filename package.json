@@ -12,7 +12,8 @@
   "scripts": {
     "start": "nps",
     "start:old": "cross-env NODE_ENV=development http-server ./app -d false",
-    "prod": "npm start -- build && npm start -- serve"
+    "prod": "npm start -- build && npm start -- serve",
+    "postinstall" : "npm start -- build"
   },
   "devDependencies": {
     "http-server": "^0.8.0",
