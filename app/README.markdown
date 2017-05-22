@@ -8,7 +8,7 @@ The project was built using HTML5 and CSS3 with JavaScript fallback options to a
 
 ## Structure / Organization
 
-The site structure features the index.html, a "step" folder that holds all the additional baby steps which is used for a graceful degradation when the browser doesn't feature JavaScript (ie the navigational links direct to individual content pages.). Inside the assets folder, I have an images folder, JavaScripts folder, stylesheets folder, and a sass folder (that contains all precompiled SASS files). The Gulpfile.js is a simple gulpfile that builds out the css as well as provides tasks for minifying the CSS for production as well as uglifying the JavaScript. To compile the css, you will need to navigate to the app folder and run ``npm install``. You may also need to run the following:
+The site structure features the index.html, a "step" folder that holds all the additional baby steps which is used for a graceful degradation when the browser doesn't feature JavaScript (ie the navigational links direct to individual content pages.). Inside the assets folder, I have an images folder, JavaScripts folder, stylesheets folder, and a sass folder (that contains all precompiled SASS files). The Gulpfile.js is a simple gulpfile that builds out the css as well as provides tasks for minifying the CSS for production as well as uglifying the JavaScript. To compile the assets, you will need to navigate to the app folder and run ``npm install``. You may also need to run the following:
 
 ```
 npm install gulp
