@@ -1,0 +1,137 @@
+h1 {
+  line-height: 48px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  color: #fff;
+  text-align: right;
+  margin-left: 306px;
+  margin-top: 0;
+  width: 600px;
+}
+
+h2 {
+  font-size: 32px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  margin-right: 70px;
+  margin-top: 48px;
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 30px;
+  color: #36abe1;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 18px;
+  margin-left: 200px;
+  margin-bottom: 0;
+  padding-top: 20px;
+  /*margin-right: 70px;
+
+  text-align: right;
+  margin-bottom: 15px;*/
+}
+
+h4 {
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  margin-bottom: 1px;
+  margin-top: 0;
+  background-color: #ebeced;
+}
+
+h5 {
+  margin-left: 200px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+  color: #5c6366;
+  line-height: 20px;
+}
+
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+
+a:focus,
+a:visited {
+  text-decoration: underline;
+  color: #6fbee7;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #6fbee7;
+}
+
+a:active {
+  text-decoration: underline;
+  color: #6fbee7;
+}
+
+p {
+  margin-left: 70px;
+  margin-right: 70px;
+  font-family: helvetica;
+  font-size: 13px;
+  color: #65696f;
+  line-height: 18px;
+}
+
+.header {
+  background-image: url(/assets/images/header.jpg);
+  height: 276px;
+  width: 980px;
+  margin-left: 80px;
+  position: absolute;
+  top: 0;
+}
+
+.grey {
+  background-color: #bbbfc2;
+  height: 764px;
+  width: 1200px;
+  position: absolute;
+  top: 0;
+}
+
+.main {
+  padding-top: 60px;
+  position: absolute;
+  top: 276px;
+  background-color: white;
+  margin-left: 80px;
+  width: 980px;
+  height: 427px;
+}
+
+.nav {
+  width: 200px;
+  float: left;
+}
+
+.content {
+  height: 427px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.babyS {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.peeps {
+  margin-bottom: 174px;
+}
