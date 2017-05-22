@@ -17,7 +17,6 @@ npm install gulp-clean-css
 npm install gulp-rename
 npm install gulp-concat-util
 npm install gulp-uglify
-
 ```
 
 ## Transitions, JavaScript, and Fallback Support
