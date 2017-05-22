@@ -1,6 +1,6 @@
 # Front End Developer Exercise
 
-Hi there, thank you for allowing me to submit this Front End Developer Exercise and be considered as a candidate for the Front End Developer position. This is an overview and documentation of how I approached this exercise, the techniques I used, and some of the technologies implemented.
+Hi there! I'm Mark Fasel, a Full Stack Engineer and Front End Developer looking to further my career and continue learning through a thriving environment with a purpose of helping others! Thank you for the opportunity and allowing me to submit this Front End Developer Exercise and be considered as a candidate for the position. This is an overview and documentation of how I approached this exercise, the techniques I used, and some of the technologies implemented.
 
 ## Overview
 
