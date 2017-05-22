@@ -71,4 +71,18 @@ In side the navigation I use an unordered list and control the styling thru CSS.
 
 ## Styling / SASS
 
+Styling was done with SASS since Rails apps utilize SASS in the asset pipeline by default. I develop using both SASS and LESS but do prefer SASS. I have implemented a simple gulp process file for compiling the SASS code into CSS. 
+
+While this project didn't require the use of any responsive development, I normally develop sites using Bootstrap, Foundation or a custom responsive solution.
+
+I used flexbox for some positioning but have fallback support for IE / browsers the don't support flexbox. I also implemented calc into a few areas to ensure a better display and position (although this site could be developed numerous ways). The site itself features CSS3 animation for content transitions with jQuery animate as a fallback support for older browsers such as IE9.
+
+The site was tested using saucelabs.com and I checked against IE 9, IE 10, IE 11, Edge, Chrome (Windows / Mac), Firefox (Windows / Mac), and Safari. The site passed the visual and functional tests.
+
 ## Conclusion
+
+Overall, this project features many different technologies, techniques, and functionality that required a little out of the box thinking for fallback support. I really enjoyed building this exercise and hope you find my techniques and code to your liking!
+
+As a front end developer, ux designer, and full stack engineer, I can offer you skills and experiences to help your team and be an asset to Ramsey Solutions!
+
+Thank you again for your time and consideration and I hope I can be a good fit for your team.
