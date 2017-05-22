@@ -9,10 +9,22 @@ body {
 	background: #bbbfc2;
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
+.no-js-message {
+	text-align: center;
+	padding: 20px;
+	width: 100%;
+	background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+	p {
+		font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+		color: #a94442;
+	}
+}
 .site-container {
 	background: #fff;
 	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-	margin: 0 auto;
+	margin: 0 auto 100px;
 	width: 980px;
 	.site-header--masthead {
 		position: relative;

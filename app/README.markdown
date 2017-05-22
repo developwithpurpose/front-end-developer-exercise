@@ -54,6 +54,8 @@ I have also chosen to implement the transition using absolute position rather th
 
 This solution will also work on ie9+ because it doesn't require CSS3 for transitions but falls back to jQuery. If JavaScript is completely disabled, then a message would be displayed to the user to enable JavaScript for a better experience and if the user clicks a baby step link, it would take them to the page via url.
 
+Lodash was used as a helper to control and build out the friend object before outputting display to the step content. I can also use underscore as well and have experience with both.
+
 The only dilemma I see with this is lack of Ajax support for the friends data implementation. If JavaScript is disabled, the ajax call won't initialize and therefore wont display on the content pages when there is no JavaScript. A work around for this would be to implement this functionality from a backend application process such a Rails or PHP and take it out of the front end layer all together in the event that JavaScript isn't enabled.
 
 ## Semantic Structure
