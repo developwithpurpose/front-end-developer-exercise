@@ -56,6 +56,21 @@ This solution will also work on ie9+ because it doesn't require CSS3 for transit
 
 Lodash was used as a helper to control and build out the friend object before outputting display to the step content. I can also use underscore as well and have experience with both.
 
+```
+buildFriendsObj : function(obj) {
+	// Create a local variable to store friend name
+	var friendName;
+	
+	// Reduce the object by combining all friends in a step to an obj based off the step number - using transform, but reduce could also be used and would require returning the result
+  	var newObj = _.transform(obj, function(result, friendObj) {
+	  	// Build the friend name from the friend object with first and last name
+		friendName = friendObj.firstName + " " + friendObj.lastName;
+		(result[friendObj.babyStep] || (result[friendObj.babyStep] = [])).push(friendName); // Push the names in the step obj
+	}, {});
+	return newObj; // Return the newObj
+}
+```
+
 The only dilemma I see with this is lack of Ajax support for the friends data implementation. If JavaScript is disabled, the ajax call won't initialize and therefore wont display on the content pages when there is no JavaScript. A work around for this would be to implement this functionality from a backend application process such a Rails or PHP and take it out of the front end layer all together in the event that JavaScript isn't enabled.
 
 ## Semantic Structure
