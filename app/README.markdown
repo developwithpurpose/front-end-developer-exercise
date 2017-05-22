@@ -96,6 +96,8 @@ I used flexbox for some positioning but have fallback support for IE / browsers 
 
 The site was tested using saucelabs.com and I checked against IE 9, IE 10, IE 11, Edge, Chrome (Windows / Mac), Firefox (Windows / Mac), and Safari. The site passed the visual and functional tests.
 
+I ommitted normalize.css and opted for a basic reset. However normalize.css is a makes browsers render all elements more consistently with modern standards and is used for HTML5. Since this was a relatively simple site with not much HTML5, there was no need to implement this additional CSS.
+
 ## Conclusion
 
 Overall, this project features many different technologies, techniques, and functionality that required a little out of the box thinking for fallback support. I really enjoyed building this exercise and hope you find my techniques and code to your liking!
