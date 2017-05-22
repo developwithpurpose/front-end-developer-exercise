@@ -23,7 +23,7 @@ npm install gulp-uglify
 
 The site features CSS3 transitions that get applied with JavaScript by the use of class additions and removals. However, not all older browsers support CSS3 properties and transitions and while CSS3 is being used frequently to handle these tasks, implementing a fallback solution allows us to ensure a better user experience.
 
-Solution: I implement Modernizr to check for various css3 properties such as transitions, flexbox, and calc. This allows me to set CSS specific properties for browsers that lack support as well as animate with jQuery instead of CSS3. 
+Solution: I implemented Modernizr to check for various css3 properties such as transitions, flexbox, and calc. This allows me to set CSS specific properties for browsers that lack support as well as animate with jQuery instead of CSS3. 
 
 ```javascript
 // Let's check modernizr to see if the browser supports css transitions. 
@@ -43,15 +43,11 @@ In the above code block, I check for csstransitions and if it doesn't exist I co
 .csstransitions {
 	.content--main-step {
 		&.active {
-			/* This timing applies on the way IN */
 			transition-timing-function: ease-out;
-			/* A litttttle slower on the way in */
 			transition: 1s;
 	    }
 	    &.hidden {
-			/* This timing applies on the way IN */
 			transition-timing-function: ease-in;
-			/* A litttttle slower on the way in */
 			transition: 1s;
 		}
 	}
