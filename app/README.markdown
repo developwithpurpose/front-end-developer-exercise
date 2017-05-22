@@ -98,6 +98,10 @@ The site was tested using saucelabs.com and I checked against IE 9, IE 10, IE 11
 
 I ommitted normalize.css and opted for a basic reset. However normalize.css is a makes browsers render all elements more consistently with modern standards and is used for HTML5. Since this was a relatively simple site with not much HTML5, there was no need to implement this additional CSS.
 
+## Production Assets
+
+Since I have a Gulpfile that controls the SASS compiling, I implemented a couple additional tasks for minifying CSS as well as uglifying JavaScript. While the app uses the product assets for optimization purposes, source files are still included in their respected locations for review. I also didn't concatenate and JavaScript as there are files utilized in different areas of the page. I am also adding scripts to the footer for quicker loading but Modernizr is loaded in the head as well as Google Fonts Webfont Loader.
+
 ## Conclusion
 
 Overall, this project features many different technologies, techniques, and functionality that required a little out of the box thinking for fallback support. I really enjoyed building this exercise and hope you find my techniques and code to your liking!
