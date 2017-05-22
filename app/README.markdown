@@ -4,7 +4,7 @@ Hi there! I'm Mark Fasel, a Full Stack Engineer and Front End Developer looking 
 
 ## Overview
 
-The project was built using HTML5 and CSS3 with JavaScript fallback options to account for older browsers. I implemented SASS for all CSS development with a basic Gulp environment for compile the code. I chose SASS over LESS because of the fact that Ramsey Solutions builds apps using Ruby on Rails which utilizes SASS in it's asset pipeline out of the box. I have been building sites on Ruby on Rails for a couple years and have a extensive knowledge on the topic and can easily work with it.
+The project was built using HTML5 and CSS3 with JavaScript fallback options to account for older browsers. I implemented SASS for all CSS development with a basic Gulp environment to compile the code. I chose SASS over LESS because of the fact that Ramsey Solutions builds apps using Ruby on Rails which utilizes SASS in it's asset pipeline out of the box. I have been building sites on Ruby on Rails for a couple years and have a extensive knowledge on the topic and can easily work with it.
 
 ## Structure / Organization
 
@@ -56,7 +56,7 @@ This solution will also work on ie9+ because it doesn't require CSS3 for transit
 
 Lodash was used as a helper to control and build out the friend object before outputting display to the step content. I can also use underscore as well and have experience with both.
 
-```
+```javascript
 buildFriendsObj : function(obj) {
 	// Create a local variable to store friend name
 	var friendName;
@@ -71,7 +71,32 @@ buildFriendsObj : function(obj) {
 }
 ```
 
-The only dilemma I see with this is lack of Ajax support for the friends data implementation. If JavaScript is disabled, the ajax call won't initialize and therefore wont display on the content pages when there is no JavaScript. A work around for this would be to implement this functionality from a backend application process such a Rails or PHP and take it out of the front end layer all together in the event that JavaScript isn't enabled.
+The only dilemma I see with this is lack of Ajax support for the friends data implementation. If JavaScript is disabled, the ajax call won't initialize and therefore wont display on the content pages when there is no JavaScript. A work around for this would be to implement this functionality from a backend application process such a Rails or PHP and take it out of the front end layer all together in the event that JavaScript isn't enabled. I make a single ajax call to the json file when the JavaScript is first initialized. I took this approach due to the size of the json file and the basic implementation that was requested in the project requirements. More robust requirements may make better use with specific ajax calls on a click method that get's requested as needed.
+
+Here's the ajax function I am using.
+
+```javascript
+getFriends : function() {	    
+    // JSON request for the data
+    $.getJSON(app.config.json, function(response) {
+        
+        // Create friends object
+        var friendsObj = {};
+        
+        // Create local variable for holding the response
+        var friends = response.friends;
+        
+        // Let's sort the object using lodash by step and last name
+        friends = _.sortBy(friends, ['babyStep', 'lastName'] );
+        
+        // Create a new object with the friends data that reduces the obj and sorts it by step
+        friendsObj = app.buildFriendsObj(friends);
+
+        // Let's add the object to the current step content
+        app.addFriendsToStep(friendsObj);
+	});
+}
+```
 
 ## Semantic Structure
 
