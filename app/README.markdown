@@ -76,7 +76,7 @@ buildFriendsObj : function(obj) {
 }
 ```
 
-The only dilemma I see with this is lack of Ajax support for the friends data implementation. If JavaScript is disabled, the ajax call won't initialize and therefore wont display on the content pages when there is no JavaScript. A work around for this would be to implement this functionality from a backend application process such a Rails or PHP and take it out of the front end layer all together in the event that JavaScript isn't enabled. I make a single ajax call to the json file when the JavaScript is first initialized. I took this approach due to the size of the json file and the basic implementation that was requested in the project requirements. More robust requirements may make better use with specific ajax calls on a click method that get's requested as needed.
+If JavaScript is disabled, the ajax call won't initialize and therefore wont display on the content pages when there is no JavaScript. A work around for this would be to implement this functionality from a backend application process such a Rails or PHP and take it out of the front end layer all together in the event that JavaScript isn't enabled. I make a single ajax call to the json file when the JavaScript is first initialized. I took this approach due to the size of the json file and the basic implementation that was requested in the project requirements. More robust requirements may make better use with specific ajax calls on a click method that get's requested as needed.
 
 Here's the ajax function I am using.
 
@@ -91,7 +91,7 @@ getFriends : function() {
         // Create local variable for holding the response
         var friends = response.friends;
         
-        // Let's sort the object using lodash by step and last name
+        // Let's sort the object using lodash by step and last name in ascending order
         friends = _.sortBy(friends, ['babyStep', 'lastName'] );
         
         // Create a new object with the friends data that reduces the obj and sorts it by step
@@ -107,7 +107,7 @@ getFriends : function() {
 
 Since the site is built using HTML5, I focused on building out a semantic structure that encapsulated how the site should look based on the provided mockups. I chose HTML5 because it has become a standard in the industry. 
 
-The site header is contained in a ``<header>`` tag that contains the header image (without text) and an h1 that contains the header text. I used this over the image with the text on it as its more semantically correct and focuses on accessibility as well as SEO. While you can apply text to an alt tag on the image, this provides screen readers better experience.
+The site header is contained in a ``<header>`` tag that contains the header image (without text) and an h1 that contains the header text. I used this over the image with the text on it as its more semantically correct and focuses on accessibility as well as SEO.
 
 The main content of the site is broken down into two pieces: the navigation area and the main content area. The navigation block contains a semantic structure using the nav tag and assigns the role of navigation to it.
 ``<nav role="navigation" class="content--navigation"></nav>``
@@ -122,20 +122,20 @@ Styling was done with SASS since Rails apps utilize SASS in the asset pipeline b
 
 While this project didn't require the use of any responsive development, I normally develop sites using Bootstrap, Foundation or a custom responsive solution.
 
-I used flexbox for some positioning but have fallback support for IE / browsers the don't support flexbox. I also implemented calc into a few areas to ensure a better display and position (although this site could be developed numerous ways). The site itself features CSS3 animation for content transitions with jQuery animate as a fallback support for older browsers such as IE9.
+I used flexbox for some positioning but have fallback support for IE / browsers that don't support flexbox. I also implemented calc into a few areas to ensure a better display and position (although this site could be developed numerous ways). The site itself features CSS3 animation for content transitions with jQuery animate as a fallback support for older browsers such as IE9.
 
 The site was tested using saucelabs.com and I checked against IE 9, IE 10, IE 11, Edge, Chrome (Windows / Mac), Firefox (Windows / Mac), and Safari. The site passed the visual and functional tests.
 
-I ommitted normalize.css and opted for a basic reset. However normalize.css is a makes browsers render all elements more consistently with modern standards and is used for HTML5. Since this was a relatively simple site with not much HTML5, there was no need to implement this additional CSS.
+I ommitted normalize.css and opted for a basic reset since this was a small site with not much HTML5.
 
 ## Production Assets
 
-Since I have a Gulpfile that controls the SASS compiling, I implemented a couple additional tasks for minifying CSS as well as uglifying JavaScript. While the app uses the product assets for optimization purposes, source files are still included in their respected locations for review. I also didn't concatenate and JavaScript as there are files utilized in different areas of the page. I am also adding scripts to the footer for quicker loading but Modernizr is loaded in the head as well as Google Fonts Webfont Loader.
+Since I have a Gulpfile that controls the SASS compiling, I implemented a couple additional tasks for minifying CSS as well as uglifying JavaScript. While the app uses the product assets for optimization purposes, source files are still included in their respected locations for review.
 
 ## Conclusion
 
-Overall, this project features many different technologies, techniques, and functionality that required a little out of the box thinking for fallback support. I really enjoyed building this exercise and hope you find my techniques and code to your liking!
+Overall, this project features many different technologies, techniques, and functionality. I really enjoyed building this exercise and hope you find my techniques and code to your liking!
 
-As a front end developer, ux designer, and full stack engineer, I can offer you skills and experiences to help your team and be an asset to Ramsey Solutions!
+As a front end developer, UX designer, and full stack engineer, I can offer you the skills and experiences to help your team and be an asset to Ramsey Solutions!
 
 Thank you again for your time and consideration and I hope I can be a good fit for your team.

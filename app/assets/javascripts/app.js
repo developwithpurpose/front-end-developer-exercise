@@ -75,7 +75,7 @@ var app = {
 	        // Create local variable for holding the response
 	        var friends = response.friends;
 	        
-	        // Let's sort the object using lodash by step and last name
+	        // Let's sort the object using lodash by step and last name in ascending order
 	        friends = _.sortBy(friends, ['babyStep', 'lastName'] );
 	        
 	        // Create a new object with the friends data that reduces the obj and sorts it by step
