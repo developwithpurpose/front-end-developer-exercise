@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "no-eol-whitespace": null,
+    "rule-empty-line-before": null,
+    "selector-type-no-unknown": null,
+    "comment-empty-line-before": null,
+    "comment-whitespace-inside": null
+  }
+}
