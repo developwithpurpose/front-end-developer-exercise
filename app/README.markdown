@@ -57,7 +57,7 @@ This CSS statement in SASS only applies the desired classes with the transition 
 
 I have also chosen to implement the transition using absolute position rather than using translateY. I only do this to reduce the extra lines of code just to run translateY for css3 only while I am animating with jQuery on the top position value.
 
-This solution will also work on ie9+ because it doesn't require CSS3 for transitions but falls back to jQuery for animations. If JavaScript is completely disabled, then a message would be displayed to the user to enable JavaScript for a better experience and if the user clicks a baby step link, it would take them to the page via url. To display a message that JavaScript is disabled, I added a message with the <noscript> tag as it is semantically the correct way to handle this functionality.
+This solution will also work on ie9+ because it doesn't require CSS3 for transitions but falls back to jQuery for animations. If JavaScript is completely disabled, then a message would be displayed to the user to enable JavaScript for a better experience and if the user clicks a baby step link, it would take them to the page via url. To display a message that JavaScript is disabled, I added a message with the ``<noscript>`` tag as it is semantically the correct way to handle this functionality.
 
 ```html
 <noscript>
