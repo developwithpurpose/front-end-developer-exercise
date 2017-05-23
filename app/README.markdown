@@ -57,7 +57,13 @@ This CSS statement in SASS only applies the desired classes with the transition 
 
 I have also chosen to implement the transition using absolute position rather than using translateY. I only do this to reduce the extra lines of code just to run translateY for css3 only while I am animating with jQuery on the top position value.
 
-This solution will also work on ie9+ because it doesn't require CSS3 for transitions but falls back to jQuery. If JavaScript is completely disabled, then a message would be displayed to the user to enable JavaScript for a better experience and if the user clicks a baby step link, it would take them to the page via url.
+This solution will also work on ie9+ because it doesn't require CSS3 for transitions but falls back to jQuery for animations. If JavaScript is completely disabled, then a message would be displayed to the user to enable JavaScript for a better experience and if the user clicks a baby step link, it would take them to the page via url. To display a message that JavaScript is disabled, I added a message with the <noscript> tag as it is semantically the correct way to handle this functionality.
+
+```html
+<noscript>
+   <div class="no-js-message"><p>Please enable JavaScript for the best experience.</p></div>
+</noscript>
+```
 
 Lodash was used as a helper to control and build out the friend object before outputting display to the step content. I can also use underscore as well and have experience with both.
 
@@ -131,6 +137,8 @@ I ommitted normalize.css and opted for a basic reset since this was a small site
 ## Production Assets
 
 Since I have a Gulpfile that controls the SASS compiling, I implemented a couple additional tasks for minifying CSS as well as uglifying JavaScript. While the app uses the product assets for optimization purposes, source files are still included in their respected locations for review.
+
+The site is fully production ready with all scripts and CSS. I left comments in both the JavaScripts and CSS due to keeping with best practices of providing comments so another developer can easily identify what is intended. I have however documented my process and the exercise here in the readme as instructed to provide specific details.
 
 ## Conclusion
 
