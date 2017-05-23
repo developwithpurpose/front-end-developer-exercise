@@ -3,10 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Mark Fasel's Front-End Developer Exercise</title>
+		<title>Mark Fasel's Front-End Developer Exercise - Step 2</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
 
 		<script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 		<script>
@@ -16,9 +15,9 @@
 		    }
 		  });
 		</script>
-		
-        <link rel="stylesheet" href="/assets/stylesheets/style.min.css">
-		<script src="/assets/javascripts/vendor/modernizr-2.8.3.min.js"></script>
+
+        <link rel="stylesheet" href="../assets/stylesheets/style.css">
+		<script src="../assets/javascripts/vendor/modernizr-2.8.3.min.js"></script>
         
     </head>
     <body>
@@ -28,7 +27,7 @@
 	    <div class="site-container">
 		    <header class="site-header">
 			    <div class="site-header--masthead">
-				    <img src="assets/images/header.jpg" />
+				    <img src="../assets/images/header.jpg" />
 			    	<!-- Header Text -->
 				    <h1>
 					    <span class="site-header--masthead-line1">Real Life, Love and Money with</span>
@@ -45,21 +44,22 @@
 			    <!-- Page Navigation -->
 			    <nav role="navigation" class="content--navigation">
 				    <ul>
-					    <li class="active active--step1"><a href="/" data-step="1">Baby Step 1 <i class="nav-icon nav-icon--step1"></i></a></li>
-					    <li><a href="/step/2.html" data-step="2">Baby Step 2 <i class="nav-icon nav-icon--step2"></i></a></li>
-					    <li><a href="/step/3.html" data-step="3">Baby Step 3 <i class="nav-icon nav-icon--step3"></i></a></li>
-					    <li><a href="/step/4.html" data-step="4">Baby Step 4 <i class="nav-icon nav-icon--step4"></i></a></li>
-					    <li><a href="/step/5.html" data-step="5">Baby Step 5 <i class="nav-icon nav-icon--step5"></i></a></li>
-					    <li><a href="/step/6.html" data-step="6">Baby Step 6 <i class="nav-icon nav-icon--step6"></i></a></li>
-					    <li><a href="/step/7.html" data-step="7">Baby Step 7 <i class="nav-icon nav-icon--step7"></i></a></li>
+					    <li><a href="/" data-step="1">Baby Step 1 <i class="nav-icon nav-icon--step1"></i></a></li>
+					    <li><a href="2.html" data-step="2">Baby Step 2 <i class="nav-icon nav-icon--step2"></i></a></li>
+					    <li class="active active--step3"><a href="3.html" data-step="3">Baby Step 3 <i class="nav-icon nav-icon--step3"></i></a></li>
+					    <li><a href="4.html" data-step="4">Baby Step 4 <i class="nav-icon nav-icon--step4"></i></a></li>
+					    <li><a href="5.html" data-step="5">Baby Step 5 <i class="nav-icon nav-icon--step5"></i></a></li>
+					    <li><a href="6.html" data-step="6">Baby Step 6 <i class="nav-icon nav-icon--step6"></i></a></li>
+					    <li><a href="7.html" data-step="7">Baby Step 7 <i class="nav-icon nav-icon--step7"></i></a></li>
 				    </ul>
 			    </nav>
 			    <!-- Main Content -->
 			    <main role="main" class="content--main">
-				    <section id="step1" data-section="1" class="active content--main-step">
+				   				    
+				    <section id="step1" data-section="1" class="hidden content--main-step">
 					    <div class="step-heading">
 						    <figure class="step-heading--icon">
-						    	<img src="assets/images/icons/individual/icons_large_bs1_blue.png" alt="Baby Step 1 - $1,000 Emergency Fund" />
+						    	<img src="../assets/images/icons/individual/icons_large_bs1_blue.png" alt="Baby Step 1 - $1,000 Emergency Fund" />
 						    </figure>
 						    <div class="step-heading--text">
 							    <h2>Baby Step 1</h2>
@@ -75,7 +75,7 @@
 				    <section id="step2" data-section="2" class="hidden content--main-step">
 					    <div class="step-heading">
 						    <figure class="step-heading--icon">
-						    	<img src="assets/images/icons/individual/icons_large_bs2_blue.png" alt="Baby Step 2 - Pay off all debt using the Debt Snowball" />
+						    	<img src="../assets/images/icons/individual/icons_large_bs2_blue.png" alt="Baby Step 2 - Pay off all debt using the Debt Snowball" />
 						    </figure>
 						    <div class="step-heading--text">
 							    <h2>Baby Step 2</h2>
@@ -88,10 +88,10 @@
 					    </div>
 				    </section>
 				    
-				    <section id="step3" data-section="3" class="hidden content--main-step">
+				    <section id="step3" data-section="3" class="active content--main-step">
 					    <div class="step-heading">
 						    <figure class="step-heading--icon">
-						    	<img src="assets/images/icons/individual/icons_large_bs3_blue.png" alt="Baby Step 3 - 3 to 6 months of exepenses in savings" />
+						    	<img src="../assets/images/icons/individual/icons_large_bs3_blue.png" alt="Baby Step 3 - 3 to 6 months of exepenses in savings" />
 						    </figure>
 						    <div class="step-heading--text">
 							    <h2>Baby Step 3</h2>
@@ -107,7 +107,7 @@
 					<section id="step4" data-section="4" class="hidden content--main-step">
 					    <div class="step-heading">
 						    <figure class="step-heading--icon">
-						    	<img src="assets/images/icons/individual/icons_large_bs4_blue.png" alt="Baby Step 4 - Invest 15% of household income for retirement" />
+						    	<img src="../assets/images/icons/individual/icons_large_bs4_blue.png" alt="Baby Step 4 - Invest 15% of household income for retirement" />
 						    </figure>
 						    <div class="step-heading--text">
 							    <h2>Baby Step 4</h2>
@@ -123,7 +123,7 @@
 				    <section id="step5" data-section="5" class="hidden content--main-step">
 					    <div class="step-heading">
 						    <figure class="step-heading--icon">
-						    	<img src="assets/images/icons/individual/icons_large_bs5_blue.png" alt="Baby Step 5 - College funding for children" />
+						    	<img src="../assets/images/icons/individual/icons_large_bs5_blue.png" alt="Baby Step 5 - College funding for children" />
 						    </figure>
 						    <div class="step-heading--text">
 							    <h2>Baby Step 5</h2>
@@ -139,7 +139,7 @@
 				    <section id="step6" data-section="6" class="hidden content--main-step">
 					    <div class="step-heading">
 						    <figure class="step-heading--icon">
-						    	<img src="assets/images/icons/individual/icons_large_bs6_blue.png" alt="Baby Step 6 - Pay off your house early" />
+						    	<img src="../assets/images/icons/individual/icons_large_bs6_blue.png" alt="Baby Step 6 - Pay off your house early" />
 						    </figure>
 						    <div class="step-heading--text">
 							    <h2>Baby Step 6</h2>
@@ -155,7 +155,7 @@
 				    <section id="step7" data-section="7" class="hidden content--main-step">
 					    <div class="step-heading">
 						    <figure class="step-heading--icon">
-						    	<img src="assets/images/icons/individual/icons_large_bs7_blue.png" alt="Baby Step 7 - Build wealth and give!" />
+						    	<img src="../assets/images/icons/individual/icons_large_bs7_blue.png" alt="Baby Step 7 - Build wealth and give!" />
 						    </figure>
 						    <div class="step-heading--text">
 							    <h2>Baby Step 7</h2>
@@ -167,7 +167,7 @@
 						    <p>Golda Meir says, "You can’t shake hands with a clenched fist." Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.</p>
 					    </div>
 				    </section>
-				    
+		    
 			    </main>
 		    </div>
 	    </div>
@@ -175,7 +175,7 @@
         <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 		<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous" type="text/javascript"></script>
 	    <script src="//cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js" type="text/javascript"></script>
-	    <script src="/assets/javascripts/app.min.js"></script>
+	    <script src="../assets/javascripts/app.js"></script>
         
     </body>
 </html>

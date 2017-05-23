@@ -1,0 +1,236 @@
+/* Site Layout */
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: none;
+}
+body {
+	background: #bbbfc2;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.no-js-message {
+	text-align: center;
+	padding: 20px;
+	width: 100%;
+	background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+	p {
+		font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+		color: #a94442;
+	}
+}
+.site-container {
+	background: #fff;
+	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+	margin: 0 auto 100px;
+	width: 980px;
+	.site-header--masthead {
+		position: relative;
+		h1 {
+			color: #fff;
+			font-family: "Open Sans", Helvetica, sans-serif;
+			position: absolute;
+			top: 50px;
+			right: 70px;
+			text-align: right;
+			margin-top: 0;
+			.site-header--masthead-line1 {
+				display: block;
+				font-weight: 300;
+				font-size: 32px;
+				line-height: 32px;
+				margin-bottom: 15px;
+			}
+			.site-header--masthead-line2 {
+				display: block;
+				font-weight: 700;
+				font-size: 50px;
+				line-height: 48px;
+				text-transform: uppercase;
+				span {
+					display: block;
+				}
+			}
+		}
+	}
+}
+#content {
+	display: block;
+	display: flex; //Current browsers (IE11, Chrome, etc)
+    display: -ms-flexbox; //IE10 implementation
+    overflow: hidden;
+	padding-top: 60px;
+	position: relative;
+	
+    /**
+	 * Content Main Styling
+	**/
+	.content--main {
+		float: left;
+		height: 500px;
+		order: 2;
+		width: 66.666%;
+		margin-left: 33.333%;
+		margin-left: calc(33.333% + 70px);
+		margin-right: 70px;
+		position: relative;
+	}
+	
+	/**
+	 * Content Navigation Styling
+	**/
+	.content--navigation {
+		background: rgba(235,236,237,1);
+		background: -moz-linear-gradient(left, rgba(235,236,237,1) 0%, rgba(235,236,237,1) 90%, rgba(209,213,214,1) 100%);
+		background: -webkit-gradient(left top, right top, color-stop(0%, rgba(235,236,237,1)), color-stop(90%, rgba(235,236,237,1)), color-stop(100%, rgba(209,213,214,1)));
+		background: -webkit-linear-gradient(left, rgba(235,236,237,1) 0%, rgba(235,236,237,1) 90%, rgba(209,213,214,1) 100%);
+		background: -o-linear-gradient(left, rgba(235,236,237,1) 0%, rgba(235,236,237,1) 90%, rgba(209,213,214,1) 100%);
+		background: -ms-linear-gradient(left, rgba(235,236,237,1) 0%, rgba(235,236,237,1) 90%, rgba(209,213,214,1) 100%);
+		background: linear-gradient(to right, rgba(235,236,237,1) 0%, rgba(235,236,237,1) 90%, rgba(209,213,214,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1 );
+		float: left;
+		height: calc(100% - 60px); //Set our height dynamically to adjust based on the height of the container minus the offest from the top of 60px
+		order: 1;
+		position: absolute;
+		top: 60px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 33.333%;
+		
+		/* Nav UL Styling */
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				border-bottom: 1px solid #ffffff;
+				font-family: "Source Sans Pro", Helvetica, sans-serif;
+				font-size: 18px;
+				line-height: 60px;
+				list-style: none;
+				text-align: right;
+				position: relative;
+				a {
+					color: #9ba0a4;
+					display: block;
+					padding-right: 78px;
+					position: relative;
+					text-decoration: none;
+					-webkit-transition: all .4s ease-in-out;
+					-moz-transition: all .4s ease-in-out;
+					-ms-transition: all .4s ease-in-out;
+					-o-transition: all .4s ease-in-out;
+					transition: all .4s ease-in-out;
+					i {
+						display: inline-block;
+						position: absolute;
+						top: 50%;
+						margin-top: -12.5px;
+						right: 24px;
+						&.nav-icon {
+							width: 30px;
+							height: 25px;
+							background: url('../images/icons/sprites/icons_small.png') 0 0;
+							&.nav-icon--step1 {
+								background-position: 0 0;
+							}
+							&.nav-icon--step2 {
+								background-position: 0 -25px;
+							} 
+							&.nav-icon--step3 {
+								background-position: 0 -50px;
+							}
+							&.nav-icon--step4 {
+								background-position: 0 -75px;
+							}
+							&.nav-icon--step5 {
+								background-position: 0 -100px;
+							}
+							&.nav-icon--step6 {
+								background-position: 0 -125px;
+							}
+							&.nav-icon--step7 {
+								background-position: 0 -150px;
+							}
+						}
+					}
+					&:hover {
+						background: #fff;
+					}
+				}
+				&:first-child {
+					a {
+					}
+				}
+				&.active {
+					a {
+						background: #fff;
+					}
+					&.active--step1 {
+						.nav-icon--step1 {
+							background-position: 0 -175px;
+						}
+					}
+					&.active--step2 {
+						.nav-icon--step2 {
+							background-position: 0 -200px;
+						}
+					}
+					&.active--step3 {
+						.nav-icon--step3 {
+							background-position: 0 -225px;
+						}
+					}
+					&.active--step4 {
+						.nav-icon--step4 {
+							background-position: 0 -250px;
+						}
+					}
+					&.active--step5 {
+						.nav-icon--step5 {
+							background-position: 0 -275px;
+						}
+					}
+					&.active--step6 {
+						.nav-icon--step6 {
+							background-position: 0 -300px;
+						}
+					}
+					&.active--step7 {
+						.nav-icon--step7 {
+							background-position: 0 -325px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// Support for ie 9 / browsers the don't support CSS3
+.no-flexbox {
+	.content--navigation {
+		height: 500px;
+		position: relative!important;
+		top: 0!important;
+	}
+	.content--main { 
+		margin-left: 70px!important;
+		height: 400px!important;
+		width: calc(66.666% - 140px)!important;
+	}
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   /* IE10-specific styles go here */  
+   .content--navigation {
+		height: 500px;
+		position: relative!important;
+		top: 0!important;
+	}
+	.content--main { 
+		margin-left: 70px!important;
+		height: 400px!important;
+		width: calc(66.666% - 140px)!important;
+	}
+}

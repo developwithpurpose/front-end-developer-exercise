@@ -1,0 +1,12 @@
+/* Animations */
+
+.content--main-step.fade-out-up {
+	/* This timing applies on the way IN */
+	transition-timing-function: ease-in;
+	
+	/* A litttttle slower on the way in */
+	transition: 1s;
+
+	top: -500px;
+    opacity: 0;  
+}
