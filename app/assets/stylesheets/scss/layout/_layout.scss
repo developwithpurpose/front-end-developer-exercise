@@ -1,0 +1,14 @@
+body {
+	background-color: $color-gray;
+}
+
+.site-container {
+	margin: 0 auto;
+	width: 980px;
+}
+
+.site-header {
+	background: url('../images/header.jpg') 980px 276px no-repeat;
+	height: 276px;
+	width: 100%;
+}
