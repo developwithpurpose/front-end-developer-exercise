@@ -544,6 +544,10 @@ body {
     color: #5c6366;
     font-size: 18px;
     font-weight: 100; }
+  .content__slider .content__friends {
+    margin-top: 40px; }
+    .content__slider .content__friends a {
+      color: #6fbee7; }
 
 /*
   jQuery magicSlider

@@ -37,7 +37,6 @@
 		var myFriendsOnStep = $.grep(data.friends, function(friend) {
 			return friend.babyStep == step;
 		});
-		console.log(myFriendsOnStep);
 		switch ( true ) {
 
 			case myFriendsOnStep.length >= 4:
@@ -59,7 +58,7 @@
 
 			case myFriendsOnStep.length === 1:
 				var myFriendsOnStep = _.sortBy(myFriendsOnStep, 'lastName');
-				$('#' + id).html(`<a> ${myFriendsOnStep.firstName} ${myFriendsOnStep.lastName}</a> is also on Baby Step ${step}`);
+				$('#' + id).html(`<a>${myFriendsOnStep[0].firstName} ${myFriendsOnStep[0].lastName}</a> is also on Baby Step ${step}`);
 				break;
 
 		}
