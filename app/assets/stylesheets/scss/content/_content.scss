@@ -1,0 +1,100 @@
+/*
+  jQuery magicSlider
+  (based on jQuery Coda-Slider v2.0 - http://www.ndoherty.biz/coda-slider)
+  MIT license.
+*/
+
+.magic-slider {
+	height: 600px;
+	overflow: hidden;
+  padding: 0;
+}
+
+/* Use this to keep the slider content contained in a box
+   even when JavaScript is disabled */
+.magic-slider-no-js .magic-slider {
+  height: 600px;
+  overflow: auto !important;
+  padding: 0 70px;
+}
+
+/* Change the width of the entire slider (without dynamic arrows) */
+.magic-slider,
+.magic-slider .panel {
+  width: 540px;
+}
+
+/* Change margin and width of the slider (with dynamic arrows) */
+.magic-slider-wrapper.arrows .magic-slider,
+.magic-slider-wrapper.arrows .magic-slider .panel {
+  width: 540px;
+}
+
+.magic-slider-wrapper.arrows .magic-slider {
+  margin: 0 10px;
+}
+
+/* Tabbed nav */
+.magic-nav { margin: 0; padding: 0; }
+.magic-nav ul {
+  	clear: both;
+  	display: block;
+  	margin: 0 auto;
+  	overflow: hidden;
+	padding: 0;
+}
+
+.magic-nav ul li {
+	vertical-align: bottom;
+	display: inline-block;
+	margin: 0 1px;
+	padding: 0;
+}
+
+.magic-nav ul li a {
+	-webkit-border-radius:    5px 5px 0 0;
+    -moz-border-radius:       5px 5px 0 0;
+    -o-border-radius:         5px 5px 0 0;
+    -ms-border-radius:        5px 5px 0 0;
+    border-radius:            5px 5px 0 0;
+  background: #999999;
+  color: #fff;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 5px 10px;
+  text-decoration: none
+}
+
+/* Miscellaneous */
+.magic-slider{
+  clear: both;
+  overflow: auto
+}
+
+.magic-slider {
+  float: left;
+  overflow: hidden;
+  position: relative
+}
+
+.magic-slider .panel {
+  display: block;
+  float: left;
+  padding: 0;
+}
+
+.magic-slider .panel-container {
+  position: relative
+}
+.magic-nav-left,
+.magic-nav-right {
+  float: left
+}
+
+.magic-nav-left a,
+.magic-nav-right a {
+  display: block;
+  text-align: center;
+  text-decoration: none
+}
