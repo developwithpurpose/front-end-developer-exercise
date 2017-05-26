@@ -6,7 +6,7 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+    "start": "http-server ./app -c-1 -p 8080"
   },
   "Dependencies": {
     "gulp-autoprefixer": "^4.0.0",
