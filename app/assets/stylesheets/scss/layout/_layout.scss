@@ -2,13 +2,218 @@ body {
 	background-color: $color-gray;
 }
 
-.site-container {
+.wrapper {
 	margin: 0 auto;
+	position: relative;
 	width: 980px;
+
+	&:before {
+		border-bottom-right-radius: 200px 400px;
+		border-bottom-left-radius: 200px 400px;
+	    box-shadow: 0 0 15px rgba(0,0,0,.4);
+		content: "\0020";
+	    display: block;
+		height: 936px;
+	    left: 50%;
+		position: absolute;
+		top: 0;
+		transform: translateX(-50%);
+	    width: 980px;
+		z-index: -1;
+	}
+
 }
 
-.site-header {
-	background: url('../images/header.jpg') 980px 276px no-repeat;
-	height: 276px;
-	width: 100%;
+.header {
+	background: url('../images/header.jpg') center top / 980px 276px no-repeat;
+	height: 176px;
+	margin: 0 auto;
+	padding: 50px 70px;
+	width: 840px;
+
+	.header__heading {
+		color: $color-white;
+		text-align: right;
+	}
+
+	.header__heading--h1 {
+		font-size: 32px;
+		font-weight: 100;
+		margin-bottom: 15px;
+	}
+
+	.header__heading--h2 {
+		font-size: 50px;
+		font-weight: 700;
+		line-height: 48px;
+		text-transform: uppercase;
+	}
+
+}
+
+.content {
+	background-color: $color-white;
+	display: block;
+	height: 600px;
+	margin: 0 auto;
+	padding-top: 60px;
+	width: 980px;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+}
+
+.content__sidebar {
+	background: $color-light-gray;
+	box-shadow: inset -10px 0 30px -5px rgba(0,0,0,.15);
+	float: left;
+	height: 600px;
+	width: 300px;
+
+	.content__nav {
+		text-align: right;
+	}
+
+	.content__unordered-list {
+		margin: 0;
+		padding: 0;
+	}
+
+	.content__unordered-list li {
+		border-bottom: 1px solid $color-white;
+		list-style: none;
+	}
+
+	.content__list-item {
+		color: $color-nav;
+		cursor: pointer;
+		display: block;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 18px;
+		font-weight: normal;
+		line-height: 60px;
+		padding-right: 78px;
+		position: relative;
+		text-decoration: none;
+	}
+
+	.content__list-item:after {
+		background-image: url('../images/icons/sprites/icons_small.png');
+		background-repeat: no-repeat;
+		content: '';
+		height: 25px;
+		padding-right: 24px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 30px;
+	}
+
+	.content__list-item--bs1:after {
+		background-position: 0 0;
+	}
+
+	.content__list-item--bs2:after {
+		background-position: 0 -25px;
+	}
+
+	.content__list-item--bs3:after {
+		background-position: 0 -50px;
+	}
+
+	.content__list-item--bs4:after {
+		background-position: 0 -75px;
+	}
+
+	.content__list-item--bs5:after {
+		background-position: 0 -100px;
+	}
+
+	.content__list-item--bs6:after {
+		background-position: 0 -125px;
+	}
+
+	.content__list-item--bs7:after {
+		background-position: 0 -150px;
+	}
+
+	.content__list-item.current.content__list-item--bs1:after {
+		background-position: 0 -175px;
+	}
+
+	.content__list-item.current.content__list-item--bs2:after {
+		background-position: 0 -200px;
+	}
+
+	.content__list-item.current.content__list-item--bs3:after {
+		background-position: 0 -225px;
+	}
+
+	.content__list-item.current.content__list-item--bs4:after {
+		background-position: 0 -250px;
+	}
+
+	.content__list-item.current.content__list-item--bs5:after {
+		background-position: 0 -275px;
+	}
+
+	.content__list-item.current.content__list-item--bs6:after {
+		background-position: 0 -300px;
+	}
+
+	.content__list-item.current.content__list-item--bs7:after {
+		background-position: 0 -325px;
+	}
+
+	.content__list-item.current {
+		background-color: $color-white;
+		color: $color-nav-hover;
+		font-weight: 600;
+	}
+
+}
+
+.content__slider {
+	float: right;
+	overflow-y: hidden;
+
+	.content__article {
+		height: 600px;
+		padding: 0 70px;
+		width: 540px;
+
+		p {
+			color: $color-text;
+			line-height: 18px;
+		}
+
+	}
+
+	.content__icon {
+		float: left;
+		margin-right: 12px;
+	}
+
+	.content__headline {
+		font-family: 'Source Sans Pro', sans-serif;
+		line-height: 30px;
+	}
+
+	.content__headline--h1 {
+		color: $color-nav-hover;
+		font-size: 30px;
+		font-weight: 600;
+	}
+
+	.content__headline--h2 {
+		color: $color-blue;
+		font-size: 18px;
+		font-weight: 100;
+	}
+
 }
