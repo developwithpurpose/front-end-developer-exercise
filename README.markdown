@@ -70,3 +70,14 @@ You should make an AJAX request for the data from `/app/baby-steps.json`, which 
 * if 4 or more friends, then show "Patricia Allen, Matthew Garcia, and 2 other friends are also in Baby Step 5"
 
 Consult the mockups about where to put this information and how to style it.
+
+
+### Matt's Notes
+Ramsey Solutions Tech Team,
+It is my pleasusre to submit this pull request to you for consideration. With this submission, I tried to achieve each of the requirements within the time allotted (4 hours) while also attempting to showcase my skillset.
+
+While I would usually use a bundler and do a lot more with npm, grunt or gulp, I chose to simply do a few things with gulp and npm due to the small project scope and low time budget.
+
+IE9 contains the only visual and functional deviation. The box shadow elements do not work properly there. I would have submitted a fix for this using an IE9 specific stylesheet with image shadows, but felt that the time limit should be followed.
+
+I did notice several issues with the mockups and annotations where the fonts and sizes were off. I'd love to talk about those if you are curious. :) 
