@@ -1,0 +1,154 @@
+body{
+  background-color: #bbbfc2;
+}
+a:focus, a:hover {
+  text-decoration: none;
+}
+.header_pic{
+  vertical-align: top;
+}
+.shadow_left{
+  text-align: right;
+  width: 15px;
+}
+.shadow_right{
+  text-align: left;
+  width: 15px;
+}
+.no-gutters{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.middle{
+  width: 980px;
+  background-color: white;
+}
+.all_content{
+  width: 1010px;
+  text-align: center;
+}
+.left_nav{
+  width: 300px;
+}
+.main_panel{
+  width: 680px;
+}
+#content{
+  top: 75px;
+  left: 70px;
+  width: 540px;
+}
+.main_text{
+  text-align: left;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+  font-family: Helvetica;
+  margin-bottom: 15px;
+}
+.message_link{
+  color: #6fbee7;
+  cursor: pointer;
+}
+#message{
+  margin-top: 17px;
+}
+.nav_button{
+  background: linear-gradient(to left, #d1d5d6, #ebeced 3%);
+  color: #9ba0a4;
+  height: 60px;
+  cursor: pointer;
+}
+.nav_button:hover{
+  background: linear-gradient(to left, #d1d5d6, #e0e0e0 3%);
+}
+.nav_button_cover{
+  height: 60px;
+  color: #9ba0a4;
+}
+.line_break{
+  height: 1px;
+}
+.nav_top{
+  height: 62px;
+}
+.nav_bottom{
+  background: linear-gradient(to left, #d1d5d6, #ebeced 3%);
+  height: 200px;
+}
+.nav_text{
+  font-size: 18px;
+  position: relative;
+  top: 30%;
+  left: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+.nav_icon{
+  position: relative;
+  top: 30%;
+  left: 55px;
+  width: 30px;
+  height: 25px;
+}
+#step_1{
+  background: url("../images/icons/sprites/icons_small.png");
+  background-position: 0 -175px;
+}
+#step_2{
+  background: url("../images/icons/sprites/icons_small.png");
+  background-position: 0 -25px;
+}
+#step_3{
+  background: url("../images/icons/sprites/icons_small.png");
+  background-position: 0 -50px;
+}
+#step_4{
+  background: url("../images/icons/sprites/icons_small.png");
+  background-position: 0 -75px;
+}
+#step_5{
+  background: url("../images/icons/sprites/icons_small.png");
+  background-position: 0 -100px;
+}
+#step_6{
+  background: url("../images/icons/sprites/icons_small.png");
+  background-position: 0 -125px;
+}
+#step_7{
+  background: url("../images/icons/sprites/icons_small.png");
+  background-position: 0 -150px;
+}
+#nav_1_cover{
+  background: white;
+  color: #36abe1;
+}
+#hdr_icon{
+  height: 64px;
+  width: 77px;
+  background: url("../images/icons/sprites/icons_large.png");
+  background-position: 0 -455px;
+}
+.header_icon{
+  width: 77px;
+}
+.header_text{
+  text-align: left;
+}
+#header_text_main{
+  margin-top: 11px;
+  margin-bottom: 5px;
+  font-size: 30px;
+  line-height: 20px;
+  color: #36abe1;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+#header_text_sub{
+  font-size: 18px;
+  line-height: 20px;
+  color: #5c6366;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  margin-bottom: 20px;
+}

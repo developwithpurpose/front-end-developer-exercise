@@ -1,3 +1,18 @@
+Code by Daniel Eads
+------------
+
+Comments
+---------
+
+* All requirements have been followed.
+* When JS is enabled, the content updates all on the same page. When JS is disabled, the user is sent to different pages when the different steps are selected.
+* Dynamic content does not work without JS but all other functionality is present.
+* The animations used on the page come from jQuery and jQuery UI and were selected because they provide clean and quick transitions.
+* Bootstrap was used to help structure the page but the page is not responsive.
+* The nav bar changing color on mouse over was added to increase feedback to the user.
+* For a production version, files would be minified. Files have not be minified in order to be more readable when being reviewed.
+
+
 Front-end Developer Exercise
 ============================
 
