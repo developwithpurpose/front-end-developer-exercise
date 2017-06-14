@@ -1,0 +1,24 @@
+.Hero {
+  background-image: url('/assets/images/header.jpg');
+  background-size: cover;
+  height: 276px;
+  padding: 50px 70px 0;
+}
+
+.Hero-heading {
+  color: $color--white;
+  float: right;
+  font-family: $font--family__openSans;
+  font-size: 32px;
+  font-weight: $font--weight__light;
+  line-height: 36px;
+  max-width: 60%;
+  text-align: right;
+
+  strong {
+    font-weight: $font--weight__bold;
+    font-size: 50px;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+}

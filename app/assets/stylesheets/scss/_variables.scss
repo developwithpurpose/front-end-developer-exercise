@@ -1,0 +1,20 @@
+// Colors
+$color--white:            #fff;
+$color--blue__light:      #6fbee7;
+$color--blue:             #36abe1;
+$color--blue__dark:       #5c6366;
+$color--grey__bg:         #bbbfc2;
+$color--grey__textLight:  #9ba0a4;
+$color--grey__text:       #65686f;
+$color--grey__sidebar:    #ebeced;
+
+
+// Type
+$font--family__fallback:    -apple-system, BlinkMacSystemFont, "Helvetica", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$font--family__sourceSans:  'Source Sans', $font--family__fallback;
+$font--family__openSans:  'Open Sans', $font--family__fallback;
+
+$font--weight__light:     300;
+$font--weight__regular:   400;
+$font--weight__semibold:  600;
+$font--weight__bold:      700;
