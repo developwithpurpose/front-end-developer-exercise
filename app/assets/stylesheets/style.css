@@ -1,0 +1,151 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  box-sizing: border-box;
+  padding-left: 92px;
+  padding-right: 208px;
+  margin: 0;
+  background-color: #bbbfc2;
+}
+
+a{
+  text-decoration: none;
+  color: #9ba0a4;
+}
+
+.container{
+  height: 954px;
+  padding: 0;
+  background-color: #fff;
+  margin-bottom: 110px;
+}
+
+.main-content{
+  position: relative;
+}
+
+.left-nav{
+  margin-top: 58px;
+  background-color: #ECECEE;
+  width: 300px;
+  height: 616px;
+}
+
+.baby-step{
+  position: relative;
+  font-family: 'Source Sans Pro';
+  font-size: 18px;
+  font-weight: 300;
+  color: #9ba0a4;
+  line-height: 60px;
+  align-items: center;
+  height: 60px;
+  border-bottom: solid 1px white;
+}
+
+.baby-step:hover{
+  background-color: #36abe1;
+  transition-duration: .3s;
+}
+
+
+.step-img{
+  vertical-align: middle;
+  margin-left: 26px;
+}
+
+.step-num{
+  margin-left: 128px;
+  margin-bottom: 3px;
+  letter-spacing: .25px;
+}
+
+.baby-step:hover .step-num{
+  color: white;
+  transition-duration: .3s;
+}
+
+.baby-step:hover .hide{
+  z-index: 100;
+}
+
+.step-contents{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 680px;
+  height: 300px;
+  overflow: hidden;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.step-body{
+  font-family: Helvetica;
+  font-weight: 300;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+}
+
+.step-section{
+  font-family: Helvetica;
+  font-size: 13px;
+  color: #65686f;
+  margin-bottom: 100px;
+
+}
+
+.step-header{
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.step-body{
+  margin-top: -5px;
+}
+
+.step-footer{
+  margin-top: 40px;
+}
+
+.active{
+  background-color: white;
+  color: #36abe1;
+  font-weight: 600;
+}
+
+.active > .hide{
+  z-index: 100;
+}
+
+.active > .show{
+  display: none;
+}
+
+.hide{
+  position: absolute;
+  right: 24px;
+  top: 19px;
+  z-index: -1;
+}
+
+.shadow-left{
+  position: absolute;
+  top: 0px;
+  left: 77px;
+}
+
+.shadow-right{
+  position: absolute;
+  top: 0px;
+  right: 193px;
+}
+
+.friend{
+  color: #6fbee7;
+  font-family: 'Helvetica';
+  font-size: 13px;
+}
