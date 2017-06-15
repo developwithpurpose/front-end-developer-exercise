@@ -10,12 +10,23 @@ body{
   background-color: #bbbfc2;
 }
 
+a{
+  text-decoration: none;
+  color: #9ba0a4;
+}
+
 /*font-family: 'Source Sans Pro', sans-serif;*/
 
 .container{
-  align-items: center;
+  /*align-items: center*/
+  height: 954px;
   padding: 0;
   background-color: #fff;
+  margin-bottom: 110px;
+}
+
+.main-content{
+  position: relative;
 }
 
 .left-nav{
@@ -24,6 +35,7 @@ body{
   /*padding-left: 128px;*/
   background-color: #ECECEE;
   width: 300px;
+  height: 616px;
 }
 
 .baby-step{
@@ -39,10 +51,15 @@ body{
   border-bottom: solid 1px white;
 }
 
+.baby-step:hover{
+  background-color: #36abe1;
+  transition-duration: .3s;
+}
+
+
 .step-img{
   vertical-align: middle;
   margin-left: 26px;
-
 }
 
 .step-num{
@@ -51,3 +68,78 @@ body{
   margin-bottom: 3px;
   letter-spacing: .25px;
 }
+
+.baby-step:hover .step-num{
+  color: white;
+  transition-duration: .3s;
+}
+
+.baby-step:hover .hide{
+  z-index: 100;
+}
+
+.step-contents{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 680px;
+  height: 300px;
+  overflow: hidden;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.step-body{
+  font-family: Helvetica;
+  font-weight: 300;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+  /*letter-spacing: .03px;*/
+}
+
+.step-section{
+  margin-bottom: 100px;
+}
+
+.step-header{
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.step-body{
+  margin-top: -5px;
+}
+
+.active{
+  background-color: white;
+  color: #36abe1;
+  font-weight: 600;
+}
+
+.active > .hide{
+  z-index: 100;
+}
+
+.active > .show{
+  display: none;
+}
+
+.hide{
+  position: absolute;
+  right: 24px;
+  top: 19px;
+  z-index: -1;
+}
+
+/*.shadow-left{
+  position: absolute;
+  top: 0px;
+  left: 77px;
+}
+
+.shadow-right{
+  position: absolute;
+  top: 0px;
+  right: 110px;
+}*/
