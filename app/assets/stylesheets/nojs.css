@@ -84,6 +84,10 @@ h1 {
 	margin-right: 70px;
 	margin-bottom: 0;
 	float: left;
+	left: 20%;
+    top: 40%;
+    transform: translateX(-50%);
+    position: fixed;
 }
 
 li {
@@ -104,13 +108,14 @@ li a {
 }
 
 li.active {
-	background: #fff;
-	padding-left: 20px;
+	background: linear-gradient(to right, #ebeced 90%, #d1d5d6 99%), #ebeced;
+	padding-left: 0px;
 }
 
 li.active a {
-	color: #36abe1;
-	font-weight: 600;
+	color: #9ba0a4;
+	font-weight: 400;
+
 }
 
 ul li:first-child a:after {
@@ -164,26 +169,9 @@ ul li:first-child + li + li + li + li + li + li a:after {
 }
 
 ul li.active:first-child a:after {
-	content: url("../images/icons/individual/icons_small_bs1_blue.png");
+	content: url("../images/icons/individual/icons_small_bs1.png");
 }
-ul li:first-child + li.active a:after {
-	content: url("../images/icons/individual/icons_small_bs2_blue.png");
-}
-ul li:first-child + li + li.active a:after {
-	content: url("../images/icons/individual/icons_small_bs3_blue.png");
-}
-ul li:first-child + li + li + li.active a:after {
-	content: url("../images/icons/individual/icons_small_bs4_blue.png");
-}
-ul li:first-child + li + li + li + li.active a:after {
-	content: url("../images/icons/individual/icons_small_bs5_blue.png");
-}
-ul li:first-child + li + li + li + li + li.active a:after {
-	content: url("../images/icons/individual/icons_small_bs6_blue.png");
-}
-ul li:first-child + li + li + li + li + li + li.active a:after {
-	content: url("../images/icons/individual/icons_small_bs7_blue.png");
-}
+
 ul li:first-child + li + li + li + li + li + li + li {
 	min-height: 150px;
 }
@@ -232,10 +220,6 @@ ul li:first-child + li + li + li + li + li + li + li {
 }
 
 .baby-step-panel {
-	display: none;
-}
-
-.baby-step-panel.active {
 	display: block;
 	float: right;
 	width: 540px;
