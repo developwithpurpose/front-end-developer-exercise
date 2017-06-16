@@ -1,0 +1,9 @@
+.BabySteps {
+  background-color: $color--white;
+  padding: 60px 0 0;
+  position: relative;
+  min-height: 620px;
+}
+
+@import '_BabySteps-sidebar';
+@import '_BabySteps-content';

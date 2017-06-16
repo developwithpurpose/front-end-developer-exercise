@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color--grey__bg;
+  padding-bottom: 50px;
+}
+
+.Main {
+  margin: 0 auto;
+  max-width: 980px;
+  position: relative;
+}
+
+.cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.Shadow-left,
+.Shadow-right,
+.Shadow-bottom {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.Shadow-left,
+.Shadow-right {
+  width: 10px;
+  height: 100%;
+}
+
+.Shadow-left {
+  background-image: url('/assets/images/shadow_left.jpg');
+  top: 0;
+  left: -10px;
+}
+.Shadow-right {
+  background-image: url('/assets/images/shadow_right.jpg');
+  top: 0;
+  right: -10px;
+}
+.Shadow-bottom {
+  background-image: url('/assets/images/shadow_bottom.jpg');
+  bottom: -30px;
+  height: 30px;
+  width: 100%;
+}

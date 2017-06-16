@@ -1,0 +1,82 @@
+.BabySteps-content {
+  background: $color--white;
+  bottom: 0;
+  left: 300px;
+  padding: 0 70px 60px;
+  position: absolute;
+  top: 60px;
+  width: 680px;
+}
+
+.BabySteps-animate {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity .5s ease-in-out;
+}
+
+.BabySteps-content:after {
+  background-color: $color--grey__sidebar;
+  background-image: linear-gradient($color--grey__sidebar, darken($color--grey__sidebar, 5%));
+  bottom: 0;
+  box-shadow: inset -10px 0 20px -10px rgba(0,0,0,.2);
+  content: "";
+  display: block;
+  left: -300px;
+  position: absolute;
+  top: 0;
+  vertical-align: top;
+  width: 300px;
+  z-index: 1;
+
+}
+
+.BabySteps-header {
+  display: table;
+  margin-bottom: 24px;
+}
+
+.BabySteps-icon,
+.BabySteps-headings {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.BabySteps-icon {
+  margin-right: 16px;
+}
+
+.BabySteps-title,
+.BabySteps-subtitle {
+  font-family: $font--family__sourceSans;
+}
+
+.BabySteps-title {
+  font-size: 30px;
+  font-weight: $font--weight__semibold;
+  line-height: 20px;
+  margin-bottom: 8px;
+  color: $color--blue;
+}
+
+.BabySteps-subtitle {
+  font-size: 18px;
+  font-weight: $font--weight__light;
+  line-height: 20px;
+  color: $color--blue__dark;
+}
+
+.BabySteps-copy {
+  z-index: 999;
+}
+
+.BabySteps-copy p {
+  margin-bottom: 24px;
+
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+}
+
+.BabySteps-friends a {
+  color: $color--blue__light;
+}

@@ -1,0 +1,15 @@
+body {
+  color: $color--grey__text;
+  font-family: $font--family__fallback;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+a {
+  color: $color--blue__light;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
