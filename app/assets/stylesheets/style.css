@@ -1,0 +1,214 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Open+Sans:400,300,700);
+
+body {
+  background-color: #bbbfc2;
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding-bottom: 50px;
+}
+
+h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  color: #36abe1;
+  line-height: 20px;
+  font-size: 30px;
+}
+
+h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #5c6366;
+  line-height: 20px;
+  font-size: 18px;
+}
+
+#wrapper {
+  width: 980px;
+  margin: 0 auto;
+  background-color: #fff;
+  -moz-box-shadow: 0px 3px 8px rgb(100,100,100);
+  -webkit-box-shadow: 0px 3px 8px rgb(100,100,100);
+  box-shadow: 0px 3px 8px rgb(100,100,100);
+}
+
+#column-wrapper {
+  margin-top: 60px;
+  overflow: hidden;
+}
+
+#left-column {
+    background: #ebeced; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ebeced, #d1d5d6); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ebeced, #d1d5d6); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ebeced, #d1d5d6); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ebeced, #d1d5d6); /* Standard syntax */
+    width: 300px;
+    float: left;
+    min-height: 650px;
+}
+
+#right-column {
+  float: left; 
+  width: 680px;
+}
+
+.baby-steps ul {
+  list-style: none;
+  padding: 0;
+}
+
+.baby-steps ul li {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 60px;
+  border-bottom: 1px solid #fff;
+  font-size: 18px;
+  color: #9ba0a4;
+}
+
+.baby-steps ul li a {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  color: #9ba0a4;
+  padding-left: 130px;
+  display: block;
+}
+
+.baby-steps ul li a:focus {
+    color: #36abe1 !important;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.baby-steps ul li.step1 a:focus {
+  background: url(/assets/images/icons/individual/icons_small_bs1_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step2 a:focus {
+  background: url(/assets/images/icons/individual/icons_small_bs2_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step3 a:focus {
+  background: url(/assets/images/icons/individual/icons_small_bs3_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step4 a:focus {
+  background: url(/assets/images/icons/individual/icons_small_bs4_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step5 a:focus {
+  background: url(/assets/images/icons/individual/icons_small_bs5_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step6 a:focus {
+  background: url(/assets/images/icons/individual/icons_small_bs6_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step7 a:focus {
+  background: url(/assets/images/icons/individual/icons_small_bs7_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li:hover {
+  background-color: #fff !important;
+  color: #36abe1;
+  font-weight: 600;
+}
+
+li.step1 {
+  border-top: 1px solid #ebeced;
+}
+
+li.step1.active, li.step2.active, li.step3.active, li.step4.active, li.step5.active, li.step6.active, li.step7.active {
+  background-color: #fff !important;
+}
+
+.baby-steps ul li a:hover {
+  color: #36abe1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.baby-steps ul li.step1 {
+    background: url(/assets/images/icons/individual/icons_small_bs1.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step1:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs1_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step2 {
+  background: url(/assets/images/icons/individual/icons_small_bs2.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step2:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs2_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step3 {
+  background: url(/assets/images/icons/individual/icons_small_bs3.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step3:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs3_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step4 {
+  background: url(/assets/images/icons/individual/icons_small_bs4.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step4:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs4_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step5 {
+  background: url(/assets/images/icons/individual/icons_small_bs5.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step5:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs5_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step6 {
+  background: url(/assets/images/icons/individual/icons_small_bs6.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step6:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs6_blue.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step7 {
+  background: url(/assets/images/icons/individual/icons_small_bs7.png) no-repeat 245px 17px;
+}
+
+.baby-steps ul li.step7:hover {
+  background: url(/assets/images/icons/individual/icons_small_bs7_blue.png) no-repeat 245px 17px;
+}
+
+.tab-content {
+  padding: 0px 70px;
+}
+
+.babies-step-header, .step-header-image {
+  float: left;
+}
+
+.step-header-image {
+  position: relative;
+  top: 10px;
+}
+
+.babies-step-header {
+  padding-left: 15px;
+}
+.text {
+  clear: both;
+  padding-top: 14px;
+}
+.text p {
+  font-family: Helvetica;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+  margin: 0;
+}
