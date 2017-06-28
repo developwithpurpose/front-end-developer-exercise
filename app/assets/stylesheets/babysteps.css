@@ -38,8 +38,8 @@ header h2 {
 header h1 {
     font-size: 48px;
     line-height: 48px;
-    font-weight: bold;
-    margin-top: 15px;
+    font-weight: 800;
+    margin-top: 10px;
     text-transform: uppercase;
 }
 
