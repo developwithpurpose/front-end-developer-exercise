@@ -89,7 +89,6 @@ a {
 	min-height:1200px;
 	-webkit-box-shadow: 0 12px #000;
     box-shadow: 0 0 12px #000;
-    box-shadow-radius: 150px;
 }
 .content {
 	margin-top: 60px;
