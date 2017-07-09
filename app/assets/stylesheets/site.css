@@ -1,0 +1,147 @@
+/* site.css */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+html{
+	
+}
+body {
+	background-color: #bbbfc2;
+	margin: 0 !important;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+a {
+	text-decoration:inherit;
+	color:inherit;
+}
+.baby-step{
+	margin-bottom:30px;
+}
+.baby-step-body{
+	font-family: 'Helvetica', sans-serif;
+	font-size: 13px;
+	color:#65686f;
+	line-height:18px;
+}
+#baby-step-content{
+	display: inline-block;
+	margin: 0px 70px 0px 370px;
+}
+.baby-step-desc{
+	line-height:20px;
+	font-size:18px;
+	font-weight:200;
+	color:#5c6366;
+}
+.baby-step-header{
+	position:relative;
+	margin-bottom:24px;
+}
+.baby-step-header img{
+	position:relative;
+	vertical-align:middle;
+	display:inline;
+	margin-right: 15px;
+}
+#baby-step-nav{
+	display:inline-block;
+	position:absolute;
+	top:0;
+	text-align:right;
+	min-height:750px;
+	background-color: #ececec;
+	background: -webkit-linear-gradient(left, #ebeced 96%, #d1d5d6);
+    background: linear-gradient(to right, #ebeced 96%, #d1d5d6);
+}
+#baby-step-nav div{
+	width:252px;
+	padding: 0px 24px;
+	font-size: 18px;
+	color: #9ba0a4;
+	line-height: 60px;
+	border-bottom: 1px solid white;
+}
+#baby-step-nav div img{
+	margin-left:20px;
+	vertical-align:middle;
+}
+#baby-step-nav div.selected{
+	color: #36abe1;
+	background-color:white;
+}
+.baby-step-number{
+	font-weight: bold;
+	margin-bottom:10px;
+	color:#36abe1;
+	line-height: 20px;
+	font-size: 30px;
+}
+.baby-step-synopsis{
+	margin-bottom:20px;
+}
+.baby-step-title{
+	display:inline-block;
+	vertical-align:middle;
+}
+#container {
+	background-color: white;
+	margin: 0px 80px 30px 60px;
+	position:relative;
+	min-height:1200px;
+	-webkit-box-shadow: 0 12px #000;
+    box-shadow: 0 0 12px #000;
+}
+.content {
+	margin-top: 60px;
+	position:relative;
+}
+#dynamic-content{
+	font-family: 'Helvetica';
+	font-size: 13px;
+	color: #65686f;
+}
+#dynamic-content a{
+	color: #6fbee7;
+}
+.fade{
+    opacity:1;
+    -webkit-animation: fadeIn .5s;
+    -moz-animation: fadeIn .5s;
+    -o-animation: fadeIn .5s;
+    animation: fadeIn .5s;
+}
+.header-img {
+	width: 100%;
+}
+.hidden{
+	display:none;
+}
+.selected{
+	color: #36abe1;
+}
+
+@-moz-keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}

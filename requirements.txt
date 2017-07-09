@@ -1,0 +1,59 @@
+// REQUIREMENTS: Build a web page that will provide information about the 7 Baby Steps
+// fork the repository and submit solution as a pull request
+// Submission should look like the mockup
+// animation when navigation between baby steps (free to come up with what this is)
+// final deliverable should be treated as if it were production code
+// instead of code comments, create a README in the ./app/ directory. include anything that will help evaluate your work
+// if you are using a preprocessor, etc., include the source code as well as the compiled output
+
+// SUCCESS
+// markup should be semantic and accessible
+// presentable in all modern browsers as well as IE 9+ (though not necessarily identical across the board)
+// do NOT create a mobile or responsive design
+// the page should be useable without javascript, though not necessarily functionally identical (i.e. Dynamic Content user story)
+//   document any intentional deviations
+// do NOT use a SPA framework, though you can use any other libraries that you need.
+
+// RESOURCES
+// mockup of finished product in ./resources/mockup.jpg
+// annotated mockup ./resources/annotated-mockup.jpg
+// transition example ./resources/transition-example.gif
+// all the copy can be found ./resources/body-copy.txt
+// all images ./app/assets/images
+
+// SERVER
+// uses basic web server
+// need to install Node.js
+// after cloning the source repo, run the following commands to start server (port 8080 by default)
+//   npm install
+//   npm start
+
+// DYNAMIC CONTENT
+/* Show a message to the user based on where their friends are in the baby steps
+You should make an AJAX request for the data from /app/baby-steps.json, which includes a 
+list of friend objects. Each object contains names and their baby step. Based on the data 
+returned, you will need to show the following information to the user, sorted by last name 
+ascending. */
+
+switch(friends) {
+    case 0:
+        // don't show any message
+        break;
+    case 1:
+        // show "Paul Taylor is also in Baby Step 2"
+        break;
+    case 2:
+        // show "Thomas Harris and Sharon Thomas are also in Baby Step 3"
+        break;
+    case 3:
+        // show "Deborah Lee, Shirley Perez, and 1 other friend are also in Baby Step 4"
+        break;
+    case 4:
+        // show "Patricia Allen, Matthew Garcia, and 2 other friends are also in Baby Step 5"
+        break;
+    default:
+        code block
+}
+
+
+
