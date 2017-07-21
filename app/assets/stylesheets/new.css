@@ -1,0 +1,82 @@
+.content-text-area h2 {
+	font-family: "Source Sans Pro";
+	margin-top: 35px;
+	max-width: 750px;
+    margin-left: 70px;
+	padding-left: ;
+    margin-right: ;
+	color: #36abe1;
+	line-height: 20px;
+	font-weight: 600;
+}
+
+.content-text-area h6 {
+	color: #5c6366;
+	font-weight: lighter;
+	margin-left: 70px;
+	
+}
+
+.content-text-area p {
+	font-family: "Helvetica Reg Semibold";
+	font-size: 13px;
+	line-height: 18px;
+	color: #65686f;
+	margin-left: 70px;
+	margin-right: 70px;
+}
+
+
+
+.content-section .nav-pills  {
+	background-color: #fff;
+	padding-top: 60px;
+	border-image: url("assets/images/shadow_right.jpg") 1px stretch;
+	margin-bottom: 100px;
+	
+}
+
+
+
+	
+
+
+.content-section .nav-pills > li > a{
+	font-family: "Source Sans Pro";
+	color:#9ba0a4;
+	font-weight:600;
+	line-height: 60px;
+	font-size: 18px;
+	background-color: #ebeced;
+	border-bottom: 1px solid white;
+	border-image: url("assets/images/shadow_right.jpg");
+	text-align: right;
+		
+		
+}
+
+.content-section .nav-pills > li.active > a,
+.nav-pills > li.active >
+.nav-pills > li.active > a:focus {
+   font-family: "Source Sans Pro";
+	font-weight: 600;
+  color: #36abe1;
+  background-color: #fff;
+	line-height: 60px;
+	font-size: 18px;
+	border-right:1px transparent;
+}
+
+.linear-gradient {
+	background: linear-gradient(#ebeced-#d1d5d6);
+	width:100px;
+	height: 100px;
+}
+
+.side-nav img{
+	width:30px;
+	height: 30px;
+	vertical-align:;
+	margin-left: 20px;
+}
+
