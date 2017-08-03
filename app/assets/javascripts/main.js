@@ -27,7 +27,6 @@ $(function() {
 		for (var i = 0;i < total; i++)  {
 			if(i < 2){
 				var pronoun = (total === 1) ?  " is " :" are ";
-				//var commaAnd = (total === 2) ?  " and " :", ";
 				var commaAnd = "";
 				if (total === 2){
 					commaAnd = " and ";				
