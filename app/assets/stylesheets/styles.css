@@ -1,0 +1,180 @@
+body {
+    background-color: #bbbfc2;
+}
+
+.everything{
+    margin: 0px auto;
+    width: 980px;
+     box-shadow: 0px 0px 15px #888888;
+}
+
+.header {
+    width: 980px;
+    height: 276px;
+}
+
+.content {
+    background-color: #fff;
+    width: 980px;
+    height: 724px;
+    padding-top: 60px;
+}
+
+.left {
+    width: 276px;
+    height: 724px;
+    background-color: #fff;
+    float: left;
+    background-image: url(../images/shadow_left_nav.jpg), linear-gradient(to right, #ebeced, #d1d5d6);
+    background-position: right;
+}
+
+.right {
+    width: 540px;
+    height: 724px;
+    padding: 0 70px 0 70px;
+    background-color: #fff;
+    float: right;
+    overflow: auto;
+    border: none;
+}
+
+p {
+    margin: 0 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #65686f;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+ul {
+    list-style: none;
+    padding: 0 0 0 0;
+    margin: 0 0;
+}
+
+.babySteps li {
+    color: #9ba0a4;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 60px;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-bottom-color: #fff;
+    text-align: right;
+    padding:0 24px 0 0;
+}
+
+.babySteps li a{
+    text-decoration: none;
+}   
+
+.babySteps li a:visited{
+    text-decoration: none;
+    color: #9ba0a4;
+}
+
+.sprites {
+    position: relative;
+    background: url(../images/icons/sprites/icons_small.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 25px;
+    width: 30px;
+    margin-left: 24px;
+    top: 7px;
+}
+
+#moneySprite {
+    background-position: 0 0;
+}
+
+#bubblesSprite {
+    background-position: 0 -25px;
+}
+
+#pigSprite {
+    background-position: 0 -50px;
+}
+
+#graphSprite {
+    background-position: 0 -75px;
+}
+
+#bookSprite {
+    background-position: 0 -100px;
+}
+
+#homeSprite {
+    background-position: 0 -125px;
+}
+
+#handSprite {
+    background-position: 0 -150px;
+}
+
+.friendStatus {
+    padding-top: 40px;
+    font-size: 13px;
+    color: #65686f;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.babySteps li.active{
+    background-color: #fff;
+}
+
+.babySteps li.active a{
+    color: #36abe1;
+}
+
+.active a:active {
+    text-decoration: none;
+    color: #36abe1;
+}
+
+.active #moneySprite {
+    background-position-y: -175px;
+}
+
+.active #bubblesSprite {
+    background-position: 0 -200px;
+}
+
+.active #pigSprite {
+    background-position: 0 -225px;
+}
+
+.active #graphSprite {
+    background-position: 0 -250px;
+}
+
+.active #bookSprite {
+    background-position: 0 -275px;
+}
+
+.active #homeSprite {
+    background-position: 0 -300px;
+}
+
+.active #handSprite {
+    background-position: 0 -325px;
+}
+
+.ui-widget * { 
+    outline: none;
+}
+
+.right img {
+    padding-bottom: 24px;
+}
+
+#highlightFriends {
+    color: #36abe1;
+}
+
+a:-webkit-any-link {
+    color: #9ba0a4;
+    cursor: auto;
+}
