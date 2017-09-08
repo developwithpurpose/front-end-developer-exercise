@@ -18,26 +18,19 @@
    * @return {[string]}
    */
   var renderFriends = function(currentFriends, currentStep){
-    var html = '';
     switch (currentFriends.length) {
       case 0:
-        html = '';
-        break;
+        return '';
       case 1:
-        html =  generateFriendLink(currentFriends[0]) +" is also in Baby Step " + currentStep;
-        break;
+        return generateFriendLink(currentFriends[0]) +" is also in Baby Step " + currentStep;
       case 2:
-        html =  generateFriendLink(currentFriends[0]) + " and " + generateFriendLink(currentFriends[1]) +" are also in Baby Step " + currentStep;
-        break;
+        return generateFriendLink(currentFriends[0]) + " and " + generateFriendLink(currentFriends[1]) +" are also in Baby Step " + currentStep;
       case 3:
-        html =  generateFriendLink(currentFriends[0]) + ", "+ generateFriendLink(currentFriends[1]) +", and 1 other friend are also in Baby Step " + currentStep;
-        break;
+        return generateFriendLink(currentFriends[0]) + ", "+ generateFriendLink(currentFriends[1]) +", and 1 other friend are also in Baby Step " + currentStep;
       default:
-        html = generateFriendLink(currentFriends[0]) + ", "+  generateFriendLink(currentFriends[1]) +", and 2 other friends are also in Baby Step " + currentStep;
-        break;
+        return generateFriendLink(currentFriends[0]) + ", "+  generateFriendLink(currentFriends[1]) +", and 2 other friends are also in Baby Step " + currentStep;
     }
 
-    return html;
   }
 
   /**
@@ -93,8 +86,9 @@
    */
   var moveStep = function (nextStep){
     // set height based current node position in parent
-    $('.step-list').css('top', '-'+ getCurrentStepNode(nextStep).child.position().top+'px');
+    $('.step-list').css('top', '-' + getCurrentStepNode(nextStep).child.position().top + 'px');
   }
+
   /**
    * moveNav Moves the highlight to the selected step
    * @param  {[int]}
