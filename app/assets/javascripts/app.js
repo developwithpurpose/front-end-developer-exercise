@@ -96,7 +96,7 @@
   var moveNav = function(currentStep){
     // current top position
     var position = $( currentStep ).position();
-    $('.hightlight').css({'top' : position.top + 'px'});
+    $('.navigation__list--hightlight').css({'top' : position.top + 'px'});
   }
 
   /**
@@ -122,7 +122,7 @@
     });
     
     // create defualt styles
-    $('.hightlight').css({'display' : 'block'});
+    $('.navigation__list--hightlight').css({'display' : 'block'});
     $('ul li:first-child a').addClass('active');
     getFriends(startStep);
   }
