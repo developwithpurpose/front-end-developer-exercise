@@ -6,9 +6,21 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+    "start": "http-server ./app -d false",
+
+    "dev": "concurrently -k \"npm run start\" \"npm run watch-js\" \"npm run watch-css\"",
+
+    "build-js": "uglifyjs ./app/assets/javascripts/app.js -m -o ./app/assets/javascripts/app.min.js",
+    "watch-js": "nodemon -e js --ignore app.min.js -x \"npm run build-js\"",
+
+    "build-css": "node-sass --output-style compressed ./app/assets/stylesheets/ -o ./app/assets/stylesheets/",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "concurrently": "3.5.0",
+    "http-server": "^0.8.0",
+    "node-sass": "4.5.3",
+    "nodemon": "1.12.0",
+    "uglify-js": "3.0.28"
   }
 }
