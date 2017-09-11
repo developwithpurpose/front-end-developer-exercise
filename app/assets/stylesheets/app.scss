@@ -1,0 +1,217 @@
+html,body,* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+body {
+    width: 980px;
+    margin: 0 auto;
+    background-color: #bbbfc2;
+}
+
+header.site-header{
+    width: 100%;
+    height: 276px;
+    padding: 50px 70px;
+    background: url('/assets/images/header.jpg');
+    font-family: "Open Sans";
+    font-size: 32px;
+    color: #fff;
+    font-weight: 100;
+    text-align: right;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        background: url('/assets/images/shadow_left.jpg');
+        width: 15px;
+        height: 724px;
+        left: -15px;
+        top: 0;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background: url('/assets/images/shadow_right.jpg');
+        width: 15px;
+        height: 724px;
+        right: -15px;
+        top: 0;
+    }
+
+    .line1 {
+        margin-bottom: 15px;
+    }
+
+    .large {
+        font-size: 50px;
+        line-height: 48px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+main {
+    background-color: #FFF;
+    padding: 60px 0 0;
+    position: relative;
+
+    &:after {
+        content: "";
+        display: block;
+        background: url('/assets/images/shadow_bottom.jpg') no-repeat #bbbfc2;
+        width: 980px;
+        height: 100px;
+    }
+
+    input {
+        display: none;
+
+        @for $i from 0 through 6 {
+            &.bs#{$i + 1}:checked ~ section article {
+                top: 0px - ($i * 330px);
+            }
+
+            &.bs#{$i + 1}:checked ~ nav:before {
+               top: 0px + ($i * 61px);
+            }
+
+            &.bs#{$i + 1}:checked ~ nav .nav-item.bs#{$i + 1} {
+                font-weight: 600;
+                color: #36abe1;
+
+                &:after {
+                    background: url(/assets/images/icons/sprites/icons_small.png) 0 #{175px - $i*25px};
+                }
+            }
+
+        }
+    }
+
+    nav {
+        width: 300px;
+        background: linear-gradient(to right, #ebeced, #ebeced 97%, #d1d5d6);
+        position: relative;
+        padding-bottom: 80px;
+
+        &:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            height: 60px;
+            width: 300px;
+            background: #fff;
+            transition: top 2s;
+        }
+
+        .nav-item {
+            display: block;
+            cursor: pointer;
+            position: relative;
+            padding: 0 82px;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            border-bottom: 1px solid #fff;
+            text-align: right;
+            color: #9ba0a4;
+            line-height: 60px;
+
+            &:after {
+                content: "";
+                width: 30px;
+                height: 25px;
+                display: block;
+                position: absolute;
+                right: 24px;
+                top: 15px;
+            }
+
+
+            @for $i from 0 through 6 {
+                &.bs#{$i + 1}:after {
+                    background: url(/assets/images/icons/sprites/icons_small.png) 0 #{0 - $i*25px};
+                }
+            }
+        }
+    }
+
+    section.baby-steps {
+        position: relative;
+        height: 330px;
+        overflow: hidden;
+        width: 680px;
+        position: absolute;
+        top: 60px;
+        right: 0px;
+
+        article {
+            width: 680px;
+            height: 330px;
+            position: relative;
+            transition: top 2s;
+            padding: 0 70px;
+            font-family: helvetica;
+            color: #65686f;
+
+
+            @for $i from 1 through 7 {
+                &.bs#{$i}-content header:before {
+                    background: url(/assets/images/icons/individual/icons_large_bs#{$i}_blue.png);
+                }
+            }
+
+            header {
+                font-family: 'Source Sans Pro', sans-serif;
+                margin-bottom: 24px;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    position: relative;
+                    width: 77px;
+                    height: 65px;
+                    margin-right: 20px;
+                    float: left;
+                }
+
+                h1 {
+                    font-size: 30px;
+                    color: #36abe1;
+                    font-weight: 600;
+                    line-height: 30px;
+                    padding-top: 8px;
+                }
+
+                h2 {
+                    font-weight: 300;
+                    color: #5c6366;
+                    line-height: 20px;
+                    font-size: 18px;
+                }
+            }
+
+            p {
+                line-height: 18px;
+                margin: 24px 0;
+                font-size: 13px;
+
+                &.friends {
+                    display: none;
+                    margin-top: 36px;
+                }
+            }
+
+            a {
+                color: #6fbee7;
+                text-decoration: none;
+            }
+        }
+    }
+}
