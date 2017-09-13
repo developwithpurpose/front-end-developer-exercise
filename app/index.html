@@ -1,3 +1,176 @@
 <!doctype html>
 <title>Front-End Developer Exercise</title>
-The server is running!
+
+<head>
+
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+<script src="baby-steps.json"></script>
+
+<link href="assets/stylesheets/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div class="header">
+        <div class="headerLine1">Real Life, Love and Money with</div>
+        <div class="headerLine2">America's Most <br />Trusted Guy</div>
+    </div>
+    <div class="tabSection">
+        <div id="tabs">
+            <ul>
+                <li class="tabHeading">
+                    <a href="#a" class="tabImgBS1">
+                    	<div class="tabTitle">Baby Step 1</div>
+                    </a>                    
+                </li>
+                <li class="tabHeading">
+                    <a href="#b" class="tabImgBS2">
+                    	<div class="tabTitle">Baby Step 2</div>
+                    </a>                    
+                </li>
+                <li class="tabHeading">
+                    <a href="#c" class="tabImgBS3">
+                    	<div class="tabTitle">Baby Step 3</div>
+                    </a>                    
+                </li>
+                <li class="tabHeading">
+                    <a href="#d" class="tabImgBS4">
+                    	<div class="tabTitle">Baby Step 4</div>
+                    </a>                    
+                </li>
+                <li class="tabHeading">
+                    <a href="#e" class="tabImgBS5">
+                    	<div class="tabTitle">Baby Step 5</div>
+                    </a>                    
+                </li>
+                <li class="tabHeading">
+                    <a href="#f" class="tabImgBS6">
+                    	<div class="tabTitle">Baby Step 6</div>
+                    </a>                    
+                </li>
+                <li class="tabHeading">
+                    <a href="#g" class="tabImgBS7">
+                    	<div class="tabTitle">Baby Step 7</div>
+                    </a>                    
+                </li>
+            </ul>
+            <div id="a" class="steps">
+                <div class="stepHeader">
+                    <div class="stepImg"><img src="assets/images/icons/individual/icons_large_bs1_blue.png" /></div>
+                    <div class="stepHeadLine1">Baby Step 1</div>
+                    <br />
+                    <div class="stepHeadLine2">$1,000 Emergency Fund</div>
+                </div>
+                <div class="stepBodyLine1">
+                    An emergency fund is for those unexpected events in life that you can't plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It's not a matter of if these events will happen; it's simply a matter of when they will happen.
+                	<br /><br />
+                    This beginning emergency fund will keep life's little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It's time to break the cycle of debt!
+                </div>
+            </div>
+            <div id="b" class="steps">
+                <div class="stepHeader">
+                    <div class="stepImg"><img src="assets/images/icons/individual/icons_large_bs2_blue.png" /></div>
+                    <div class="stepHeadLine1">Baby Step 2</div>
+                    <br />
+                    <div class="stepHeadLine2">Pay off all debt using the Debt Snowball</div>
+                </div>
+                <div class="stepBodyLine1">
+                    List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first.
+                	<br /><br />
+					The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.
+                </div>
+            </div>
+            <div id="c" class="steps">
+                <div class="stepHeader">
+                    <div class="stepImg"><img src="assets/images/icons/individual/icons_large_bs3_blue.png" /></div>
+                    <div class="stepHeadLine1">Baby Step 3</div>
+                    <br />
+                    <div class="stepHeadLine2">3 to 6 months of exepenses in savings</div>
+                </div>
+                <div class="stepBodyLine1">
+                    Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra” money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?” Your answer to that question is how much you should save.
+					<br /><br />
+					Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you’re paying to yourself, a buffer between you and life.
+                </div>
+            </div>
+            <div id="d" class="steps">
+                <div class="stepHeader">
+                    <div class="stepImg"><img src="assets/images/icons/individual/icons_large_bs4_blue.png" /></div>
+                    <div class="stepHeadLine1">Baby Step 4</div>
+                    <br />
+                    <div class="stepHeadLine2">Invest 15% of household income for retirement</div>
+                </div>
+                <div class="stepBodyLine1">
+                    When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.
+					<br /><br />
+Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.
+                </div>
+            </div>            
+            <div id="e" class="steps">
+                <div class="stepHeader">
+                    <div class="stepImg"><img src="assets/images/icons/individual/icons_large_bs5_blue.png" /></div>
+                    <div class="stepHeadLine1">Baby Step 5</div>
+                    <br />
+                    <div class="stepHeadLine2">College funding for children</div>
+                </div>
+                <div class="stepBodyLine1">
+                    By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.
+					<br /><br />
+					In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!
+                </div>
+            </div>           
+            <div id="f" class="steps">
+                <div class="stepHeader">
+                    <div class="stepImg"><img src="assets/images/icons/individual/icons_large_bs6_blue.png" /></div>
+                    <div class="stepHeadLine1">Baby Step 6</div>
+                    <br />
+                    <div class="stepHeadLine2">Pay off your house early</div>
+                </div>
+                <div class="stepBodyLine1">
+                    Now it’s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.
+					<br /><br />
+					As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!
+                </div>
+            </div>          
+            <div id="g" class="steps">
+                <div class="stepHeader">
+                    <div class="stepImg"><img src="assets/images/icons/individual/icons_large_bs7_blue.png" /></div>
+                    <div class="stepHeadLine1">Baby Step 7</div>
+                    <br />
+                    <div class="stepHeadLine2">Build wealth and give!</div>
+                </div>
+                <div class="stepBodyLine1">
+                    It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!
+                    <br /><br />        
+                    Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.
+                </div>
+            </div>
+        </div>
+        <div class="friendStep">        	
+            <ul id="friends"></ul>
+        </div>
+    </div>    
+    <script type="text/javascript">
+        $('#tabs')
+        .tabs()
+        .addClass('ui-tabs-vertical ui-helper-clearfix');
+		
+		$(document).ready(function() {			
+			$("#tabs").tabs(
+				{fx: {opacity: 'toggle'}}
+			);
+		});
+						
+		$(document).ready(function() {
+			$.getScript("baby-steps.json", function() 
+			{				
+				$.each(friends, function()             {
+					$("#friends").append("<li>" + this[friends[0].firstName] + "are on this step</li>");
+				});         
+			});     
+		});
+		
+    </script>
+
+</body>
+</html>
