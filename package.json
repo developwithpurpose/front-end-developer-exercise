@@ -6,9 +6,17 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+    "babel": "babel --presets es2015 -w build/js/main.js -o app/assets/javascripts/main.js",
+    "sass" : "node-sass -w build/scss/style.scss -o app/assets/stylesheets/",
+    "server": "http-server ./app -d false",
+    "start": "npm run babel & npm run sass & npm run server"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
-  }
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "http-server": "^0.8.0",
+    "node-sass": "^4.5.3"
+  },
+  "dependencies": {}
 }
