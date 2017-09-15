@@ -222,28 +222,15 @@ header {
     font-size: 13px;
     line-height: 18px;
 
-    .names {
+    a {
+      text-decoration: none;
       color:$accent;
+      font-weight: bold;
+      transition:.15s linear all;
 
-      a {
-        text-decoration: none;
-        color:$accent;
-        font-weight: bold;
-        transition:.15s linear all;
-
-        &:after {
-          content:',';
-          margin-right:4px;
-        }
-
-        &:last-child:after {
-          display: none;
-        }
-
-        &:hover {
-          color:darken($accent, 10%);
-        }
-      } //
-    }
+      &:hover {
+        color:darken($accent, 10%);
+      }
+    } // a
   } // .friends
 } // .babysteps

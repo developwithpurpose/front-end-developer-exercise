@@ -164,17 +164,10 @@ header {
     color: #65686f;
     font-size: 13px;
     line-height: 18px; }
-    .babysteps .friends .names {
-      color: #36abe1; }
-      .babysteps .friends .names a {
-        text-decoration: none;
-        color: #36abe1;
-        font-weight: bold;
-        transition: .15s linear all; }
-        .babysteps .friends .names a:after {
-          content: ',';
-          margin-right: 4px; }
-        .babysteps .friends .names a:last-child:after {
-          display: none; }
-        .babysteps .friends .names a:hover {
-          color: #1e91c6; }
+    .babysteps .friends a {
+      text-decoration: none;
+      color: #36abe1;
+      font-weight: bold;
+      transition: .15s linear all; }
+      .babysteps .friends a:hover {
+        color: #1e91c6; }
