@@ -58,6 +58,16 @@ header {
   display: block;
   position: relative;
   margin: 60px 0 30px 0; }
+  #content:before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    background: transparent;
+    border-radius: 80px / 150px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25); }
 
 #nav {
   width: 300px;
@@ -114,7 +124,8 @@ header {
   width: 680px;
   height: 560px;
   float: right;
-  position: relative; }
+  position: relative;
+  background: #fff; }
   .babysteps section {
     padding: 0 70px;
     margin: 0 0 40px 0;
