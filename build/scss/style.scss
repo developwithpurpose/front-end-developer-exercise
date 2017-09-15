@@ -1,0 +1,249 @@
+$OpenSans: 'Open Sans', sans-serif;
+$SourceSans: 'Source Sans Pro', sans-serif;
+
+$accent: #36abe1;
+$text: #65686f;
+
+* {
+  box-sizing: border-box;
+}
+
+*, *:after, *:before {
+	box-sizing: inherit;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+html, body {
+  background:#bbbfc2;
+  font-family: $SourceSans;
+  color: $text;
+  margin:0;
+  padding: 0;
+  display: block;
+  font-size:100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 980px;
+  height: auto;
+  display: block;
+  margin:0 auto;
+  background:#fff;
+}
+
+// page header
+header {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  .title {
+    position: absolute;
+    top:50px;
+    right:70px;
+    max-width: 50%;
+    text-align: right;
+
+    h1, h2 {
+      font-family: $OpenSans;
+      color:#fff;
+      margin:0;
+      padding:0;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 50px;
+      line-height: 48px;
+    }
+
+    h2 {
+      font-weight: 300;
+      font-size: 32px;
+      margin-bottom:5px;
+      line-height: 1em;
+    }
+  } // .title
+} // header
+
+
+// main content area
+#content {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin:60px 0 30px 0;
+}
+
+#nav {
+  width: 300px;
+  height: 100%;
+  background:#ebeced;
+  position: absolute;
+  top:0;
+  left:0;
+
+  &:before {
+    content:'';
+    position: absolute;
+    top:0;
+    right:0;
+    width: 10px;
+    height: 100%;
+    z-index:0;
+    background: -webkit-linear-gradient(left, #ebeced 0%,#d7d8da 100%);
+    background: linear-gradient(to right, #ebeced 0%,#d7d8da 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d7d8da',GradientType=1 );
+  }
+
+  a {
+    display: block;
+    height: 60px;
+    width: 100%;
+    border-bottom:1px solid #fff;
+    font-family: $SourceSans;
+    font-size: 18px;
+    color:#9ba0a4;
+    text-align: right;
+    line-height: 60px;
+    text-decoration: none;
+    position: relative;
+    transition:.15s linear all;
+
+    svg {
+      fill: #acb0b3;
+      display: inline-block;
+      float: right;
+      height: 24px;
+      width: 24px;
+      position: relative;
+      top:50%;
+      transform:translateY(-50%);
+      margin:0 25px;
+    }
+
+    &:hover {
+      background:rgba(#fff, .3);
+    }
+
+    &:focus {
+      outline:none;
+    }
+
+    &.selected {
+      background:#fff;
+      color:$accent;
+
+      svg {
+        fill:$accent;
+      }
+    }
+  } // a
+} // #nav
+
+// baby steps
+.babysteps {
+  width: 680px;
+  height:560px;
+  float: right;
+  position: relative;
+
+  section {
+    padding:0 70px;
+    margin:0 0 40px 0;
+    opacity: 0;
+    transition:.25s opacity ease, .5s top ease;
+    position: absolute;
+    top:40px;
+    left:0;
+    z-index: 1;
+
+    &.selected {
+      opacity: 1;
+      top:0;
+      z-index: 100;
+    }
+  }
+
+  header {
+    display: block;
+    width: 100%;
+    margin:0 0 24px 0;
+
+    svg {
+      fill:$accent;
+      float: left;
+      display: inline-block;
+      width: 44px;
+      height: 44px;
+      margin:0 15px 0 0;
+    }
+
+    h1, h2 {
+      font-family: $SourceSans;
+      margin:0;
+      padding:0;
+    }
+
+    h1 {
+      color:$accent;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 1.2em;
+    }
+
+    h2 {
+      color:$text;
+      font-weight: 300;
+      font-size: 18px;
+    }
+  } // header
+
+  p {
+    font-family: 'Helvetica', Arial, sans-serif;
+    color:$text;
+    font-size: 13px;
+    line-height: 18px;
+    margin:0 0 15px 0;
+    display: block;
+  }
+
+  .friends {
+    font-family: 'Helvetica', Arial, sans-serif;
+    color:$text;
+    font-size: 13px;
+    line-height: 18px;
+
+    .names {
+      color:$accent;
+
+      a {
+        text-decoration: none;
+        color:$accent;
+        font-weight: bold;
+        transition:.15s linear all;
+
+        &:after {
+          content:',';
+          margin-right:4px;
+        }
+
+        &:last-child:after {
+          display: none;
+        }
+
+        &:hover {
+          color:darken($accent, 10%);
+        }
+      } //
+    }
+  } // .friends
+} // .babysteps
