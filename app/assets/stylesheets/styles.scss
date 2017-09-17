@@ -4,6 +4,8 @@
   *
   ====================
   1 SASS Variables
+    1.1 Colors
+    1.2 Typography
   2 Body
   ====================
 */
@@ -16,8 +18,20 @@
   1 SASS Variables
   ====================
 */
-
+/*
+  ====================
+  1.1 Colors
+  ====================
+*/
 $body-background: #bbbfc2;
+$header-text: #FFF;
+
+/*
+  ====================
+  1.2 Typography
+  ====================
+*/
+$header-font: 'Open Sans', sans-serif;
 
 /*
   ====================
@@ -28,5 +42,41 @@ $body-background: #bbbfc2;
 body {
   background-color: $body-background;
 }
+
+#page-wrapper {
+  width: 80%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.jumbotron {
+  min-height: 276px;
+  padding-top: 50px;
+  background: url('../images/header.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: right;
+  .jumbotron__pre-header,
+  .jumbotron__header {
+    padding-right: 70px;
+    font-family: $header-font;
+    color: $header-text;
+  }
+  .jumbotron__pre-header {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: light;
+  }
+  .jumbotron__header {
+    margin-top: 0;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+}
+
+
 
 
