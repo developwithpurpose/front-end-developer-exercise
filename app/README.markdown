@@ -6,12 +6,13 @@ This exercise is intended to showcase my knowledge of web technologies and best 
 
 As cited in the instructions, I intentionally left out any comments in my code other that what is necessary for readability (i.e. html section separators).  I have also included a SASS table of contents to aid in searching the stylesheet.  All other documentation and comments will be found in this document.
 
-Technologies used
+Technologies & methodologies used
 ---
 
 In addition to HTML, CSS and JavaScript, I used the following technologies:
 
 + [SASS](http://sass-lang.com) - CSS preprocessor
++ [BEM CSS](http) - CSS naming methodology 
 + [Bootstrap](https://getbootstrap.com) - CSS and JavaScript library
 + [jQuery](http://jquery.com) - JavaScript Library
 + [Google Fonts](https://fonts.google.com) - Open Sans and Source Pro Sans fonts

@@ -2,52 +2,71 @@
   *
   * Table of contents
   *
-  ====================
+  ==========================
   1 SASS Variables
-    1.1 Colors
+    1.1 Color
     1.2 Typography
   2 Body
-  ====================
+  3 Content Wrapper
+  4 Jumbotron (hero section)
+  5 Baby Steps
+    5.1 Baby Steps List
+    5.2 Baby Steps Content
+  ==========================
 */
 
 
 
 
 /*
-  ====================
+  ==========================
   1 SASS Variables
-  ====================
-*/
-/*
-  ====================
-  1.1 Colors
-  ====================
+  ==========================
+
+  ==========================
+  1.1 Color
+  ==========================
 */
 $body-background: #bbbfc2;
+$steps-list-background: #EBECED;
+$steps-content-background: #FFF;
 $header-text: #FFF;
 
 /*
-  ====================
+  ==========================
   1.2 Typography
-  ====================
+  ==========================
 */
 $header-font: 'Open Sans', sans-serif;
 
 /*
-  ====================
+  ==========================
   2 Body
-  ====================
+  ==========================
 */
 
 body {
   background-color: $body-background;
 }
 
-#page-wrapper {
+/*
+  ==========================
+  3 Content Wrapper
+  ==========================
+*/
+
+#content-wrapper {
   width: 80%;
   max-width: 980px;
   margin: 0 auto;
 }
+
+/*
+  ==========================
+  4 Jumbotron (hero section)
+  ==========================
+*/
+
 .jumbotron {
   min-height: 276px;
   padding-top: 50px;
@@ -77,6 +96,21 @@ body {
   }
 }
 
+/*
+  ==========================
+  5 Baby Steps
+  ==========================
+
+  ==========================
+  5.1 Baby Steps List
+  ==========================
+*/
+
+/*
+  ==========================
+  5.2 Baby Steps Content
+  ==========================
+*/
 
 
 
