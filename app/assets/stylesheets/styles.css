@@ -1,35 +1,23 @@
 /*
-Error: Invalid CSS after "": expected selector or at-rule, was "/*"
-        on line 1 of styles.scss
-
-1: /*
-2:  * Table of contents
-3:  *
-4:  *
-
-Backtrace:
-styles.scss:1
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:42:in `parse'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:294:in `watch'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin.rb:109:in `method_missing'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
-/Users/jacob/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
-/Users/jacob/.rbenv/versions/2.2.3/bin/sass:23:in `load'
-/Users/jacob/.rbenv/versions/2.2.3/bin/sass:23:in `<main>'
+  *
+  * Table of contents
+  *
+  ====================
+  1 SASS Variables
+  2 Body
+  ====================
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"\": expected selector or at-rule, was \"/*\"\A         on line 1 of styles.scss\A \A 1: /*\A 2:  * Table of contents\A 3:  *\A 4:  *"; }
+/*
+  ====================
+  1 SASS Variables
+  ====================
+*/
+/*
+  ====================
+  2 Body
+  ====================
+*/
+body {
+  background-color: #bbbfc2; }
+
+/*# sourceMappingURL=styles.css.map */

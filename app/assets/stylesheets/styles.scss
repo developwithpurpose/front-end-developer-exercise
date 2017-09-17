@@ -1,4 +1,32 @@
 /*
- * Table of contents
- *
- *
+  *
+  * Table of contents
+  *
+  ====================
+  1 SASS Variables
+  2 Body
+  ====================
+*/
+
+
+
+
+/*
+  ====================
+  1 SASS Variables
+  ====================
+*/
+
+$body-background: #bbbfc2;
+
+/*
+  ====================
+  2 Body
+  ====================
+*/
+
+body {
+  background-color: $body-background;
+}
+
+
