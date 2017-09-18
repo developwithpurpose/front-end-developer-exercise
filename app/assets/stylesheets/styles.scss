@@ -14,10 +14,6 @@
     5.2 Baby Steps Content
   ==========================
 */
-
-
-
-
 /*
   ==========================
   1 SASS Variables
@@ -31,6 +27,7 @@ $body-background: #bbbfc2;
 $baby-steps-list-background: #EBECED;
 $baby-steps-list-text: #9BA0A4;
 $baby-steps-content-background: #FFF;
+$baby-steps-content-text: #65686F;
 $header-text: #FFF;
 $text-selected: #36ABE1;
 
@@ -111,6 +108,7 @@ body {
   width: 100%;
   padding-top: 60px;
   background: $baby-steps-content-background;
+  overflow: scroll;
 }
 /*
   ==========================
@@ -144,6 +142,9 @@ body {
         color: $text-selected;
         font-weight: 800;
       }
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -153,5 +154,31 @@ body {
   ==========================
 */
 
-
+.baby-steps__content {
+  float: right;
+  width: 100%;
+  max-width: 680px;
+  padding: 0 70px;
+  overflow: scroll;
+  p {
+    img {
+      max-height: 62px;
+      width: auto;
+      margin-bottom: 10px;
+    }
+    color: $baby-steps-content-text;
+    font-family: $baby-steps-content-font;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+  }
+  #friends-summary {
+    margin: 40px 0 0 0;
+    padding: 0;
+    a {
+      text-decoration: none;
+      color: #6FBEE7;
+    }
+  }
+}
 

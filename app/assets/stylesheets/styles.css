@@ -86,7 +86,8 @@ body {
   height: 617px;
   width: 100%;
   padding-top: 60px;
-  background: #FFF; }
+  background: #FFF;
+  overflow: scroll; }
 
 /*
   ==========================
@@ -118,11 +119,35 @@ body {
         background-color: #FFF;
         color: #36ABE1;
         font-weight: 800; }
+      .baby-steps__list ul li:hover {
+        cursor: pointer; }
 
 /*
   ==========================
   5.2 Baby Steps Content
   ==========================
 */
+.baby-steps__content {
+  float: right;
+  width: 100%;
+  max-width: 680px;
+  padding: 0 70px;
+  overflow: scroll; }
+  .baby-steps__content p {
+    color: #65686F;
+    font-family: "Helvetica", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px; }
+    .baby-steps__content p img {
+      max-height: 62px;
+      width: auto;
+      margin-bottom: 10px; }
+  .baby-steps__content #friends-summary {
+    margin: 40px 0 0 0;
+    padding: 0; }
+    .baby-steps__content #friends-summary a {
+      text-decoration: none;
+      color: #6FBEE7; }
 
 /*# sourceMappingURL=styles.css.map */
