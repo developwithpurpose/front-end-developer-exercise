@@ -54,6 +54,7 @@ body {
 .jumbotron {
   min-height: 276px;
   padding-top: 50px;
+  margin-bottom: 0;
   background: url("../images/header.jpg");
   background-position: center;
   background-size: cover;
@@ -80,11 +81,31 @@ body {
   ==========================
   5 Baby Steps
   ==========================
+*/
+.baby-steps {
+  height: 617px;
+  width: 100%;
+  padding-top: 60px;
+  background: #FFF; }
 
+/*
   ==========================
   5.1 Baby Steps List
   ==========================
 */
+.baby-steps__list {
+  float: left;
+  height: 100%;
+  width: 300px;
+  background-color: #EBECED; }
+  .baby-steps__list ul {
+    padding-left: 0;
+    margin: 0; }
+    .baby-steps__list ul li {
+      height: 60px;
+      border-bottom: 1px solid #FFF;
+      list-style-type: none; }
+
 /*
   ==========================
   5.2 Baby Steps Content
