@@ -94,15 +94,16 @@ body {
   5.1 Baby Steps List
   ==========================
 */
-.baby-steps__list {
+.baby-steps__list-container {
   float: left;
   height: 100%;
-  width: 300px;
+  width: 30%;
+  max-width: 300px;
   background-color: #EBECED; }
-  .baby-steps__list ul {
+  .baby-steps__list-container .baby-steps__list {
     padding-left: 0;
     margin: 0; }
-    .baby-steps__list ul li {
+    .baby-steps__list-container .baby-steps__list li {
       height: 60px;
       padding-right: 25px;
       border-bottom: 1px solid #FFF;
@@ -113,13 +114,13 @@ body {
       font-weight: 300;
       text-align: right;
       line-height: 60px; }
-      .baby-steps__list ul li img {
+      .baby-steps__list-container .baby-steps__list li img {
         margin-left: 12px; }
-      .baby-steps__list ul li.selected {
+      .baby-steps__list-container .baby-steps__list li.selected {
         background-color: #FFF;
         color: #36ABE1;
         font-weight: 800; }
-      .baby-steps__list ul li:hover {
+      .baby-steps__list-container .baby-steps__list li:hover {
         cursor: pointer; }
 
 /*
@@ -129,7 +130,7 @@ body {
 */
 .baby-steps__content {
   float: right;
-  width: 100%;
+  width: 70%;
   max-width: 680px;
   padding: 0 70px;
   overflow: scroll; }

@@ -115,12 +115,13 @@ body {
   5.1 Baby Steps List
   ==========================
 */
-.baby-steps__list {
+.baby-steps__list-container {
   float: left;
   height: 100%;
-  width: 300px;
+  width: 30%;
+  max-width: 300px;
   background-color: $baby-steps-list-background;
-  ul {
+  .baby-steps__list {
     padding-left: 0;
     margin: 0;
     li {
@@ -156,7 +157,7 @@ body {
 
 .baby-steps__content {
   float: right;
-  width: 100%;
+  width: 70%;
   max-width: 680px;
   padding: 0 70px;
   overflow: scroll;
