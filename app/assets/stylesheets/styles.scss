@@ -29,8 +29,10 @@
 */
 $body-background: #bbbfc2;
 $baby-steps-list-background: #EBECED;
+$baby-steps-list-text: #9BA0A4;
 $baby-steps-content-background: #FFF;
 $header-text: #FFF;
+$text-selected: #36ABE1;
 
 /*
   ==========================
@@ -38,6 +40,8 @@ $header-text: #FFF;
   ==========================
 */
 $header-font: 'Open Sans', sans-serif;
+$baby-steps-list-font: 'Source Sans Pro', sans-serif;
+$baby-steps-content-font: 'Helvetica', sans-serif;
 
 /*
   ==========================
@@ -123,8 +127,23 @@ body {
     margin: 0;
     li {
       height: 60px;
+      padding-right: 25px;
       border-bottom: 1px solid #FFF;
       list-style-type: none;
+      color: $baby-steps-list-text;
+      font-family: $baby-steps-list-font;
+      font-size: 18px;
+      font-weight: 300;
+      text-align: right;
+      line-height: 60px;
+      img {
+        margin-left: 12px;
+      }
+      &.selected {
+        background-color: #FFF;
+        color: $text-selected;
+        font-weight: 800;
+      }
     }
   }
 }

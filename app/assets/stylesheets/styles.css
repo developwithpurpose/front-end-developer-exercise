@@ -103,8 +103,21 @@ body {
     margin: 0; }
     .baby-steps__list ul li {
       height: 60px;
+      padding-right: 25px;
       border-bottom: 1px solid #FFF;
-      list-style-type: none; }
+      list-style-type: none;
+      color: #9BA0A4;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      text-align: right;
+      line-height: 60px; }
+      .baby-steps__list ul li img {
+        margin-left: 12px; }
+      .baby-steps__list ul li.selected {
+        background-color: #FFF;
+        color: #36ABE1;
+        font-weight: 800; }
 
 /*
   ==========================
