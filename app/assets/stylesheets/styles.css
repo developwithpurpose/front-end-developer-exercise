@@ -147,8 +147,7 @@ body {
   .baby-steps__content #friends-summary {
     margin: 40px 0 0 0;
     padding: 0; }
-    .baby-steps__content #friends-summary a {
-      text-decoration: none;
+    .baby-steps__content #friends-summary span {
       color: #6FBEE7; }
 
 /*# sourceMappingURL=styles.css.map */

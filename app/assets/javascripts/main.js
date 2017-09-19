@@ -1,7 +1,9 @@
 (function($){
   console.log('main.js loaded');
-  var babyStepsList    = document.querySelector('.baby-steps__list').children;
-  var babyStepsContent = document.querySelector('.baby-steps__content').children;
+  var babyStepsList     = document.querySelector('.baby-steps__list').children;
+  var babyStepsContent  = document.querySelector('.baby-steps__content').children;
+  var friendsData       = [];
+  var friendsAtBabyStep = [[],[],[],[],[],[],[]];
   function loopThroughBabyStepsAndMakeAssignments() {
     for (i=0;i<babyStepsList.length;i++) {
       var childListItem  = babyStepsList[i];
@@ -14,7 +16,7 @@
   function assignIdToBabyStepsListItemAndHideRelatedContent(li, idx) {
     li.id = 'baby-step-list-' + idx;
     if (!li.classList.contains('selected')) {
-      jQuery('#baby-step-p-' + idx).hide()
+      $('#baby-step-p-' + idx).hide()
     }
   }
   function assignIdToBabyStepsParagraph(p, idx) {
@@ -40,13 +42,13 @@
   }
   function showRelatedContent(element) {
     var id = element.id;
-    var relatedElement = jQuery('#baby-step-p-' + id.slice(-1));
+    var relatedElement = $('#baby-step-p-' + id.slice(-1));
     relatedElement.slideDown();
   }
   function hidePreviouslySelectedContent() {
     var selected = document.querySelector('.selected');
     var id = selected.id;
-    jQuery('#baby-step-p-' + id.slice(-1)).slideUp();
+    $('#baby-step-p-' + id.slice(-1)).slideUp();
   }
-  return loopThroughBabyStepsAndMakeAssignments();
+  loopThroughBabyStepsAndMakeAssignments();
 })(jQuery);

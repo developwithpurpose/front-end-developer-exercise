@@ -18,5 +18,3 @@ In addition to HTML, CSS and JavaScript, I used the following technologies:
 + [Google Fonts](https://fonts.google.com) - Open Sans and Source Pro Sans fonts
 + [Node.js](https://nodejs.org) - Server scripting to run the API
 
-
-
