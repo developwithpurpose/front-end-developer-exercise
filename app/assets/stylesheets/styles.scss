@@ -1,0 +1,184 @@
+/*
+  *
+  * Table of contents
+  *
+  ==========================
+  1 SASS Variables
+    1.1 Color
+    1.2 Typography
+  2 Body
+  3 Content Wrapper
+  4 Jumbotron (hero section)
+  5 Baby Steps
+    5.1 Baby Steps List
+    5.2 Baby Steps Content
+  ==========================
+*/
+/*
+  ==========================
+  1 SASS Variables
+  ==========================
+
+  ==========================
+  1.1 Color
+  ==========================
+*/
+$body-background: #bbbfc2;
+$baby-steps-list-background: #EBECED;
+$baby-steps-list-text: #9BA0A4;
+$baby-steps-content-background: #FFF;
+$baby-steps-content-text: #65686F;
+$header-text: #FFF;
+$text-selected: #36ABE1;
+
+/*
+  ==========================
+  1.2 Typography
+  ==========================
+*/
+$header-font: 'Open Sans', sans-serif;
+$baby-steps-list-font: 'Source Sans Pro', sans-serif;
+$baby-steps-content-font: 'Helvetica', sans-serif;
+
+/*
+  ==========================
+  2 Body
+  ==========================
+*/
+
+body {
+  background-color: $body-background;
+}
+
+/*
+  ==========================
+  3 Content Wrapper
+  ==========================
+*/
+
+#content-wrapper {
+  width: 80%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/*
+  ==========================
+  4 Jumbotron (hero section)
+  ==========================
+*/
+
+.jumbotron {
+  min-height: 276px;
+  padding-top: 50px;
+  margin-bottom: 0;
+  background: url('../images/header.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: right;
+  .jumbotron__pre-header,
+  .jumbotron__header {
+    padding-right: 70px;
+    font-family: $header-font;
+    color: $header-text;
+  }
+  .jumbotron__pre-header {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: light;
+  }
+  .jumbotron__header {
+    margin-top: 0;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+}
+
+/*
+  ==========================
+  5 Baby Steps
+  ==========================
+*/
+.baby-steps {
+  height: 617px;
+  width: 100%;
+  padding-top: 60px;
+  background: $baby-steps-content-background;
+  overflow: scroll;
+}
+/*
+  ==========================
+  5.1 Baby Steps List
+  ==========================
+*/
+.baby-steps__list-container {
+  float: left;
+  height: 100%;
+  width: 30%;
+  max-width: 300px;
+  background-color: $baby-steps-list-background;
+  .baby-steps__list {
+    padding-left: 0;
+    margin: 0;
+    li {
+      height: 60px;
+      padding-right: 25px;
+      border-bottom: 1px solid #FFF;
+      list-style-type: none;
+      color: $baby-steps-list-text;
+      font-family: $baby-steps-list-font;
+      font-size: 18px;
+      font-weight: 300;
+      text-align: right;
+      line-height: 60px;
+      img {
+        margin-left: 12px;
+      }
+      &.selected {
+        background-color: #FFF;
+        color: $text-selected;
+        font-weight: 800;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+/*
+  ==========================
+  5.2 Baby Steps Content
+  ==========================
+*/
+
+.baby-steps__content {
+  float: right;
+  width: 70%;
+  max-width: 680px;
+  padding: 0 70px;
+  overflow: scroll;
+  p {
+    img {
+      max-height: 62px;
+      width: auto;
+      margin-bottom: 10px;
+    }
+    color: $baby-steps-content-text;
+    font-family: $baby-steps-content-font;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+  }
+  #friends-summary {
+    margin: 40px 0 0 0;
+    padding: 0;
+    span {
+      color: #6FBEE7;
+    }
+  }
+}
+
