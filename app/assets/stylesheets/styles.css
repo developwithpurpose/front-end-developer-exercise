@@ -1,0 +1,153 @@
+/*
+  *
+  * Table of contents
+  *
+  ==========================
+  1 SASS Variables
+    1.1 Color
+    1.2 Typography
+  2 Body
+  3 Content Wrapper
+  4 Jumbotron (hero section)
+  5 Baby Steps
+    5.1 Baby Steps List
+    5.2 Baby Steps Content
+  ==========================
+*/
+/*
+  ==========================
+  1 SASS Variables
+  ==========================
+
+  ==========================
+  1.1 Color
+  ==========================
+*/
+/*
+  ==========================
+  1.2 Typography
+  ==========================
+*/
+/*
+  ==========================
+  2 Body
+  ==========================
+*/
+body {
+  background-color: #bbbfc2; }
+
+/*
+  ==========================
+  3 Content Wrapper
+  ==========================
+*/
+#content-wrapper {
+  width: 80%;
+  max-width: 980px;
+  margin: 0 auto; }
+
+/*
+  ==========================
+  4 Jumbotron (hero section)
+  ==========================
+*/
+.jumbotron {
+  min-height: 276px;
+  padding-top: 50px;
+  margin-bottom: 0;
+  background: url("../images/header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: right; }
+  .jumbotron .jumbotron__pre-header,
+  .jumbotron .jumbotron__header {
+    padding-right: 70px;
+    font-family: "Open Sans", sans-serif;
+    color: #FFF; }
+  .jumbotron .jumbotron__pre-header {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: light; }
+  .jumbotron .jumbotron__header {
+    margin-top: 0;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 48px;
+    text-transform: uppercase; }
+
+/*
+  ==========================
+  5 Baby Steps
+  ==========================
+*/
+.baby-steps {
+  height: 617px;
+  width: 100%;
+  padding-top: 60px;
+  background: #FFF;
+  overflow: scroll; }
+
+/*
+  ==========================
+  5.1 Baby Steps List
+  ==========================
+*/
+.baby-steps__list-container {
+  float: left;
+  height: 100%;
+  width: 30%;
+  max-width: 300px;
+  background-color: #EBECED; }
+  .baby-steps__list-container .baby-steps__list {
+    padding-left: 0;
+    margin: 0; }
+    .baby-steps__list-container .baby-steps__list li {
+      height: 60px;
+      padding-right: 25px;
+      border-bottom: 1px solid #FFF;
+      list-style-type: none;
+      color: #9BA0A4;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      text-align: right;
+      line-height: 60px; }
+      .baby-steps__list-container .baby-steps__list li img {
+        margin-left: 12px; }
+      .baby-steps__list-container .baby-steps__list li.selected {
+        background-color: #FFF;
+        color: #36ABE1;
+        font-weight: 800; }
+      .baby-steps__list-container .baby-steps__list li:hover {
+        cursor: pointer; }
+
+/*
+  ==========================
+  5.2 Baby Steps Content
+  ==========================
+*/
+.baby-steps__content {
+  float: right;
+  width: 70%;
+  max-width: 680px;
+  padding: 0 70px;
+  overflow: scroll; }
+  .baby-steps__content p {
+    color: #65686F;
+    font-family: "Helvetica", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px; }
+    .baby-steps__content p img {
+      max-height: 62px;
+      width: auto;
+      margin-bottom: 10px; }
+  .baby-steps__content #friends-summary {
+    margin: 40px 0 0 0;
+    padding: 0; }
+    .baby-steps__content #friends-summary span {
+      color: #6FBEE7; }
+
+/*# sourceMappingURL=styles.css.map */
