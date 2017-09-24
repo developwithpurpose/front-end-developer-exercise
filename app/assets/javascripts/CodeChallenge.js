@@ -17,6 +17,14 @@ function styling(e) {
 
 navStyling = (prev, next) => {
   console.log("prev, next: ", prev, next);
+  // remove active
+  prev.removeAttribute("id");
+  // add active to new selection
+  next.setAttribute("id", "active");
+
+  let prevImg = prev.getElementsByTagName("img");
+  prevImg[0].classList.remove("hidden");
+  prevImg[1].classList.add("hidden");
 };
 
 babyStep = (prev, next) => {
