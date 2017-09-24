@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+}
+
+html {
+    background-color: #bbbfc2;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.header img {
+    width: 100%;
+}
+
+.padding_from_header {
+    padding-top: 60px;
+    background-color: #fff;
+}
+
+.baby_steps_content {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
