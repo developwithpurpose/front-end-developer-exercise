@@ -91,6 +91,20 @@ ul li a {
     float: right;
 }
 
+.baby_steps {
+    float: left;
+    width: 64%;
+    padding: 0 70px;
+    line-height: 20px;
+}
+
+
+/* Necessary??? */
+
+.baby_step_1 {
+    width: 100%;
+}
+
 
 /* helper functions */
 
