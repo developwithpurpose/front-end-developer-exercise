@@ -7,5 +7,8 @@ for (var i = 0; i < nav.length; i++) {
 
 function styling(e) {
   e.preventDefault();
-  console.log(this);
+  var newActiveBS = this.parentNode;
+  var prevActiveBS = document.getElementById("active");
+  // Create a function that will change the nav styling
+  // Create a function that will change the current baby step
 }
