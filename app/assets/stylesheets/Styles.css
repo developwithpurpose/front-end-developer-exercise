@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+}
+
+html {
+    background-color: #bbbfc2;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.header img {
+    width: 100%;
+}
