@@ -10,5 +10,15 @@ function styling(e) {
   var newActiveBS = this.parentNode;
   var prevActiveBS = document.getElementById("active");
   // Create a function that will change the nav styling
+  navStyling(prevActiveBS, newActiveBS);
   // Create a function that will change the current baby step
+  babyStep(prevActiveBS, newActiveBS);
 }
+
+navStyling = (prev, next) => {
+  console.log("prev, next: ", prev, next);
+};
+
+babyStep = (prev, next) => {
+  console.log("prev, next: ", prev, next);
+};

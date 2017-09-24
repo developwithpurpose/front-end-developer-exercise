@@ -35,4 +35,4 @@ My basic idea for this section will be to show the active baby step while hiddin
 
 ### Javascript
 
-First I need to add an eventListener to each a tag on the page. When I hijack the call what do I need to do? First Prevent the default behavior of the anchor tag. Next I need to figure out what anchor is currently showing as active and which anchor element the user has selected. 
+First I need to add an eventListener to each a tag on the page. When I hijack the call what do I need to do? First Prevent the default behavior of the anchor tag. Next I need to figure out what anchor is currently showing as active and which anchor element the user has selected. I decided to break down the styling into 2 functions. 1 that changes the styling for the navigation and 1 that changes the current baby step being shown. 
