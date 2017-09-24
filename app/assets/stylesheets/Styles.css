@@ -98,6 +98,34 @@ ul li a {
     line-height: 20px;
 }
 
+.baby_steps_icon {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 24px;
+}
+
+.baby_step_header_spacing {
+    position: relative;
+    top: 15px;
+}
+
+.baby_step_header {
+    color: #36abe1;
+    font-size: 30px;
+}
+
+.baby_step_subheader {
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+.baby_steps_body {
+    font-size: 18px;
+    color: #5c6366;
+    font-family: "Source Sans Pro", "Light";
+}
+
 
 /* Necessary??? */
 
@@ -114,6 +142,11 @@ ul li a {
 
 .inline_block {
     display: inline-block;
+}
+
+.img {
+    float: left;
+    margin-right: 1rem;
 }
 
 .align_middle {

@@ -7,7 +7,9 @@ Document your submission here (optional, but recommended)
     3. Content Body. 
         A. Navigation.
         B. Baby Steps.
-    4. Friends Section. 
+    4. Javascript.
+        A. 
+    5. Friends Section. 
     
 I decided to only use javascript, to show my understanding of the language. I have several examples on github of my understanding of jquery. I understand that might make this website easier to create, but I want to show you how well I understand javascript, and what can be done with it.     
     
@@ -29,4 +31,4 @@ The mockup didn't specify how far over the "Baby Step 1" was suppose to go, so b
 
 #### Baby Steps
 
-Added a 70 px padding on the left and right side. 
+My basic idea for this section will be to show the active baby step while hidding all the other steps. Then when the use clicks a different baby step a transition will happen showing one baby step to leave while another takes it place. To align the Baby Steps Icon with Baby Step 1 beside it with a subheader under it, I had to use Position relative. I did a little research and I couldn't find a better way. Once again this might be the best way, but I hate using something that might affect the responsiveness of the page. I also couldn't find how much space is between the Icon and the header, so I used 1rem to make the page appear the same across all browsers. I also noticed that seeting the width on ".baby_steps" to 65% would push all the content below the navigation. I believe this is a problem based on using float. If I have extra time I will try to make this more responsive.
