@@ -26,3 +26,82 @@ html {
     height: 100%;
     display: inline-block;
 }
+
+.navigation_bg {
+    /* background: #d1d5d6; */
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #ebeced 97%, #d1d5d6);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ebeced 97%, #d1d5d6);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ebeced 97%, #d1d5d6);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #ebeced 97%, #d1d5d6);
+    /* Standard syntax */
+}
+
+.navigation_spacing {
+    width: 25%;
+    float: left;
+}
+
+.navigation {
+    font-family: "Source Sans Pro", "Regular";
+    font-size: 18px;
+    color: #9ba0a4;
+    line-height: 60px;
+}
+
+.navigation li {
+    list-style-type: none;
+}
+
+.navigation_icon {
+    width: 35px;
+    height: 35px;
+    padding-right: 24px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    padding-left: 50%;
+}
+
+ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navigation_border {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+#active {
+    background-color: white;
+    color: #36abe1;
+    font-family: "Source Sans Pro", "semibold";
+}
+
+.navigation_icon_right {
+    float: right;
+}
+
+
+/* helper functions */
+
+.hidden {
+    display: none;
+}
+
+.inline_block {
+    display: inline-block;
+}
+
+.align_middle {
+    vertical-align: middle;
+}
