@@ -25,6 +25,10 @@ navStyling = (prev, next) => {
   let prevImg = prev.getElementsByTagName("img");
   prevImg[0].classList.remove("hidden");
   prevImg[1].classList.add("hidden");
+
+  let nextImg = next.getElementsByTagName("img");
+  nextImg[0].classList.add("hidden");
+  nextImg[1].classList.remove("hidden");
 };
 
 babyStep = (prev, next) => {
