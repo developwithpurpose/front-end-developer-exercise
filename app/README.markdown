@@ -1,6 +1,5 @@
 Document your submission here (optional, but recommended)
 
-
 # First look over the annotated-mockup and break it down into sections. 
     1. Overall layout.
     2. Header.
