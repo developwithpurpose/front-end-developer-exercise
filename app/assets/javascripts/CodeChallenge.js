@@ -1,19 +1,40 @@
-var nav = document.getElementById("nav").getElementsByTagName("a");
+let nav = document.getElementById("nav").getElementsByTagName("a");
+let friends;
+
+$.ajax({
+  url: "../../baby-steps.json",
+  method: "GET",
+  data: {
+    a: "a"
+  },
+  success: function(data) {
+    friends = data;
+    friendsOnBS(friends, 1);
+    console.log("success", data);
+  },
+  error: function(xhr) {
+    console.log("error", xhr);
+  }
+});
 
 // event listeners for each a tag
-for (var i = 0; i < nav.length; i++) {
+for (let i = 0; i < nav.length; i++) {
   nav[i].addEventListener("click", styling);
 }
 
 function styling(e) {
   e.preventDefault();
-  var newActiveBS = this.parentNode;
-  var prevActiveBS = document.getElementById("active");
+  let newActiveBS = this.parentNode;
+  let prevActiveBS = document.getElementById("active");
   // Create a function that will change the nav styling
   navStyling(prevActiveBS, newActiveBS);
   // Create a function that will change the current baby step
   babyStep(prevActiveBS, newActiveBS);
 }
+
+friendsOnBS = (friends, babystep) => {
+  console.log("friends, babystep: ", friends, babystep);
+};
 
 navStyling = (prev, next) => {
   prev.removeAttribute("id");
