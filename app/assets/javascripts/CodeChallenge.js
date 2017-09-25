@@ -59,8 +59,10 @@ function styling(e) {
 }
 
 sortArrayByLastName = array => {
-  let sortedArray = array.sort((a, b) => {
-    return a.lastName - b.lastName;
+  let sortedArray = array.sort(function(a, b) {
+    var a = a.lastName;
+    var b = b.lastName;
+    return a < b ? -1 : a > b ? 1 : 0;
   });
   return sortedArray;
 };
