@@ -46,8 +46,7 @@ First I need to add an eventListener to each a tag on the page. When I hijack th
 
 Originally I was using fetch to make the call for JSON data, but fetch does not work correctly in IE, so I had to use jquery to fetch data. If I have enough time at the end I might try to refactor friendsOnBS. The function isn't very dry and it is a lot longer than I would like. If I have time left over I will try to refactor this.
 
-
 Thank you so much for reviewing my code and I look forward to talking to you soon. 
 
-God Bless, 
+God Bless,
 Justin Leggett
