@@ -16,10 +16,7 @@ function styling(e) {
 }
 
 navStyling = (prev, next) => {
-  console.log("prev, next: ", prev, next);
-  // remove active
   prev.removeAttribute("id");
-  // add active to new selection
   next.setAttribute("id", "active");
 
   let prevImg = prev.getElementsByTagName("img");
@@ -32,5 +29,12 @@ navStyling = (prev, next) => {
 };
 
 babyStep = (prev, next) => {
-  console.log("prev, next: ", prev, next);
+  let divToHide = prev.getAttribute("data-step");
+  let divToShow = next.getAttribute("data-step");
+
+  let hideDiv = document.getElementsByClassName(`baby_step_${divToHide}`)[0];
+  hideDiv.className += " hidden";
+
+  let showDiv = document.getElementsByClassName(`baby_step_${divToShow}`)[0];
+  showDiv.classList.remove("hidden");
 };
