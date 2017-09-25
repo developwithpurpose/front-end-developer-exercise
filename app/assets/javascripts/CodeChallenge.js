@@ -1,7 +1,7 @@
 let nav = document.getElementById("nav").getElementsByTagName("a");
 let friendsDiv = document.getElementById("friends");
 let friends;
-console.log(friendsDiv);
+
 $.ajax({
   url: "../../baby-steps.json",
   method: "GET",
@@ -49,15 +49,21 @@ for (let i = 0; i < nav.length; i++) {
 
 function styling(e) {
   e.preventDefault();
+  let sortedArray = [];
   let newActiveBS = this.parentNode;
   let prevActiveBS = document.getElementById("active");
   let activeBS = newActiveBS.getAttribute("data-step");
-  // Create a function that will change the nav styling
   navStyling(prevActiveBS, newActiveBS);
-  // Create a function that will change the current baby step
   activeBabyStep(prevActiveBS, newActiveBS);
   friendsOnBS(friends, activeBS);
 }
+
+sortArrayByLastName = array => {
+  let sortedArray = array.sort((a, b) => {
+    return a.lastName - b.lastName;
+  });
+  return sortedArray;
+};
 
 friendsOnBS = (friends, babystep) => {
   let babyStep = parseInt(babystep);
@@ -66,8 +72,11 @@ friendsOnBS = (friends, babystep) => {
   for (let i = 0; i < friends.length; i++) {
     if (friends[i].babyStep === babyStep) {
       temp.push(friends[i]);
-      console.log("temp = ", temp);
     }
+  }
+
+  if (temp.length > 0) {
+    sortedArray = sortArrayByLastName(temp);
   }
   if (temp.length === 1)
     tempString = `<a>${temp[0].firstName} ${temp[0]
