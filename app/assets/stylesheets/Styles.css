@@ -152,3 +152,46 @@ ul li a {
 .align_middle {
     vertical-align: middle;
 }
+
+
+/* baby steps animation */
+
+.baby_step_1,
+.baby_step_2,
+.baby_step_3,
+.baby_step_4,
+.baby_step_5,
+.baby_step_6,
+.baby_step_7 {
+    position: relative;
+    -webkit-animation: slideIn 0.5s forwards;
+    -moz-animation: slideIn 0.5s forwards;
+    animation: slideIn 0.5s forwards;
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        transform: translateX(900px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes slideIn {
+    0% {
+        transform: translateX(900px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(900px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
