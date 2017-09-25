@@ -1,6 +1,7 @@
 let nav = document.getElementById("nav").getElementsByTagName("a");
+let friendsDiv = document.getElementById("friends");
 let friends;
-
+console.log(friendsDiv);
 $.ajax({
   url: "../../baby-steps.json",
   method: "GET",
@@ -8,7 +9,7 @@ $.ajax({
     a: "a"
   },
   success: function(data) {
-    friends = data;
+    friends = data.friends;
     friendsOnBS(friends, 1);
     console.log("success", data);
   },
@@ -16,25 +17,6 @@ $.ajax({
     console.log("error", xhr);
   }
 });
-
-// event listeners for each a tag
-for (let i = 0; i < nav.length; i++) {
-  nav[i].addEventListener("click", styling);
-}
-
-function styling(e) {
-  e.preventDefault();
-  let newActiveBS = this.parentNode;
-  let prevActiveBS = document.getElementById("active");
-  // Create a function that will change the nav styling
-  navStyling(prevActiveBS, newActiveBS);
-  // Create a function that will change the current baby step
-  babyStep(prevActiveBS, newActiveBS);
-}
-
-friendsOnBS = (friends, babystep) => {
-  console.log("friends, babystep: ", friends, babystep);
-};
 
 navStyling = (prev, next) => {
   prev.removeAttribute("id");
@@ -49,7 +31,7 @@ navStyling = (prev, next) => {
   nextImg[1].classList.remove("hidden");
 };
 
-babyStep = (prev, next) => {
+activeBabyStep = (prev, next) => {
   let divToHide = prev.getAttribute("data-step");
   let divToShow = next.getAttribute("data-step");
 
@@ -58,4 +40,50 @@ babyStep = (prev, next) => {
 
   let showDiv = document.getElementsByClassName(`baby_step_${divToShow}`)[0];
   showDiv.classList.remove("hidden");
+};
+
+// event listeners for each a tag
+for (let i = 0; i < nav.length; i++) {
+  nav[i].addEventListener("click", styling);
+}
+
+function styling(e) {
+  e.preventDefault();
+  let newActiveBS = this.parentNode;
+  let prevActiveBS = document.getElementById("active");
+  let activeBS = newActiveBS.getAttribute("data-step");
+  // Create a function that will change the nav styling
+  navStyling(prevActiveBS, newActiveBS);
+  // Create a function that will change the current baby step
+  activeBabyStep(prevActiveBS, newActiveBS);
+  friendsOnBS(friends, activeBS);
+}
+
+friendsOnBS = (friends, babystep) => {
+  let babyStep = parseInt(babystep);
+  let temp = [];
+  let tempString = "";
+  for (let i = 0; i < friends.length; i++) {
+    if (friends[i].babyStep === babyStep) {
+      temp.push(friends[i]);
+      console.log("temp = ", temp);
+    }
+  }
+  if (temp.length === 1)
+    tempString = `${temp[0].firstName} ${temp[0]
+      .lastName} is also on Baby Step ${temp[0].babyStep}`;
+  else if (temp.length === 2)
+    tempString = `${temp[0].firstName} ${temp[0].lastName} and ${temp[1]
+      .firstName} ${temp[1].lastName} are also in Baby Step ${temp[0]
+      .babyStep}`;
+  else if (temp.length === 3)
+    tempString = `${temp[0].firstName} ${temp[0].lastName}, and ${temp[1]
+      .firstName} ${temp[1].lastName}, and ${temp.length -
+      2} other friend are also in Baby Step ${temp[0].babyStep}`;
+  else if (temp.length >= 4)
+    tempString = `${temp[0].firstName} ${temp[0].lastName}, and ${temp[1]
+      .firstName} ${temp[1].lastName}, and ${temp.length -
+      2} other friends are also in Baby Step ${temp[0].babyStep}`;
+
+  friendsDiv.innerHTML = tempString;
 };

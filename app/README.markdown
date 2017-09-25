@@ -15,7 +15,7 @@ I decided to only use javascript, to show my understanding of the language. I ha
     
 ### Overall Layout 
 
-Based on the image provided I assumed that the page needed to take up about 90% of the page with a grey bg #bbbfc2, but the content section show have a white background.
+Based on the image provided I assumed that the page needed to take up about 90% of the total width with a grey bg #bbbfc2, but the content section should have a white background.
 
 ### Header
 
@@ -36,3 +36,7 @@ My basic idea for this section will be to show the active baby step while hiddin
 ### Javascript
 
 First I need to add an eventListener to each a tag on the page. When I hijack the call what do I need to do? First Prevent the default behavior of the anchor tag. Next I need to figure out what anchor is currently showing as active and which anchor element the user has selected. I decided to break down the styling into 2 functions. 1 that changes the styling for the navigation and 1 that changes the current baby step being shown. Orginally I thought about using regex to change the src image from blue to grey when the user clicked on a new anchor tag, but this was taking to much time, so I decided to toggle images when the user selects a new anchor tag, and if time allowes I will revisit this idea. 
+
+### Friends Section
+
+Originally I was using fetch to make the call for json data, but fetch does not work correctly in IE, so I had to use jquery to fetch data. 
