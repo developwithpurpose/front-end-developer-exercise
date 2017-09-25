@@ -113,24 +113,36 @@ ul li a {
 .baby_step_header {
     color: #36abe1;
     font-size: 30px;
+    font-family: "Source Sans Pro", "Semibold";
+    line-height: 20px;
 }
 
 .baby_step_subheader {
     padding-top: 5px;
     font-size: 18px;
+    color: #5c6366;
+    font-family: "Source Sans Pro", "Light";
+    line-height: 20px;
 }
 
 .baby_steps_body {
-    font-size: 18px;
-    color: #5c6366;
-    font-family: "Source Sans Pro", "Light";
+    padding-top: 24px;
+    font-size: 13px;
+    color: #65686f;
+    font-family: "Helvetica", "Regular";
+    line-height: 18px;
 }
 
+#friends {
+    padding-top: 40px;
+    font-size: 13px;
+    color: #65686f;
+    font-family: "Helvetica", "Regular";
+    line-height: 18px;
+}
 
-/* Necessary??? */
-
-.baby_step_1 {
-    width: 100%;
+#friends a {
+    color: #6fbee7;
 }
 
 

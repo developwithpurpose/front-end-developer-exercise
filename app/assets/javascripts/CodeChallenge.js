@@ -70,19 +70,21 @@ friendsOnBS = (friends, babystep) => {
     }
   }
   if (temp.length === 1)
-    tempString = `${temp[0].firstName} ${temp[0]
-      .lastName} is also on Baby Step ${temp[0].babyStep}`;
+    tempString = `<a>${temp[0].firstName} ${temp[0]
+      .lastName}</a> is also in Baby Step ${temp[0].babyStep}`;
   else if (temp.length === 2)
-    tempString = `${temp[0].firstName} ${temp[0].lastName} and ${temp[1]
-      .firstName} ${temp[1].lastName} are also in Baby Step ${temp[0]
-      .babyStep}`;
+    tempString = `<a>${temp[0].firstName} ${temp[0]
+      .lastName}</a> and <a>${temp[1].firstName} ${temp[1]
+      .lastName}</a> are also in Baby Step ${temp[0].babyStep}`;
   else if (temp.length === 3)
-    tempString = `${temp[0].firstName} ${temp[0].lastName}, and ${temp[1]
-      .firstName} ${temp[1].lastName}, and ${temp.length -
+    tempString = `<a>${temp[0].firstName} ${temp[0]
+      .lastName}</a>, and <a>${temp[1].firstName} ${temp[1]
+      .lastName}</a>, and ${temp.length -
       2} other friend are also in Baby Step ${temp[0].babyStep}`;
   else if (temp.length >= 4)
-    tempString = `${temp[0].firstName} ${temp[0].lastName}, and ${temp[1]
-      .firstName} ${temp[1].lastName}, and ${temp.length -
+    tempString = `<a>${temp[0].firstName} ${temp[0]
+      .lastName}</a>, and <a>${temp[1].firstName} ${temp[1]
+      .lastName}</a>, and ${temp.length -
       2} other friends are also in Baby Step ${temp[0].babyStep}`;
 
   friendsDiv.innerHTML = tempString;

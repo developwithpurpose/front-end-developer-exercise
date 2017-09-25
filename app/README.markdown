@@ -39,4 +39,4 @@ First I need to add an eventListener to each a tag on the page. When I hijack th
 
 ### Friends Section
 
-Originally I was using fetch to make the call for json data, but fetch does not work correctly in IE, so I had to use jquery to fetch data. 
+Originally I was using fetch to make the call for json data, but fetch does not work correctly in IE, so I had to use jquery to fetch data. If I have enough time at the end I might try to refactor friendsOnBS. The function isn't very dry and it is a lot lonhger than I would like. 
