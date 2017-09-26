@@ -1,0 +1,228 @@
+body {
+  margin: 0 auto;
+}
+
+.header img {
+  width: 100%;
+}
+
+.header-text {
+  position: absolute;
+  top: 50px;
+  right: 70px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 50px;
+  line-height: 48px;
+  max-width: 447px;
+  text-align: right;
+  font-weight: 700;
+}
+
+.header-text p {
+  margin: 0 0 15px 0;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.main-content {
+  margin-top: 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+label {
+  color: #9ba0a4;
+  font-size: 18px;
+  cursor: pointer;
+  border-bottom: 1px white solid;
+  display: block;
+  width: 22%;
+  padding-right: 78px;
+  line-height: 60px;
+  text-align: right;
+  font-weight: 400;
+  background: #ebeced;
+  background: -moz-linear-gradient(left, #ebeced 92%, #d1d5d6 100%);
+  background: -webkit-linear-gradient(left, #ebeced 92%, #d1d5d6 100%);
+  background: linear-gradient(to right, #ebeced 92%, #d1d5d6 100%);
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+}
+
+input[type='radio']:checked + label {
+  background: white;
+  font-weight: 600;
+  color: #36abe1;
+}
+
+@keyframes hovereffect {
+  from {
+    padding-left: 50px;
+  }
+  to {
+    padding-left: 0px;
+  }
+}
+
+label:hover {
+  animation-name: hovereffect;
+  animation-duration: 1s;
+}
+
+label span {
+  position: absolute;
+  margin: 18px 24px;
+  width: 30px;
+  height: 25px;
+}
+
+input[type='radio']:checked + label #tab-icon-one {
+  background-image: url(../images/icons/individual/icons_small_bs1_blue.png);
+}
+
+input[type='radio']:checked + label #tab-icon-two {
+  background-image: url(../images/icons/individual/icons_small_bs2_blue.png);
+}
+
+input[type='radio']:checked + label #tab-icon-three {
+  background-image: url(../images/icons/individual/icons_small_bs3_blue.png);
+}
+
+input[type='radio']:checked + label #tab-icon-four {
+  background-image: url(../images/icons/individual/icons_small_bs4_blue.png);
+}
+
+input[type='radio']:checked + label #tab-icon-five {
+  background-image: url(../images/icons/individual/icons_small_bs5_blue.png);
+}
+
+input[type='radio']:checked + label #tab-icon-six {
+  background-image: url(../images/icons/individual/icons_small_bs6_blue.png);
+}
+
+input[type='radio']:checked + label #tab-icon-seven {
+  background-image: url(../images/icons/individual/icons_small_bs7_blue.png);
+}
+
+#tab-icon-one {
+  background-image: url(../images/icons/individual/icons_small_bs1.png);
+}
+
+#tab-icon-two {
+  background-image: url(../images/icons/individual/icons_small_bs2.png);
+}
+
+#tab-icon-three {
+  background-image: url(../images/icons/individual/icons_small_bs3.png);
+}
+
+#tab-icon-four {
+  background-image: url(../images/icons/individual/icons_small_bs4.png);
+}
+
+#tab-icon-five {
+  background-image: url(../images/icons/individual/icons_small_bs5.png);
+}
+
+#tab-icon-six {
+  background-image: url(../images/icons/individual/icons_small_bs6.png);
+}
+
+#tab-icon-seven {
+  background-image: url(../images/icons/individual/icons_small_bs7.png);
+}
+
+@keyframes slidein {
+  from {
+    top: 50px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.content {
+  display: none;
+  padding: 0 70px;
+  width: 60%;
+  animation-name: slidein;
+  animation-duration: 0.5s;
+}
+
+.content-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.content-header img {
+  height: 65px;
+}
+
+.content-header-text {
+  margin-left: 20px;
+}
+
+.content-header-text h1,
+.content-header-text p {
+  color: #36abe1;
+  line-height: 20px;
+}
+
+.content-header-text h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.content-header-text p {
+  color: #5c6366;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.content-description p,
+.friend-statuses p {
+  font-family: Helvetica;
+  font-size: 13px;
+  color: #65686f;
+}
+
+.content-description p {
+  margin-top: 0;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.friend-statuses p {
+  margin-top: 40px;
+  font-weight: normal;
+}
+
+.friend-statuses a {
+  color: #6fbee7;
+  cursor: pointer;
+}
+
+#step-1:checked ~ #one,
+#step-2:checked ~ #two,
+#step-3:checked ~ #three,
+#step-4:checked ~ #four,
+#step-5:checked ~ #five,
+#step-6:checked ~ #six,
+#step-7:checked ~ #seven {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 33%;
+}
