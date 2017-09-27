@@ -11,12 +11,16 @@ $step-content-text: #65686f;
 
 $navigation-inactive: #9ba0a4;
 $navigation-active: #36abe1;
+$navigation-background: #ebeced; 
+$navigation-background-gradient: linear-gradient(to right, #ebeced , #d1d5d6); 
 
 $friends-name: #6fbee7;
 $friends-info: #65686f;
 
 /** fonts **/
 $header-font: "Source Sans Pro", Helvetica, sans-serif;
+$nav-font: "Source Sans Pro", Helvetica, sans-serif;
+$copy-font: Helvetiva, sans-serif;
 
 
 /**************
@@ -32,12 +36,21 @@ body{
 .main_content{
     width: 980px;
     background-color: white;
-    margin: 0 auto;
+    margin:0 auto;
+    padding-top: 60px;
 }
 
 /**************
 Baby Steps
 *************/
+.step_container{
+    width: 735px;
+    float: right;
+}
+
+.steps{
+    padding: 0 70px;
+}
 
 .step_header_text{
     font: $header-font;
@@ -59,9 +72,36 @@ Baby Steps
     margin-right: 10px;
 }
 
-.step_header{
+/**************
+Side Nav
+*************/
+
+.steps_nav{
+    width: 245px;
+    float: left;
+    background: $navigation-background-gradient;
+}
+
+.steps_nav_ul{
+    list-style: none;
+}
+
+.nav_icon{
+    float: right;
+    display: inline;
+    padding: 17px 24px;
    
 }
+.nav_text{
+    text-align: right;
+    font-size: 18px;
+    line-height: 60px;
+    font: $nav-font;
+    color: $navigation-inactive
+}
+
+
+
 
 /*******************
 Clearfix for floats
