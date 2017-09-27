@@ -18,7 +18,7 @@
     "babel-brunch": "^6",
     "babel-preset-latest": "^6",
     "babel-preset-stage-0": "^6",
-    "brunch": "^2",
+    "brunch": "^2.10.10",
     "copycat-brunch": "^1",
     "eslint": "^3",
     "eslint-config-airbnb-base": "^11",
@@ -27,7 +27,6 @@
     "eslint-plugin-prettier": "^2",
     "pleeease-brunch": "^3",
     "prettier": "^1",
-    "sass-brunch": "^2",
-    "uglify-js-brunch": "^2"
+    "sass-brunch": "^2"
   }
 }

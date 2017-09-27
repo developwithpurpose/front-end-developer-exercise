@@ -19,13 +19,13 @@ exports.plugins = {
   copycat: {
     fonts: ['node_modules/bootstrap/dist/fonts'],
     onlyChanged: true,
-  },
+  }
 };
 
 exports.modules = {
   autoRequire: {
-    'js/app.js': ['js/initialize'],
-  },
+    'js/app.js': ['js/main'],
+  }
 };
 
 exports.npm = {
@@ -36,5 +36,5 @@ exports.npm = {
   },
   styles: {
     bootstrap: ['dist/css/bootstrap.css'],
-  },
+  }
 };
