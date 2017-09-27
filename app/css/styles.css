@@ -16,7 +16,7 @@ body {
 .main_content {
   width: 980px;
   background-color: white;
-  margin: 0 auto;
+  margin: 0 auto 60px auto;
   padding-top: 60px; }
 
 /**************
@@ -39,6 +39,7 @@ Baby Steps
 .step_subheader_text {
   font: "Source Sans Pro", Helvetica, sans-serif;
   color: #5c6366;
+  font-weight: 200;
   font-size: 18px;
   line-height: 20px; }
 
@@ -55,19 +56,28 @@ Side Nav
   background: linear-gradient(to right, #ebeced, #d1d5d6); }
 
 .steps_nav_ul {
+  padding: 0;
   list-style: none; }
+
+.steps_nav_li {
+  width: 245px;
+  border-top: 2px solid white;
+  cursor: pointer; }
+
+.active a {
+  color: #36abe1;
+  background: white; }
 
 .nav_icon {
   float: right;
-  display: inline;
   padding: 17px 24px; }
 
 .nav_text {
   text-align: right;
+  margin-bottom: 0;
   font-size: 18px;
   line-height: 60px;
-  font: "Source Sans Pro", Helvetica, sans-serif;
-  color: #9ba0a4; }
+  font: "Source Sans Pro", Helvetica, sans-serif; }
 
 /*******************
 Clearfix for floats
@@ -83,5 +93,11 @@ Clearfix for floats
 .group {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
+
+/*******************
+Helper Class
+*******************/
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=styles.css.map */
