@@ -1,0 +1,155 @@
+/**************
+Variables
+*************/
+/** colors **/
+/** fonts **/
+/**************
+Global Styles
+*************/
+body {
+  background-color: #bbbfc2; }
+
+.banner_img {
+  width: 980px;
+  margin: 0 auto; }
+
+.main_content {
+  width: 980px;
+  background-color: white;
+  margin: 0 auto 60px auto;
+  padding-top: 60px; }
+
+/**************
+Baby Steps
+*************/
+.step_container {
+  width: 735px;
+  float: right; }
+
+.steps {
+  padding: 0 70px; }
+
+.step_header_text {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #36abe1;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 20px; }
+
+.step_subheader_text {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #5c6366;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px; }
+
+.step_header_icon {
+  float: left;
+  margin-right: 10px; }
+
+.step_copy {
+  font-family: "Helvetiva", sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+/**************
+Side Nav
+*************/
+.steps_nav {
+  width: 245px;
+  float: left;
+  background: linear-gradient(to right, #ebeced, #d1d5d6); }
+
+.steps_nav_ul {
+  padding: 0;
+  list-style: none; }
+
+.steps_nav_li {
+  width: 245px;
+  border-top: 2px solid white;
+  cursor: pointer; }
+
+a,
+a:hover,
+a:active {
+  text-decoration: none; }
+
+.inactive {
+  color: #9ba0a4; }
+
+.active {
+  color: #36abe1;
+  background: white; }
+
+.nav_icon {
+  float: right;
+  padding: 17px 24px; }
+
+.nav_text {
+  text-align: right;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 60px;
+  font-family: "Source Sans Pro", Helvetica, sans-serif; }
+
+/*******************
+Friends
+*******************/
+.friends {
+  margin-top: 40px; }
+
+.friends_text {
+  font-family: Helvetica;
+  color: #65686f;
+  size: 13px; }
+
+/*******************
+Animations
+*******************/
+.step1,
+.step2,
+.step3,
+.step4,
+.step5,
+.step6,
+.step7 {
+  position: relative;
+  animation: slideIn;
+  animation-duration: 1s;
+  animation-timing-function: ease; }
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-30%); }
+  50% {
+    transform: translateY(8%); }
+  65% {
+    transform: translateY(-4%); }
+  80% {
+    transform: translateY(4%); }
+  95% {
+    transform: translateY(-2%); }
+  100% {
+    transform: translateY(0%); } }
+/*******************
+Clearfix for floats
+*******************/
+.group:before,
+.group:after {
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */ }
+
+/*******************
+Helper Class
+*******************/
+.hidden {
+  display: none; }
+
+/*# sourceMappingURL=styles.css.map */
