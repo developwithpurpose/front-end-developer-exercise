@@ -1,14 +1,32 @@
 {
-  "name": "front-end-developer-exercise",
-  "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
-  },
+  "name": "Front-End-Developer-Exercise",
+  "description": "Coding Exercise for Ramsey Solutions App",
+  "private": true,
+  "author": "Brien Pafford",
+  "version": "0.0.1",
+  "repository": "",
   "scripts": {
-    "start": "http-server ./app -d false"
+    "start": "LOGGY_STACKS=true brunch watch --server",
+    "build": "brunch build --production"
+  },
+  "dependencies": {
+    "bootstrap": "^3",
+    "jquery": "^3"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "auto-reload-brunch": "^2",
+    "babel-brunch": "^6",
+    "babel-preset-latest": "^6",
+    "babel-preset-stage-0": "^6",
+    "brunch": "^2.10.10",
+    "copycat-brunch": "^1",
+    "eslint": "^3",
+    "eslint-config-airbnb-base": "^11",
+    "eslint-config-prettier": "^2",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-prettier": "^2",
+    "pleeease-brunch": "^3",
+    "prettier": "^1",
+    "sass-brunch": "^2"
   }
 }
