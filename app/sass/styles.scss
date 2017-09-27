@@ -1,0 +1,79 @@
+/**************
+Variables
+*************/
+
+/** colors **/
+$background-color: #bbbfc2;
+
+$step-heading-color : #36abe1;
+$step-subheading-color: #5c6366;
+$step-content-text: #65686f;
+
+$navigation-inactive: #9ba0a4;
+$navigation-active: #36abe1;
+
+$friends-name: #6fbee7;
+$friends-info: #65686f;
+
+/** fonts **/
+$header-font: "Source Sans Pro", Helvetica, sans-serif;
+
+
+/**************
+Global Styles
+*************/
+body{
+    background-color: $background-color;
+}
+.banner_img{
+    width: 980px;
+    margin: 0 auto;
+}
+.main_content{
+    width: 980px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+/**************
+Baby Steps
+*************/
+
+.step_header_text{
+    font: $header-font;
+    color: $step-heading-color;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.step_subheader_text{
+    font: $header-font;
+    color: $step-subheading-color;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.step_header_icon{
+    float: left;
+    margin-right: 10px;
+}
+
+.step_header{
+   
+}
+
+/*******************
+Clearfix for floats
+*******************/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+} 
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}

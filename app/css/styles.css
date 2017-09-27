@@ -1,3 +1,56 @@
+/**************
+Variables
+*************/
+/** colors **/
+/** fonts **/
+/**************
+Global Styles
+*************/
+body {
+  background-color: #bbbfc2; }
 
+.banner_img {
+  width: 980px;
+  margin: 0 auto; }
+
+.main_content {
+  width: 980px;
+  background-color: white;
+  margin: 0 auto; }
+
+/**************
+Baby Steps
+*************/
+.step_header_text {
+  font: "Source Sans Pro", Helvetica, sans-serif;
+  color: #36abe1;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 20px; }
+
+.step_subheader_text {
+  font: "Source Sans Pro", Helvetica, sans-serif;
+  color: #5c6366;
+  font-size: 18px;
+  line-height: 20px; }
+
+.step_header_icon {
+  float: left;
+  margin-right: 10px; }
+
+/*******************
+Clearfix for floats
+*******************/
+.group:before,
+.group:after {
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */ }
 
 /*# sourceMappingURL=styles.css.map */
