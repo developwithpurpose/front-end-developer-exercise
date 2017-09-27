@@ -20,7 +20,7 @@ $friends-info: #65686f;
 /** fonts **/
 $header-font: "Source Sans Pro", Helvetica, sans-serif;
 $nav-font: "Source Sans Pro", Helvetica, sans-serif;
-$copy-font: Helvetiva, sans-serif;
+$copy-font: "Helvetiva", sans-serif;
 
 
 /**************
@@ -53,7 +53,7 @@ Baby Steps
 }
 
 .step_header_text{
-    font: $header-font;
+    font-family: $header-font;
     color: $step-heading-color;
     font-size: 30px;
     font-weight: 600;
@@ -61,9 +61,9 @@ Baby Steps
 }
 
 .step_subheader_text{
-    font: $header-font;
+    font-family: $header-font;
     color: $step-subheading-color;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 18px;
     line-height: 20px;
 }
@@ -71,6 +71,12 @@ Baby Steps
 .step_header_icon{
     float: left;
     margin-right: 10px;
+}
+
+.step_copy{
+    font-family: $copy-font;
+    font-size: 13px;
+    line-height: 18px;
 }
 
 /**************
@@ -94,11 +100,17 @@ Side Nav
     cursor: pointer;
 }
 
-// .inactive{
-//     color: $navigation-inactive
-// }
+a,
+a:hover,
+a:active{
+    text-decoration: none;
+}
 
-.active a{
+.inactive{
+    color: $navigation-inactive
+}
+
+.active{
     color: $navigation-active;
     background: white;
 }
@@ -113,10 +125,60 @@ Side Nav
     margin-bottom: 0;
     font-size: 18px;
     line-height: 60px;
-    font: $nav-font;
+    font-family: $nav-font;
     
 }
 
+/*******************
+Friends
+*******************/
+
+.friends{
+    margin-top: 40px;
+}
+
+.friends_text{
+    font-family: Helvetica;
+    color: $friends-info;
+    size: 13px;
+}
+
+/*******************
+Animations
+*******************/
+.step1,
+.step2,
+.step3,
+.step4,
+.step5,
+.step6,
+.step7,{
+    position: relative;
+    animation: slideIn; 
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes slideIn {
+   0% {
+		transform: translateY(-30%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
+} 
 
 
 
