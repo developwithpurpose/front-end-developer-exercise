@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body { background-color: #bbbfc2; }
@@ -67,6 +68,7 @@ body { background-color: #bbbfc2; }
 .side-nav {
   width: 30%;
   height: 100%;
+  background-image: -webkit-gradient(linear,left top, right top,color-stop(90%, #ebeced), to(#d1d5d6));
   background-image: linear-gradient(to right,#ebeced 90%, #d1d5d6);
   float: left;
   z-index: 1;
@@ -103,6 +105,7 @@ body { background-color: #bbbfc2; }
   top: 0;
   z-index: 0;
   position: absolute;
+  -webkit-transition: top 1s cubic-bezier(0.17, 1, 0.74, 1.01);
   transition: top 1s cubic-bezier(0.17, 1, 0.74, 1.01);
 }
 
@@ -154,8 +157,12 @@ main {
 .step-content {
   margin: 0 70px;
   height: 500px;
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.17, 1, 0.74, 1.01);
+  transition: -webkit-transform 1s cubic-bezier(0.17, 1, 0.74, 1.01);
   transition: transform 1s cubic-bezier(0.17, 1, 0.74, 1.01);
+  transition: transform 1s cubic-bezier(0.17, 1, 0.74, 1.01), -webkit-transform 1s cubic-bezier(0.17, 1, 0.74, 1.01);
 }
 
 .step-copy {
@@ -177,29 +184,36 @@ main {
 }
 
 #step1:target ~ main .step-content {
-  transform: translateY( 0px );
+  -webkit-transform: translateY( 0px );
+          transform: translateY( 0px );
 }
 
 #step2:target ~ main .step-content {
-  transform: translateY( -500px );
+  -webkit-transform: translateY( -500px );
+          transform: translateY( -500px );
 }
 
 #step3:target ~ main .step-content {
-  transform: translateY( -1000px );
+  -webkit-transform: translateY( -1000px );
+          transform: translateY( -1000px );
 }
 
 #step4:target ~ main .step-content {
-  transform: translateY( -1500px );
+  -webkit-transform: translateY( -1500px );
+          transform: translateY( -1500px );
 }
 
 #step5:target ~ main .step-content {
-  transform: translateY( -2000px );
+  -webkit-transform: translateY( -2000px );
+          transform: translateY( -2000px );
 }
 
 #step6:target ~ main .step-content {
-  transform: translateY( -2500px );
+  -webkit-transform: translateY( -2500px );
+          transform: translateY( -2500px );
 }
 
 #step7:target ~ main .step-content {
-  transform: translateY( -3000px );
+  -webkit-transform: translateY( -3000px );
+          transform: translateY( -3000px );
 }
