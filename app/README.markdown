@@ -1,4 +1,4 @@
-Josh White Front-end Developer Exercise
+Josh White Code Challenge
 ============================
 
 To make this exercise a challenge, I wanted to see how much of the mock I could
@@ -30,11 +30,11 @@ that with transitions.
 It was took some thinking to be able to trigger both the nav transition, as well
 as the content with the same `:target` attribute.  Since we can't target up the
 ancestor chain, I decided to place triggers at the top level of the
-content div, and then use those to select down into both the `nav` and `main`
+content `div`, and then use those to select down into both the `nav` and `main`
 content areas.
 
-I did this with self closing `<a>` tags that only had ids.  The only purpose of these
-is to act as a trigger for the transitions.
+I did this with self closing `<a>` tags that are just vehicles for ids.  Then
+through sibling and child selectors, worked down to the elements to be effected.
 
 
 
@@ -43,7 +43,8 @@ Other Decisions
 
 * I was unsure if it was the intention to use the completed images of the header
 and the content headers instead of creating that content from scratch.  Since
-this was a rather short challenge, I decided to go ahead and do it all manually.
+the allotted time was more than enough for this challenge, I decided to go ahead
+ and do it all manually.
 
 * I also hardcoded the height of the content container to be the height of the side
 shadows, as it was described in the README to not worry about responsiveness.
@@ -59,7 +60,8 @@ JavaScript stuffs
 ---------
 
 For small projects, I always prefer to not depend on any external libraries, as
-many times a library will add more lines of code than your entire project has.
+many times a library will add more lines of code than your entire project would
+be without it.
 
 The only functions of JS in this submission are to select and deselect the side
 links, and to retrieve, sort, and display the friends list.
@@ -83,3 +85,9 @@ event a user sent a link to a friend)
 For requesting the friends object I used a `XMLHttpRequest` and a functional approach
 to sorting the information, creating the message, and attaching that message to
 the DOM.
+
+
+
+Finally
+------
+Fun challenge, thanks!
