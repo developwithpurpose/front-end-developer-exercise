@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body { background-color: #bbbfc2; }
+
+
+/*-------------------------------Containers-----------------------------------*/
+.container {
+  width: 1020px;
+  height: 95vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content {
+  width: 980px;
+  height: 912px;
+  background-color: white;
+  float: left;
+  overflow: hidden;
+}
+
+.content-shadow-sides {
+  float: left;
+  height: 100%;
+}
+
+.content-shadow-bottom { margin-left: 20px; }
+
+
+
+/*----------------------------------Header------------------------------------*/
+.header-splash {
+  background-image: url(../images/header.jpg);
+  width: 100%;
+  height: 276px;
+  margin-bottom: 60px;
+}
+
+.header-text {
+  width: 440px;
+  color: #fff;
+  float: right;
+  margin: 50px 70px;
+  font-family: "Open Sans";
+  text-align: right;
+}
+
+.header-text h2 {
+  font-weight: 300;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.header-text h1 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+
+/*------------------------------------Nav-------------------------------------*/
+.side-nav {
+  width: 30%;
+  height: 100%;
+  background-image: -webkit-gradient(linear,left top, right top,color-stop(90%, #ebeced), to(#d1d5d6));
+  background-image: linear-gradient(to right,#ebeced 90%, #d1d5d6);
+  float: left;
+  z-index: 1;
+  position: relative;
+}
+
+.side-nav a { text-decoration: none; }
+
+.nav-link {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+  border-bottom: 1px solid white;
+  text-align: right;
+  z-index: 999;
+  position: relative;
+}
+
+.nav-link-img {
+  width: auto;
+  float: right;
+  margin: 17.5px 24px;
+}
+
+.nav-link-img.blue {
+  display: none;
+}
+
+.highlight {
+  background: white;
+  width: 100%;
+  height: 61px;
+  top: 0;
+  z-index: 0;
+  position: absolute;
+  -webkit-transition: top 1s cubic-bezier(0.17, 1, 0.74, 1.01);
+  transition: top 1s cubic-bezier(0.17, 1, 0.74, 1.01);
+}
+
+#step1:target ~ nav div.highlight { top: 0; }
+#step2:target ~ nav div.highlight { top: 61px; }
+#step3:target ~ nav div.highlight { top: 122px; }
+#step4:target ~ nav div.highlight { top: 183px; }
+#step5:target ~ nav div.highlight { top: 244px; }
+#step6:target ~ nav div.highlight { top: 305px; }
+#step7:target ~ nav div.highlight { top: 366px; }
+
+
+/*-----------------------------------Main-------------------------------------*/
+main {
+  height: 300px;
+  width: 70%;
+  float: right;
+  overflow: hidden;
+}
+
+.step-header {
+  height: 65px;
+  margin-bottom: 13.5px;
+}
+
+.step-header-icon { float: left; }
+
+.step-header-text {
+  font-family: "Source Sans Pro";
+  line-height: 20px;
+  margin: 5.5px 5px;
+  float: left;
+}
+
+.step-header-text h3 {
+  font-weight: 600;
+  font-size: 30px;
+  color: #36abe1;
+  padding: 2px 5px;
+}
+
+.step-header-text h4 {
+  padding: 5px;
+  font-weight: 300;
+  font-size: 18px;
+  color: #5c6366;
+}
+
+.step-content {
+  margin: 0 70px;
+  height: 500px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.17, 1, 0.74, 1.01);
+  transition: -webkit-transform 1s cubic-bezier(0.17, 1, 0.74, 1.01);
+  transition: transform 1s cubic-bezier(0.17, 1, 0.74, 1.01);
+  transition: transform 1s cubic-bezier(0.17, 1, 0.74, 1.01), -webkit-transform 1s cubic-bezier(0.17, 1, 0.74, 1.01);
+}
+
+.step-copy {
+  font: 13px Helvetica;
+  line-height: 18px;
+  color: #65686f;
+  margin-bottom: 20px;
+}
+
+.step-friends {
+  margin: 20px 0;
+  font: 13px Helvetica;
+  color: #65686f;
+}
+
+.step-friends a {
+  color: #67bee7;
+  text-decoration: none;
+}
+
+#step1:target ~ main .step-content {
+  -webkit-transform: translateY( 0px );
+          transform: translateY( 0px );
+}
+
+#step2:target ~ main .step-content {
+  -webkit-transform: translateY( -500px );
+          transform: translateY( -500px );
+}
+
+#step3:target ~ main .step-content {
+  -webkit-transform: translateY( -1000px );
+          transform: translateY( -1000px );
+}
+
+#step4:target ~ main .step-content {
+  -webkit-transform: translateY( -1500px );
+          transform: translateY( -1500px );
+}
+
+#step5:target ~ main .step-content {
+  -webkit-transform: translateY( -2000px );
+          transform: translateY( -2000px );
+}
+
+#step6:target ~ main .step-content {
+  -webkit-transform: translateY( -2500px );
+          transform: translateY( -2500px );
+}
+
+#step7:target ~ main .step-content {
+  -webkit-transform: translateY( -3000px );
+          transform: translateY( -3000px );
+}
