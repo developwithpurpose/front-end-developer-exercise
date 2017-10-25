@@ -6,6 +6,7 @@ body {
 
 img {
     outline: none; /* for IE */
+    border-style: none;
 }
 
 

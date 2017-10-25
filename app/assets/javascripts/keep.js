@@ -5,7 +5,7 @@ console.log("Why, Hello!");
 $(document).ready(function(){
 
     $.ajax({
-        url: "main.json",
+        url: "../app/baby-steps.json",
         type: "get",
         dataType: "JSON",
         success: function(data) {
@@ -52,20 +52,20 @@ function DisplayFriends(data, targetID){
             break;
 
         case 1:
-            friendText = "<a style='color:pink'>" + friend1 +  "</a> is also in Baby Step " + targetID;
+            friendText = "<a style='color:#6fbee7'>" + friend1 +  "</a> is also in Baby Step " + targetID;
             break;
 
         case 2:
-            friendText = "<a style='color:pink'>" + friend1 + "</a>, <a style='color:pink'>" + friend2 + "</a> are also in Baby Step " + targetID;
+            friendText = "<a style='color:#6fbee7'>" + friend1 + "</a>, <a style='color:#6fbee7'>" + friend2 + "</a> are also in Baby Step " + targetID;
             break;
 
         case 3:
-            friendText = "<a style='color:pink'>" + friend1 + "</a>, <a style='color:pink'>" + friend2 + " <a/> and 1 other friend are also in Baby Step " + targetID;
+            friendText = "<a style='color:#6fbee7'>" + friend1 + "</a>, <a style='color:#6fbee7'>" + friend2 + " <a/> and 1 other friend are also in Baby Step " + targetID;
             break;
 
         default:
             otherFriends = dataArray.length -2;
-            friendText = "<a style='color:pink'>" + friend1 + "</a>,<a style='color:pink'> " + friend2 + "<a/> and " + otherFriends + " other friends are also in Baby Step " + targetID;
+            friendText = "<a style='color:#6fbee7'>" + friend1 + "</a>,<a style='color:#6fbee7'> " + friend2 + "<a/> and " + otherFriends + " other friends are also in Baby Step " + targetID;
     }
 
     $("#friends-" + targetID).html(friendText);
