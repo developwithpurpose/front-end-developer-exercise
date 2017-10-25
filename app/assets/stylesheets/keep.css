@@ -1,0 +1,271 @@
+body {
+    margin: 0 auto;
+    background-color: #bbbfc2;
+}
+
+img {
+    outline: none; /* for IE */
+    border-style: none;
+}
+
+
+#main-left-img {
+    position: absolute;
+    top: 0;
+    left: 52px;
+    height: 900px;
+}
+
+#main-right-img {
+    position: absolute;
+    top: 0;
+    left: 1050px;
+    height: 900px;
+}
+
+#main-bottom-img {
+    position: absolute;
+    top: 953px;
+    left: 70px;
+}
+
+#main-content-wrapper {
+    position: relative;
+    width: 980px;
+    height: 953px;
+    margin-left: 70px;
+    background-color: white;
+}
+
+#main-header{
+    position: relative;
+}
+
+#main-heading-img{
+    position: absolute;
+    height: 276px;
+    width: 100%;
+    top: 0;
+}
+
+#main-heading-text-img {
+    position: absolute;
+    top: 50px;
+    left: 60%;
+    height: auto;
+    width: 250px;
+    z-index: 1;
+}
+
+#nav-and-content-div {
+    position: absolute;
+    width: 100%;
+    height: 960px;
+    top: 336px;
+}
+
+#main-content-set-absolute {
+    position: absolute;
+    width: 536px;
+    height: 350px;
+    overflow: hidden;
+    top: 0;
+    left: 370px;
+    right: 70px;
+    display: inline-block;
+}
+
+#content-set-relative {
+    position: relative;
+}
+
+#content{position: absolute;}
+
+
+nav {
+    display: inline-block;
+    width: 300px;
+    height: 617px;
+    background: #ebeced; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #ebeced 95%, #d1d5d6);
+    background: -o-linear-gradient(left, #ebeced 95%, #d1d5d6);
+    background: linear-gradient(to right, #ebeced 95%, #d1d5d6); /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */
+    left: 0;
+}
+
+nav ul {
+    position: relative;
+    margin-top: 0;
+    top: 0;
+    padding-left: 0;
+    width: 100%;
+}
+
+#moving-nav-box {
+    position: absolute;
+    top: 0;
+    line-height: 62px;
+    width: 300px;
+    background-color: white;
+}
+
+#nav-shadow {
+    position: absolute;
+    top: 0;
+}
+
+nav li{
+    list-style: none;
+    border-bottom: 2px solid white;
+    text-align: right;
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    color: #9ba0a4;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.display-icon {
+    width:25px;
+    height: 25px;
+    margin-right:24px;
+    margin-left: 35px;
+    vertical-align: middle;
+}
+
+.focused-icon {
+    display: none;
+}
+
+section {
+    height: 350px;
+}
+
+section p {
+    font-family: 'Helvetica';
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+}
+
+/* animate position of nav div */
+#Step1:target ~ main nav #moving-nav-box {top:0px; transition:.5s;}
+#Step2:target ~ main nav #moving-nav-box {top:62px; transition:.5s;}
+#Step3:target ~ main nav #moving-nav-box {top:124px; transition:.5s;}
+#Step4:target ~ main nav #moving-nav-box {top:186px; transition:.5s;}
+#Step5:target ~ main nav #moving-nav-box {top:248px; transition:.5s;}
+#Step6:target ~ main nav #moving-nav-box {top:310px; transition:.5s;}
+#Step7:target ~ main nav #moving-nav-box {top:372px; transition:.5s;}
+
+
+/* animate position of content div
+when href is selected, call a tag with id same as href, then target these elements, focus will work but will break the transition animation
+*/
+#Step1:target ~ main #main-content-set-absolute #content-set-relative #content {top:0px; transition:1s;}
+#Step2:target ~ main #main-content-set-absolute #content-set-relative #content {top:-350px; transition:1s;}
+#Step3:target ~ main #main-content-set-absolute #content-set-relative #content {top:-700px; transition:1s;}
+#Step4:target ~ main #main-content-set-absolute #content-set-relative #content {top:-1050px; transition:1s;}
+#Step5:target ~ main #main-content-set-absolute #content-set-relative #content {top:-1400px; transition:1s;}
+#Step6:target ~ main #main-content-set-absolute #content-set-relative #content {top:-1750px; transition:1s;}
+#Step7:target ~ main #main-content-set-absolute #content-set-relative #content {top:-2100px; transition:1s;}
+
+
+/* animate active step font color */
+#Step1:target ~ nav ul #step-1-li a{color: #36abe1;outline: none;}
+#Step2:target ~ nav ul #step-2-li a{color: #36abe1;outline: none;}
+#Step3:target ~ nav ul #step-3-li a{color: #36abe1;outline: none;}
+#Step4:target ~ nav ul #step-4-li a{color: #36abe1;outline: none;}
+#Step5:target ~ nav ul #step-5-li a{color: #36abe1;outline: none;}
+#Step6:target ~ nav ul #step-6-li a{color: #36abe1;outline: none;}
+#Step7:target ~ nav ul #step-7-li a{color: #36abe1;outline: none;}
+
+
+/* show active step icon */
+#Step1:target ~ nav #step-1 .focused-icon {
+    display:inline-block;
+    width:25px;
+    height:25px;
+    margin-right:24px;
+    margin-left: 35px;
+    vertical-align: middle;
+
+}
+#Step2:target ~ nav #step-2 .focused-icon {
+    display: inline-block;
+    width:25px;
+    height:25px;
+    margin-right:24px;
+    margin-left: 35px;
+    vertical-align: middle;
+
+}
+#Step3:target ~ nav #step-3 .focused-icon {
+    display: inline-block;
+    width:25px;
+    height:25px;
+    margin-right:24px;
+    margin-left: 35px;
+    vertical-align: middle;
+}
+#Step4:target ~ nav #step-4 .focused-icon {
+    display: inline-block;
+    width:25px;
+    height:25px;
+    margin-right:24px;
+    margin-left: 35px;
+    vertical-align: middle;
+}
+#Step5:target ~ nav #step-5 .focused-icon {
+    display: inline-block;
+    width:25px;
+    height:25px;
+    margin-right:24px;
+    margin-left: 35px;
+    vertical-align: middle;
+}
+#Step6:target ~ nav #step-6 .focused-icon {
+    display: inline-block;
+    width:25px;
+    height:25px;
+    margin-right:24px;
+    margin-left: 35px;
+    vertical-align: middle;
+}
+#Step7:target ~ nav #step-7 .focused-icon {
+    display: inline-block;
+    width:25px;
+    height:25px;
+    margin-right:24px;
+    margin-left: 35px;
+    vertical-align: middle;
+}
+
+
+/* hide inactive step icon */
+#Step1:target ~ nav #step-1 .display-icon {display: none;}
+#Step2:target ~ nav #step-2 .display-icon {display: none;}
+#Step3:target ~ nav #step-3 .display-icon {display: none;}
+#Step4:target ~ nav #step-4 .display-icon {display: none;}
+#Step5:target ~ nav #step-5 .display-icon {display: none;}
+#Step6:target ~ nav #step-6 .display-icon {display: none;}
+#Step7:target ~ nav #step-7 .display-icon {display: none;}
+
+
+
+
+
+
+
+
+
+
+
+
