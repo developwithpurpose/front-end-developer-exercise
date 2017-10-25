@@ -1,7 +1,6 @@
 body {
     margin: 0 auto;
     background-color: #bbbfc2;
-/*    height: 1000px;*/
 }
 
 img {
@@ -94,8 +93,6 @@ nav {
     left: 0;
 }
 
-
-
 nav ul {
     position: relative;
     margin-top: 0;
@@ -121,9 +118,7 @@ nav li{
     list-style: none;
     border-bottom: 2px solid white;
     text-align: right;
-/*    height: 60px;*/
     width: 100%;
-
 }
 
 nav ul li a {
@@ -162,26 +157,25 @@ section p {
 }
 
 /* animate position of nav div */
-#Step1:target ~ nav #moving-nav-box {top:0px; transition:.5s;}
-#Step2:target ~ nav #moving-nav-box {top:62px; transition:.5s;}
-#Step3:target ~ nav #moving-nav-box {top:124px; transition:.5s;}
-#Step4:target ~ nav #moving-nav-box {top:186px; transition:.5s;}
-#Step5:target ~ nav #moving-nav-box {top:248px; transition:.5s;}
-#Step6:target ~ nav #moving-nav-box {top:310px; transition:.5s;}
-#Step7:target ~ nav #moving-nav-box {top:372px; transition:.5s;}
+#Step1:target ~ main nav #moving-nav-box {top:0px; transition:.5s;}
+#Step2:target ~ main nav #moving-nav-box {top:62px; transition:.5s;}
+#Step3:target ~ main nav #moving-nav-box {top:124px; transition:.5s;}
+#Step4:target ~ main nav #moving-nav-box {top:186px; transition:.5s;}
+#Step5:target ~ main nav #moving-nav-box {top:248px; transition:.5s;}
+#Step6:target ~ main nav #moving-nav-box {top:310px; transition:.5s;}
+#Step7:target ~ main nav #moving-nav-box {top:372px; transition:.5s;}
 
 
 /* animate position of content div
 when href is selected, call a tag with id same as href, then target these elements, focus will work but will break the transition animation
 */
-#Step1:target ~ #main-content-set-absolute #content-set-relative #content {top:0px; transition:1s;}
-#Step2:target ~ #main-content-set-absolute #content-set-relative #content {top:-350px; transition:1s;}
-#Step3:target ~ #main-content-set-absolute #content-set-relative #content {top:-700px; transition:1s;}
-#Step4:target ~ #main-content-set-absolute #content-set-relative #content {top:-1050px; transition:1s;}
-#Step5:target ~ #main-content-set-absolute #content-set-relative #content {top:-1400px; transition:1s;}
-#Step6:target ~ #main-content-set-absolute #content-set-relative #content {top:-1750px; transition:1s;}
-#Step7:target ~ #main-content-set-absolute #content-set-relative #content {top:-2100px; transition:1s;}
-
+#Step1:target ~ main #main-content-set-absolute #content-set-relative #content {top:0px; transition:1s;}
+#Step2:target ~ main #main-content-set-absolute #content-set-relative #content {top:-350px; transition:1s;}
+#Step3:target ~ main #main-content-set-absolute #content-set-relative #content {top:-700px; transition:1s;}
+#Step4:target ~ main #main-content-set-absolute #content-set-relative #content {top:-1050px; transition:1s;}
+#Step5:target ~ main #main-content-set-absolute #content-set-relative #content {top:-1400px; transition:1s;}
+#Step6:target ~ main #main-content-set-absolute #content-set-relative #content {top:-1750px; transition:1s;}
+#Step7:target ~ main #main-content-set-absolute #content-set-relative #content {top:-2100px; transition:1s;}
 
 
 /* animate active step font color */
@@ -221,7 +215,6 @@ when href is selected, call a tag with id same as href, then target these elemen
     margin-left: 35px;
     vertical-align: middle;
 }
-
 #Step4:target ~ nav #step-4 .focused-icon {
     display: inline-block;
     width:25px;
@@ -230,7 +223,6 @@ when href is selected, call a tag with id same as href, then target these elemen
     margin-left: 35px;
     vertical-align: middle;
 }
-
 #Step5:target ~ nav #step-5 .focused-icon {
     display: inline-block;
     width:25px;
@@ -239,7 +231,6 @@ when href is selected, call a tag with id same as href, then target these elemen
     margin-left: 35px;
     vertical-align: middle;
 }
-
 #Step6:target ~ nav #step-6 .focused-icon {
     display: inline-block;
     width:25px;
@@ -248,7 +239,6 @@ when href is selected, call a tag with id same as href, then target these elemen
     margin-left: 35px;
     vertical-align: middle;
 }
-
 #Step7:target ~ nav #step-7 .focused-icon {
     display: inline-block;
     width:25px;
