@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+
+body{
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: #bbbfc2;
+}
+
+a {
+  color: #6fbee7;
+}
+
+header {
+  top: 0;
+  margin: 0 auto;
+  width: 980px;
+  height: 276px;
+}
+
+header img {
+  width: 100%;
+  height: 276px;
+}
+
+#header_image:before {
+  position: absolute;
+  left: -15px;
+  background: url("assets/images/shadow_left.jpg");
+}
+
+.container:before {
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  background: url(/assets/images/shadow_left.jpg);
+}
+
+.container {
+  margin: 0 auto;
+  top: 0px;
+  position: relative;
+  height: auto;
+  width: 980px;
+  background-color: #ffffff;
+}
+
+.content_container {
+  background-color: #ffffff;
+  display: inline !important;
+}
+
+.babysteps_container {
+  width: 250px;
+  height: 700px;
+  background: linear-gradient(90deg, #ebeced 97%, #d1d5d6);
+}
+
+.babysteps {
+  margin-top: 60px;
+}
+
+.babysteps ul li {
+  list-style: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  left: -40px;
+  position: relative;
+  color: #9ba0a4;
+  width: 227px;
+  line-height: 60px;
+  text-align: right;
+  padding-right: 24px;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+}
+.babysteps ul li a {
+  text-decoration: none;
+  color: #9ba0a4;
+}
+
+.babysteps img {
+  top:6px;
+  left: 5px;
+  position: relative;
+}
+
+#babystep-1 {
+  display: block;
+}
+
+#babystep-2 {
+  display: none;
+}
+
+#babystep-3 {
+  display: none;
+}
+
+#babystep-4 {
+  display: none;
+}
+
+#babystep-5 {
+  display: none;
+}
+
+#babystep-6 {
+  display: none;
+}
+
+#babystep-7 {
+  display: none;
+}
+
+.current {
+  color: #36abe1 !important;
+  background-color: #ffffff;
+}
+.current a {
+  color: #36abe1 !important;
+  background-color: #ffffff;
+}
+
+.active {
+  display: block;
+}
+
+.hide {
+  display: none !important;
+}
+
+#selector {
+  background-color: #ffffff;
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+#step_1 {
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 0;
+  width: 30px;
+  height: 26px;
+}
+
+#step_1-on {
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -175px;
+  width: 30px;
+  height: 26px;
+}
+
+#step_2 {
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -26px;
+  width: 30px;
+  height: 26px;
+}
+
+#step_2-on {
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -198px;
+  width: 30px;
+  height: 26px;
+}
+
+#step_3 {
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -47px;
+  width: 30px;
+  height: 26px;
+}
+
+#step_3-on {
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -224px;
+  width: 30px;
+  height: 26px;
+}
+
+#step_4 {
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -72px;
+  width: 30px;
+  height: 26px;
+}
+
+#step_4-on {
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -249px;
+  width: 30px;
+  height: 26px;
+}
+
+#step_5 {
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -99px;
+  width: 30px;
+  height: 26px;
+}
+
+#step_5-on{
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -274px;
+  width: 30px;
+  height: 26px;
+}
+
+#step_6 {
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -125px;
+  width: 30px;
+  height: 25px;
+}
+
+#step_6-on{
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -300px;
+  width: 30px;
+  height: 25px;
+}
+
+#step_7 {
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -150px;
+  width: 30px;
+  height: 25px;
+}
+
+#step_7-on {
+  background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -325px;
+  width: 30px;
+  height: 25px;
+}
+
+.content{
+  top: 320px;
+  left: 300px;
+  right: 70px;
+  height: auto;
+  position: absolute;
+}
+
+#description {
+  position: relative;
+  margin-top: 24px;
+  width: 600px;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 13px;
+  color: #65686f;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+#friends {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 13px;
+  color: #65686f;
+  font-weight: 400;
+}
