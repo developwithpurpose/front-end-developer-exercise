@@ -1,0 +1,30 @@
+body {
+	background-color: #bbbfc2
+}
+
+.container {
+	margin: 0 auto;
+	width: 980px;
+}
+
+.header {
+	position: relative;
+}
+.header__text {
+	color: #ffffff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 1.3;
+	position: absolute;
+	right: 70px;
+	text-align: right;
+	top: 43px;
+}
+.header__text-bold {
+	display: block;
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 48px;
+	text-transform: uppercase;
+}
