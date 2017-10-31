@@ -1,7 +1,5 @@
 (function($) {
-	var $navItem = $('.js-step-nav');
-
-	$navItem.on('click', function() {
+	$('.js-step-nav').on('click', function() {
 		var $this = $(this);
 
 		$this.addClass('-is-selected')
@@ -12,6 +10,8 @@
 			.addClass('-is-active')
 			.siblings()
 			.removeClass('-is-active');
+
+		$('.js-steps-nav-highlighter').css('top', $this.index() * 60);
 	});
 
 	$.ajax({
@@ -51,7 +51,7 @@
 
 				if (count > 0) {
 					$('.js-step').eq(i - 1)
-						.append(people + 'also in Baby Step ' + i);
+						.append('<p><strong>' + people + 'also in Baby Step ' + i + '</strong></p>');
 				}
 			}
 		}
