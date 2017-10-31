@@ -19,7 +19,29 @@ a {
 	text-decoration: none;
 }
 
-/* Container */
+/* Typography */
+h2,
+h3 {
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 20px;
+}
+h2 {
+	color: #36abe1;
+	font-weight: 600;
+	font-size: 30px;
+	margin: 0 0 8px;
+}
+h3 {
+	color: #5c6366;
+	font-weight: 300;
+	font-size: 18px;
+	margin: 0;
+}
+p {
+	margin: 0 0 18px;
+}
+
+/* Containers */
 .container {
 	margin: 0 auto;
 	position: relative;
@@ -67,7 +89,7 @@ a {
 	position: absolute;
 	right: 70px;
 	text-align: right;
-	top: 43px;
+	top: 41px;
 }
 .header__text-bold {
 	display: block;
@@ -94,7 +116,7 @@ a {
     clear: both;
 }
 
-/* Steps */
+/* Step Navigation */
 .steps-nav {
 	background: #ebeced;
 	background: -moz-linear-gradient(left, #ebeced 0%, #d1d5d6 100%);
@@ -106,12 +128,22 @@ a {
 	position: relative;
 	width: 300px;
 }
+.steps-nav:after {
+	background: url('/assets/images/shadow_left_nav.jpg') repeat-y;
+	bottom: 0;
+	content: '';
+	display: block;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
 .steps-nav__list {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	position: relative;
-	z-index: 100;
+	z-index: 200;
 }
 .steps-nav__item {
 	color: #9ba0a4;
@@ -195,20 +227,75 @@ a {
 	position: absolute;
 	right: 0;
 	top: 0;
+	z-index: 100;
 	-webkit-transition: all .25s linear;
 	-moz-transition: all .25s linear;
 	-ms-transition: all .25s linear;
 	-o-transition: all .25s linear;
 	transition: all .25s linear;
 }
+
+/* Steps */
 .steps {
 	float: right;
-	padding: 0 70px;
+	height: 618px;
+	position: relative;
 	width: 680px;
 }
 .step {
-	display: none;
+	left: 70px;
+	opacity: 0;
+	position: absolute;
+	right: 70px;
+	visibility: hidden;
+	-webkit-transition: all .25s linear;
+	-moz-transition: all .25s linear;
+	-ms-transition: all .25s linear;
+	-o-transition: all .25s linear;
+	transition: all .25s linear;
 }
 .step.-is-active {
-	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+.step__header {
+	margin: 18px 0 16px;
+	padding-left: 92px;
+	position: relative;
+}
+.step__header:before {
+	background-image: url('/assets/images/icons/sprites/icons_large.png');
+	background-position: 0 -455px;
+	bottom: 0;
+	content: '';
+	height: 64px;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	width: 77px;
+}
+.step:nth-child(2) .step__header:before {
+	background-position: 0 -520px;
+}
+.step:nth-child(3) .step__header:before {
+	background-position: 0 -585px;
+}
+.step:nth-child(4) .step__header:before {
+	background-position: 0 -649px;
+}
+.step:nth-child(5) .step__header:before {
+	background-position: 0 -712px;
+	height: 68px;
+}
+.step:nth-child(6) .step__header:before {
+	background-position: 0 -778px;
+	height: 64px;
+}
+.step:nth-child(7) .step__header:before {
+	background-position: 0 65px;
+	height: 65px;
+}
+.step__copy {
+	margin-bottom: 31px;
 }
