@@ -1,3 +1,4 @@
+/* Global */
 html {
   box-sizing: border-box;
 }
@@ -8,6 +9,7 @@ body {
 	background-color: #bbbfc2
 }
 
+/* Container */
 .container {
 	margin: 0 auto;
 	position: relative;
@@ -42,6 +44,7 @@ body {
 	right: -15px;
 }
 
+/* Header */
 .header {
 	position: relative;
 }
@@ -67,6 +70,7 @@ body {
 	display: block;
 }
 
+/* Main */
 .main {
 	background-color: #ffffff;
 	padding-top: 60px;
@@ -80,6 +84,7 @@ body {
     clear: both;
 }
 
+/* Steps */
 .steps-nav {
 	background: #ebeced;
 	background: -moz-linear-gradient(left, #ebeced 0%, #d1d5d6 100%);
@@ -90,7 +95,6 @@ body {
 	height: 618px;
 	width: 300px;
 }
-
 .steps {
 	float: right;
 	padding: 0 70px;

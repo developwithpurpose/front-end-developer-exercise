@@ -27,7 +27,7 @@
 					steps[babyStep] = [];
 				}
 
-				steps[babyStep].push([friends[i].firstName + ' ' + friends[i].lastName]);
+				steps[babyStep].push('<a href="#">' + [friends[i].firstName + ' ' + friends[i].lastName] + '</a>');
 			}
 
 			for (var i in steps) {
