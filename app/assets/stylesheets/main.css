@@ -1,10 +1,45 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 body {
 	background-color: #bbbfc2
 }
 
 .container {
 	margin: 0 auto;
+	position: relative;
 	width: 980px;
+}
+.container:after,
+.inner:before,
+.inner:after {
+	display: block;
+	content: '';
+	position: absolute;
+}
+.container:after {
+	background-image: url('/assets/images/shadow_bottom.jpg');
+	bottom: 0;
+	height: 30px;
+	width: 980px;
+}
+.inner:before,
+.inner:after {
+	background-repeat: repeat-y;
+	height: 724px;
+	top: 0;
+	width: 15px;
+}
+.inner:before {
+	background-image: url('/assets/images/shadow_left.jpg');
+	left: -15px;
+}
+.inner:after {
+	background-image: url('/assets/images/shadow_right.jpg');
+	right: -15px;
 }
 
 .header {
@@ -27,4 +62,43 @@ body {
 	font-weight: 700;
 	line-height: 48px;
 	text-transform: uppercase;
+}
+.header__img {
+	display: block;
+}
+
+.main {
+	background-color: #ffffff;
+	padding-top: 60px;
+}
+.main:before,
+.main:after {
+	content: ' ';
+    display: table;
+}
+.main:after {
+    clear: both;
+}
+
+.steps-nav {
+	background: #ebeced;
+	background: -moz-linear-gradient(left, #ebeced 0%, #d1d5d6 100%);
+	background: -webkit-linear-gradient(left, #ebeced 0%,#d1d5d6 100%);
+	background: linear-gradient(to right, #ebeced 0%,#d1d5d6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
+	float: left;
+	height: 618px;
+	width: 300px;
+}
+
+.steps {
+	float: right;
+	padding: 0 70px;
+	width: 680px;
+}
+.step {
+	display: none;
+}
+.step.-is-active {
+	display: block;
 }
