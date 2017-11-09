@@ -13,6 +13,7 @@ p {
   line-height: 18px;
   color      : #65686F;
   margin-top : 24px;
+  margin-bottom : 0px;
 }
 
 a {
@@ -174,6 +175,7 @@ a {
   font-weight: 600;
   font-size  : 13px;
   line-height: 18px;
+  margin-top : 40px;
   color      : #65686F;
 }
 
