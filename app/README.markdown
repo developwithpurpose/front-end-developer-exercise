@@ -2,8 +2,8 @@ Document your submission here (optional, but recommended)
 
 My skill set is not necessary focused on Front-end development.  That being said, I
 usually use an application framework (BlazeJS or React) as well as a CSS framework
-like Materializecss.  My skills with vanilla CSS and JS are a bit rusty, so this
-took a bit longer than it should have.  ( lately I've been doing alot with C )
+like Materializecss.  My skills with vanilla CSS and JS are a bit rusty, this took
+me longer than it should have.  ( lately I've been doing alot with C )
 
 NOTES:
 --------------------------------------------------------------------------------
@@ -38,4 +38,20 @@ When that class is clicked it removes the class "selected" from all doms with cl
 that have the class bs_X (where X is the step contained in the e.target.attributes.step)
 After it properly updates the nav items colors, it will slide the tab to the correct
 nav item, then it will scroll the #content_babysteps_panel to the correct position
+--------------------------------------------------------------------------------
+
+HTML/CSS
+--------------------------------------------------------------------------------
+I'm not particularly amazing with CSS.  I made all of the class names easily readable
+and understandable so no real explanation should be necessary.  The website layout
+is in no way dynamic, it was designed to be mockup as closely as possible in a
+reasonable amount of time.
+--------------------------------------------------------------------------------
+
+PRODUCTION
+--------------------------------------------------------------------------------
+One of the objectives of the README was to treat the deliverable as production.
+For this reason I removed the unnecessary files from the app directory.  That is
+also why I chose the sprites over the icons and the headers. (reduce calls to server
+and bandwidth usage) The only thing left would be to minify the code.
 --------------------------------------------------------------------------------
