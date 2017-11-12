@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" >
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet">
 	<link rel="stylesheet">
@@ -8,10 +9,21 @@
 	<title>Front-End Developer Exercise</title>
 </head>
 <body>
+	<script src="javascripts/npm-classListPolyFill.js"></script>
 	<script src="javascripts/load.js"></script>
+	<!-- For No JavaScript Version of Website -->
+	<noscript>
+		<style type="text/css">
+			hidden {display:block;}
+			.button-nav  {display: none;}
+			.section-content { width: 100%; }
+		</style>
+		<div>
+
+		</div>
+	</noscript>
 	<div class="container">
-		<div class="leftShadow"></div><!--  <img class="rightShadow" src="/images/shadow_right.jpg" />
- -->
+		<div class="leftShadow"></div>
 		<div class="rightShadow"></div>
 		<div class="header">
 			<div class="img">
@@ -26,40 +38,39 @@
 			</div>
 		</div>
 		<div class="content">
-			<!-- Hide this button Nav bar in IE9, etc. and show the whole section content section -->
 			<div class="button-nav" id="navbar">
 				<div class="navShadow"></div>
 				<div class="button selected" id="step1">
 					Baby Step 1
-					<div class="smIcon step1img-sm-bl"></div>
+					<div class="smIcon step1img-sm-bl" disabled="disabled"></div>
 				</div>
 				<div class="button" id="step2">
 					Baby Step 2
-					<div class="smIcon step2img-sm"></div>
+					<div class="smIcon step2img-sm" disabled="disabled"></div>
 				</div>
 				<div class="button" id="step3">
 					Baby Step 3
-					<div class="smIcon step3img-sm"></div>
+					<div class="smIcon step3img-sm" disabled="disabled"></div>
 				</div>
 				<div class="button" id="step4">
 					Baby Step 4
-					<div class="smIcon step4img-sm"></div>
+					<div class="smIcon step4img-sm" disabled="disabled"></div>
 				</div>
 				<div class="button" id="step5">
 					Baby Step 5
-					<div class="smIcon step5img-sm"></div>
+					<div class="smIcon step5img-sm" disabled="disabled"></div>
 				</div>
-				<div class="button" id="step6">
+				<div class="button" id="step6">	
 					Baby Step 6
-					<div class="smIcon step6img-sm"></div>
+					<div class="smIcon step6img-sm" disabled="disabled"></div>
 				</div>
-				<div class="button" id="step7">
+				<div class="button" id="step7">	
 					Baby Step 7
-					<div class="smIcon step7img-sm"></div>
+					<div class="smIcon step7img-sm" disabled="disabled"></div>
 				</div>
 			</div>
 			<div class="section-content" id="steps">
-				<!-- show and hide depending on current selection, do a document query class thing -->
+				<!-- Show and hide depending on current selection -->
 				<!-- Baby Step 1 -->
 				<div class="step-content" id="step1Content">
 					<div class="stepHeader">
@@ -79,7 +90,7 @@
 					</div><span id="friends1" class="friendText"></span>
 				</div>
 				<!-- Baby Step 2 -->
-				<div class="step-content hidden" id="step2Content">
+				<div class="step-content" id="step2Content">
 					<div class="stepHeader">
 						<div class="lgIcon step2img-bl"></div>
 						<div class="title">
@@ -97,7 +108,7 @@
 					</div><span id="friends2" class="friendText"></span>
 				</div>
 				<!-- Baby Step 3 -->
-				<div class="step-content hidden" id="step3Content">
+				<div class="step-content" id="step3Content">
 					<div class="stepHeader">
 						<div class="lgIcon step3img-bl"></div>
 						<div class="title">
@@ -115,7 +126,7 @@
 					</div><span id="friends3" class="friendText"></span>
 				</div>
 				<!-- Baby Step 4 -->
-				<div class="step-content hidden" id="step4Content">
+				<div class="step-content" id="step4Content">
 					<div class="stepHeader">
 						<div class="lgIcon step4img-bl"></div>
 						<div class="title">
@@ -133,7 +144,7 @@
 					</div><span id="friends4" class="friendText"></span>				
 				</div>
 				<!-- Baby Step 5 -->
-				<div class="step-content hidden" id="step5Content">
+				<div class="step-content" id="step5Content">
 					<div class="stepHeader">
 						<div class="lgIcon step5img-bl"></div>
 						<div class="title">
@@ -151,7 +162,7 @@
 					</div><span id="friends5" class="friendText"></span>					
 				</div>
 				<!-- Baby Step 6 -->
-				<div class="step-content hidden" id="step6Content">
+				<div class="step-content" id="step6Content">
 					<div class="stepHeader">
 						<div class="lgIcon step6img-bl"></div>
 						<div class="title">
@@ -169,7 +180,7 @@
 					</div><span id="friends6" class="friendText"></span>	
 				</div>
 				<!-- Baby Step 7 -->
-				<div class="step-content hidden" id="step7Content">
+				<div class="step-content" id="step7Content">
 					<div class="stepHeader">
 						<div class="lgIcon step7img-bl"></div>
 						<div class="title">

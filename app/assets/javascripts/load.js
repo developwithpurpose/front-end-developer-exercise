@@ -1,4 +1,11 @@
 function showDiv(e) {
+
+	var target = e.target;
+	// For IE9
+	if(!hasClass(e.target,'button')) {
+		target = target.parentElement;
+	}
+
 	// Deselect current button 
 	var navElements = document.getElementById('navbar').querySelectorAll('div.button');
 	for (var i = 0, max = navElements.length; i < max; i++) {
@@ -7,26 +14,32 @@ function showDiv(e) {
 			navElements[i].classList.remove('selected');
 		}
 		// Deselect image
-		// NOT FINDING OTHERS...
 		if(navElements[i].querySelector('div.smIcon') && (navElements[i].querySelector('div.smIcon')).classList.contains('step' + (i+1) + 'img-sm-bl')){
-			(navElements[i].querySelector('div.smIcon')).classList.replace('step' + (i+1) + 'img-sm-bl', 'step' + (i+1) + 'img-sm');
+			(navElements[i].querySelector('div.smIcon')).classList.remove('step' + (i+1) + 'img-sm-bl');
+			(navElements[i].querySelector('div.smIcon')).classList.add('step' + (i+1) + 'img-sm');
+
 		}
 
 	}
 	// Now, select the clicked button
-	e.target.classList.add('selected');
+	target.classList.add('selected');
 	// and highlight the button image
-	e.target.querySelector('div.smIcon').classList.replace(e.target.id + 'img-sm', e.target.id + 'img-sm-bl');
+	target.querySelector('div.smIcon').classList.remove(target.id + 'img-sm');
+	target.querySelector('div.smIcon').classList.add(target.id + 'img-sm-bl');
 
 	// Hide previous section content
-	document.querySelectorAll('div.step-content').forEach(function(element) {
-	 	element.classList.add('hidden');
-	});
+	var elements = document.querySelectorAll('div.step-content');
+	// Replace forEach for IE9
+	for(element in elements) {
+		if(typeof elements[element].classList !== "undefined") {
+			elements[element].classList.add('hidden');
+	 	}
+	}
 	// Now, show the selected content
-	document.getElementById(e.target.id + "Content").classList.remove('hidden');
+	document.getElementById(target.id + "Content").classList.remove('hidden');
 
 	// Now, check to see which friends are on the step and update the page. This may change, so it should be checked each time
-	let stepNum = e.target.id.replace("step","");
+	var stepNum = target.id.replace("step","");
 	document.getElementById("friends" + stepNum).innerHTML = getFriends(stepNum);
 }
 
@@ -66,7 +79,7 @@ function processNames(numFriends, friends) {
 		joinStr = " and ";
 	} 
 	for(person in friends) {
-		let name = friends[person].firstName + " " + friends[person].lastName;
+		var name = friends[person].firstName + " " + friends[person].lastName;
 		name = '<a href=\"\#\">' + name + '</a>';
 		if(numFriends == 1) {
 			return name;
@@ -101,5 +114,18 @@ window.onload = function() {
 
 	// Update the first friends section on start up
 	document.getElementById("friends" + 1).innerHTML = getFriends(1);
+
+	// Hide all but startng baby step content on startup
+	var contentElements = document.querySelector('div.section-content').querySelectorAll('div.step-content');
+	var counter = 0;
+	for(element in contentElements) {
+		if(counter > 0 && typeof contentElements[element].classList !== "undefined") {
+			contentElements[element].classList.add('hidden');
+	 	}
+	 	counter++;
+	}
+
 }
 
+// IE9 function from https://stackoverflow.com/questions/5085567/hasclass-with-javascript
+function hasClass( target, className ) { return new RegExp('(\\s|^)' + className + '(\\s|$)').test(target.className); }

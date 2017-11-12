@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    /* + 30px to accomodate shadows */
+    /* +30px to accomodate shadows */
     width: 1010px;
     background-color: #fff;
     margin: auto;
@@ -22,6 +22,7 @@ body {
 }
 
 .leftShadow {
+    /* Use shadow images instead of styling for IE9 support */
     left: 0;
     position: absolute;
     top: 0; 
@@ -33,6 +34,7 @@ body {
 }
 
 .rightShadow {
+    /* Use shadow images instead of styling for IE9 support */
     right: 0;
     position: absolute;
     top: 0; 
@@ -130,7 +132,7 @@ body {
     margin-left: 24px;
     vertical-align: middle;
     /* Prevent click events on sprite */
-    pointer-events:none;
+    pointer-events: none;
 }
 
 /* Define sprites for small icons */
