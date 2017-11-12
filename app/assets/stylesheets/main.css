@@ -1,0 +1,270 @@
+html {
+	background-color: #bbbfc2;
+}
+
+/* Normalize body content to get header to hug top of browser */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    /* +30px to accomodate shadows */
+    width: 1010px;
+    background-color: #fff;
+    margin: auto;
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 3px #ccc;
+    /* images for IE8+ support */
+    overflow: hidden;
+    position: relative;
+}
+
+.leftShadow {
+    /* Use shadow images instead of styling for IE9 support */
+    left: 0;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    width: 15px;
+    background: url("/images/shadow_left.jpg") no-repeat;
+    background-size: cover;
+    background-color: #bbbfc2;
+}
+
+.rightShadow {
+    /* Use shadow images instead of styling for IE9 support */
+    right: 0;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    width: 15px;
+    background: url("/images/shadow_right.jpg") no-repeat;
+    background-size: cover;
+    background-color: #bbbfc2;
+}
+
+.header {
+    width: 100%;
+    height: 276px;
+}
+
+.img {
+    background: url("/images/header.jpg") no-repeat center;
+    background-size: contain;
+    margin: auto;
+    height: 276px;
+
+}
+
+.header .img .textContainer {
+    margin-top: 50px;
+    margin-right: 85px; 
+    /* also accomodate 15px shadow*/
+    width: 50%;
+    text-align: right;
+    float: right;
+
+}
+
+.header .textContainer .sub {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    font-style: normal;
+    color: #fff;
+    z-index: 2;
+}
+
+.header .textContainer .main {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    font-style: normal;
+
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.content {
+	margin-top: 60px;
+    background-color: #fff;
+    height: 100%;
+}
+
+
+.button-nav {
+    /* Needs actual width */
+    width: 30%;
+    background-color: #ebeced;
+    background: linear-gradient(to right, #ebeced, #d1d5d6); /* Standard syntax */
+    height: 100%;
+    display: inline-block;
+}
+
+.button-nav .button {
+    cursor: pointer;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 60px;
+
+    color: #9ba0a4;
+    padding-right: 24px;
+    text-align: right;
+    background: url("/images/shadow_left_nav.jpg") no-repeat bottom;
+}
+
+.button-nav .selected {
+    background-color: #fff;
+    z-index: 1;
+    color: #36abe1;
+}
+
+/* Define nav button sprite container */
+.smIcon {
+    width: 30px;
+    height: 25px;
+    display: inline-block; 
+    margin-left: 24px;
+    vertical-align: middle;
+    /* Prevent click events on sprite */
+    pointer-events: none;
+}
+
+/* Define sprites for small icons */
+/* Could re-use large sprites for small icons, but will not look 'sharp' */
+.step1img-sm { background: url('/images/icons/sprites/icons_small.png') 0 0; }
+.step2img-sm { background: url('/images/icons/sprites/icons_small.png') 0 -25px; }
+.step3img-sm { background: url('/images/icons/sprites/icons_small.png') 0 -50px; }
+.step4img-sm { background: url('/images/icons/sprites/icons_small.png') 0 -75px; }
+.step5img-sm { background: url('/images/icons/sprites/icons_small.png') 0 -100px; }
+.step6img-sm { background: url('/images/icons/sprites/icons_small.png') 0 -125px; }
+.step7img-sm { background: url('/images/icons/sprites/icons_small.png') 0 -150px; }
+/* Define blue sprites for small icons */
+.step1img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -175px; }
+.step2img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -200px; }
+.step3img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -225px; }
+.step4img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -250px; }
+.step5img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -275px; }
+.step6img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -300px; }
+.step7img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -325px; }
+
+.section-content {
+    float: right;
+    width: 65%;
+}
+
+/* animation from https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
+.animate {
+  animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.step-content {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.stepHeader .title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.stepHeader .topText {
+    font-size: 30px;
+    font-weight: 600;
+    color: #36abe1;
+    line-height: 20px;
+
+}
+
+.stepHeader .subText {
+    font-size: 18px;
+    font-weight: 300;
+    color: #5c6366;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.step-content .sectionText {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #65686f;
+    margin-top: 24px;
+    /* Value less than annotated mockup because default paragraph margin of 16px or 1em */
+    margin-bottom: 24px;
+}
+
+.friendText {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+}
+
+.friendText a {
+    color: #6fbee7;
+    text-decoration: none; 
+}
+
+
+.lgIcon {
+    margin-right: 10px;
+    width: 77px;
+    height: 64px;
+    display: inline-block; 
+    vertical-align: middle;
+}
+
+/* Define sprites for steps (for page without JavaScript)  */
+.step1img { background: url('/images/icons/sprites/icons_large.png') 0 0; }
+.step2img { background: url('/images/icons/sprites/icons_large.png') 0 -65px; }
+.step3img { background: url('/images/icons/sprites/icons_large.png') 0 -130px; }
+.step4img { background: url('/images/icons/sprites/icons_large.png') 0 -195px; }
+.step5img { background: url('/images/icons/sprites/icons_large.png') 0 -260px; }
+.step6img { background: url('/images/icons/sprites/icons_large.png') 0 -325px; }
+.step7img { background: url('/images/icons/sprites/icons_large.png') 0 -390px; }
+
+/* Define blue sprites for steps  */
+.step1img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -455px; }
+.step2img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -520px; }
+.step3img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -585px; }
+.step4img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -648px; }
+.step5img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -713px; }
+.step6img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -778px; }
+.step7img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -842px; }
+
+
+.hidden {
+    display: none;
+}
