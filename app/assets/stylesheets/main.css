@@ -16,55 +16,47 @@ body {
     -moz-box-shadow: 0 0 3px #ccc;
     -webkit-box-shadow: 0 0 3px #ccc;
     box-shadow: 0 0 3px #ccc;
-    /* images for IE8 */
+    /* images for IE8+ support */
+    overflow: hidden;
+    position: relative;
 }
 
 .leftShadow {
-    float: left;
-/*    position: absolute;
-    margin-top: 0px;
-    margin-left: -15px;*/
-/*    top: 0px;
-    left: -15px;
-    z-index: 100;*/
+    left: 0;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    width: 15px;
+    background: url("/images/shadow_left.jpg") no-repeat;
+    background-size: cover;
+    background-color: #bbbfc2;
 }
 
 .rightShadow {
-/*    margin-left: 15px;
-*//*    position: absolute;
-    margin-right: -10px;*/
-/*    position: absolute;
-    top: 0px;
-    right: -15px;*/
-/*    top: 0px;
-    right: -15px;*/
-    float:right;
+    right: 0;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    width: 15px;
+    background: url("/images/shadow_right.jpg") no-repeat;
+    background-size: cover;
+    background-color: #bbbfc2;
 }
 
 .header {
-/*	background: url("/assets/images/header.jpg") no-repeat;
-    background-size: contain;
-    background-position: center;*/
-/*    max-width: 980px;
-*/    width: 100%;
+    width: 100%;
     height: 276px;
-/*    padding-bottom: 28%;
-*/  
 }
 
 .img {
-    background: url("/assets/images/header.jpg") no-repeat center;
+    background: url("/images/header.jpg") no-repeat center;
     background-size: contain;
     margin: auto;
-/*    max-width: 100%;
-*/    height: 276px;
+    height: 276px;
 
 }
 
 .header .img .textContainer {
-/* Header text stuff should be in this box */
-/*    position: absolute;
-    top: 50px;*/
     margin-top: 50px;
     margin-right: 85px; 
     /* also accomodate 15px shadow*/
@@ -77,18 +69,10 @@ body {
 .header .textContainer .sub {
     font-family: 'Open Sans', sans-serif;
     font-size: 32px;
-    font-weight: 100;
+    font-weight: 300;
     font-style: normal;
     color: #fff;
     z-index: 2;
-
-/*	float: right;
-	display: block;
-
-	margin-top: 50px;
-	margin-right: 70px;
-	width: 50%;
-	text-align: right;*/
 }
 
 .header .textContainer .main {
@@ -100,14 +84,6 @@ body {
     line-height: 48px;
     text-transform: uppercase;
     color: #fff;
-
-/*	float: right;
-	display: block;
-
-	margin-top: 15px;
-	margin-right: 70px;
-	width: 50%;
-	text-align: right;*/
 }
 
 .content {
@@ -116,8 +92,10 @@ body {
     height: 100%;
 }
 
+
 .button-nav {
-    width: 25%;
+    /* Needs actual width */
+    width: 30%;
     background-color: #ebeced;
     background: linear-gradient(to right, #ebeced, #d1d5d6); /* Standard syntax */
     height: 100%;
@@ -125,50 +103,136 @@ body {
 }
 
 .button-nav .button {
+    cursor: pointer;
+
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
+    font-weight: 600;
     line-height: 60px;
 
     color: #9ba0a4;
-/*    margin: 10px;
-*/    width: 100%;
-/*    padding-top: 10px;
-*/    
     padding-right: 24px;
     text-align: right;
-    list-style: none;
-    background: url("/assets/images/shadow_left_nav.jpg") no-repeat bottom;
-    background-size: contain;
-    margin: auto;
-    box-sizing: border-box;
-
-/*    float: right;
-    display: block;   */ 
+    background: url("/images/shadow_left_nav.jpg") no-repeat bottom;
 }
+
+.button-nav .selected {
+    background-color: #fff;
+    z-index: 1;
+    color: #36abe1;
+}
+
+/* Define nav button sprite container */
+.smIcon {
+    width: 30px;
+    height: 25px;
+    display: inline-block; 
+    margin-left: 24px;
+    vertical-align: middle;
+    /* Prevent click events on sprite */
+    pointer-events:none;
+}
+
+/* Define sprites for small icons */
+/* Could re-use large sprites for small icons, but will not look 'sharp' */
+.step1img-sm { background: url('/images/icons/sprites/icons_small.png') 0 0; }
+.step2img-sm { background: url('/images/icons/sprites/icons_small.png') 0 -25px; }
+.step3img-sm { background: url('/images/icons/sprites/icons_small.png') 0 -50px; }
+.step4img-sm { background: url('/images/icons/sprites/icons_small.png') 0 -75px; }
+.step5img-sm { background: url('/images/icons/sprites/icons_small.png') 0 -100px; }
+.step6img-sm { background: url('/images/icons/sprites/icons_small.png') 0 -125px; }
+.step7img-sm { background: url('/images/icons/sprites/icons_small.png') 0 -150px; }
+/* Define blue sprites for small icons */
+.step1img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -175px; }
+.step2img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -200px; }
+.step3img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -225px; }
+.step4img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -250px; }
+.step5img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -275px; }
+.step6img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -300px; }
+.step7img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -325px; }
+
 
 .section-content {
-    width: 70%;
+    float: right;
+    width: 65%;
+}
+
+.step-content {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.stepHeader .title {
     display: inline-block;
-}
-
-.step1img {
-    background: url('/assets/images/icons/sprites/icons_small.png') 0 0;
-    width: 30px;
-    height: 25px;
-    display: inline-block; 
-    margin-left: 24px;
     vertical-align: middle;
-    /*vertical-align: center;*/
 }
 
-.
-.step2img {
-    background: url('/assets/images/icons/sprites/icons_small.png') 0 0;
-    width: 30px;
-    height: 25px;
+.stepHeader .topText {
+    font-size: 30px;
+    font-weight: 600;
+    color: #36abe1;
+    line-height: 20px;
+
+}
+
+.stepHeader .subText {
+    font-size: 18px;
+    font-weight: 300;
+    color: #5c6366;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.step-content .sectionText {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #65686f;
+    margin-top: 24px;
+    /* Value less than annotated mockup because default paragraph margin of 16px or 1em */
+    margin-bottom: 24px;
+}
+
+.friendText {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+}
+
+.friendText a {
+    color: #6fbee7;
+    text-decoration: none; 
+}
+
+
+.lgIcon {
+    margin-right: 10px;
+    width: 77px;
+    height: 64px;
     display: inline-block; 
-    margin-left: 24px;
     vertical-align: middle;
-    /*vertical-align: center;*/
 }
 
+/* Define sprites for steps (for page without JavaScript)  */
+.step1img { background: url('/images/icons/sprites/icons_large.png') 0 0; }
+.step2img { background: url('/images/icons/sprites/icons_large.png') 0 -65px; }
+.step3img { background: url('/images/icons/sprites/icons_large.png') 0 -130px; }
+.step4img { background: url('/images/icons/sprites/icons_large.png') 0 -195px; }
+.step5img { background: url('/images/icons/sprites/icons_large.png') 0 -260px; }
+.step6img { background: url('/images/icons/sprites/icons_large.png') 0 -325px; }
+.step7img { background: url('/images/icons/sprites/icons_large.png') 0 -390px; }
+
+/* Define blue sprites for steps  */
+.step1img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -455px; }
+.step2img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -520px; }
+.step3img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -585px; }
+.step4img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -648px; }
+.step5img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -713px; }
+.step6img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -778px; }
+.step7img-bl { background: url('/images/icons/sprites/icons_large.png') 0 -842px; }
+
+
+.hidden {
+    display: none;
+}

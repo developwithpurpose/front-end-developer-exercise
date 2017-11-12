@@ -1,14 +1,17 @@
 {
   "name": "front-end-developer-exercise",
+  "main": "app/server.js",
   "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
-  "scripts": {
-    "start": "http-server ./app -d false"
+  "dependencies":
+  {
+      "express": "~4.16.0"
   },
-  "devDependencies": {
-    "http-server": "^0.8.0"
+  "scripts": {
+    "start": "node app/server.js",
+    "devstart": "node app/server.js"
   }
 }
