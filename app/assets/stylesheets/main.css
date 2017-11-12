@@ -153,10 +153,40 @@ body {
 .step6img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -300px; }
 .step7img-sm-bl { background: url('/images/icons/sprites/icons_small.png') 0 -325px; }
 
-
 .section-content {
     float: right;
     width: 65%;
+}
+
+/* animation from https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
+.animate {
+  animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 .step-content {

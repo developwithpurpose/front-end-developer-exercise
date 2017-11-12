@@ -1,6 +1,8 @@
 function showDiv(e) {
 
 	var target = e.target;
+	var stepNum = target.id.replace("step","");
+
 	// For IE9
 	if(!hasClass(e.target,'button')) {
 		target = target.parentElement;
@@ -39,8 +41,12 @@ function showDiv(e) {
 	document.getElementById(target.id + "Content").classList.remove('hidden');
 
 	// Now, check to see which friends are on the step and update the page. This may change, so it should be checked each time
-	var stepNum = target.id.replace("step","");
 	document.getElementById("friends" + stepNum).innerHTML = getFriends(stepNum);
+
+	// Last, animate fade-in transition to new content	 
+	document.getElementById("step" + stepNum + "Content").classList.remove('animate');
+	document.getElementById("step" + stepNum + "Content").classList.add('animate');
+
 }
 
 function getFriends (stepNumber) {
