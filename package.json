@@ -9,10 +9,6 @@
     "start": "http-server ./app -d false"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
-  },
-  "dependencies": {
-    "jquery": "^3.2.1",
-    "lodash": "^4.17.4"
+    "jquery": "^3.2.1"
   }
 }

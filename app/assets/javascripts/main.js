@@ -2,16 +2,16 @@
 
 console.log('its hooked');
 
-var defalutBabyStep = '1';
+var defaultBabyStep = '1';
 var friends;
 
 
 $.ajax({
-    url: '../../baby-steps.json',
-    success: (data) => {
-         var friends = data.friends;
-        console.log('friends from ajax', friends);
-        displayFriends(friends)
+    url: "../baby-steps.json",
+    method: "GET",
+    success: function(data){
+        friends = data.friends;
+        displayFriends(friends);
     }
 });
 
@@ -32,15 +32,16 @@ var makeActive = function () {
     $(currentActiveClearIcon).removeClass('hidden');
     $(currentActiveFillIcon).addClass('hidden');
     $('.active').addClass('inactive').removeClass('active');
-    $('#'+ defalutBabyStep).addClass('hidden');
+    // $('#'+ defalutBabyStep).addClass('hidden');
 
     $(currentTab).addClass('active');
     $(stepText).addClass('active');
     $(currentTab).attr('aria-selected', 'true');
-    $('#'+ babyStep).removeClass('hidden');
+    // $('#'+ babyStep).removeClass('hidden');
     $(clearNav).addClass('active');
     $(fillNav).removeClass('hidden');
 
+    defaultBabyStep = babyStep;
     displayFriends();
 
 
@@ -59,13 +60,13 @@ var makeActive = function () {
 $(".baby-step-nav-li").click(makeActive);
 
 
-var displayFriends = function (friends) {
+var displayFriends = function () {
    var stepFriends = [];
+   console.log('friends inside of displayFriends', friends);
    friends.forEach(function(friend) {
-       if(friend.babyStep.toString() === defalutBabyStep){
+       if(friend.babyStep.toString() === defaultBabyStep){
            stepFriends.push(friend)
        }
-        // console.log('friends', friends);
         // console.log('friend', friend);
         // console.log('friendBabyStep', friend.babyStep);
         // console.log('stepFriends', stepFriends);

@@ -1,6 +1,66 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans: 300, 400, 700");
+body {
+  background-color: #bbbfc2; }
+
+main {
+  background-color: #fff;
+  margin: 0 auto;
+  padding-top: 60px;
+  width: 1000px; }
+
+.banner {
+  margin: 0 auto;
+  text-align: center;
+  width: 1000px; }
+
+a {
+  text-decoration: none; }
+
 nav {
   float: left;
+  width: 250px;
+  background: linear-gradient(to right, #ebeced, #d1d5d6); }
+
+nav > ul {
+  list-style: none;
+  padding: 0; }
+
+.active {
+  color: #36abe1;
+  background: white; }
+
+.baby-step-nav-li {
+  border-top: 3px solid white;
   width: 250px; }
+
+.inactive {
+  color: #9ba0a4; }
+
+.nav-icon {
+  float: right;
+  padding: 20px 25px; }
+
+.nav-step-text {
+  font-family: "Source Sans Pro", Helevetica, Sans-Serif;
+  font-size: 18px;
+  line-height: 60px;
+  margin-bottom: 0;
+  text-align: right; }
+
+.baby-step-container {
+  background-color: white;
+  float: right;
+  width: 725px; }
+
+.step-friends {
+  margin-top: 40px; }
+
+.step-header {
+  padding: 0px 0px 24px 70px; }
+
+.dynamic-text {
+  font-family: Helvetica;
+  color: #65686f;
+  font-size: 13px; }
 
 /*# sourceMappingURL=main.css.map */
