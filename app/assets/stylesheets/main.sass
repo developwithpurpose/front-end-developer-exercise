@@ -5,7 +5,7 @@
 
 // background colors
 
-$main-background-color: #bbbfc2
+$main-background-color: #fff
 $nav-background-gradient: linear-gradient(to right, #ebeced, #d1d5d6)
 
 
@@ -74,6 +74,7 @@ nav > ul
 .nav-step-text
   font-family: $nav-font
   font-size: 18px
+  font-weight: 600
   line-height: 60px
   margin-bottom: 0
   text-align: right
@@ -82,11 +83,23 @@ nav > ul
 
 //CONTENT SECTION
 
+
 .baby-step-container
   background-color: white
   float: right
-  width: 725px
+  width: 750px
 
+.hidden
+  display: none
+
+.dynamic-text
+  color: $description-text-color
+  font-family: Helvetica
+  font-size: 13px
+  padding-left: 70px
+
+.step-content
+  padding: 0 70px
 
 .step-friends
   margin-top: 40px
@@ -94,9 +107,46 @@ nav > ul
 .step-header
   padding: 0px 0px 24px 70px
 
-.dynamic-text
-  font-family: Helvetica
-  color: $description-text-color
-  font-size: 13px
+//FLOAT FIX
+
+//.float-fix
+//  zoom: 1
+//  &:before
+//    &:after
+//      content: ''
+//      display: table
+//      clear: both
+
+
+
+
+
+
+
+// ANIMATIONS
+
+.step-1,
+.step-2,
+.step-3,
+.step-4,
+.step-5,
+.step-6,
+.step-7
+  position: relative
+  animation: slide-up 1s ease
+
+
+
+@keyframes slide-up
+  0%
+    transform: translateY(-25%)
+
+  100%
+    transform: translateY(0%)
+
+
+
+
+
 
 

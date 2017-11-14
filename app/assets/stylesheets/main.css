@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans: 300, 400, 700");
 body {
-  background-color: #bbbfc2; }
+  background-color: #fff; }
 
 main {
   background-color: #fff;
@@ -43,6 +43,7 @@ nav > ul {
 .nav-step-text {
   font-family: "Source Sans Pro", Helevetica, Sans-Serif;
   font-size: 18px;
+  font-weight: 600;
   line-height: 60px;
   margin-bottom: 0;
   text-align: right; }
@@ -50,7 +51,19 @@ nav > ul {
 .baby-step-container {
   background-color: white;
   float: right;
-  width: 725px; }
+  width: 750px; }
+
+.hidden {
+  display: none; }
+
+.dynamic-text {
+  color: #65686f;
+  font-family: Helvetica;
+  font-size: 13px;
+  padding-left: 70px; }
+
+.step-content {
+  padding: 0 70px; }
 
 .step-friends {
   margin-top: 40px; }
@@ -58,9 +71,20 @@ nav > ul {
 .step-header {
   padding: 0px 0px 24px 70px; }
 
-.dynamic-text {
-  font-family: Helvetica;
-  color: #65686f;
-  font-size: 13px; }
+.step-1,
+.step-2,
+.step-3,
+.step-4,
+.step-5,
+.step-6,
+.step-7 {
+  position: relative;
+  animation: slide-up 1s ease; }
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(-25%); }
+  100% {
+    transform: translateY(0%); } }
 
 /*# sourceMappingURL=main.css.map */

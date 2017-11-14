@@ -29,29 +29,31 @@ var makeActive = function () {
 
 
 
+
+
+    $('article').addClass('hidden')
     $(currentActiveClearIcon).removeClass('hidden');
     $(currentActiveFillIcon).addClass('hidden');
     $('.active').addClass('inactive').removeClass('active');
-    // $('#'+ defalutBabyStep).addClass('hidden');
 
     $(currentTab).addClass('active');
     $(stepText).addClass('active');
     $(currentTab).attr('aria-selected', 'true');
-    // $('#'+ babyStep).removeClass('hidden');
+    $(`#${babyStep}`).toggleClass('hidden');
     $(clearNav).addClass('active');
+    $(clearNav).addClass('hidden');
     $(fillNav).removeClass('hidden');
-
     defaultBabyStep = babyStep;
     displayFriends();
 
 
-    console.log('clearIcon', clearNav);
-    console.log('this', currentTab);
-    console.log('fillIcon', fillNav);
-    console.log('babyStep', babyStep);
-    console.log('stepText', stepText);
+    // console.log('clearIcon', clearNav);
+    // console.log('this', currentTab);
+    // console.log('fillIcon', fillNav);
+    console.log('babyStep', defaultBabyStep);
+    // console.log('stepText', stepText);
+    // console.log('CAFI', currentActiveFillIcon);
     console.log('CACI', currentActiveClearIcon);
-    console.log('CAFI', currentActiveFillIcon);
 
 };
 
@@ -62,7 +64,7 @@ $(".baby-step-nav-li").click(makeActive);
 
 var displayFriends = function () {
    var stepFriends = [];
-   console.log('friends inside of displayFriends', friends);
+   // console.log('friends inside of displayFriends', friends);
    friends.forEach(function(friend) {
        if(friend.babyStep.toString() === defaultBabyStep){
            stepFriends.push(friend)
@@ -75,22 +77,24 @@ var displayFriends = function () {
     var babyStepText;
 
     switch(stepFriends.length){
+
         case 0:
             babyStepText = '';
             break;
         case 1:
-            babyStepText = `<p class='dynamic-text' <a href="#" class="friend-name">${stepFriends[0].firstName} ${stepFriends[0].lastName}</a> is also on Baby Step ${babyStep} </p>`;
+            babyStepText = `<p class='dynamic-text' <a href="#" class="friend-name">${stepFriends[0].firstName} ${stepFriends[0].lastName}</a> is also on Baby Step ${defaultBabyStep} </p>`;
             break;
         case 2:
-            babyStepText = `<p class='dynamic-text' <a href="#" class="friend-name">${stepFriends[0].firstName} ${stepFriends[0].lastName} and ${stepFriends[1].firstName} ${stepFriends[1].lastName}</a> are also on Baby Step ${babyStep}</p>`;
-            break
+            babyStepText = `<p class='dynamic-text' <a href="#" class="friend-name">${stepFriends[0].firstName} ${stepFriends[0].lastName} and ${stepFriends[1].firstName} ${stepFriends[1].lastName}</a> are also on Baby Step ${defaultBabyStep}</p>`;
+            break;
         case 3:
-            babyStepText = `<p class='dynamic-text' <a href="#" class="friend-name">${stepFriends[0].firstName} ${stepFriends[0].lastName}, ${stepFriends[1].firstName} ${stepFriends[1].lastName}, </a> and ${stepFriends.length -2} other friend is also on Baby Step ${babyStep}</p>`;
+            babyStepText = `<p class='dynamic-text' <a href="#" class="friend-name">${stepFriends[0].firstName} ${stepFriends[0].lastName}, ${stepFriends[1].firstName} ${stepFriends[1].lastName}, </a> and ${stepFriends.length -2} other friend is also on Baby Step ${defaultBabyStep}</p>`;
 
         case 4:
-            babyStepText = `<p class='dynamic-text' <a href="#" class="friend-name">${stepFriends[0].firstName} ${stepFriends[0].lastName}, ${stepFriends[1].firstName} ${stepFriends[1].lastName}, </a> and ${stepFriends.length -2} other friends are also on Baby Step ${babyStep}</p>`;
+            babyStepText = `<p class='dynamic-text' <a href="#" class="friend-name">${stepFriends[0].firstName} ${stepFriends[0].lastName}, ${stepFriends[1].firstName} ${stepFriends[1].lastName}, </a> and ${stepFriends.length -2} other friends are also on Baby Step ${defaultBabyStep}</p>`;
 
     }
+    $('.step-friends').html(babyStepText)
 
 };
 
