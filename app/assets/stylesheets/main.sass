@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans: 300, 400, 700')
+
+// VARIABLES
+
+
+// background colors
+
+$main-background-color: #fff
+$nav-background-gradient: linear-gradient(to right, #ebeced, #d1d5d6)
+
+
+// fonts
+
+$nav-font: "Source Sans Pro", Helevetica, Sans-Serif
+$heading-font: "Source Sans Pro", Helevetica, Sans-Serif
+$description-font: Hevectica, Sans-Serif
+
+$heading-text-color: #36abe1
+$nav-active-text-color: #36abe1
+$nav-inactive-text-color: #9ba0a4
+$description-text-color: #65686f
+
+
+// MAIN STYLES
+
+body
+  background-color: $main-background-color
+
+main
+  background-color: #fff
+  margin: 0 auto
+  padding-top: 60px
+  width: 1000px
+
+.banner
+  margin:  0 auto
+  text-align: center
+  width: 1000px
+
+
+
+// NAV
+
+a
+  text-decoration: none
+
+nav
+  float: left
+  width: 250px
+  background: $nav-background-gradient
+
+
+nav > ul
+  list-style: none
+  padding: 0
+
+.active
+  color: $nav-active-text-color
+  background: white
+
+.baby-step-nav-li
+  border-top: 3px solid white
+  width: 250px
+
+.inactive
+  color: $nav-inactive-text-color
+
+.nav-icon
+  float: right,
+  padding: 20px 25px
+
+.nav-step-text
+  font-family: $nav-font
+  font-size: 18px
+  font-weight: 600
+  line-height: 60px
+  margin-bottom: 0
+  text-align: right
+
+
+
+//CONTENT SECTION
+
+
+.baby-step-container
+  background-color: white
+  float: right
+  width: 750px
+
+.dynamic-text
+  color: $description-text-color
+  font-family: Helvetica
+  font-size: 13px
+  padding-left: 70px
+
+.hidden
+  display: none
+
+
+.step-content
+  padding: 0 70px
+
+.step-friends
+  margin-top: 40px
+
+.step-header
+  padding: 0px 0px 24px 70px
+
+
+// ANIMATIONS
+
+.step-1,
+.step-2,
+.step-3,
+.step-4,
+.step-5,
+.step-6,
+.step-7
+  position: relative
+  animation: slide-up 1s ease
+
+
+
+@keyframes slide-up
+  0%
+    transform: translateY(-25%)
+    -ms-transform: translateY(-25%)
+
+  100%
+    transform: translateY(0%)
+    -ms-transform: translateY(0%)
+
+
+
+
+
+
+

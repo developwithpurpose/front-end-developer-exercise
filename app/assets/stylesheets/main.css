@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans: 300, 400, 700");
+body {
+  background-color: #fff; }
+
+main {
+  background-color: #fff;
+  margin: 0 auto;
+  padding-top: 60px;
+  width: 1000px; }
+
+.banner {
+  margin: 0 auto;
+  text-align: center;
+  width: 1000px; }
+
+a {
+  text-decoration: none; }
+
+nav {
+  float: left;
+  width: 250px;
+  background: linear-gradient(to right, #ebeced, #d1d5d6); }
+
+nav > ul {
+  list-style: none;
+  padding: 0; }
+
+.active {
+  color: #36abe1;
+  background: white; }
+
+.baby-step-nav-li {
+  border-top: 3px solid white;
+  width: 250px; }
+
+.inactive {
+  color: #9ba0a4; }
+
+.nav-icon {
+  float: right;
+  padding: 20px 25px; }
+
+.nav-step-text {
+  font-family: "Source Sans Pro", Helevetica, Sans-Serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 60px;
+  margin-bottom: 0;
+  text-align: right; }
+
+.baby-step-container {
+  background-color: white;
+  float: right;
+  width: 750px; }
+
+.dynamic-text {
+  color: #65686f;
+  font-family: Helvetica;
+  font-size: 13px;
+  padding-left: 70px; }
+
+.hidden {
+  display: none; }
+
+.step-content {
+  padding: 0 70px; }
+
+.step-friends {
+  margin-top: 40px; }
+
+.step-header {
+  padding: 0px 0px 24px 70px; }
+
+.step-1,
+.step-2,
+.step-3,
+.step-4,
+.step-5,
+.step-6,
+.step-7 {
+  position: relative;
+  animation: slide-up 1s ease; }
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(-25%);
+    -ms-transform: translateY(-25%); }
+  100% {
+    transform: translateY(0%);
+    -ms-transform: translateY(0%); } }
+
+/*# sourceMappingURL=main.css.map */

@@ -9,6 +9,6 @@
     "start": "http-server ./app -d false"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "jquery": "^3.2.1"
   }
 }
