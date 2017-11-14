@@ -9,8 +9,6 @@ $main-background-color: #fff
 $nav-background-gradient: linear-gradient(to right, #ebeced, #d1d5d6)
 
 
-
-
 // fonts
 
 $nav-font: "Source Sans Pro", Helevetica, Sans-Serif
@@ -89,14 +87,15 @@ nav > ul
   float: right
   width: 750px
 
-.hidden
-  display: none
-
 .dynamic-text
   color: $description-text-color
   font-family: Helvetica
   font-size: 13px
   padding-left: 70px
+
+.hidden
+  display: none
+
 
 .step-content
   padding: 0 70px
@@ -106,21 +105,6 @@ nav > ul
 
 .step-header
   padding: 0px 0px 24px 70px
-
-//FLOAT FIX
-
-//.float-fix
-//  zoom: 1
-//  &:before
-//    &:after
-//      content: ''
-//      display: table
-//      clear: both
-
-
-
-
-
 
 
 // ANIMATIONS
@@ -140,9 +124,11 @@ nav > ul
 @keyframes slide-up
   0%
     transform: translateY(-25%)
+    -ms-transform: translateY(-25%)
 
   100%
     transform: translateY(0%)
+    -ms-transform: translateY(0%)
 
 
 

@@ -47,13 +47,6 @@ var makeActive = function () {
     displayFriends();
 
 
-    // console.log('clearIcon', clearNav);
-    // console.log('this', currentTab);
-    // console.log('fillIcon', fillNav);
-    console.log('babyStep', defaultBabyStep);
-    // console.log('stepText', stepText);
-    // console.log('CAFI', currentActiveFillIcon);
-    console.log('CACI', currentActiveClearIcon);
 
 };
 
@@ -69,9 +62,7 @@ var displayFriends = function () {
        if(friend.babyStep.toString() === defaultBabyStep){
            stepFriends.push(friend)
        }
-        // console.log('friend', friend);
-        // console.log('friendBabyStep', friend.babyStep);
-        // console.log('stepFriends', stepFriends);
+
    });
 
     var babyStepText;

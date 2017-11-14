@@ -53,14 +53,14 @@ nav > ul {
   float: right;
   width: 750px; }
 
-.hidden {
-  display: none; }
-
 .dynamic-text {
   color: #65686f;
   font-family: Helvetica;
   font-size: 13px;
   padding-left: 70px; }
+
+.hidden {
+  display: none; }
 
 .step-content {
   padding: 0 70px; }
@@ -83,8 +83,10 @@ nav > ul {
 
 @keyframes slide-up {
   0% {
-    transform: translateY(-25%); }
+    transform: translateY(-25%);
+    -ms-transform: translateY(-25%); }
   100% {
-    transform: translateY(0%); } }
+    transform: translateY(0%);
+    -ms-transform: translateY(0%); } }
 
 /*# sourceMappingURL=main.css.map */
