@@ -1,6 +1,7 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 
 const path = require('path')
+const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const webpackConfig = {
@@ -75,5 +76,18 @@ webpackConfig.module.rules.push({
 })
 
 webpackConfig.plugins.push(extractStyles)
+
+if (process.env.NODE_ENV === 'production') {
+  const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+
+  webpackConfig.plugins.push(
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false,
+    }),
+    new UglifyJsPlugin()
+  )
+}
 
 module.exports = webpackConfig

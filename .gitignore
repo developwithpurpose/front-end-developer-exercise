@@ -3,4 +3,3 @@ node_modules/
 .npmrc
 *.log
 .DS_Store
-dist

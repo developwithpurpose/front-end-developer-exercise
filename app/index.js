@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 
   // If there are no active steps, make the first step active by default.
   if (!babySteps.find(s => s.active)) {
-    babySteps[0].active = true
+    babySteps[0] = Object.assign({}, babySteps[0], { active: true })
   }
 
   res.render('index', {
