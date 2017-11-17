@@ -27,7 +27,7 @@
   }
 
   &.large {
-    $height: 65px;
+    $height: 64px;
 
     display: inline-block;
     height: $height;
@@ -37,8 +37,8 @@
 
     @for $i from 1 through length($icons) {
       $icon: nth($icons, $i);
-      $offset: -($height * ($i - 1)) + 1px;
-      $active-offset: -($height * length($icons));
+      $offset: -($height * ($i - 1));
+      $active-offset: -($height * length($icons)) - 10px; // bit rushed, magic number
 
       &.baby-step-icon--#{$icon} {
         background-position: 0 $offset;

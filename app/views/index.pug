@@ -1,13 +1,13 @@
 extends layouts/default
 
-mixin baby-step-icon(name, size)
-  span(class="baby-step-icon baby-step-icon--" + name + " " + size)
+mixin baby-step-icon(name, size, primary)
+  span(class="baby-step-icon baby-step-icon--" + name + " " + size + (primary ? " primary" : ""))
 
 mixin baby-step(step)
   section(class="baby-step" + (step.active ? " active" : "") id=step.title.toLowerCase().replace(/\s+/g, '-'))
     .baby-step__header
       .baby-step__icon
-        +baby-step-icon(step.icon, "large")
+        +baby-step-icon(step.icon, "large", true)
       .baby-step__title-container
         h2.baby-step__title=step.title
         .baby-step__description=step.description
