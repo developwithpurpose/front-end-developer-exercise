@@ -13,43 +13,38 @@
     @for $i from 1 through length($icons) {
       $icon: nth($icons, $i);
       $offset: -($height * ($i - 1));
-      $hover-offset: -($height * length($icons));
+      $active-offset: -($height * length($icons));
 
       &.baby-step-icon--#{$icon} {
         background-position: 0 $offset;
 
-        &.active,
-        &:hover,
+        .active &,
         a:hover & {
-          background-position: 0 ($hover-offset + $offset);
+          background-position: 0 ($active-offset + $offset);
         }
       }
     }
   }
 
   &.large {
-    $height: 60px;
+    $height: 65px;
 
     display: inline-block;
     height: $height;
-    width: 75px;
+    width: 80px;
     background-image: url('/assets/images/icons/sprites/icons_large.png');
     background-repeat: no-repeat;
 
     @for $i from 1 through length($icons) {
       $icon: nth($icons, $i);
-
-      // Excuse the magic numbers, restricted on time and just needed to get it working.
-      $offset: -($height * ($i - 2)) - 2px;
-      $hover-offset: -($height * length($icons)) - 33px;
+      $offset: -($height * ($i - 1)) + 1px;
+      $active-offset: -($height * length($icons));
 
       &.baby-step-icon--#{$icon} {
         background-position: 0 $offset;
 
-        &.active,
-        &:hover,
-        a:hover & {
-          background-position: 0 ($hover-offset + $offset);
+        &.primary {
+          background-position: 0 ($active-offset + $offset);
         }
       }
     }

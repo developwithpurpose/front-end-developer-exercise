@@ -49,14 +49,14 @@ const Navigation = (() => {
 
     // Show the correct step content in the primary viewport
     _.forEach(stepNode => {
-      stepNode.classList.toggle('baby-step--active', stepNode.id === titleId)
+      stepNode.classList.toggle('active', stepNode.id === titleId)
     }, _steps)
 
     // Update the active navigation item
     _.forEach(navItem => {
       const { href } = navItem.querySelector('a')
       const { step } = parseQueryString(decodeURI(href.split('?')[1]))
-      navItem.classList.toggle('baby-step-nav-item--active', step === title)
+      navItem.classList.toggle('active', step === title)
     }, _navItems)
   }
 

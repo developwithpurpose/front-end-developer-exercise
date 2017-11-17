@@ -1,10 +1,10 @@
 extends layouts/default
 
 mixin baby-step-icon(name, size)
-  span(class="baby-step-icon baby-step-icon--" + size)
+  span(class="baby-step-icon baby-step-icon--" + name + " " + size)
 
 mixin baby-step(step)
-  section(class="baby-step" + (step.active ? " baby-step--active" : "") id=step.title.toLowerCase().replace(/\s+/g, '-'))
+  section(class="baby-step" + (step.active ? " active" : "") id=step.title.toLowerCase().replace(/\s+/g, '-'))
     .baby-step__header
       .baby-step__icon
         +baby-step-icon(step.icon, "large")
@@ -13,7 +13,7 @@ mixin baby-step(step)
     .baby-step__content!=step.content
 
 mixin baby-step-nav-item(step)
-  li(class="baby-step-nav-item" + (step.active ? " baby-step-nav-item--active" : ""))
+  li(class="baby-step-nav-item" + (step.active ? " active" : ""))
     a(href="/?step=" + step.title.replace(/\s/g, '%20'))= step.title
       +baby-step-icon(step.icon, "small")
 
