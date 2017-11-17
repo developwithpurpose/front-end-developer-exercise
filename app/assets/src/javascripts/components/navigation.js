@@ -19,6 +19,45 @@ const makeId = _.pipe([
 ])
 
 /**
+ * Converts a list of friends into markup.
+ *
+ * @param {string} stepTitle - the title of the current step
+ * @param {Array<Friend>} friends - the list of friends to transform
+ * @return {string} the raw html string
+ */
+const createFriendListMarkup = (stepTitle, friends) => {
+  const [firstFriend, secondFriend, ...restFriends] = friends
+  const friendLink = ({ firstName, lastName }) =>
+    `<a href="#" class="baby-step__friend">${firstName} ${lastName}</a>`
+
+  switch (friends.length) {
+    case 0:
+      return ''
+    case 1:
+      return `${friendLink(firstFriend)} is also in ${stepTitle}`
+    case 2:
+      return `${friendLink(firstFriend)} and ${friendLink(secondFriend)} are also in ${stepTitle}`
+    default:
+      const friendsStr = restFriends.length === 1 ? 'friend' : 'friends'
+      return `${friendLink(firstFriend)}, ${friendLink(secondFriend)}, and ${restFriends.length} other ${friendsStr} are also in ${stepTitle}`
+  }
+}
+
+const updateStepFriends = (stepNode) => {
+  request.get('/api/baby-steps', (err, res) => {
+    if (err) {
+      // would actually handle this in a real app...
+      return
+    }
+
+    const title = stepNode.querySelector('.baby-step__title').textContent
+    const activeStepIdx = _steps.indexOf(stepNode)
+    const friendsOnStep = _.filter(_.matches({ babyStep: activeStepIdx + 1 }), res.friends)
+    stepNode.querySelector('.baby-step__friends').innerHTML = createFriendListMarkup(title, friendsOnStep)
+  })
+}
+
+/**
  * Handles transitioning the view to display the desired step.
  *
  * @param {string} title - the title of the step that should be shown
@@ -46,40 +85,8 @@ const selectStep = (title) => {
     toggleClass(navItem, 'active', step === title)
   }, _navItems)
 
-  // Update the list of friends for the active step
-  request.get('/api/baby-steps', (err, res) => {
-    if (err) {
-      // would actually handle this in a real app...
-      return
-    }
-
-    const out = activeStepNode.querySelector('.baby-step__friends')
-    const activeStepIdx = _steps.indexOf(activeStepNode)
-    const friendsOnStep = _.filter(_.matches({ babyStep: activeStepIdx + 1 }), res.friends)
-    const remainingFriends = friendsOnStep.slice(2)
-
-    // No output if there are no friends on the current step
-    if (!friendsOnStep.length) {
-      out.innerHTML = ''
-      return
-    }
-
-    let content = ''
-    content += friendsOnStep.slice(0, 2)
-      .map(f => `<a href="#" class="baby-step-friend">${f.firstName} ${f.lastName}</a>`)
-      .join(friendsOnStep.length === 2 ? ' and ' : ', ')
-
-    if (remainingFriends.length) {
-      content += ` and ${remainingFriends.length} other `
-      content += remainingFriends.length === 1 ? `friend` : `friends`
-    }
-
-    content += friendsOnStep.length === 1
-      ? ` is also in ${title}`
-      : ` are also in ${title}`
-
-    out.innerHTML = content
-  })
+  // Ensure friends list gets updated as well
+  updateStepFriends(activeStepNode)
 }
 
 const handleNavClick = function handleNavClick (e) {
@@ -102,9 +109,12 @@ const handleNavClick = function handleNavClick (e) {
  * @noreturn
  */
 export const init = () => {
-  // Would normally use event delegation here, but not worrying about it for
-  // timing purposes.
+  // Would normally use event delegation here, but not worrying about it for timing purposes.
   _.forEach(navItem => {
     navItem.querySelector('a').addEventListener('click', handleNavClick)
   }, _navItems)
+
+  // Fetch friends for the initially selected step
+  const activeStepNode = _.find(step => /active/.test(step.className), _steps)
+  updateStepFriends(activeStepNode)
 }

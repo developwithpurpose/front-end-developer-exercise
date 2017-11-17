@@ -12,7 +12,7 @@ mixin baby-step(step)
         h2.baby-step__title=step.title
         .baby-step__description=step.description
     .baby-step__content!=step.content
-    .baby-step__friends
+      .baby-step__friends
 
 mixin baby-step-nav-item(step)
   li(class="baby-step-nav-item" + (step.active ? " active" : ""))
@@ -36,5 +36,6 @@ block content
         each step in babySteps
           +baby-step-nav-item(step)
     article.baby-step-container
-      each step in babySteps
-        +baby-step(step)
+      .baby-step-wrapper
+        each step in babySteps
+          +baby-step(step)

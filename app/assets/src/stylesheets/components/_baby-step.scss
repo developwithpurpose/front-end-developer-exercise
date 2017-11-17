@@ -1,14 +1,18 @@
 .baby-step-container {
+  position: relative;
   float: left;
   width: 70%;
-  padding: 0 70px;
 }
 
 .baby-step {
-  display: none;
+  position: absolute;
+  max-width: 100%;
+  padding: 0 70px;
+  opacity: 0;
 
   &.active {
-    display: block;
+    opacity: 1;
+    transition: opacity 0.75s;
   }
 
   &__header {
@@ -47,7 +51,11 @@
   &__content {
     font-size: 13px;
     color: #65686f;
-    font-family: 'Helvetica';
     line-height: 18px;
+  }
+
+  &__friend {
+    color: #6fbee7;
+    text-decoration: none;
   }
 }
