@@ -1,7 +1,51 @@
+.baby-step-container {
+  float: left;
+  width: 70%;
+  padding: 0 70px;
+}
+
 .baby-step {
   display: none;
 
-  &--active {
+  &.active {
     display: block;
+  }
+
+  &__header {
+    @extend .clearfix;
+
+    margin: 0 0 24px;
+  }
+
+  &__icon {
+    float: left;
+    width: 25%;
+  }
+
+  &__title-container {
+    float: left;
+    width: 75%;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  &__title {
+    color: $primary;
+    font-size: 30px;
+    line-height: 20px;
+    margin: 0 0 1rem;
+  }
+
+  &__description {
+    color: #5c6366;
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  &__content {
+    font-size: 13px;
+    color: #65686f;
+    font-family: 'Helvetica';
+    line-height: 18px;
   }
 }

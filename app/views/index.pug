@@ -8,8 +8,9 @@ mixin baby-step(step)
     .baby-step__header
       .baby-step__icon
         +baby-step-icon(step.icon, "large")
-      h3.baby-step__title=step.title
-      .baby-step__description=step.description
+      .baby-step__title-container
+        h2.baby-step__title=step.title
+        .baby-step__description=step.description
     .baby-step__content!=step.content
 
 mixin baby-step-nav-item(step)
@@ -30,7 +31,7 @@ block content
 
   main.clearfix
     nav.baby-step-nav
-      ol
+      ol.baby-step-nav__list
         each step in babySteps
           +baby-step-nav-item(step)
     article.baby-step-container
