@@ -18,7 +18,17 @@ mixin baby-step-nav-item(step)
       +baby-step-icon(step.icon, "small")
 
 block content
-  main
+  header.jumbotron
+    img(src="/assets/images/header.jpg")
+    .jumbotron__copy
+      h1.heading--primary
+        .copy--light Real Life, Love and Money with
+        .copy--strong
+          | America's Most
+          br
+          | Trusted Guy
+
+  main.clearfix
     nav.baby-step-nav
       ol
         each step in babySteps
