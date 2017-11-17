@@ -4,3 +4,21 @@
 @import 'components/header';
 @import 'components/baby-step-navigation';
 @import 'components/baby-step';
+@import 'components/baby-step-icon';
+
+body {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
