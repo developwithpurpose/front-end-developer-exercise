@@ -1,0 +1,28 @@
+extends layouts/default
+
+mixin baby-step-icon(name, size)
+  span(class="baby-step-icon baby-step-icon--" + size)
+
+mixin baby-step(step)
+  section(class="baby-step" + (step.active ? " baby-step--active" : "") id=step.title.toLowerCase().replace(/\s+/g, '-'))
+    .baby-step__header
+      .baby-step__icon
+        +baby-step-icon(step.icon, "large")
+      h3.baby-step__title=step.title
+      .baby-step__description=step.description
+    .baby-step__content!=step.content
+
+mixin baby-step-nav-item(step)
+  li(class="baby-step-nav-item" + (step.active ? " baby-step-nav-item--active" : ""))
+    a(href="/?step=" + step.title.replace(/\s/g, '%20'))= step.title
+      +baby-step-icon(step.icon, "small")
+
+block content
+  main
+    nav.baby-step-nav
+      ol
+        each step in babySteps
+          +baby-step-nav-item(step)
+    article.baby-step-container
+      each step in babySteps
+        +baby-step(step)
