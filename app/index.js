@@ -16,18 +16,14 @@ app.set('views', path.resolve(__dirname, 'views'))
 app.use('/assets/images', express.static(path.resolve(__dirname, 'assets/images')))
 app.use('/assets', express.static(path.resolve(__dirname, 'assets/dist')))
 app.get('/', (req, res) => {
-  let hasActiveStep = false
   const { step: activeStepTitle } = req.query
-
   const babySteps = require('./baby-step-sections.json').map(step => {
     if (step.title !== activeStepTitle) return step
-
-    hasActiveStep = true
     return Object.assign({}, step, { active: true })
   })
 
   // If there are no active steps, make the first step active by default.
-  if (!hasActiveStep) {
+  if (!babySteps.find(s => s.active)) {
     babySteps[0].active = true
   }
 

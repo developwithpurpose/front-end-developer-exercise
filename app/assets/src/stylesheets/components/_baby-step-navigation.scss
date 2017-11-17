@@ -1,6 +1,12 @@
 .baby-step-nav {
+  position: relative;
   float: left;
   width: 30%;
+  background: #ebeced;
+  background: -moz-linear-gradient(left, #ebeced 97%, #d1d5d6 100%);
+  background: -webkit-linear-gradient(left, #ebeced 97%,#d1d5d6 100%);
+  background: linear-gradient(to right, #ebeced 97%,#d1d5d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
 
   &__list {
     margin: 0;
@@ -10,7 +16,7 @@
 }
 
 .baby-step-nav-item {
-  background: #ebeced;
+  // background: #ebeced;
   border-bottom: 1px solid #fff;
 
   a {
@@ -23,10 +29,6 @@
     text-decoration:  none;
   }
 
-  .baby-step-icon {
-    margin: 0 0 0 1rem;
-  }
-
   &.active,
   &:hover {
     background: #fff;
@@ -34,5 +36,9 @@
     a {
       color: $primary;
     }
+  }
+
+  .baby-step-icon {
+    margin: 0 0 0 1rem;
   }
 }

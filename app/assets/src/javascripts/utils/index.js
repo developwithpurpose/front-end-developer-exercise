@@ -19,8 +19,31 @@ export const parseQueryString = _.pipe([
 ])
 
 
-export const toggleClass = (node, className, force = false) => {
-  node.classList.toggle(className, force)
+const addClass = (node, className) =>
+  node.setAttribute('class', `${node.getAttribute('class')} ${className}`)
+
+const removeClass = (node, className) =>
+  node.setAttribute('class', node.getAttribute('class').replace(className, ''))
+
+// Poor man's `classList` ponyfill (https://github.com/sindresorhus/ponyfill)
+export const toggleClass = (node, className, force) => {
+  if (node.classList) {
+    node.classList.toggle(className, force)
+    return
+  }
+  const hasClass = node.getAttribute('class').indexOf(className) !== -1
+
+  // force argument was supplied
+  if (typeof force === 'boolean') {
+    if (force  && !hasClass) {
+      addClass(node, className)
+    } else if (!force && hasClass) {
+      removeClass(node, className)
+    }
+    return
+  }
+
+  hasClass ? removeClass(node, className) : addClass(node, className)
 }
 
 export const request = {
