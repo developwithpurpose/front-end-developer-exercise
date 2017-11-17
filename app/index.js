@@ -17,10 +17,10 @@ app.use('/assets/images', express.static(path.resolve(__dirname, 'assets/images'
 app.use('/assets', express.static(path.resolve(__dirname, 'assets/dist')))
 app.get('/', (req, res) => {
   let hasActiveStep = false
-  const { step: activeStep } = req.query
+  const { step: activeStepTitle } = req.query
 
   const babySteps = require('./baby-step-sections.json').map(step => {
-    if (step.title !== activeStep) return step
+    if (step.title !== activeStepTitle) return step
 
     hasActiveStep = true
     return Object.assign({}, step, { active: true })

@@ -14,17 +14,19 @@
   &__header {
     @extend .clearfix;
 
+    display: flex;
+    align-items: center;
     margin: 0 0 24px;
   }
 
   &__icon {
     float: left;
-    width: 25%;
+    width: 15%;
   }
 
   &__title-container {
     float: left;
-    width: 75%;
+    width: 85%;
     font-family: 'Source Sans Pro', sans-serif;
   }
 
@@ -32,7 +34,7 @@
     color: $primary;
     font-size: 30px;
     line-height: 20px;
-    margin: 0 0 1rem;
+    margin: 0 0 0.5rem;
   }
 
   &__description {

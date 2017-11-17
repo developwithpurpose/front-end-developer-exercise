@@ -25,11 +25,18 @@ const makeId = _.pipe([
  * @noreturn
  */
 const selectStep = (title) => {
+  let activeStepNode
   const titleId = makeId(title)
 
   // Show the correct step content in the primary viewport
   _.forEach(stepNode => {
-    toggleClass(stepNode, 'active', stepNode.id === titleId)
+    if (stepNode.id !== titleId) {
+      toggleClass(stepNode, 'active', false)
+      return
+    }
+
+    activeStepNode = stepNode
+    toggleClass(stepNode, 'active', true)
   }, _steps)
 
   // Update the active navigation item
@@ -40,6 +47,39 @@ const selectStep = (title) => {
   }, _navItems)
 
   // Update the list of friends for the active step
+  request.get('/api/baby-steps', (err, res) => {
+    if (err) {
+      // would actually handle this in a real app...
+      return
+    }
+
+    const out = activeStepNode.querySelector('.baby-step__friends')
+    const activeStepIdx = _steps.indexOf(activeStepNode)
+    const friendsOnStep = _.filter(_.matches({ babyStep: activeStepIdx + 1 }), res.friends)
+    const remainingFriends = friendsOnStep.slice(2)
+
+    // No output if there are no friends on the current step
+    if (!friendsOnStep.length) {
+      out.innerHTML = ''
+      return
+    }
+
+    let content = ''
+    content += friendsOnStep.slice(0, 2)
+      .map(f => `<a href="#" class="baby-step-friend">${f.firstName} ${f.lastName}</a>`)
+      .join(friendsOnStep.length === 2 ? ' and ' : ', ')
+
+    if (remainingFriends.length) {
+      content += ` and ${remainingFriends.length} other `
+      content += remainingFriends.length === 1 ? `friend` : `friends`
+    }
+
+    content += friendsOnStep.length === 1
+      ? ` is also in ${title}`
+      : ` are also in ${title}`
+
+    out.innerHTML = content
+  })
 }
 
 const handleNavClick = function handleNavClick (e) {

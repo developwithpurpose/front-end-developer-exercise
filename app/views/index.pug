@@ -12,6 +12,7 @@ mixin baby-step(step)
         h2.baby-step__title=step.title
         .baby-step__description=step.description
     .baby-step__content!=step.content
+    .baby-step__friends
 
 mixin baby-step-nav-item(step)
   li(class="baby-step-nav-item" + (step.active ? " active" : ""))

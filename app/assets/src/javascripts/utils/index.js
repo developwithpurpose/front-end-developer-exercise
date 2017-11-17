@@ -22,3 +22,16 @@ export const parseQueryString = _.pipe([
 export const toggleClass = (node, className, force = false) => {
   node.classList.toggle(className, force)
 }
+
+export const request = {
+  get (endpoint, cb) {
+    const xhr = new XMLHttpRequest()
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState == XMLHttpRequest.DONE) {
+        cb(null, JSON.parse(xhr.responseText))
+      }
+    }
+    xhr.open('GET', endpoint, true)
+    xhr.send(null)
+  }
+}
