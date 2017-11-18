@@ -1,0 +1,61 @@
+.baby-step-container {
+  position: relative;
+  float: left;
+  width: 70%;
+}
+
+.baby-step {
+  // solely for the animation
+  position: absolute;
+  padding: 0 70px;
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+    transition: opacity 0.75s;
+  }
+
+  &__header {
+    @extend .clearfix;
+
+    display: flex;
+    align-items: center;
+    margin: 0 0 24px;
+  }
+
+  &__icon {
+    float: left;
+    width: 15%;
+  }
+
+  &__title-container {
+    float: left;
+    width: 85%;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  &__title {
+    color: $primary;
+    font-size: 30px;
+    line-height: 20px;
+    margin: 0 0 0.5rem;
+  }
+
+  &__description {
+    color: #5c6366;
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  &__content {
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+  }
+
+  &__friend {
+    color: #6fbee7;
+    text-decoration: none;
+  }
+}

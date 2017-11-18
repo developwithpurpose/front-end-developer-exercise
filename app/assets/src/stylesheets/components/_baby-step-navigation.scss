@@ -1,0 +1,44 @@
+.baby-step-nav {
+  position: relative;
+  float: left;
+  width: 30%;
+  background: #ebeced;
+  background: -moz-linear-gradient(left, #ebeced 97%, #d1d5d6 100%);
+  background: -webkit-linear-gradient(left, #ebeced 97%,#d1d5d6 100%);
+  background: linear-gradient(to right, #ebeced 97%,#d1d5d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.baby-step-nav-item {
+  // background: #ebeced;
+  border-bottom: 1px solid #fff;
+
+  a {
+    display: block;
+    padding: 0 0 0 50%;
+    color: #9ba0a4;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 60px;
+    text-decoration:  none;
+  }
+
+  &.active,
+  &:hover {
+    background: #fff;
+
+    a {
+      color: $primary;
+    }
+  }
+
+  .baby-step-icon {
+    margin: 0 0 0 1rem;
+  }
+}

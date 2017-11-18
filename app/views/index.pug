@@ -1,0 +1,41 @@
+extends layouts/default
+
+mixin baby-step-icon(name, size, primary)
+  span(class="baby-step-icon baby-step-icon--" + name + " " + size + (primary ? " primary" : ""))
+
+mixin baby-step(step)
+  section(class="baby-step" + (step.active ? " active" : "") id=step.title.toLowerCase().replace(/\s+/g, '-'))
+    .baby-step__header
+      .baby-step__icon
+        +baby-step-icon(step.icon, "large", true)
+      .baby-step__title-container
+        h2.baby-step__title=step.title
+        .baby-step__description=step.description
+    .baby-step__content!=step.content
+      .baby-step__friends
+
+mixin baby-step-nav-item(step)
+  li(class="baby-step-nav-item" + (step.active ? " active" : ""))
+    a(href="/?step=" + step.title.replace(/\s/g, '%20'))= step.title
+      +baby-step-icon(step.icon, "small")
+
+block content
+  header.jumbotron
+    img(src="/assets/images/header.jpg")
+    .jumbotron__copy
+      h1.heading--primary
+        .copy--light Real Life, Love and Money with
+        .copy--strong
+          | America's Most
+          br
+          | Trusted Guy
+
+  main.clearfix
+    nav.baby-step-nav
+      ol.baby-step-nav__list
+        each step in babySteps
+          +baby-step-nav-item(step)
+    article.baby-step-container
+      .baby-step-wrapper
+        each step in babySteps
+          +baby-step(step)

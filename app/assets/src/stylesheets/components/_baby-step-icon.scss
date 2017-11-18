@@ -1,0 +1,52 @@
+.baby-step-icon {
+  $icons: ticket chat bank graph book house hand;
+
+  &.small {
+    $height: 25px;
+
+    display: inline-block;
+    height: $height;
+    width: 35px;
+    background-image: url('/assets/images/icons/sprites/icons_small.png');
+    background-repeat: no-repeat;
+
+    @for $i from 1 through length($icons) {
+      $icon: nth($icons, $i);
+      $offset: -($height * ($i - 1));
+      $active-offset: -($height * length($icons));
+
+      &.baby-step-icon--#{$icon} {
+        background-position: 0 $offset;
+
+        .active &,
+        a:hover & {
+          background-position: 0 ($active-offset + $offset);
+        }
+      }
+    }
+  }
+
+  &.large {
+    $height: 64px;
+
+    display: inline-block;
+    height: $height;
+    width: 80px;
+    background-image: url('/assets/images/icons/sprites/icons_large.png');
+    background-repeat: no-repeat;
+
+    @for $i from 1 through length($icons) {
+      $icon: nth($icons, $i);
+      $offset: -($height * ($i - 1));
+      $active-offset: -($height * length($icons)) - 10px; // bit rushed, magic number
+
+      &.baby-step-icon--#{$icon} {
+        background-position: 0 $offset;
+
+        &.primary {
+          background-position: 0 ($active-offset + $offset);
+        }
+      }
+    }
+  }
+}
