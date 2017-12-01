@@ -1,0 +1,274 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: HELR45W
+  src: url('HELR45W.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+	width: 980px;
+	margin: 0 auto;
+}
+
+#header{
+	width: 980px;
+	background: url(../images/header.jpg);
+	min-height: 276px;
+	padding-right: 70px;
+	margin-bottom: 60px;
+}
+
+.white{
+	color: #ffffff;
+}
+
+#header h1.top{
+	font-size: 32px;
+	float: right;
+	font-family: open sans, light;
+	padding-bottom: 0px;
+	margin-bottom: 15px;
+	line-height: 32px;
+}
+
+#header h1.second{
+	font-family: Open sans, bold;
+	font-size: 50px;
+	float: right;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	padding: 0px;
+	margin-left: 400px;
+	line-height: 48px;
+}
+
+#tabs{
+	float: left;
+}
+
+#right-side{
+	margin-left: 100px;
+}
+.right-stuff{
+	font-family: source sans pro, light;
+	font-family: HELR45W, sans-serif;
+	font-size: 13px;
+	color: #65686f;
+	line-height: 18px;
+}
+
+.the-header{
+		font-family: source sans pro, semi-bold;
+		color: #36abe1;
+		font-size: 30px;
+		line-height: 20px;
+		padding-left: 330px;
+		padding-top: 10px;
+}
+
+.the-header .sub-head{
+	font-family: source sans pro, light;
+	font-family: HELR45W, sans-serif;
+	font-size: 13px;
+	color: #65686f;
+	line-height: 20px;
+}
+
+.dynamic span{
+	color: #36abe1;	
+}
+
+/*The content header images*/
+
+#step1-head-bg{
+	height: 60px;
+	background:url(../images/icons/individual/icons_large_bs1_blue.png);	
+	background-repeat: no-repeat;
+    background-position: 30% 50%;
+}
+
+#step2-head-bg{
+	height: 60px;
+	background:url(../images/icons/individual/icons_large_bs2_blue.png);	
+	background-repeat: no-repeat;
+    background-position: 30% 50%;
+}
+
+#step3-head-bg{
+	height: 60px;
+	background:url(../images/icons/individual/icons_large_bs3_blue.png);	
+	background-repeat: no-repeat;
+    background-position: 30% 50%;
+}
+
+#step4-head-bg{
+	height: 60px;
+	background:url(../images/icons/individual/icons_large_bs4_blue.png);	
+	background-repeat: no-repeat;
+    background-position: 30% 50%;
+}
+
+#step5-head-bg{
+	height: 60px;
+	background:url(../images/icons/individual/icons_large_bs5_blue.png);	
+	background-repeat: no-repeat;
+    background-position: 30% 50%;
+}
+
+#step6-head-bg{
+	height: 60px;
+	background:url(../images/icons/individual/icons_large_bs6_blue.png);	
+	background-repeat: no-repeat;
+    background-position: 30% 50%;
+}
+
+#step7-head-bg{
+	height: 60px;
+	background:url(../images/icons/individual/icons_large_bs7_blue.png);	
+	background-repeat: no-repeat;
+    background-position: 30% 50%;
+}
+
+/*!Content header images*/
+
+/*Vertical Menu Items*/
+
+#tab-steps {
+    float: left;
+    width: 300px;
+    border-radius: 4px 0 0 4px;	
+}
+#tab-steps li {
+    clear: left;
+    width: 100%;
+	height: 60px;
+    overflow: hidden;
+    position: relative;
+    right: -2px;
+    z-index: 2;
+	margin-left: -60px;
+	background: #ebeced; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left, #ebeced , #d1d5d6); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ebeced, #d1d5d6); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ebeced, #d1d5d6); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #ebeced , #d1d5d6); /* Standard syntax (must be last) */
+	border-bottom: 1px solid white;
+
+}
+#tab-steps li a {
+    display: block;
+    width: 100%;
+    padding-left: 30%;
+	font-family: source sans pro, regular;
+	font-size: 18px;
+	line-height: 60px;
+	color: #9ba0a4;
+	text-decoration: none;
+}
+
+/*Icons*/
+#icon1{
+	background: url(../images/icons/individual/icons_small_bs1.png);
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon1:hover, #icon1:active{
+	background: url(../images/icons/individual/icons_small_bs1_blue.png) #fff;
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon2{
+	background: url(../images/icons/individual/icons_small_bs2.png);
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon2:hover, #icon2:active{
+	background: url(../images/icons/individual/icons_small_bs2_blue.png) #fff;
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon3{
+	background: url(../images/icons/individual/icons_small_bs3.png);
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon3:hover, #icon3:active{
+	background: url(../images/icons/individual/icons_small_bs3_blue.png) #fff;
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon4{
+	background: url(../images/icons/individual/icons_small_bs4.png);
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon4:hover, #icon4:active{
+	background: url(../images/icons/individual/icons_small_bs4_blue.png) #fff;
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon5{
+	background: url(../images/icons/individual/icons_small_bs5.png);
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon5:hover, #icon5:active{
+	background: url(../images/icons/individual/icons_small_bs5_blue.png) #fff;
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon6{
+	background: url(../images/icons/individual/icons_small_bs6.png);
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon6:hover, #icon6:active{
+	background: url(../images/icons/individual/icons_small_bs6_blue.png) #fff;
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon7{
+	background: url(../images/icons/individual/icons_small_bs7.png);
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+#icon7:hover, #icon7:active{
+	background: url(../images/icons/individual/icons_small_bs7_blue.png) #fff;
+	background-repeat: no-repeat;
+    background-position: 70% 50%;
+}
+
+/*!Icons*/
+
+#tab-steps li a:hover {
+    cursor: pointer;
+}
+
+/*!Vertical Menu*/
+
+
+/*This is the veritical menu toggle. When adding another step or menu item, add the corresponding targets and id's here.*/
+@import "compass/css3";
+
+#step1:target, #step2:target, #step3:target, #step4:target, #step5:target, #step6:target, #step7:target{
+  display: block;
+}
+:target ~ #step1, #step2, #step3, #step4, #step5, #step6, #step7 {
+  display: none;
+}
