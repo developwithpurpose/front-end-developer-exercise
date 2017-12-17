@@ -1,12 +1,37 @@
 @import '_box-sizing';
 @import '_reset';
 
-html {
-    background: rebeccapurple;
-    color: white;
-}
 
-.background {
-    background: black;
-    padding: 10rem;
+.body {
+  margin: 0;
+  color: white;
 }
+.dave {
+  background: green;
+  height: 40vh;
+}
+.main {
+  display: flex;
+  height: 60vh;
+}
+.left {
+  width: 20%;
+  padding: 1rem;
+  background: blue;
+}
+.options {
+  margin: 1rem 0;
+  cursor: pointer;
+}
+.right {
+  display: none;
+  flex-grow: 1;
+  padding: 1rem;
+  background: purple;
+}
+#option1{
+  display: block;
+}
+#option2{}
+#option3{}
+#option4{}
