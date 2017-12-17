@@ -2,13 +2,13 @@
 @import '_reset';
 
 
-.body {
+body {
   margin: 0;
   color: white;
 }
 .dave {
+  background: url('./assets/images/header_text.jpg');
   height: 40vh;
-  width: 100%;
 }
 .main {
   display: flex;
@@ -16,8 +16,7 @@
 }
 .left {
   width: 20%;
-  padding: 1rem;
-  background: #999 gradient;
+  background: white;
 }
 .options {
   margin: 1rem 0;
@@ -27,7 +26,7 @@
   display: none;
   flex-grow: 1;
   padding: 1rem;
-  background: purple;
+  background: white;
 }
 #option1{
   display: block;

@@ -22,8 +22,8 @@ img {
   color: white; }
 
 .dave {
-  background: green;
-  height: 40vh; }
+  height: 40vh;
+  width: 100%; }
 
 .main {
   display: flex;
@@ -32,7 +32,7 @@ img {
 .left {
   width: 20%;
   padding: 1rem;
-  background: blue; }
+  background: white; }
 
 .options {
   margin: 1rem 0;
