@@ -7,8 +7,8 @@
   color: white;
 }
 .dave {
-  background: green;
   height: 40vh;
+  width: 100%;
 }
 .main {
   display: flex;
@@ -17,7 +17,7 @@
 .left {
   width: 20%;
   padding: 1rem;
-  background: blue;
+  background: #999 gradient;
 }
 .options {
   margin: 1rem 0;
