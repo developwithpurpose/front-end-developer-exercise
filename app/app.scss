@@ -1,6 +1,12 @@
 @import '_box-sizing';
 @import '_reset';
 
-* {
-    color: rebeccapurple;
+html {
+    background: rebeccapurple;
+    color: white;
+}
+
+.background {
+    background: black;
+    padding: 10rem;
 }

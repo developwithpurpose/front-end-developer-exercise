@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box; }
+
+* {
+  box-sizing: inherit; }
+  *:before, *:after {
+    box-sizing: inherit; }
+
+* {
+  margin: 0;
+  font-family: sans-serif; }
+
+ul {
+  padding-left: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%; }
+
+html {
+  background: rebeccapurple;
+  color: white; }
+
+.background {
+  background: black;
+  padding: 10rem; }
+
+/*# sourceMappingURL=app.css.map */
