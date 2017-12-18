@@ -9,14 +9,6 @@ ul {
 img {
   max-width: 100%; }
 
-html {
-  box-sizing: border-box; }
-
-* {
-  box-sizing: inherit; }
-  *:before, *:after {
-    box-sizing: inherit; }
-
 body {
   margin: 0;
   background: #bbbfc2;
@@ -32,7 +24,8 @@ body {
 .hero {
   background: url(./assets/images/header_text.jpg) no-repeat;
   background-size: contain;
-  height: 40vh; }
+  height: 40vh;
+  width: 100%; }
 
 .main {
   display: flex;
