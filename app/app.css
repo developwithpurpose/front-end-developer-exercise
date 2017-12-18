@@ -24,7 +24,7 @@ body {
 .hero {
   background: url(./assets/images/header_text.jpg) no-repeat;
   background-size: contain;
-  height: 40vh;
+  height: 36vh;
   width: 100%; }
 
 .main {
