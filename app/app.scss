@@ -1,3 +1,6 @@
+@import '_reset';
+@import '_box-sizing';
+
 body {
   margin: 0;
   background: #bbbfc2;
@@ -11,7 +14,7 @@ body {
   box-shadow: 0 0.2rem 0.2rem 0.4rem rgba(0,0,0,0.4);
 }
 .hero {
-  background: url(images/header_text.jpg) no-repeat;
+  background: url(./assets/images/header_text.jpg) no-repeat;
   background-size: cover;
   height: 40vh;
 }
