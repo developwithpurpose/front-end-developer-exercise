@@ -13,6 +13,8 @@ The webfonts are loaded from google using the typekit webfontloader package. Thi
 
 I did make one adjustment for the header sections of each block of content. the line-height in the annotation was listed as 20px for the main header, but I changed that to 30px to reflect the mockup better. 20px was too close.
 
+sans-serif is provided as a fallback, but if this were going to production i would package helvetica with the rest of the fonts for consistency.
+
 
 #### Transitions
 ----------------
@@ -69,6 +71,8 @@ Tested in:
 * Edge - latest
 
 
+### Final Notes
+
 ### Things I would have changed
 
 The biggest thing that I would change is how many areas of this layout were required to be hardcoded. I try to do all of my layout values with fluid widths, but for some of this it wasn't possible. As a result, this layout is pretty ridgid and wouldn't work well for any smaller screen sizes. I would have started out working on a responsive layout.
@@ -80,4 +84,4 @@ The css-only tab transitions work well, but feels a little complicated when look
 I would have used svg sprites instead of png. The filesize is smaller and allows for finer control (ie. changing the color of the svg without needing an entire new set of sprites).
 
 
-If this were a larger project, I would definitely be integrating a more thorough build system with an html template engine and some sort of test suite. I would probably also build a data file to help generate some of the more redundant code.
+If this were a larger project, I would definitely be integrating a more thorough build system with an html template engine and some sort of test suite. I would probably also build a data file to help generate some of the more redundant code. 
