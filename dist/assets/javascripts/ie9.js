@@ -1,0 +1,1 @@
+$(function(){var n=$('input[name="babySteps"]:radio');n.change(function(){var t=n.index(this),a=$("#slider"),i=$(".content"),e=60*t,o=500*t;a.animate({top:e+"px"},350),i.animate({top:-o+"px"},350)})});
