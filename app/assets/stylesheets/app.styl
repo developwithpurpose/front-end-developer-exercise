@@ -2,7 +2,8 @@
 @import './icons'
 
 contentHeight = 500px
-siteWidth = 1000px
+siteWidth = 900px
+sidebarWidth = 300px
 sourceSans = 'Source Sans Pro', sans-serif
 openSans = 'Open Sans', sans-serif
 helvetica = 'Helvetica', sans-serif
@@ -13,13 +14,13 @@ helvetica = 'Helvetica', sans-serif
   width: 100%;
   position: relative;
   background-color: white;
-  height: 842px;
+  height: 810px;
 }
 
 .wrapper {
   height: contentHeight;
   overflow: hidden;
-  left: 30%;
+  left: sidebarWidth;
   position: relative;
   top: -420px;
 }
@@ -28,7 +29,7 @@ helvetica = 'Helvetica', sans-serif
   position: absolute;
   padding: 0 70px;
   background-color: white;
-  width: 70%;
+  width: siteWidth - sidebarWidth;
   top: 0;
   transition: top 350ms ease-in-out;
 }
@@ -44,7 +45,7 @@ input[type=radio] {
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
-  height: 282px;
+  height: 254px;
   margin-bottom: 60px;
 }
 
@@ -74,15 +75,24 @@ input[type=radio] {
   position: absolute;
   height: 500px;
   width: 100%;
+}
+
+#gradientBg {
+  position: absolute;
+  width: sidebarWidth;
+  height: 100%;
+  left: 0;
+  top: 0;
   background: #d1d5d6;
   background: linear-gradient(-90deg, #d1d5d6, #ebeced);
 }
 
 .tab {
-  width: 30%;
+  width: sidebarWidth;
   position: relative;
   display: block;
   text-align: right;
+  border-bottom: 1px white solid;
 
   label, .stepIcon {
     display: inline-block;
@@ -158,7 +168,7 @@ input[type=radio] {
   height: 60px;
   background: white;
   transition: top 0.35s ease-in-out;
-  width: 30%;
+  width: sidebarWidth;
 }
 
 /* Transition the Slider */
@@ -167,27 +177,27 @@ input[type=radio] {
 }
 
 #stepTwo:checked ~ #slider {
-  top: 60px;
+  top: 60px + 1px;
 }
 
 #stepThree:checked ~ #slider {
-  top: 120px;
+  top: 120px + 2px;
 }
 
 #stepFour:checked ~ #slider {
-  top: 180px;
+  top: 180px + 3px;
 }
 
 #stepFive:checked ~ #slider {
-  top: 240px;
+  top: 240px + 4px;
 }
 
 #stepSix:checked ~ #slider {
-  top: 300px;
+  top: 300px + 5px;
 }
 
 #stepSeven:checked ~ #slider {
-  top: 360px;
+  top: 360px + 6px;
 }
 
 
@@ -250,7 +260,7 @@ input[type="radio"]:checked + .tab label {
 }
 
 #bottom {
-  bottom: -34px;
+  bottom: -30px;
   width: siteWidth;
 }
 

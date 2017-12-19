@@ -7,7 +7,7 @@ $(function() {
     var slider = $('#slider')
     var content = $('.content')
 
-    var sliderTop = (index) * 60;
+    var sliderTop = ((index) * 60) + index;
     var contentTop = (index) * 500;
 
     slider.animate({
