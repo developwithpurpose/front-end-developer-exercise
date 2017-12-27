@@ -99,6 +99,17 @@
           to bless others. You can do all three at the same time.</p>
         <p id="results"></p>
       </div>
+      <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            document.getElementById('ajax').innerHTML = xhr.responseText;
+
+          }
+        };
+        xhr.open('GET', 'baby-steps.json');
+        xhr.send();
+      </script>
     </div>
   </div>
   <script type="text/javascript" src="main.js"></script>
