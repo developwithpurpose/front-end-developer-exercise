@@ -1,0 +1,83 @@
+// REM Mixin
+@mixin rem($property, $px-values) {
+    $baseline-rem: $baseline-px / 1rem * 1;
+
+    #{$property}: $px-values;
+
+    @if type-of($px-values) == "number" {
+        #{$property}: $px-values / $baseline-rem;}
+    @else {
+
+        $rem-values: ();
+        @each $value in $px-values {
+
+            @if $value == 0 or type-of( $value ) != "number" {
+                $rem-values: append($rem-values, $value); }
+            @else {
+                $rem-values: append($rem-values, $value / $baseline-rem);
+            }
+        }
+
+        #{$property}: $rem-values;
+    }
+}
+
+// Position Mixins
+// Usage: @include setPosition(absolute, top 0 left 0, $tenthfloor-z) | z-index is optional as the default is set to null
+// $coordinates behaves like any other css element that takes direction as its arguments the order is top right bottom left
+// The absoluteXyPos mixin gives just the arguments and z-indexing to take advantage of the cascade.
+
+@mixin setPosition($position, $args: (), $z-indexing: null) {
+    $offsets: top right bottom left;
+    position: $position;
+    z-index: $z-indexing;
+
+    @each $offset in $offsets {
+    $index: index($args, $offset);
+
+        @if $index {
+            @if $index == length($args) {
+                #{$offset}: 0;
+            }
+            @else {
+                $next: nth($args, $index + 1);
+                @if is-valid-length($next) {
+                    #{$offset}: $next;
+                }
+                @else if index($offsets, $next) {
+                    #{$offset}: 0;
+                }
+                @else {
+                    @warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+                }
+            }
+        }
+    }
+}
+
+@mixin absoluteXyPos($args: (), $z-indexing: null) {
+    $offsets: top right bottom left;
+    z-index: $z-indexing;
+
+    @each $offset in $offsets {
+    $index: index($args, $offset);
+
+        @if $index {
+            @if $index == length($args) {
+                #{$offset}: 0;
+            }
+            @else {
+                $next: nth($args, $index + 1);
+                @if is-valid-length($next) {
+                    #{$offset}: $next;
+                }
+                @else if index($offsets, $next) {
+                    #{$offset}: 0;
+                }
+                @else {
+                    @warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+                }
+            }
+        }
+    }
+}
