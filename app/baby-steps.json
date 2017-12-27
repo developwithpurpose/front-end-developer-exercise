@@ -1,4 +1,4 @@
-{
+
     "friends": [
         { "firstName" : "Paul", "lastName" : "Taylor", "babyStep": 2 },
         { "firstName" : "Sharon", "lastName" : "Thomas", "babyStep": 3 },

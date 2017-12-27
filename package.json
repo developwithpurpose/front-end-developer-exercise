@@ -10,5 +10,12 @@
   },
   "devDependencies": {
     "http-server": "^0.8.0"
+  },
+  "dependencies": {
+    "eslint": "^4.13.1",
+    "favicon": "0.0.2",
+    "jquery": "^3.2.1",
+    "jslint": "^0.11.0",
+    "sass": "^1.0.0-beta.4"
   }
 }
