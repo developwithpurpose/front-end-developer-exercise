@@ -103,17 +103,17 @@
       var babyStep6Group = bbsGroupArray[0][6].slice(0);
       var babyStep7Group = bbsGroupArray[0][7].slice(0);
 
-      articleFooter[1].innerHTML = '<p>' + '<a href="#">' + babyStep2Group[0].firstName + ' ' + babyStep2Group[0].lastName + '</a>' + ' and ' + (bbsCountArray[0][0] - 2) + ' Other friends are on this step' + '</p>';
+      articleFooter[1].innerHTML = '<p>' + '<a href="#">' + babyStep2Group[0].firstName + ' ' + babyStep2Group[0].lastName + '</a>' + ' is also in Baby Step 2' + '</p>';
 
-      articleFooter[2].innerHTML = '<p>' + '<a href="#">' + babyStep3Group[0].firstName + ' ' + babyStep3Group[0].lastName + '</a>' + ', ' + '<a href="#">' + babyStep3Group[1].firstName + ' ' + babyStep3Group[1].lastName + '</a>' + ' and ' + (bbsCountArray[0][1] - 3) + ' Other friends are on this step' + '</p>';
+      articleFooter[2].innerHTML = '<p>' + '<a href="#">' + babyStep3Group[0].firstName + ' ' + babyStep3Group[0].lastName + '</a>' + ', ' + '<a href="#">' + babyStep3Group[1].firstName + ' ' + babyStep3Group[1].lastName + '</a>' + ' are also in Baby Step 3' + '</p>';
 
-      articleFooter[3].innerHTML = '<p>' + '<a href="#">' + babyStep4Group[0].firstName + ' ' + babyStep4Group[0].lastName + '</a>' + ', ' + '<a href="#">' + babyStep4Group[1].firstName + ' ' + babyStep4Group[1].lastName + '</a>' + ' and ' + (bbsCountArray[0][2] - 3) + ' Other friends are on this step' + '</p>';
+      articleFooter[3].innerHTML = '<p>' + '<a href="#">' + babyStep4Group[0].firstName + ' ' + babyStep4Group[0].lastName + '</a>' + ', ' + '<a href="#">' + babyStep4Group[1].firstName + ' ' + babyStep4Group[1].lastName + '</a>' + ' and ' + (bbsCountArray[0][2] - 3) + ' other friend are also in Baby Step 4' + '</p>';
 
-      articleFooter[4].innerHTML = '<p>' + '<a href="#">' + babyStep5Group[0].firstName + ' ' + babyStep5Group[0].lastName + '</a>' + ', ' + '<a href="#">' + babyStep5Group[1].firstName + ' ' + babyStep5Group[1].lastName + '</a>' + ' and ' + (bbsCountArray[0][3] - 3) + ' Other friends are on this step' + '</p>';
+      articleFooter[4].innerHTML = '<p>' + '<a href="#">' + babyStep5Group[0].firstName + ' ' + babyStep5Group[0].lastName + '</a>' + ', ' + '<a href="#">' + babyStep5Group[1].firstName + ' ' + babyStep5Group[1].lastName + '</a>' + ' and ' + (bbsCountArray[0][3] - 3) + ' other friends are also in Baby Step 5' + '</p>';
 
-      articleFooter[5].innerHTML = '<p>' + '<a href="#">' + babyStep6Group[0].firstName + ' ' + babyStep6Group[0].lastName + '</a>' + ', ' + '<a href="#">' + babyStep6Group[1].firstName + ' ' + babyStep6Group[1].lastName + '</a>' + ' and ' + (bbsCountArray[0][4] - 3) + ' Other friends are on this step' + '</p>';
+      articleFooter[5].innerHTML = '<p>' + '<a href="#">' + babyStep6Group[0].firstName + ' ' + babyStep6Group[0].lastName + '</a>' + ', ' + '<a href="#">' + babyStep6Group[1].firstName + ' ' + babyStep6Group[1].lastName + '</a>' + ' and ' + (bbsCountArray[0][4] - 3) + ' other friends are also in Baby Step 6' + '</p>';
 
-      articleFooter[6].innerHTML = '<p>' + '<a href="#">' + babyStep7Group[0].firstName + ' ' + babyStep7Group[0].lastName + '</a>' + ', ' + '<a href="#">' + babyStep7Group[1].firstName + ' ' + babyStep7Group[1].lastName + '</a>' + ' and ' + (bbsCountArray[0][5] - 3) + ' Other friends are on this step' + '</p>';
+      articleFooter[6].innerHTML = '<p>' + '<a href="#">' + babyStep7Group[0].firstName + ' ' + babyStep7Group[0].lastName + '</a>' + ', ' + '<a href="#">' + babyStep7Group[1].firstName + ' ' + babyStep7Group[1].lastName + '</a>' + ' and ' + (bbsCountArray[0][5] - 3) + ' other friends are also in Baby Step 7' + '</p>';
     });
   };
 }(window, document));
