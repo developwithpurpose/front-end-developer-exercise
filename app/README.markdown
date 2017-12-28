@@ -176,6 +176,8 @@ dataRequest.send();
 * `dataRequest.open('GET', 'http://localhost:3000/friends');` the server.js file is setup to run on port 3000
 * `var friendJSON = JSON.parse(dataRequest.responseText);` saves JSON data to variable firendJSON
 * `renderHTML(friendJSON);` pass JSON data to function renderHTML()
+
+### Convert JSON data into HTML string called friendString
 ```
 function renderHTML(friendData) {           /* function renderHTML accepts variable friendData */
   var friendStepArray = [];           /* initialize variables */
@@ -221,6 +223,7 @@ function renderHTML(friendData) {           /* function renderHTML accepts varia
 
 
 
+### Insert friendString into HTML
 ```
 function appendHTML(appendString, elementNum) {
   $("#detail-bs"+elementNum+"-dynamic").append(appendString);
