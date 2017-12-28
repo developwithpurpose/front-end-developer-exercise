@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+#header-top {
+  background:#bbbfc2;
+  margin: auto;
+  min-width: 980px;
+  width: 50%;
+  height: 276px;
+}
+
+body{
+  background-color:#bbbfc2;
+  font-family: "Source Sans Pro";
+  font-weight: normal;
+  font-size:18px;
+  color:#9ba0a4;
+  padding:0;
+  margin:0;
+}
+
+footer{
+  margin: auto;
+  min-width: 980px;
+  width: 50%;
+  height:30px;
+}
+
+.left-sidebar, .right-sidebar {
+  height: 724px;
+  width: calc(50% - 490px);
+}
+
+.left-sidebar {
+  float: left;
+}
+
+.right-sidebar {
+  float: right;
+}
+
+.right-sidebar img{
+  float: left;
+}
+
+.left-sidebar img{
+  float: right;
+}
+
+.container {
+	position:relative;
+  background-color:#ffffff;
+  margin: auto;
+  min-width: 980px;
+  height: 600px;
+  width: 50%;
+  padding-top:60px;
+}
+
+.step-menu {
+	position:relative;
+  background: linear-gradient(to right, #ebeced , #d1d5d6);
+	width: 300px;
+  height: 600px;
+  line-height: 60px;
+  text-align:right;
+  float: left;
+}
+
+.step-menu .step {
+	height:60px;
+  padding-left: 70px;
+  border-bottom: 1px;
+  border-left:0px;
+  border-top:0px;
+  border-right:0px;
+  border-color:#ffffff;
+  border-style: solid;
+}
+
+
+.icon-blue, .icon-grey{
+  background-image: url('../images/icons/sprites/icons_small.png');
+  background-repeat: no-repeat;
+  margin-left: 24px;
+  margin-right: 24px;
+  height: 24px;
+  width: 30px;
+  vertical-align: middle;
+  float: right;
+  position: relative;
+  top: 18px;
+}
+.icon-blue {
+  display: none;
+}
+#icon-grey-bs1{
+  background-position: -1px -5px;
+  height: 15px;
+  top: 22.5px;
+}
+#icon-grey-bs2{
+  background-position: -1px -27px;
+}
+#icon-grey-bs3{
+  background-position: -1px -53px;
+}
+#icon-grey-bs4{
+  background-position: -1px -76px;
+}
+#icon-grey-bs5{
+  background-position: -1px -100px;
+}
+#icon-grey-bs6{
+  background-position: -1px -126px;
+}
+#icon-grey-bs7{
+  height: 30px;
+  top: 15px;
+  background-position: -1px -150px;
+}
+#icon-blue-bs1{
+  background-position: -1px -180px;
+  height: 15px;
+  top: 22.5px;
+}
+#icon-blue-bs2{
+  background-position: -1px -202px;
+}
+#icon-blue-bs3{
+  background-position: -1px -228px;
+}
+#icon-blue-bs4{
+  background-position: -1px -251px;
+}
+#icon-blue-bs5{
+  background-position: -1px -275px;
+}
+#icon-blue-bs6{
+  background-position: -1px -301px;
+}
+#icon-blue-bs7{
+  height: 30px;
+  top: 15px;
+  background-position: -1px -325px;
+}
+
+.step:hover {
+    cursor:pointer;
+}
+.step:focus {
+    color: hsl(199, 71%, 66%);
+    outline: none;
+    background-color: #ffffff;
+    /* outline:none hides the blue focus outline around the step divs
+    */
+}
+
+.step:focus .icon-grey {
+    display: none;
+}
+.step:focus .icon-blue {
+    display: inline;
+}
+
+.step-detail{
+  float: left;
+  padding-left:70px;
+  padding-right:70px;
+  width: 500px;
+  line-height:18px;
+  font-size: 13px;
+  font-family: Helvetica;
+  font-weight: normal;
+  color: #65686f;
+  height: 278px;
+  overflow: hidden;
+}
+
+.step-detail-heading{
+  float: left;
+  padding-bottom:24px;
+  padding-right: 204px;
+}
+.step-detail-dynamic{
+  padding-top:40px;
+  font-size: 13px;
+  font-family: Helvetica;
+  font-weight: normal;
+  color: #65686f;
+}
+.step-detail-dynamic text-blue{
+  color: #6fbee7;
+}
