@@ -54,7 +54,7 @@
   margin-bottom: 1px;
 }
 
-.sideNav div img {
+.sideNav div a {
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -65,6 +65,62 @@
 
 .pageBodyContent {
 
+}
+
+#bs1 {
+  display: none;
+}
+
+#bs1:target {
+  display: block;
+}
+
+#bs2 {
+  display: none;
+}
+
+#bs2:target {
+  display: block;
+}
+
+#bs3 {
+  display: none;
+}
+
+#bs3:target {
+  display: block;
+}
+
+#bs4 {
+  display: none;
+}
+
+#bs4:target {
+  display: block;
+}
+
+#bs5 {
+  display: none;
+}
+
+#bs5:target {
+  display: block;
+}
+
+#bs6 {
+  display: none;
+}
+
+#bs6:target {
+  display: block;
+}
+
+#bs7 {
+  display: none;
+}
+
+#bs7:target {
+  display: block;
 }
 
 .no-padding {
