@@ -1,0 +1,77 @@
+.body {
+  position: relative;
+  min-height: 100%;
+  top: 0px;
+  margin: 0px;
+}
+
+.pageBackground {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #bbbfc2;
+}
+
+.shadowLeft {
+  text-align: right;
+}
+
+.shadowBottom {
+ vertical-align: top;
+}
+
+.shadowBottom img {
+  width: 100%;
+}
+
+.pageHeader {
+  position: relative;
+  height: 276px;
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.pageHeaderText {
+  padding-top: 50px;
+  padding-right: 70px;
+}
+
+.pageBody {
+  padding-top: 60px;
+  background-color: #fff;
+  min-height: 80%;
+}
+
+.sideNav {
+
+}
+
+.sideNav div {
+  vertical-align: middle;
+  text-align: right;
+  background-color: #ebeced;
+  min-height: 60px;
+  margin-bottom: 1px;
+}
+
+.sideNav div img {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.activeBabyStep {
+  background-color: #fff !important;
+}
+
+.pageBodyContent {
+
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.no-margin {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}

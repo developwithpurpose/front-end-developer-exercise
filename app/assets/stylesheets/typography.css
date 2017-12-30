@@ -1,0 +1,30 @@
+.pageHeaderText {
+  text-align: right;
+  color: #fff;
+  font-family: "Open Sans";
+}
+
+.pageHeaderText h2 {
+  margin: 0px 0px 15px 0px;
+  font-weight: lighter;
+  font-size: 32px;
+}
+
+.pageHeaderText h1 {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 48px;
+}
+
+.babySteps div {
+  font-family: "Source Sans Pro";
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+}
+
+.activeBabyStep {
+  font-weight: bolder !important;
+  color: #36abe1 !important;
+}
