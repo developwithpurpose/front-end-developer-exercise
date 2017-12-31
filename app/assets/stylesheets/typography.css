@@ -134,3 +134,16 @@
   line-height: 18px;
   color: #65686f;
 }
+
+.bsFriends p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #65686f;
+}
+
+.bsFriends p a {
+  font-weight: bolder;
+  text-decoration: none;
+  color: #6fbee7;
+}
