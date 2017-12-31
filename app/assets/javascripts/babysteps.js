@@ -26,13 +26,13 @@ jQuery( document ).ready(function() {
       if(friendsInEachStep[i].length == 0) {
         // no friends in this step
       } else if(friendsInEachStep[i].length == 1) {
-        $('#bs' + i + 'Friends').append('<p><a>' + friendsInEachStep[i][0].firstName + ' ' + friendsInEachStep[i][0].lastName + '</a> is also in Baby Step ' + i);
+        $('#bs' + i + 'Friends').append('<p><a>' + friendsInEachStep[i][0].firstName + ' ' + friendsInEachStep[i][0].lastName + '</a> is also in Baby Step ' + i + '</p>');
       } else if(friendsInEachStep[i].length == 2) {
         $('#bs' + i + 'Friends').append('<p><a>' + friendsInEachStep[i][0].firstName + ' ' + friendsInEachStep[i][0].lastName + '</a> and <a>' +
-          friendsInEachStep[i][1].firstName + ' ' + friendsInEachStep[i][1].lastName + '</a> are also in Baby Step ' + i);
+          friendsInEachStep[i][1].firstName + ' ' + friendsInEachStep[i][1].lastName + '</a> are also in Baby Step ' + i + '</p>');
       } else {
         $('#bs' + i + 'Friends').append('<p><a>' + friendsInEachStep[i][0].firstName + ' ' + friendsInEachStep[i][0].lastName + '</a>, <a>' +
-          friendsInEachStep[i][1].firstName + ' ' + friendsInEachStep[i][1].lastName + '</a> and ' + (friendsInEachStep[i].length - 2) + ' other friend(s) are also in Baby Step ' + i);
+          friendsInEachStep[i][1].firstName + ' ' + friendsInEachStep[i][1].lastName + '</a> and ' + (friendsInEachStep[i].length - 2) + ' other friend(s) are also in Baby Step ' + i + '</p>');
       }
     }
 
