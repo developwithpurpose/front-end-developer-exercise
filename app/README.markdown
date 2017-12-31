@@ -23,6 +23,9 @@ grunt work involved with building web pages.
 
 After some consideration, I figured that a warm welcome would be appropriate. Since the landing baby step wasn't specified, I created a welcome page to land on.
 
+I noticed that the `app\assets\images\shadow_left_nav.jpg` was "used" in the annotated mockup, but because it seemed extraneous and I couldn't see it in regular mockup,
+I chose to omit it. 
+
 ### Final Thoughts
 Thank you for the opportunity to complete this technical challenge! It was a pleasure and I enjoyed strengthening my skills and learning
 some new tricks as I worked through it. I hope you all have had a Merry Christmas season and are about to have a happy New Year!
