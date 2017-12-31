@@ -1,0 +1,162 @@
+html {
+  height: 100%;
+}
+
+.body {
+  position: relative;
+  min-height: 100%;
+  top: 0px;
+  margin: 0px;
+  background-color: #bbbfc2;
+}
+
+.pageBackground {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.shadowLeft {
+  text-align: right;
+}
+
+.shadowBottom {
+ vertical-align: top;
+}
+
+.shadowBottom img {
+  width: 100%;
+}
+
+.pageHeader {
+  position: relative;
+  height: 276px;
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.pageHeaderText {
+  padding-top: 50px;
+  padding-right: 70px;
+}
+
+.pageBody {
+  padding-top: 60px;
+  background-color: #fff;
+  min-height: 80%;
+}
+
+.sideNav div {
+  vertical-align: middle;
+  text-align: right;
+  background-image:
+    linear-gradient(
+      to left,
+      #d1d5d6,
+      #ebeced 5%
+    );
+  min-height: 60px;
+  margin-bottom: 1px;
+}
+
+#spacer {
+  min-height: 100px;
+  margin-bottom: 0px;
+}
+
+.sideNav div a {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.activeBabyStepLayout {
+  background-image:
+    linear-gradient(
+      to left,
+      #fff,
+      #fff
+    ) !important;
+}
+
+.welcomePage {
+  padding-left: 70px;
+}
+
+.showBabyStep {
+  display: block !important;
+}
+
+#bs1, #bs2, #bs3, #bs4, #bs5, #bs6, #bs7 {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms, position 600ms;
+  transition: opacity 600ms, visibility 600ms, position 600ms;
+}
+
+#bs1:target, #bs2:target, #bs3:target, #bs4:target, #bs5:target, #bs6:target, #bs7:target {
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 600ms, visibility 600ms, position 600ms;
+  transition: opacity 600ms, visibility 600ms, position 600ms;
+}
+
+#bs1 {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+#bs2 {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+#bs3 {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+#bs4 {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+#bs5 {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+#bs6 {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+#bs7 {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.bsHeader {
+  vertical-align: middle;
+}
+
+.bsHeader div h2 {
+  margin: 5% 0px 5px 10px;
+}
+
+.bsHeader div h3 {
+  margin: 5px 0px 0px 10px;
+}
+
+.bsContent {
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.no-margin {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.displayNone {
+  display: none;
+}

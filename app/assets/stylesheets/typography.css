@@ -1,0 +1,169 @@
+.pageHeaderText {
+  text-align: right;
+  color: #fff;
+  font-family: "Open Sans";
+}
+
+.pageHeaderText h2 {
+  margin: 0px 0px 15px 0px;
+  font-weight: lighter;
+  font-size: 32px;
+}
+
+.pageHeaderText h1 {
+  margin: 0px;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 48px;
+}
+
+.welcomePage {
+  font-family: "Source Sans Pro";
+}
+
+.welcomePage h2 {
+  font-size: 30px;
+  line-height: 20px;
+  color: #36abe1;
+  font-weight: bolder;
+}
+
+.welcomePage p {
+  font-weight: lighter;
+  font-size: 18px;
+  color: #5c6366;
+}
+
+.babySteps div a {
+  text-decoration: none;
+  font-family: "Source Sans Pro";
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+  padding-right: 54px;
+  margin-right: 24px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.activeBabyStep a {
+  font-weight: bolder !important;
+  color: #36abe1 !important;
+}
+
+.babySteps div:nth-child(1) a {
+  background-image: url("../images/icons/individual/icons_small_bs1.png");
+}
+.babySteps div:nth-child(1).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs1_blue.png");
+}
+
+.babySteps div:nth-child(2) a {
+  background-image: url("../images/icons/individual/icons_small_bs2.png");
+}
+.babySteps div:nth-child(2).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs2_blue.png");
+}
+
+.babySteps div:nth-child(3) a {
+  background-image: url("../images/icons/individual/icons_small_bs3.png");
+}
+.babySteps div:nth-child(3).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs3_blue.png");
+}
+
+.babySteps div:nth-child(4) a {
+  background-image: url("../images/icons/individual/icons_small_bs4.png");
+}
+.babySteps div:nth-child(4).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs4_blue.png");
+}
+
+.babySteps div:nth-child(5) a {
+  background-image: url("../images/icons/individual/icons_small_bs5.png");
+}
+.babySteps div:nth-child(5).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs5_blue.png");
+}
+
+.babySteps div:nth-child(6) a {
+  background-image: url("../images/icons/individual/icons_small_bs6.png");
+}
+.babySteps div:nth-child(6).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs6_blue.png");
+}
+
+.babySteps div:nth-child(7) a {
+  background-image: url("../images/icons/individual/icons_small_bs7.png");
+}
+.babySteps div:nth-child(7).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs7_blue.png");
+}
+
+#bsAnchor1:hover, #bsAnchor1:active {
+  color: #36abe1 !important;
+  background-image: url("../images/icons/individual/icons_small_bs1_blue.png");
+}
+
+#bsAnchor2:hover, #bsAnchor2:active {
+  color: #36abe1 !important;
+  background-image: url("../images/icons/individual/icons_small_bs2_blue.png");
+}
+
+#bsAnchor3:hover, #bsAnchor3:active {
+  color: #36abe1 !important;
+  background-image: url("../images/icons/individual/icons_small_bs3_blue.png");
+}
+
+#bsAnchor4:hover, #bsAnchor4:active {
+  color: #36abe1 !important;
+  background-image: url("../images/icons/individual/icons_small_bs4_blue.png");
+}
+
+#bsAnchor5:hover, #bsAnchor5:active {
+  color: #36abe1 !important;
+  background-image: url("../images/icons/individual/icons_small_bs5_blue.png");
+}
+
+#bsAnchor6:hover, #bsAnchor6:active {
+  color: #36abe1 !important;
+  background-image: url("../images/icons/individual/icons_small_bs6_blue.png");
+}
+
+#bsAnchor7:hover, #bsAnchor7:active {
+  color: #36abe1 !important;
+  background-image: url("../images/icons/individual/icons_small_bs7_blue.png");
+}
+
+.bsHeader h2  {
+  font-size: 30px;
+  line-height: 20px;
+  color: #36abe1;
+  font-weight: 500;
+}
+
+.bsHeader h3 {
+  font-weight: 225;
+  font-size: 18px;
+  color: #5c6366;
+}
+
+.bsContent p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #65686f;
+}
+
+.bsFriends p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #65686f;
+}
+
+.bsFriends p a {
+  font-weight: bolder;
+  text-decoration: none;
+  color: #6fbee7;
+}
