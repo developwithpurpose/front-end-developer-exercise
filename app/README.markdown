@@ -29,5 +29,4 @@ some new tricks as I worked through it. I hope you all have had a Merry Christma
 
 
 Best,
-
 Mitchell Irvin

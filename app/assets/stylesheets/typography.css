@@ -12,7 +12,7 @@
 
 .pageHeaderText h1 {
   margin: 0px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 50px;
   line-height: 48px;
 }
@@ -46,38 +46,58 @@
   background-position: right;
 }
 
+.activeBabyStep a {
+  font-weight: bolder !important;
+  color: #36abe1 !important;
+}
+
 .babySteps div:nth-child(1) a {
   background-image: url("../images/icons/individual/icons_small_bs1.png");
+}
+.babySteps div:nth-child(1).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs1_blue.png");
 }
 
 .babySteps div:nth-child(2) a {
   background-image: url("../images/icons/individual/icons_small_bs2.png");
 }
+.babySteps div:nth-child(2).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs2_blue.png");
+}
 
 .babySteps div:nth-child(3) a {
   background-image: url("../images/icons/individual/icons_small_bs3.png");
+}
+.babySteps div:nth-child(3).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs3_blue.png");
 }
 
 .babySteps div:nth-child(4) a {
   background-image: url("../images/icons/individual/icons_small_bs4.png");
 }
+.babySteps div:nth-child(4).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs4_blue.png");
+}
 
 .babySteps div:nth-child(5) a {
   background-image: url("../images/icons/individual/icons_small_bs5.png");
+}
+.babySteps div:nth-child(5).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs5_blue.png");
 }
 
 .babySteps div:nth-child(6) a {
   background-image: url("../images/icons/individual/icons_small_bs6.png");
 }
+.babySteps div:nth-child(6).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs6_blue.png");
+}
 
 .babySteps div:nth-child(7) a {
   background-image: url("../images/icons/individual/icons_small_bs7.png");
 }
-
-.activeBabyStep a {
-  font-weight: bolder !important;
-  color: #36abe1 !important;
-  background-image: url("../images/icons/individual/icons_small_bs1_blue.png") !important;
+.babySteps div:nth-child(7).activeBabyStep a {
+  background-image: url("../images/icons/individual/icons_small_bs7_blue.png");
 }
 
 #bsAnchor1:hover, #bsAnchor1:active {

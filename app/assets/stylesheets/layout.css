@@ -46,16 +46,22 @@ html {
   min-height: 80%;
 }
 
-.sideNav {
-
-}
-
 .sideNav div {
   vertical-align: middle;
   text-align: right;
-  background-color: #ebeced;
+  background-image:
+    linear-gradient(
+      to left,
+      #d1d5d6,
+      #ebeced 5%
+    );
   min-height: 60px;
   margin-bottom: 1px;
+}
+
+#spacer {
+  min-height: 100px;
+  margin-bottom: 0px;
 }
 
 .sideNav div a {
@@ -64,7 +70,12 @@ html {
 }
 
 .activeBabyStepLayout {
-  background-color: #fff !important;
+  background-image:
+    linear-gradient(
+      to left,
+      #fff,
+      #fff
+    ) !important;
 }
 
 .welcomePage {
@@ -76,11 +87,19 @@ html {
 }
 
 #bs1, #bs2, #bs3, #bs4, #bs5, #bs6, #bs7 {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms, position 600ms;
+  transition: opacity 600ms, visibility 600ms, position 600ms;
 }
 
 #bs1:target, #bs2:target, #bs3:target, #bs4:target, #bs5:target, #bs6:target, #bs7:target {
-  display: block;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 600ms, visibility 600ms, position 600ms;
+  transition: opacity 600ms, visibility 600ms, position 600ms;
 }
 
 #bs1 {
