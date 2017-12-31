@@ -17,6 +17,23 @@
   line-height: 48px;
 }
 
+.welcomePage {
+  font-family: "Source Sans Pro";
+}
+
+.welcomePage h2 {
+  font-size: 30px;
+  line-height: 20px;
+  color: #36abe1;
+  font-weight: bolder;
+}
+
+.welcomePage p {
+  font-weight: lighter;
+  font-size: 18px;
+  color: #5c6366;
+}
+
 .babySteps div a {
   text-decoration: none;
   font-family: "Source Sans Pro";
@@ -96,4 +113,24 @@
 #bsAnchor7:hover, #bsAnchor7:active {
   color: #36abe1 !important;
   background-image: url("../images/icons/individual/icons_small_bs7_blue.png");
+}
+
+.bsHeader h2  {
+  font-size: 30px;
+  line-height: 20px;
+  color: #36abe1;
+  font-weight: 500;
+}
+
+.bsHeader h3 {
+  font-weight: 225;
+  font-size: 18px;
+  color: #5c6366;
+}
+
+.bsContent p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #65686f;
 }

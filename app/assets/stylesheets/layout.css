@@ -67,60 +67,66 @@
 
 }
 
+.welcomePage {
+  padding-left: 70px;
+}
+
+.showBabyStep {
+  display: block !important;
+}
+
+#bs1, #bs2, #bs3, #bs4, #bs5, #bs6, #bs7 {
+  display: none;
+}
+
+#bs1:target, #bs2:target, #bs3:target, #bs4:target, #bs5:target, #bs6:target, #bs7:target {
+  display: block;
+}
+
 #bs1 {
-  display: none;
+  padding-left: 70px;
+  padding-right: 70px;
 }
-
-#bs1:target {
-  display: block;
-}
-
 #bs2 {
-  display: none;
+  padding-left: 70px;
+  padding-right: 70px;
 }
-
-#bs2:target {
-  display: block;
-}
-
 #bs3 {
-  display: none;
+  padding-left: 70px;
+  padding-right: 70px;
 }
-
-#bs3:target {
-  display: block;
-}
-
 #bs4 {
-  display: none;
+  padding-left: 70px;
+  padding-right: 70px;
 }
-
-#bs4:target {
-  display: block;
-}
-
 #bs5 {
-  display: none;
+  padding-left: 70px;
+  padding-right: 70px;
 }
-
-#bs5:target {
-  display: block;
-}
-
 #bs6 {
-  display: none;
+  padding-left: 70px;
+  padding-right: 70px;
 }
-
-#bs6:target {
-  display: block;
-}
-
 #bs7 {
-  display: none;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
-#bs7:target {
-  display: block;
+.bsHeader {
+  vertical-align: middle;
+}
+
+.bsHeader div h2 {
+  margin: 5% 0px 5px 10px;
+}
+
+.bsHeader div h3 {
+  margin: 5px 0px 0px 10px;
+}
+
+.bsContent {
+  padding-top: 24px;
+  padding-bottom: 40px;
 }
 
 .no-padding {
@@ -130,4 +136,8 @@
 .no-margin {
   margin-left: 0px !important;
   margin-right: 0px !important;
+}
+
+.displayNone {
+  display: none;
 }

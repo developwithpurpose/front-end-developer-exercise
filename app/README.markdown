@@ -18,4 +18,6 @@ populating each step's content with the people that are currently on that step.
 I decided to use Bootstrap CSS because it's time saver in terms of writing custom CSS for the grid/layout part of the page. I want to use my time efficiently,
 and libraries are great for that. Speaking of, I decided to use jQuery instead of vanilla Javascript because it's got some nice functions (addClass(), etc.) that
 will save time writing custom JS to add event listeners, apply styles, etc. Using these two libraries allows me to focus on the design and solution, while minimizing the
-grunt work involved with building web pages. 
+grunt work involved with building web pages.
+
+After some consideration, I figured that a warm welcome would be appropriate. Since the landing baby step wasn't specified, I created a welcome page to land on. 
