@@ -50,3 +50,43 @@ header {
   position: relative;
   width: 100%;
 }
+
+/* main */
+
+main {
+  background-color: #fff;
+  margin-top: 60px;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+
+}
+
+.step-nav {
+  width: 35%;
+  background: linear-gradient(to right, #ebeced, #d1d5d6);
+}
+
+.step-info {
+  margin: 0 70px;
+}
+
+.steps {
+  list-style: none;
+  font-size: 18px;
+  line-height: 60px;
+  color: #9ba0a4;
+  text-align: center;
+  padding-left: 0;
+  margin: 0;
+}
+
+.steps li {
+  border-bottom: 1px solid #fff;
+}
+
+.active {
+  background: #fff;
+}
