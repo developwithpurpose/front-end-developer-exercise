@@ -1,0 +1,52 @@
+/* globals */
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #bbbfc2;
+}
+
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* header */
+
+header {
+  width: 100%;
+  height: 276px;
+  background: url("../images/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.hero-text-area {
+  position: absolute;
+  color: #fff;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  width: 50%;
+  text-align: right;
+}
+
+.first-line {
+  font-size: 32px;
+  margin-bottom: 7.5px;
+}
+
+.second-line {
+  font-size: 50px;
+  line-height: 48px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.header-image {
+  position: relative;
+  width: 100%;
+}
