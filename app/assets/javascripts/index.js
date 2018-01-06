@@ -13,18 +13,17 @@ getActiveItem = (navItemArr, copyItemArr) => {
       let currentActiveNav = document.querySelector('.active');
       if (currentActiveNav !== null) currentActiveNav.classList.remove('active');
       item.classList.add('active');
-
+      
       showCopy = (navIndex) => {
         copyItemArr.map((item, copyIndex) => {
-          console.log(item, copyIndex, navIndex);
           let currentActiveCopy = document.querySelector('.show-copy');
           if (currentActiveCopy !== null) {
             currentActiveCopy.classList.remove('show-copy');
+            currentActiveCopy.classList.add('hide-copy');
           }
-          if (copyIndex === navIndex) {
-            console.log(item.classList);
-            item.classList.add('show-copy');
-          }
+          (copyIndex === navIndex)
+          ? item.classList.remove('hide-copy')
+          : item.classList.add('hide-copy');
         })
       }
       showCopy(i);
@@ -32,11 +31,3 @@ getActiveItem = (navItemArr, copyItemArr) => {
   })
 }
 getActiveItem(navItemArr, copyItemArr);
-
-
-// getCorrectCopy = (navItemArr) => {
-//   return navItemArr.map(item => {
-//     console.log(item);
-//   })
-// }
-// getCorrectCopy(navItemArr);

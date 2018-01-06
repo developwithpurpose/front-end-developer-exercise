@@ -99,16 +99,15 @@ main {
   width: 100%;
 }
 
+.hide-copy {
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
 .show-copy {
   position: absolute;
   z-index: 99;
   width: 100%;
   opacity: 1;
-
-}
-
-.hide-copy {
-  position: absolute;
-  z-index: 1;
-  opacity: 0;
 }
