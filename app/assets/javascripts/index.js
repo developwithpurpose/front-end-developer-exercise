@@ -8,30 +8,26 @@ const copyItemArr = Array.from(copyItem);
 let stepId = 1;
 const friendsJSON = '../baby-steps.json';
 const fade = document.getElementById('fade');
-console.log(fade);
+
 
 getActiveItem = (navItemArr, copyItemArr) => {
-  return navItemArr.map( (item, i) => {
+  return navItemArr.map( (item, index) => {
     item.addEventListener('click', (e) =>{
       e.preventDefault();
       let currentActiveNav = document.querySelector('.active');
       if (currentActiveNav !== null) currentActiveNav.classList.remove('active');
       item.classList.add('active');
-      fade.classList.contains('fade-in') ? fade.classList.remove('fade-in') : fade.classList.add('fade-in')
-      stepId = parseInt(item.getAttribute('data-step'));
+      fade.classList.add('fade-in');
+      setTimeout( () => fade.classList.remove('fade-in'), 500);
       showCopy = (navIndex) => {
         copyItemArr.map((item, copyIndex) => {
-          // let currentActiveCopy = document.querySelector('.show-copy');
-          // if (currentActiveCopy !== null) {
-          //   currentActiveCopy.classList.remove('show-copy');
-          //   currentActiveCopy.classList.add('hide-copy');
-          // }
           (copyIndex === navIndex)
           ? item.classList.remove('hide-copy')
           : item.classList.add('hide-copy');
         })
       }
-      showCopy(i);
+      showCopy(index);
+      stepId = parseInt(item.getAttribute('data-step'));
       getFriendData(friendsJSON, copyItemArr, stepId);
     });
   })
@@ -58,21 +54,21 @@ getFriendData = (friendsJSON, copyItemArr, stepId) => {
     switch (true) {
       case (friendLength == 1):
         return friendSentence.innerHTML = `
-          <p>${sortedFriends[0].firstName} ${sortedFriends[0].lastName} is on Baby Step ${stepId}</p>
+          <p><a href="#">${sortedFriends[0].firstName} ${sortedFriends[0].lastName}</a> is on Baby Step ${stepId}</p>
         `
         break;
       case (friendLength == 2):
         return friendSentence.innerHTML = `
           <p>
-            ${sortedFriends[0].firstName} ${sortedFriends[0].lastName} and
-            ${sortedFriends[1].firstName} ${sortedFriends[1].lastName} are on Baby Step ${stepId}
+            <a href="#">${sortedFriends[0].firstName} ${sortedFriends[0].lastName} and
+            ${sortedFriends[1].firstName} ${sortedFriends[1].lastName}</a> are on Baby Step ${stepId}
           </p>
         `
         break;
       case (friendLength == 3):
         return friendSentence.innerHTML = `
           <p>
-            ${sortedFriends[0].firstName} ${sortedFriends[0].lastName}, ${sortedFriends[1].firstName} ${sortedFriends[1].lastName}
+            <a href="#">${sortedFriends[0].firstName} ${sortedFriends[0].lastName}, ${sortedFriends[1].firstName} ${sortedFriends[1].lastName}</a>
             and ${sortedFriends.length - 2} other friend are on Baby Step ${stepId}
           </p>
         `
@@ -80,7 +76,7 @@ getFriendData = (friendsJSON, copyItemArr, stepId) => {
       case (friendLength >= 4):
         return friendSentence.innerHTML = `
           <p>
-            ${sortedFriends[0].firstName} ${sortedFriends[0].lastName}, ${sortedFriends[1].firstName} ${sortedFriends[1].lastName}
+            <a href="#">${sortedFriends[0].firstName} ${sortedFriends[0].lastName}, ${sortedFriends[1].firstName} ${sortedFriends[1].lastName}</a>
             and 2 other friends are on Baby Step ${stepId}
           </p>
         `

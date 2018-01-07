@@ -18,4 +18,8 @@ Added JavaScript to handle showing dynamic text. On click of a step, a function 
 
 ### Dynamic text logic-complete
 
-Refactored to use a `switch` statement that checks for a `true` boolean against values up to 3 and then checks ranges for `>=` 4. It's more readable and succinct. 
+Refactored to use a `switch` statement that checks for a `true` boolean against values up to 3 and then checks ranges for `>=` 4. It's more readable and succinct.
+
+### Animation-WIP and style refinements-WIP
+
+Adding animations, which are a work in progress. Also took the time to refine text styles.

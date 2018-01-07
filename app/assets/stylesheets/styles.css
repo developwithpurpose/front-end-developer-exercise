@@ -28,21 +28,24 @@ header {
   position: absolute;
   color: #fff;
   z-index: 999;
-  right: 0;
+  right: 50px;
   top: 0;
   width: 50%;
   text-align: right;
 }
 
 .first-line {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
   font-size: 32px;
   margin-bottom: 7.5px;
 }
 
 .second-line {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   font-size: 50px;
   line-height: 48px;
-  font-weight: bold;
   margin-top: 0px;
 }
 
@@ -71,6 +74,7 @@ main {
 
 .steps {
   list-style: none;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
   line-height: 60px;
   color: #9ba0a4;
@@ -97,6 +101,42 @@ main {
   margin: 0 70px;
 }
 
+.step-info h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #36abe1;
+  line-height: 20px;
+  margin-bottom: 2.5px;
+}
+
+.step-info h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #5c6336;
+  line-height: 20px;
+  margin-top: 5px;
+}
+
+.step-info p {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+}
+
+.friend-copy p {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 13px;
+  color: #65686f;
+}
+
+.friend-copy a {
+  color: #6fbee7;
+  text-decoration: none;
+}
+
 .hide-copy {
   display: none;
 }
@@ -107,12 +147,14 @@ main {
 }
 
 @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
   to {
     opacity: 1;
   }
 }
 
 .fade-in {
-  opacity: 0;
-  animation: fadeIn .5s ease-in 1 forwards;
+  animation: fadeIn 450ms ease-in;
 }
