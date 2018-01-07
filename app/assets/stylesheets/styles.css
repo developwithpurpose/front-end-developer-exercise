@@ -68,7 +68,7 @@ main {
 }
 
 .step-nav {
-  width: 35%;
+  width: 45%;
   background: linear-gradient(to right, #ebeced, #d1d5d6);
 }
 
@@ -84,12 +84,46 @@ main {
 }
 
 .steps li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid #fff;
   cursor: pointer;
 }
 
+.steps li span {
+  margin-left: 35%;
+  margin-right: 10px;
+}
+
 .active {
   background: #fff;
+  color: #36abe1;
+  font-weight: 600;
+}
+
+#stepNav.steps li:focus {
+  outline: none;
+}
+
+#stepNav.steps li img {
+  pointer-events: none;
+}
+
+#stepNav.steps li img.active-img {
+  display: none;
+}
+
+#stepNav.steps li img.inactive-img {
+  display: block;
+}
+
+#stepNav.steps li:focus img.active-img {
+  display: block;
+}
+
+#stepNav.steps li:focus img.inactive-img {
+  display: none;
 }
 
 /* copy */

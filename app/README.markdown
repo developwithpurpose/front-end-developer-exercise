@@ -23,3 +23,7 @@ Refactored to use a `switch` statement that checks for a `true` boolean against 
 ### Animation-WIP and style refinements-WIP
 
 Adding animations, which are a work in progress. Also took the time to refine text styles.
+
+### Animation styles, icons
+
+Added some finishing touches to animations, tweaked styles and added icons next to nav items.

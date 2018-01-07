@@ -5,6 +5,9 @@ const navItemArr = Array.from(navItem);
 const stepCopy = document.getElementById('stepCopy');
 const copyItem = stepCopy.children;
 const copyItemArr = Array.from(copyItem);
+
+const initStep = document.getElementById('initStep');
+initStep.focus();
 let stepId = 1;
 const friendsJSON = '../baby-steps.json';
 const fade = document.getElementById('fade');
