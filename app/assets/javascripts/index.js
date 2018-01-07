@@ -81,6 +81,8 @@ getFriendData = (friendsJSON, copyItemArr, stepId) => {
             and 2 other friends are on Baby Step ${stepId}
           </p>
         `
+      case (friendLength == 0):
+        return friendSentence.innerHTML = ``;
       default:
         return null;
     }
