@@ -69,10 +69,6 @@ main {
   background: linear-gradient(to right, #ebeced, #d1d5d6);
 }
 
-.step-info {
-  margin: 0 70px;
-}
-
 .steps {
   list-style: none;
   font-size: 18px;
@@ -94,20 +90,18 @@ main {
 
 /* copy */
 
-.step-info {
-  position: relative;
+.step-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  margin: 0 70px;
 }
 
 .hide-copy {
-  position: absolute;
-  z-index: 1;
   display: none;
 }
 
 .show-copy {
-  position: absolute;
-  z-index: 99;
   width: 100%;
   opacity: 1;
 }

@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "http-server": "^0.8.0"
+  },
+  "dependencies": {
+    "whatwg-fetch": "^2.0.3"
   }
 }
