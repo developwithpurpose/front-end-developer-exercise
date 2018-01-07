@@ -7,6 +7,8 @@ const copyItem = stepCopy.children;
 const copyItemArr = Array.from(copyItem);
 let stepId = 1;
 const friendsJSON = '../baby-steps.json';
+const fade = document.getElementById('fade');
+console.log(fade);
 
 getActiveItem = (navItemArr, copyItemArr) => {
   return navItemArr.map( (item, i) => {
@@ -15,14 +17,15 @@ getActiveItem = (navItemArr, copyItemArr) => {
       let currentActiveNav = document.querySelector('.active');
       if (currentActiveNav !== null) currentActiveNav.classList.remove('active');
       item.classList.add('active');
+      fade.classList.contains('fade-in') ? fade.classList.remove('fade-in') : fade.classList.add('fade-in')
       stepId = parseInt(item.getAttribute('data-step'));
       showCopy = (navIndex) => {
         copyItemArr.map((item, copyIndex) => {
-          let currentActiveCopy = document.querySelector('.show-copy');
-          if (currentActiveCopy !== null) {
-            currentActiveCopy.classList.remove('show-copy');
-            currentActiveCopy.classList.add('hide-copy');
-          }
+          // let currentActiveCopy = document.querySelector('.show-copy');
+          // if (currentActiveCopy !== null) {
+          //   currentActiveCopy.classList.remove('show-copy');
+          //   currentActiveCopy.classList.add('hide-copy');
+          // }
           (copyIndex === navIndex)
           ? item.classList.remove('hide-copy')
           : item.classList.add('hide-copy');
