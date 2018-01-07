@@ -15,3 +15,7 @@ a single, concise function that declaratively iterates over the nav items to han
 ### Dynamic text logic-WIP
 
 Added JavaScript to handle showing dynamic text. On click of a step, a function is fired that uses the `fetch()` method to grab the JSON data. Then a lot of things happen at once. We create a new array, then we filter the returned data and `push()` to the new array by checking against the current step ID using the HTML `data` attribute. We sort the new array into another array. Then depending on the length of the new sorted array, we can just imperatively build out a sentence with the correct names and steps. This would read and function better using a switch statement, which is why I flagged the commit as "WIP".
+
+### Dynamic text logic-complete
+
+Refactored to use a `switch` statement that checks for a `true` boolean against values up to 3 and then checks ranges for `>=` 4. It's more readable and succinct. 

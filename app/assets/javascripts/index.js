@@ -41,8 +41,8 @@ getFriendData = (friendsJSON, copyItemArr, stepId) => {
   .then(data => {
     const friendsArr = data.friends;
     let onCurrentStep = [];
-    let dynamicText;
-    const friendSentence = document.createElement('P');
+    let dynamicText = ``;
+    const friendSentence = document.getElementById('friends');
     const filterFriends = friendsArr.filter( friend => {
       return friend.babyStep === stepId ? onCurrentStep.push(friend) : null
     })
@@ -51,14 +51,38 @@ getFriendData = (friendsJSON, copyItemArr, stepId) => {
       const friendTwo = b.lastName.toLowerCase();
       return (friendOne < friendTwo) ? -1: 1;
     });
-    if (sortedFriends.length === 1) {
-      return document.getElementById('friends').innerHTML = `
-        <p>${sortedFriends[0].firstName} ${sortedFriends[0].lastName} is on Baby Step ${stepId}</p>
-      `
-    } else if (sortedFriends.length === 2) {
-      return document.getElementById('friends').innerHTML = `
-        <p>${sortedFriends[0].firstName} ${sortedFriends[0].lastName} and ${sortedFriends[1].firstName} ${sortedFriends[1].lastName} are on Baby Step ${stepId}</p>
-      `
+    let friendLength = sortedFriends.length;
+    switch (true) {
+      case (friendLength == 1):
+        return friendSentence.innerHTML = `
+          <p>${sortedFriends[0].firstName} ${sortedFriends[0].lastName} is on Baby Step ${stepId}</p>
+        `
+        break;
+      case (friendLength == 2):
+        return friendSentence.innerHTML = `
+          <p>
+            ${sortedFriends[0].firstName} ${sortedFriends[0].lastName} and
+            ${sortedFriends[1].firstName} ${sortedFriends[1].lastName} are on Baby Step ${stepId}
+          </p>
+        `
+        break;
+      case (friendLength == 3):
+        return friendSentence.innerHTML = `
+          <p>
+            ${sortedFriends[0].firstName} ${sortedFriends[0].lastName}, ${sortedFriends[1].firstName} ${sortedFriends[1].lastName}
+            and ${sortedFriends.length - 2} other friend are on Baby Step ${stepId}
+          </p>
+        `
+        break;
+      case (friendLength >= 4):
+        return friendSentence.innerHTML = `
+          <p>
+            ${sortedFriends[0].firstName} ${sortedFriends[0].lastName}, ${sortedFriends[1].firstName} ${sortedFriends[1].lastName}
+            and 2 other friends are on Baby Step ${stepId}
+          </p>
+        `
+      default:
+        return null;
     }
   })
   .catch(err => {
