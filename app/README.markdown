@@ -27,3 +27,7 @@ Adding animations, which are a work in progress. Also took the time to refine te
 ### Animation styles, icons
 
 Added some finishing touches to animations, tweaked styles and added icons next to nav items.
+
+### Add shadows & large icons
+
+Added and styled shadows and large icons.

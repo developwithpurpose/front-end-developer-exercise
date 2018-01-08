@@ -10,6 +10,24 @@ body {
   max-width: 980px;
   margin: 0 auto;
   background-color: #fff;
+  position: relative;
+}
+
+/* shadows */
+
+.shadow-left {
+  position: absolute;
+  left: -15px;
+}
+
+.shadow-right {
+  position: absolute;
+  right: -15px;
+}
+
+.shadow-bottom {
+  position: absolute;
+  bottom: -30px;
 }
 
 /* header */
@@ -64,7 +82,7 @@ main {
 
 .container {
   display: flex;
-
+  height: 550px;
 }
 
 .step-nav {
@@ -135,12 +153,25 @@ main {
   margin: 0 70px;
 }
 
+.step-title-container {
+  display: flex;
+}
+
+.step-icon {
+  margin-right: 5px;
+}
+
+.step-titles {
+  margin-top: 15px;
+}
+
 .step-info h2 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
   font-size: 30px;
   color: #36abe1;
   line-height: 20px;
+  margin-top: 0;
   margin-bottom: 2.5px;
 }
 
@@ -151,6 +182,7 @@ main {
   color: #5c6336;
   line-height: 20px;
   margin-top: 5px;
+  margin-bottom: 0px;
 }
 
 .step-info p {
