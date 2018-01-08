@@ -115,9 +115,10 @@ main {
 }
 
 .active {
-  background: #fff;
   color: #36abe1;
   font-weight: 600;
+  background: #fff;
+  transition: background 450ms ease-in;
 }
 
 #stepNav.steps li:focus {
