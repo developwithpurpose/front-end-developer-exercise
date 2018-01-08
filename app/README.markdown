@@ -31,3 +31,7 @@ Added some finishing touches to animations, tweaked styles and added icons next 
 ### Add shadows & large icons
 
 Added and styled shadows and large icons.
+
+## Final Thoughts
+
+This was a great exercise that took me back to the basics. I deviated from the "usable without JavaScript" portion because it's my thinking that JavaScript offers a more robust and granular way of handling logic. And I believe that most modern browsers are all catching up on what developers have access to in terms of the latest syntax and APIs in JavaScript. I used a lot of ES6 syntax, and the `fetch()` API.
