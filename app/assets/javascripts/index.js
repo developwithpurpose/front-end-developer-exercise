@@ -71,7 +71,7 @@ getFriendData = (friendsJSON, copyItemArr, stepId) => {
       case (friendLength == 3):
         return friendSentence.innerHTML = `
           <p>
-            <a href="#">${sortedFriends[0].firstName} ${sortedFriends[0].lastName}</a>, <a href="#>"${sortedFriends[1].firstName} ${sortedFriends[1].lastName}</a>
+            <a href="#">${sortedFriends[0].firstName} ${sortedFriends[0].lastName}</a>, <a href="#">${sortedFriends[1].firstName} ${sortedFriends[1].lastName}</a>
             and ${sortedFriends.length - 2} other friend are on Baby Step ${stepId}
           </p>
         `
