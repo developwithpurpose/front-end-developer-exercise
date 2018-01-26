@@ -1,0 +1,114 @@
+/********* Main body content *********/
+body {
+    background-color: #bbbfc2;
+}
+
+.container {
+   background-color: #fff;
+}
+
+.banner {
+    width: 100%;
+    position: relative;
+}
+
+main {
+    background-color: #fff;
+    margin-top: 60px;
+    height: 100%;
+}
+
+.content-container {
+    background-color: #fff;
+    display: inline;
+}
+
+/********* Left Side Step Tabs *********/
+.baby-tabs {
+    width: 20%;
+    height: 700px;
+    background: linear-gradient(90deg,#ebeced, 97%, #d1d5d6);
+}
+
+.baby-tabs ul {
+    padding: 0em;
+}
+
+.baby-tabs ul li {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    line-height: 60px;
+    color: #9ba0a4;
+    list-style: none;
+    padding-right: 24px;
+    text-align: right;
+    border-bottom: 1px solid #fff;
+}
+
+.baby-tabs img {
+    top: 5px;
+    left: 10px;
+    position: relative;
+}
+
+.current {
+    background:white;
+}
+
+.tab-li.current {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: #36abe1;
+    line-height: 60px;
+}
+
+.active-img {
+}
+
+/********* Content Info *********/
+
+.baby-info {
+   top: 340px;
+   left: 300px;
+   right: 70px;
+   height: auto;
+   position: absolute;
+}
+
+.text-info {
+    top: 24px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #65686f;
+}
+
+.tab-content{
+	display: none;
+	padding: 15px;
+}
+
+.tab-content.current{
+	display: inherit;
+}
+
+/********* Friend Tracker *********/
+
+.friend-tracker {
+    margin-top: 40px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    font-weight: 400;
+}
+
+.shown-text {
+    color: #65686f;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 13px;
+}
+
+.friend-link {
+    text-decoration:none; 
+    color: #6fbee7;
+}
