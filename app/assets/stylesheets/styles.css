@@ -7,6 +7,29 @@ html {
   box-sizing: inherit;
 }
 
+a:focus {
+  color: #000;
+}
+
+a.skip {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  text-align: left;
+  overflow: hidden;
+}
+a.skip:active,
+a.skip:focus,
+a.skip:hover {
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
 body {
   height: 100%;
   font-size: 16px;
@@ -16,7 +39,6 @@ body {
 }
 
 .wrap {
-  border: 1px solid red;
   width: 980px;
   margin: 0 auto;
   background: #fff;
@@ -26,7 +48,6 @@ header {
   background: url('../images/header.jpg');
   height: 276px;
   width: 980px;
-  border: 1px solid red;
   margin-bottom: 60px;
 }
   header h1,
@@ -41,7 +62,8 @@ header {
     width: 500px;
     text-align: right;
   }
-  header > div h1 {
+  header > div h1 a {
+    text-decoration: none;
     font-size: 50px;
     color: #fff;
     font-weight: 700;
@@ -54,24 +76,22 @@ header {
     margin-bottom: 15px;
   }
 
-main {
+main{ 
   overflow: hidden;
 }
 
 aside {
   float: left;
-  width: 200px;
+  width: 300px;
 }
 
 nav {
-  /*
-  background: url('../images/shadow_right.jpg');
-  border: 1px solid red;
-  */
+  box-shadow: 0px 0px 10px 10px #ccc;
 }
   nav ul {
     list-style-type: none;
     margin: 0;
+    padding: 0;
   background: rgba(235,236,237,1);
   background: -moz-linear-gradient(left, rgba(235,236,237,1) 0%, rgba(209,213,214,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(235,236,237,1)), color-stop(100%, rgba(209,213,214,1)));
@@ -81,18 +101,28 @@ nav {
   background: linear-gradient(to right, rgba(235,236,237,1) 0%, rgba(209,213,214,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1 );
   }
-  nav li.active  a {
+  nav a.active {
     font-size: 18px;
     color: #36abe1;
     line-height: 60px;
+    background: #fff;
   }
   nav a {
     display: block;
     text-decoration: none;
     font-size: 18px;
     color: #9ba0a4;
+    width: 100%;
+    text-align: right;
     line-height: 60px;
     position: relative;
+    border-bottom: 1px solid #fff;
+    padding-right: 85px;
+    transition: opacity 2s;
+    transition: color 0.5s linear;
+  }
+  nav a:hover {
+    color: #36abe1;
   }
   nav a:after {
     content: '';
@@ -106,18 +136,42 @@ nav {
     background-repeat: no-repeat;
   }
 
+  nav li:nth-child(1n) a.active:after { background-position: 0 -175px }
 
   nav li:nth-child(2n) a:after { background-position: 0 -25px; }
-  nav li.active:nth-child(2n) a:after { background-position: 0 -225px !important; }
-  nav li:nth-child(3n) a:after { background-position: 0 -50px; }
-  nav li:nth-child(4n) a:after { background-position: 0 -75px; }
-  nav li:nth-child(5n) a:after { background-position: 0 -100px; }
-  nav li:nth-child(6n) a:after { background-position: 0 -125px; }
-  nav li:nth-child(7n) a:after { background-position: 0 -150px; }
+  nav li:nth-child(2n) a.active:after { background-position: 0 -200px }
 
+  nav li:nth-child(3n) a:after { background-position: 0 -50px; }
+  nav li:nth-child(3n) a.active:after { background-position: 0 -225px; }
+
+  nav li:nth-child(4n) a:after { background-position: 0 -75px; }
+  nav li:nth-child(4n) a.active:after { background-position: 0 -250px; }
+
+  nav li:nth-child(5n) a:after { background-position: 0 -100px; }
+  nav li:nth-child(5n) a.active:after { background-position: 0 -275px; }
+
+  nav li:nth-child(6n) a:after { background-position: 0 -125px; }
+  nav li:nth-child(6n) a.active:after { background-position: 0 -300px; }
+
+  nav li:nth-child(7n) a:after { background-position: 0 -150px; }
+  nav li:nth-child(7n) a.active:after { background-position: 0 -325px; }
+
+  @keyframes slidein {
+    0% {
+      margin-left: 600px;
+    }
+    25% {
+      margin-left: 500px;
+    }
+    75% {
+      margin-left: 400px;
+    }
+    100% {
+      margin-left: 370px;
+    }
+  }
 .content {
   width: 100%;
-  border: 1px solid green;
 }
   .content .cont_head {
     margin-bottom: 24px;
@@ -125,14 +179,34 @@ nav {
     background-repeat: no-repeat;
     padding-left: 100px;
     height: 65px;
-    border: 1px solid red;
+  }
+  .content .cont_head.two {
+    background-position: 0 -65px;
+  }
+  .content .cont_head.three {
+    background-position: 0 -130px;
+  }
+  .content .cont_head.four {
+    background-position: 0 -195px;
+  }
+  .content .cont_head.five {
+    background-position: 0 -260px;
+  }
+  .content .cont_head.six {
+    background-position: 0 -325px;
+  }
+  .content .cont_head.seven {
+    background-position: 0 -390px;
   }
   .content h3,
   .content h4 {
     margin: 0;
   }
   .content .inner {
-    margin-left: 270px;
+    margin-left: 370px;
+  }
+  .content .inner.animate {
+    animation: slidein 1s 1;
   }
   .content h3 {
     color: #36abe1;
