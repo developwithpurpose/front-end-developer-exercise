@@ -1,0 +1,178 @@
+.header {
+  height: 40vh;
+}
+
+.body {
+  height: 60vh;
+  padding-top: 50px;
+}
+
+.headerText1 {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  height: 20px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.headerText2 {
+  position: absolute;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 50px;
+  color: #fff;
+  line-height: 48px;
+  top:65px;
+  right: 100px;
+}
+
+.headerText3 {
+  position: absolute;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  color: #fff;
+  line-height: 48px;
+  top:115px;
+  right: 100px;
+}
+
+.noPadding {
+  padding: 0;
+}
+
+.headerImage {
+  width:100%; 
+  height: 100%;
+}
+
+.sidebar {
+  background: #ebeced; 
+  background: linear-gradient(to right, #ebeced , #d1d5d6);
+}
+
+.babyStep { 
+  line-height: 60px;
+  padding-right: 24px;
+}
+
+.babyStepRow {
+  height: 14.285%;
+  border: 1px solid white;
+}
+
+.babyStepRow:hover {
+  cursor: pointer;
+}
+
+.babyStepText {
+  float: right; 
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: #9ba0a4;
+  padding-right: 20px;
+  
+}
+
+.bsSidebarSelected {
+  font-weight: 600;
+  color: #36abe1;
+}
+
+.backgroundWhite {
+  background-color: white;
+}
+
+.bsHighlight {
+  background-color: white;
+  position: absolute;
+  border-top: 1px solid #9ba0a4;
+}
+
+.topBorder {
+  border-top: 1px solid #9ba0a4;
+}
+
+.babyStepImage {
+  float: right; 
+  margin-top: 12px;
+}
+
+.hide {
+  display: none;
+}
+
+.padding70 {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.contentLabel {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #36abe1;
+  line-height: 20px;
+  padding-bottom: 10px;
+}
+
+.contentSubLabel {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #5c6366;
+  line-height: 20px;
+}
+
+.contentParagraph {
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+  padding: 0;
+}
+
+.paddingBottom24 {
+  padding-bottom: 24px;
+}
+
+.paddingTop20 {
+  padding-top: 20px;
+}
+
+.contentImage {
+  padding: 0;
+  margin-top: -14px;
+}
+
+.contentParagraphRow {
+  padding-bottom: 40px;
+}
+
+.friendsLinks {
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  color: #6fbee7;
+  float: left;
+}
+
+.friendsOthers {
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  color: #65686f;
+  float: left;
+  padding-left: 5px;
+}
+
+.greyBackground {
+  background-color: #bbbfc2;
+}
+
+.whiteBackground {
+  background-color: white;
+}
