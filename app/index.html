@@ -1,3 +1,142 @@
-<!doctype html>
-<title>Front-End Developer Exercise</title>
-The server is running!
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+<style>
+    body {
+        margin: 0 0 0 0;
+    }
+
+    .article-header-container, .header-img {
+        width: 100%;
+        height: 15em;
+    }
+
+    .article-left-container {
+        float: left;
+        width: 20em;
+        height: 100%;
+        margin-top: 60px;
+        background-color: #d1d5d6;
+    }
+    
+    .article-left-container .baby-step-list {
+        list-style: none;
+        margin: 0 0 0 0;
+        padding-left: 0;
+        box-shadow: -5px 0 5px -5px #333;
+    }
+
+    .article-left-container .baby-step-list li {
+        padding-left: 6em;
+        border-top: 1px solid white;
+        background-color: #d1d5d6;
+    }
+
+    .article-left-container .baby-step-list li img {
+        width: 2em;
+        margin-bottom: -.5em;
+    }
+
+    .article-left-container .baby-step-list li a {
+        text-decoration: none;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 18px;
+        font-weight: bolder;
+        color: #36abe1;
+        line-height: 60px;
+    }
+
+    .active {
+        background-color: white !important;
+    }
+
+    .article-right-container {
+        margin: 60px 0 0 25em;
+    }
+</style>
+
+<div class="article-header-container">
+    <img class="header-img" src="assets/images/header_text.jpg"/>
+</div>
+
+<div class="article-left-container">
+    <ul class="baby-step-list">
+        <li class="baby-step-list-item active" id="baby-step-1">
+            <a href="#babystep1">Baby Step 1</a>
+            <img src="assets/images/icons/individual/icons_large_bs1.png"/>
+        </li>
+        <li class="baby-step-list-item" id="baby-step-2">
+            <a href="#babystep2">Baby Step 2</a>
+            <img src="assets/images/icons/individual/icons_large_bs2.png"/>
+        </li>
+        <li class="baby-step-list-item" id="baby-step-3">
+            <a href="#babystep3">Baby Step 3</a>
+            <img src="assets/images/icons/individual/icons_large_bs3.png"/>
+        </li>
+        <li class="baby-step-list-item" id="baby-step-4">
+            <a href="#babystep4">Baby Step 4</a>
+            <img src="assets/images/icons/individual/icons_large_bs4.png"/>
+        </li>
+        <li class="baby-step-list-item" id="baby-step-5">
+            <a href="#babystep5">Baby Step 5</a>
+            <img src="assets/images/icons/individual/icons_large_bs5.png"/>
+        </li>
+        <li class="baby-step-list-item" id="baby-step-6">
+            <a href="#babyste6">Baby Step 6</a>
+            <img src="assets/images/icons/individual/icons_large_bs6.png"/>
+        </li>
+        <li class="baby-step-list-item" id="baby-step-7">
+            <a href="#babystep7">Baby Step 7</a>
+            <img src="assets/images/icons/individual/icons_large_bs7.png"/>
+        </li>
+    </ul>
+</div>
+
+<div class="article-right-container">
+    <div id="baby-step-article-1">
+        <div class="article-heading">
+            <img src="assets/images/headings/heading_bs1.png"/>
+            <p>$1,000 Emergency Fund</p>
+        </div>
+        <p>
+            An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.
+        </p>
+        <p>
+            This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!
+        </p>
+    </div>
+</div>
+
+<script>
+    if ($(document).ready()) {
+      var activeBabyStep = 'baby-step-1';
+
+      switch(activeBabyStep){
+        case 'baby-step-1':
+          $('baby-step-article-1').show().slideDown('slow');
+          break;
+        case 'baby-step-2':
+          $('baby-step-article-2').show().slideUp('slow');
+          break;
+        case 'baby-step-3':
+          $('baby-step-article-3').show().slideUp('slow');
+          break;
+        case 'baby-step-4':
+          $('baby-step-article-4').show().slideUp('slow');
+          break;
+        case 'baby-step-5':
+          $('baby-step-article-5').show().slideUp('slow');
+          break;
+        case 'baby-step-6':
+          $('baby-step-article-6').show().slideUp('slow');
+          break;
+        case 'baby-step-7':
+          $('baby-step-article-7').show().slideUp('slow');
+      }
+
+      $('.baby-step-list-item a').click((function(event){
+        $('.baby-step-list').find('.active').removeClass('active');
+        $(event.target).parent().addClass('active');
+      }));
+    }
+</script>
