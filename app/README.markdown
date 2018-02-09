@@ -51,4 +51,4 @@ I've learned that, while frameworks are great, I've relied a bit too heavily on 
 
 ### Thanks!
 
-Thanks for giving me this opportunity to do this challenge test my strengths and weaknesses.
+Thanks for giving me the opportunity to do this challenge.
