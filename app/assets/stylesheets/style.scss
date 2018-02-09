@@ -1,0 +1,172 @@
+$white: #fff;
+$blue: #36abe1;
+$offWhite: #ebeced;
+$litestGray: #bbbfc2;
+$literGray: #9ba0a4;
+$gray: #65686f;
+$darkGray: #5c6366;
+
+$baseFont: 'Source Sans Pro', sans-serif;
+$paragraphFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headingFont: 'Open Sans', sans-serif;
+
+$fontLite: 300;
+$fontBold: 700;
+
+html,
+body {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+body {
+    background-color: $litestGray;
+    font-family: $baseFont;
+    margin: 0;
+}
+p {
+    color: $gray;
+    font-family: $paragraphFont;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+    margin: 0 0 20px 0;
+}
+a {
+    text-decoration: none;
+}
+
+.hidden {
+    position: absolute;
+    left: -10000px;
+}
+
+.content {
+    background-color: $white;
+    height: 850px;
+    margin: 0 auto;
+    width: 980px;
+}
+
+.header {
+    margin-bottom: 60px;
+    position: relative;
+    &__heading {
+        color: $white;
+        font-family: $headingFont;
+        line-height: 48px;
+        margin: 0;
+        position: absolute;
+        right: 70px;
+        top: 50px;
+        text-align: right;
+        width: 50%;
+        &--lite {
+            font-size: 32px;
+            font-weight: $fontLite;
+        }
+        &--bold {
+            font-size: 50px;
+            font-weight: $fontBold;
+        }
+    }
+}
+
+.nav {
+    background-color: $offWhite;
+    box-shadow: inset -200px 0px 20px -200px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: inset -200px 0px 20px -200px rgba(0, 0, 0, .4);
+    -moz-box-shadow: inset -200px 0px 20px -200px rgba(0, 0, 0, .4);
+    display: inline-block;
+    height: 510px;
+    vertical-align: top;
+    width: 30%;
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__item {
+        position: relative;
+    }
+    &__link {
+        background-color: $offWhite;
+        border-bottom: 1px solid $white;
+        box-shadow: inset -200px 0px 20px -200px rgba(0, 0, 0, .4);
+        -webkit-box-shadow: inset -200px 0px 20px -200px rgba(0, 0, 0, .4);
+        -moz-box-shadow: inset -200px 0px 20px -200px rgba(0, 0, 0, .4);
+        color: $literGray;
+        display: block;
+        font-size: 18px;
+        line-height: 60px;
+        width: 100%;
+        text-align: center;
+        &:after {
+            content: '';
+            height: 30px;
+            position: absolute;
+            right: 24px;
+            top: 18px;
+            width: 30px;
+        }
+        &--step1:after {
+            background: url("/assets/images/icons/individual/icons_small_bs1.png") no-repeat;
+        }
+        &--step2:after {
+            background: url("/assets/images/icons/individual/icons_small_bs2.png") no-repeat;
+        }
+        &--step3:after {
+            background: url("/assets/images/icons/individual/icons_small_bs3.png") no-repeat;
+        }
+        &--step4:after {
+            background: url("/assets/images/icons/individual/icons_small_bs4.png") no-repeat;
+        }
+        &--step5:after {
+            background: url("/assets/images/icons/individual/icons_small_bs5.png") no-repeat;
+        }
+        &--step6:after {
+            background: url("/assets/images/icons/individual/icons_small_bs6.png") no-repeat;
+        }
+        &--step7:after {
+            background: url("/assets/images/icons/individual/icons_small_bs7.png") no-repeat;
+        }
+    }
+    &--active {
+        background-color: $white;
+        box-shadow: none;
+        color: $blue;
+    }
+}
+
+.steps {
+    display: inline-block;
+    height: 350px;
+    margin: 0 70px 0 70px;
+    overflow: hidden;
+    position: relative;
+    width: 55%;
+    &__image {
+        display: inline-block;
+        margin: 0 10px 0 0;
+    }
+    &__description {
+        display: inline-block;
+        margin-bottom: 24px;
+        vertical-align: top;
+    }
+    &__header {
+        color: $blue;
+        font-size: 30px;
+        margin: 0;
+    }
+    &__info {
+        color: $darkGray;
+        font-size: 18px;
+        font-weight: $fontLite;
+        line-height: 20px;
+    }
+    &__section {
+        height: 350px;
+        vertical-align: top;
+    }
+}
