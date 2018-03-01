@@ -1,12 +1,24 @@
 {
   "name": "front-end-developer-exercise",
   "version": "1.0.0",
+  "author": "Dacia James",
+  "email": "msdessin@gmail.com",
+  "description": "Front-end Developer Exercise",
+  "keywords": [
+		"HTML5",
+		"CSS3",
+		"SASS",
+		"JavaScript"
+  ],
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+    "start": "http-server ./app -d false",
+    "scss:watch": "node-sass --watch ./app/assets/stylesheets -o ./app/assets/stylesheets/css",
+    "scss": "node-sass ./app/assets/stylesheets -o ./app/assets/css"
   },
   "devDependencies": {
     "http-server": "^0.8.0"

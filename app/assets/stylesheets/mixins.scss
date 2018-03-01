@@ -1,0 +1,89 @@
+@mixin font-light() {
+	font-weight: 100;
+}
+
+@mixin font-regular() {
+	font-weight: 300;
+}
+
+@mixin font-bold() {
+	font-weight: 600;
+}
+
+@mixin font-semibold() {
+	font-weight: 400;
+}
+
+@mixin vendor-prefix($property, $value) {
+	#{$property}: #{$value};
+	-ms-#{$property}: #{$value};
+}
+
+@mixin line-height($heightValue) {
+	line-height: $heightValue + px; //fallback for old browsers
+	line-height: (0.125 * $heightValue) + rem;
+}
+
+@function parseInt($n) {
+	/* 2 */
+	@return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+	$px: (); /* 3 */
+	$rem: (); /* 3 */
+
+	@each $value in $values {
+	  /* 4 */
+
+	  @if $value == 0 or $value == auto {
+		/* 5 */
+		$px: append($px, $value);
+		$rem: append($rem, $value);
+	  } @else {
+		$unit: unit($value); /* 6 */
+		$val: parseInt($value); /* 6 */
+
+		@if $unit == 'px' {
+		  /* 7 */
+		  $px: append($px, $value);
+		  $rem: append($rem,  ($val / 10 + rem));
+		}
+
+		@if $unit == 'rem' {
+		  /* 7 */
+		  $px: append($px,  ($val * 10 + px));
+		  $rem: append($rem, $value);
+		}
+	  }
+	}
+
+	@if $px == $rem {
+	  /* 8 */
+	  #{$property}: $px; /* 9 */
+	} @else {
+	  #{$property}: $px; /* 9 */
+	  #{$property}: $rem; /* 9 */
+	}
+}
+
+@mixin keyframes($name) {
+	@keyframes #{$name} {
+		@content;
+	}
+
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+}
+
+@mixin animation($animation...) {
+	@include vendor-prefix(animation, $animation);
+	animation: $animation;
+}
+
+@mixin transform($transform) {
+	@include vendor-prefix(transform, $transform);
+	-webkit-transition: $transform;
+	transform: $transform;
+}
