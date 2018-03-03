@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-html {
+ html {
     line-height: 1.15;
     /* 1 */
     -webkit-text-size-adjust: 100%;
@@ -402,30 +402,110 @@ header {
     padding-bottom: 60px;
 }
 
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 250px;
-    background-color: #cccbcb;
     position: fixed;
     height: 560px;
     overflow: auto;
+    /* IE10+ */
+    background-image: -ms-linear-gradient(left, #EBECED 90%, #D1D5D6 100%);
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(left, #EBECED 90%, #D1D5D6 100%);
+    /* Opera */
+    background-image: -o-linear-gradient(left, #EBECED 90%, #D1D5D6 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(90, #EBECED), color-stop(100, #D1D5D6));
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(left, #EBECED 90%, #D1D5D6 100%);
+    /* W3C Markup */
+    background-image: linear-gradient(to right, #EBECED 90%, #D1D5D6 100%);
 }
 
-li {
-    display: block;
-    color: #000;
+li a {
+    display: flex;
+    color: #9ba0a4;
     text-decoration: none;
     border-bottom: #FFFFFF 2px solid;
+    padding-left: 100px;
+    line-height: 60px;
+    transition: all 0.2s ease;
+    font-size: 18px;
 }
 
-li.active {
+li a.active {
     background-color: white;
-    color: grey;
+    color: #36abe1;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
 }
 
 li:hover:not(.active) {
-    background-color: white;
-    color: grey;
+    background-color: rgb(201, 200, 200);
+}
+
+main {
+    margin-left: 320px;
+    margin-right: 70px;
+    height: 560px;
+    overflow: hidden;
+}
+
+.step {
+    padding-bottom: 600px;
+}
+
+#mainNav > li > a > img {
+    padding-left: 10px;
+    align-self: center;
+}
+
+#mainNav > li > a > img {
+    padding-left: 10px;
+    align-self: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.headIcon {
+    float: left;
+    padding-right: 10px;
+    margin: 0;
+    top: 0;
+    height: 100px;
+}
+
+.stepHeading h2 {
+    color: #36abe1;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    padding-top: 28px;
+    padding-bottom: 5px;
+}
+
+.stepHeading h3 {
+    color: #5c6366;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-bottom: 24px;
+}
+
+.stepInfo {
+    float: right;
+}
+
+.step p {
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    line-height: 18px;
 }
