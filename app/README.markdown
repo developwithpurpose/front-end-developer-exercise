@@ -1,5 +1,7 @@
 #  Front-end Developer Exercise
 
+Thanks for the opportunity.
+
 ## index.html
 
 Since the requirements required the page to work without javascript, I decided against hiding any of the baby step content and decided to add padding so someone without JS could still access all the Baby Steps by clicking on the nav menu. Normally, I would put the index.html in the root folder, but chose to left it where it was from the clone.
@@ -10,7 +12,7 @@ I chose to utilize the main.js to meet the requirement of using an animation for
 
 ## dynamic.js
 
-To stick somewhat to the Single Responsibilty Principle I am doing the ajax call is this file. In order to sort and filter the data from response, I populated an array with the response.
+To stick somewhat to the Single Responsibilty Principle I am doing the ajax call is this file in order to populate the dynamic content. In order to sort and filter the data from response, I populated an array with the response.
 
 ## styles.css
 
