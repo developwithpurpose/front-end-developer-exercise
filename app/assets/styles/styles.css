@@ -509,3 +509,14 @@ main {
     font-size: 13px;
     line-height: 18px;
 }
+
+.dynamic a {
+    color: #6fbee7;
+}
+
+.dynamic p {
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    line-height: normal;
+    margin-top: 40px;
+}
