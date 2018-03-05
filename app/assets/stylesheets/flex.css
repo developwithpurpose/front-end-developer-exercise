@@ -1,0 +1,50 @@
+/*
+ * A good less variable would be gray-bg: #bbbfc2
+ *
+ */
+
+.container {
+  width: 1200px;
+  max-width: none !important;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row-sk {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex; 
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.col {
+  flex: 1 0;
+  background-color: #333;
+}
+
+.col {
+  float: left;
+  position: relative;
+  min-height: 1px;
+  /*
+  padding-right: 15px;
+  padding-left: 15px;
+  */
+}
+.border-col {
+  width: 110px;
+}
+/* Clean up with first-of-type */
+.border-col.left {
+  background-color: #bbbfc2;
+  background-image: url('../images/shadow_left.jpg');
+  background-repeat: repeat-y;
+}
+/* Clean up with last-of-type */
+.outer-col .right {
+  background-image: '../images/shadow_left.jpg';
+}
+/* vim: set tabstop=2 shiftwidth=2 expandtab: */
