@@ -1,0 +1,181 @@
+body {
+  background-color: #bbbfc2;
+  font-size: 13px;
+  line-height: 18px;
+}
+.container-sk {
+  width: 1200px;
+  max-width: none !important;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row-sk {
+  display: block;
+}
+.col {
+  float: left;
+  position: relative;
+  min-height: 1px;
+}
+.border-col {
+  background-color: #bbbfc2;
+  background-repeat: repeat-y;
+  width: 110px;
+  height: 725px;
+  z-index: 1;
+}
+.border-col:first-of-type {
+  background-image: url('../images/shadow_left.jpg');
+  background-position: right 0 top;
+}
+.border-col:last-of-type {
+  background-image: url('../images/shadow_right.jpg');
+}
+
+.col.middle {
+  background: #fff;
+  width: 980px;
+}
+.col.bottom {
+  background-image: url(../images/shadow_bottom.jpg);
+  height: 30px;
+  left: 110px;
+  width: 980px;
+}
+.heading-break {
+  height: 60px;
+}
+.content-nav {
+  width: 300px;
+  text-align: right;
+  z-index: 1;
+}
+.content-nav ul.nav {
+  color: #9ba0a4;
+  width: 300px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebeced+0,d1d5d6+100 */
+  background: #ebeced; /* Old browsers */
+  background: -moz-linear-gradient(left, #ebeced 0%, #d1d5d6 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ebeced 0%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ebeced 0%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+}
+.content-nav ul.nav a {
+  font-family: "Source Sans Pro";
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+  padding: 0 24px 0;
+}
+.content-nav ul.nav a:after {
+  display: block;
+  content: "";
+  height: 1px;
+  background-color: #fff;
+}
+.content-nav ul.nav a:active,
+.content-nav ul.nav a:hover {
+  color: #36abe1;
+  font-weight: 700;
+}
+.content-body {
+  width: 680px;
+  min-height: 500px;
+  padding: 0 70px;
+}
+.content-body section img {
+  padding-bottom: 24px;
+}
+.nav-tabs>li {
+  width: 100%;
+}
+.nav-tabs>li>a {
+  border: none;
+  border-radius: unset;
+  margin-right: 0;
+}
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+  background-color: #fff;
+  border: none;
+  color: #36abe1;
+}
+.bs-icon {
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  margin-left: 15px;
+  height: 20px;
+  display: inline;
+}
+#bs1.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs1.png);
+}
+#bs2.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs2.png);
+}
+#bs3.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs3.png);
+}
+#bs4.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs4.png);
+}
+#bs5.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs5.png);
+}
+#bs6.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs6.png);
+}
+#bs7.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs7.png);
+}
+
+.nav-tabs>li.active>a #bs1.bs-icon,
+.nav-tabs>li.active>a:focus #bs1.bs-icon,
+.nav-tabs>li.active>a:hover #bs1.bs-icon,
+.nav-tabs>li>a:hover #bs1.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs1_blue.png);
+}
+.nav-tabs>li.active>a #bs2.bs-icon,
+.nav-tabs>li.active>a:focus #bs2.bs-icon,
+.nav-tabs>li.active>a:hover #bs2.bs-icon,
+.nav-tabs>li>a:hover #bs2.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs2_blue.png);
+}
+.nav-tabs>li.active>a #bs3.bs-icon,
+.nav-tabs>li.active>a:focus #bs3.bs-icon,
+.nav-tabs>li.active>a:hover #bs3.bs-icon,
+.nav-tabs>li>a:hover #bs3.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs3_blue.png);
+}
+.nav-tabs>li.active>a #bs4.bs-icon,
+.nav-tabs>li.active>a:focus #bs4.bs-icon,
+.nav-tabs>li.active>a:hover #bs4.bs-icon,
+.nav-tabs>li>a:hover #bs4.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs4_blue.png);
+}
+.nav-tabs>li.active>a #bs5.bs-icon,
+.nav-tabs>li.active>a:focus #bs5.bs-icon,
+.nav-tabs>li.active>a:hover #bs5.bs-icon,
+.nav-tabs>li>a:hover #bs5.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs5_blue.png);
+}
+.nav-tabs>li.active>a #bs6.bs-icon,
+.nav-tabs>li.active>a:focus #bs6.bs-icon,
+.nav-tabs>li.active>a:hover #bs6.bs-icon,
+.nav-tabs>li>a:hover #bs6.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs6_blue.png);
+}
+.nav-tabs>li.active>a #bs7.bs-icon,
+.nav-tabs>li.active>a:focus #bs7.bs-icon,
+.nav-tabs>li.active>a:hover #bs7.bs-icon,
+.nav-tabs>li>a:hover #bs7.bs-icon {
+  background-image: url(/assets/images/icons/individual/icons_small_bs7_blue.png);
+}
+#baby-step-friends {
+  color: #65686f;
+}
+#baby-step-friends .friends {
+  color: #6fbee7;
+}
+/* vim: set tabstop=2 shiftwidth=2 expandtab: */
