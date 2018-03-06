@@ -1,0 +1,124 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #bbbfc2;
+    font-size: 16px;
+}
+
+a {
+    color: #6fbee7;
+    text-decoration: none;
+}
+
+.exercise-container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.exercise-container .banner {
+    background: url('../images/header.jpg');
+    background-size: cover;
+    height: 300px;
+    background-repeat: no-repeat;
+}
+
+.exercise-container h1 {
+    padding-top: 50px;
+    padding-right: 70px;
+    text-align: right;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.exercise-container span {
+    font-weight: 700;
+}
+
+.exercise-container .content {
+    display: flex;
+    background-color: #fff;
+    min-height: 60vh;
+    padding-top: 60px;
+}
+
+.exercise-container .side-menu {
+    width: 35%;
+    background: linear-gradient(to right, #ebeced, #d1d5d6);
+}
+
+.exercise-container .side-menu li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
+    color: #9ba0a4;
+    padding-right: 24px;
+    line-height: 60px;
+    border-bottom: 1px solid #fff;
+}
+
+.exercise-container .side-menu li.active {
+    background-color: #fff;
+}
+
+.exercise-container .side-menu img {
+    width: 35px;
+    margin-left: 25px;
+}
+
+.exercise-container .menu-info {
+    width: 65%;
+}
+
+.exercise-container .copy {
+    display: none;
+    opacity: 0;
+    padding-left: 40px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+    transition: opacity 1s ease-out;
+}
+
+.exercise-container .copy.active {
+    display: block;
+    opacity: 1
+}
+
+.exercise-container .titles-container img {
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.exercise-container .titles {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.exercise-container .titles h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #36abe1;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.exercise-container .titles h5 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 100;
+    color: #5c6566;
+}
+
+.exercise-container .friends {
+    margin-top: 40px;
+}
