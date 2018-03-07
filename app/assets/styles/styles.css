@@ -409,14 +409,14 @@ header {
     padding-bottom: 60px;
 }
 
-ul {
+#mainNav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 250px;
-    position: fixed;
     height: 560px;
     overflow: auto;
+    position: absolute;
     /* IE10+ */
     background-image: -ms-linear-gradient(left, #EBECED 90%, #D1D5D6 100%);
     /* Mozilla Firefox */
