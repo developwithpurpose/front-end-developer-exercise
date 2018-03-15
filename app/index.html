@@ -1,3 +1,406 @@
 <!doctype html>
-<title>Front-End Developer Exercise</title>
-The server is running!
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+		<script src="https://code.jquery.com/jquery-1.8.1.min.js" type="text/javascript"></script>
+				
+		<title>Front-End Developer Exercise</title>
+		<style type="text/css">
+		
+			body {
+				max-width: 980px;
+				margin: auto;
+				font-family: Sans-Serif;
+				line-height: 1.5em;
+				background-color: #bbbfc2;
+			}
+			
+			#header {
+				background-color: #bbbfc2;
+				height:300px;
+			}
+						
+			#content {
+				margin-left: 230px; /* Same as 'nav' width */
+			}
+		
+			p {
+				color: #555;
+			}
+	
+			/* Container holding the image and the text */
+			.container-header {
+				position: relative;
+			}
+
+			/* Top text */
+			.top-text {
+				position: absolute;
+				font-family: Open Sans;
+				font-size: 32px;
+				font-style: normal;
+				font-weight: lighter;
+				color: #fff;
+				top: 70px;
+				right: 50px;
+			}
+
+			/* Top Middle text */
+			.top-middle-text {
+				position: absolute;
+				font-family: Open Sans;
+				font-size: 50px;
+				font-style: normal;
+				font-weight: bold;
+				color: #fff;
+				line-height: 48px;
+				top: 100px;
+				right: 50px;
+			}
+
+			/* Top Bottom text */
+			.top-bottom-text {
+				position: absolute;
+				font-family: Open Sans;
+				font-size: 50px;
+				font-style: normal;
+				font-weight: bold;
+				color: #fff;
+				line-height: 48px;
+				top: 150px;
+				right: 50px;
+			}
+
+			.sidenav-tab {
+			  color: #9ba0a4;
+			  background-color: #fff;
+			  display: block;
+			  font-family: "Source Sans Pro", sans-serif;
+			  margin: auto;
+			  position: relative;
+			  width: 100%;
+			}
+
+			.sidenav-tab input[name="sections"] {
+			  left: -9999px;
+			  position: absolute;
+			  top: -9999px;
+			}
+
+			.sidenav-tab section {
+			  display: block;
+			}
+
+			.sidenav-tab section label {
+			  border: 0px;
+			  border-bottom:2px solid #fff;
+			  cursor: pointer;
+			  display: block;
+			  left:-147px;
+			  font-family: "Source Sans Pro", sans-serif;
+			  font-size: 18px;
+			  font-weight: regular;
+			  padding: 0 0 0 60px;
+			  position: relative;
+			  width: 210px;
+			  line-height: 60px;
+			  z-index:100;
+			  filter: grayscale(100%);
+			}
+
+			.sidenav-tab section article {
+			  background-color: #fff;
+			  display: none;
+			  left: 82px;
+			  width: 611px;
+			  padding: 0 70px 0 70px;
+			  position: absolute;  
+			  top: 0px;
+			}
+
+			.sidenav-tab section article:after {
+			  background-color: #ebeced;
+			  bottom: 0px;
+			  content: "";
+			  display: block;
+			  left:-229px;
+			  position: absolute;
+			  top: 0;
+			  width: 270px;
+			  z-index:1;
+			  background-image: linear-gradient(to right, #ebeced, #e5e6e7, #dee0e2, #d7dbdc, #d1d5d6);
+			}
+
+			.sidenav-tab input[name="sections"]:checked + label { 
+			  background-color: #fff;
+			  color: #36abe1;
+			  border-right: 0px;			  
+			  filter: none;
+			}
+
+			.sidenav-tab input[name="sections"]:checked ~ article {
+			  display: block;
+			}
+
+
+			@media (max-width: 533px) {
+			  
+			  h1 {
+				width: 100%;
+			  }
+
+			  .sidenav-tab {
+				width: 100%;
+			  }
+			  
+			  .sidenav-tab section label {
+				font-size: 1em;
+				width: 160px;
+			  }  
+
+			 .sidenav-tab section article {
+				left: 200px;
+				min-width: 270px;
+			  } 
+			  
+			  .sidenav-tab section article:after {
+				background-color: #ccc;
+				bottom: 0;
+				content: "";
+				display: block;
+				left:-199px;
+				position: absolute;
+				top: 0;
+				width: 200px;
+			  }  
+			  
+			}
+
+			@media (max-width: 768px) {
+			  h1 {
+				width: 96%;
+			  }
+
+			  .sidenav-tab {
+				width: 96%;
+			  }
+			}
+
+			@media (min-width: 1366px) {
+			  h1 {
+				width: 70%;
+			  }
+
+			  .sidenav-tab {
+				width: 70%;
+			  }
+			}
+			
+			.big {
+				line-height: 60px;
+				background-color: #fff;
+			}			
+
+			.medium {
+				padding-bottom: 40px;
+				background-color: #fff;
+			}			
+			
+			.bottom-space {
+				padding-bottom:300px;
+			}
+			
+			.animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}};
+			
+		</style>	
+	</head>
+	
+	<body>		
+
+		<header id="header">
+			<div class="container-header">
+			  <img src="assets/images/header.jpg" alt="Header" style="width:100%; height:300px;">
+			  <div class="top-text">Real Life, Love and Money with</div>
+			  <div class="top-middle-text">AMERICA'S MOST</div>
+			  <div class="top-bottom-text">TRUSTED GUY</div>
+			</div>
+		</header>
+				
+		<div class="big">&nbsp;</div>
+		
+		<div class="sidenav-tab">
+		  <section id="section1">
+			<input type="radio" name="sections" id="option1" onclick="openLink(event, 'Left')" checked>
+			<label for="option1">Baby Step 1&nbsp;&nbsp;<img style="float: right; padding: 16px 50px 0px 5px;" src="assets/images/icons/individual/icons_small_bs1_blue.png" alt="Icon" height="25" width="30"></label>
+			<article>
+			<div id="Fade" class="animate-left">
+				<p><img style="padding: 0px 24px 0px 0px;" src="assets/images/headings/heading_bs1.png" alt="Heading" height="65" width="436"></p>
+				<p>An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.</p>
+				<p class="medium">This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!</p>
+				<p><a href='/' target='_blank' style='color: #6fbee7; background: #fff; text-decoration: none; font-family: Helvetica; font-weight: bold; font-size: 13px;'>No Friends are on this step.</a></p>
+				
+				<p class="bottom-space">&nbsp;</p>
+			</div>
+			</article>
+		  </section>
+		  <section id="section2">
+			<input type="radio" name="sections" id="option2" onclick="openLink(event, 'Left')">
+			<label for="option2">Baby Step 2&nbsp;&nbsp;<img style="float: right; padding: 16px 50px 0px 5px;" src="assets/images/icons/individual/icons_small_bs2_blue.png" alt="Icon" height="25" width="30"></label>
+			<article>
+			<div id="Fade" class="animate-left">
+				<p><img style="padding: 0px 24px 0px 0px;" src="assets/images/headings/heading_bs2.png" alt="Heading" height="65" width="436"></p>
+				<p>List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first.</p>
+				<p class="medium">The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.</p>		
+				<script>
+					$(document).ready( function() {
+					 $.getJSON("baby-steps.json", function(data){
+						   $.each(data.friends, function(){
+							   if (this['babyStep'] == 2) {
+								 $("b").append("<a href='/' target='_blank' style='color: #6fbee7; background: #fff; text-decoration: none; font-family: Helvetica; font-weight: bold; font-size: 13px;'>"+this['firstName']+"&nbsp;"+this['lastName']+"</a>&nbsp;<br>");
+							   } else {
+								   "No Friends Found ";
+							   }  
+						   });
+						});
+					 });				
+				</script>
+				<b></b>
+				<p class="bottom-space">&nbsp;</p>
+			</div>
+			</article>
+		  </section>
+		  <section id="section3">
+			<input type="radio" name="sections" id="option3" onclick="openLink(event, 'Left')">
+			<label for="option3">Baby Step 3&nbsp;&nbsp;<img style="float: right; padding: 16px 50px 0px 5px;" src="assets/images/icons/individual/icons_small_bs3_blue.png" alt="Icon" height="25" width="30"></label>
+			<article>
+			<div id="Fade" class="animate-left">
+			<p><img style="padding: 0px 24px 0px 0px;" src="assets/images/headings/heading_bs3.png" alt="Heading" height="65" width="436"></p>
+ 			    <p>Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra” money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?” Your answer to that question is how much you should save.</p>
+			    <p class="medium">Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you’re paying to yourself, a buffer between you and life.</p>
+				<script>
+					$(document).ready( function() {
+					 $.getJSON("baby-steps.json", function(data){
+						   $.each(data.friends, function(){
+							   if (this['babyStep'] == 3) {
+								 $("b").append("<a href='/' target='_blank'style='color: #6fbee7; background: #fff; text-decoration: none; font-family: Helvetica; font-weight: bold; font-size: 13px;'>"+this['firstName']+"&nbsp;"+this['lastName']+"</a>&nbsp;<br>");
+							   } else {
+								   "No Friends Found ";
+							   }  
+						   });
+						});
+					 });				
+				</script>
+				<b></b>
+				<p class="bottom-space">&nbsp;</p>
+			</div>
+			</article>
+		  </section>
+		  <section id="section4">
+			<input type="radio" name="sections" id="option4" onclick="openLink(event, 'Left')">
+			<label for="option4">Baby Step 4&nbsp;&nbsp;<img style="float: right; padding: 16px 50px 0px 5px;" src="assets/images/icons/individual/icons_small_bs4_blue.png" alt="Icon" height="25" width="30"></label>
+			<article>
+			<div id="Fade" class="animate-left">
+			  <p><img style="padding: 0px 24px 0px 0px;" src="assets/images/headings/heading_bs4.png" alt="Heading" height="65" width="436"></p>
+			  <p>When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.</p>
+			  <p class="medium">Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.</p>
+  			    <script>
+					$(document).ready( function() {
+					 $.getJSON("baby-steps.json", function(data){
+						   $.each(data.friends, function(){
+							   if (this['babyStep'] == 4) {
+								 $("b").append("<a href='/' target='_blank' style='color: #6fbee7; background: #fff; text-decoration: none; font-family: Helvetica; font-weight: bold; font-size: 13px;'>"+this['firstName']+"&nbsp;"+this['lastName']+"</a>&nbsp;<br>");
+							   } else {
+								   "No Friends Found ";
+							   }  
+						   });
+						});
+					 });				
+				</script>
+				<b></b>
+				<p class="bottom-space">&nbsp;</p>
+			</div>	
+			</article>
+		  </section>
+		  <section id="section5">
+			<input type="radio" name="sections" id="option5" onclick="openLink(event, 'Left')">
+			<label for="option5">Baby Step 5&nbsp;&nbsp;<img style="float: right; padding: 16px 50px 0px 5px;" src="assets/images/icons/individual/icons_small_bs5_blue.png" alt="Icon" height="25" width="30"></label>
+			<article>
+			<div id="Fade" class="animate-left">
+			  <p><img style="padding: 0px 24px 0px 0px;" src="assets/images/headings/heading_bs5.png" alt="Heading" height="65" width="436"></p>
+			  <p>By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.</p>
+			  <p class="medium">In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!</p>
+				<script>
+					$(document).ready( function() {
+					 $.getJSON("baby-steps.json", function(data){
+						   $.each(data.friends, function(){
+							   if (this['babyStep'] == 5) {
+								 $("b").append("<a href='/' target='_blank' style='color: #6fbee7; background: #fff; text-decoration: none; font-family: Helvetica; font-weight: bold; font-size: 13px;'>"+this['firstName']+"&nbsp;"+this['lastName']+"</a>&nbsp;<br>");
+							   } else {
+								   "No Friends Found ";
+							   }  
+						   });
+						});
+					 });				
+				</script>
+				<b></b>
+				<p class="bottom-space">&nbsp;</p>
+			</div>
+			</article>
+		  </section>
+		  <section id="section6">
+			<input type="radio" name="sections" id="option6" onclick="openLink(event, 'Left')">
+			<label for="option6">Baby Step 6&nbsp;&nbsp;<img style="float: right; padding: 16px 50px 0px 5px;" src="assets/images/icons/individual/icons_small_bs6_blue.png" alt="Icon" height="25" width="30"></label>
+			<article>
+			<div id="Fade" class="animate-left">
+			  <p><img style="padding: 0px 24px 0px 0px;" src="assets/images/headings/heading_bs6.png" alt="Heading" height="65" width="436"></p>
+			  <p>Now it’s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.</p>
+			  <p class="medium">As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!</p>
+				<script>
+					$(document).ready( function() {
+					 $.getJSON("baby-steps.json", function(data){
+						   $.each(data.friends, function(){
+							   if (this['babyStep'] == 6) {
+								 $("b").append("<a href='/' target='_blank' style='color: #6fbee7; background: #fff; text-decoration: none; font-family: Helvetica; font-weight: bold; font-size: 13px;'>"+this['firstName']+"&nbsp;"+this['lastName']+"</a>&nbsp;<br>");
+							   } else {
+								   "No Friends Found ";
+							   }  
+						   });
+						});
+					 });				
+				</script>
+				<b></b>
+				<p class="bottom-space">&nbsp;</p>
+			</div>
+			</article>
+		  </section>
+		  <section id="section7">
+			<input type="radio" name="sections" id="option7" onclick="openLink(event, 'Left')">
+			<label for="option7">Baby Step 7&nbsp;&nbsp;<img style="float: right; padding: 16px 50px 0px 5px;" src="assets/images/icons/individual/icons_small_bs7_blue.png" alt="Icon" height="25" width="30"></label>
+			<article>
+			<div id="Fade" class="animate-left">
+			  <p><img style="padding: 0px 24px 0px 0px;" src="assets/images/headings/heading_bs7.png" alt="Heading" height="65" width="436"></p>
+			  <p>It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!</p>
+			  <p class="medium">Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.</p>
+				<script>
+					$(document).ready( function() {
+					 $.getJSON("baby-steps.json", function(data){
+						   $.each(data.friends, function(){
+							   if (this['babyStep'] == 7) {
+								 $("b").append("<a href='/' target='_blank' style='color: #6fbee7; background: #fff; text-decoration: none; font-family: Helvetica; font-weight: bold; font-size: 13px;'>"+this['firstName']+"&nbsp;"+this['lastName']+"</a>&nbsp;<br>");
+							   } else {
+								   "No Friends Found ";
+							   }  
+						   });
+						});
+					 });				
+				</script>
+				<b></b>
+				<p class="bottom-space">&nbsp;</p>
+				</div>
+			  </article>
+		  </section>
+		  </div>
+		
+	</body>
+</html>
