@@ -1,1 +1,46 @@
-/* This is the stylesheet */
+li {
+  background-color: #ebeced;
+}
+
+.itemname {
+    font-family: sans-serif;
+    color: #9ba0a4;
+    font-size: 18px;
+}
+
+p {
+  font-family: helvetica;
+  color: #65686f;
+  font-size: 13px;
+  background-color: white;
+}
+
+.textbody {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    background-color: white;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+#myDIV1, #myDIV2, #myDIV3, #myDIV4, #myDIV5, #myDIV6, #myDIV7 {
+    display: none;
+}
+
+#myDIV1.open, #myDIV2.open, #myDIV3.open, #myDIV4.open, #myDIV5.open, #myDIV6.open, #myDIV7.open {
+    display: block;
+    transition: opacity 2s ease-in;
+}
