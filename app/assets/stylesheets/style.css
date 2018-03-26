@@ -6,7 +6,7 @@ body{
 header{
   margin-bottom: 60px;
 }
-#stepOne{
+.buttons{
   background-color: lightgray;
   width: 300px;
   height:60px;
@@ -19,9 +19,11 @@ header{
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
 }
 .icon{
   padding-right: 10px;
+  width: 50%;
 }
 h3{
   padding-right: 15px;
