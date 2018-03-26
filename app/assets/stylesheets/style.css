@@ -1,3 +1,31 @@
-/* body{
-  background-color: red;
-} */
+body{
+  max-width: 960px;
+  margin: auto;
+
+}
+header{
+  margin-bottom: 60px;
+}
+#stepOne{
+  background-color: lightgray;
+  width: 300px;
+  height:60px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+}
+.content{
+  width: 300px;
+  height:60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icon{
+  padding-right: 10px;
+}
+h3{
+  padding-right: 15px;
+  font-size: 18px;
+  color: #9ba0a4;
+  font-family: helvetica;
+}
