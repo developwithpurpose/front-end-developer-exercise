@@ -29,3 +29,22 @@ h3{
   color: #9ba0a4;
   font-family: helvetica;
 }
+#both{
+  display: flex;
+}
+#content{
+  max-width:660px;
+  margin: 0 auto;
+}
+.right{
+  margin:0 70px;
+}
+p{
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+  font-family: helvetica;
+}
+.imgTitle{
+  margin-bottom: 24px;
+}
