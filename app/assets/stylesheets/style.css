@@ -50,3 +50,6 @@ p{
 .imgTitle{
   margin-bottom: 24px;
 }
+#two, #three, #four, #five, #six, #seven{
+  display: none;
+}
