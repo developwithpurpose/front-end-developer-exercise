@@ -1,0 +1,128 @@
+@import url("normalize7.css");
+
+/* basic default settings */
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* force IE compliance */
+a img {
+	border: none;
+}
+
+a {color: inherit;}
+
+/* fix problem with border and backgrounds, at least in Firefox */
+body table td,
+body table tr,
+body table th,
+body table,
+body table thead,
+body table tbody {
+	position: static;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+/* fix for Chrome */
+td > img {
+	max-width: initial;
+}
+
+input[type="file"] {
+	border: thin solid #abadb3;
+}
+
+iframe {
+	border: none;
+}
+
+/* common classes */
+.clear {
+	clear: both;
+}
+
+.float-right {
+	float: right;
+	z-index:1;
+}
+
+.float-left {
+	float: left;
+	z-index: 1;
+}
+
+.grayscale {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */ 
+	-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+	filter: grayscale(100%);
+	filter: gray; /* IE6-9 */ 
+}
+
+.valign-middle {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.valign-bottom {
+	position: relative;
+	top: 100%;
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+/* justifying last and/or only line */
+.fulljustify {
+	text-align: justify;
+	margin-bottom: -1.3em;
+}
+
+.fulljustify:after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+}
+
+.ordered-list-item {
+	counter-increment: list-item-counter;
+}
+
+.ordered-list-item:before {
+	content: counter(list-item-counter, decimal);
+}
+
+/* The following rule prevents content wrapping under a floated element. A value for "overflow" other than "visible" creates a new block formatting context (see http://www.w3.org/TR/CSS2/visuren.html#block-formatting); The display rules fix IE not working in some cases */
+.vertical-clear {
+	overflow: auto;
+	display: inline-block;
+	display: block;
+}
+
+/* make bottom of element clear floated child elements */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/* For IE 6/7 only (trigger hasLayout) */
+.clearfix {
+	*zoom: 1;
+}
