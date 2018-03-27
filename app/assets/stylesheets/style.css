@@ -48,7 +48,7 @@ h3{
 .right{
   margin:0 70px;
 }
-p{
+p, #p1, #p2, #p3, #p4, #p5, #p6, #p7{
   font-size: 13px;
   color: #65686f;
   line-height: 18px;

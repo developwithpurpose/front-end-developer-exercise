@@ -143,25 +143,22 @@
      console.log("step one clicked");
      $oneC.show();
      $('#two, #three, #four, #five, #six, #seven').hide();
-     $one.css("background-color", "white").find('h3').css("color", "#36abe1").find('img').attr('src', './assets/images/icons/individual/icons_large_bs1_blue.png');
-     $('#stepTwo, #stepThree, #stepFour, #stepFive, #stepSix, #stepSeven').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4");
+     $one.css("background-color", "white").find('h3').css("color", "#36abe1").animate({"font-size":"20pt"}, 1000).find('img').attr('src', './assets/images/icons/individual/icons_large_bs1_blue.png');
+     $('#stepTwo, #stepThree, #stepFour, #stepFive, #stepSix, #stepSeven').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4").css("font-size", "18px");
      $seven.find('img').attr('src','./assets/images/icons/individual/icons_large_bs7.png');
      $two.find('img').attr('src','./assets/images/icons/individual/icons_large_bs2.png');
      $three.find('img').attr('src','./assets/images/icons/individual/icons_large_bs3.png');
      $four.find('img').attr('src','./assets/images/icons/individual/icons_large_bs4.png');
      $five.find('img').attr('src','./assets/images/icons/individual/icons_large_bs5.png');
      $six.find('img').attr('src','./assets/images/icons/individual/icons_large_bs6.png');
-     // if (arr1.length === 1 ){
-     //   $('#pOne').text(arr1.firstName + arr1.lastName +" is also in Baby Step 1");
-     // }
    });
 
    $two.on('click', ()=>{
      console.log("step two clicked");
      $('#one, #three, #four, #five, #six, #seven').hide();
      $twoC.show();
-     $two.css("background-color", "white").find('h3').css("color", "#36abe1").find('img').attr('src', './assets/images/icons/individual/icons_large_bs2_blue.png');
-     $('#stepOne, #stepThree, #stepFour, #stepFive, #stepSix, #stepSeven').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4");
+     $two.css("background-color", "white").find('h3').css("color", "#36abe1").animate({"font-size":"20pt"}, 1000).find('img').attr('src', './assets/images/icons/individual/icons_large_bs2_blue.png');
+     $('#stepOne, #stepThree, #stepFour, #stepFive, #stepSix, #stepSeven').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4").css("font-size", "18px");
      $one.find('img').attr('src','./assets/images/icons/individual/icons_large_bs1.png');
      $three.find('img').attr('src','./assets/images/icons/individual/icons_large_bs3.png');
      $four.find('img').attr('src','./assets/images/icons/individual/icons_large_bs4.png');
@@ -173,8 +170,8 @@
      console.log("step three clicked");
      $('#one, #two, #four, #five, #six, #seven').hide();
      $threeC.show();
-     $three.css("background-color", "white").find('h3').css("color", "#36abe1").find('img').attr('src', './assets/images/icons/individual/icons_large_bs3_blue.png');
-     $('#stepOne, #stepTwo, #stepFour, #stepFive, #stepSix, #stepSeven').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4");
+     $three.css("background-color", "white").find('h3').css("color", "#36abe1").animate({"font-size":"20pt"}, 1000).find('img').attr('src', './assets/images/icons/individual/icons_large_bs3_blue.png');
+     $('#stepOne, #stepTwo, #stepFour, #stepFive, #stepSix, #stepSeven').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4").css("font-size", "18px");
      $one.find('img').attr('src','./assets/images/icons/individual/icons_large_bs1.png');
      $two.find('img').attr('src','./assets/images/icons/individual/icons_large_bs2.png');
      $four.find('img').attr('src','./assets/images/icons/individual/icons_large_bs4.png');
@@ -186,8 +183,8 @@
      console.log("step four clicked")
      $fourC.show();
      $('#one, #two, #three, #five, #six, #seven').hide();
-     $four.css("background-color", "white").find('h3').css("color", "#36abe1").find('img').attr('src', './assets/images/icons/individual/icons_large_bs4_blue.png');
-     $('#stepOne, #stepTwo, #stepThree, #stepFive, #stepSix, #stepSeven').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4");
+     $four.css("background-color", "white").find('h3').css("color", "#36abe1").animate({"font-size":"20pt"}, 1000).find('img').attr('src', './assets/images/icons/individual/icons_large_bs4_blue.png');
+     $('#stepOne, #stepTwo, #stepThree, #stepFive, #stepSix, #stepSeven').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4").css("font-size", "18px");
      $one.find('img').attr('src','./assets/images/icons/individual/icons_large_bs1.png');
      $two.find('img').attr('src','./assets/images/icons/individual/icons_large_bs2.png');
      $three.find('img').attr('src','./assets/images/icons/individual/icons_large_bs3.png');
@@ -199,8 +196,8 @@
      console.log("step five clicked")
      $('#one, #two, #three, #four, #six, #seven').hide();
      $fiveC.show();
-     $five.css("background-color", "white").find('h3').css("color", "#36abe1").find('img').attr('src', './assets/images/icons/individual/icons_large_bs5_blue.png');
-     $('#stepOne, #stepTwo, #stepThree, #stepFour, #stepSix, #stepSeven').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4");
+     $five.css("background-color", "white").find('h3').css("color", "#36abe1").animate({"font-size":"20pt"}, 1000).find('img').attr('src', './assets/images/icons/individual/icons_large_bs5_blue.png');
+     $('#stepOne, #stepTwo, #stepThree, #stepFour, #stepSix, #stepSeven').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4").css("font-size", "18px");
      $one.find('img').attr('src','./assets/images/icons/individual/icons_large_bs1.png');
      $two.find('img').attr('src','./assets/images/icons/individual/icons_large_bs2.png');
      $three.find('img').attr('src','./assets/images/icons/individual/icons_large_bs3.png');
@@ -212,8 +209,8 @@
      console.log("step six clicked")
      $('#one, #two, #three, #four, #five, #seven').hide();
      $sixC.show();
-     $six.css("background-color", "white").find('h3').css("color", "#36abe1").find('img').attr('src', './assets/images/icons/individual/icons_large_bs6_blue.png');
-     $('#stepOne, #stepTwo, #stepThree, #stepFour, #stepFive, #stepSeven').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4");
+     $six.css("background-color", "white").find('h3').css("color", "#36abe1").animate({"font-size":"20pt"}, 1000).find('img').attr('src', './assets/images/icons/individual/icons_large_bs6_blue.png');
+     $('#stepOne, #stepTwo, #stepThree, #stepFour, #stepFive, #stepSeven').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4").css("font-size", "18px");
      $one.find('img').attr('src','./assets/images/icons/individual/icons_large_bs1.png');
      $two.find('img').attr('src','./assets/images/icons/individual/icons_large_bs2.png');
      $three.find('img').attr('src','./assets/images/icons/individual/icons_large_bs3.png');
@@ -225,8 +222,8 @@
      console.log("step seven clicked");
      $sevenC.show();
      $('#one, #two, #three, #four, #five, #six').hide();
-     $seven.css("background-color", "white").find('h3').css("color", "#36abe1").find('img').attr('src', './assets/images/icons/individual/icons_large_bs7_blue.png');
-     $('#stepOne, #stepTwo, #stepThree, #stepFour, #stepFive, #stepSix').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4");
+     $seven.css("background-color", "white").find('h3').css("color", "#36abe1").animate({"font-size":"20pt"}, 1000).find('img').attr('src', './assets/images/icons/individual/icons_large_bs7_blue.png');
+     $('#stepOne, #stepTwo, #stepThree, #stepFour, #stepFive, #stepSix').css("background-color", "lightgray").find('h3').css("color", "#9ba0a4").css("font-size", "18px");
      $one.find('img').attr('src','./assets/images/icons/individual/icons_large_bs1.png');
      $two.find('img').attr('src','./assets/images/icons/individual/icons_large_bs2.png');
      $three.find('img').attr('src','./assets/images/icons/individual/icons_large_bs3.png');
