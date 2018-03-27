@@ -1,0 +1,62 @@
+body{
+  max-width: 960px;
+  margin: auto;
+
+}
+header{
+  margin-bottom: 60px;
+}
+#stepOne{
+  background-color: white;
+  width: 300px;
+  height:60px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+}
+ #stepTwo, #stepThree, #stepFour, #stepFive, #stepSix, #stepSeven{
+  background-color: lightgray;
+  width: 300px;
+  height:60px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+}
+.content{
+  width: 300px;
+  height:60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+.icon{
+  padding-right: 10px;
+  width: 50%;
+}
+h3{
+  padding-right: 15px;
+  font-size: 18px;
+  color: #9ba0a4;
+  font-family: helvetica;
+}
+#both{
+  display: flex;
+}
+#content{
+  max-width:660px;
+  margin: 0 auto;
+}
+.right{
+  margin:0 70px;
+}
+p, #p1, #p2, #p3, #p4, #p5, #p6, #p7{
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+  font-family: helvetica;
+}
+.imgTitle{
+  margin-bottom: 24px;
+}
+#two, #three, #four, #five, #six, #seven{
+  display: none;
+}
