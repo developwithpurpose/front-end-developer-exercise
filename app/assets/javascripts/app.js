@@ -7,7 +7,7 @@
     const arr5 = [];
     const arr6 = [];
     const arr7 = [];
-    const subArr = [];
+    
     const $one = $("#stepOne");
     const $two = $("#stepTwo");
     const $three = $("#stepThree");
