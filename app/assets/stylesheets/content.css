@@ -1,0 +1,51 @@
+
+.content {
+  display: none;
+  position: relative;
+  opacity: 1;
+  margin: 0 70px 0 0;
+  height: 300px;
+  transform: translateX(-100%);
+  z-index: 5;
+}
+
+.content img {
+  padding: 0 10px 0 0;
+}
+
+.content h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 20px;
+  color: #36abe1;
+  padding: 20px 0 0 0;
+}
+.content h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  color: #5c6366;
+  margin: 5px 0 24px 0;
+}
+.content p {
+  font-family: "Helvetica";
+  font-weight: 400;
+  color: #65686f;
+  padding: 0 0 20px 0;
+  font-size: 13px;
+}
+.content h3 {
+  padding: 20px 0 0 0;
+}
+.content img {
+  float: left;
+}
+.content:target {
+  display: block;
+  animation: slide 1.5s ease-out forwards;
+}
+@keyframes slide {
+  100% {transform: translateX(0%)}
+}

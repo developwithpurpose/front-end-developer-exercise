@@ -1,0 +1,24 @@
+
+.header {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 0 60px 0;
+  color: #fff;
+}
+.header_text {
+  position: absolute;
+  text-align: right;
+  right: 70px;
+  top: 50px;
+}
+.header h1 {
+  font-weight: 300;
+  line-height: 40px;
+  font-size: 32px;
+}
+.header h2 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 48px; 
+}
+

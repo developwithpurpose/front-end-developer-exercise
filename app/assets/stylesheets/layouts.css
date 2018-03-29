@@ -1,0 +1,21 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #bbbfc2;
+  height: 1000px;
+}
+.page {
+  position: relative;
+  width: 980px;
+  margin: 0 auto 0 auto;
+  overflow: hidden;
+  background: #fff;
+  height: 900px;
+  box-shadow: 0 0 10px 5px #828587;
+  z-index: 2;
+}
+
