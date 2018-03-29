@@ -1,0 +1,30 @@
+
+.page ul {
+  position: relative;
+  float: left;
+  width: 30%;
+  height: 559px;
+  background: linear-gradient(to right, #ebeced 96%, #d1d5d6);
+  margin: 0 70px 0 0;
+  z-index: 10;
+}
+
+.page ul a{
+  display: block;
+  text-align: right;
+  color: #9ba0a4;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 60px;
+  text-decoration: none;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+.page ul a img {
+  padding: 0 24px 0 24px;
+}
+.page ul a.active {
+  background: #fff;
+  color: #3bace1;
+  font-weight: 600;
+}
