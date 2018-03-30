@@ -1,0 +1,103 @@
+body{
+    margin:0;
+}
+p{
+    margin: 0;
+}
+.headerContainer{
+    width:100%;
+}
+.headerContainer .headerImage{
+    width:100%;
+}
+.contentContainer{
+    padding-top: 60px;
+}
+.leftColumn{
+    width: 30.5%;
+    margin:0;
+    float:left;
+    height: 100%;
+    position: absolute;
+    height: 620px;
+    background-color: #ebeced;
+    -moz-box-shadow: inset -6px 0 30px -17px rgba(0,0,0,0.7);
+    -webkit-box-shadow: inset -6px 0 30px -17px rgba(0,0,0,0.7);
+    box-shadow: inset -6px 0 30px -17px rgba(0,0,0,0.7);
+}
+.rightColumn{
+    width: 69.5%;
+    margin:0;
+    float:right;
+    color: #000;
+}
+.leftColumn .babyStepOption{
+    border-bottom: 1px solid #FFF;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+    background: #ebeced;
+    -moz-box-shadow: inset -6px 0 30px -17px rgba(0,0,0,0.7);
+    -webkit-box-shadow: inset -6px 0 30px -17px rgba(0,0,0,0.7);
+    box-shadow: inset -6px 0 30px -17px rgba(0,0,0,0.7);
+}
+.babyStepOption:not(.active):hover{
+    background:#DDE0E2
+}
+.leftColumn .babyStepOption.active{
+    background: #FFF;
+    -moz-box-shadow: unset;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+}
+.leftColumn .babyStepOption:hover{
+    cursor:pointer;
+}
+.babyStepOption .leftBabyText{
+    font: 18px 'Source Sans Pro', sans-serif;
+    line-height: 60px;
+    margin:0;
+    text-align: right;
+    font-weight:400;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    color: #9ba0a4;
+    font-weight: 400;
+}
+.babyStepOption.active .leftBabyText{
+    font-weight: 700;
+    color: #36abe1;
+}
+.babyStepOption .babyStepIcon{
+    padding: 0 24px 0 30px;
+    position: relative;
+    top: 5px;
+}
+.rightColumn .rightContent{
+    padding: 0 70px;
+    font: 13px 'Helvetica';
+    line-height: 18px;
+    color: #65686f;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+.rightColumn .rightContent .babyStepTextContainer{
+    padding: 10px 0 40px 0;
+}
+.rightColumn .rightContent .socialContainer a, .rightColumn .rightContent .socialContainer p{
+    display: inline;
+}
+.rightColumn .rightContent .socialContainer a{
+    color: #6fbee7;
+}
+.opaque{
+    opacity: 1;
+}
+.transparent{
+    opacity:0;
+}
