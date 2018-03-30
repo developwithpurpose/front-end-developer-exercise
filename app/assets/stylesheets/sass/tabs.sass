@@ -1,0 +1,65 @@
+// main: styles.sass
+
+.tabs
+  .tab
+    border-bottom: 1px solid white
+    text-align: right
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    transition: 0.25s
+    &:focus
+      background-color: white
+      h4
+        color: $primary
+    h4
+      margin: 1rem 0
+    .icon
+      height: 60px
+      width: 24px
+      margin: 0 24px
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+    &:nth-child(1)
+      .icon
+        background-image: url(../../images/icons/individual/icons_small_bs1.png)
+      &:focus
+        .icon
+          background-image: url(../../images/icons/individual/icons_small_bs1_blue.png)
+    &:nth-child(2)
+      .icon
+        background-image: url(../../images/icons/individual/icons_small_bs2.png)
+      &:focus
+        .icon
+          background-image: url(../../images/icons/individual/icons_small_bs2_blue.png)
+    &:nth-child(3)
+      .icon
+        background-image: url(../../images/icons/individual/icons_small_bs3.png)
+      &:focus
+        .icon
+          background-image: url(../../images/icons/individual/icons_small_bs3_blue.png)
+    &:nth-child(4)
+      .icon
+        background-image: url(../../images/icons/individual/icons_small_bs4.png)
+      &:focus
+        .icon
+          background-image: url(../../images/icons/individual/icons_small_bs4_blue.png)
+    &:nth-child(5)
+      .icon
+        background-image: url(../../images/icons/individual/icons_small_bs5.png)
+      &:focus
+        .icon
+          background-image: url(../../images/icons/individual/icons_small_bs5_blue.png)
+    &:nth-child(6)
+      .icon
+        background-image: url(../../images/icons/individual/icons_small_bs6.png)
+      &:focus
+        .icon
+          background-image: url(../../images/icons/individual/icons_small_bs6_blue.png)
+    &:nth-child(7)
+      .icon
+        background-image: url(../../images/icons/individual/icons_small_bs7.png)
+      &:focus
+        .icon
+          background-image: url(../../images/icons/individual/icons_small_bs7_blue.png)

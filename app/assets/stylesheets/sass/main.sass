@@ -1,0 +1,72 @@
+// main: styles.sass
+
+body
+  background-color: $grey
+  max-height: 100vh
+  margin: 0
+  .body-container
+    position: relative
+    background-color: white
+    height: 95vh
+    width: 980px
+    padding: 0 10px 40px
+    margin: 0 auto 5vh
+    display: flex
+    flex-direction: column
+    img
+      position: absolute
+    img.left
+      left: 0
+      top: 0
+      width: 10px
+      height: 100%
+    img.right
+      right: 0
+      top: 0
+      width: 10px
+      height: 100%
+    img.bottom
+      bottom: 0
+      left: 0
+      right: 0
+      height: 40px
+      width: 100%
+    .header
+      background-size: cover
+      background-position: left bottom
+      background-repeat: no-repeat
+      display: flex
+      justify-content: flex-end
+      align-items: flex-start
+      margin-bottom: 5rem
+      padding: 50px 70px 70px
+      height: 30%
+      .heading
+        width: 55%
+        margin-top: 0
+        text-align: right
+        font-weight: 300
+        font-size: 32px
+        line-height: 32px
+        span
+          text-transform: uppercase
+          font-weight: 600
+          font-size: 50px
+          line-height: 48px
+          margin-top: 15px
+          display: inline-block
+
+    .steps
+      display: flex
+      height: 100%
+      .tabs
+        width: 30%
+        background: #ebeced
+        background: -webkit-linear-gradient(to right, #ebeced, #d1d5d6)
+        background: linear-gradient(to right, #ebeced, #d1d5d6)
+      .content
+        width: 70%
+        padding: 0 70px
+        position: relative
+        z-index: 2
+        box-shadow: -2px 2px 4px rgba(0,0,0,0.1)
