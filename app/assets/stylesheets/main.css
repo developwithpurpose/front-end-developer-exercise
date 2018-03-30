@@ -1,0 +1,136 @@
+.container{
+    padding: 0;
+}
+
+nav li{
+    width: 100%;
+}
+
+nav .tablinks{
+    padding: 12px 24px !important;
+    border: 0;    
+}
+
+nav .active a.tablinks:hover{
+    color: #36abe1;
+}
+
+nav a.tablinks:hover{
+    border: 0;
+    color: #9ba0a4;
+}
+
+
+nav .tablinks img{
+    height: 25px;
+    width: 30px;
+    margin: 0 0 0 24px;
+    overflow: hidden;
+    background: url('../images/icons/sprites/icons_small.png') 0 0;
+}
+
+nav .active .tablinks img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -175px;
+}
+
+nav #t2 img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -25px;
+}
+
+nav .active #t2 img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -200px;
+}
+
+nav #t3 img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -50px;
+}
+
+nav .active #t3 img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -225px;
+}
+
+nav #t4 img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -75px;
+}
+
+nav .active #t4 img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -250px;
+}
+
+nav #t5 img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -100px;
+}
+
+nav .active #t5 img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -275px;
+}
+
+nav #t6 img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -125px;
+}
+
+nav .active #t6 img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -300px;
+}
+
+nav #t7 img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -150px;
+}
+
+nav .active #t7 img{
+    background: url('../images/icons/sprites/icons_small.png') 0 -325px;
+}
+
+/*Main content area*/
+main{
+    padding: 0 70px;
+}
+
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+    display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+    display: block;
+}
+
+
+main .tab-pane img{
+    height: 65px;
+    width: 77px;
+    margin: -10px 24px 0 0;
+    float: left;
+    overflow: hidden;
+    background: url('../images/icons/sprites/icons_large.png') 0 -455px;
+}
+
+
+
+main #babyStep2 img{
+    background: url('../images/icons/sprites/icons_large.png') 0 -520px;
+}
+
+main #babyStep3 img{
+    background: url('../images/icons/sprites/icons_large.png') 0 -585px;
+}
+
+main #babyStep4 img{
+    background: url('../images/icons/sprites/icons_large.png') 0 -648px;
+}
+
+main #babyStep5 img{
+    background: url('../images/icons/sprites/icons_large.png') 0 -713px;
+}
+
+
+main #babyStep6 img{
+    background: url('../images/icons/sprites/icons_large.png') 0 -777px;
+}
+
+
+main #babyStep7 img{
+    background: url('../images/icons/sprites/icons_large.png') 0 -842px;
+}
