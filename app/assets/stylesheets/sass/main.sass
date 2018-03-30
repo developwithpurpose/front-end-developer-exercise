@@ -2,7 +2,7 @@
 
 body
   background-color: $grey
-  max-height: 100vh
+  height: 100vh
   margin: 0
   .body-container
     position: relative
@@ -10,7 +10,7 @@ body
     height: 95vh
     width: 980px
     padding: 0 10px 40px
-    margin: 0 auto 5vh
+    margin: 0 auto
     display: flex
     flex-direction: column
     img
@@ -64,9 +64,26 @@ body
         background: #ebeced
         background: -webkit-linear-gradient(to right, #ebeced, #d1d5d6)
         background: linear-gradient(to right, #ebeced, #d1d5d6)
-      .content
+      .tab-content
         width: 70%
         padding: 0 70px
         position: relative
         z-index: 2
         box-shadow: -2px 2px 4px rgba(0,0,0,0.1)
+        .heading
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          .icon
+            height: 60px
+            width: 70px
+            margin-right: 1rem
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+          .title
+            h2
+              line-height: 20px
+              margin: 0.5rem 0 0.25rem
+            h3
+              margin: 0
