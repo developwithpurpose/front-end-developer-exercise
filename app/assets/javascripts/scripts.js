@@ -45,7 +45,7 @@ $(document).ready(function() {
             document.getElementById('knock-knock-2').innerHTML = '<span>' + step2[0].firstName + ' ' + step2[0].lastName + ', ' + step2[1].firstName + ' ' + step2[1].lastName + '</span> and 1 other friend are also on Baby Step ' + $(this).attr('data-step');
             break;
           case (step2.length >= '4'):
-            document.getElementById('knock-knock-2').innerHTML = '<span>' + step2[0].firstName + ' ' + step2[0].lastName + ', ' + step2[1].firstName + ' ' + step2[1].lastName + '</span> and 2 other friends are also on Baby Step ' + $(this).attr('data-step');
+            document.getElementById('knock-knock-2').innerHTML = '<span>' + step2[0].firstName + ' ' + step2[0].lastName + ', ' + step2[1].firstName + ' ' + step2[1].lastName + '</span> and ' + (step2.length - 2) + ' other friends are also on Baby Step ' + $(this).attr('data-step');
             break;
         }
         break;
@@ -62,7 +62,7 @@ $(document).ready(function() {
             document.getElementById('knock-knock-3').innerHTML = '<span>' + step3[0].firstName + ' ' + step3[0].lastName + ', ' + step3[1].firstName + ' ' + step3[1].lastName + '</span> and 1 other friend are also on Baby Step ' + $(this).attr('data-step');
             break;
           case (step3.length >= '4'):
-            document.getElementById('knock-knock-3').innerHTML = '<span>' + step3[0].firstName + ' ' + step3[0].lastName + ', ' + step3[1].firstName + ' ' + step3[1].lastName + '</span> and 2 other friends are also on Baby Step ' + $(this).attr('data-step');
+            document.getElementById('knock-knock-3').innerHTML = '<span>' + step3[0].firstName + ' ' + step3[0].lastName + ', ' + step3[1].firstName + ' ' + step3[1].lastName + '</span> and ' + (step3.length - 2) + ' other friends are also on Baby Step ' + $(this).attr('data-step');
             break;
         }
         break;
@@ -79,7 +79,7 @@ $(document).ready(function() {
             document.getElementById('knock-knock-4').innerHTML = '<span>' + step4[0].firstName + ' ' + step4[0].lastName + ', ' + step4[1].firstName + ' ' + step4[1].lastName + '</span> and 1 other friend are also on Baby Step ' + $(this).attr('data-step');
             break;
           case (step4.length >= '4'):
-            document.getElementById('knock-knock-4').innerHTML = '<span>' + step4[0].firstName + ' ' + step4[0].lastName + ', ' + step4[1].firstName + ' ' + step4[1].lastName + '</span> and 2 other friends are also on Baby Step ' + $(this).attr('data-step');
+            document.getElementById('knock-knock-4').innerHTML = '<span>' + step4[0].firstName + ' ' + step4[0].lastName + ', ' + step4[1].firstName + ' ' + step4[1].lastName + '</span> and ' + (step4.length - 2) + ' other friends are also on Baby Step ' + $(this).attr('data-step');
             break;
         }
         break;
@@ -96,7 +96,7 @@ $(document).ready(function() {
             document.getElementById('knock-knock-5').innerHTML = '<span>' + step5[0].firstName + ' ' + step5[0].lastName + ', ' + step5[1].firstName + ' ' + step5[1].lastName + '</span> and 1 other friend are also on Baby Step ' + $(this).attr('data-step');
             break;
           case (step5.length >= '4'):
-            document.getElementById('knock-knock-5').innerHTML = '<span>' + step5[0].firstName + ' ' + step5[0].lastName + ', ' + step5[1].firstName + ' ' + step5[1].lastName + '</span> and 2 other friends are also on Baby Step ' + $(this).attr('data-step');
+            document.getElementById('knock-knock-5').innerHTML = '<span>' + step5[0].firstName + ' ' + step5[0].lastName + ', ' + step5[1].firstName + ' ' + step5[1].lastName + '</span> and ' + (step5.length - 2) + ' other friends are also on Baby Step ' + $(this).attr('data-step');
             break;
         }
         break;
@@ -113,7 +113,7 @@ $(document).ready(function() {
             document.getElementById('knock-knock-6').innerHTML = '<span>' + step6[0].firstName + ' ' + step6[0].lastName + ', ' + step6[1].firstName + ' ' + step6[1].lastName + '</span> and 1 other friend are also on Baby Step ' + $(this).attr('data-step');
             break;
           case (step6.length >= '4'):
-            document.getElementById('knock-knock-6').innerHTML = '<span>' + step6[0].firstName + ' ' + step6[0].lastName + ', ' + step6[1].firstName + ' ' + step6[1].lastName + '</span> and 2 other friends are also on Baby Step ' + $(this).attr('data-step');
+            document.getElementById('knock-knock-6').innerHTML = '<span>' + step6[0].firstName + ' ' + step6[0].lastName + ', ' + step6[1].firstName + ' ' + step6[1].lastName + '</span> and ' + (step6.length - 2) + ' other friends are also on Baby Step ' + $(this).attr('data-step');
             break;
         }
         break;
@@ -130,7 +130,7 @@ $(document).ready(function() {
             document.getElementById('knock-knock-7').innerHTML = '<span>' + step7[0].firstName + ' ' + step7[0].lastName + ', ' + step7[1].firstName + ' ' + step7[1].lastName + '</span> and 1 other friend are also on Baby Step ' + $(this).attr('data-step');
             break;
           case (step7.length >= '4'):
-            document.getElementById('knock-knock-7').innerHTML = '<span>' + step7[0].firstName + ' ' + step7[0].lastName + ', ' + step7[1].firstName + ' ' + step7[1].lastName + '</span> and 2 other friends are also on Baby Step ' + $(this).attr('data-step');
+            document.getElementById('knock-knock-7').innerHTML = '<span>' + step7[0].firstName + ' ' + step7[0].lastName + ', ' + step7[1].firstName + ' ' + step7[1].lastName + '</span> and ' + (step7.length - 2) + ' other friends are also on Baby Step ' + $(this).attr('data-step');
             break;
         }
         break;
