@@ -1,19 +1,23 @@
 // main: styles.sass
 
 .tabs
+  .tab.active
+    background-color: white
+    position: relative
+    z-index: 3
+    h4
+      color: $primary
   .tab
     border-bottom: 1px solid white
     text-align: right
     display: flex
     align-items: center
     justify-content: flex-end
-    transition: 0.25s
+    transition: 0.5s
     &:focus, &:hover
       background-color: white
       position: relative
       z-index: 3
-      h4
-        color: $primary
     h4
       margin: 1rem 0
     .icon
@@ -26,56 +30,60 @@
     &:nth-child(1)
       .icon
         background-image: url(../../images/icons/individual/icons_small_bs1.png)
-      &:focus, &:hover
-        .icon
-          background-image: url(../../images/icons/individual/icons_small_bs1_blue.png)
+      .icon.active, .icon:focus
+        background-image: url(../../images/icons/individual/icons_small_bs1_blue.png)
     &:nth-child(2)
       .icon
         background-image: url(../../images/icons/individual/icons_small_bs2.png)
-      &:focus, &:hover
-        .icon
-          background-image: url(../../images/icons/individual/icons_small_bs2_blue.png)
+      .icon.active, .icon:focus
+        background-image: url(../../images/icons/individual/icons_small_bs2_blue.png)
     &:nth-child(3)
       .icon
         background-image: url(../../images/icons/individual/icons_small_bs3.png)
-      &:focus, &:hover
-        .icon
-          background-image: url(../../images/icons/individual/icons_small_bs3_blue.png)
+      .icon.active, .icon:focus
+        background-image: url(../../images/icons/individual/icons_small_bs3_blue.png)
     &:nth-child(4)
       .icon
         background-image: url(../../images/icons/individual/icons_small_bs4.png)
-      &:focus, &:hover
-        .icon
-          background-image: url(../../images/icons/individual/icons_small_bs4_blue.png)
+      .icon.active, .icon:focus
+        background-image: url(../../images/icons/individual/icons_small_bs4_blue.png)
     &:nth-child(5)
       .icon
         background-image: url(../../images/icons/individual/icons_small_bs5.png)
-      &:focus, &:hover
-        .icon
-          background-image: url(../../images/icons/individual/icons_small_bs5_blue.png)
+      .icon.active, .icon:focus
+        background-image: url(../../images/icons/individual/icons_small_bs5_blue.png)
     &:nth-child(6)
       .icon
         background-image: url(../../images/icons/individual/icons_small_bs6.png)
-      &:focus, &:hover
-        .icon
-          background-image: url(../../images/icons/individual/icons_small_bs6_blue.png)
+      .icon.active, .icon:focus
+        background-image: url(../../images/icons/individual/icons_small_bs6_blue.png)
     &:nth-child(7)
       .icon
         background-image: url(../../images/icons/individual/icons_small_bs7.png)
-      &:focus, &:hover
-        .icon
-          background-image: url(../../images/icons/individual/icons_small_bs7_blue.png)
+      .icon.active, .icon:focus
+        background-image: url(../../images/icons/individual/icons_small_bs7_blue.png)
 
 .tab-content
+  .container.active
+    margin: 0 70px
+    opacity: 1
+    z-index: 3
   .container
     position: absolute
     z-index: 0
     top: 0
     left: 0
-    margin: 0 70px
+    margin: 2rem 70px 0
     opacity: 0
-    transition: 0.25s
+    transition: 0.5s
+    .content
+      .knock-knock
+        margin-top: 40px
+        span
+          color: $primary
+          font-weight: 500
     &:target
+      margin: 0 70px
       opacity: 1
       z-index: 3
     &:nth-child(1)
