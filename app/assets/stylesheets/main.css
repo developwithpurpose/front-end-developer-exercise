@@ -1,5 +1,8 @@
 .container{
     padding: 0;
+    /*background-image: url("../images/shadow_left.jpg"), url("../images/shadow_right.jpg");
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;*/
 }
 
 nav li{
@@ -8,7 +11,7 @@ nav li{
 
 nav .tablinks{
     padding: 12px 24px !important;
-    border: 0;    
+    border: 1px solid #fff;   
 }
 
 nav .active a.tablinks:hover{
@@ -16,8 +19,9 @@ nav .active a.tablinks:hover{
 }
 
 nav a.tablinks:hover{
-    border: 0;
+    border: 1px;
     color: #9ba0a4;
+    background: transparent;
 }
 
 
@@ -133,4 +137,12 @@ main #babyStep6 img{
 
 main #babyStep7 img{
     background: url('../images/icons/sprites/icons_large.png') 0 -842px;
+}
+
+main .friendSteps{
+    margin: 40px 0 0 0;
+}
+
+main a{
+    color: #6fbee7;
 }
