@@ -7,6 +7,12 @@
 
 nav li{
     width: 100%;
+    background: transparent;
+}
+
+nav li.active a{
+    background: #fff;
+    transition: background 0.25s;
 }
 
 nav .tablinks{
@@ -87,15 +93,26 @@ nav .active #t7 img{
 
 /*Main content area*/
 main{
-    padding: 0 70px;
+    margin: 0 0 0 -15px;
 }
 
 
 .tab-content > .tab-pane,
 .pill-content > .pill-pane {
-    display: none;
+    display: block !important;
+    transform: translateX(200%);
+    position: absolute;
 }
 
+main .tab-pane{
+    transform: translateX(100%);
+}
+
+main .tab-pane.active{
+    transform: translateX(0);
+    transition: transform 0.25s ease-in-out 0s;
+    padding: 0 70px;
+}
 .tab-content > .active,
 .pill-content > .active {
     display: block;
