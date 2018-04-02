@@ -1,4 +1,6 @@
-{
+
+[
+    {
     "friends": [
         { "firstName" : "Paul", "lastName" : "Taylor", "babyStep": 2 },
         { "firstName" : "Sharon", "lastName" : "Thomas", "babyStep": 3 },
@@ -22,4 +24,5 @@
         { "firstName" : "Amy", "lastName" : "Gonzalez", "babyStep": 7 },
         { "firstName" : "Richard", "lastName" : "Martinez", "babyStep": 7 }
     ]
-}
+    }
+]
