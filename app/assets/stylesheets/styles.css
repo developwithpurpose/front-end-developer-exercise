@@ -1,3 +1,9 @@
-html {
-    background-image: url("/Users/allielandry/front-end-developer-exercise/app/assets/images/header_text.jpg");
+div.body {
+    width: 50%;
+    margin: auto;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+div.header{
+    width: 70%;
+    margin: auto;
 }
