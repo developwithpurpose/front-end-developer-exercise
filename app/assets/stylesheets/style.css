@@ -1,0 +1,151 @@
+body {
+    margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #bbbfc2;
+}
+
+.content {
+    width: 980px;
+    margin: auto;
+    background-color: #fff;
+}
+
+#heroImage {
+    position: relative;
+    height: 276px;
+    width: 100%;
+    background-image: url("/assets/images/header.jpg");
+    margin-bottom: 60px;
+}
+
+.headers {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#lightHeader {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    margin: 0px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: light;
+}
+
+#boldHeader {
+    text-transform: uppercase;
+    position: absolute;
+    margin: 0px;
+    right: 70px;
+    top: 97px;
+    color: #fff;
+    line-height: 48px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#steps {
+    background: #ebeced;
+    background: -moz-linear-gradient(left, #ebeced 0%, #ebeced 93%, #d1d5d6 100%);
+    background: -webkit-linear-gradient(left, #ebeced 0%, #ebeced 93%, #d1d5d6 100%);
+    background: linear-gradient(to right, #ebeced 0%, #ebeced 93%, #d1d5d6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6', GradientType=1);
+    min-height: 400px;
+    width: 300px;
+    display: inline-block;
+}
+
+#indStep {
+    display: inline-block;
+    width: 600px;
+    margin: 0px;
+    margin-left: 70px;
+    vertical-align: top;
+}
+
+.btn {
+    position: relative;
+    border: none;
+    text-align: right;
+    width: 100%;
+    height: 64px;
+    padding-top: 2px;
+    font-weight: regular;
+    font-size: 18px;
+    line-height: 60px;
+    color: #9ba0a4;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.btn:focus {
+    background-color: #fff;
+    color: #36abe1;
+    font-weight: 600;
+}
+
+.bs {
+    margin: 0px 15px -5px 20px;
+}
+
+.bsActive {
+    margin: 0px 15px -5px 20px;
+    display: none;
+}
+
+.btn:focus>.bs {
+    display: none;
+}
+
+.btn:focus>.bsActive {
+    display: inline-block;
+}
+
+#stepInfo {
+    margin-left: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#stepName {
+    color: #36abe1;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 20px;
+    vertical-align: top;
+    display: inline-block;
+    ;
+    margin-bottom: 10px
+}
+
+#stepheader {
+    color: #5c6366;
+    line-height: 20px;
+    font-weight: 100;
+    font-size: 18px;
+    margin: 0px 0px 24px;
+}
+
+#stepCopy {
+    margin-right: 70px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #65686f;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+#friendsNames {
+    color: #6fbee7;
+}
+#friendsInStep {
+    color: #65686f;
+}
+#friends {
+    margin-top: 40px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 13px;
+}
