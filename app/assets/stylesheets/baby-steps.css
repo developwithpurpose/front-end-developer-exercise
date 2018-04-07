@@ -37,6 +37,35 @@ header img {
     margin-left: 40px;
     margin-right: 70px;
 }
+h1 {
+    font-weight: 600;
+    color: #36abe1;
+    font-size: 30px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    padding-top: 12px;
+}
+h2 {
+    font-weight: 300;
+    color: #5c6366;
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+p {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+}
+p span {
+    color: #6fbee7;
+}
+.lg-icon {
+    margin-right: 15px;
+}
+
 /*---side nav---*/
 ul.nav {
     background-position: right;

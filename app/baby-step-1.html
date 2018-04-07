@@ -31,7 +31,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <ul class="nav nav-pills nav-stacked">
-                                <li role="presentation">
+                                <li role="presentation" class="active">
                                     <a href="baby-step-1.html">
                                         Baby Step 1
                                         <i class="step-icon icon-1"></i>
@@ -77,7 +77,16 @@
                         </div>
                         <div class="col-md-8">
                             <div class="main-content">
-                                <p>Welcome! Use the menu to the left to explore The Seven Baby Steps.</p>
+
+                                <img class="lg-icon pull-left" src="assets/images/icons/individual/icons_large_bs1_blue.png" />
+                                <h1>Baby Step 1</h1>
+                                <h2>$1,000 Emergency Fund</h2>
+
+                                <p>An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.</p>
+
+                                <p>This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!</p>
+
+                                <p id="ajax-content"></p>
                             </div>
                         </div>
                     </div>
@@ -92,6 +101,15 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/javascripts/baby-steps.js"></script>
+
+    <script>
+        $(function(){
+
+            getStepFriends(1);
+
+        });
+    </script>
 </body>
 
 </html>
