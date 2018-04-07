@@ -1,0 +1,100 @@
+body {
+    background-color: #bbbfc2;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.white-bg {
+    background-color: #fff;
+}
+header img {
+    width: 100%;
+}
+ul.nav {
+    background-position: right;
+    background-repeat: repeat-y;
+    background-size: 100%;
+    background-color: #ececee; /* For browsers that do not support gradients */
+    background-image: url(../images/shadow_left_nav.jpg);
+    background-image: url(../images/shadow_left_nav.jpg), -webkit-linear-gradient(#ebeced, #d1d5d6); /* For Safari 5.1 to 6.0 */
+    background-image: url(../images/shadow_left_nav.jpg), -o-linear-gradient(#ebeced, #d1d5d6); /* For Opera 11.1 to 12.0 */
+    background-image: url(../images/shadow_left_nav.jpg), -moz-linear-gradient(#ebeced, #d1d5d6); /* For Firefox 3.6 to 15 */
+    background-image: url(../images/shadow_left_nav.jpg), linear-gradient(#ebeced, #d1d5d6); /* Standard syntax */
+    margin-top: 60px;
+}
+ul.nav li {
+    border-bottom: 1px solid #fff;
+}
+ul.nav li a {
+    text-align: right;
+    font-size: 18px;
+    color: #9ba0a4;
+    line-height: 60px;
+    border-radius: 0;
+    padding: 0;
+    transition: all .5s;
+}
+.nav-stacked > li + li {
+    margin-top: 0;
+}
+i.step-icon {
+    margin: 0 24px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.icon-1 {
+    background-image: url(../images/icons/individual/icons_large_bs1.png);
+}
+.icon-2 {
+    background-image: url(../images/icons/individual/icons_large_bs2.png);
+}
+.icon-3 {
+    background-image: url(../images/icons/individual/icons_large_bs3.png);
+}
+.icon-4 {
+    background-image: url(../images/icons/individual/icons_large_bs4.png);
+}
+.icon-5 {
+    background-image: url(../images/icons/individual/icons_large_bs5.png);
+}
+.icon-6 {
+    background-image: url(../images/icons/individual/icons_large_bs6.png);
+}
+.icon-7 {
+    background-image: url(../images/icons/individual/icons_large_bs7.png);
+}
+ul.nav li.active a,
+ul.nav li a:hover,
+ul.nav > li.active > a:hover {
+    background-color: #fff;
+    color: #36abe1;
+}
+ul.nav li.active a {
+    font-weight: 600;
+}
+li.active .icon-1 {
+    background-image: url(../images/icons/individual/icons_large_bs1_blue.png);
+}
+li.active .icon-2 {
+    background-image: url(../images/icons/individual/icons_large_bs2_blue.png);
+}
+li.active .icon-3 {
+    background-image: url(../images/icons/individual/icons_large_bs3_blue.png);
+}
+li.active .icon-4 {
+    background-image: url(../images/icons/individual/icons_large_bs4_blue.png);
+}
+li.active .icon-5 {
+    background-image: url(../images/icons/individual/icons_large_bs5_blue.png);
+}
+li.active .icon-6 {
+    background-image: url(../images/icons/individual/icons_large_bs6_blue.png);
+}
+li.active .icon-7 {
+    background-image: url(../images/icons/individual/icons_large_bs7_blue.png);
+}
+.main-content {
+    margin-top: 60px;
+}
