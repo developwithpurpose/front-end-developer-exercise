@@ -1,0 +1,161 @@
+body {
+    background-color: #bbbfc2;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.white-bg {
+    background-color: #fff;
+    overflow: hidden;
+}
+header img {
+    width: 100%;
+}
+
+.side-shadow {
+    height: 724px;
+}
+.side-shadow.left {
+    background-image: url(../images/shadow_left.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.side-shadow.right {
+    background-image: url(../images/shadow_right.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.bottom-shadow {
+    background-image: url(../images/shadow_bottom.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 30px;
+}
+.no-padding {
+    padding: 0;
+}
+
+.main-content {
+    margin-top: 60px;
+    margin-left: 40px;
+    margin-right: 70px;
+}
+h1 {
+    font-weight: 600;
+    color: #36abe1;
+    font-size: 30px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    padding-top: 12px;
+}
+h2 {
+    font-weight: 300;
+    color: #5c6366;
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+p {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+}
+p span {
+    color: #6fbee7;
+}
+.lg-icon {
+    margin-right: 15px;
+}
+#ajax-content {
+    margin-top: 40px;
+}
+
+/*---side nav---*/
+ul.nav {
+    background-position: right;
+    background-repeat: repeat-y;
+    background-size: 100%;
+    background-color: #ececee; /* For browsers that do not support gradients */
+    background-image: url(../images/shadow_left_nav.jpg);
+    background-image: url(../images/shadow_left_nav.jpg), -webkit-linear-gradient(#ebeced, #d1d5d6); /* For Safari 5.1 to 6.0 */
+    background-image: url(../images/shadow_left_nav.jpg), -o-linear-gradient(#ebeced, #d1d5d6); /* For Opera 11.1 to 12.0 */
+    background-image: url(../images/shadow_left_nav.jpg), -moz-linear-gradient(#ebeced, #d1d5d6); /* For Firefox 3.6 to 15 */
+    background-image: url(../images/shadow_left_nav.jpg), linear-gradient(#ebeced, #d1d5d6); /* Standard syntax */
+    margin-top: 60px;
+    min-height: 650px;
+}
+ul.nav li {
+    border-bottom: 1px solid #fff;
+}
+ul.nav li a {
+    text-align: right;
+    font-size: 18px;
+    color: #9ba0a4;
+    line-height: 60px;
+    border-radius: 0;
+    padding: 0;
+    transition: all .5s;
+}
+.nav-stacked > li + li {
+    margin-top: 0;
+}
+i.step-icon {
+    margin: 0 24px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.icon-1 {
+    background-image: url(../images/icons/individual/icons_large_bs1.png);
+}
+.icon-2 {
+    background-image: url(../images/icons/individual/icons_large_bs2.png);
+}
+.icon-3 {
+    background-image: url(../images/icons/individual/icons_large_bs3.png);
+}
+.icon-4 {
+    background-image: url(../images/icons/individual/icons_large_bs4.png);
+}
+.icon-5 {
+    background-image: url(../images/icons/individual/icons_large_bs5.png);
+}
+.icon-6 {
+    background-image: url(../images/icons/individual/icons_large_bs6.png);
+}
+.icon-7 {
+    background-image: url(../images/icons/individual/icons_large_bs7.png);
+}
+ul.nav li.active a,
+ul.nav li a:hover,
+ul.nav > li.active > a:hover {
+    background-color: #fff;
+    color: #36abe1;
+}
+ul.nav li.active a {
+    font-weight: 600;
+}
+li.active .icon-1 {
+    background-image: url(../images/icons/individual/icons_large_bs1_blue.png);
+}
+li.active .icon-2 {
+    background-image: url(../images/icons/individual/icons_large_bs2_blue.png);
+}
+li.active .icon-3 {
+    background-image: url(../images/icons/individual/icons_large_bs3_blue.png);
+}
+li.active .icon-4 {
+    background-image: url(../images/icons/individual/icons_large_bs4_blue.png);
+}
+li.active .icon-5 {
+    background-image: url(../images/icons/individual/icons_large_bs5_blue.png);
+}
+li.active .icon-6 {
+    background-image: url(../images/icons/individual/icons_large_bs6_blue.png);
+}
+li.active .icon-7 {
+    background-image: url(../images/icons/individual/icons_large_bs7_blue.png);
+}

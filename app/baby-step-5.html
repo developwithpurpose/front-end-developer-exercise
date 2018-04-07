@@ -33,43 +33,43 @@
                         <div class="col-md-4">
                             <ul class="nav nav-pills nav-stacked">
                                 <li role="presentation">
-                                    <a href="baby-step-1.html" class="wow fadeInLeft">
+                                    <a href="baby-step-1.html">
                                         Baby Step 1
                                         <i class="step-icon icon-1"></i>
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="baby-step-2.html" class="wow fadeInLeft" data-wow-delay=".1s">
+                                    <a href="baby-step-2.html">
                                         Baby Step 2
                                         <i class="step-icon icon-2"></i>
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="baby-step-3.html" class="wow fadeInLeft" data-wow-delay=".2s">
+                                    <a href="baby-step-3.html">
                                         Baby Step 3
                                         <i class="step-icon icon-3"></i>
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="baby-step-4.html" class="wow fadeInLeft" data-wow-delay=".3s">
+                                    <a href="baby-step-4.html">
                                         Baby Step 4
                                         <i class="step-icon icon-4"></i>
                                     </a>
                                 </li>
-                                <li role="presentation">
-                                    <a href="baby-step-5.html" class="wow fadeInLeft" data-wow-delay=".4s">
+                                <li role="presentation" class="active">
+                                    <a href="baby-step-5.html">
                                         Baby Step 5
                                         <i class="step-icon icon-5"></i>
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="baby-step-6.html" class="wow fadeInLeft" data-wow-delay=".5s">
+                                    <a href="baby-step-6.html">
                                         Baby Step 6
                                         <i class="step-icon icon-6"></i>
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="baby-step-7.html" class="wow fadeInLeft" data-wow-delay=".6s">
+                                    <a href="baby-step-7.html">
                                         Baby Step 7
                                         <i class="step-icon icon-7"></i>
                                     </a>
@@ -78,7 +78,16 @@
                         </div>
                         <div class="col-md-8">
                             <div class="main-content wow fadeInUp">
-                                <p>Welcome! Use the menu to the left to explore The Seven Baby Steps.</p>
+
+                                <img class="lg-icon pull-left" src="assets/images/icons/individual/icons_large_bs5_blue.png" />
+                                <h1>Baby Step 5</h1>
+                                <h2>College funding for children</h2>
+
+                                <p>By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.</p>
+
+                                <p>In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!</p>
+
+                                <p id="ajax-content"></p>
                             </div>
                         </div>
                     </div>
@@ -94,8 +103,16 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="assets/javascripts/wow.min.js"></script>
+    <script src="assets/javascripts/baby-steps.js"></script>
+
     <script>
         new WOW().init();
+        
+        $(function(){
+
+            getStepFriends(5);
+
+        });
     </script>
 </body>
 

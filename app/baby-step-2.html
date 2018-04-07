@@ -33,43 +33,43 @@
                         <div class="col-md-4">
                             <ul class="nav nav-pills nav-stacked">
                                 <li role="presentation">
-                                    <a href="baby-step-1.html" class="wow fadeInLeft">
+                                    <a href="baby-step-1.html">
                                         Baby Step 1
                                         <i class="step-icon icon-1"></i>
                                     </a>
                                 </li>
-                                <li role="presentation">
-                                    <a href="baby-step-2.html" class="wow fadeInLeft" data-wow-delay=".1s">
+                                <li role="presentation" class="active">
+                                    <a href="baby-step-2.html">
                                         Baby Step 2
                                         <i class="step-icon icon-2"></i>
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="baby-step-3.html" class="wow fadeInLeft" data-wow-delay=".2s">
+                                    <a href="baby-step-3.html">
                                         Baby Step 3
                                         <i class="step-icon icon-3"></i>
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="baby-step-4.html" class="wow fadeInLeft" data-wow-delay=".3s">
+                                    <a href="baby-step-4.html">
                                         Baby Step 4
                                         <i class="step-icon icon-4"></i>
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="baby-step-5.html" class="wow fadeInLeft" data-wow-delay=".4s">
+                                    <a href="baby-step-5.html">
                                         Baby Step 5
                                         <i class="step-icon icon-5"></i>
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="baby-step-6.html" class="wow fadeInLeft" data-wow-delay=".5s">
+                                    <a href="baby-step-6.html">
                                         Baby Step 6
                                         <i class="step-icon icon-6"></i>
                                     </a>
                                 </li>
                                 <li role="presentation">
-                                    <a href="baby-step-7.html" class="wow fadeInLeft" data-wow-delay=".6s">
+                                    <a href="baby-step-7.html">
                                         Baby Step 7
                                         <i class="step-icon icon-7"></i>
                                     </a>
@@ -78,7 +78,16 @@
                         </div>
                         <div class="col-md-8">
                             <div class="main-content wow fadeInUp">
-                                <p>Welcome! Use the menu to the left to explore The Seven Baby Steps.</p>
+
+                                <img class="lg-icon pull-left" src="assets/images/icons/individual/icons_large_bs2_blue.png" />
+                                <h1>Baby Step 2</h1>
+                                <h2>Pay off all debt using the Debt Snowball</h2>
+
+                                <p>List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first.</p>
+
+                                <p>The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.</p>
+
+                                <p id="ajax-content"></p>
                             </div>
                         </div>
                     </div>
@@ -94,8 +103,16 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="assets/javascripts/wow.min.js"></script>
+    <script src="assets/javascripts/baby-steps.js"></script>
+
     <script>
         new WOW().init();
+        
+        $(function(){
+
+            getStepFriends(2);
+
+        });
     </script>
 </body>
 
