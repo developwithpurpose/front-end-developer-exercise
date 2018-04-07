@@ -1,3 +1,64 @@
-<!doctype html>
-<title>Front-End Developer Exercise</title>
-The server is running!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Front-End Developer Exercise</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+</head>
+
+<body onload="getJSON()">
+    <div class="content">
+        <div id="heroImage">
+            <p id="lightHeader" class="headers">Real Life, Love and Money with</p>
+            <p id="boldHeader" class="headers">America's Most <br> trusted guy</p>
+        </div>
+        <aside id="steps">
+            <button class="btn" role="button" id="bs1" onclick="changeStepInfo(0)">Baby Step 1 <img  class="bs" src="assets/images/icons/individual/icons_small_bs1.png" alt="">
+            <img  class="bsActive" src="assets/images/icons/individual/icons_small_bs1_blue.png" alt="">
+            </button>
+            <button class="btn" role="button" id="bs2" onclick="changeStepInfo(1)">Baby Step 2 <img  class="bs" src="assets/images/icons/individual/icons_small_bs2.png" alt="">
+            <img  class="bsActive" src="assets/images/icons/individual/icons_small_bs2_blue.png" alt="">
+            </button>
+            <button class="btn" role="button" id="bs3" onclick="changeStepInfo(2)">Baby Step 3 <img  class="bs" src="assets/images/icons/individual/icons_small_bs3.png" alt="">
+            <img  class="bsActive" src="assets/images/icons/individual/icons_small_bs3_blue.png" alt="">
+            </button>
+            <button class="btn" role="button" id="bs4" onclick="changeStepInfo(3)">Baby Step 4 <img  class="bs" src="assets/images/icons/individual/icons_small_bs4.png" alt="">
+            <img  class="bsActive" src="assets/images/icons/individual/icons_small_bs4_blue.png" alt="">
+            </button>
+            <button class="btn" role="button" id="bs5" onclick="changeStepInfo(4)">Baby Step 5 <img  class="bs" src="assets/images/icons/individual/icons_small_bs5.png" alt="">
+            <img  class="bsActive" src="assets/images/icons/individual/icons_small_bs5_blue.png" alt="">
+            </button>
+            <button class="btn" role="button" id="bs6" onclick="changeStepInfo(5)">Baby Step 6 <img  class="bs" src="assets/images/icons/individual/icons_small_bs6.png" alt="">
+            <img  class="bsActive" src="assets/images/icons/individual/icons_small_bs6_blue.png" alt="">
+            </button>
+            <button class="btn" role="button" id="bs7" onclick="changeStepInfo(6)">Baby Step 7 <img  class="bs" src="assets/images/icons/individual/icons_small_bs7.png" alt="">
+            <img  class="bsActive" src="assets/images/icons/individual/icons_small_bs7_blue.png" alt="">
+            </button>
+
+        </aside>
+        <div id="indStep">
+            <img id="indStepImage" src="assets/images/icons/individual/icons_large_bs1_blue.png" alt="Baby Step 1">
+            <div id="stepInfo">
+            <span id="stepName">Baby Step 1</span><br>
+            <p id="stepheader">$1,000 Emergency Fund</p>
+            </div>
+            <div id="stepCopy">
+                
+An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.
+
+This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt! Baby
+            </div>
+            
+        <p id="friends"><span id="friendsNames"></span><span id="friendsInStep"></span> </p>
+        </div>
+        
+
+    </div>
+
+    <script src="assets/javascripts/ajax.js" type="text/javascript"></script>
+    <script src="assets/javascripts/stepData.js" type="text/javascript"></script>
+    <script src="assets/javascripts/app.js" type="text/javascript"></script>
+</body>
+</html>
