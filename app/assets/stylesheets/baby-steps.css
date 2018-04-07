@@ -8,6 +8,36 @@ body {
 header img {
     width: 100%;
 }
+
+.side-shadow {
+    height: 724px;
+}
+.side-shadow.left {
+    background-image: url(../images/shadow_left.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.side-shadow.right {
+    background-image: url(../images/shadow_right.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.bottom-shadow {
+    background-image: url(../images/shadow_bottom.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 30px;
+}
+.no-padding {
+    padding: 0;
+}
+
+.main-content {
+    margin-top: 60px;
+    margin-left: 40px;
+    margin-right: 70px;
+}
+/*---side nav---*/
 ul.nav {
     background-position: right;
     background-repeat: repeat-y;
@@ -19,6 +49,7 @@ ul.nav {
     background-image: url(../images/shadow_left_nav.jpg), -moz-linear-gradient(#ebeced, #d1d5d6); /* For Firefox 3.6 to 15 */
     background-image: url(../images/shadow_left_nav.jpg), linear-gradient(#ebeced, #d1d5d6); /* Standard syntax */
     margin-top: 60px;
+    min-height: 650px;
 }
 ul.nav li {
     border-bottom: 1px solid #fff;
@@ -94,7 +125,4 @@ li.active .icon-6 {
 }
 li.active .icon-7 {
     background-image: url(../images/icons/individual/icons_large_bs7_blue.png);
-}
-.main-content {
-    margin-top: 60px;
 }
