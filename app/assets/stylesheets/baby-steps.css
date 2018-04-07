@@ -4,6 +4,7 @@ body {
 }
 .white-bg {
     background-color: #fff;
+    overflow: hidden;
 }
 header img {
     width: 100%;

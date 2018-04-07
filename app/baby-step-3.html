@@ -10,6 +10,7 @@
 
     <!--styles-->
     <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/stylesheets/animate.min.css" rel="stylesheet">
     <link href="assets/stylesheets/baby-steps.css" rel="stylesheet">
 
     <!--fonts-->
@@ -76,7 +77,7 @@
                             </ul>
                         </div>
                         <div class="col-md-8">
-                            <div class="main-content">
+                            <div class="main-content wow fadeInUp">
 
                                 <img class="lg-icon pull-left" src="assets/images/icons/individual/icons_large_bs3_blue.png" />
                                 <h1>Baby Step 3</h1>
@@ -101,9 +102,12 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/javascripts/wow.min.js"></script>
     <script src="assets/javascripts/baby-steps.js"></script>
 
     <script>
+        new WOW().init();
+        
         $(function(){
 
             getStepFriends(3);
