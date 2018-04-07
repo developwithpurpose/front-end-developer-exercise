@@ -65,6 +65,9 @@ p span {
 .lg-icon {
     margin-right: 15px;
 }
+#ajax-content {
+    margin-top: 40px;
+}
 
 /*---side nav---*/
 ul.nav {
