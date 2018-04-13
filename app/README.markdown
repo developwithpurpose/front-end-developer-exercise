@@ -5,7 +5,7 @@ Thank you for the opportunity to get back to writing code! It's been a year or s
 
 ## Updates
 Made it awesome
-* Zeroed out Margins for all browsers
+* Used HTML5Boilerplate to normalize CSS and Zeroed out Margins for all browsers
 * Used fonts from Google Fonts
 * https://fonts.google.com/specimen/Source+Sans+Pro
 * https://fonts.google.com/specimen/Open+Sans
@@ -13,6 +13,9 @@ Made it awesome
 * To make the most of the code length I used background images for the top header and instead of flat text used actual text for H1,H2,H3 tags to improve SEO and accessibility.
 * I tweaked and re saved down the shadow_left.jpg image as it was not the correct gradient.
 * I decided to use ColorZilla to make the background gradient for faster speed.
+* Utilized javascript and CSS for the animations and show hide div information
+* I was interested in using a another JSON data set for the content. However since this is to be accessible and SEO production ready I opted to load all the content in the DOM then show hid areas needed with jQuery on click even.
+* Used CSS animation for fade over
 
 ## Installation
 * Download GitHub
