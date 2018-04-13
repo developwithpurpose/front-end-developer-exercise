@@ -1,0 +1,152 @@
+body{
+  background-color: #bbbfc2;
+  margin: 0px;
+}
+
+#content{
+  width:980px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 30px #999999;
+
+}
+
+header{
+  display:block;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('../../assets/images/header.jpg');
+  max-width:980px;
+  height:276px;
+  padding-left: 100px;
+  margin: 0 0 60px 0;
+}
+
+header h1{
+  display:block;
+  float:right;
+  color:#ffffff;
+  font-size: 32px ;
+  font-weight: 100;
+  width: 500px;
+  text-align: right;
+  margin: 50px 70px 0 0;
+  border: 0px solid red;
+}
+
+header h1 #headerBold {
+  display:block;
+  font-weight:700;
+  font-size:50px;
+  line-height:48px;
+  margin-top:0px;
+}
+
+
+/* Baby Step Styles */
+#babyStep-aside{
+  display:inline-block;
+  width:300px;
+  height:500px;
+  background: #ebecee; /* Old browsers */
+  background: -moz-linear-gradient(left, #ebecee 0%, #dce0e1 96%, #bab8bc 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ebecee 0%,#dce0e1 96%,#bab8bc 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ebecee 0%,#dce0e1 96%,#bab8bc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebecee', endColorstr='#bab8bc',GradientType=1 ); /* IE6-9 */
+}
+
+#babyStep-aside a{
+  display:block;
+  position: relative;
+  padding:0 85px 0 0;
+  border: none;
+  text-align: right;
+  max-width: 300px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 60px;
+  color: #9ba0a4;
+  border-bottom: 1px solid #FFFFFF;
+  /*background-image: url("../../assets/images/icons/individual/icons_small_bs1.png");*/
+  background-position: 245px 50%;
+  background-repeat: no-repeat;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: none;
+}
+
+#babyStep-aside a:hover {
+  color:#36ABE1;
+  text-decoration: none;
+  /*background-image: url("../../assets/images/icons/individual/icons_small_bs1_blue.png");
+  background-repeat: no-repeat;*/
+  font-weight: 400;
+}
+
+#babyStep-aside a div {
+  margin: 0 24px 0 0;
+}
+
+#babyStep01 h3{}
+
+a.babyStep01{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs1.png");
+}
+
+a.babyStep01:hover{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs1_blue.png");
+}
+
+a.babyStep02{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs2.png");
+}
+
+a.babyStep02:hover{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs2_blue.png");
+}
+
+a.babyStep03{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs3.png");
+}
+
+a.babyStep03:hover{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs3_blue.png");
+}
+
+a.babyStep04{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs4.png");
+}
+
+a.babyStep04:hover{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs4_blue.png");
+}
+
+a.babyStep05{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs5.png");
+}
+
+a.babyStep05:hover{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs5_blue.png");
+}
+
+a.babyStep06{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs6.png");
+}
+
+a.babyStep06:hover{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs6_blue.png");
+}
+
+a.babyStep07{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs7.png");
+}
+
+a.babyStep07:hover{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs7_blue.png");
+}
+
+#babyStep-details{
+  display: inline-block;
+  float: right;
+  background-color:black;
+  width:680px;
+}
