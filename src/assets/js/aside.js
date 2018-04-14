@@ -4,16 +4,16 @@ import { smallIcons } from './icons.js'
 const aside = document.querySelector('.js-aside')
 
 export default aside.innerHTML = content.map((step, i) => {
-  let activeStep = ''
+  let classList = 'c-step js-step'
   let icon = smallIcons.gray[i]
 
   if (i === 0) {
-    activeStep = 'c-step--active'
+    classList = 'c-step c-step--active js-step'
     icon = smallIcons.blue[i]
   } 
 
   return `
-    <div class="c-step ${activeStep} js-step" data-id=${i}>
+    <div class="${classList}" data-id=${i}>
       <h3 class="c-step__title">${step.title}</h3>
       <img class="c-icon--small" src="${icon}">
     </div>

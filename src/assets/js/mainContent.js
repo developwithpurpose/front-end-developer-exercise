@@ -4,14 +4,14 @@ import { largeIcons } from './icons.js'
 const mainContent = document.querySelector('.js-content')
 
 export default mainContent.innerHTML = content.map((step, i) => {
-  let activeContent = ''
+  let classList = 'c-step-content js-step-content'
 
   if (i === 0) {
-    activeContent = 'c-step-content--active' 
+    classList = 'c-step-content c-step-content--active js-step-content' 
   } 
 
   return `
-    <div class="c-step-content ${activeContent} js-step-content" data-id="${i}">
+    <div class="${classList}" data-id="${i}">
       <img class="c-icon--large" src="${largeIcons.blue[i]}">
       <div class="c-step-content__heading">
         <h1 class="c-step-content__heading--title">${step.title}</h1>
