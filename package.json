@@ -5,10 +5,28 @@
     "type": "git",
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
+  "main": "app.js",
   "scripts": {
-    "start": "http-server ./app -d false"
+    "start": "./node_modules/.bin/webpack-dev-server",
+    "build": "./node_modules/.bin/webpack",
+    "build:prod": "./node_modules/.bin/webpack -p",
+    "watch": "./node_modules/.bin/webpack --watch"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3"
   }
 }
