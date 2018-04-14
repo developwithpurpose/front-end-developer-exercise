@@ -1,0 +1,36 @@
+.c-aside {
+  background: linear-gradient(to right, #ebeced 96%, #d1d5d6);
+  float: left;
+  height: 600px;
+  width: 30%;
+}
+
+.c-step {
+  border-bottom: 1px solid $white;
+  cursor: pointer;
+  position: relative;
+
+  &__title {
+    color: $gray-title;
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 60px;
+    margin: 0 0 0 125px;
+    pointer-events: none;
+  }
+
+  &--active {
+    background: $white;
+  }
+}
+
+.c-icon--small {
+  pointer-events: none;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+}
