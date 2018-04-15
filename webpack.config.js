@@ -12,12 +12,11 @@ const extractPlugin = new ExtractTextPlugin({
 const config = {
   context: path.resolve(__dirname, 'src'),
   entry: {
-    app: './app.js',
-    // vendors: './src/vendors.js'
+    app: './app.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './assets/js/[name].bundle.js',
+    filename: './assets/js/[name].bundle.js'
   },
   module: {
     rules: [
@@ -52,7 +51,8 @@ const config = {
               options: {
                 sourceMap: true
               }
-            }
+            },
+            'postcss-loader'
           ],
           fallback: 'style-loader'
         })

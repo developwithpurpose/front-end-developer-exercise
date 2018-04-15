@@ -1,9 +1,9 @@
 import { content } from '../json/content.json'
 import { smallIcons } from './icons.js'
 
-const aside = document.querySelector('.js-aside')
+const nav = document.querySelector('.js-nav')
 
-export default aside.innerHTML = content.map((step, i) => {
+nav.innerHTML = content.map((step, i) => {
   let classList = 'c-step js-step'
   let icon = smallIcons.gray[i]
 
@@ -27,16 +27,17 @@ Array.from(document.querySelectorAll('.js-step'))
 function toggleStep(e) {
   const currentStep = document.querySelector('.c-step--active')
   const currentStepId = currentStep.dataset.id
-  const chosenStepId = e.target.dataset.id
-  
+  const chosenStep = e.target === e.currentTarget ? e.target : e.target.parentNode
+  const chosenStepId = chosenStep.dataset.id
+
   // Remove active class from current step
   currentStep.classList.remove('c-step--active')
   // Change icon on current step
   currentStep.childNodes[3].src = smallIcons.gray[currentStepId]
   // Add active class to selected step
-  e.target.classList.add('c-step--active')
+  chosenStep.classList.add('c-step--active')
   // Change icon on selected step
-  e.target.childNodes[3].src = smallIcons.blue[chosenStepId]
+  chosenStep.childNodes[3].src = smallIcons.blue[chosenStepId]
 
   // Change corresponding content
   Array.from(document.querySelectorAll('.js-step-content'))
