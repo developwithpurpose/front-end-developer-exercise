@@ -1,22 +1,23 @@
 var steps = ["babyStep01", "babyStep02", "babyStep03", "babyStep04", "babyStep05", "babyStep06", "babyStep07"];
 var visibleDivId = "";
+
 function toggleVisibility(divId) {
   if(visibleDivId === divId) {
   } else {
     visibleDivId = divId;
   }
   hideNonVisibleDivs();
-
 }
+
 function hideNonVisibleDivs() {
   var i, divId, div;
   for(i = 0; i < steps.length; i++) {
     divId = steps[i];
-    div = document.getElementById(divId);
+    divStep = document.getElementById(divId);
     if(visibleDivId === divId) {
-      div.style.display = "block";
+      divStep.style.display = "block";
     } else {
-      div.style.display = "none";
+      divStep.style.display = "none";
     }
   }
 }
@@ -28,15 +29,30 @@ function changeColor(id) {
             item.style.backgroundColor = (item.id == id) ? "white" : "transparent";
             item.style.color = (item.id == id) ? "#36ABE1" : "#9BA0A4";
             item.style.fontWeight = (item.id == id) ? "400" : "200";
-            item.style.backgroundImage = (item.id == id) ? blueIt : greyIt;
+            item.style.backgroundImage = (item.id == id) ? blueIt : "";
 
-            var fileStart = "../../assets/images/icons/individual/icons_small_bs";
-            var fileNum = id - "btn-babyStep0";
+            var fileStart = "././assets/images/icons/individual/icons_small_bs";
+            var fileNum = id;
+            fileNum = fileNum.replace("btn-babyStep0", "");
             var fileBlueEnd = "_blue.png";
             var fileGreyEnd = ".png";
-            var blueIt = fileStart + fileNum + fileBlueEnd;
-            console.log(id);
-            console.log(fileNum);  
-            var greyIt = fileStart + fileNum + fileGreyEnd;
+            var cssLead = "url('";
+            var cssEnd = "')";
+            var blueIt = cssLead + fileStart + fileNum + fileBlueEnd + cssEnd;
+            var greyIt = cssLead + fileStart + fileNum + fileGreyEnd + cssEnd;
+
+            console.log(fileNum);
         }
     }
+
+
+    function startBtnBg() {
+      document.getElementById("btn-babyStep01").style.backgroundImage = "url(././assets/images/icons/individual/icons_small_bs1_blue.png)";
+    //  var stepLoad1 = document.getElementById('btn-babyStep01')
+    //  stepLoad1.style.backgroundImage = "url('././assets/images/icons/individual/cons_small_bs1_blue.png');";
+    //  stepLoad.style.backgroundColor = "red";
+    //  console.log(stepLoad1);
+    //  alert(tabs);
+    }
+
+    window.onload = startBtnBg();

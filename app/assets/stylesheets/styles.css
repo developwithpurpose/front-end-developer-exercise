@@ -834,6 +834,7 @@ header h1 #headerBold {
   font-weight: 400;
 }
 
+/*
 #babyStep-asideNav a:hover {
   color:#36ABE1;
   text-decoration: none;
@@ -871,63 +872,61 @@ header h1 #headerBold {
     background-color: rgba(255, 255, 255, 0.3);
   }
 }
-
-#babyStep01 h3{}
+*/
 
 #btn-babyStep01{
-  background-image: url("../../assets/images/icons/individual/icons_small_bs1_blue.png");
-}
-
-#btn-babyStep01:hover{
-  background-image: url("../../assets/images/icons/individual/icons_small_bs1_blue.png");
+  background-image: url("../../assets/images/icons/individual/icons_small_bs1.png");
 }
 
 #btn-babyStep02{
   background-image: url("../../assets/images/icons/individual/icons_small_bs2.png");
 }
 
-#btn-babyStep02:hover{
-  background-image: url("../../assets/images/icons/individual/icons_small_bs2_blue.png");
-}
-
 #btn-babyStep03{
   background-image: url("../../assets/images/icons/individual/icons_small_bs3.png");
-}
-
-#btn-babyStep03:hover{
-  background-image: url("../../assets/images/icons/individual/icons_small_bs3_blue.png");
 }
 
 #btn-babyStep04{
   background-image: url("../../assets/images/icons/individual/icons_small_bs4.png");
 }
 
-#btn-babyStep04:hover{
-  background-image: url("../../assets/images/icons/individual/icons_small_bs4_blue.png");
-}
-
 #btn-babyStep05{
   background-image: url("../../assets/images/icons/individual/icons_small_bs5.png");
-}
-
-#btn-babyStep05:hover{
-  background-image: url("../../assets/images/icons/individual/icons_small_bs5_blue.png");
 }
 
 #btn-babyStep06{
   background-image: url("../../assets/images/icons/individual/icons_small_bs6.png");
 }
 
-#btn-babyStep06:hover{
-  background-image: url("../../assets/images/icons/individual/icons_small_bs6_blue.png");
-}
-
 #btn-babyStep07{
   background-image: url("../../assets/images/icons/individual/icons_small_bs7.png");
 }
 
-#btn-babyStep07:hover{
-  background-image: url("../../assets/images/icons/individual/icons_small_bs7_blue.png");
+.btnStep {
+    position: relative;
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-duration: 1s;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.btnStep:after {
+    background-color: #FFFFFF;
+    content: "";
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-right: 350%;
+    margin-top: -120%;
+    transition: all .5s;
+    opacity: 0;
+}
+
+.btnStep:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
 
 #babyStep-details{
