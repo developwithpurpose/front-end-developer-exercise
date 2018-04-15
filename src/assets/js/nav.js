@@ -2,6 +2,7 @@ import { content } from '../json/content.json'
 import { smallIcons } from './icons.js'
 
 const nav = document.querySelector('.js-nav')
+const iconFilePath = './assets/media/'
 
 nav.innerHTML = content.map((step, i) => {
   let classList = 'c-step js-step'
@@ -15,7 +16,7 @@ nav.innerHTML = content.map((step, i) => {
   return `
     <div class="${classList}" data-id=${i}>
       <h3 class="c-step__title">${step.title}</h3>
-      <img class="c-icon--small" src="${icon}">
+      <img class="c-icon--small" src="${iconFilePath + icon}">
     </div>
   `
 }).join('')
@@ -33,11 +34,11 @@ function toggleStep(e) {
   // Remove active class from current step
   currentStep.classList.remove('c-step--active')
   // Change icon on current step
-  currentStep.childNodes[3].src = smallIcons.gray[currentStepId]
+  currentStep.childNodes[3].src = `${iconFilePath + smallIcons.gray[currentStepId]}`
   // Add active class to selected step
   chosenStep.classList.add('c-step--active')
   // Change icon on selected step
-  chosenStep.childNodes[3].src = smallIcons.blue[chosenStepId]
+  chosenStep.childNodes[3].src = `${iconFilePath + smallIcons.blue[chosenStepId]}`
 
   // Change corresponding content
   Array.from(document.querySelectorAll('.js-step-content'))

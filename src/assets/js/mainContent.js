@@ -38,7 +38,7 @@ mainContent.innerHTML = content.map((step, i) => {
 
   return `
     <div class="${classList}" data-id="${i}">
-      <img class="c-icon--large" src="${largeIcons.blue[i]}">
+      <img class="c-icon--large" src="./assets/media/${largeIcons.blue[i]}">
       <div class="c-step-content__heading">
         <h1 class="c-step-content__heading--title">${step.title}</h1>
         <h5 class="c-step-content__heading--subtitle">${step.subtitle}</h5>
