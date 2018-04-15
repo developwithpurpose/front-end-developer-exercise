@@ -755,7 +755,7 @@ body{
 header{
   display:block;
   font-family: 'Open Sans', sans-serif;
-  background-image: url('../../assets/images/header.jpg1');
+  background-image: url('../../assets/images/header.jpg');
   max-width:980px;
   height:276px;
   padding-left: 100px;
@@ -789,6 +789,8 @@ header h1 #headerBold {
   font-size: 30px;
   background-color: yellow;
 }
+
+
 
 .hide-me{
   display: none;
@@ -825,89 +827,106 @@ header h1 #headerBold {
   text-decoration: none;
 }
 
+#babyStep-asideNav #btn-babyStep01{
+  background-color: white;
+  color:#36ABE1;
+  text-decoration: none;
+  font-weight: 400;
+}
+
 #babyStep-asideNav a:hover {
   color:#36ABE1;
   text-decoration: none;
-  /*background-image: url("../../assets/images/icons/individual/icons_small_bs1_blue.png");
-  background-repeat: no-repeat;*/
   font-weight: 400;
   background-color: #ffffff;
+  animation-name: fadeItIn;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
 }
 
 #babyStep-asideNav a div {
   margin: 0 24px 0 0;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 1);
+  animation-name: fadeItOut;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
 
-#box{
-  width:200px;
-  height:200px;
-  background:orange;
-  margin:0 auto;
-  margin-top:3%;
-  overflow:hidden;
-  transition: all 2s ease-in-out;
+@keyframes fadeItIn {
+  0% {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 1);
+  }
 }
 
-#box.slideUp {
-    height:0;
+@keyframes fadeItOut {
+  0% {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 #babyStep01 h3{}
 
-#babyStep01-btn{
-  background-image: url("../../assets/images/icons/individual/icons_small_bs1.png");
-}
-
-#babyStep01-btn:hover{
+#btn-babyStep01{
   background-image: url("../../assets/images/icons/individual/icons_small_bs1_blue.png");
 }
 
-#babyStep02-btn{
+#btn-babyStep01:hover{
+  background-image: url("../../assets/images/icons/individual/icons_small_bs1_blue.png");
+}
+
+#btn-babyStep02{
   background-image: url("../../assets/images/icons/individual/icons_small_bs2.png");
 }
 
-#babyStep02-btn:hover{
+#btn-babyStep02:hover{
   background-image: url("../../assets/images/icons/individual/icons_small_bs2_blue.png");
 }
 
-#babyStep03-btn{
+#btn-babyStep03{
   background-image: url("../../assets/images/icons/individual/icons_small_bs3.png");
 }
 
-#babyStep03-btn:hover{
+#btn-babyStep03:hover{
   background-image: url("../../assets/images/icons/individual/icons_small_bs3_blue.png");
 }
 
-#babyStep04-btn{
+#btn-babyStep04{
   background-image: url("../../assets/images/icons/individual/icons_small_bs4.png");
 }
 
-#babyStep04-btn:hover{
+#btn-babyStep04:hover{
   background-image: url("../../assets/images/icons/individual/icons_small_bs4_blue.png");
 }
 
-#babyStep05-btn{
+#btn-babyStep05{
   background-image: url("../../assets/images/icons/individual/icons_small_bs5.png");
 }
 
-#babyStep05-btn:hover{
+#btn-babyStep05:hover{
   background-image: url("../../assets/images/icons/individual/icons_small_bs5_blue.png");
 }
 
-#babyStep06-btn{
+#btn-babyStep06{
   background-image: url("../../assets/images/icons/individual/icons_small_bs6.png");
 }
 
-#babyStep06-btn:hover{
+#btn-babyStep06:hover{
   background-image: url("../../assets/images/icons/individual/icons_small_bs6_blue.png");
 }
 
-#babyStep07-btn{
+#btn-babyStep07{
   background-image: url("../../assets/images/icons/individual/icons_small_bs7.png");
 }
 
-#babyStep07-btn:hover{
+#btn-babyStep07:hover{
   background-image: url("../../assets/images/icons/individual/icons_small_bs7_blue.png");
 }
 
@@ -953,6 +972,10 @@ header h1 #headerBold {
 
 #babyStepDetail a{
   color:#6FBEE7;
+}
+
+#babyStep01{
+  display: block;
 }
 
 #babyStep02,#babyStep03,#babyStep04,#babyStep05,#babyStep06,#babyStep07{

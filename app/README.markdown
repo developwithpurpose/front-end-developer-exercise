@@ -16,6 +16,7 @@ Made it awesome
 * Utilized javascript and CSS for the animations and show hide div information
 * I was interested in using a another JSON data set for the content. However since this is to be accessible and SEO production ready I opted to load all the content in the DOM then show hid areas needed with jQuery on click even.
 * Used CSS animation for fade over
+* Used CSS with JavaScript to change click back grounds and hover colors
 
 ## Installation
 * Download GitHub

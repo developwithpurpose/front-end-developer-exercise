@@ -15,13 +15,28 @@ function hideNonVisibleDivs() {
     div = document.getElementById(divId);
     if(visibleDivId === divId) {
       div.style.display = "block";
-      div.classList.toggle('slideout');
     } else {
       div.style.display = "none";
     }
   }
 }
 
-function toggle(BB){
-    document.getElementById(BB).classList.toggle('slideUp')
-}
+function changeColor(id) {
+        var tabs = document.getElementsByClassName('btnStep')
+        for (var i = 0; i < tabs.length; ++i) {
+            var item = tabs[i];
+            item.style.backgroundColor = (item.id == id) ? "white" : "transparent";
+            item.style.color = (item.id == id) ? "#36ABE1" : "#9BA0A4";
+            item.style.fontWeight = (item.id == id) ? "400" : "200";
+            item.style.backgroundImage = (item.id == id) ? blueIt : greyIt;
+
+            var fileStart = "../../assets/images/icons/individual/icons_small_bs";
+            var fileNum = id - "btn-babyStep0";
+            var fileBlueEnd = "_blue.png";
+            var fileGreyEnd = ".png";
+            var blueIt = fileStart + fileNum + fileBlueEnd;
+            console.log(id);
+            console.log(fileNum);  
+            var greyIt = fileStart + fileNum + fileGreyEnd;
+        }
+    }
