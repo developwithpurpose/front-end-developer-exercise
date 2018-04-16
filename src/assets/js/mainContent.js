@@ -9,7 +9,6 @@ mainContent.innerHTML = content.map((step, i) => {
   let totalFriends = []
   let friendsContent = ''
   
-  // Make friends content
   friends.forEach(friend => {
     if (friend.babyStep === i+1) totalFriends.push(friend)
   })
