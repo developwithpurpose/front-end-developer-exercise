@@ -24,7 +24,7 @@ Code Explanation
 ----------------
 
 * The navigation and main content of the page are both generated dynamically in `nav.js` and `mainContent.js`, respectively. 
-* The content from `body-copy.txt` (now stored in `content.js`) and the friends content from `baby-stesp.json` are imported from their JSON files.
+* The content from `body-copy.txt` (now stored in `content.js`) and the friends content from `baby-steps.json` are imported from their JSON files.
 
 **nav.js**
 
