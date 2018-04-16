@@ -1,0 +1,39 @@
+.c-nav {
+  background: linear-gradient(to right, #ebeced 96%, #d1d5d6);
+  float: left;
+  height: 600px;
+  width: 30%;
+}
+
+.c-step {
+  background: linear-gradient(to right, white 50%, transparent 50%);
+  background-position: right bottom;
+  background-size: 200% 100%;
+  border-bottom: 1px solid $white;
+  color: $gray-title;
+  cursor: pointer;
+  position: relative;
+  transition: all .25s ease-out;
+
+  &__title {
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 60px;
+    margin: 0 0 0 125px;
+  }
+
+  &--active {
+    background-position: left bottom;
+    color: $blue-title;
+  }
+}
+
+.c-icon--small {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+}

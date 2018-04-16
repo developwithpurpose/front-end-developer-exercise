@@ -1,0 +1,67 @@
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.c-content {
+  box-sizing: border-box;
+  float: left;
+  padding: 0 70px;
+  width: 70%;
+}
+
+.c-step-content {
+  display: none;
+
+  &--active {
+    animation: fadein 1.5s;
+    display: block;
+  }
+
+  &__heading {
+    float: left;
+    margin-left: 15px;
+
+    &--title {
+      color: $blue-title;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-bottom: 5px;
+      margin-top: 12px;
+    }
+
+    &--subtitle {
+      color: $gray-subtitle;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 18px;
+      font-weight: 200;
+      margin: 0;
+    }
+  }
+
+  &__text, &__friends {
+    color: $gray-default-text;
+    float: left;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+  }
+
+  &__text {
+    line-height: 18px;
+    margin-bottom: 0;
+  }
+
+  &__friends {
+    margin-top: 40px;
+
+    a {
+      color: $blue-links;
+    }
+  }
+}
+
+.c-icon--large {
+  float: left;
+}
