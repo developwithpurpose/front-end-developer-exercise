@@ -969,7 +969,7 @@ header h1 #headerBold {
   padding:0;
 }
 
-#babyStepDetail a{
+.babyStepDetail a{
   color:#6FBEE7;
 }
 
@@ -979,4 +979,37 @@ header h1 #headerBold {
 
 #babyStep02,#babyStep03,#babyStep04,#babyStep05,#babyStep06,#babyStep07{
   display: none;
+}
+
+.babyStepDetailHide {
+    opacity: 0;
+    border:1px solid red;
+}
+
+.babyStepDetail {
+    opacity: 1;
+    transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -ms-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    -webkit-transition: opacity 2s;
+}
+
+#friends{
+  display:block;
+    border: 1px solid red;
+    width: auto;
+    height: 100px;
+}
+
+.friendlier{
+  font-family: Helvetica, sans-serif;
+  font-size:13px;
+  font-weight: normal;
+  color:#65686F;
+  margin: 0 0 40px 0;
+}
+
+.friendlier a{
+  color:#6FBEE7;
 }

@@ -1,7 +1,7 @@
 Document your submission here (optional, but recommended)
 
 # Ramsey Solutions Front End Evaluation
-Thank you for the opportunity to get back to writing code! It's been a year or so as I have been managing teams of UX, Front End Dev, Analysts, and Project Managers!
+Thank you for the opportunity to get back to writing a little bit of code! It's been a few years since I have been this deep into code. I have spent the better part of the last 6 years building and managing teams of UX, Front End Dev, Analysts, and Project Managers. The concepts are not foreign to me at all, however I did struggle a bit on the logic in the javascript and pulling the JSON as I am a tad rusty acting as an individual contributor. I look forward to your feedback and the opportunity to dig and learn a bit more!
 
 ## Updates
 * Used HTML5Boilerplate to normalize CSS and Zeroed out Margins for all browsers
@@ -24,7 +24,9 @@ Thank you for the opportunity to get back to writing code! It's been a year or s
 * I used vanilla javascript instead of jQuery
 * I looped through all the aside nav tabs by listening for the onClick event to detect which item was clicked.
 * Then I looped through each other div in the nav pane and changed the background colors of others not clicked to transparent and changed the background of the item clicked to white.
-
+* I used a filter sort to identify all the friends and which step they were on.
+* I stubbed in most of the placeholders. However I went over alotted time. I would of like to of corrected the sorting and made it actually more dynamic.
+* I managed to get a little animation in as well. However trouble shooting the JSON and logic took up most of the time I had.
 
 ## Installation
 * Download GitHub
