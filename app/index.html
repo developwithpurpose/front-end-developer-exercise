@@ -1,3 +1,261 @@
 <!doctype html>
-<title>Front-End Developer Exercise</title>
-The server is running!
+<html>
+    <head>
+        <title>Scott VanFossen, 4/30/2018 : Front-End Developer Exercise</title>
+        <!--fonts and styles-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="assets/stylesheets/main.css?v=6"/>
+        <!--Jquery-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        
+    </head>
+    <body>
+        <div class="main">
+            <div class="left"></div>
+            <div class="mainContent">
+
+                <div class="header">
+                    <div id="headerText">
+                        <h2>Real Life, Love and Money with</h2>
+                        <h1>America's Most Trusted Guy</h1>
+                    </div>
+                </div>
+
+                <div id="bodyContent">
+                    <div id="list">
+                        <ul class="nav">
+                            <li class="leftNav bs1 tab-link current" data-tab="bs1" id="1">Baby Step 1 <img class="sprite bs1currentSprite" id="bs1-img" src="assets/images/Transparent.gif"/></li>
+                            <li class="leftNav bs2 tab-link" data-tab="bs2" id="2">Baby Step 2 <img class="sprite" id="bs2-img" src="assets/images/Transparent.gif"/></a>  </li>
+                            <li class="leftNav bs3 tab-link" data-tab="bs3" id="3">Baby Step 3 <img class="sprite" id="bs3-img" src="assets/images/Transparent.gif"/></a> </li>
+                            <li class="leftNav bs4 tab-link" data-tab="bs4" id="4">Baby Step 4 <img class="sprite" id="bs4-img" src="assets/images/Transparent.gif"/></a> </li>
+                            <li class="leftNav bs5 tab-link" data-tab="bs5" id="5">Baby Step 5 <img class="sprite" id="bs5-img" src="assets/images/Transparent.gif"/></a> </li>
+                            <li class="leftNav bs6 tab-link" data-tab="bs6" id="6">Baby Step 6 <img class="sprite" id="bs6-img" src="assets/images/Transparent.gif"/></a> </li>
+                            <li class="leftNav bs7 tab-link" data-tab="bs7" id="7">Baby Step 7 <img class="sprite" id="bs7-img" src="assets/images/Transparent.gif"/></a> </li>
+                        </ul>
+                    </div>
+
+                    <div id="mainCopy">
+
+                        <div class="babyStep tab-content current" id="bs1" style="display:none !important;">
+                            <div class="babyStepHeader">
+                                <div class="babyStepIcon"><img src="assets/images/icons/individual/icons_large_bs1_blue.png"/></div>
+                                <div class="babyStepSub">
+                                    <div class="babyStepName">Baby Step 1</div>
+                                    <div class="babyStepShortSummary">$1,000 Emergency Fund</div>
+                                </div>
+                            </div>
+                            <div class="babyStepSummary">
+                                <p>An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.</p><p>This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!</p>
+                            </div>
+                            <div id="friendListing1"></div>
+                        </div>
+
+                        <div class="babyStep tab-content" id="bs2">
+                            <div class="babyStepHeader">
+                                <div class="babyStepIcon"><img src="assets/images/icons/individual/icons_large_bs2_blue.png"/></div>
+                                <div class="babyStepSub">
+                                    <div class="babyStepName">Baby Step 2</div>
+                                    <div class="babyStepShortSummary">Pay off all debt using the Debt Snowball</div>
+                                </div>
+                            </div>
+                            <div class="babyStepSummary">
+                                <p>List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first.</p><p>The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.</p>
+                            </div>
+                            <div id="friendListing2"></div>
+                        </div>
+
+                        <div class="babyStep tab-content" id="bs3">
+                            <div class="babyStepHeader">
+                                <div class="babyStepIcon"><img src="assets/images/icons/individual/icons_large_bs3_blue.png"/></div>
+                                <div class="babyStepSub">
+                                    <div class="babyStepName">Baby Step 3</div>
+                                    <div class="babyStepShortSummary">3 to 6 months of exepenses in savings</div>
+                                </div>
+                            </div>
+                            <div class="babyStepSummary">
+                                <p>Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your &quot;extra&quot; money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, &quot;What would it take for me to live for three to six months if I lost my income?&quot; Your answer to that question is how much you should save.</p><p>Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you’re paying to yourself, a buffer between you and life.</p>
+                            </div>
+                            <div id="friendListing3"></div>
+                        </div>
+
+                        <div class="babyStep tab-content" id="bs4">
+                            <div class="babyStepHeader">
+                                <div class="babyStepIcon"><img src="assets/images/icons/individual/icons_large_bs4_blue.png"/></div>
+                                <div class="babyStepSub">
+                                    <div class="babyStepName">Baby Step 4</div>
+                                    <div class="babyStepShortSummary">Invest 15% of household income for retirement</div>
+                                </div>
+                            </div>
+                            <div class="babyStepSummary">
+                                <p>When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.</p><p>Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.</p>
+                            </div>
+                            <div id="friendListing4"></div>
+                        </div>
+
+                        <div class="babyStep tab-content" id="bs5">
+                            <div class="babyStepHeader">
+                                <div class="babyStepIcon"><img src="assets/images/icons/individual/icons_large_bs5_blue.png"/></div>
+                                <div class="babyStepSub">
+                                    <div class="babyStepName">Baby Step 5</div>
+                                    <div class="babyStepShortSummary">College funding for children</div>
+                                </div>
+                            </div>
+                            <div class="babyStepSummary">
+                                <p>By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.</p><p>In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!</p>
+                            </div>
+                            <div id="friendListing5"></div>
+                        </div>
+
+                        <div class="babyStep tab-content" id="bs6">
+                            <div class="babyStepHeader">
+                                <div class="babyStepIcon"><img src="assets/images/icons/individual/icons_large_bs6_blue.png"/></div>
+                                <div class="babyStepSub">
+                                    <div class="babyStepName">Baby Step 6</div>
+                                    <div class="babyStepShortSummary">Pay off your house early</div>
+                                </div>
+                            </div>
+                            <div class="babyStepSummary">
+                                <p>Now it’s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.</p><p>As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!</p>
+                            </div>
+                            <div id="friendListing6"></div>
+                        </div>
+
+                        <div class="babyStep tab-content" id="bs7">
+                            <div class="babyStepHeader">
+                                <div class="babyStepIcon"><img src="assets/images/icons/individual/icons_large_bs7_blue.png"/></div>
+                                <div class="babyStepSub">
+                                    <div class="babyStepName">Baby Step 7</div>
+                                    <div class="babyStepShortSummary">Build wealth and give!</div>
+                                </div>
+                            </div>
+                            <div class="babyStepSummary">
+                                <p>It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!</p><p>Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.</p> 
+                            </div>
+                            <div id="friendListing7"></div>
+                            
+                            <div style="clear:both;"></div>
+                        </div>
+
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+
+                <div class="footer"></div>
+            </div>
+            <div class="right"></div>
+    </div>
+
+        <script>
+                document.querySelector('.mainContent .babyStep').style.display = 'none';
+                document.querySelector('.mainContent').classList.add('spinnerSwoosh');
+                //Mimic server req, use this transition during AJAX/JSON call
+                setTimeout(()=>{
+                    document.querySelector('.mainContent').classList.remove('spinnerSwoosh');
+                    document.querySelector('.mainContent .babyStep').style.display = 'block'; 
+                }, 2000);
+        </script>
+        
+        <script>
+            //tab nav
+            $(document).ready(function(){
+                console.log('document ready!');
+
+                initialPageLoad();
+
+                $('ul.nav li').click(function(){
+                    //switch tabs and content
+                    var tab_id = $(this).attr('data-tab');
+                    $("img.sprite").removeClass('bs1currentSprite bs2currentSprite bs3currentSprite bs4currentSprite bs5currentSprite bs6currentSprite bs7currentSprite');
+                    $('ul.nav li').removeClass('current');
+                    $('.tab-content').removeClass('current');
+                    $(this).addClass('current');
+                    $("#"+tab_id).addClass('current');
+                    $("#"+tab_id+"-img").addClass(tab_id+'currentSprite');
+                    //tab loading handler
+                    if (tab_id == 'bs1'){
+                        $("#bs1").show();
+                    }else{
+                        $("#bs1").hide();
+                    }
+                    //make JSON request for tab that was clicked
+                    var tabThatWasClicked = $(this).attr('id');
+                    tabClicked(tabThatWasClicked);
+                });
+
+                function initialPageLoad(){
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function() {
+                            if (this.readyState == 4 && this.status == 200) {
+                                var response = JSON.parse(xhttp.responseText);
+                                var friends = response.friends;
+                                var numberOfSteps = $('div.tab-content').length;
+                                var output = '';
+                                output += '<p><span class="friendsName">' + friends[0].firstName + ' ' + friends[0].lastName + '</span> is on this step.</p>';
+                                //loop through json and get all info
+                                for(var i = 0;i < friends.length;i++){
+                                    //output += '<p>' + friends[0].firstName + ' ' + friends[0].lastName + ' is on Baby Step ' + friends[0].babyStep + '.</p>';
+                                }
+                                document.getElementById('friendListing2').innerHTML = output;
+                        
+                            }
+                        };
+                        xhttp.open("GET", "baby-steps.json", true);
+                        xhttp.send();
+                };
+
+                function tabClicked(i){
+                        var babyStepNumberClicked = i;
+
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function() {
+                            if (this.readyState == 4 && this.status == 200) {
+                                var response = JSON.parse(xhttp.responseText);
+                                var friends = response.friends;
+                                var numberOfSteps = $('div.tab-content').length;
+                                //console.log(numberOfSteps + ' is the number of tabs.');
+                                //console.log(babyStepNumberClicked+' Baby Step Number Clicked!');
+                                
+                                var output = '';
+                                //output += '<p><span class="friendsName">' + friends[0].firstName + ' ' + friends[0].lastName + '</span> is on this step.</p>';
+                                //loop through json and get all info
+                                for(var i = 0;i < friends.length;i++){
+                                    //output += '<p>' + friends[0].firstName + ' ' + friends[0].lastName + ' is on Baby Step ' + friends[0].babyStep + '.</p>';
+                                }
+                            
+                                if (babyStepNumberClicked == 1){
+                                    //count of users
+                                }else if(babyStepNumberClicked == 2){
+                                    //console.log('BabyStep2: ' + friends[0].firstName+ ' ' + friends[0].lastName + ' is on step ' + friends[0].babyStep );
+                                    output += '<p><span class="friendsName">' + friends[0].firstName + ' ' + friends[0].lastName + '</span> is on this step.</p>'; 
+                                }else if(babyStepNumberClicked == 3){
+                                    //console.log('BabyStep2: ' + friends[2].firstName+ ' ' + friends[2].lastName + ' is on step ' + friends[2].babyStep );
+                                    output += '<p><span class="friendsName">' + friends[2].firstName + ' ' + friends[2].lastName + '</span> is on this step.</p>';
+                                }else if(babyStepNumberClicked == 4){
+                                    //count of users on baby step 4
+                                    output += '<p><span class="friendsName">' + friends[4].firstName + ' ' + friends[4].lastName + '</span> is on this step.</p>';
+                                }else if(babyStepNumberClicked == 5){
+                                    //count of users on baby step 5
+                                    output += '<p><span class="friendsName">' + friends[7].firstName + ' ' + friends[7].lastName + '</span> is on this step.</p>';
+                                }else if(babyStepNumberClicked == 6){
+                                    //count of users on baby step 6
+                                    output += '<p><span class="friendsName">' + friends[12].firstName + ' ' + friends[12].lastName + '</span> is on this step.</p>';
+                                }else{
+                                    //count of users on baby step 7
+                                    output += '<p><span class="friendsName">' + friends[19].firstName + ' ' + friends[19].lastName + '</span> is on this step.</p>';
+                                }
+                                
+                                document.getElementById('friendListing'+babyStepNumberClicked).innerHTML = output;
+                        
+                            }
+                        };
+                        xhttp.open("GET", "baby-steps.json", true);
+                        xhttp.send();
+                };
+
+            });
+        </script>
+
+    </body>
+
+</html>
