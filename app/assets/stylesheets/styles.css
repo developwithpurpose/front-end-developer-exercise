@@ -1,0 +1,86 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #bbbfc2;
+}
+.wrapper {
+	width: 980px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+.content-wrapper {
+	margin-top:60px;
+	margin-left: 0px;
+	padding: 0px;
+}
+.content-wrapper ul {
+	padding: 0px;
+	display: inline-block;
+}
+.content-wrapper ul li {
+	background-color: #ebeced;
+	height: 60px;
+	line-height: 60px;
+	margin-bottom: 2px;
+	list-style-type: none;
+	width: 200px;
+	padding-left: 68px;
+	margin-left: 0px;
+	box-shadow: inset -3px 0px 5px  #d1d5d6;
+}
+.sprite {
+	display: inline-block;
+	margin: 0 24px;
+	background-size: 100%;
+	position: relative;
+	top: 10px;
+	height: 40px;
+	width: 50px;
+	float: right;
+}
+li:first-child .sprite {
+	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
+	background-position: 0px 0px;
+}
+li:nth-child(2) .sprite {
+	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
+	background-position: 0px -40px; 
+}
+li:nth-child(3) .sprite {
+	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
+	background-position: 0px -80px; 
+}
+li:nth-child(4) .sprite {
+	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
+	background-position: 0px -125px; 
+}
+li:nth-child(5) .sprite {
+	height: 40px;
+	width: 45px;
+	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
+	background-position: 5px -150px; 
+}
+li:nth-child(6) .sprite {
+	height: 35px;
+	width: 43px;
+	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
+	background-position: 5px -180px; 
+}
+li:nth-child(7) .sprite {
+	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
+	background-position: 0px -240px; 
+}
+li:nth-child(8) {
+	padding-bottom: 200px;
+}
+.copy-wrapper {
+	display: inline-block;
+	width: 60%;
+	vertical-align: top;
+	margin-left: 70px;
+	height: 450px;
+	overflow-y: hidden;
+}
+.baby-step {
+	margin: 0px 0px 200px 0px;
+}
