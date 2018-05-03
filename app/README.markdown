@@ -1,7 +1,4 @@
-Document your submission here (optional, but recommended)
-
-
-Initial set up
+<h1>Initial set up</h1>
 
 -Study typography, overall layout
 --make assumptions on best course of actions
