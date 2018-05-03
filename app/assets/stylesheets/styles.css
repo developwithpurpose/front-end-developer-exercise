@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
 body {
 	margin: 0px;
 	padding: 0px;
@@ -9,14 +10,15 @@ body {
 	margin: 0 auto;
 	position: relative;
 }
-.border-wrapper {
+.wrapper-shadow {
 	position: absolute;
 }
 .shadow-left {
-	top:0;
+	z-index: -1;
 	left:5px;
 }
 .shadow-right {
+	z-index: -2;
 	right:5px;
 }
 .wrapper {
@@ -33,9 +35,11 @@ body {
 	background: #fff;
 	top: 360px;
 	left: 20px;
+	transition: top .4s cubic-bezier(.32,.16,.46,.9);
 }
 .content-wrapper {
 	margin-top:60px;	
+	padding-right: 70px;
 }
 .content-wrapper ul {
 	padding: 0px;
@@ -53,14 +57,13 @@ body {
 	padding-left: 68px;
 	border-bottom: 1px solid white;
 }
-.content-wrapper ul li a,
-.content-wrapper ul li a:active,
-.content-wrapper ul li a:hover,
-.content-wrapper ul li a:active {
+.content-wrapper a {
 	position: relative;
 	font-size: 18px;
 	text-decoration: none;
-	color:#9ba0a4;
+}
+.inactive {
+		color:#9ba0a4;
 }
 .sprite {
 	display: inline-block;
@@ -71,39 +74,33 @@ body {
 	height: 40px;
 	width: 50px;
 	float: right;
+	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
 }
 li:first-child .sprite {
-	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
 	background-position: 0px 0px;
 }
 li:nth-child(2) .sprite {
-	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
 	background-position: 0px -40px; 
 }
 li:nth-child(3) .sprite {
-	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
 	background-position: 0px -80px; 
 }
 li:nth-child(4) .sprite {
-	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
 	background-position: 0px -125px; 
 }
 li:nth-child(5) .sprite {
 	height: 40px;
 	width: 45px;
-	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
 	background-position: 0px -150px; 
 }
 li:nth-child(6) .sprite {
 	height: 35px;
 	width: 43px;
-	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
 	background-position: 0px -180px; 
 }
 li:nth-child(7) .sprite {
 	height: 30px;
 	width:38px;
-	background-image: url('./../../../app/assets/images/icons/sprites/icons_small.png');
 	background-position: -3px -190px; 
 }
 li:nth-child(8) {
@@ -119,20 +116,77 @@ li:nth-child(8) {
 	margin: 20px 0 0 70px;
 	height: 300px;
 }
-.child-conceal {
+.shadow_bottom {
 	width: 100%;
-	height: 100%;
-	padding-right:17px;
-	overflow-y: scroll;
-	box-sizing: content-box;
+	margin-top: -30px;
 }
 .baby-step {
 	margin: 0px 0px 200px 0px;
 }
-.baby-step h1 {
+.heading-wrapper {
+	display: inline-block;
+	vertical-align: top;
+}
+.heading-wrapper h1 {
+	font-size: 30px;
+	font-weight: 600;
+}
+.heading-wrapper h2 {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 18px;
+}
+.heading-wrapper h1,
+.heading-wrapper h2 {
+	font-family: "Source Sans Pro";
+	color: #36abe1;
 	margin: 0;
 }
-.shadow_bottom {
-	width: 100%;
-	margin-top: -30px;
+.baby-step p {
+	font-family: Helvetica,sans-serif !important
+	font-size: 13px;
+}
+.sprite-lg {
+	display: inline-block;
+	background-size: 100%;
+	position: relative;
+	margin-right: 16px;
+	height: 75px;
+	width: 75px;
+	background-image: url('./../../../app/assets/images/icons/sprites/icons_large_fixed.png');
+}
+.baby-step:first-child .sprite-lg{
+	width: 90px;
+	background-position: 0px 549px;
+}
+.baby-step:nth-child(2) .sprite-lg{
+	background-position: 0px 403px;
+}
+.baby-step:nth-child(3) .sprite-lg{
+	width: 90px;
+	background-position: 0px 400px;
+}
+.baby-step:nth-child(4) .sprite-lg {
+	width: 80px;
+	height: 65px;
+	background-position: 0px 290px;
+}
+.baby-step:nth-child(5) .sprite-lg {
+	width: 88px;
+	background-position: 10px 246px;
+}
+.baby-step:nth-child(6) .sprite-lg {
+	width: 76px;
+	height: 65px;
+	background-position: 8px 148px;
+}
+.baby-step:nth-child(7) .sprite-lg {
+	width: 80px;
+	background-position: 10px 82px;
+}
+.clicked {
+	color: #36abe1;
+}
+.active {
+	background-image: url('./../../../app/assets/images/icons/individual/icons_small_bs1_blue.png');
 }

@@ -5,10 +5,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 		<link href="./../app/assets/stylesheets/styles.css" rel="stylesheet">
 	</head>
-	<!-- width="980px" -->
 	<body>
 		<div class="container">
-						<img class="border-wrapper shadow_left" src="./../app/assets/images/shadow_left.jpg" height="910px" alt="left shadow">
+		<img class="wrapper-shadow shadow_left" src="./../app/assets/images/shadow_left.jpg" height="910px" alt="left shadow">
 		<div class="wrapper">
 			<header>
 				<img src="./../app/assets/images/header_text.jpg"  />
@@ -16,74 +15,93 @@
 			<div class="content-wrapper">
 				<div id="toggle-bar"></div>
 				<ul>
-					<li class="toggle-bg"><a href="#one">Baby Step 1</a> <div class="sprite"></div></li>
-					<li><a href="#two">Baby Step 2</a> <div class="sprite"></div></li>
-					<li><a href="#three">Baby Step 3</a> <div class="sprite"></div></li>
-					<li><a href="#four">Baby Step 4</a> <div class="sprite"></div></li>
-					<li><a href="#five">Baby Step 5</a> <div class="sprite"></div></li>
-					<li><a href="#six">Baby Step 6</a> <div class="sprite"></div></li>
-					<li><a href="#seven">Baby Step 7</a> <div class="sprite"></div></li>
+					<li><a class="inactive clicked" href="#one">Baby Step 1</a> <div class="sprite active"></div></li>
+					<li><a class="inactive" href="#two">Baby Step 2</a> <div class="sprite"></div></li>
+					<li><a class="inactive" href="#three">Baby Step 3</a> <div class="sprite"></div></li>
+					<li><a class="inactive" href="#four">Baby Step 4</a> <div class="sprite"></div></li>
+					<li><a class="inactive" href="#five">Baby Step 5</a> <div class="sprite"></div></li>
+					<li><a class="inactive" href="#six">Baby Step 6</a> <div class="sprite"></div></li>
+					<li><a class="inactive" href="#seven">Baby Step 7</a> <div class="sprite"></div></li>
 					<li><div></div></li>
 				</ul>
 				<div class="copy-wrapper parent-conceal">
-					<div class="child-conceal">
 						<div id="one" class="baby-step">
 						<div class="sprite-lg"></div>
-						<h1>Baby Step 1</h1>
-						<h2>$1,000 Emergency Fund</h2>
-						<p>An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.
+						<div class="heading-wrapper">
+							<h1>Baby Step 1</h1>
+							<h2>$1,000 Emergency Fund</h2>
+						</div>
+						<p>An emergency fund is for those unexpected events in life that you can't plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It's not a matter of if these events will happen; it's simply a matter of when they will happen.
 						<br><br>
-						This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!</p>
+						This beginning emergency fund will keep life's little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It's time to break the cycle of debt!</p>
 					</div>
 					<div id="two" class="baby-step">
-						<h1>Baby Step 2</h1>
-						<h2>Pay off all debt using the Debt Snowball</h2>
-						<p>List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first.
+						<div class="sprite-lg"></div>
+						<div class="heading-wrapper">
+							<h1>Baby Step 2</h1>
+							<h2>Pay off all debt using the Debt Snowball</h2>
+						</div>
+						<p>List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don't worry about interest rates unless two debts have similar payoffs. If that's the case, then list the higher interest rate debt first.
 						<br><br>
-						The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.</p>
+						The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It's about motivation. Personal finance is 20&#37; head knowledge and 80&#37; behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.</p>
 					</div>
 					<div id="three" class="baby-step">
-						<h1>Baby Step 3</h1>
-						<h2>3 to 6 months of exepenses in savings</h2>
-						<p>Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra” money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?” Your answer to that question is how much you should save. 
+						<div class="sprite-lg"></div>
+						<div class="heading-wrapper">
+							<h1>Baby Step 3</h1>
+							<h2>3 to 6 months of exepenses in savings</h2>
+						</div>
+						<p>Once you complete the first two baby steps, you will have built serious momentum. But don't start throwing all your "extra" money into investments quite yet. It's time to build your full emergency fund. Ask yourself, "What would it take for me to live for three to six months if I lost my income?" Your answer to that question is how much you should save. 
 						<br><br>
-						Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you’re paying to yourself, a buffer between you and life.</p>
+						Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you're paying to yourself, a buffer between you and life.</p>
 					</div>
 					<div id="four" class="baby-step">
-						<h1>Baby Step 4</h1>
-						<h2>Invest 15% of household income for retirement</h2>
-						<p>When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.
+						<div class="sprite-lg"></div>
+						<div class="heading-wrapper">
+							<h1>Baby Step 4</h1>
+							<h2>Invest 15&#37; of household income for retirement</h2>
+						</div>
+						<p>When you reach this step, you'll have no payments—except the house—and a fully funded emergency fund. Now it's time to get serious about building wealth.
 						<br><br>
-						Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.
+						Dave suggests investing 15&#37; of your household income into Roth IRAs and pre-tax retirement plans. Don't invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.
 						</p>
 					</div>
 					<div id="five" class="baby-step">
-						<h1>Baby Step 5</h1>
-						<h2>College funding for children</h2>
-						<p>By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.
+						<div class="sprite-lg"></div>
+						<div class="heading-wrapper">
+							<h1>Baby Step 5</h1>
+							<h2>College funding for children</h2>
+						</div>
+						<p>By this point, you should have already started Baby Step 4&mdash;investing 15&#37; of your income&mdash;before saving for college. Whether you are saving for you or your child to go to college, you need to start now.
 						<br><br>
-						In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!</p>
+						In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12&#37; interest in order to have enough for college. If you save at 12&#37; and inflation is at 4&#37;, then you are moving ahead of inflation at a net of 8&#37; per year!</p>
 					</div>
 					<div id="six" class="baby-step">
-						<h1>Baby Step 6</h1>
+						<div class="sprite-lg"></div>
+						<div class="heading-wrapper">
+							<h1>Baby Step 6</h1>
 						<h2>Pay off your house early</h2>
-						<p>Now it’s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.
+						</div>
+						<p>Now it's time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.
 						<br><br>
 						As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!</p>
 					</div>
 					<div id="seven" class="baby-step">
-						<h1>Baby Step 7</h1>
-						<h2>Build wealth and give!</h2>
-						<p>It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!
+						<div class="sprite-lg"></div>
+						<div class="heading-wrapper">
+							<h1>Baby Step 7</h1>
+							<h2>Build wealth and give!</h2>
+						</div>
+						<p>It's time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!
 						<br><br>
-						Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.</p>
+						Golda Meir says, "You can't shake hands with a clenched fist." Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family's future, and be gracious enough to bless others. You can do all three at the same time.</p>
 					</div>
 					</div>
 				</div>
-			</div>
+
 						<img class="shadow_bottom" src="./../app/assets/images/shadow_bottom.jpg" width="980px" alt="right shadow">
 		</div>
-			<img class="shadow_right border-wrapper" src="./../app/assets/images/shadow_right.jpg" height="910px" alt="right shadow">
+			<img class="shadow_right wrapper-shadow" src="./../app/assets/images/shadow_right.jpg" height="910px" alt="right shadow">
 
 		</div>
 		<script type="text/javascript" src="./../app/assets/javascripts/jquery.min.js"></script>
