@@ -1,8 +1,13 @@
 <h1>Initial set up</h1>
 
--Study typography, overall layout
---make assumptions on best course of actions
----apply assumptions, test, refine what works - try new strategy for what doesn't
+<ul>
+	<li>Study typography</li>
+	<li>Study overall layout</li>
+	<li>Make assumptions on best course of actions</li>
+	<li>Test my assumptions</li>
+	<li>Refine what is working</li>
+	<li>Try a new strategy for what isn't working</li>
+</ul>
 
 Layout Choices:
 
