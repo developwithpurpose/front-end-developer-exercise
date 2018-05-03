@@ -73,4 +73,14 @@ $('document').ready(function(){
 		}
 	});
 
+  $.ajax({
+    type: 'GET',
+    url: 'http://localhost:8080/./app/baby-steps.json',
+    success: function(data) {
+      console.log(data);
+    }
+  });
+
+
+
 });
