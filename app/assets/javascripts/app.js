@@ -34,24 +34,24 @@ $('document').ready(function(){
 			case '#one':
 				toggleMe(img);
 				toggleBar.animate({'top': base + 'px'},100);
-				$('.parent-conceal').animate({'scrollTop': 0} ,1000, 'swing');
+				// $('.parent-conceal').animate({'scrollTop': 0} ,1000, 'swing');
 				break;
 			case '#two':		
 				toggleMe(img);
 				toggleBar.animate({'top': base + initialCount + 'px'},100);
-				$('.parent-conceal').animate({'scrollTop': 0 },1000, 'swing');
+				// $('.parent-conceal').animate({'scrollTop': 0 },1000, 'swing');
 				break;
 			case '#three':	
 				toggleMe(img);
 				currentCount = (initialCount * 2) + offset;
 				toggleBar.animate({'top': base+currentCount+'px'},100);
-				$('.parent-conceal').animate({'scrollTop': 0 },1000, 'swing');
+				// $('.parent-conceal').animate({'scrollTop': 0 },1000, 'swing');
 				break;
 			case '#four':	
 				toggleMe(img);
 				currentCount = (initialCount * 3) + (offset * 2);
 				toggleBar.animate({'top': base+currentCount+'px'},100);
-				$('.parent-conceal').animate({'scrollTop':0},1000, 'swing');
+				// $('.parent-conceal').animate({'scrollTop':0},1000, 'swing');
 				break;
 			case '#five':		
 				toggleMe(img);
