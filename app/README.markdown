@@ -6,6 +6,9 @@ Notes
 *   I chose to use a box-shadow on the main content wrapper instead of mimicking that effect with the images.
     This avoids extra image loads as well as dealing with the extra markup.
 
+*   For the dynamic text content, the wording is different between the mockup and the requirements README. I chose to implement it
+    based on the README instructions.
+
 *   For the Ajax loading of the friends information, I could have done this a couple of different ways;
     In this example, I chose to only retrieve the data and rely on sorting it at the beginning once the page is loaded.
     
