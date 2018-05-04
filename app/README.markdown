@@ -42,6 +42,22 @@
 	<li>white div (#toggle-bar) should move according to li a that has been clicked</li>
 </ul>
 
+<h4>Animate Steps</h4>
+<ul>
+	<li>On li a click
+		<li>baby-step scrolls up/down</li>
+	</li>
+	<li>Using jQueries animate function, I select the parent of the baby-steps content as that is what needs to scroll.
+	<li>One of the major issues I ran into was the .offset().top positioning</li>
+	<li>I noticed that from clicking step one TO another step worked fine; however, clicking from step 2 to step 3 would shift my contents slightly</li>
+	<li>I assume that the yDistance (yDist) is capturing the top of the parent container, and comparing that vector to the top of the html, body document.</li>
+	</li>
+	<li>My solution:
+	<li>Each baby-step that worked smoothly had one thing in common, step 1. By capturing the position of #one (baby-step1) I could dynamically capture each steps yDistance and take #one's offset away from the total value. </li>
+	<li>It works. Yay!</li>
+	</li>
+
+</ul>
 <h4>The Dynamic Content</h4>
 <ul>
 	<li>Generate list of friends who have completed the baby step

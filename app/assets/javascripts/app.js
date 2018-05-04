@@ -5,11 +5,15 @@ $('document').ready(function(){
 	const base 				 = 360;
 	const initialCount = 58;
 	const offset 			 = 5;
-	
-	$('a[href^="#"]').on('click',function(e){
 
-		let target 			 = this.hash;
-		let $target      = $(target);
+
+	$('li a').on('click', function(e){
+
+		const id = $(this).attr('href');
+		const yDist = $(id).offset().top;
+		const step1Dist = $('#one').offset().top;
+
+		$('.copy-wrapper').stop().animate({ scrollTop: yDist - step1Dist},500);
 
 		let currentCount = 0;
 		let img          = $(this).children();
