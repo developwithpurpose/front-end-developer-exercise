@@ -169,9 +169,13 @@ li:nth-child(8) {
 	color: #36abe1;
 	margin: 0;
 }
-.baby-step p {
+.baby-step p, 
+.baby-step a {
 	font-family: 'Open Sans';
 	font-size: 13px;
+}
+.baby-step a {
+	color: #6fbee7;
 }
 .sprite-lg {
 	display: inline-block;
