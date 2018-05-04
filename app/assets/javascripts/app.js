@@ -98,18 +98,7 @@ $('document').ready(function(){
         const lastNameA = a.lastName.toUpperCase();
         const lastNameB = b.lastName.toUpperCase();
         let comparison = 0;
-
-        lastNameA > lastNameB ? comparison = 1:comparison = -1;
-
-        if (comparison == 0) {
-          const firstNameA = a.firstName.toUpperCase();
-          const firstNameB = b.firstName.toUpperCase();
-          let comparison = 0;
-
-          firstNameA > firstNameB ? comparison = 1:comparison = -1;
-
-        }
-        
+        lastNameA > lastNameB ? comparison = 1:comparison = -1;        
         return comparison;
       }
 
