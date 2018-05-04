@@ -1,0 +1,84 @@
+body {
+    margin-top: 0;
+    background-color: #bbbfc2;
+}
+
+.wrapper {
+    width: 980px;
+    margin: 0 auto 60px auto;
+    background-color: #ffffff;    
+    box-shadow: 0px 3px 5px #93979a,
+        3px 0 5px #93979a,
+        -3px 0 5px #93979a;
+}
+
+.content {
+    margin-top: 60px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.menu {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    width: 325px;
+    height: 600px;
+    background-color: #ebeced;
+    float:left;
+    margin-right: 70px;
+    position: relative;    
+    box-shadow: inset -12px 0 12px -12px #d3d4d6;
+}
+.menu__item {
+    display: block;    
+    color: #9ba0a4;
+    line-height: 60px;
+    border-bottom: 1px solid #ffffff;
+    text-decoration: none;
+    text-align: right;
+    transition: background-color 0.5s linear;
+}
+.menu__item--selected {
+    background-color: #ffffff;
+    box-shadow: none;
+    color: #36abe1;
+}
+.menu__icon {
+    margin: 0 24px 0 24px;
+    vertical-align: middle;
+}
+
+.baby-step-viewer {
+    width: 515px;
+    height: 400px;
+    float: left;
+    margin-right: 70px;
+    position: relative;
+    overflow: hidden;
+}
+.baby-steps {
+    position: absolute;
+}
+.baby-step {
+	min-height: 400px;
+	overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+.baby-step__description {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+}
+.baby-step__message {
+    font-weight: 600;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    margin-top: 40px;
+    display: none;
+}
+.baby-step__message--friend {
+    color: #36abe1;
+}
