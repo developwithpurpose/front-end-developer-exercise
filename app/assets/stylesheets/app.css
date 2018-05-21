@@ -1,0 +1,129 @@
+body {
+  background-color: #bbbfc2;
+  margin: 0;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+}
+
+nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: nav;
+}
+
+.content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  margin: 0 70px;
+}
+
+.content .step {
+  display: none;
+}
+.content .step.active {
+  display: block;
+}
+
+.content p {
+  color: #65686f;
+  font-family: 'Helvetica';
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.content .friends {
+  color: #65686f;
+  font-family: 'Helvetica';
+  font-size: 13px;
+}
+
+.content .friends a {
+  text-decoration: none;
+  color: #6fbee7
+}
+
+.content .inner-content {
+  margin: 24px 70px 40px 0;
+}
+
+section {
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 1fr;
+      grid-template-columns: 300px 1fr;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+    'header header'
+    'nav content';
+  grid-row-gap: 60px;
+  height: 100vh;
+  max-width: 1240px;
+  margin: auto;
+}
+
+nav {
+  background-color: #ebeced;
+}
+
+nav label {
+  color: #9ba0a4;
+  background-color: #ebeced;
+  border-bottom: 1px solid white;
+  height: 60px;
+}
+
+nav .item input {
+  display: none;
+}
+
+nav label {
+  -webkit-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  font-family: 'Source Sans Pro';
+  display: block;
+  text-align: right;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+nav label img {
+  height: 24px;
+  width: auto;
+  margin: 0 24px;
+}
+
+nav input:checked + label {
+  color: #36abe1;
+  font-weight: 600;
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+nav input:checked + label .unselected {
+  display: none;
+}
+nav input:checked + label .selected {
+  display: inline-block;
+}
+
+nav input + label .unselected {
+  display: inline-block;
+}
+nav input + label .selected {
+  display: none;
+}
