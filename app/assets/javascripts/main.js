@@ -15,7 +15,7 @@ const getData = () => {
         return;
       }
       response.json().then(
-        (r = data => {
+        (data => {
           dom(data);
         })
       );
@@ -26,73 +26,53 @@ const getData = () => {
 };
 getData();
 
-const dom = (response, divisions) => {
-  const friends = response.friends,
-    stepOne = [],
-    stepTwo = [],
-    stepThree = [],
-    stepFour = [],
-    stepFive = [],
-    stepSix = [],
-    stepSeven = [];
-    divisions = [stepOne, stepTwo, stepThree, stepFour, stepFive, stepSix, stepSeven];
-
-  friends.forEach(x => {
-    if (x.babyStep === 1) {
-      stepOne.push(x);
-    } else if (x.babyStep === 2) {
-      stepTwo.push(x);
-    } else if (x.babyStep === 3) {
-      stepThree.push(x);
-    } else if (x.babyStep === 4) {
-      stepFour.push(x);
-    } else if (x.babyStep === 5) {
-      stepFive.push(x);
-    } else if (x.babyStep === 6) {
-      stepSix.push(x);
-    } else if (x.babyStep === 7) {
-      stepSeven.push(x);
+// super duper functional way. Abandoned because time and too much use of complex syntax for older browsers
+const dom = response => {
+  const friends = response.friends
+  const sortByBabyStep = (currentFriendStepArray, el) => {
+    let step = el.babyStep - 1;
+    if (!!currentFriendStepArray[step]) {
+      currentFriendStepArray[step].push(el);
+      // console.log(el)
     } else {
-      return console.log(
+      console.log(
         "Error occurred parsing friends' current steps: " +
-        x.babyStep +
-        ' has no matching div.'
+        el.babyStep +
+        " has no matching div."
       );
     }
-  });
-  pushToDivs(divisions)
-};
-
-const pushToDivs = divisions => {
-  divisions.forEach(friendArray => {
-    friendArray.forEach(currentFriend => {
-      const string = `${currentFriend.firstName} ${currentFriend.lastName} is on step ${currentFriend.babyStep}`;
-      
-    })
-
-
-  })
-
+    return currentFriendStepArray;
+  }
+  const flatten = (currentFriendStepArray, el) => currentFriendStepArray.concat(el)
+  const pushToDivs = el => {
+    const string = `<a href="/user=${el.firstName} ${el.lastName}"> ${el.firstName} ${el.lastName}</a>, `;
+    $(`.friendDivStep_${el.babyStep}`).append(string);
+  }
+  return friends
+    .reduce(sortByBabyStep, [...Array(7)].map(x => []))
+    .map(array => array.sort((a, b) => a.lastName.localeCompare(b.lastName)))
+    .reduce(flatten, [])
+    .forEach(pushToDivs);
 }
 
+// CSS for navbar
+const reset = () => {
+  $('a>img:nth-child(even)').addClass("hidden");
+  $('a>img:nth-child(odd)').removeClass("hidden");
+}
 
-// const interpolation = (divTwo, currentFriend) => {
-//   console.log(divTwo[0]);
-// };
-
-// for (let i = 0; i < stepItems.length; i++) {
-//   const currentStepItem = stepItems[i];
-//   const currentStepItemHeight =
-//     $(currentStepItem).offset().top + $(currentStepItem).height();
-
-//   $(window).on('scroll', function() {
-//     let stop = Math.round($(window).scrollTop());
-//     if (stop > currentStepItemHeight) {
-//       $('.nav').addClass('active');
-//       console.log('scrolled past ', currentStepItem);
-//     } else {
-//       $('.nav').removeClass('active');
-//       console.log('not past ', currentStepItem);
-//     }
-//   });
-// }
+$('a[href^="#"]').on('click', function (e) {
+  // event.preventDefault();
+  $("a").removeClass("active")
+  $(this).addClass("active")
+  reset();
+  this.children[1].classList.remove("hidden");
+  this.children[0].classList.add("hidden");
+  hash = this.hash;
+  $('.steps__main')
+    .animate({
+      scrollTop: $(hash).offset().top
+    }, 500, () => {
+      window.location.hash = hash;
+    });
+})

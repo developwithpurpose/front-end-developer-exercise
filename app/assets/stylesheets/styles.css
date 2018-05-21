@@ -9,6 +9,9 @@ body {
     background-color: #bbbfc2;
     font-family: 'Source Sans Pro', sans-serif;
 }
+section {
+    padding-left: 70px;
+}
 
 #navList__Left {
     font-family: 'Source Sans Pro Semibold', sans-serif;
@@ -20,6 +23,8 @@ body {
     width: 250px;
     position: fixed;
     height: 560px;
+    background: #ebeced; 
+    background: linear-gradient(to right, #ebeced , #d1d5d6);
 }
 
 .navItem {
@@ -28,8 +33,18 @@ body {
 }
 
 .active {
+    /* padding-top: 19px;
+    padding-bottom: 19px;
+    padding-right: 111px;
+    padding-left: 100px; */
     background-color: white;
+    font-weight: 600;
+    color: #36abe1;
+    position: absolute;
+    border-top: 1px solid #9ba0a4;
 }
+
+
 
 #steps__Main {
     background-color: white;
