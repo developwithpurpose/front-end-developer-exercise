@@ -26,7 +26,7 @@ const getData = () => {
 };
 getData();
 
-// super duper functional way. Abandoned because time and too much use of complex syntax for older browsers
+// super duper functional way.
 const dom = response => {
   const friends = response.friends
   const sortByBabyStep = (currentFriendStepArray, el) => {
@@ -38,13 +38,14 @@ const dom = response => {
       console.log(
         "Error occurred parsing friends' current steps: " +
         el.babyStep +
-        " has no matching div."
+        " has no matching html element."
       );
     }
     return currentFriendStepArray;
   }
   const flatten = (currentFriendStepArray, el) => currentFriendStepArray.concat(el)
   const pushToDivs = el => {
+    console.log(el)
     const string = `<a href="/user=${el.firstName} ${el.lastName}"> ${el.firstName} ${el.lastName}</a>, `;
     $(`.friendDivStep_${el.babyStep}`).append(string);
   }
@@ -55,14 +56,18 @@ const dom = response => {
     .forEach(pushToDivs);
 }
 
-// CSS for navbar
+// Jquery manipulation to the CSS for navbar adding removing classes on select...
 const reset = () => {
   $('a>img:nth-child(even)').addClass("hidden");
   $('a>img:nth-child(odd)').removeClass("hidden");
 }
 
+$('#sideBar > li:nth-child(1) > a').addClass("active")
+$('#sideBar > li:nth-child(1) > a').addClass("active")
+$('#sideBar > li:nth-child(1) > a >img:nth-child(odd)').addClass("hidden");
+$('#sideBar > li:nth-child(1) > a >img:nth-child(even)').removeClass("hidden");
+
 $('a[href^="#"]').on('click', function (e) {
-  // event.preventDefault();
   $("a").removeClass("active")
   $(this).addClass("active")
   reset();

@@ -1,16 +1,34 @@
+html{
+    align-items: center;
+    position: fixed;
+    padding-left: 15%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
 header {
     padding-bottom: 60px;
     background-color: white;
     margin-right: 70px;
+    position: center;
 }
 
 body {
+    padding-bottom: 3%;
     margin: 0;
+    height: 100%;
+    align-content: center;
+    width: 90%;
     background-color: #bbbfc2;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif; 
 }
 section {
     padding-left: 70px;
+    padding-bottom: 400px;
+    padding-right: 70px;
+}
+
+nav {
+    width :20%;
 }
 
 #navList__Left {
@@ -18,9 +36,12 @@ section {
     font-size: 18px;
     line-height: 60px;
     list-style-type: none;
+    align-content: center;
+    text-align: center;
     margin: 0;
     padding: 0;
-    width: 250px;
+    padding-left: -1px;
+    width: 340px;
     position: fixed;
     height: 560px;
     background: #ebeced; 
@@ -33,18 +54,22 @@ section {
 }
 
 .active {
-    /* padding-top: 19px;
+    padding-top: 19px;
     padding-bottom: 19px;
-    padding-right: 111px;
-    padding-left: 100px; */
+    padding-right: 95px;
+    padding-left: 100px;
     background-color: white;
     font-weight: 600;
     color: #36abe1;
-    position: absolute;
-    border-top: 1px solid #9ba0a4;
+    position: initial;
+    /* border-top: 1px solid #9ba0a4; */
+
 }
 
-
+.friendDiv {
+    padding-top: 40px;
+    font-family: 'Source Sans Pro Semibold', sans-serif;
+}
 
 #steps__Main {
     background-color: white;
@@ -54,7 +79,8 @@ section {
     overflow: hidden;
 }
 .img__Header {
-    width: 100%;
+    width: 93.7%;
+    margin-bottom: -5px;
 }
 
 .navbar__Left > li > a > img {
