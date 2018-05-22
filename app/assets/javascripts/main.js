@@ -62,11 +62,6 @@ const reset = () => {
   $('a>img:nth-child(odd)').removeClass("hidden");
 }
 
-$('#sideBar > li:nth-child(1) > a').addClass("active")
-$('#sideBar > li:nth-child(1) > a').addClass("active")
-$('#sideBar > li:nth-child(1) > a >img:nth-child(odd)').addClass("hidden");
-$('#sideBar > li:nth-child(1) > a >img:nth-child(even)').removeClass("hidden");
-
 $('a[href^="#"]').on('click', function (e) {
   $("a").removeClass("active")
   $(this).addClass("active")
