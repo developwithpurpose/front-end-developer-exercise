@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:300,400,600');
+
+body {
+  background-color: #bbbfc2;
+}
+
+.container {
+  background-color: #fff;
+}
+
+.header-img {
+  width: 100%;
+}
+
+#inner-container {
+  margin-top: 60px;
+}
+
+.no-padding-lr {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.header-wrapper {
+  position: relative;
+}
+
+#text-container {
+  z-index: 100;
+  position: absolute;
+  top: 50px;
+  right: 70px;
+  color: #fff;
+  text-align: right;
+}
+
+.tab-pane p {
+  font-size: 13px;
+  font-family: Helvetica;
+  font-weight: normal;
+  line-height: 18px;
+  color: #65686f;
+  padding-top: 24px;
+  padding-bottom: 0px !important;
+  margin: 0px !important;
+}
+
+.sub-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.sub-wrapper img {
+  margin-right: 10px;
+}
+.sub-wrapper h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #36abe1;
+  line-height: 20px;
+}
+
+.sub-wrapper h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #5c6366;
+  line-height: 20px;
+}
+
+.tab-content {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+#upper-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  margin-bottom: 15px !important;
+}
+
+#title {
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+.list-group-item {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  color: #9ba0a4;
+  font-size: 18px;
+  line-height: 60px;
+  border-color: #fff !important;
+  border-left: none;
+  background: #ebeced;
+  background: -webkit-linear-gradient(left, #ebeced 94%, #d1d5d6 100%);
+  background: -o-linear-gradient(left, #ebeced 94%, #d1d5d6 100%);
+  background: linear-gradient(to right, #ebeced 94%, #d1d5d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 );
+}
+
+.list-group-item:hover {
+  color: #9ba0a4;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.list-group-item:last-child {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.list-item-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.list-item-content-wrapper {
+  float: right;
+}
+
+.target-user a {
+  color: #6fbee7;
+  margin-right: 5px;
+}
+
+.target-user {
+  margin-top: 40px;
+  color: #65686f;
+  font-family: Helvetica;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.list-group-item .list-item-content-wrapper img {
+  margin-left: 24px;
+  display: inline-block;
+  padding-right: 24px;
+  vertical-align: middle;
+}
+
+.list-group-item.active {
+  background: #fff !important;
+  border-color: #fff !important;
+  color: #36abe1;
+}
