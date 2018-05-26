@@ -28,26 +28,31 @@ $(function () {
     $("#baby-step-3-button").click(function () {
         $("section").css("display", "");
         $("section").css("display", "block");
+        $("#baby-step-3-button").toggleClass("babystep-selected");
         $("#baby-step-3-section").fadeToggle();
     });
     $("#baby-step-4-button").click(function () {
         $("section").css("display", "");
         $("section").css("display", "block");
+        $("#baby-step-4-button").toggleClass("babystep-selected");
         $("#baby-step-4-section").fadeToggle();
     });
     $("#baby-step-5-button").click(function () {
         $("section").css("display", "");
         $("section").css("display", "block");
+        $("#baby-step-5-button").toggleClass("babystep-selected");
         $("#baby-step-5-section").fadeToggle();
     });
     $("#baby-step-6-button").click(function () {
         $("section").css("display", "");
         $("section").css("display", "block");
+        $("#baby-step-6-button").toggleClass("babystep-selected");
         $("#baby-step-6-section").fadeToggle();
     });
     $("#baby-step-7-button").click(function () {
         $("section").css("display", "");
         $("section").css("display", "block");
+        $("#baby-step-7-button").toggleClass("babystep-selected");
         $("#baby-step-7-section").fadeToggle();
     });
 })
