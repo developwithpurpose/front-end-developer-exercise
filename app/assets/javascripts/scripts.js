@@ -1,0 +1,23 @@
+$(function(){
+    $("#baby-step-1-button").click(function(){
+        $(".baby-step-1-section").toggle();
+    });
+    $("#baby-step-2-button").click(function(){
+        $(".baby-step-2-section").toggle();
+    });
+    $("#baby-step-3-button").click(function(){
+        $(".baby-step-3-section").toggle();
+    });
+    $("#baby-step-4-button").click(function(){
+        $(".baby-step-4-section").toggle();
+    });
+    $("#baby-step-5-button").click(function(){
+        $(".baby-step-5-section").toggle();
+    });
+    $("#baby-step-6-button").click(function(){
+        $(".baby-step-6-section").toggle();
+    });
+    $("#baby-step-7-button").click(function(){
+        $(".baby-step-7-section").toggle();
+    });
+})

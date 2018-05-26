@@ -1,0 +1,32 @@
+.babystep-heading{
+    /* font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #36abe1; */
+    line-height: 20px;
+    margin-bottom: auto;
+    padding-top: 10px;
+}
+
+.copy-sub-title{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #5c6366;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.copy-body-baby-step{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+    font-weight: 400;
+    margin-top: 24px;
+}
+
+.icon-step1{
+    float: left;
+    padding-right: 15px;
+}
