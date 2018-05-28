@@ -1,0 +1,96 @@
+/* * {
+	margin: 0;
+	font-family: 'roboto';
+} */
+
+header, #headerImgA {
+    width: 101%;
+    position: fixed;
+    margin-top: -5px;
+    margin-left: -4px;
+    margin-bottom: 4px;
+    /* margin-right: -5px; */
+    /* z-index: ; */
+}
+
+.wrapper {                      /*flex box wrap for all content except image header*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+/*   ************VERTICAL NAV BELOW HERE************ */
+nav {
+	display: flex;
+	flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 42%;
+    width: 35%;
+    background-color: #f1f1f1;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+} 
+
+nav > a {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    /* color: #36abe1; */
+    color: #9ba0a4;
+	font-size: 18px;
+    text-decoration: none;
+	padding: 0 10% 0 60%;
+	height: 48px;
+	border-bottom: 2px solid white;
+}
+
+a > img {
+	width: 24px;
+	height: auto;
+    /* opacity: .2; */
+}
+
+a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+a:active { 
+    background-color: white;
+    color: #36abe1;
+}
+/* .grad  {
+    background: linear-gradient(-90deg, rgb(99, 99, 99), rgb(226, 226, 226));
+  } */
+/* a:focus { 
+    background-color: white;
+    color: #36abe1;
+} */
+/* ******************VERTICAL NAV BAR ABOVE HERE****************** */
+
+
+/* ******************STEPS CONTENT BELOW HERE****************** */
+.contentWrap {                  /*div holding all steps content*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: right;
+    margin-top: 40%;
+    height: 50%;
+    overflow: scroll;
+
+}
+
+#divStep1, #divStep2, 
+#divStep3, #divStep4, 
+#divStep5, #divStep6, 
+#divStep7{                     /**/
+    align-content: left;
+    /* margin: 70px */
+    /* margin-top: 50%; */
+    margin-left: 40%;
+    margin-right: 10%;
+}                               
+/* ******************STEPS CONtENT ABOVE HERE****************** */
