@@ -1,0 +1,138 @@
+/* * {
+	margin: 0;
+	font-family: 'roboto';
+} */
+
+header, #headerImgA {
+    width: 101%;
+    position: fixed;
+    margin-top: -5px;
+    margin-left: -4px;
+    margin-bottom: 4px;
+    /* margin-right: -5px; */
+    /* z-index: ; */
+}
+
+.wrapper {                      /*flex box wrap for all content except image header*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* padding-top: 50%; */
+}
+
+
+/*   ************VERTICAL NAV BELOW HERE************ */
+nav {
+	display: flex;
+	flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 53%;
+    width: 33%;
+    background-color: #f1f1f1;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+} 
+.rightToLeft {
+    border-width: 0 15px 0 0;
+    border-style: solid;
+    -webkit-border-image: 
+      -webkit-gradient(linear, 0 0, 100% 0, from(rgb(241,241,241)), to(rgb(148, 148, 148))) 1 100%;
+}
+nav > a {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    /* color: #36abe1; */
+    color: #9ba0a4;
+	font-size: 18px;
+    text-decoration: none;
+	padding: 0 10% 0 60%;
+	height: 55px;
+	border-bottom: 2px solid white;
+}
+/* nav background hover coler */
+a:hover {
+    background: white;
+    color: #36abe1;
+    border-style: none;
+} 
+/* nav icon image positions */
+#colorSwitch1 img {
+    position: absolute;
+    right:0;
+    padding-right:20px;
+}#colorSwitch2 img {
+    position: absolute;
+    right:0;
+    padding-right:20px;
+}#colorSwitch3 img {
+    position: absolute;
+    right:0;
+    padding-right:20px;
+}#colorSwitch4 img {
+    position: absolute;
+    right:0;
+    padding-right:20px;
+}#colorSwitch5 img {
+    position: absolute;
+    right:0;
+    padding-right:20px;
+}#colorSwitch6 img {
+    position: absolute;
+    right:0;
+    padding-right:20px;
+}#colorSwitch7 img {
+    position: absolute;
+    right:0;
+    padding-right:20px;
+}
+/* nav icon sizing */
+a > img {
+    width: 24px;
+	height: auto;
+}
+/* nav icon color change */
+a img.top:link{
+    opacity: 0;
+} 
+a img.top:active{
+    opacity: 0;
+}
+a .top:hover{ 
+    -webkit-transition: opacity .02s ease-in;
+    -moz-transition: opacity .02s ease-in;
+    -o-transition: opacity .02s ease-in;
+    transition: opacity .02s ease-in;
+}
+
+/* ******************VERTICAL NAV BAR ABOVE HERE****************** */
+
+
+/* ******************STEPS CONTENT BELOW HERE****************** */
+  /*div holding all steps content*/
+.contentWrap {                
+    height: 40%;
+    width: 55%;
+    margin-top: 31%;
+    margin-left: 17%;
+    /* border: 2px solid black; */
+    overflow: hidden;
+    position: fixed;
+
+    /* padding-top: 30%; */
+}
+
+#divStep1, #divStep2, 
+#divStep3, #divStep4, 
+#divStep5, #divStep6, 
+#divStep7{                     
+    align-content: left;
+    margin-bottom: 20%;
+    font-family: 'helvetica', sans-serif;
+    font-size: 18px;
+    color: #65686f;
+}                               
+/* ******************STEPS CONtENT ABOVE HERE****************** */
