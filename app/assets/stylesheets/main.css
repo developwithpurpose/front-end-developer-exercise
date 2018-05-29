@@ -29,7 +29,7 @@ nav {
     position: fixed;
     bottom: 0;
     left: 0;
-    top: 60%;
+    top: 53%;
     width: 33%;
     background-color: #f1f1f1;
     font-family: 'Source Sans Pro', sans-serif;
@@ -50,7 +50,7 @@ nav > a {
 	font-size: 18px;
     text-decoration: none;
 	padding: 0 10% 0 60%;
-	height: 48px;
+	height: 55px;
 	border-bottom: 2px solid white;
 }
 /* nav background hover coler */
@@ -101,8 +101,7 @@ a img.top:link{
 a img.top:active{
     opacity: 0;
 }
-.top:active{ 
-    /* opacity: 0; */
+a .top:hover{ 
     -webkit-transition: opacity .02s ease-in;
     -moz-transition: opacity .02s ease-in;
     -o-transition: opacity .02s ease-in;
@@ -133,7 +132,7 @@ a img.top:active{
     align-content: left;
     margin-bottom: 20%;
     font-family: 'helvetica', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #65686f;
 }                               
 /* ******************STEPS CONtENT ABOVE HERE****************** */
