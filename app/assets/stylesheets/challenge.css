@@ -1,0 +1,275 @@
+html, body {
+  background-color: #bbbfc2;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 25px; }
+
+a, a:visited {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 13px;
+  color: #6fbee7;
+  text-decoration: none; }
+
+.content-wrapper {
+  position: relative;
+  max-width: 1010px;
+  margin: auto;
+  display: block;
+  clear: both; }
+
+.content {
+  position: absolute;
+  left: 15px;
+  max-width: 980px;
+  margin: auto;
+  display: inline-block; }
+
+.main {
+  padding: 60px 0 0;
+  background-color: white; }
+
+.sidebar {
+  position: relative;
+  background-image: url(/assets/images/shadow_left_nav.jpg);
+  background-color: #d1d5d6;
+  width: 300px;
+  display: inline-block;
+  min-height: 600px;
+  border-top: 1px solid #ebeced; }
+
+.content-body, .friends {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px; }
+
+.content-body {
+  background-color: white;
+  width: 540px;
+  height: 300px;
+  overflow: hidden;
+  padding: 0 70px;
+  float: right;
+  display: inline-block; }
+
+.friends {
+  margin: 40px 0 50px; }
+
+.shadow_left {
+  position: absolute;
+  left: 0px;
+  background-image: url(/assets/images/shadow_left.jpg);
+  width: 15px;
+  height: 724px;
+  display: inline-block; }
+
+.shadow_right {
+  position: absolute;
+  left: 995px;
+  background-image: url(/assets/images/shadow_right.jpg);
+  width: 15px;
+  height: 724px;
+  display: inline-block; }
+
+.header {
+  background-image: url(/assets/images/header_text.jpg);
+  width: 980px;
+  height: 276px; }
+
+.ender {
+  position: absolute;
+  left: 15px;
+  top: 930px;
+  background-image: url(/assets/images/shadow_bottom.jpg);
+  height: 15px;
+  width: 980px;
+  display: block;
+  clear: both; }
+
+.sidebar-item {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  line-height: 60px;
+  border-bottom: 1px solid white;
+  display: block;
+  z-index: 2;
+  color: #9ba0a4 !important; }
+
+#sidebar-highlight {
+  width: 300px;
+  height: 60px;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  opacity: .99; }
+
+#sidebar-step-1, #sidebar-step-2, #sidebar-step-3, #sidebar-step-4, #sidebar-step-5, #sidebar-step-6, #sidebar-step-7 {
+  position: absolute;
+  width: 276px;
+  text-align: right;
+  padding-right: 24px;
+  z-index: 2; }
+
+#sidebar-step-1 {
+  top: 0; }
+
+#sidebar-step-2 {
+  top: 60px; }
+
+#sidebar-step-3 {
+  top: 120px; }
+
+#sidebar-step-4 {
+  top: 180px; }
+
+#sidebar-step-5 {
+  top: 240px; }
+
+#sidebar-step-6 {
+  top: 300px; }
+
+#sidebar-step-7 {
+  top: 360px; }
+
+.selected {
+  color: #36abe1 !important;
+  font-weight: 600; }
+
+.step {
+  min-height: 300px; }
+
+.icon-1, .selected .icon-1 {
+  width: 30px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 24px;
+  margin-bottom: -2px; }
+
+.icon-1 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 0; }
+
+.selected .icon-1 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -175px; }
+
+.icon-2, .selected .icon-2 {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-left: 24px;
+  margin-bottom: -7px; }
+
+.icon-2 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -20px; }
+
+.selected .icon-2 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -195px; }
+
+.icon-3, .selected .icon-3 {
+  width: 30px;
+  height: 25px;
+  display: inline-block;
+  margin-left: 24px;
+  margin-bottom: -7px; }
+
+.icon-3 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -50px; }
+
+.selected .icon-3 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -225px; }
+
+.icon-4, .selected .icon-4 {
+  width: 30px;
+  height: 25px;
+  display: inline-block;
+  margin-left: 24px;
+  margin-bottom: -7px; }
+
+.icon-4 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -75px; }
+
+.selected .icon-4 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -250px; }
+
+.icon-5, .selected .icon-5 {
+  width: 30px;
+  height: 25px;
+  display: inline-block;
+  margin-left: 24px;
+  margin-bottom: -7px; }
+
+.icon-5 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -100px; }
+
+.selected .icon-5 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -275px; }
+
+.icon-6, .selected .icon-6 {
+  width: 30px;
+  height: 25px;
+  display: inline-block;
+  margin-left: 24px;
+  margin-bottom: -7px; }
+
+.icon-6 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -125px; }
+
+.selected .icon-6 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -300px; }
+
+.icon-7, .selected .icon-7 {
+  width: 30px;
+  height: 25px;
+  display: inline-block;
+  margin-left: 24px;
+  margin-bottom: -7px; }
+
+.icon-7 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -150px; }
+
+.selected .icon-7 {
+  background: url(/assets/images/icons/sprites/icons_small.png) 0 -325px; }
+
+.heading-1 {
+  background-image: url(/assets/images/headings/heading_bs1.png);
+  background-repeat: no-repeat;
+  height: 65px;
+  width: 540px; }
+
+.heading-2 {
+  background-image: url(/assets/images/headings/heading_bs2.png);
+  background-repeat: no-repeat;
+  height: 65px;
+  width: 540px; }
+
+.heading-3 {
+  background-image: url(/assets/images/headings/heading_bs3.png);
+  background-repeat: no-repeat;
+  height: 65px;
+  width: 540px; }
+
+.heading-4 {
+  background-image: url(/assets/images/headings/heading_bs4.png);
+  background-repeat: no-repeat;
+  height: 65px;
+  width: 540px; }
+
+.heading-5 {
+  background-image: url(/assets/images/headings/heading_bs5.png);
+  background-repeat: no-repeat;
+  height: 65px;
+  width: 540px; }
+
+.heading-6 {
+  background-image: url(/assets/images/headings/heading_bs6.png);
+  background-repeat: no-repeat;
+  height: 65px;
+  width: 540px; }
+
+.heading-7 {
+  background-image: url(/assets/images/headings/heading_bs7.png);
+  background-repeat: no-repeat;
+  height: 65px;
+  width: 540px; }
+
+/*# sourceMappingURL=challenge.css.map */
