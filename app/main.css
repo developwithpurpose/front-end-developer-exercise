@@ -1,0 +1,142 @@
+body{
+    background-color:#bbbfc2;
+}
+
+main{
+    background-color:white;
+    max-width:75%;
+    margin-left:auto;
+    margin-right:auto;
+    height:1100px;
+}
+
+#content{
+    height:300px;
+    overflow: hidden;
+
+}
+
+h1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight:600;
+    display:inline-block;
+    color:#36abe1;
+    line-height:20px;
+    margin:0;
+
+}
+
+h2{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight:300;
+    font-size:18px;
+    display:inline-block;
+    line-height:20px;
+    color:#5c6366;
+    margin:0;
+}
+
+p{
+    font-family:'Helvetica';
+    font-size:13px;
+    color:#65686f;
+    line-height:18px;
+}
+
+
+#side-nav{
+    width:25%;
+    display:block;
+    float:left;
+    background: linear-gradient(to right, #ebeced, #d1d5d6 95%);
+    padding-right:30px;
+    margin-right:70px;
+    height:585px;
+    cursor: pointer;
+}
+
+#side-nav a {
+    padding: 8px 8px 8px 32px;
+    width:100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    /* text-decoration: none; */
+    font-size: 18px;
+    display: block;
+    color:#9ba0a4;
+    line-height:60px;
+    text-align:right;
+    text-decoration:none;
+    border-bottom:2px solid white;
+
+}
+
+#side-nav .active{
+    color:#36abe1;
+    font-weight:600;
+    background-color:white;
+}
+
+
+#side-nav img {
+    line-height:60px;
+    vertical-align: middle;
+    margin-left:24px;
+    margin-right:24px;
+}
+
+#header-img{
+    margin-bottom:60px;
+    width:100%
+}
+
+
+
+.bs-main{
+    height: 500px;
+    margin-right:70px;
+    padding-bottom: 120px;
+    margin-bottom: -40px;
+}
+
+.bs-titles{
+    display:inline;    
+
+}
+
+.lg-icon{
+    display: inline-block;
+
+    margin-right:10px;
+}
+
+.is-hidden{
+    display:none;
+}
+
+.description {
+    margin-bottom:40px;
+}
+
+.cont-foot{
+    display:block;
+    margin-top:30px;
+    font-family:'Helvetica';
+    font-size:13px;
+    color:#65686f;
+    line-height:18px;
+}
+
+.cont-foot a{
+    font-family:'Helvetica';
+    font-size:13px;
+    color:#6fbee7;
+    line-height:18px;
+}
+
+
+
+/*
+a[ id= "contacto" ]:target ~ #main article.panel {
+    -webkit-transform: translateY( -1000px );
+    transform: translateY( -1000px );
+} */
