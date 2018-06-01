@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+
+@media screen and (-webkit-min-device-pixel-ratio: 680) {
+	#icon {
+		display: none;
+	}
+}
+
+#jumbotron {
+	background-image: url('../images/header_text.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.list-group {
+	font-family: 'Source Sans Pro', sans-serif !important;
+}
