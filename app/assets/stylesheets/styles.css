@@ -1,0 +1,75 @@
+body {
+    width: 960px;
+}
+
+.babystep-heading {
+    line-height: 20px;
+    margin-bottom: auto;
+    padding-top: 0px;
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.copy-body-baby-step {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+    font-weight: 400;
+    margin-top: 24px;
+    margin-left: 70px;
+    margin-bottom: 40px;
+    margin-right: 70px;
+    display: block;
+}
+
+aside {
+    float: left;
+    margin-top: 70px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+#section {
+    margin-left: 250px;
+    display: none;
+}
+
+.babystep-button {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 60px;
+    font-weight: 400;
+    border: none;
+    color: #9ba0a4;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    width: 250px;
+    border-bottom: 1px solid white;
+    background: linear-gradient(to right, #ebeced 90%, #d1d5d6);
+}
+
+.babystep-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.babystep-selected {
+    background: linear-gradient(to right, white 90%, #d1d5d6);
+}
+
+.button-icon {
+    float: right;
+    margin-right: 24px;
+    margin-top: 19px;
+    vertical-align: 0px;
+}
+
+.button-text {
+    margin-left: 50px;
+}
