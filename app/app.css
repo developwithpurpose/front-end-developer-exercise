@@ -28,12 +28,27 @@ body {
 .options {
   display: flex;
   justify-content: flex-end;
-  padding: 20px;
+  padding: 20px 25px;
   text-align: center;
   border-bottom: solid 1px white;
   background: linear-gradient(to right, #ebeced, #d1d5d6);
   color: #9ba0a4;
-  cursor: pointer; }
+  cursor: pointer; 
+  font-size: 24px;
+  outline: none;
+  border: none;
+  box-shadow: 0 4px #999;}
+
+
+  .options:active {
+    background-color: #9ba0af;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .option:hover {
+    background: linear-gradient(to right, #ebecee, #d1d5d6);
+  }
 
 .option-title {
   padding-top: 3px;

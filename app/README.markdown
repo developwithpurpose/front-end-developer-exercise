@@ -33,3 +33,14 @@ Dependencies for this project:
 //         // }
 //       });
 //     });
+
+### Message Logic
+
+* if 0 friends, then don't show any message
+* if 1 friend, then show "Paul Taylor is also in Baby Step 2"
+* if 2 friends, then show "Thomas Harris and Sharon Thomas are also in Baby Step 3"
+* if 3 friends, then show "Deborah Lee, Shirley Perez, and 1 other friend are also in Baby Step 4"
+* if 4 or more friends, then show "Patricia Allen, Matthew Garcia, and 2 other friends are also in Baby Step 5"
+
+##For Button Animation:
+#used `https://www.w3schools.com/howto/howto_css_animate_buttons.asp` and added in "pressed" effect. Was my most favorite, but will be updated in v.2. 
