@@ -1,0 +1,153 @@
+html, body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    background-color: #bbbfc2;
+
+  }
+
+#header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+#main {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding-top: 44px;
+    position: relative;
+}
+
+li {
+    border-top: 1px solid white;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+a {
+    font-size: 18px;
+    color: #9ba0a4;
+    text-decoration: none;
+}
+
+.menu-bottom {
+    height: 90px;
+}
+
+.nav-list {
+    list-style: none;
+    padding-left: 0px;
+    width: 300px;
+    background: linear-gradient(to right, #ebeced 90%, #dad5d6 100%);
+}
+
+.small-icons {
+ margin-right: 24px;
+ margin-top: 6px;
+ margin-left: 24px;
+}
+
+
+.section-text {
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+}
+
+.friends-highlighted {
+    text-decoration: none;
+    color: #6fbee7;
+    font-size: 13px;
+}
+
+.friends-text {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    color: #65686f;
+}
+
+
+.active-tab {
+    background-color: white;
+    font-weight: 600;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.active-a {
+    color: #36abe1;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+.section {
+    position: absolute;
+    top: 70px;
+    left: 370px;
+    margin-right: 70px;
+    height: auto;
+    opacity: 0;
+    animation-name: fadeInAndUp;
+    animation-delay: 0.5s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAndUp {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(40%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  
+  @-webkit-keyframes fadeInAndUp {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(40%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
