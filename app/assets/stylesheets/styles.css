@@ -26,8 +26,8 @@ html, body {
 
 li {
     border-top: 1px solid white;
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-family: 'Source Sans Pro', sans-serif;
     display: flex;
     justify-content: flex-end;
@@ -41,7 +41,7 @@ a {
 }
 
 .menu-bottom {
-    height: 50px;
+    height: 90px;
 }
 
 .nav-list {
@@ -59,11 +59,23 @@ a {
 
 
 .section-text {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: Helvetica, sans-serif;
     font-weight: 300;
-    font-size: 18px;
-    color: #5c6366;
-    line-height: 20px;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+}
+
+.friends-highlighted {
+    text-decoration: none;
+    color: #6fbee7;
+    font-size: 13px;
+}
+
+.friends-text {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    color: #65686f;
 }
 
 
@@ -82,6 +94,9 @@ a {
     opacity: 0;
     animation-fill-mode: forwards;
 }
+
+
+
 
 @keyframes fadeIn {
     0% {
@@ -110,7 +125,8 @@ a {
     height: auto;
     opacity: 0;
     animation-name: fadeInAndUp;
-    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
 
