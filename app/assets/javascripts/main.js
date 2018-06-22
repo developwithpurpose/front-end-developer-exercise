@@ -31,8 +31,46 @@
     });
   };
 
+  function ajaxCall () {
+  $.get("../../baby-steps.json", function(data, status){
+    var count_2 = 0, count_3 = 0, count_4 = 0, count_5 = 0, count_6 = 0, count_7 = 0;
+    var namesList_2, namesList_3, namesList_4, namesList_5, namesList_6, namesList_7;
+     $.each(data, function(key, val) {
+       $.each(val, function(key, values){
+         if (values.babyStep === 2) {
+           namesList_2 = values.firstName + ' ' + values.lastName + ', ';
+           count_2++;
+         } else if (values.babyStep === 3) {
+            namesList_3 += values.firstName + ' ' + values.lastName + ', ';
+            count_3++;
+         } else if (values.babyStep === 4) {
+            namesList_4 += values.firstName + ' ' + values.lastName + ', ';
+            count_4++;
+         } else if (values.babyStep === 5) {
+           namesList_5 += values.firstName + ' ' + values.lastName + ', ';
+           count_5++;
+         } else if (values.babyStep === 6) {
+           namesList_6 += values.firstName + ' ' + values.lastName + ', ';
+           count_6++;
+         } else if (values.babyStep === 7) {
+           namesList_7 += values.firstName + ' ' + values.lastName + ', ';
+           count_7++;
+         }
+       });
+    });
+    $('#step_names_2').append(namesList_2);
+    $('#step_names_3').append(namesList_3);
+    $('#step_names_4').append(namesList_4);
+    $('#step_names_5').append(namesList_5);
+    $('#step_names_6').append(namesList_6);
+    $('#step_names_7').append(namesList_7);
+ });
+}
+
+
 
   $( document ).ready(function() {
-    navClicks()
+    navClicks();
+    ajaxCall();
   });
 })();

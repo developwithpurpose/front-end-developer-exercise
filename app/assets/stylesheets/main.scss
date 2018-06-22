@@ -52,13 +52,12 @@ body {
       padding:0;
       margin:0;
       li {
-        border-top: 2px solid white;
         button:focus {
           outline: none;
         }
         button {
           width:299px;
-          border:none;
+          border:2px solid white;
           background: linear-gradient(to right, #ebeced 94%, #d1d5d6 99%);
           z-index:99;
           h3 {
@@ -133,6 +132,12 @@ body {
         color:#65686f;
         line-height:18px;
         font-weight:400;
+      }
+      .paragraph-two {
+        margin-bottom:40px;
+      }
+      .friends {
+        color:#6fbee7;
       }
     }
     .baby-step-two, .baby-step-three, .baby-step-four, .baby-step-five, .baby-step-six, .baby-step-seven {
