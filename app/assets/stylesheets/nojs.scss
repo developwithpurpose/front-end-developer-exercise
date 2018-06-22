@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:300,400,600');
+
+body {
+  background: #bbbfc2;
+  margin:0;
+}
+.main-container {
+  width:980px;
+  height:auto;
+  background: #fff;
+  margin: 0 auto;
+  overflow:hidden;
+
+  aside {
+    display:none;
+  }
+  main {
+    position: absolute;
+    width: 840px;
+    background:white;
+    article {
+      margin-bottom:50px;
+    }
+    .baby-step-one, .baby-step-two, .baby-step-three, .baby-step-four, .baby-step-five, .baby-step-six, .baby-step-seven {
+      display:block;
+  }
+}
+}
