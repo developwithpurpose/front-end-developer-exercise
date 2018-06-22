@@ -69,8 +69,49 @@ body {
           filter: grayscale(80%); }
         .main-container aside ul li .dormant {
           display: none; }
+        .main-container aside ul li .active-step-one:focus {
+          background: white;
+          display: block; }
         .main-container aside ul li .active-step-one:focus, .main-container aside ul li .active-step-two:focus, .main-container aside ul li .active-step-three:focus,
         .main-container aside ul li .active-step-four:focus, .main-container aside ul li .active-step-five:focus, .main-container aside ul li .active-step-six:focus, .main-container aside ul li .active-step-seven:focus {
-          background: white; }
-  .main-container main .baby-step-one, .main-container main .baby-step-three, .main-container main .baby-step-four, .main-container main .baby-step-five, .main-container main .baby-step-six, .main-container main .baby-step-seven {
-    display: none; }
+          background: white;
+          transition: all 1s ease;
+          display: block; }
+          .main-container aside ul li .active-step-one:focus h3, .main-container aside ul li .active-step-two:focus h3, .main-container aside ul li .active-step-three:focus h3,
+          .main-container aside ul li .active-step-four:focus h3, .main-container aside ul li .active-step-five:focus h3, .main-container aside ul li .active-step-six:focus h3, .main-container aside ul li .active-step-seven:focus h3 {
+            color: #36abe1; }
+          .main-container aside ul li .active-step-one:focus img, .main-container aside ul li .active-step-two:focus img, .main-container aside ul li .active-step-three:focus img,
+          .main-container aside ul li .active-step-four:focus img, .main-container aside ul li .active-step-five:focus img, .main-container aside ul li .active-step-six:focus img, .main-container aside ul li .active-step-seven:focus img {
+            filter: grayscale(0%); }
+  .main-container main {
+    float: right;
+    width: 540px;
+    padding: 0 70px; }
+    .main-container main article img {
+      float: left;
+      margin-right: 15px; }
+    .main-container main article h4 {
+      margin: 0;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 600;
+      font-size: 30px;
+      color: #36abe1;
+      line-height: 20px;
+      padding: 15px; }
+    .main-container main article h5 {
+      margin: 0;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      font-weight: 300;
+      color: #5c6366;
+      line-height: 20px;
+      padding-bottom: 24px; }
+    .main-container main article p {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      color: #65686f;
+      line-height: 18px;
+      font-weight: 400; }
+    .main-container main .baby-step-two, .main-container main .baby-step-three, .main-container main .baby-step-four, .main-container main .baby-step-five, .main-container main .baby-step-six, .main-container main .baby-step-seven {
+      display: none; }
