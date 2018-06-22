@@ -10,7 +10,8 @@ body {
   margin: 0 auto; }
   .main-container header {
     height: 276px;
-    position: relative; }
+    position: relative;
+    margin-bottom: 60px; }
     .main-container header h2 {
       position: absolute;
       margin: 0;
@@ -45,16 +46,29 @@ body {
       padding: 0;
       margin: 0; }
       .main-container aside ul li {
-        border-top: 1px solid white; }
-        .main-container aside ul li button h3 {
-          display: inline-block;
-          margin: 0;
-          font-family: 'Source Sans Pro', sans-serif;
-          font-size: 18px;
-          line-height: 60px; }
+        border-top: 2px solid white; }
+        .main-container aside ul li button:focus {
+          outline: none; }
+        .main-container aside ul li button {
+          width: 299px;
+          border: none;
+          background: linear-gradient(to right, #ebeced 94%, #d1d5d6 99%);
+          z-index: 99; }
+          .main-container aside ul li button h3 {
+            display: inline-block;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: #9ba0a4;
+            line-height: 60px;
+            margin: 0 0 0 80px; }
         .main-container aside ul li img {
           float: right;
           padding-top: 17px;
-          padding-right: 20px; }
+          padding-right: 20px;
+          filter: grayscale(80%); }
         .main-container aside ul li .dormant {
           display: none; }
+        .main-container aside ul li .active-step-one:focus, .main-container aside ul li .active-step-two:focus, .main-container aside ul li .active-step-three:focus,
+        .main-container aside ul li .active-step-four:focus, .main-container aside ul li .active-step-five:focus, .main-container aside ul li .active-step-six:focus, .main-container aside ul li .active-step-seven:focus {
+          background: white; }

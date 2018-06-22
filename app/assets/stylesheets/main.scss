@@ -13,6 +13,7 @@ body {
   header {
     height:276px;
     position:relative;
+    margin-bottom:60px;
     h2 {
       position:absolute;
       margin:0;
@@ -51,23 +52,37 @@ body {
       padding:0;
       margin:0;
       li {
-        border-top: 1px solid white;
+        border-top: 2px solid white;
+        button:focus {
+          outline: none;
+        }
         button {
+          width:299px;
+          border:none;
+          background: linear-gradient(to right, #ebeced 94%, #d1d5d6 99%);
+          z-index:99;
           h3 {
             display: inline-block;
-            margin: 0;
             font-family: 'Source Sans Pro', sans-serif;
+            font-weight:600;
             font-size:18px;
+            color:#9ba0a4;
             line-height:60px;
+            margin: 0 0 0 80px;
           }
         }
         img {
           float:right;
           padding-top: 17px;
           padding-right: 20px;
+          filter:grayscale(80%);
         }
         .dormant {
           display:none;
+        }
+        .active-step-one:focus, .active-step-two:focus, .active-step-three:focus,
+        .active-step-four:focus, .active-step-five:focus, .active-step-six:focus, .active-step-seven:focus {
+          background:white
         }
       }
     }
