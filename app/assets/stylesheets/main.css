@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:300,400,600");
+body {
+  background: #bbbfc2;
+  margin: 0; }
+
+.main-container {
+  width: 980px;
+  height: 1000px;
+  background: #fff;
+  margin: 0 auto; }
+  .main-container header {
+    height: 276px;
+    position: relative; }
+    .main-container header h2 {
+      position: absolute;
+      margin: 0;
+      color: #fff;
+      top: 45px;
+      right: 70px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 32px; }
+    .main-container header h1 {
+      position: absolute;
+      width: 425px;
+      color: #fff;
+      margin: 0;
+      text-transform: uppercase;
+      top: 90px;
+      right: 70px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      line-height: 48px;
+      font-size: 50px; }
+      .main-container header h1 span {
+        display: block;
+        float: right; }
+  .main-container aside {
+    display: inline-block;
+    float: left;
+    background: linear-gradient(to right, #ebeced 94%, #d1d5d6 99%);
+    height: 660px; }
+    .main-container aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      .main-container aside ul li {
+        border-top: 1px solid white; }
+        .main-container aside ul li button h3 {
+          display: inline-block;
+          margin: 0;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-size: 18px;
+          line-height: 60px; }
+        .main-container aside ul li img {
+          float: right;
+          padding-top: 17px;
+          padding-right: 20px; }
+        .main-container aside ul li .dormant {
+          display: none; }
