@@ -87,4 +87,9 @@ body {
       }
     }
   }
+  main {
+    .baby-step-one, .baby-step-three, .baby-step-four, .baby-step-five, .baby-step-six, .baby-step-seven {
+      display:none;
+    }
+  }
 }

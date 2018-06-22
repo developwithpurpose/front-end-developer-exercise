@@ -72,3 +72,5 @@ body {
         .main-container aside ul li .active-step-one:focus, .main-container aside ul li .active-step-two:focus, .main-container aside ul li .active-step-three:focus,
         .main-container aside ul li .active-step-four:focus, .main-container aside ul li .active-step-five:focus, .main-container aside ul li .active-step-six:focus, .main-container aside ul li .active-step-seven:focus {
           background: white; }
+  .main-container main .baby-step-one, .main-container main .baby-step-three, .main-container main .baby-step-four, .main-container main .baby-step-five, .main-container main .baby-step-six, .main-container main .baby-step-seven {
+    display: none; }
