@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:300,400,600");
+body {
+  background: #bbbfc2;
+  margin: 0; }
+
+.main-container {
+  width: 980px;
+  height: auto;
+  background: #fff;
+  margin: 0 auto;
+  overflow: hidden; }
+  .main-container aside {
+    display: none; }
+  .main-container main {
+    position: absolute;
+    width: 840px;
+    background: white; }
+    .main-container main article {
+      margin-bottom: 50px; }
+    .main-container main .baby-step-one, .main-container main .baby-step-two, .main-container main .baby-step-three, .main-container main .baby-step-four, .main-container main .baby-step-five, .main-container main .baby-step-six, .main-container main .baby-step-seven {
+      display: block; }
