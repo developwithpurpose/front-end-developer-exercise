@@ -113,6 +113,8 @@ body {
       font-weight: 400; }
     .main-container main article .paragraph-two {
       margin-bottom: 40px; }
+    .main-container main article a {
+      text-decoration: none; }
     .main-container main article .friends {
       color: #6fbee7; }
     .main-container main .baby-step-two, .main-container main .baby-step-three, .main-container main .baby-step-four, .main-container main .baby-step-five, .main-container main .baby-step-six, .main-container main .baby-step-seven {

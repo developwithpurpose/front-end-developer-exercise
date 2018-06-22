@@ -1,0 +1,13 @@
+.main-container {
+  height:auto;
+  background:white;
+}
+.main-container aside {
+  display:none;
+}
+.main-countainer main  {
+  background: #fff;
+}
+.main-container .baby-step-one, .baby-step-two, .baby-step-three, .baby-step-four, .baby-step-five, .baby-step-six, .baby-step-seven {
+  display:block;
+}

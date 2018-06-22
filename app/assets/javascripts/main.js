@@ -59,15 +59,20 @@
        });
     });
     $('#step_names_2').append(namesList_2);
-    $('#step_names_3').append(namesList_3);
-    $('#step_names_4').append(namesList_4);
-    $('#step_names_5').append(namesList_5);
-    $('#step_names_6').append(namesList_6);
-    $('#step_names_7').append(namesList_7);
+    $('#step_names_3').append(namesList_3.replace('undefined', ''));
+    $('#step_names_4').append(namesList_4.replace('undefined', ''));
+    $('#step_names_5').append(namesList_5.replace('undefined', ''));
+    $('#step_names_6').append(namesList_6.replace('undefined', ''));
+    $('#step_names_7').append(namesList_7.replace('undefined', ''));
+
+    $('#step_count_2').append(count_2);
+    $('#step_count_3').append(count_3);
+    $('#step_count_4').append(count_4);
+    $('#step_count_5').append(count_5);
+    $('#step_count_6').append(count_6);
+    $('#step_count_7').append(count_7);
  });
 }
-
-
 
   $( document ).ready(function() {
     navClicks();
