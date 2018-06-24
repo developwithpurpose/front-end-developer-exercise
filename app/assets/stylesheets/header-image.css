@@ -1,0 +1,19 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.hero-image {
+  /* background-image: url("/assets/images/header_text.jpg"); */
+  /* height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  position: relative;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+  
+}
