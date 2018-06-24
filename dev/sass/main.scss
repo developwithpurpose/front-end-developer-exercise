@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+body {
+    font-family: "Helvetica", Arial, sans-serif;
+    font-size: 13px;
+    background-color: #bbbfc2;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700 !important;
+}
+
+.container {
+    width: 100%;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    header {
+        width: 100%;
+        float: left;
+        height: auto;
+        background-color: #FFF;
+        padding-bottom: 60px;
+        img {
+            width: 100%;
+            float: left;
+            height: auto;
+        }
+    }
+    .bottom-shadow {
+        float: left;
+        width: 100%;
+    }
+    .row {
+        width: 100%;
+        float: left;
+        padding: 0px 15px;
+        position: relative;
+        height: auto;
+        .shadow-left {
+            width: 15px;
+            height: 800px;
+            left: 0px;
+            top: 0px;
+            background: url('/img/shadow_left.jpg') right top no-repeat;
+            position: absolute;
+        }
+        .shadow-right {
+            width: 15px;
+            height: 724px;
+            right: 0px;
+            top: 0px;
+            background: url('/img/shadow_right.jpg') left top no-repeat;
+            position: absolute;
+        }
+        left-col {
+            width: 300px;
+            float: left;
+            background: url('/img/shadow_left_nav.jpg') repeat-y;
+            height: 600px;
+            margin-top: 1px;
+            ul#step-buttons {
+                float: left;
+                width: 100%;
+                list-style-type: none;
+                list-style-image: none;
+                padding: 0px;
+                margin: 0px;
+                position: relative;
+                #active-bar {
+                    height: 60px;
+                    width: 300px;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    background-color: #FFF;
+                    z-index: 1;
+                }
+                li {
+                    height: 60px;
+                    line-height: 60px;
+                    float: left;
+                    width: 100%;
+                    border-bottom: solid 1px #FFF;
+                    position: relative;
+                    z-index: 5;
+                    ;
+                    a {
+                        height: 60px;
+                        width: calc(100% - 24px);
+                        line-height: 60px;
+                        float: left;
+                        text-align: right;
+                        padding-right: 24px;
+                        text-decoration: none;
+                        font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif !important;
+                        font-size: 18px;
+                        color: #39a0a4;
+                        position: relative;
+                        font-weight: 400;
+                        .icon {
+                            width: 30px;
+                            height: 25px;
+                            overflow: hidden;
+                            position: relative;
+                            float: right;
+                            margin-top: 17px;
+                            margin-left: 24px;
+                            img {
+                                position: absolute;
+                                left: 0px;
+                                top: 0px;
+                            }
+                        }
+                        &.active {
+                            color: #36abe1;
+                            font-size: 600;
+                            .icon {
+                                img {
+                                    right: 0px;
+                                    left: auto;
+                                }
+                            }
+                        }
+                        &:active {
+                            color: #36abe1;
+                            font-size: 600;
+                            .icon {
+                                img {
+                                    right: 0px;
+                                    left: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        main-col {
+            width: calc(100% - 440px);
+            float: left;
+            padding: 0px 70px;
+            background-color: #FFF;
+            height: 300px;
+            overflow: hidden;
+            border-bottom: solid 300px #fff;
+            step {
+                height: 300px;
+                float: left;
+                width: 100%;
+                p {
+                    font-size: 13px;
+                    line-height: 18px;
+                    font-family: "Helvetica", Arial, sans-serif;
+                    color: #65686F;
+                }
+            }
+        }
+        #friends {
+            width: 100%;
+            float: left;
+            -webkit-animation: friends-fade-in 1s;
+            -moz-animation: friends-fade-inn 1s;
+            -ms-animation: friends-fade-in 1s;
+            -o-animation: friends-fade-in 1s;
+            animation: friends-fade-in 1s;
+            color: #65686F;
+            font-size: 13px;
+            a {
+                text-decoration: none;
+                color: #6fbee7;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@keyframes friends-fade-in {
+    from {
+        opacity: 0;
+        margin-left: 25px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+@-moz-keyframes riends-fade-in {
+    from {
+        opacity: 0;
+        margin-left: 25px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+@-webkit-keyframes riends-fade-in {
+    from {
+        opacity: 0;
+        margin-right: -25px;
+    }
+    to {
+        opacity: 1;
+        margin-right: 0px;
+    }
+}
+
+@-ms-keyframes riends-fade-in {
+    from {
+        opacity: 0;
+        margin-left: 25px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+@-o-keyframes riends-fade-in {
+    from {
+        opacity: 0;
+        margin-left: 25px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}

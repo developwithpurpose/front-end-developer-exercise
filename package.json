@@ -1,14 +1,36 @@
 {
   "name": "front-end-developer-exercise",
   "version": "1.0.0",
+  "main": "gulpfile.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+    "start": "gulp"
   },
+  "dependencies": {
+    "babelify": "",
+    "browser-sync": "",
+    "browserify": "",
+    "formidable": "",
+    "gulp-babel": "",
+    "gulp-sass": "",
+    "gulp-uglifyjs": "",
+    "gulp-util": "",
+    "vinyl-source-stream": ""
+  },
+  "author": "Jody Christian",
+  "license": "ISC",
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "babel-core": "",
+    "babel-preset-es2015": "",
+    "browser-sync": "",
+    "gulp": "",
+    "gulp-babel": "",
+    "gulp-minify": "",
+    "gulp-sequence": "",
+    "gulp-streamify": "",
+    "gulp-uglify": ""
   }
 }
