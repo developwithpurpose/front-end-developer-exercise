@@ -1,0 +1,83 @@
+@mixin title-text-1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    color: #fff;
+    font-weight: light;
+}
+
+@mixin title-text-2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    color: white;
+    line-height: 48px;
+    font-weight: bold;
+}
+
+@mixin unselected-baby-step {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    line-height: 60px;
+    color: #9ba0a4;
+    font-weight: 300;
+}
+
+@mixin selected-baby-step {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400; 
+    line-height: 60px;
+    color: #36abe1;
+    background-color: #fff;
+
+}
+
+@mixin baby-step-title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: semi-bold;
+    font-size: 30px;
+    color: #36abe1;
+    line-height: 20px;
+}
+
+@mixin baby-step-sub-title {
+    font-family: 'Source Sans Pro', sans-serif ;
+    font-weight: 200;
+    font-size: 18px;
+    color: #5c6366;
+    line-height: 20px;
+    margin-top: -22px;
+}
+
+@mixin paragraph-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    
+    
+}
+
+@mixin baby-step-friends-list {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+}
+
+@mixin baby-step-image-style {
+    vertical-align: middle;
+    margin-right: 24px;
+    display: inline-block;
+    content: "";
+    width: 32px;
+    height: 28px;
+   
+}
+
+@mixin baby-step-large-image-style {
+    vertical-align: middle;
+    display: inline-block;
+    content: "";
+   
+    float: left;
+    margin-right: 15px;
+    margin-top: -10px;
+    
+}

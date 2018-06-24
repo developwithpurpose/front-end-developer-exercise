@@ -1,3 +1,205 @@
 <!doctype html>
-<title>Front-End Developer Exercise</title>
-The server is running!
+<html>
+    <head>
+        <title>Front-End Developer Exercise</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./assets/stylesheets/7-steps.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="banner">
+
+            </div>
+            <div class="content-section">
+                <div class="step-select-container">
+                    <a href="#/" class="selected box-1" value="1" onclick="retrieveJson(this)">
+                        <div class="steps-select">
+                            <p>Baby Step 1</p>
+                            <div class="image-overlay">
+                                <img class="in-active" src="../assets/images/icons/individual/icons_small_bs1.png" alt="Money">
+                                <img class="active" src="../assets/images/icons/individual/icons_small_bs1_blue.png" alt="Money">
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#/" class='box-2' value="2" onclick="retrieveJson(this)">
+                        <div class="steps-select">
+                            <p>Baby Step 2</p>
+                            <div class="image-overlay">
+                                <img class="in-active" src="../assets/images/icons/individual/icons_small_bs2.png" alt="Money">
+                                <img class="active" src="../assets/images/icons/individual/icons_small_bs2_blue.png" alt="Money">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#/" class='box-3' value="3" onclick="retrieveJson(this)">
+                        <div class="steps-select">
+                            <p>Baby Step 3</p>
+                            <div class="image-overlay">
+                                <img class="in-active" src="../assets/images/icons/individual/icons_small_bs3.png" alt="Money">
+                                <img class="active" src="../assets/images/icons/individual/icons_small_bs3_blue.png" alt="Money">
+
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#/" class="box-4" value="4" onclick="retrieveJson(this)">
+                        <div class="steps-select">
+                            <p>Baby Step 4</p>
+                            <div class="image-overlay">
+                                <img class="in-active" src="../assets/images/icons/individual/icons_small_bs4.png" alt="Money">
+                                <img class="active" src="../assets/images/icons/individual/icons_small_bs4_blue.png" alt="Money">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#/" class="box-5" value="5" onclick="retrieveJson(this)">
+                        <div class="steps-select">
+                            <p>Baby Step 5</p>
+                            <div class="image-overlay">
+                                <img class="in-active" src="../assets/images/icons/individual/icons_small_bs5.png" alt="Money">
+                                <img class="active" src="../assets/images/icons/individual/icons_small_bs5_blue.png" alt="Money">
+
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#/" class="box-6" value="6" onclick="retrieveJson(this)">
+                        <div class="steps-select">
+                            <p>Baby Step 6</p>
+                            <div class="image-overlay">
+                                <img class="in-active" src="../assets/images/icons/individual/icons_small_bs6.png" alt="Money">
+                                <img class="active" src="../assets/images/icons/individual/icons_small_bs6_blue.png" alt="Money">
+
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#/" class="box-7" value="7" onclick="retrieveJson(this)">
+                        <div class="steps-select">
+                            <p>Baby Step 7</p>
+                            <div class="image-overlay">
+                                <img class="in-active" src="../assets/images/icons/individual/icons_small_bs7.png" alt="Money">
+                                <img class="active" src="../assets/images/icons/individual/icons_small_bs7_blue.png" alt="Money">
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="steps-content " id="content">
+                    <div class="steps" id="box-1">
+                        <div class="text-header-section ">
+                            <div class="large-image-overlay">
+                                <img src="../assets/images/icons/individual/icons_large_bs1_blue.png" alt="Money" align="left">
+                            </div>
+                            <h3 class="step-title"> Baby Step 1</h3>
+                            <p class="step-sub-title">$1,000 Emergency Fund</p>
+                        </div>
+                        <div class="text-body-section">
+                            <p> An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen. </p>
+                            <p>This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!</p>
+                        </div>
+                        <div class="friend-list">
+                            <p id="1"></p>
+                        </div>
+                    </div>
+                    <div class="steps" id="box-2">
+                        <div class="text-header-section">
+                            <div class="large-image-overlay">
+                                <img src="../assets/images/icons/individual/icons_large_bs2_blue.png" alt="Money" align="left">
+                            </div>
+                            <p class="step-title"> Baby Step 2</p>
+                            <p class="step-sub-title">Pay off all debt using the Debt Snowball</p>
+                        </div>
+                        <div class="text-body-section">
+                            <p>List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first.</p>
+                            <p>The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.</p>
+                        </div>
+                        <div class="friend-list">
+                            <p id="2"></p>
+                        </div>
+                    </div>
+                    <div class="steps" id="box-3">
+                        <div class="text-header-section">
+                            <div class="large-image-overlay">
+                                <img src="../assets/images/icons/individual/icons_large_bs3_blue.png" alt="Money" align="left">
+                            </div>
+                            <p class="step-title"> Baby Step 3</p>
+                            <p class="step-sub-title">3 to 6 months of exepenses in savings</p>
+                        </div>
+                        <div class="text-body-section">
+                            <p>Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra” money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?” Your answer to that question is how much you should save.</p>
+                            <p>Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you’re paying to yourself, a buffer between you and life.</p>
+                        </div>
+                        <div class="friend-list">
+                            <p id="3"></p>
+                        </div>
+                    </div>
+                    <div class="steps" id="box-4">
+                        <div class="text-header-section">
+                            <div class="large-image-overlay">
+                                <img src="../assets/images/icons/individual/icons_large_bs4_blue.png" alt="Money" align="left">
+                            </div>
+                            <p class="step-title"> Baby Step 4</p>
+                            <p class="step-sub-title">Invest 15% of household income for retirement</p>
+                        </div>
+                        <div class="text-body-section">
+                            <p>When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth. </p>
+                            <p>Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early. </p>
+                        </div>
+                        <div class="friend-list">
+                            <p id="4"></p>
+                        </div>
+                    </div>
+                    <div class="steps" id="box-5">
+                        <div class="text-header-section">
+                            <div class="large-image-overlay">
+                                <img src="../assets/images/icons/individual/icons_large_bs5_blue.png" alt="Money" align="left">
+                            </div>
+                            <p class="step-title"> Baby Step 5</p>
+                            <p class="step-sub-title">College funding for children</p>
+                        </div>
+                        <div class="text-body-section">
+                            <p>By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.</p>
+                            <p>In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year! </p>
+                        </div>
+                        <div class="friend-list">
+                            <p id="5"></p>
+                        </div>
+                    </div>
+                    <div class="steps" id="box-6">
+                        <div class="text-header-section">
+                            <div class="large-image-overlay">
+                                <img src="../assets/images/icons/individual/icons_large_bs6_blue.png" alt="Money" align="left">
+                            </div>
+                            <p class="step-title"> Baby Step 6</p>
+                            <p class="step-sub-title">Pay off your house early</p>
+                        </div>
+                        <div class="text-body-section">
+                            <p>Now it’s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.</p>
+                            <p>As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!</p>
+                        </div>
+                        <div class="friend-list">
+                            <p id="6"></p>
+                        </div>
+                    </div>
+                    <div class="steps" id="box-7">
+                        <div class="text-header-section">
+                            <div class="large-image-overlay">
+                                <img src="../assets/images/icons/individual/icons_large_bs7_blue.png" alt="Money" align="left">
+                            </div>
+                            <p class="step-title"> Baby Step 7</p>
+                            <p class="step-sub-title">Build wealth and give!</p>
+                        </div>
+                        <div class="text-body-section">
+                            <p>It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!</p>
+                            <p>Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.</p>
+                        </div>
+                        <div class="friend-list">
+                            <p id="7"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../assets/javascripts/load-friends.js"></script>
+    <script src="../assets/javascripts/animation.js"></script>
+</html>
