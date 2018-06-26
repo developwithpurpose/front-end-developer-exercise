@@ -2,7 +2,7 @@
     "friends": [
         { "firstName" : "Paul", "lastName" : "Taylor", "babyStep": 2 },
         { "firstName" : "Sharon", "lastName" : "Thomas", "babyStep": 3 },
-        { "firstName" : "Thomas", "lastName" : "Harris", "babyStep": 3 },
+        { "firstName" : "Thomas", "lastName" : "Harris", "babyStep": 3},
         { "firstName" : "Deborah", "lastName" : "Lee", "babyStep": 4 },
         { "firstName" : "Mark", "lastName" : "Young", "babyStep": 4 },
         { "firstName" : "Shirley", "lastName" : "Perez", "babyStep": 4 },
