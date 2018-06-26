@@ -2,8 +2,10 @@ Document your submission here (optional, but recommended)
 
 I used HTML / CSS / JavaScript.
 
-I tried to be really dry when it came to HTML / CSS so it would not get messy when referring to ids in javascript.
+In reworking my original attempt, I changed how I put in the side nav bar and how it functioned. With a click function, I used toggle to simplify and link what was being shown for the click event.
 
-As I got towards the end, I realized multiples ways I could have made my javascript a lot more dry and not so lengthy. However, this is the code that I came up with in order to complete the exercise.
+I added animation to the icons for when they are hovered over, which causes them to rotate.
 
-To pull the JSON data in, I simply used an XMLHttpRequest. I then pulled the data into arrays based off of what baby step the user was on. If in the future, data was being added to it. The people in each step will update.
+I also cut down and tried to change up how I was using ids and making them into classes instead. I also took out the <br> and changed them into p tags to allow the break instead. I limited the amount of div tags as well to when they were only necessary.
+
+Overall, I feel good on how I reworked it well. I would love to explore more ways on linking the people in step with the toggle function. 

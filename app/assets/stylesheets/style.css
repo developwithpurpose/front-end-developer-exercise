@@ -62,6 +62,8 @@ li:hover {
     background: white;
     color: #36abe1;
     font-weight: bold;
+
+
 }
 .icons {
     margin: 0 20px 0 50px;
@@ -71,6 +73,9 @@ li:hover {
 img.title{
   margin-bottom: 24px;
 
+}
+img.icons:hover{
+  transform: rotate(20deg);
 }
   p{
     margin: 0 0px 30px;
