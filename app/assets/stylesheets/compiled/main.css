@@ -1,0 +1,20 @@
+.step {
+    font-family: 'Source Sans Pro', 'sans-serif';
+}
+
+.step__title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #36abe1;
+}
+
+.step__goal {
+    font-size: 18px;
+    font-weight: 300;
+    color: #5c6366;
+}
+
+.step__description {
+    font-family: 'Work Sans', 'sans-serif';
+    font-size: 13px;
+}
