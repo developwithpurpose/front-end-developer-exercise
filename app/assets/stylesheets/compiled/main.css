@@ -101,12 +101,14 @@ body {
 }
 
 .step-info {
+    height: 100%;
     width: 75%;
-    float: left;
+    float: right;
 }
 
 .step {
     display: none;
+    height: 100%;
     font-family: 'Source Sans Pro', 'sans-serif';
 }
 
@@ -115,7 +117,17 @@ body {
     margin-left: 70px;
 }
 
+.step__logo {
+    height: 80px;
+    width: 95px;
+    float: left;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .step__title {
+    padding-top: 10px;
     font-size: 30px;
     font-weight: 600;
     color: #36abe1;
@@ -128,6 +140,63 @@ body {
 }
 
 .step__description {
+    margin-top: 24px;
     font-family: 'Work Sans', 'sans-serif';
     font-size: 13px;
+}
+
+.step--one .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs1.png');
+}
+
+.step--one.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs1_blue.png');
+}
+
+.step--two .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs2.png');
+}
+
+.step--two.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs2_blue.png');
+}
+
+.step--three .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs3.png');
+}
+
+.step--three.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs3_blue.png');
+}
+
+.step--four .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs4.png');
+}
+
+.step--four.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs4_blue.png');
+}
+
+.step--five .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs5.png');
+}
+
+.step--five.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs5_blue.png');
+}
+
+.step--six .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs6.png');
+}
+
+.step--six.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs6_blue.png');
+}
+
+.step--seven .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs7.png');
+}
+
+.step--seven.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs7_blue.png');
 }
