@@ -45,6 +45,10 @@
         outlineStepHandler: function(event) {
             event.preventDefault();
             var stepNum = $(event.target).data('step');
+            if (!stepNum) {
+                stepNum = $(event.target).parent().data('step');
+            }
+
             this.updateActiveStates(stepNum);
         }
     };
