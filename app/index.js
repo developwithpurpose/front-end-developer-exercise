@@ -12,9 +12,10 @@ app.set('views', 'app/views');
 
 // static assets
 app.use(express.static('app'));
+app.use(express.static('app/assets'));
 
 app.get('/', function (req, res) {
   res.render('index', babySteps);
-})
+});
 
 app.listen('8080');
