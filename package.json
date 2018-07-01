@@ -6,9 +6,13 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+    "start": "node ./app/index.js"
   },
   "devDependencies": {
     "http-server": "^0.8.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0"
   }
 }
