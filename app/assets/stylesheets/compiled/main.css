@@ -22,6 +22,10 @@ body {
     border-bottom: 1px solid white;
 }
 
+.step-outline__step.active {
+    background-color: white;
+}
+
 .step-name {
     display: inline-block;
     height: 100%;

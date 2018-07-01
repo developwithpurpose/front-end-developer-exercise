@@ -15,7 +15,7 @@
     <div class="baby-steps">
         <div class="step-outline">
             {{#each steps}}
-            <div class="step-outline__step step-outline__step--{{num}}">
+            <div class="step-outline__step step-outline__step--{{num}}" data-step="{{num}}">
                 <div class="step-name">{{title}}</div>
                 <div class="step-logo"></div>
             </div>
@@ -23,7 +23,7 @@
         </div>
         <div class="step-info">
             {{#each steps}}
-            <div class="step step--{{num}}">
+            <div class="step step--{{num}}" data-step="{{num}}">
                 <div class="step__header">
                     <div class="step__logo"></div>
                     <div class="step__title">{{title}}</div>
