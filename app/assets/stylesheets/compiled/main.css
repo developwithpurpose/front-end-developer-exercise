@@ -10,6 +10,30 @@ body {
     background-repeate: no-repeat;
 }
 
+.header__title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 50px 70px 0 0;
+}
+
+.header__text {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header__text--lead {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.header__text--follow {
+    text-align: right;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 48px;
+}
+
 .step-outline {
     width: 25%;
     height: 100%;
