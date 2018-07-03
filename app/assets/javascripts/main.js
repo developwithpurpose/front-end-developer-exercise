@@ -44,12 +44,53 @@
         },
         outlineStepHandler: function(event) {
             event.preventDefault();
-            var stepNum = $(event.target).data('step');
-            if (!stepNum) {
-                stepNum = $(event.target).parent().data('step');
+            var stepNumStr = $(event.target).data('step') || $(event.target).parent().data('step');;
+            var stepNumInt = $(event.target).data('step-int') || $(event.target).parent().data('step-int');;
+
+            this.updateActiveStates(stepNumStr);
+            this.fetchFriendsForStep(stepNumInt+1);
+        },
+        showFriends: function(friendList) {
+            if (friendList.length <= 0) {
+                $('.step__friends').html("");
+                return;
             }
 
-            this.updateActiveStates(stepNum);
+            $('.step__friends').html(this.constructFriendString(friendList));
+        },
+        constructFriendString: function(friendList) {
+            var appendSummary = false;
+            var friendSummary = "";
+            if (friendList.length > 2) {
+                friendSummary = " and " + (friendList.length-2).toString() + " Other Friends are on this step."
+            } else if (friendList.length > 1){
+                friendSummary = " are on this step."
+            } else {
+                friendSummary = " is on this step."
+            }
+
+            var friendString = '';
+            var friends = [];
+            for(var friendIndex in friendList) {
+                if (friendIndex > 1) {
+                    break;
+                }
+
+                friends.push("<a href='#'>" + friendList[friendIndex].firstName + " " + friendList[friendIndex].lastName + "</a>");
+            }
+
+            friendString = friends.join(", ");
+            return friendString + friendSummary;
+        },
+        fetchFriendsForStep: function(stepNum) {
+            $.ajax('/friends/' + stepNum, {
+                success: function(data, textStatus, jqhr) {
+                    this.showFriends(data);
+                }.bind(this),
+                error: function(resultJqhr, textStatus) {
+                    console.error('Fetch failed; unable to gather friends for this baby step.')
+                }.bind(this)
+            });
         }
     };
 

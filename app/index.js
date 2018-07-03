@@ -1,6 +1,7 @@
 var express = require('express');
 var babySteps = require('./baby-steps.json');
 var exphbs  = require('express-handlebars');
+var _ = require('underscore');
 
 var app = express ();
 var hbs = exphbs.create({});
@@ -16,6 +17,11 @@ app.use(express.static('app/assets'));
 
 app.get('/', function (req, res) {
   res.render('index', babySteps);
+});
+
+app.get('/friends/:stepNum', function(req, res) {
+    var targetFriends = _.where(babySteps.friends, {babyStep: parseInt(req.params.stepNum)});
+    res.send(targetFriends);
 });
 
 app.listen('8080');
