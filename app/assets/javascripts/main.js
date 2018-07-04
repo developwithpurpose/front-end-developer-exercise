@@ -1,4 +1,4 @@
-(function($) {
+(function($, _) {
 
     var App = {
         activeClass: 'active',
@@ -23,7 +23,11 @@
         updateActiveStates: function(step) {
             $('.active').each(function(index, element) {
                 $(element).removeClass(this.activeClass);
-                $(element).css('background-color', 'inherit');
+                if (!$(element).is(':animated')) {
+                    $(element).css('background-color', 'inherit');
+                } else {
+                    setTimeout(function() { $(element).css('background-color', 'inherit'); }, 600);
+                }
             }.bind(this));
 
             $('.step-outline__step--' + step).addClass(this.activeClass)
@@ -99,4 +103,4 @@
     };
 
     $(document).ready(App.init.bind(App));
-})(jQuery)
+})(jQuery, _)
