@@ -16,6 +16,8 @@ app.use(express.static('app'));
 app.use(express.static('app/assets'));
 
 app.get('/', function (req, res) {
+  var targetFriends = _.where(babySteps.friends, {babyStep: 1});
+  babySteps.friends = targetFriends;
   res.render('index', babySteps);
 });
 

@@ -19,6 +19,7 @@
         init: function() {
             this.updateActiveStates('one');
             this.registerListeners();
+            this.fetchFriendsForStep(1);
         },
         updateActiveStates: function(step) {
             $('.active').each(function(index, element) {
@@ -69,12 +70,15 @@
         constructFriendString: function(friendList) {
             var appendSummary = false;
             var friendSummary = "";
+            var currentStepName = $('.step-outline__step.active .step-name').html();
             if (friendList.length > 2) {
-                friendSummary = " and " + (friendList.length-2).toString() + " Other Friends are on this step."
+                var extras = (friendList.length-2).toString();
+                var plural = (extras / 2) >= 1 ? 'friends' : 'friend';
+                friendSummary = " and " + extras + " other " + plural + " are also in " + currentStepName + ".";
             } else if (friendList.length > 1){
-                friendSummary = " are on this step."
+                friendSummary = " are also in " + currentStepName + ".";
             } else {
-                friendSummary = " is on this step."
+                friendSummary = " is also in " + currentStepName + ".";
             }
 
             var friendString = '';
@@ -87,7 +91,7 @@
                 friends.push("<a href='#'>" + friendList[friendIndex].firstName + " " + friendList[friendIndex].lastName + "</a>");
             }
 
-            friendString = friends.join(", ");
+            friendString = (friendList.length === 2) ? friends.join(' and ') : friends.join(", ");
             return friendString + friendSummary;
         },
         fetchFriendsForStep: function(stepNum) {
