@@ -1,4 +1,4 @@
-(function($, _) {
+(function($) {
 
     var App = {
         activeClass: 'active',
@@ -103,4 +103,4 @@
     };
 
     $(document).ready(App.init.bind(App));
-})(jQuery, _)
+})(jQuery)
