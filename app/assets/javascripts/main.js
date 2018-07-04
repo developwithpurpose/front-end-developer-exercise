@@ -23,9 +23,13 @@
         updateActiveStates: function(step) {
             $('.active').each(function(index, element) {
                 $(element).removeClass(this.activeClass);
+                $(element).css('background-color', 'inherit');
             }.bind(this));
 
-            $('.step-outline__step--' + step).addClass(this.activeClass);
+            $('.step-outline__step--' + step).addClass(this.activeClass)
+                .animate({
+                    backgroundColor: "white"
+                }, "slow");
             $('.step-info .step--' + step).addClass(this.activeClass);
         },
         registerListeners: function() {

@@ -55,7 +55,7 @@ body {
 }
 
 .step-outline__step.active {
-    background-color: white;
+    /*background-color: white;*/
 }
 
 .step-name {
