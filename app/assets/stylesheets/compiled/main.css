@@ -1,19 +1,21 @@
 body {
     margin: 0;
+    padding: 0 80px 80px 80px;
+    background-color: #bbbfc2;
 }
 
 .header {
     height: 355px;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
     background-image: url(/assets/images/header.jpg);
     background-size: contain;
-    background-repeate: no-repeat;
+    background-repeat: no-repeat;
+    background-color: white;
 }
 
 .header__title {
     position: absolute;
-    top: 0;
-    right: 0;
+    right: 80px;
     margin: 50px 70px 0 0;
 }
 
@@ -32,6 +34,11 @@ body {
     font-size: 50px;
     font-weight: bold;
     line-height: 48px;
+}
+
+.baby-steps {
+    height: 100vh;
+    background-color: white;
 }
 
 .step-outline {
