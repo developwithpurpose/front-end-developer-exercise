@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title>The Seven Baby Steps</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Work+Sans|Open+Sans:300,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+    <script src="/assets/javascripts/main.js"></script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="header__title">
+            <div class="header__text header__text--lead">Real Life, Love, and Money with</div>
+            <div class="header__text header__text--follow">AMERICAS MOST</div>
+            <div class="header__text header__text--follow">TRUSTED GUY</div>
+        </div>
+    </div>
+    <div class="baby-steps">
+        <div class="step-outline">
+            {{#each steps}}
+            <div class="step-outline__step step-outline__step--{{num}}" data-step="{{num}}" data-step-int="{{@index}}">
+                <div class="step-name">{{title}}</div>
+                <div class="step-logo"></div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="step-info">
+            {{#each steps}}
+            <div class="step step--{{num}}" data-step="{{num}}" data-step-int="{{@index}}">
+                <div class="step__header">
+                    <div class="step__logo"></div>
+                    <div class="step__title">{{title}}</div>
+                    <div class="step__goal">{{goal}}</div>
+                </div>
+                <div class="step__description">
+                    {{#each paragraphs}}
+                    <p>{{this}}</p>
+                    {{/each}}
+                </div>
+                <div class="step__friends">
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    padding: 0 80px 80px 80px;
+    background-color: #bbbfc2;
+}
+
+.header {
+    height: 355px;
+    padding-bottom: 60px;
+    background-image: url(/assets/images/header.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.header__title {
+    position: absolute;
+    right: 80px;
+    margin: 50px 70px 0 0;
+}
+
+.header__text {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header__text--lead {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.header__text--follow {
+    text-align: right;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 48px;
+}
+
+.baby-steps {
+    height: 100vh;
+    background-color: white;
+}
+
+.step-outline {
+    width: 25%;
+    height: 100%;
+    float: left;
+    background: linear-gradient(to right, #ebeced, #d1d5d6);
+}
+
+.step-outline__step {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+
+.step-outline__step.active {
+    /*background-color: white;*/
+}
+
+.step-name {
+    display: inline-block;
+    height: 100%;
+    margin-right: 30px;
+    margin-left: 45%;
+    color: #9ba0a4;
+    line-height: 60px;
+    vertical-align: middle;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', 'sans-serif';
+}
+
+.step-logo {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.step-outline__step--one .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs1.png');
+}
+
+.step-outline__step--one.active .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs1_blue.png');
+}
+
+.step-outline__step--two .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs2.png');
+}
+
+.step-outline__step--two.active .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs2_blue.png');
+}
+
+.step-outline__step--three .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs3.png');
+}
+
+.step-outline__step--three.active .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs3_blue.png');
+}
+
+.step-outline__step--four .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs4.png');
+}
+
+.step-outline__step--four.active .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs4_blue.png');
+}
+
+.step-outline__step--five .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs5.png');
+}
+
+.step-outline__step--five.active .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs5_blue.png');
+}
+
+.step-outline__step--six .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs6.png');
+}
+
+.step-outline__step--six.active .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs6_blue.png');
+}
+
+.step-outline__step--seven .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs7.png');
+}
+
+.step-outline__step--seven.active .step-logo {
+    background-image: url('/assets/images/icons/individual/icons_small_bs7_blue.png');
+}
+
+.step-info {
+    height: 100%;
+    width: 75%;
+    float: right;
+}
+
+.step {
+    display: none;
+    height: 100%;
+    font-family: 'Source Sans Pro', 'sans-serif';
+}
+
+.step.active {
+    display: block;
+    margin-left: 70px;
+}
+
+.step__logo {
+    height: 80px;
+    width: 95px;
+    float: left;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.step__title {
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #36abe1;
+}
+
+.step__goal {
+    font-size: 18px;
+    font-weight: 300;
+    color: #5c6366;
+}
+
+.step__description {
+    margin-top: 24px;
+    font-family: 'Work Sans', 'sans-serif';
+    font-size: 13px;
+}
+
+.step__friends {
+    color: #65686f;
+    font-family: 'Work Sans', 'sans-serif';
+    font-size: 13px;
+}
+
+.step__friends > a {
+    color: #6fbee7;
+    text-decoration: none;
+}
+
+.step--one .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs1.png');
+}
+
+.step--one.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs1_blue.png');
+}
+
+.step--two .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs2.png');
+}
+
+.step--two.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs2_blue.png');
+}
+
+.step--three .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs3.png');
+}
+
+.step--three.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs3_blue.png');
+}
+
+.step--four .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs4.png');
+}
+
+.step--four.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs4_blue.png');
+}
+
+.step--five .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs5.png');
+}
+
+.step--five.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs5_blue.png');
+}
+
+.step--six .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs6.png');
+}
+
+.step--six.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs6_blue.png');
+}
+
+.step--seven .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs7.png');
+}
+
+.step--seven.active .step__logo {
+    background-image: url('/assets/images/icons/individual/icons_large_bs7_blue.png');
+}
