@@ -1,3 +1,242 @@
 <!doctype html>
+<html>
 <title>Front-End Developer Exercise</title>
-The server is running!
+<!-- The server is running! -->
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Helvetica' rel='stylesheet' type='text/css'>
+    <link href='assets/stylesheets/styles.css' rel='stylesheet' type='text/css'>
+    <script>
+            var friends = {};
+
+        $(document).ready(function () {
+            $.getJSON("baby-steps.json", function (data) {
+                friends = data.friends;
+                $(".stepheader.s1 div.step.step1, .stepDesc.s1").show("slow", function () {
+                    $('.d1').text(dynamicContentProcessor(1));
+                    $('.d2').text(dynamicContentProcessor(2));
+                    $('.d3').text(dynamicContentProcessor(3));
+                    $('.d4').text(dynamicContentProcessor(4));
+                    $('.d5').text(dynamicContentProcessor(5));
+                    $('.d6').text(dynamicContentProcessor(6));
+                    $('.d7').text(dynamicContentProcessor(7));
+                });
+            });
+
+            clearSelection();
+
+            $('.tab').click(function () { selectStep(1); });
+            $('.t1').click(function () { selectStep(1); });
+            $('.t2').click(function () { selectStep(2); });
+            $('.t3').click(function () { selectStep(3); });
+            $('.t4').click(function () { selectStep(4); });
+            $('.t5').click(function () { selectStep(5); });
+            $('.t6').click(function () { selectStep(6); });
+            $('.t7').click(function () { selectStep(7); });
+
+        });
+
+        function clearSelection() {
+            $(".stepheader div.step, .stepDesc").hide();
+        }
+
+        function selectStep(step) {
+            clearSelection();
+            $(".stepheader.s" + step + " div.step.step" + step + ", .stepDesc.s" + step).show('slow');
+        }
+
+        function dynamicContentProcessor(step) {
+
+            let sameStepFriends = friends.filter((b) => {
+                return b.babyStep == step
+            });
+
+            let othersCount = sameStepFriends.length > 1 ? sameStepFriends.length - 2 : 0;
+
+            let friendList = '';
+
+            switch (sameStepFriends.length) {
+                case 0:
+                    break;
+                case 1:
+                    friendList += sameStepFriends[0].firstName + ' ' + sameStepFriends[0].lastName + ' is also in Baby Step ' + step;
+                    break;
+                case 2:
+                    friendList += sameStepFriends[0].firstName + ' ' + sameStepFriends[0].lastName + ' and ' +
+                        sameStepFriends[1].firstName + ' ' + sameStepFriends[1].lastName + ' are also in Baby Step ' + step;
+                    break;
+                default:
+                case 3:
+                    friendList += sameStepFriends[0].firstName + ' ' + sameStepFriends[0].lastName + ', ' +
+                        sameStepFriends[1].firstName + ' ' + sameStepFriends[1].lastName + ', and ' + othersCount +
+                        ' other friend' + (othersCount > 1 ? 's' : '') + ' are also in Baby Step ' + step;
+                    break;
+            }
+
+            return friendList;
+        };
+    </script>
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <img src="assets/images/header_text.jpg" />
+        </header>
+        <div class="navdiv">
+            <div class="tab t1" onclick="selectStep(1)">Baby Step 1
+                <div class="ts ts1"></div>
+            </div>
+            <div class="tab t2" onclick="selectStep(2)">Baby Step 2
+                <div class="ts ts2"></div>
+            </div>
+            <div class="tab t3" onclick="selectStep(3)">Baby Step 3
+                <div class="ts ts3"></div>
+            </div>
+            <div class="tab t4" onclick="selectStep(4)">Baby Step 4
+                <div class="ts ts4"></div>
+            </div>
+            <div class="tab t5" onclick="selectStep(5)">Baby Step 5
+                <div class="ts ts5"></div>
+            </div>
+            <div class="tab t6" onclick="selectStep(6)">Baby Step 6
+                <div class="ts ts6"></div>
+            </div>
+            <div class="tab t7" onclick="selectStep(7)">Baby Step 7
+                <div class="ts ts7"></div>
+            </div>
+            <div class="tabend">&nbsp;</div>
+        </div>
+        <div class="stepdiv">
+
+            <div class="stepheader s1">
+                <div class="step step1">
+                    <div class="stepTitle">Baby Step 1</div>
+                    <div class="stepSubTitle">$1,000 Emergency Fund</div>
+                </div>
+            </div>
+            <div class="stepDesc s1">
+                An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy,
+                a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen;
+                it’s simply a matter of when they will happen.
+
+                <p>This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work
+                    off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing.
+                    It’s time to break the cycle of debt!</p>
+                <div class="d1">
+                </div>
+            </div>
+
+            <div class="stepheader s2">
+                <div class="step step2">
+                    <div class="stepTitle">Baby Step 2</div>
+                    <div class="stepSubTitle">Pay off all debt using the Debt Snowball</div>
+                </div>
+            </div>
+            <div class="stepDesc s2">
+                List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about
+                interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate
+                debt first.
+
+                <p>The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about
+                    getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance
+                    is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results
+                    and you will stay motivated to dump your debt. </p>
+                <div class="d2">
+                </div>
+            </div>
+
+            <div class="stepheader s3">
+                <div class="step step3">
+                    <div class="stepTitle">Baby Step 3</div>
+                    <div class="stepSubTitle">3 to 6 months of exepenses in savings</div>
+                </div>
+            </div>
+            <div class="stepDesc s3">
+                Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra”
+                money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would
+                it take for me to live for three to six months if I lost my income?” Your answer to that question is how
+                much you should save.
+
+                <p>Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep
+                    these savings in a money market account. Remember, this stash of money is not an investment; it is insurance
+                    you’re paying to yourself, a buffer between you and life.</p>
+                <div class="d3">
+                </div>
+            </div>
+
+            <div class="stepheader s4">
+                <div class="step step4">
+                    <div class="stepTitle">Baby Step 4</div>
+                    <div class="stepSubTitle">Invest 15% of household income for retirement</div>
+                </div>
+            </div>
+            <div class="stepDesc s4">
+                When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get
+                serious about building wealth.
+
+                <p>Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest
+                    more than that because the extra money will help you complete the next two steps: college savings and
+                    paying off your home early.</p>
+                <div class="d4">
+                </div>
+            </div>
+
+            <div class="stepheader s5">
+                <div class="step step5">
+                    <div class="stepTitle">Baby Step 5</div>
+                    <div class="stepSubTitle">College funding for children</div>
+                </div>
+            </div>
+            <div class="stepDesc s5">
+                By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether
+                you are saving for you or your child to go to college, you need to start now.
+
+                <p>In order to have enough money saved for college, you need to have a goal. Determine how much per month you
+                    should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation
+                    is at 4%, then you are moving ahead of inflation at a net of 8% per year!</p>
+                <div class="d5">
+                </div>
+            </div>
+
+            <div class="stepheader s6">
+                <div class="step step6">
+                    <div class="stepTitle">Baby Step 6</div>
+                    <div class="stepSubTitle">Pay off your house early</div>
+                </div>
+            </div>
+            <div class="stepDesc s6">
+                Now it’s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream
+                of a life with no house payments.
+
+                <p>As you attack this last debt, you will gain momentum much like you did back in the second step of the debt
+                    snowball. Remember, having absolutely no payments is totally within your reach!</p>
+                <div class="d6">
+                </div>
+            </div>
+
+            <div class="stepheader s7">
+                <div class="step step7">
+                    <div class="stepTitle">Baby Step 7</div>
+                    <div class="stepSubTitle">Build wealth and give!</div>
+                </div>
+            </div>
+            <div class="stepDesc s7">
+                It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with
+                your excess. It's really the only way to live!
+
+                <p>Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that
+                    you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s
+                    future, and be gracious enough to bless others. You can do all three at the same time.</p>
+                <div class="d7">
+                </div>
+
+            </div>
+        </div>
+
+</body>
+
+</html>

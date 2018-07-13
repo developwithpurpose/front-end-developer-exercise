@@ -1,0 +1,150 @@
+        body {
+            margin: 0 20%;
+            background: #bbbfc2;
+        }
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        header img {
+            width: 1050px;
+        }
+
+        .d1,
+        .d2,
+        .d3,
+        .d4,
+        .d5,
+        .d6,
+        .d7 {
+            margin-top: 40px;
+        }
+
+        .navdiv {
+            width: 345px;
+            display: inline-block;
+            text-align: right;
+        }
+
+        .stepdiv {
+            margin: 0 70px;
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .stepheader {
+            margin-bottom: 24px;
+        }
+
+        .stepTitle {
+            display: inline-block;
+            color: #36abe1;
+            font-family: 'Source Sans Pro';
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 20px;
+            margin-left: 100px;
+            margin-bottom: 8px;
+        }
+
+        .stepSubTitle {
+            display: block;
+            color: #5c6366;
+            font-family: 'Source Sans Pro';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 20px;
+            margin-left: 100px;
+        }
+
+        .stepDesc {
+            font-family: Helvetica, sans-serif;
+            margin-bottom: 0;
+            line-height: 18px;
+            font-size: 13px;
+            width: 550px;
+        }
+
+        .page {
+            background: #fff;
+            width: 1050px;
+        }
+
+        .step {
+            background: url('/assets/images/icons/sprites/icons_large.png');
+            background-repeat: no-repeat;
+        }
+
+        .step1 {
+            background-position: 0 -470px;
+            height: 50px;
+        }
+
+        .step3 {
+            background-position: 0 -590px;
+            height: 50px;
+        }
+
+        .step4 {
+            background-position: 0 -650px;
+            height: 60px;
+        }
+
+        .step5 {
+            background-position: 0 -715px;
+            height: 60px;
+        }
+
+        .tab {
+            font-family: 'Source Sans Pro';
+            font-weight: 400;
+            line-height: 60px;
+            font-size: 18px;
+            color: #9ba0a4;
+            text-decoration: none;
+            background: linear-gradient(to right, #ebeced 0%, #d1d5d6 100%);
+        }
+
+        .tabend {
+            height: 160px;
+            background: linear-gradient(to right, #ebeced 0%, #d1d5d6 100%);
+        }
+
+        .ts {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            background: url('/assets/images/icons/sprites/icons_small.png');
+            background-repeat: no-repeat;
+        }
+
+        .ts1 {
+            background-position: 0 -100px;
+        }
+
+        .ts2 {
+            background-position: 0 -150px;
+        }
+
+        .ts3 {
+            background-position: 0 -200px;
+        }
+
+        .ts4 {
+            background-position: 0 -250px;
+        }
+
+        .ts5 {
+            background-position: 0 -300px;
+        }
+
+        .ts6 {
+            background-position: 0 -350px;
+        }
+
+        .ts7 {
+            background-position: 0 -400px;
+        }
