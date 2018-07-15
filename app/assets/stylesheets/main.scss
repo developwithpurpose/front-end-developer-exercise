@@ -1,0 +1,232 @@
+@import 'reset';
+
+body {
+    background-color: #bbbfc2;
+}
+
+.container {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    margin: auto;
+    position: relative;
+    width: 980px;
+
+    &::before,
+    &::after {
+        border-radius: 100px / 10px;
+        bottom: 260px;
+        box-shadow:0 0 20px rgba(0,0,0,0.8);
+        content: "";
+        left: 0;
+        position: absolute; 
+        right: 0;
+        top: -10px;
+        z-index: -1;
+    }
+    &::after {
+        bottom: 0;
+        left: 120px;
+        right: 120px;
+        top: 50%;
+    }
+}
+
+.headline {
+    background-image: url(/assets/images/header.jpg);
+    height: 276px;
+
+    &-text { // .headline-text
+        color: #fff;
+        float: right;
+        font-family: 'Open Sans', sans-serif;
+        padding: 50px 70px 0 0;
+        text-align: right;
+        width: 510px;
+    }
+    &-top { // .headline-top
+        display: block;
+        font-size: 32px;
+        font-weight: 300;
+        margin-bottom: 15px;
+    }
+    &-bottom { // .headline-bottom
+        display: block;
+        font-size: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+.bSteps {
+    align-content: stretch;
+    align-items: stretch;
+    background-color: #fff;
+    display: flex;
+    padding-top: 60px;
+
+    &-buttons { // .bSteps-buttons
+        background: linear-gradient(to right, #ebeced 96%,#d1d5d6 100%);
+        display: flex;
+        flex-basis: 300px;
+        flex-direction: column;
+        padding-bottom: 200px;
+        width: 300px;
+    }
+    &-button { // .bSteps-button
+        border-bottom: 1px solid #fff;
+        display: block;
+        padding-right: 24px;
+        text-align: right;
+        text-decoration: none;
+
+        &.button-active, // .bSteps-button.button-active
+        &:hover, // .bSteps-button:hover
+        &:focus { // .bSteps-button:focus
+            background-color: #fff;
+            
+            & .bSteps-button-text {
+                color: #36abe1;
+            }
+
+            // adjust icon sprite background position according to target
+            // .bSteps-button[href$="_2"]::after
+            // and so on...
+            &[href$="_1"]::after { background-position: 0 -175px; }
+            &[href$="_2"]::after { background-position: 0 -200px; }
+            &[href$="_3"]::after { background-position: 0 -225px; }
+            &[href$="_4"]::after { background-position: 0 -250px; }
+            &[href$="_5"]::after { background-position: 0 -275px; }
+            &[href$="_6"]::after { background-position: 0 -300px; }
+            &[href$="_7"]::after { background-position: 0 -325px; }
+        }
+        
+        &-text { // .bSteps-button-text
+            color: #9ba0a4;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            height: 60px;
+            line-height: 60px;
+            vertical-align: middle;
+        }
+
+        // adjust icon sprite background position according to target
+        // .bSteps-button[href$="_2"]::after
+        // and so on...
+        &[href$="_1"]::after { background-position: 0 0; }
+        &[href$="_2"]::after { background-position: 0 -25px; }
+        &[href$="_3"]::after { background-position: 0 -50px; }
+        &[href$="_4"]::after { background-position: 0 -75px; }
+        &[href$="_5"]::after { background-position: 0 -100px; }
+        &[href$="_6"]::after { background-position: 0 -125px; }
+        &[href$="_7"]::after { background-position: 0 -150px; }
+
+        &::after { // .bSteps-button-text::after
+            background-image: url(/assets/images/icons/sprites/icons_small.png);
+            content: '';
+            display: inline-block;
+            height: 25px;
+            margin-left: 24px;
+            vertical-align: middle;
+            width: 30px;
+        }
+    }
+
+    &-articles { // .bSteps-articles
+        flex-grow: 1;
+        position: relative;
+    }
+    &-article { // .bSteps-article
+        margin: 0 70px;
+        opacity: 0;
+        position: absolute;
+
+        // no javascript, use target method for transitions
+        body.nojs & { // body.nojs .bSteps-article
+            transform: translate3d(0, -10px, 0);
+            transition: all 0.25s;
+
+            &:target { // body.nojs .bSteps-article:target
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+                transition: all 0.25s 0.25s;
+            }
+        }
+
+        &.target-in {
+            animation: targetIn 0.25s forwards;
+        }
+        &.target-out {
+            animation: targetOut 0.25s forwards;
+        }
+
+        &-header { // .bSteps-article-header
+            font-family: 'Source Sans Pro', sans-serif;
+            margin-bottom: 24px;
+
+            &::before {
+                background-image: url(/assets/images/icons/sprites/icons_large.png);
+                content: '';
+                float: left;
+                height: 65px;
+                margin-right: 12px;
+                width: 77px;
+            }
+        }
+        &-headline-top { // .bSteps-article-headline-top
+            color: #36abe1;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 30px;
+            padding-top: 6px;
+        }
+        &-headline-bottom { // .bSteps-article-headline-bottom
+            color: #5c6366;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 20px;
+        }
+        .bSteps-name,
+        .bSteps-babystep {
+            color: #36abe1;
+            font-weight: bold;
+        }
+        p {
+            color: #65686f;
+            font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+            font-size: 13px;
+            line-height: 18px;
+            margin: 24px 0;
+        }
+    }
+}
+
+// adjust icon sprite background position according to id
+#baby_step_1 header::before { background-position: 0 -455px; }
+#baby_step_2 header::before { background-position: 0 -520px; }
+#baby_step_3 header::before { background-position: 0 -585px; }
+#baby_step_4 header::before { background-position: 0 -648px; }
+#baby_step_5 header::before { background-position: 0 -713px; }
+#baby_step_6 header::before { background-position: 0 -777px; }
+#baby_step_7 header::before { background-position: 0 -842px; }
+
+@keyframes targetIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes targetOut {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, 80px, 0);
+    }
+}
