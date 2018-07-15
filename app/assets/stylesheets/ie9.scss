@@ -1,0 +1,21 @@
+.bSteps {
+    display: block;
+    overflow: hidden;
+
+    &-buttons {
+        background-image: url(/assets/images/shadow_left_nav.jpg);
+        float: left;
+    }
+    &-articles {
+        float: left;
+        width: 680px;
+    }
+    &-article {
+        &.target-in {
+            opacity: 1;
+        }
+        &.target-out {
+            opacity: 0;
+        }
+    }
+}
