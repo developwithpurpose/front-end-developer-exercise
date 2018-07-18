@@ -1,0 +1,233 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+body {
+    background: #bbbfc2;
+}
+
+.centered-page {
+    background: #ffffff;
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+
+img.shadow {
+    position: absolute;
+}
+
+img.shadow-left {
+   left: -15px;
+}
+img.shadow-right{
+    right: -15px;
+}
+
+img.shadow-bottom {
+    bottom: -15px;
+}
+
+
+h1 {
+    position: absolute;
+    top:0;
+    right: 0;
+    margin: 70px 50px;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 32px;
+    font-weight: lighter;
+    width: 440px;
+    text-align: right;
+}
+
+h1 span.accented-header {
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: uppercase;
+    position: relative;
+    top: 3px;
+}
+
+ol {
+    position: relative;
+    margin-top: 60px;
+    min-height: 700px;
+    background: #ececee;
+}
+
+
+ol li {
+    width: 250px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    color: #9ba0a4;
+    font-size: 18px;
+    line-height: 60px;
+
+    text-align: right;
+
+
+
+}
+ol li a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #9ba0a4;
+}
+
+ol li a:after {
+    position: absolute;
+    content: " ";
+    display: block;
+    background: #fff;
+    height: 2px;
+    z-index: 2;
+    width: 260px;
+}
+
+ol li a img  {
+    position: relative;
+    top: 8px;
+    padding: 0 24px;
+}
+
+
+ol li a img.unselected {
+    display: inline;
+}
+
+ol li a img.selected {
+    display: none;
+}
+
+ol.nojs li:target a, ol li.active a  {
+    color: #36abe1;
+    font-weight: 600;
+}
+ol.nojs li:target a img.unselected, ol li.active a img.unselected {
+    display: none;
+}
+
+ol.nojs li:target img.selected, ol li.active img.selected {
+    display: inline;
+}
+
+
+
+
+section {
+    background: #fff;
+    text-align: left;
+    display: none;
+    position: absolute;
+    padding: 0 70px;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 100%;
+}
+
+section.bs1 {
+    display: block;
+}
+
+ol li section::before {
+    background: linear-gradient(to left, #d1d5d6 0%,#ebeced 100%);
+    content: " ";
+    width: 10px;
+    position: absolute;
+    height: 100%;
+    left: -10px;
+    display: block;
+}
+
+ol.nojs li:target section, ol li.active section  {
+    display: block;
+}
+
+section h3 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 30px;
+    color: #26abe1;
+    line-height: 20px;
+    font-weight: 600;
+    position: relative;
+    margin: 20px 90px;
+}
+
+section h3 img {
+    position: absolute;
+    left: -90px;
+    top: -20px;
+}
+
+section h3 i {
+    font-size: 30px;
+    color: #5c6366;
+    font-weight: 200;
+    font-size: 18px;
+    display: block;
+    margin: 8px 0;
+}
+
+section p {
+    font-family: "Helvetica", sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+    margin-bottom: 1em;
+    font-weight: normal;
+}
+
+section p.friend-text {
+    margin-top: 2em;
+}
