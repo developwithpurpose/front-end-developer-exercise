@@ -1,0 +1,132 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background: #bbbfc2;
+}
+#container{
+    width: 1040px;
+    margin: auto;
+    margin-top: 0px;
+    padding: 0px;
+}
+#wrapper{
+    width: 980px;
+    /* margin: auto; */
+    background: white;
+    display: inline-block;
+    vertical-align: top;
+    border: 0px;
+}
+#header{
+    width: 100%;
+    margin-bottom: 60px;
+}
+#nav{
+    display: inline-block;
+    background: linear-gradient(to right, #ebeced, #d1d5d6);
+    vertical-align: top;
+    /* height: 500px; */
+    font: 18px; 
+    padding: 0px;
+    border: 0px;
+    /* display: block;
+    float: left; */
+}
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+.button{
+    font-size: 18px;
+    width: 300px;
+    height: 60px;
+    padding-right: 24px;
+    
+    /* background-color: white; */
+    background: transparent;
+    border: 0px;
+    text-align: right;
+    font: 18px;
+    color: #9ba0a4;
+    line-height: 16px;
+    margin: 0px;
+}
+.buttonShadow{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+.btnIcon{
+    margin-right: 0px;
+    display: inline-block;
+    vertical-align: bottom;
+    height: 50%;
+    margin-left: 24px;
+}
+#main{
+    display: inline-block;
+    vertical-align: top;
+    width: 535px;
+    padding: 0px 70px;
+    border: 0px;
+    margin: 0px;
+    font-size: 13px;
+    color: #65685f;
+    /* background: blue; */
+    line-height: 18px;
+    /* display: block;
+    float: right; */
+}
+/* .details{
+    padding: 70px;
+    font-size: 13px;
+    color: #65685f;
+} */
+.leftShadow{
+    margin-right: -4px;
+    display: inline-block;
+    border: 0px;
+    padding: 0px;
+}
+.rightShadow{
+    margin-left: -5px;
+    display: inline-block;
+    vertical-align: top;
+    border: 0px;
+    padding: 0px;
+}
+.bottomShadow{
+    margin-top: -3px;
+    display: inline-block;
+    vertical-align: top;
+    border: 0px;
+    padding: 0px;
+}
+#bs1{
+    display: none;
+}
+#bs2{
+    display: none;
+}
+#bs3{
+    display: none;
+}
+#bs4{
+    display: none;
+}
+#bs5{
+    display: none;
+}
+#bs6{
+    display: none;
+}
+#bs7{
+    display: none;
+}
