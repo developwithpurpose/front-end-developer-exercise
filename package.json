@@ -11,5 +11,7 @@
   "devDependencies": {
     "http-server": "^0.8.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2"
+  }
 }

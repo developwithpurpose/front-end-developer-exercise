@@ -32,18 +32,24 @@
                 </div>
             </div>
 
-            <div class="row"> 
+            
+            <div class="row no-gutter"> 
+
+                <!-- NAV BAR -->
                 <div class="col navbar mt-0">
-                    <ul>
-                        <li>Baby Step 1 <img src="./assets/images/icons/individual/icons_small_bs1.png" class="navbs1"></li>
+                    <ul class="navbarbutton">
+                        <li id="babystep" data-stepNumber="1"><a href="#bs1content">Baby Step 1 <img src="./assets/images/icons/individual/icons_small_bs1.png" class="navbs1"></a></li>
                         <img src="./assets/images/shadow_left_nav.jpg">
+                        <li id="babystep" data-stepNumber="2"><a href="#bs2content">Baby Step 2 <img src="./assets/images/icons/individual/icons_small_bs2.png" class="navbs2"></a></li>
                     </ul>
                 </div>
 
-                <div id="col pgcopy">
+                <!--MAIN CONTENT WELL -->
+                <div class="col pgcopy">
                 
-                    <div class="sectiontitle"><a name="bs1content"></a>Baby Step 1
-                    $1,000 Emergency Fund</div>
+                    <div class="sectiontitle"><a name="bs1content"></a>
+                        <img src="./assets/images/headings/heading_bs1.png" alt="Baby Step 1
+                    $1,000 Emergency Fund"></div>
                     
                     An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.
                     
@@ -105,6 +111,11 @@
     
     </div>
 </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./assets/javascripts/app.js"></script> 
+
 
 </body>
 </html>

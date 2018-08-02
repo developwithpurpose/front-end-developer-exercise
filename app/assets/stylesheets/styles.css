@@ -1,12 +1,13 @@
 body {
     background-color: #bbbfc2;
-    width: 1050px;
+    width: 1010px;
     margin-top: 0px;
 }
 
 /*  PAGE EDGE AND MAIN CONTENT WELL  */
 .main {
     width: 980px;
+    background: #fff;
 }
 .edgeshadow {
     width: 15px;
@@ -67,8 +68,10 @@ h2 {
     color: #36abe1;
     line-height: 20px;
 }
-#pgcopy{
+.pgcopy{
     height: 220px;
-    margin: 60px, 70px, 40px, 70px;
+    width: 570px;
+    margin: 60px 70px 40px 70px;
+    overflow: hidden;
 }
 
