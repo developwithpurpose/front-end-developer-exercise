@@ -1,0 +1,74 @@
+body {
+    background-color: #bbbfc2;
+    width: 1050px;
+    margin-top: 0px;
+}
+
+/*  PAGE EDGE AND MAIN CONTENT WELL  */
+.main {
+    width: 980px;
+}
+.edgeshadow {
+    width: 15px;
+}
+
+
+/*  PAGE HEADER  */
+.pgheader {
+    text-align: right;
+    background-image: url("../images/header.jpg");
+    width: 980px;
+    height: 276px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color:#fff;
+    line-height: 48px;
+    padding-right: 70px;
+  
+}
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    color:#fff;
+    margin-top: 50px;
+    padding-right: 70px;
+    
+}
+
+/*  NAVBAR  */
+.navbar {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    line-height: 60px;
+}
+.navbar a:active {
+    color: #36abe1;
+    
+}
+.navbar a:link {
+    color: #96a0a4;
+}
+.navbarbutton {
+    background: linear-gradient(#ebeced,#d1d5d6);
+}
+
+
+/*  CONTENT  */
+.sectiontitle {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #36abe1;
+    line-height: 20px;
+}
+#pgcopy{
+    height: 220px;
+    margin: 60px, 70px, 40px, 70px;
+}
+
