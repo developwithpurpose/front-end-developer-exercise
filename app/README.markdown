@@ -1,11 +1,4 @@
-Document your submission here (optional, but recommended)
-Copy repo 
-Install Node.js to use as the local server
-    npm install
-    npm start 
-To view, open browser and start the server by using the URL: localhost:8080
-
-#Front End Developer Exercise
+# Front End Developer Exercise
 
 A forked copy of the coding challenge worked to the best of my abilities for the time alloted, according to the information received.
 
