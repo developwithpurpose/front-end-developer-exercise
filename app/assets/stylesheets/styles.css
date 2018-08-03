@@ -1,12 +1,17 @@
 body {
     background-color: #bbbfc2;
-    width: 1010px;
     margin-top: 0px;
 }
 
 /*  PAGE EDGE AND MAIN CONTENT WELL  */
+.container {
+    max-width: 1010px;
+    margin:auto;
+    padding: 0px;
+}
 .main {
     width: 980px;
+    height: 724px;
     background: #fff;
 }
 .edgeshadow {
@@ -18,7 +23,6 @@ body {
 .pgheader {
     text-align: right;
     background-image: url("../images/header.jpg");
-    width: 980px;
     height: 276px;
     margin-top: 0px;
     padding-top: 0px;
@@ -47,18 +51,29 @@ h2 {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     line-height: 60px;
+    width: 300px;
+    margin-top: 60px;
 }
-.navbar a:active {
+.navbar  {
     color: #36abe1;
-    
 }
 .navbar a:link {
     color: #96a0a4;
 }
-.navbarbutton {
-    background: linear-gradient(#ebeced,#d1d5d6);
+.navbarbutton { 
+    background-color: #ebeced;  
 }
-
+ul.navbarbutton {
+    list-style-type: none;
+}
+li.navbarbutton {
+    border-bottom: 2px solid white;
+    /*border-right: linear-gradient(#ebeced,#d1d5d6);*/
+}
+img.navbs {
+    margin-right: 24px;
+    margin-left: 24px;
+}
 
 /*  CONTENT  */
 .sectiontitle {
@@ -68,10 +83,24 @@ h2 {
     color: #36abe1;
     line-height: 20px;
 }
-.pgcopy{
-    height: 220px;
-    width: 570px;
+.maincontent {
+    height: 648px;
+    
     margin: 60px 70px 40px 70px;
+    
+}
+.babystepcopy {
+    height: 300px;
     overflow: hidden;
 }
+p {
+    font-family: 'Helvetica', sans-serif;
+    font-size:13px;
+    color: #65686f;
+    line-height: 18px;
+    padding-bottom: 100px;
+}
 
+#friends {
+    padding-top:40px;
+}
