@@ -1,0 +1,116 @@
+﻿body {
+    background-color: #bbbfc2;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    margin:15px 0 5px 0;
+    color: #36abe1;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 20px;
+}
+
+h2 {
+    margin: 0;
+    color: #5c6366;
+    font-weight: 300;
+    font-size: 18px;
+    line-height:20px;
+}
+
+a:active, a:visited, a:hover, a: {
+    text-decoration: none;
+}
+
+header{
+    margin-bottom:60px;
+}
+
+main {
+    width: 980px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+article {
+    float: left;
+    width: 580px;
+    padding: 0 70px;
+}
+
+#contentContainer {
+    width: 980px;
+}
+
+nav {
+    float:left;
+}
+
+nav ul {
+    margin: 0;
+    padding:0;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    font-weight: 400;
+    font-size: 18px;
+    color: #9ba0a4;
+    line-height: 60px;
+    text-decoration: none;
+    background: #ebeced;
+    background: linear-gradient(to right, #ebeced 0%,#ebeced 87%,#d1d5d6 100%);
+    width: 180px;
+    padding-left: 80px;
+    height:60px;
+    display:block;
+    border-bottom: solid 1px #fff;
+}
+
+nav li a img {
+    position: relative;
+    top: 7px;
+    left: 35px;
+}
+
+#listBottom {
+    background: #ebeced;
+    background: linear-gradient(to right, #ebeced 0%,#ebeced 87%,#d1d5d6 100%);
+    width: 260px;
+    height: 150px;
+}
+
+.babyStep{
+    margin-bottom:60px;
+}
+
+.babyStep .icon {
+    width:77px;
+    height:65px;
+    float:left;
+    margin-right:24px;
+}
+
+.babyStep .headerText{
+    float:left;
+    height:65px;
+}
+
+.babyStep .babyStepText, .babyStep .friends {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:13px;
+    color:#65686f;
+}
+
+.babyStep .friends a {
+    color:#6fbee7;
+    text-decoration:none;
+}
+
+.clearBoth{
+    clear:both;
+}
