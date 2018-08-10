@@ -63,11 +63,14 @@ nav li a {
     line-height: 60px;
     text-decoration: none;
     background: #ebeced;
+    background: -webkit-gradient(linear, left top, right top, from(#ebeced),color-stop(87%, #ebeced),to(#d1d5d6));
+    background: -webkit-linear-gradient(left, #ebeced 0%,#ebeced 87%,#d1d5d6 100%);
+    background: -o-linear-gradient(left, #ebeced 0%,#ebeced 87%,#d1d5d6 100%);
     background: linear-gradient(to right, #ebeced 0%,#ebeced 87%,#d1d5d6 100%);
     width: 180px;
     padding-left: 80px;
-    height:60px;
-    display:block;
+    height: 60px;
+    display: block;
     border-bottom: solid 1px #fff;
 }
 
