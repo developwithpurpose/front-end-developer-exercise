@@ -1,0 +1,42 @@
+.content {
+  padding: 0 70px 0 70px;
+  width: 680px;
+  float: left;
+
+  h1 {
+    line-height: 20px;
+    font-size: 30px;
+    color: $primary-blue;
+    font-weight: 800;
+  }
+
+  h2 {
+    line-height: 20px;
+    font-size: 18px;
+    color: $secondary-grey;
+    font-weight: 400;
+  }
+}
+
+.heading-wrapper {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.heading {
+  margin-left: 10px;
+}
+
+.baby-steps {
+  position: absolute;
+  max-width: 535px;
+  transition: opacity 0.9s cubic-bezier(0.42, 0, 0.34, 1.01);
+  opacity: 0;
+}
+
+.show {
+  display: block !important;
+  z-index: 1;
+  opacity: 1;
+}

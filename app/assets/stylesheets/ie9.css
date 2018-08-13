@@ -1,0 +1,28 @@
+.wrapper,
+.shadow-left,
+.shadow-right {
+  float: left;
+}
+
+.aside {
+  background: #ebeced url('../images/shadow_left_nav.jpg') repeat-y;
+  float: left;
+  height: 100%;
+}
+
+.heading-wrapper > img {
+  float: left;
+}
+
+.heading {
+  float: left;
+  margin-bottom: 24px;
+}
+
+.heading-wrapper + p {
+  clear: both;
+}
+
+.clear {
+  clear: both;
+}

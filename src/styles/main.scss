@@ -1,0 +1,40 @@
+@import 'variables.scss';
+@import 'reset.scss';
+
+a {
+  color: $secondary-blue;
+
+  &:hover {
+    color: $primary-blue;
+  }
+}
+
+.site {
+  display: flex;
+  width: 1010px;
+  margin: 0 auto;
+}
+
+.shaddow-bottom {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 980px;
+  background-color: #fff;
+  line-height: 18px;
+  padding: 0;
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.main {
+  height: 680px;
+  display: flex;
+}
+
+@import 'content.scss';
+@import 'aside.scss';
