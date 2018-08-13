@@ -1,0 +1,106 @@
+@mixin icon-hover-after {
+  &[for*='1']:after {
+    content: url('../images/icons/individual/icons_small_bs1_blue.png');
+  }
+
+  &[for*='2']:after {
+    content: url('../images/icons/individual/icons_small_bs2_blue.png');
+  }
+
+  &[for*='3']:after {
+    content: url('../images/icons/individual/icons_small_bs3_blue.png');
+  }
+
+  &[for*='4']:after {
+    content: url('../images/icons/individual/icons_small_bs4_blue.png');
+  }
+
+  &[for*='5']:after {
+    content: url('../images/icons/individual/icons_small_bs5_blue.png');
+  }
+
+  &[for*='6']:after {
+    content: url('../images/icons/individual/icons_small_bs6_blue.png');
+  }
+
+  &[for*='7']:after {
+    content: url('../images/icons/individual/icons_small_bs7_blue.png');
+  }
+}
+
+.aside {
+  background: $aside-grey;
+  background: linear-gradient(to right, $aside-grey 95%, $aside-grey2);
+  width: 300px;
+
+  input {
+    display: none;
+  }
+
+  label {
+    display: block;
+    font-family: $secondary-font;
+    font-size: 18px;
+    line-height: 60px;
+    border-bottom: 1px solid #fff;
+    padding-left: 126px;
+    color: #9ba0a4;
+
+    &[for*='1']:after {
+      content: url('../images/icons/individual/icons_small_bs1.png');
+      margin: 8px 0 0 30px;
+      position: absolute;
+    }
+
+    &[for*='2']:after {
+      content: url('../images/icons/individual/icons_small_bs2.png');
+      margin: 8px 0 0 30px;
+      position: absolute;
+    }
+
+    &[for*='3']:after {
+      content: url('../images/icons/individual/icons_small_bs3.png');
+      margin: 8px 0 0 30px;
+      position: absolute;
+    }
+
+    &[for*='4']:after {
+      content: url('../images/icons/individual/icons_small_bs4.png');
+      margin: 8px 0 0 30px;
+      position: absolute;
+    }
+
+    &[for*='5']:after {
+      content: url('../images/icons/individual/icons_small_bs5.png');
+      margin: 8px 0 0 30px;
+      position: absolute;
+    }
+
+    &[for*='6']:after {
+      content: url('../images/icons/individual/icons_small_bs6.png');
+      margin: 8px 0 0 30px;
+      position: absolute;
+    }
+
+    &[for*='7']:after {
+      content: url('../images/icons/individual/icons_small_bs7.png');
+      margin: 8px 0 0 30px;
+      position: absolute;
+    }
+
+    &:hover {
+      background-color: #fff;
+      color: $primary-blue;
+      cursor: pointer;
+
+      @include icon-hover-after();
+    }
+  }
+
+  input:checked + label {
+    background-color: #fff;
+    color: $primary-blue;
+
+    @include icon-hover-after();
+  }
+}

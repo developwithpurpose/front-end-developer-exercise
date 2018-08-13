@@ -1,0 +1,28 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: $primary-font;
+  color: $primary-grey;
+  background-color: #bbbfc2;
+}
+
+h1,
+h2,
+h3 {
+  margin: 6px;
+  padding: 0;
+  font-family: $secondary-font;
+}
