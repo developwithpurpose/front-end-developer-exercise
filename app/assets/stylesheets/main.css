@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body {
+  background-color: #bbbfc2;   
+}
+.container {
+  text-align: center;
+  max-width: 980px;
+  width: auto;
+  background: #FFF;
+  padding: 0;
+  box-shadow: 1px 1px 20px 0 #808080, -1px 1px 20px 0 #81858f;
+  margin-bottom: 50px;
+}
+.main-content {
+  margin-top: 60px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.baby-step-anchor-tags {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px; 
+}
+.baby-step-anchor-tags:hover {
+  color: #636769;
+}
+.navbar {
+  background: #bbbfc2;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+.navbar ul {
+  background: rgb(235,236,237);
+  background: linear-gradient(90deg, rgba(235,236,237,1) 94%, rgba(209,213,214,1) 100%);
+}
+.nav > li > a {
+  padding: 0;
+  border-radius: 0;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:active, .nav-pills>li.active>a::after, .nav-pills>li.active>a::before, .nav-pills>li.active>a:visited, .nav-pills>li.active>a:link {
+  color: #36abe1;
+  background-color: #fff;
+  border: #FFF;
+  font-weight: 600;
+}
+.baby-step-anchor-tags img {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.baby-step-desc {
+  text-align: left;
+  background: #fff;
+  
+}
+.tab-pane {
+  margin: 0 55px;
+  color: #65686f;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+.tab-pane img {
+  margin-bottom: 24px;
+}
+.tab-pane p {
+  line-height: 18px;
+}
+#other-users a {
+  color:#6fbee7;
+}
+#other-users {
+  margin-top: 30px;  
+}
