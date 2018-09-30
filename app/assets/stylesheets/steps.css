@@ -1,0 +1,150 @@
+/*  Font import  */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Sans+Pro:400,600');
+
+/*  Body color  */
+body {
+    background-color: #bbbfc2;
+}
+
+/*  Content Wrap  */
+#wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/*  Header Image  */
+.jumbotron {
+    background-image: url(../images/header_text.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 60px;
+    padding-top: 50px;
+    background-color: #bbbfc2;
+    border-radius: 0rem;
+    min-height: 276px;
+}
+
+/*  Styling for Baby-Step List Item Menu  */
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    padding-left: 7rem;
+    margin-bottom: -1px;
+    background: linear-gradient(to right, #ebeced 0%, #d1d5d6 100%);
+    border: 1px solid rgba(0, 0, 0, .125);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: #36abe1;
+    background: #fff;
+    border-color: rgba(255, 255, 255, 0);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.list-group-item img {
+    padding-left: 3rem;
+}
+
+p {
+    margin-left: 70px;
+    margin-right: 70px;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+p img {
+    margin-bottom: 24px;
+}
+
+/*  Continual floating effect   */
+
+.swing {
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+    -webkit-animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
+}
+
+@-webkit-keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        -webkit-transform: translatey(-20px);
+        transform: translatey(-20px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        -webkit-transform: translatey(-20px);
+        transform: translatey(-20px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+}
+
+.fadeIn {
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera  */
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera */
+    animation: fadein 2s;
+}
+
+/*  My Friends Styles  */
+
+.friend-name {
+    color: #6fbee7 !important;
+    font-weight: 600;
+}
+
+.myFriends {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #65686f;
+    margin-top: 40px;
+    font-size: 14px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
