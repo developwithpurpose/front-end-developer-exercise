@@ -36,7 +36,7 @@ Returns - string: friends full name in a anchor tag
 
 generateFriendString
 ```
-Arguments - friendsArray: array of friend objects, currentSte: integer of current baby step
+Arguments - friendsArray: array of friend objects, currentStep: integer of current baby step
 Returns - string: string telling which friends are on that baby step
 ```
 
