@@ -49,6 +49,10 @@ p {
     line-height: 18px;
 }
 
+a {
+    color: #6fbee7;
+}
+
 /* layout */
 #main-header {
     margin-bottom: 60px;

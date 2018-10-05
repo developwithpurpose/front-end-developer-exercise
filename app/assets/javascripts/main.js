@@ -5,7 +5,7 @@ const getFriends = () => {
 }
 
 const getFriendName = friend => {
-    return `${friend.firstName} ${friend.lastName}`
+    return `<a>${friend.firstName} ${friend.lastName}</a>`
 }
 
 const generateFriendString = (friendsArray, currentStep) => {
