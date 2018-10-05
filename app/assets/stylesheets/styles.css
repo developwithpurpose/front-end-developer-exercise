@@ -85,6 +85,10 @@ a {
     color: #9ba0a4;
 }
 
+.nav-item a.is-active {
+    color: #36abe1;
+}
+
 .flex-container {
     display: flex;
     height: calc(95vh - 280px - 60px);

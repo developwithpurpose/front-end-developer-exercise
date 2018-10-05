@@ -36,7 +36,17 @@ const appendFriendInfo = (string, step) => {
     )
 }
 
+const onNavClick = evt => {
+    const activeStep = evt.target.id.split("-")[2]
+    const lastActiveStep = $(".is-active").attr("id").split("-")[2]
+
+    $(".is-active").removeClass("is-active").children("img").attr("src", `assets/images/icons/individual/icons_small_bs${lastActiveStep}.png`)
+    $(`#${evt.target.id}`).addClass("is-active").children("img").attr("src", `assets/images/icons/individual/icons_small_bs${activeStep}_blue.png`)
+
+}
+
 $(document).ready(() => {
+
     getFriends()
         .then(response => {
             const friends = response.friends
@@ -44,4 +54,7 @@ $(document).ready(() => {
                 appendFriendInfo(generateFriendString(friends, i), i)
             }
         })
+
+    $(".nav-link").click(onNavClick)
+
 })
