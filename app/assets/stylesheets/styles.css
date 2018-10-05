@@ -1,7 +1,12 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
+
 /* master styles */
 body {
     background-color: #bbbfc2;
     margin: 0;
+    height: 100vh;
+    font-family: 'Source Sans Pro';
 }
 
 #container {
@@ -15,35 +20,83 @@ body {
 h1 {
     font-size: 50px;
     font-weight: bold;
+    font-family: 'Open Sans';
 }
 
 h2 {
     font-size: 32px;
+    font-family: 'Open Sans';
 }
 
 h3 {
     font-size: 30px;
+    margin-bottom: 0;
+    color: #36abe1;
+    font-weight: bold;
 }
 
 h5 {
     font-size: 18px;
+    margin: 0 0 24px 0;
+    font-weight: lighter;
+    color: #5c6366;
 }
 
 p {
+    font-family: Helvetica;
     font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
 }
 
 /* layout */
+#main-header {
+    margin-bottom: 60px;
+}
+
+#main-nav {
+    width: 100%;
+    background-color: #ebeced;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    background-color: #ebeced;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 2px solid white;
+    text-align: right;
+    padding-right: 24px;
+}
+
+.nav-icon {
+    vertical-align: middle;
+    margin-left: 30px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #9ba0a4;
+}
+
 .flex-container {
     display: flex;
+    height: calc(95vh - 280px - 60px);
 }
 
 #main-content {
-    height: 60vh;
     overflow: hidden;
     scroll-behavior: smooth;
+    padding: 0 70px;
 }
 
 .baby-step {
     height: 60vh;
+}
+
+.card-image {
+    float: left;
+    margin-right: 1rem;
 }
