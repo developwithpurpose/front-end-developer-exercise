@@ -47,6 +47,8 @@ const onNavClick = evt => {
 
 $(document).ready(() => {
 
+    $("#nav-link-1").addClass("is-active").children("img").attr("src", "assets/images/icons/individual/icons_small_bs1_blue.png")
+
     getFriends()
         .then(response => {
             const friends = response.friends

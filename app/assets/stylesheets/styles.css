@@ -31,6 +31,7 @@ h2 {
 h3 {
     font-size: 30px;
     margin-bottom: 0;
+    margin-top: 0;
     color: #36abe1;
     font-weight: bold;
 }
@@ -101,7 +102,7 @@ a {
 }
 
 .baby-step {
-    height: 60vh;
+    height: calc(95vh - 280px - 60px);
 }
 
 .card-image {
