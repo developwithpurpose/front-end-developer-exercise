@@ -1,0 +1,36 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart front-end-developer-exercise@1.0.0
+6 info start front-end-developer-exercise@1.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info front-end-developer-exercise@1.0.0 Failed to exec start script
+9 verbose stack Error: front-end-developer-exercise@1.0.0 start: `http-server ./app -d false`
+9 verbose stack spawn ENOENT
+9 verbose stack     at ChildProcess.<anonymous> (/usr/local/Cellar/node/0.10.0/lib/node_modules/npm/lib/utils/spawn.js:17:16)
+9 verbose stack     at ChildProcess.emit (events.js:110:17)
+9 verbose stack     at maybeClose (child_process.js:1015:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+10 verbose pkgid front-end-developer-exercise@1.0.0
+11 verbose cwd /Users/silvabook/Desktop/front-end-developer-exercise-master
+12 error Darwin 17.7.0
+13 error argv "node" "/usr/local/bin/npm" "start"
+14 error node v0.12.7
+15 error npm  v2.11.3
+16 error file sh
+17 error code ELIFECYCLE
+18 error errno ENOENT
+19 error syscall spawn
+20 error front-end-developer-exercise@1.0.0 start: `http-server ./app -d false`
+20 error spawn ENOENT
+21 error Failed at the front-end-developer-exercise@1.0.0 start script 'http-server ./app -d false'.
+21 error This is most likely a problem with the front-end-developer-exercise package,
+21 error not with npm itself.
+21 error Tell the author that this fails on your system:
+21 error     http-server ./app -d false
+21 error You can get their info via:
+21 error     npm owner ls front-end-developer-exercise
+21 error There is likely additional logging output above.
+22 verbose exit [ 1, true ]

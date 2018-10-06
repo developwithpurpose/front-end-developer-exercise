@@ -1,0 +1,14 @@
+{
+  "name": "front-end-developer-exercise",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
+  },
+  "scripts": {
+    "start": "http-server ./app -d false"
+  },
+  "devDependencies": {
+    "http-server": "^0.8.0"
+  }
+}
