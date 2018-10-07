@@ -1,3 +1,3 @@
-<h1>Read Me</h1<
+# Front-end Developer Exercise
 
-<p>Thanks for the challenge here. I've spent so much time working on agency sites and with Wordpress it was fun and interesting to do a challenge like this</p>
+Test attempt by Adam Silverman
