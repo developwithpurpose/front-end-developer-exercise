@@ -214,14 +214,11 @@ body {
 }
 
 .scroll-area {
-	height: 300px;
-	overflow-y: hidden;
 	position: relative;
 }
 
 .step-box {
 	padding-bottom: rem(40);
-	height: 300px;
 	
 	&__head {
 		margin-bottom: rem(24);

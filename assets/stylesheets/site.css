@@ -264,13 +264,10 @@ body {
     line-height: 1.125rem; }
 
 .scroll-area {
-  height: 300px;
-  overflow-y: hidden;
   position: relative; }
 
 .step-box {
-  padding-bottom: 2.5rem;
-  height: 300px; }
+  padding-bottom: 2.5rem; }
   .step-box__head {
     margin-bottom: 1.5rem;
     display: -ms-flexbox;

@@ -23,6 +23,12 @@ jQuery(document).ready(function($) {
 
 	});
 
+	$('.step-box').css('height', '300px');
+	$('.scroll-area').css({
+		'overflow': 'hidden',
+		'height' : '300px',
+	});
+
 	// Ajax Request
 
 	$.ajax({
@@ -69,8 +75,6 @@ jQuery(document).ready(function($) {
 					default:
 				}
 			});
-
-			var steps = new Array(1,2,3,4,5,6,7);
 
 			if(step1_people.length > 0) {
 				var step1_count = step1_people.length;
