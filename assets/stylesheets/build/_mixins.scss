@@ -1,0 +1,40 @@
+/***********************************************************************************/
+/* Basic Mixins */
+/***********************************************************************************/
+
+@mixin clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020"; 
+        display: block; 
+        height: 0; 
+        overflow: hidden; 
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Ems and Rems
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+@mixin open-sans {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}
+
+@mixin source-sans {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}

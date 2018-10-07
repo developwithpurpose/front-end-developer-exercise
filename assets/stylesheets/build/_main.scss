@@ -1,0 +1,272 @@
+/***********************************************************************************/
+/* All Styles for One-Pager */
+/***********************************************************************************/
+
+// _main.scss
+
+/***********************************************************************************/
+/* General Body and Structure */
+/***********************************************************************************/
+
+body {
+	font-size: 16px;
+	line-height: 1.25em;
+	font-family: Helvetica, Verdana, sans-serif;
+	color: $body;
+	background-color: $bg;
+}
+
+.outer-page-wrap {
+	max-width: 980px;
+	margin: auto;
+	box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.4);
+}
+
+
+/***********************************************************************************/
+/* Hero */
+/***********************************************************************************/
+
+.hero {
+	width: 100%;
+	height: 276px;
+	background: url('../images/header.jpg') 0 0 no-repeat;
+
+	&__content {
+		padding-top: rem(50);
+		padding-right: rem(70);
+	}
+
+	h1, h2 {
+		color: $white;
+		text-align: right;
+	}
+
+	h1 {
+		@include open-sans;
+		font-size: rem(50);
+		font-weight: 700;
+		line-height: rem(48);
+		text-transform: uppercase;
+	}
+
+	h2 {
+		@include open-sans;
+		font-size: rem(32);
+		line-height: rem(32);
+		margin-bottom: rem(15);
+	}
+}
+
+/***********************************************************************************/
+/* Content Area */
+/***********************************************************************************/
+
+.main-content {
+
+	.container {
+		display: flex;
+		background-color: $white;
+		padding-top: rem(60);
+		min-height: 675px;
+	}
+
+}
+
+// Menu
+
+.menu {
+	display: block;
+	float: left;
+	width: 300px;
+	background: url('../images/shadow_left_nav.jpg') 0 0 repeat-y;
+	position: relative;
+	
+	.bar {
+		content: '';
+		display: block;
+		height: 60px;
+		width: 100%;
+		background-color: $white;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		transition: top 0.4s ease-in-out;
+	}
+
+	li {
+		display: block;
+		@include source-sans;
+		font-size: rem(18);
+		line-height: rem(60);
+
+		&.active {
+
+			a {
+				color: $blue;
+			}
+		}
+	}
+
+	a {
+		display: block;
+		color: $grey;
+		text-decoration: none;
+		padding-right: rem(24);
+		text-align: right;
+		border-bottom: 2px solid $white;
+		transition: color 0.25s ease-in-out;
+		position: relative;
+		z-index: 2;
+		width: 100%;
+
+		.icon {
+			width: 30px;
+			height: 25px;
+			display: inline-block;
+			margin-left: rem(30);
+			background: url('../images/icons/sprites/icons_small.png') 0 0 no-repeat;
+			position: relative;
+			top: 7px;
+			
+			&--1 {
+				background-position: 0 0;
+			}
+
+			&--2 {
+				background-position: 0 -25px;
+			}
+
+			&--3 {
+				background-position: 0 -50px;
+			}
+
+			&--4 {
+				background-position: 0 -75px;
+			}
+
+			&--5 {
+				background-position: 0 -100px;
+			}
+
+			&--6 {
+				background-position: 0 -125px;
+			}
+
+			&--7 {
+				background-position: 0 -150px;
+			}
+		}
+
+		&.active {
+			color: $blue;
+		
+			.icon--1 {
+				background-position: 0 -175px;
+			}
+			
+			.icon--2 {
+				background-position: 0 -200px;
+			}
+
+			.icon--3 {
+				background-position: 0 -225px;
+			}
+
+			.icon--4 {
+				background-position: 0 -250px;
+			}
+
+			.icon--5 {
+				background-position: 0 -275px;
+			}
+
+			.icon--6 {
+				background-position: 0 -300px;
+			}
+
+			.icon--7 {
+				background-position: 0 -325px;
+			}
+			
+		}
+	}
+}
+
+// Content Area
+
+.content-area {
+	background-color: $white;
+	display: block;
+	float: left;
+	width: 680px;
+	padding-left: rem(70);
+	padding-right: rem(70);
+	position: relative;
+
+	p {
+		color: $body;
+		margin: rem(20) 0;
+		font-size: rem(13);
+		line-height: rem(18);
+	}
+}
+
+.scroll-area {
+	height: 300px;
+	overflow-y: hidden;
+	position: relative;
+}
+
+.step-box {
+	padding-bottom: rem(40);
+	height: 300px;
+	
+	&__head {
+		margin-bottom: rem(24);
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+
+		h3 {
+			color: $blue;
+			@include source-sans;
+			font-size: rem(30);
+			font-weight: 600;
+			line-height: rem(20);
+		}
+
+		h4 {
+			@include source-sans;
+			font-weight: 300;
+			color: $light-grey;
+			font-size: rem(18);
+			line-height: rem(20);
+			margin-top: rem(10);
+		}
+
+		&-image {
+			margin-right: rem(20);
+		}
+	}
+
+	p:first-child {
+		margin-top: 0;
+	}
+
+	&__friends {
+		color: $body;
+		margin: rem(20) 0;
+		font-size: rem(13);
+		line-height: rem(18);
+
+		span {
+			color: $blue;
+			font-weight: 700;
+		}
+	}
+
+}
