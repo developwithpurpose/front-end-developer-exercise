@@ -1,0 +1,133 @@
+body {
+	background-color: #bbbfc2;
+	margin: 0;
+	padding: 0 0 3em 0;
+}
+
+main {
+	background-color: #fff;
+	display: block;
+	width: 980px;
+	margin: 0 auto;
+	box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+}
+
+header {
+	height: 276px;
+	width: 980px;
+	display: block;
+	background-image: url('../images/header_text.jpg');
+	margin-bottom: 60px;
+}
+
+#nav {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	width: 300px;
+	height: 617px;
+	display: block;
+	background-color: #e6e7ea;
+	font-family: "Source Sans Pro";
+	font-size: 18px;
+	color: #9ba0a4;
+	opacity: 0;
+	box-shadow: -6em 0 2em -6em rgba(0, 0, 0, .2) inset;
+}
+
+#nav li {
+	cursor: pointer;
+	list-style-type none;
+	float: right;
+	text-align: right;
+	display: block;
+	margin: 0;
+	padding: 0 24px 0 0;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px solid #fff;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-shadow: -200px 0 transparent inset;
+	transition: box-shadow .2s;
+}
+
+#nav span {
+	width: 30px;
+	height: 25px;
+	float: right;
+	margin: 17px 0 0 30px;
+	background-image: url('../images/icons/sprites/icons_small.png');
+	display: block;
+}
+
+#nav li.selected {
+	box-shadow: -300px 0 #fff inset;
+	color: #36abe1;
+	font-weight: 600;
+}
+
+#section-container {
+	position: relative;
+	width: 620px;
+	margin-left: 330px;
+}
+
+.javascript-on #section-container {
+	height: 617px;
+	overflow: hidden;
+}
+
+section {
+	background-color: #fff;
+	left: 0;
+	width: 540px;
+	margin: 0 0 20px 0;
+	padding: 0 40px;
+	transition: left 1s;
+}
+
+.hidden {
+	left: -650px;
+}
+
+.javascript-on section {
+	position: absolute;
+	height: 617px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+
+h3 {
+	display: block;
+	margin: 0;
+	color: transparent;
+	width: 436px;
+	height: 65px;
+	margin-bottom: 18px;
+	background-image: url('../images/headings/headings.png');
+}
+
+p {
+	font-family: helvetica;
+	font-size: 13px;
+	line-height: 18px;
+	color: #65686f;
+	margin: 0 0 18px 0;
+	padding: 0;
+}
+
+span.friends {
+	display: block;
+	margin: 32px 0;
+	font-family: helvetica;
+	font-size: 13px;
+	color: #65686f;
+}
+
+a {
+	color: #6fbee7;
+	text-decoration: none;
+}
