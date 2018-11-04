@@ -39,6 +39,7 @@ function _getBabyStepContent(number) {
         babyStepData = jsonResponse.seven;
     }
     console.log("data", babyStepData);
+    document.getElementById("content-image").src="assets/images/icons/individual/icons_large_bs" + number + "_blue.png";
     document.getElementById("content-header-title").innerHTML = "Baby Step " + number;
     document.getElementById("content-subtitle").innerHTML = babyStepData.name;
     document.getElementById("content-main").innerHTML = babyStepData.content;
