@@ -44,7 +44,6 @@ function _getBabyStepContent(number) {
     document.getElementById("content-subtitle").innerHTML = babyStepData.name;
     document.getElementById("content-main").innerHTML = babyStepData.content;
   }
-
   request.send();
 }
 
@@ -64,7 +63,6 @@ function _getFriends(number) {
     }
     document.getElementById("content-social").innerHTML = _compileSocialString(similarFriends, number);
   }
-
   request.send();
 }
 
