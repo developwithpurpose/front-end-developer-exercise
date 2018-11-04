@@ -1,0 +1,184 @@
+html, body, .page-wrapper, .content {
+  height: 100%;
+}
+body {
+  background-color: #bbbfc2;
+  margin: 0;
+}
+.page-wrapper {
+  margin: 0 auto;
+  width: 980px;
+}
+
+/***************************************************
+| Hero                                             |
+***************************************************/
+.hero {
+  background-image: url(../images/header.jpg);
+  height: 276px;
+}
+.hero-header {
+  color: #fff;
+  text-align: right;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  top: 50px;
+  right: 70px;
+  width: 550px;
+  float: right;
+}
+.hero-header-pretitle {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.hero-header-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+
+/***************************************************
+| Content                                          |
+***************************************************/
+.content {
+  padding-top: 60px;
+  background-color: #fff;
+  height: 100%;
+}
+
+/***************************************************
+| Content - Navigation                             |
+***************************************************/
+.content-navigation {
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 60px;
+  width: 280px;
+  color: #9ba0a4;
+  float: left;
+  height: 100%;
+  background: linear-gradient(to right, #ebeced, #d1d5d6);
+}
+.content-navigation-item {
+  background: linear-gradient(to right, #ebeced, #d1d5d6 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  margin-bottom: 1px;
+  text-align: right;
+  transition: all .5s ease-out;
+}
+.content-navigation-image {
+  margin: 16px 24px 0 24px;
+  float: right;
+  width: 30px;
+  height: 25px;
+}
+.content-navigation-item:hover {
+  cursor: pointer;
+}
+
+.content-navigation-item--active {
+  color: #36abe1;
+  font-weight: 600;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+}
+
+/***************************************************
+| Content - Navigation - Images                    |
+***************************************************/
+.step-1 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 0px;
+}
+.step-2 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -25px;
+}
+.step-3 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -50px;
+}
+.step-4 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -75px;
+}
+.step-5 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -100px;
+}
+.step-6 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -125px;
+}
+.step-7 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -150px;
+}
+
+.content-navigation-item--active.step-1 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -175px;
+}
+.content-navigation-item--active.step-2 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -200px;
+}
+.content-navigation-item--active.step-3 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -225px;
+}
+.content-navigation-item--active.step-4 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -250px;
+}
+.content-navigation-item--active.step-5 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -275px;
+}
+.content-navigation-item--active.step-6 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -300px;
+}
+.content-navigation-item--active.step-7 > .content-navigation-image {
+  background: url(../images/icons/sprites/icons_small.png) 0 -325px;
+}
+
+/***************************************************
+| Content - Body                                   |
+***************************************************/
+.content-body {
+  width: 560px; 
+  float: right;
+  padding: 0 70px;
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+  color: #65686f;
+}
+.content-header {
+  font-family: 'Source Sans Pro';
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+.content-header-image {
+  width: 77px;
+  height: 65px;
+  float: left;
+  padding: 0 20px 0 0;
+}
+.content-header-title {
+  font-weight: 600;
+  font-size: 30px;
+  color: #36abe1;
+  float: left;
+  width: 463px;
+  margin-top: 10px;
+}
+.content-header-subtitle {
+  font-weight: 300;
+  font-size: 18px;
+  color: #5c6366;
+  line-height: 25px;
+  float: left;
+}
+.content-main {
+  line-height: 18px;
+}
+.content-social {
+  margin-top: 40px;
+}
+.content-social--name {
+  color: #6fbee7;
+}
+.clear {
+  clear: both;
+}
