@@ -35,3 +35,6 @@ CSS uses BEM naming conventions and has a max of two identifiers per style objec
 ### Content - Navigation
 * Animation uses transition ease-out and the width of the background is 200%. The gradient is on the left half and white background is on the right
 * Navigation Images use the sprites so there is only a single network call
+
+## Remaining Work
+* Webpage doesn't work without Javascript
