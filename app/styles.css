@@ -1,0 +1,283 @@
+body {
+    background-color: #BBBFC2;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#main-container {
+    margin: 0 auto;
+    width: 980px;
+    box-shadow: 0px 0px 10px #A4A8AB;
+    position: relative;
+}
+
+#left-shadow {
+    height: 724px;
+    width: 15px;
+    background-image: url(assets/images/shadow_left.jpg);
+    top: 0;
+    left: -15px;
+    position: absolute;
+}
+
+#right-shadow {
+    height: 724px;
+    width: 15px;
+    background-image: url(assets/images/shadow_right.jpg);
+    top: 0;
+    right: -15px;
+    position: absolute;
+}
+
+#bottom-shadow {
+    height: 30px;
+    width: 980px;
+    background-image: url(assets/images/shadow_bottom.jpg);
+    left: 0;
+    bottom: -30px;
+    position: absolute;
+}
+
+#content {
+    padding-top: 60px;
+    background-color: white;
+}
+
+#header img {
+    display: block;
+}
+
+#list-detail-container {
+    background-color: white;
+}
+
+#list-wrapper {
+    position: relative;
+    float: left;
+    width: 300px;
+    min-height: 530px;
+    background-color: #ECECEE;
+}
+
+#list-wrapper .right-gradient {
+    width: 10px;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    background-image: linear-gradient(to right, #ebeced, #e5e6e7, #dee0e2, #d7dbdc, #d1d5d6);
+}
+
+#selected-highlight {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: white;
+    position: absolute;
+}
+
+#list {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+#list .list-item {
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+#list .list-item.selected .title {
+    font-weight: 600;
+    color: #36ABE1;
+}
+
+#list .list-item.selected .icon {
+    color: #36ABE1;
+}
+
+#list .list-item .title {
+    font-size: 18px;
+    float: right;
+    text-align: right;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #9BA0A4;
+}
+
+#list .list-item .icon-wrapper {
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    line-height: 75px;
+    float: right;
+    width: 30px;
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+#list .list-item .icon {
+    width: 32px;
+    height: 25px;
+    background: url(assets/images/icons/sprites/icons_small.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+#list .list-item .icon.bs1-small {
+    background-position-y: 0;
+}
+
+#list .list-item .icon.bs2-small {
+    background-position-y: -23px;
+}
+
+#list .list-item .icon.bs3-small {
+    background-position-y: -50px;
+}
+
+#list .list-item .icon.bs4-small {
+    background-position-y: -74px;
+}
+
+#list .list-item .icon.bs5-small {
+    background-position-y: -100px;
+}
+
+#list .list-item .icon.bs6-small {
+    background-position-y: -125px;
+}
+
+#list .list-item .icon.bs7-small {
+    background-position-y: -150px;
+}
+
+#list .list-item.selected .icon.bs1-small { 
+    background-position-y: -175px;
+}
+
+#list .list-item.selected .icon.bs2-small { 
+    background-position-y: -198px;
+}
+
+#list .list-item.selected .icon.bs3-small { 
+    background-position-y: -225px;
+}
+
+#list .list-item.selected .icon.bs4-small { 
+    background-position-y: -249px;
+}
+
+#list .list-item.selected .icon.bs5-small { 
+    background-position-y: -275px;
+}
+
+#list .list-item.selected .icon.bs6-small { 
+    background-position-y: -300px;
+}
+
+#list .list-item.selected .icon.bs7-small { 
+    background-position-y: -325px;
+}
+
+#detail-wrapper {
+    background-color: white;
+    height: 426px;
+    float: left;
+    width: calc(100% - 300px);
+    overflow: hidden;
+    position: relative;
+}
+
+.detail {
+    padding: 0 70px 0 70px;
+    height: 426px;
+}
+
+.detail .detail-header {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.detail .detail-header h1 {
+    margin: 0;
+    padding: 6px 0 0 98px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #36ABE1;
+    padding-left: 98px; */
+}
+
+.detail .detail-header h2 {
+    margin: 0;
+    padding: 3px 0 0 98px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 300;
+    color: #5C6366;
+}
+
+.detail .icon {
+    float: left;
+    height: 65px;
+    width: 80px;
+    background: url(assets/images/icons/sprites/icons_large.png);
+    background-repeat: no-repeat;
+    margin-top: 4px;
+}
+
+.detail .icon.bs1 {
+    background-position-y: -455px;
+}
+
+.detail .icon.bs2 {
+    background-position-y: -520px;
+}
+
+.detail .icon.bs3 {
+    background-position-y: -588px;
+    height: 62px;
+}
+
+.detail .icon.bs4 {
+    background-position-y: -650px;
+    height: 62px;
+}
+
+.detail .icon.bs5 {
+    background-position-y: -713px;
+    margin-left: 8px;
+}
+
+.detail .icon.bs6 {
+    background-position-y: -778px;
+    height: 64px;
+    margin-left: 6px;
+}
+
+.detail .icon.bs7 {
+    background-position-y: -842px;
+    margin-left: 6px;
+}
+
+.detail .detail-body {
+    font-size: 13px;
+    color: #65686F;
+    line-height: 18px;
+    padding-bottom: 22px;
+    padding-top: 8px;
+}
+
+.detail .detail-footer {
+    font-size: 13px;
+    color: #65686F;
+    font-weight: 600;
+}
+
+.detail .detail-footer a {
+    color: #6FBEE7;
+}
