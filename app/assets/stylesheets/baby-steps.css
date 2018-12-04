@@ -1,0 +1,198 @@
+html {
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    background-color: #BBBFC2;
+    line-height: 18px;
+}
+.content {
+    width: 100%;
+    height: 968px;
+    padding: 0 100px;
+    margin-top: -8px;
+}
+.box {
+    display: block;
+    background-image: url(../images/shadow_bottom.jpg);
+}
+.header {
+    width: 100%;
+    height: 276px;
+    background-image: url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.header h1 {
+    font-size: 50px;
+    color: #FFF;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    line-height: 48px;
+    float: right;
+    text-align: right;
+    margin: 0 70px 0 0;
+}
+.header h3 {
+    font-size: 32px;
+    color: #FFF;
+    font-family: "Open Sans, Light", sans-serif;
+    float: right;
+    margin: 50px 70px 15px 0;
+}
+.h-wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+}
+* {box-sizing: border-box}
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 546px;
+}
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: #9BA0A4;
+    line-height: 60px;
+    width: 100%;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+    font-family: "Source Sans Pro Semibold", sans-serif;
+    border-bottom: 2px solid white;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+}
+.tab button:hover {
+    background-color: #ddd;
+}
+.tab button.active {
+    background-color: white;
+    line-height: 60px;
+    color: #36ABE1;
+}
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 545px;
+    background-color: white;
+    padding: 0 70px 0 70px;
+}
+.tabcontent-noscript {
+    margin-left: 319px;
+    border: 1px solid #ccc;
+}
+.tabcontent p {
+    font-size: 13px;
+    color: #65686F;
+    font-family: "Helvetica, Reg", sans-serif;
+}
+.friends {
+    padding-top: 40px;
+    font-family: "Helvetica, Reg", sans-serif;
+    color: #65686F;
+    font-size: 13px;
+}
+.friends a {
+    color: #6FBEE7;
+}
+.tabs-content {
+    padding-top:60px;
+    position:relative;
+    background-color:white;
+    height:605px;
+}
+.button1 {
+    background-image: url(../images/icons/individual/icons_small_bs1.png);
+    background-repeat: no-repeat;
+    background-size: 36px;
+    background-position: 232px 17px;
+}
+.button1.active {
+    background-image: url(../images/icons/individual/icons_small_bs1_blue.png);
+}
+.button2 {
+    background-image: url(../images/icons/individual/icons_small_bs2.png);
+    background-repeat: no-repeat;
+    background-size: 36px;
+    background-position: 232px 17px;
+}
+.button2.active {
+    background-image: url(../images/icons/individual/icons_small_bs2_blue.png);
+}
+.button3 {
+    background-image: url(../images/icons/individual/icons_small_bs3.png);
+    background-repeat: no-repeat;
+    background-size: 36px;
+    background-position: 232px 17px;
+}
+.button3.active {
+    background-image: url(../images/icons/individual/icons_small_bs3_blue.png);
+}
+.button4 {
+    background-image: url(../images/icons/individual/icons_small_bs4.png);
+    background-repeat: no-repeat;
+    background-size: 36px;
+    background-position: 232px 17px;
+}
+.button4.active {
+    background-image: url(../images/icons/individual/icons_small_bs4_blue.png);
+}
+.button5 {
+    background-image: url(../images/icons/individual/icons_small_bs5.png);
+    background-repeat: no-repeat;
+    background-size: 36px;
+    background-position: 232px 17px;
+}
+.button5.active {
+    background-image: url(../images/icons/individual/icons_small_bs5_blue.png);
+}
+.button6 {
+    background-image: url(../images/icons/individual/icons_small_bs6.png);
+    background-repeat: no-repeat;
+    background-size: 36px;
+    background-position: 232px 17px;
+}
+.button6.active {
+    background-image: url(../images/icons/individual/icons_small_bs6_blue.png);
+}
+.button7 {
+    background-image: url(../images/icons/individual/icons_small_bs7.png);
+    background-repeat: no-repeat;
+    background-size: 36px;
+    background-position: 232px 17px;
+}
+.button7.active {
+    background-image: url(../images/icons/individual/icons_small_bs7_blue.png);
+}
+.tab-header {
+    padding-bottom: 24px;
+}
+.tab-header h1 {
+    color: #36ABE1;
+    font-family: "Source Sans Pro Semibold", sans-serif;
+    font-size: 30px;
+    line-height: 20px;
+    margin-bottom: 9px;
+}
+.tab-header h3 {
+    color: #5C6366;
+    font-family: "Source Sans Pro Semibold", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 0;
+}
+.tab-header img {
+    float: left;
+    margin-right: 15px;
+}
