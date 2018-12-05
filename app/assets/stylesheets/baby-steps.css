@@ -15,7 +15,6 @@ body {
 }
 .box {
     display: block;
-    background-image: url(../images/shadow_bottom.jpg);
 }
 .header {
     width: 100%;
