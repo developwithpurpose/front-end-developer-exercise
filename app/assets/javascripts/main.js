@@ -6,16 +6,13 @@ $(document).ready(function(){
             $(this).addClass('active').siblings().removeClass('active');
             $eqTab.addClass('active').find('.right, .left').removeClass('active').end()
             .siblings().removeClass('active');
-            // setTimeout(function(){
-            //   $eqTab.find('.right, .left').addClass('active');
-            // }, 50);
       });
 
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var response = JSON.parse(xhttp.responseText);
-            console.log(response.friends[0].babyStep);
+            console.log(response.friends);
         }
       };
       xhttp.open("GET", "baby-steps.json", true);

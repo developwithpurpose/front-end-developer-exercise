@@ -189,7 +189,7 @@ header h2 {
 
 .tabs-wrapper .tabs .tab img:last-child {
     opacity: 0;
-    transition: opacity .35s ease-in-out;
+    transition: opacity .5s ease;
 }
 
 .tabs-wrapper .tabs .tab.active img:last-child {
@@ -211,7 +211,8 @@ header h2 {
    position: absolute;
    top: 0;
    transform: scale3d(0, 0, 0);
-   transition: transform .45s ease-in-out;
+   opacity: 0;
+   transition: all .5s ease;
 }
 
 .tabs-wrapper .tab-content .content.active{
