@@ -5,5 +5,5 @@ fetch(myRequest)
         return resp.json();
     })
     .then(function(data) {
-        console.log(data.friends);
+        console.log(data.friends.firstName);
     });
