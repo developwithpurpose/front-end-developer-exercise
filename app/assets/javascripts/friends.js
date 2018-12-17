@@ -1,4 +1,4 @@
-let myRequest = new Request("../baby-steps.json");
+let myRequest = new Request("./../baby-steps.json");
 
 fetch(myRequest)
     .then(function(resp){
