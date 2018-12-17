@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:300,400,600');
+* {
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #bbbfc2;
+}
+body {
+    position: relative;
+    width: 80%;
+    min-width: 900px;
+    height: 900px;
+    margin: 0 auto 40px;
+    background-color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body:before {
+    content: "";
+    background-image: url('../images/shadow_left.jpg');
+    background-size: cover;
+    position: absolute;
+    left: -15px;
+    width: 15px;
+    height: 100%;
+    top: 0;
+}
+body:after {
+    content: "";
+    background-image: url('../images/shadow_right.jpg');
+    background-size: cover;
+    position: absolute;
+    right: -15px;
+    width: 15px;
+    height: 100%;
+    top: 0;
+}
+header {
+    margin-bottom: 60px;
+    position: relative;
+}
+.header-image {
+    width: 100%;
+}
+.container:after {
+    content: "";
+    background-image: url('../images/shadow_bottom.jpg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    position: absolute;
+    width: 200%;
+    height: 30px;
+    left: 0;
+    bottom: -30px;
+}
+.buttonsContainer {
+    width: 25%;
+    height: 548px;
+    float: left;
+    background: linear-gradient(to right, #ebeced, #ebeced 95%, #d1d5d6 103%);
+}
+.buttonsContainer button {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #9ba0a4;
+    line-height: 60px;
+    width: 100%;
+    text-align: right;
+    padding-right: 24px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+.buttonsContainer button:focus {
+    outline: none;
+}
+.button-image {
+    margin-left: 15px;
+    vertical-align: middle;
+}
+.stepsContainer {
+    width: 75%;
+    float: right;
+    padding: 0 70px;
+}

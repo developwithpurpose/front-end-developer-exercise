@@ -13,6 +13,6 @@ fetch(myRequest)
     .then(function(resp){
         return resp.json();
     })
-    .then(function(data) {
-        console.log(data.friends);
+    .then(function(things) {
+        console.log(things.friends);
     });
