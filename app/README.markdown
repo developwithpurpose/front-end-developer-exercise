@@ -4,7 +4,13 @@ Here is my submission for the Front-end Developer Exercise. The production files
 
 START THE SERVER
 ============
-Initialize the server with
+Install the node modules using:
+
+```
+npm install
+```
+
+Then, initialize the server with:
 
 ```
 npm start
