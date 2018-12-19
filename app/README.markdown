@@ -9,7 +9,7 @@ To streamline my workflow, I used Gulp as my task manager to perform several tas
 
 SASS
 ============
-I imported a reset stylesheet to reset all of the elements across browsers, to have the most consistent browser experience. Used in combination with the autoprefixer module to add vendor css, this saved time manually looking for any prefixes I might need. I utilized variables for repetitive values, and used nesting to be more DRY. This sped my worflow up dramatically, enabling me to complete the task in time.
+I imported a reset stylesheet to reset all of the elements across browsers, to have the most consistent browser experience. Used in combination with the autoprefixer module to add vendor css, this saved time manually looking for any prefixes I might need. I utilized variables for repetitive values, and used nesting to be more DRY. This sped my workflow up dramatically, enabling me to complete the task in time.
 
 HTML
 ============
@@ -21,7 +21,7 @@ I created most of the variables toward the start of the file, even if empty, so 
 
 I then import the JSON data and assign it to an empty local array.
 
-After that, I created a function to check the heights of each baby step. Each baby step is inside an <article> with an assigned class for easy targetting. These <articles> are nestled inside a container that moves either up or down. These heights were used to shorten or expanded the height of a window that was set to overflow hidden.
+After that, I created a function to check the heights of each baby step. Each baby step is inside an article with an assigned class for easy targetting. These articles are nestled inside a container that moves either up or down. These heights were used to shorten or expanded the height of a window that was set to overflow hidden.
 
 Next is a function to deal with the babystep information. First it empties an array. It takes an argument which is a babystep integer from 1-7 which represents each baby step. A forloop loops through the array and checks each object if a babyStep matches the function argument. If there is a match, it is pushed to an array, waiting to be sorted. Next, this is a sort function to organize the entries by last name. There was one babystep that had two people with the same last name, so they needed to also have their first name sorted. Once the array was sorted, I output the first two people objects out to variables, because in any given sentence, there only ever shows a max of two names.
 
