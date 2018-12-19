@@ -2,6 +2,14 @@ Front-end Developer Exercise - By Bjorn Bennett
 ============================
 Here is my submission for the Front-end Developer Exercise. The production files are located in the app folder, and the development files are located in the src folder. 
 
+RUN THE 
+============
+Initialize the server with
+
+```
+npm start
+```
+
 
 GULP
 ============
