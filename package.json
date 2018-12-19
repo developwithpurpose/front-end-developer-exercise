@@ -9,6 +9,25 @@
     "start": "http-server ./app -d false"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "grunt-contrib-uglify": "^4.0.0",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.4.3",
+    "browser-sync": "^2.26.3",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-uglifycss": "^1.1.0",
+    "htmlmin": "0.0.7",
+    "minify": "^4.1.0",
+    "minimatch": "^3.0.4",
+    "uglify": "^0.1.5",
+    "underscore.string": "^3.3.5"
   }
 }
