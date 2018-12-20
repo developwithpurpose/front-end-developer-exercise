@@ -13,4 +13,5 @@ Areas of Opportunity
 * Use of better functions to display friends on each baby step
 * Clean up code for easier reading.
 
-##Thank You
+Thank You
+---------
