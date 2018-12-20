@@ -2,8 +2,51 @@ var buttons = document.querySelectorAll(".buttonsContainer button");
 var babySteps = document.querySelectorAll(" .babySteps");
 var buttonImage = document.querySelectorAll(".button-image");
 
+var friends = {};
+
+$(document).ready(function() {
+    $.ajax ({
+        type: 'GET',
+        url: './../baby-steps.json',
+        success: function(data) {
+            let friendData = data.friends.sort(SortByName);;
+
+            friends = {};
+
+            friendData.forEach(function(friend) {
+                if (!friends[friend.babyStep - 1]) {
+                    friends[friend.babyStep - 1] = []
+                }
+                friends[friend.babyStep - 1].push(friend)
+            });
+        }
+    });
+});
+
+function SortByName(a, b) {
+  var aName = a.lastName.toLowerCase();
+  var bName = b.lastName.toLowerCase();
+  return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
+}
+
 function showSteps (step, color) {
     var stepUp = step + 1;
+
+    $(".friendList").html("");
+
+    var friendString = "";
+
+    if (friends[step]) {
+        let joinWord = (friends[step].length === 1) ? "is" : "are";
+        friends[step].forEach(function(friend) {
+            friendString += `${friend.firstName} ${friend.lastName} and `;
+        })
+
+        var newFriends = friendString.substring(0, friendString.length - 5) + " " + `${joinWord} also in Baby Step ` + stepUp
+
+        $(".friendList").html(newFriends);
+    }
+
 
     buttons.forEach (function (node) {
         node.style.backgroundColor = "";
