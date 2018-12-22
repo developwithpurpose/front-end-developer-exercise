@@ -60,8 +60,8 @@ jQuery(document).ready(function($) {
 			}
 			return comparison;
 		}
-
 		babyStepsArrayExt = babyStepsArrayExt.sort(sortArray);
+		
 		if(babyStepsArrayExt[0]){
 			fn1 = babyStepsArrayExt[0].firstName,
 			ln1 = babyStepsArrayExt[0].lastName;

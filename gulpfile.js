@@ -5,7 +5,8 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync = require('browser-sync').create(),
 	concat = require('gulp-concat'),
-	pump = require('pump');
+	pump = require('pump'),
+	minify = require('gulp-minify');
  
 const sassSource = './src/assets/stylesheets/sass/*.sass',
 	  sassDestSource = './app/assets/stylesheets/',
@@ -29,15 +30,14 @@ gulp.task('sass', function () {
 	.pipe(browserSync.stream());
 });
 
-gulp.task('js', function(cb) {
-	pump([
-		gulp.src(jsSource),
-		uglify(),
-		gulp.dest(jsDestSource)
-	],
-	cb
-	);
+
+gulp.task('js', function() {
+  return gulp.src(jsSource)
+    .pipe(minify())
+    .on('error', function (err) { console.log( err ) })
+    .pipe(gulp.dest(jsDestSource))
 });
+
 
 gulp.task('serve', function(){
 	browserSync.init({
