@@ -1,0 +1,102 @@
+
+body {
+  background-color: white;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+html {
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+img {
+  height: 50%;
+  width: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  margin: 1px;
+}
+
+.container img {
+  position: absolute;
+  top: 30%;
+  right: 24px;
+}
+
+#tab {
+  float: left;
+  margin-top: 60px;
+  width: 30%;
+  height: 100%;
+  border: none;
+  box-sizing: border-box;
+}
+
+#tab button {
+  display: block;
+  background-color: #e6e6e6;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+}
+
+#tab button:hover {
+  background-color: white;
+  color: #67C8FF;
+}
+
+.iconcontainer:hover .blueiconcontainer {
+  opacity: 1;
+}
+
+.blueiconcontainer {
+  opacity: 0;
+}
+
+.tabcontent {
+  float: left;
+  padding: 60px 70px;
+  border: none;
+  width: 70%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+  font-size: 13px;
+  display: none;
+}
+
+.tabcontent {
+  animation-duration: 1s;
+  animation-name: transition;
+}
+
+@keyframes transition {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.default, :target {
+  display: block;
+}
+
+:target ~ .default {
+  display: none;
+}
+
