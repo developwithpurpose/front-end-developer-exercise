@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+}
+
+html {
+    background-color: #bbbfc2;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.header img {
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+.sidebar {
+    flex: 1;
+    flex-direction: column;
+}
+
+.sidebar div {
+    background: #d1d5d6;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #ebeced 97%, #d1d5d6);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ebeced 97%, #d1d5d6);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ebeced 97%, #d1d5d6);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #ebeced 97%, #d1d5d6);
+    /* Standard syntax */
+}
+
+.sidebar_href {
+    padding-right: 20px;
+}
+
+.sidebar div a {
+    font-family: "Source Sans Pro", "Regular";
+    font-size: 18px;
+    color: #9ba0a4;
+    line-height: 60px;
+    text-decoration: none;
+}
+
+.sidebar_icon {
+    width: 35px;
+    height: 35px;
+    padding-right: 24px;
+}
+
+.sidebar_border {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+#active {
+    background: white;
+}
+
+#active a {
+    color: #36abe1;
+    font-family: "Source Sans Pro", "semibold";
+}
+
+.baby_steps {
+    padding: 0 70px;
+    line-height: 20px;
+    flex: 3;
+}
+
+.baby_steps_icon {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 24px;
+}
+
+.baby_step_header_spacing {
+    position: relative;
+    top: 15px;
+}
+
+.baby_step_header {
+    color: #36abe1;
+    font-size: 30px;
+    font-family: "Source Sans Pro", "Semibold";
+    line-height: 20px;
+}
+
+.baby_step_subheader {
+    padding-top: 5px;
+    font-size: 18px;
+    color: #5c6366;
+    font-family: "Source Sans Pro", "Light";
+    line-height: 20px;
+}
+
+.baby_steps_body {
+    padding-top: 24px;
+    font-size: 13px;
+    color: #65686f;
+    font-family: "Helvetica", "Regular";
+    line-height: 18px;
+}
+
+#friends {
+    padding-top: 40px;
+    font-size: 13px;
+    color: #65686f;
+    font-family: "Helvetica", "Regular";
+    line-height: 18px;
+}
+
+#friends a {
+    color: #6fbee7;
+}
+
+
+/* helper classes */
+
+.hidden {
+    display: none;
+}
+
+.inline_block {
+    display: inline-block;
+}
+
+.img {
+    float: left;
+    margin-right: 1rem;
+}
+
+.align_middle {
+    vertical-align: middle;
+}
+
+
+/* baby steps animation */
+
+.baby_step_1,
+.baby_step_2,
+.baby_step_3,
+.baby_step_4,
+.baby_step_5,
+.baby_step_6,
+.baby_step_7 {
+    position: relative;
+    -webkit-animation: slideIn 0.5s forwards;
+    -moz-animation: slideIn 0.5s forwards;
+    animation: slideIn 0.5s forwards;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        transform: translateX(900px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes slideIn {
+    0% {
+        transform: translateX(900px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(900px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
