@@ -12,16 +12,21 @@ html {
     background-color: white;
 }
 
+.header {
+    padding-bottom: 60px;
+}
+
 .header img {
     width: 100%;
-    padding-bottom: 60px;
 }
 
 .sidebar {
     flex: 1;
     flex-direction: column;
+    padding-bottom: 200px;
 }
 
+.sidebar,
 .sidebar div {
     background: #d1d5d6;
     /* For browsers that do not support gradients */
@@ -35,16 +40,13 @@ html {
     /* Standard syntax */
 }
 
-.sidebar_href {
-    padding-right: 20px;
-}
-
 .sidebar div a {
     font-family: "Source Sans Pro", "Regular";
     font-size: 18px;
     color: #9ba0a4;
     line-height: 60px;
     text-decoration: none;
+    padding-right: 20px;
 }
 
 .sidebar_icon {
@@ -71,13 +73,6 @@ html {
     padding: 0 70px;
     line-height: 20px;
     flex: 3;
-}
-
-.baby_steps_icon {
-    width: 100px;
-    height: 100px;
-    float: left;
-    margin-right: 24px;
 }
 
 .baby_step_header_spacing {
@@ -125,10 +120,6 @@ html {
 
 .hidden {
     display: none;
-}
-
-.inline_block {
-    display: inline-block;
 }
 
 .img {
