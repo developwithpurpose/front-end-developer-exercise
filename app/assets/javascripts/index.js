@@ -11,7 +11,7 @@ var friends = [[], [], [], [], [], [], []];
 $(document).ready(function () {
    $.get("baby-steps.json", function (data) {
       data.friends.forEach(function (friend) {
-         friends[friend.babyStep - 1].push({
+         friends[(friend.babyStep - 1) % 7].push({
             firstName: friend.firstName,
             lastName: friend.lastName
          });
