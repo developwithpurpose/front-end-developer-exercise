@@ -1,0 +1,104 @@
+$icon-url-small: url('../images/icons_small.png');
+
+.active-block {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 60px;
+   background-color: #fff;
+   z-index: 2;
+}
+
+nav {
+   position: relative;
+   height: 100%;
+   width: 100%;
+   background: -webkit-gradient(linear, left right, left right, color-stop(0%,#ebeced), color-stop(100%,#d1d5d6));
+   background: -webkit-linear-gradient(left, #ebeced 0%, #d1d5d6 100%);
+   box-shadow: inset -7px 0 15px -7px rgba(0, 0, 0, 0.2);
+
+   .money {
+      background-position: 0 0;
+   }
+   .snowball {
+      background-position: 0 -25px;
+   }
+   .pig {
+      background-position: 0 -50px;
+   }
+   .graph {
+      background-position: 0 -75px;
+   }
+   .book {
+      background-position: 0 -100px;
+   }
+   .house {
+      background-position: 0 -125px;
+   }
+   .hand {
+      background-position: 0 -150px;
+   }
+
+   li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 60px;
+      width: 100%;
+      border-bottom: 1px solid #fff;
+      box-sizing: border-box;
+      cursor: pointer;
+      z-index: 3;
+      position: relative;
+
+      a {
+         text-decoration: none;
+      }
+      h3 {
+         text-align: right;
+         font-family: "Source Sans Pro", sans-serif;
+         font-size: 18px;
+         font-weight: 400;
+         line-height: 60px;
+         color: #9ba0a4;
+      }
+
+      span {
+         background-image: $icon-url-small;
+         background-repeat: no-repeat;
+         margin: 0 24px;
+         width: 30px;
+         height: 25px;
+      }
+   }
+
+   li.active {
+      h3 {
+         color: #36abe1;
+         font-weight: 600;
+      }
+      .money {
+         background-position: 0 -175px;
+      }
+      .snowball {
+         background-position: 0 -200px;
+      }
+      .pig {
+         background-position: 0 -225px;
+      }
+      .graph {
+         background-position: 0 -250px;
+      }
+      .book {
+         background-position: 0 -275px;
+      }
+      .house {
+         background-position: 0 -300px;
+      }
+      .hand {
+         background-position: 0 -325px;
+      }
+   }
+}
+
