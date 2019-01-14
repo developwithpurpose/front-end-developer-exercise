@@ -1,5 +1,5 @@
-#The 7 Baby Steps submission
-###by Phillip Reel
+# The 7 Baby Steps submission
+### by Phillip Reel
 ============================
 
 Source Code
