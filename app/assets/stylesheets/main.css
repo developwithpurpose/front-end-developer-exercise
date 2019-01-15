@@ -1,9 +1,5 @@
-body{
-    width: 80vw;
-}
-
 main{
-    max-width: 760px;
+    max-width: 960px;
     margin: auto; 
 }
 
@@ -13,7 +9,16 @@ main{
 }
 
 #babySteps{
-    width: 80em;
+    width: 500px;
+    background: #ebeced;    
+}
+
+#babyStepDesc{
+    font-family: "Source Sans Pro";
+    font-weight: lighter;
+    color: #5c6366;
+    line-height: 20px;
+    font-size: 18px;
 }
 
 .steps{
@@ -22,4 +27,27 @@ main{
     color: #9ba0a4;
     line-height: 60px;
     padding-left: 60px;
+}
+
+.hdrImg{
+    margin-bottom: 24px;
+}
+
+.smallImg{
+    margin-top: 25px;
+}
+
+#babyStepContent{
+    padding-left: 70px;
+    width: 80em;
+}
+
+#friendList{
+    font-family: Helvetica;
+    font-size: 13px;
+    color: #65686f;
+    padding-top: 40px;
+}
+.names{
+    color: #6fbee7;
 }

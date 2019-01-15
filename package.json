@@ -10,5 +10,16 @@
   },
   "devDependencies": {
     "http-server": "^0.8.0"
-  }
+  },
+  "description": "Front-end Developer Exercise ============================",
+  "bugs": {
+    "url": "https://github.com/developwithpurpose/front-end-developer-exercise/issues"
+  },
+  "homepage": "https://github.com/developwithpurpose/front-end-developer-exercise#readme",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "author": "",
+  "license": "ISC"
 }
