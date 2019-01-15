@@ -9,13 +9,17 @@ main{
 
 #babyStepContainer{
     display: flex;  
+    margin-top: 60px;
 }
 
 #babySteps{
-    margin-top: 1em;
-    width: 60em;
+    width: 80em;
 }
 
 .steps{
-    height: 3em;
+    font-family: "Source Sans Pro";
+    font-size: 18px;
+    color: #9ba0a4;
+    line-height: 60px;
+    padding-left: 60px;
 }
