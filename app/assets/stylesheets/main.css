@@ -1,7 +1,5 @@
 body{
-    margin: 20px; 
     width: 80vw;
-    background: lightgrey;
 }
 
 main{
@@ -9,15 +7,15 @@ main{
     margin: auto; 
 }
 
-aside{
+#babyStepContainer{
     display: flex;  
 }
 
-.babySteps{
-    width: 20%;
+#babySteps{
+    margin-top: 1em;
+    width: 60em;
 }
 
-.babyStepDesc{
-    width: 80%;
-    background: red;
+.steps{
+    height: 3em;
 }

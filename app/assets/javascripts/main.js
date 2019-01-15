@@ -1,5 +1,35 @@
 //BabySteps
-let babyStepList = [
+
+class Person {
+    constructor(firstName, lastName, step) {
+        this.firstName = firstName
+        this.lastName = lastName
+        this.step = step
+    }
+
+    getFullName() {
+        return this.firstName + " " + this.lastName
+    }
+}
+class BabySteps {
+    constructor(maxStep) {
+        this.steps = new Map()
+        // Default initialize our steps with an empty array
+        for (let i = 1; i <= maxStep; i++) {
+            this.steps.set(i, [])
+        }
+    }
+
+    addFriend (person)  {
+        this.steps.get(person.step).push(person)
+    }
+
+    getFriendsByStep(step) {
+        return this.steps.get(step)
+    }
+}
+
+const babyStepList = [
     {
         name: "Baby Step 1",
         goal: "$1,000 Emergency Fund",
@@ -52,66 +82,77 @@ let babyStepList = [
     },
 ]
 
-    
-    $("#babyStepName").append(babyStepList[0].name)
-    $("#babyStepGoal").append(babyStepList[0].goal)
-    $("#babyStepDesc").append(babyStepList[0].description)
 
-
-
-for(let i = 1; i <= 7; i++){
-    $("#babySteps").append(`<div id = step${i}> Baby Step ${i}</div>`)
-}
-
-//Get Friends
-class Person {
-    constructor(firstName, lastName, step) {
-        this.firstName = firstName
-        this.lastName = lastName
-        this.step = step
-    }
-
-    getFullName() {
-        return this.firstName + " " + this.lastName
-    }
-}
-class BabySteps {
-    constructor(maxStep) {
-        this.steps = new Map()
-        // Default initialize our steps with an empty array
-        for (let i = 1; i <= maxStep; i++) {
-            this.steps.set(i, [])
-        }
-    }
-
-    addPerson (person)  {
-        this.steps.get(person.step).push(person)
-    }
-
-    getStep(step) {
-        return this.steps.get(step)
-    }
-
-}
-
-let steps = new BabySteps(7)
+const steps = new BabySteps(7)
 
 $.ajax({
     url: "babysteps",
     method: 'GET',
     success: (res) =>{
         // Populate our BabySteps object with each friend
-        res.friends.forEach(rawFriend => {
+        res.friends.map(rawFriend => {
             const friend = new Person(rawFriend.firstName, rawFriend.lastName, rawFriend.babyStep)
 
-            steps.addPerson(friend) 
+            steps.addFriend(friend) 
         });
-
+        initPage()
     },
     error: (res) => {
-        console.log("ERROR: " + JSON.stringify(res))
+        console.error("ERROR: " + JSON.stringify(res))
     } 
 })
 
+let images = [""]
+
+initPage = () => {
+
+    $("#babyStepName").empty()
+    $("#babyStepGoal").empty()
+    $("#babyStepDesc").empty()
+    $("#babyStepName").append(babyStepList[0].name)
+    $("#babyStepGoal").append(babyStepList[0].goal)
+    $("#babyStepDesc").append(babyStepList[0].description)
+
+    for(let i = 1; i <= 7; i++){
 
 
+        $(`#step${i}`).on('click', (e) => {
+            e.preventDefault()
+            
+            $("#babyStepName").empty()
+            $("#babyStepGoal").empty()
+            $("#babyStepDesc").empty()
+
+            $("#babyStepName").append(babyStepList[i - 1].name)
+            $("#babyStepGoal").append(babyStepList[i - 1].goal)
+            $("#babyStepDesc").append(babyStepList[i - 1].description)
+        
+            const friends = steps.getFriendsByStep(i)
+
+            $("#friendList").empty()
+
+            if(friends.length === 1){
+                const name = friends[0].getFullName()
+                $("#friendList").append(`${name} is also in Baby Step ${i}`)
+            } else if (friends.length === 2){
+                const name1 = friends[0].getFullName()
+                const name2 = friends[1].getFullName()
+
+                $("#friendList").append(`${name1} and ${name2} are also in Baby Step ${i}`)
+            } else if (friends.length === 3){
+                const name1 = friends[0].getFullName()
+                const name2 = friends[1].getFullName()
+
+                $("#friendList")
+                    .append(`${name1}, ${name2}, and 1 other are also in Baby Step ${i}`)
+            } else if (friends.length >= 4) {
+                const name1 = friends[0].getFullName()
+                const name2 = friends[1].getFullName()
+                const remaining = (friends.length - 2).toString()
+
+                $("#friendList")
+                    .append(`${name1}, ${name2}, and ${remaining} others are also in Baby Step ${i}`)
+            }
+        })
+    }
+}
