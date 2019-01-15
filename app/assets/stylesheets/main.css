@@ -1,0 +1,23 @@
+body{
+    margin: 20px; 
+    width: 80vw;
+    background: lightgrey;
+}
+
+main{
+    max-width: 760px;
+    margin: auto; 
+}
+
+aside{
+    display: flex;  
+}
+
+.babySteps{
+    width: 20%;
+}
+
+.babyStepDesc{
+    width: 80%;
+    background: red;
+}
