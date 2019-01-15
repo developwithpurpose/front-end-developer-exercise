@@ -19,26 +19,27 @@ class BabySteps {
         }
     }
 
-    addPerson (step, person)  {
-        this.steps.get(step).push(person)
+    addPerson (person)  {
+        this.steps.get(person.step).push(person)
     }
 
     getStep(step) {
         return this.steps.get(step)
     }
+
 }
 
-let steps = new BabySteps()
+let steps = new BabySteps(7)
 
 $.ajax({
     url: "babysteps",
     method: 'GET',
     success: (res) =>{
         // Populate our BabySteps object with each friend
-        res.friends.forEach(raw_friend => {
-            const friend = new Person(raw_friend.firstName, raw_friend.lastName, raw_friend.babyStep)
+        res.friends.forEach(rawFriend => {
+            const friend = new Person(rawFriend.firstName, rawFriend.lastName, rawFriend.babyStep)
 
-            steps.addPerson(raw_friend.babyStep, friend) 
+            steps.addPerson(friend) 
         });
 
     },
