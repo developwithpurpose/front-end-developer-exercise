@@ -114,8 +114,6 @@ initPage = () => {
     $("#babyStepDesc").append(babyStepList[0].description)
 
     for(let i = 1; i <= 7; i++){
-
-
         $(`#step${i}`).on('click', (e) => {
             e.preventDefault()
             
@@ -123,10 +121,21 @@ initPage = () => {
             $("#babyStepGoal").empty()
             $("#babyStepDesc").empty()
 
+            for(let j = 1; j <= 7; j++){
+                $(`#step${j}`).css('color', '#9ba0a4');
+                $(`#step${j}`).css( 'background-image',
+                'linear-gradient(to right, #ebebeb, #d1d4d6)');
+
+            }
+            
+            $(`#step${i}`).css('background', 'white');
+            $(`#step${i}`).css('color', ' #6fbee7');
+            
             $("#babyStepName").append(babyStepList[i - 1].name)
             $("#babyStepGoal").append(babyStepList[i - 1].goal)
             $("#babyStepDesc").append(babyStepList[i - 1].description)
-        
+            
+            // Friend List
             const friends = steps.getFriendsByStep(i)
 
             $("#friendList").empty()
