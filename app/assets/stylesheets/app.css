@@ -1,0 +1,161 @@
+/* html */
+.background{
+  background-color: #bbbfc2;
+}
+.container{
+  background-color: white;
+  width: 980px;
+  margin: auto;
+}
+.header{
+  margin-bottom: 60px;
+}
+.stepContainer{
+  height: 600px;
+}
+#stepHeadings{
+  width: 30%;
+  float: left;
+}
+
+#stepDescriptions{
+  background-color: white;
+  margin: 0 70px 0 70px;
+  width: 55%;
+  float: right;
+  position: relative;
+  height: 100%;
+}
+.slideIn{
+    animation: slideIn .75s linear;
+}
+@keyframes slideIn{
+  0%   {left:0px; top:50px;}
+  50%  {left:0px; top:25px;}
+  100% {left:0px; top:0px;}
+}
+
+/* added in JS */
+/* holds Baby Step # and pic */
+.stepHeadingsBox{
+  line-height: 60px;
+  color: #9ba0a4;
+  font-size: 18px; 
+  font-family: 'Source sans Pro', sans-serif;
+  background-color: #ebeced;
+  background-image: linear-gradient(to right, #ebeced, 95%,#d1d5d6);
+  filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#ebeced', endColorstr='#d1d5d6');
+  background-image: -moz-linear-gradient(right, #ebeced, 95%,#d1d5d6 100%);
+  background-image: -ms-linear-gradient(right, #ebeced, 95%,#d1d5d6 100%);
+  background-image: -o-linear-gradient(right, #ebeced, 95%,#d1d5d6 100%);
+  background-image: -webkit-linear-gradient(left, #ebeced, 95%,#d1d5d6 100%);
+  border: 1px solid white;
+  text-align: right;
+  position: relative;
+}
+
+.stepHeading{
+  position: absolute;
+  right: 77px;
+}
+
+/* in main area */
+.words{
+	font-family: Helvetica,Arial,sans-serif; 
+  margin-bottom: 20px;
+  font-size: 0.8em;
+  color: #65686f;
+  line-height: 18px;
+}
+.wordsSpacer{
+  margin-top: 40px;
+}
+a{
+  color: #6fbee7;
+}
+
+.clicked{
+  color: #36abe1;
+  font-weight: bolder;
+  background: white;
+}
+
+.stepImg{
+  margin: 0 24px -4px 24px;
+}
+.step1Pic0{
+  width: 30px;
+  height: 20px;
+  background: url('../images/icons/sprites/icons_small.png') 0 0;
+}
+.step1Pic1{
+  width: 30px;
+  height: 20px;
+  background: url('../images/icons/sprites/icons_small.png') 0 175px;
+}
+
+.step2Pic0{
+  width: 30px;
+  height: 23px;
+  background: url('../images/icons/sprites/icons_small.png') 0 -24px;
+}
+.step2Pic1{
+  width: 30px;
+  height: 23px;
+  background: url('../images/icons/sprites/icons_small.png') 0 151px;
+}
+
+.step3Pic0{
+  width: 30px;
+  height: 18px;
+  background: url('../images/icons/sprites/icons_small.png') 0 -54px;
+}
+.step3Pic1{
+  width: 30px;
+  height: 18px;
+  background: url('../images/icons/sprites/icons_small.png') 0 121px;
+}
+
+.step4Pic0{
+  width: 30px;
+  height: 25px;
+  background: url('../images/icons/sprites/icons_small.png') 0 -74px;
+}
+.step4Pic1{
+  width: 30px;
+  height: 23px;
+  background: url('../images/icons/sprites/icons_small.png') 0 99px;
+}
+
+.step5Pic0{
+  width: 30px;
+  height: 25px;
+  background: url('../images/icons/sprites/icons_small.png') 0 -100px;
+}
+.step5Pic1{
+  width: 30px;
+  height: 25px;
+  background: url('../images/icons/sprites/icons_small.png') 0 75px;
+}
+
+.step6Pic0{
+  width: 30px;
+  height: 24px;
+  background: url('../images/icons/sprites/icons_small.png') 0 -126px;
+}
+.step6Pic1{
+  width: 30px;
+  height: 24px;
+  background: url('../images/icons/sprites/icons_small.png') 0 49px;
+}
+
+.step7Pic0{
+  width: 30px;
+  height: 25px;
+  background: url('../images/icons/sprites/icons_small.png') 0 -150px;
+}
+.step7Pic1{
+  width: 30px;
+  height: 25px;
+  background: url('../images/icons/sprites/icons_small.png') 0 25px;
+}
