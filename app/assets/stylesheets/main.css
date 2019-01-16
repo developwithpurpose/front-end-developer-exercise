@@ -1,12 +1,23 @@
 main{
     max-width: 960px;
     margin: auto; 
+    border: 1px solid black;
+    background: white;
 }
 
 #babyStepContainer{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;  
     margin-top: 60px;
 }
+
+.steps:hover{cursor: pointer;}
+.hdrImg{margin-bottom: 24px;}
+.smallImg{margin-top: 25px;}
+.names{color: #6fbee7;}
+.dave{width: 100%;}
+body{background: #bbbfc2;}
 
 #babySteps{
     width: 500px;
@@ -26,6 +37,12 @@ main{
     font-size: 18px;
     color: #9ba0a4;
     background-image:
+    -webkit-linear-gradient(
+      left, 
+      #ebebeb, 
+      #d1d4d6
+    );
+    background-image:
     linear-gradient(
       to right, 
       #ebebeb, 
@@ -36,12 +53,26 @@ main{
     border-bottom: 1px solid white;
 }
 
-.hdrImg{
-    margin-bottom: 24px;
+@-webkit-keyframes fadeIn{
+    from{
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+    to{
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
 }
 
-.smallImg{
-    margin-top: 25px;
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+    to{
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
 }
 
 #babyStepContent{
@@ -55,19 +86,8 @@ main{
     color: #65686f;
     padding-top: 40px;
 }
-.names{
-    color: #6fbee7;
-}
 
-main{
-    border: 1px solid black;
-    background: white;
-}
-
-.dave{
-    width: 100%;
-}
-
-body{
-    background: #bbbfc2;
+#step{
+    -webkit-transition-delay: 2s; /* Safari */
+    transition-delay: 2s;
 }

@@ -1,12 +1,9 @@
-//BabySteps
-
 class Person {
     constructor(firstName, lastName, step) {
         this.firstName = firstName
         this.lastName = lastName
         this.step = step
     }
-
     getFullName() {
         return this.firstName + " " + this.lastName
     }
@@ -14,7 +11,6 @@ class Person {
 class BabySteps {
     constructor(maxStep) {
         this.steps = new Map()
-        // Default initialize our steps with an empty array
         for (let i = 1; i <= maxStep; i++) {
             this.steps.set(i, [])
         }
@@ -88,8 +84,7 @@ const steps = new BabySteps(7)
 $.ajax({
     url: "babysteps",
     method: 'GET',
-    success: (res) =>{
-        // Populate our BabySteps object with each friend
+    success: (res) => {
         res.friends.map(rawFriend => {
             const friend = new Person(rawFriend.firstName, rawFriend.lastName, rawFriend.babyStep)
 
@@ -109,6 +104,7 @@ initPage = () => {
     $("#babyStepName").empty()
     $("#babyStepGoal").empty()
     $("#babyStepDesc").empty()
+
     $("#babyStepName").append(babyStepList[0].name)
     $("#babyStepGoal").append(babyStepList[0].goal)
     $("#babyStepDesc").append(babyStepList[0].description)
@@ -125,17 +121,14 @@ initPage = () => {
                 $(`#step${j}`).css('color', '#9ba0a4');
                 $(`#step${j}`).css( 'background-image',
                 'linear-gradient(to right, #ebebeb, #d1d4d6)');
-
             }
             
             $(`#step${i}`).css('background', 'white');
             $(`#step${i}`).css('color', ' #6fbee7');
-            
-            $("#babyStepName").append(babyStepList[i - 1].name)
+
             $("#babyStepGoal").append(babyStepList[i - 1].goal)
             $("#babyStepDesc").append(babyStepList[i - 1].description)
             
-            // Friend List
             const friends = steps.getFriendsByStep(i)
 
             $("#friendList").empty()
@@ -143,17 +136,20 @@ initPage = () => {
             if(friends.length === 1){
                 const name = friends[0].getFullName()
                 $("#friendList").append(`<span class = "names"> ${name} </span> is also in Baby Step ${i}`)
+
             } else if (friends.length === 2){
                 const name1 = friends[0].getFullName()
                 const name2 = friends[1].getFullName()
 
                 $("#friendList").append(`<span class = "names">${name1} </span> and <span class = "names"> ${name2} </span> are also in Baby Step ${i}`)
+
             } else if (friends.length === 3){
                 const name1 = friends[0].getFullName()
                 const name2 = friends[1].getFullName()
 
                 $("#friendList")
                     .append(`<span class = "names"> ${name1}, ${name2}, </span> and 1 other are also in Baby Step ${i}`)
+
             } else if (friends.length >= 4) {
                 const name1 = friends[0].getFullName()
                 const name2 = friends[1].getFullName()
@@ -165,3 +161,8 @@ initPage = () => {
         })
     }
 }
+    // TODO: Improve animation/fade in for baby step navigation and descriptive text. 
+    $(".fadeIn").css('animation', 'fadeIn 2s')
+    $(".fadeIn").css('animation', 'fadeIn 2s')
+    $(".fadeIn").css('animation', 'fadeIn 2s')
+
