@@ -16,13 +16,14 @@ I referred to the annotated mockup to make sure it was matching.
 
 MAIN.JS
 
-I wanted to make sure the vertical tabs had a seamless transition, providing the correct information with each step. I also tried to make the transition smoother but was unable to due to the alloted time. 
+I wanted to make sure the vertical tabs had a seamless transition, providing the correct information with each step. I also tried to make the transition from tabs smoother.
 
-I also started to start my Dynamic content with a ajax request using the JSON file. Unfortunately, I did not have time to finish but will keep working on this in my own personal time. 
+I also started to start my Dynamic content with a ajax request using the JSON file.
 
-Overall, the 4 hours went by fast and looking at the final project, I would change some things. (Using the header picture and displaying text seperately instead of the graphic with text on the index.html page, AJAX request finished, some styling edits, etc.) My goal, however, was to have a page that looked similar to the mockup in 4 hours. I was very nervous as this was my first coding challenge and definitely had to promblem solve but I felt confident in finding a solution the problems I encountered.
+SUMMARY
 
-I hope this successfully shows my skills and my willingness to learn while growing into a developer. I know it is not my best work but I will only grow from here. 
+Overall, the 4 hours went by fast and looking at the final project, I would change some things. (Using the header picture and displaying text seperately instead of the graphic with text on the index.html page, AJAX request finished, some styling edits, etc.) My goal, however, was to have a page that looked similar to the mockup in 4 hours.
 
+I hope this successfully shows my skills and my willingness to learn while growing into a developer.
 
 Thank you for the opportunity and challenge! 
