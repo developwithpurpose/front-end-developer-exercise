@@ -20,3 +20,4 @@ $("friends").click(function () {
         }
     });
 });
+
