@@ -1,6 +1,6 @@
 ## Front-end-developer-exercise-master 
 
-this is my submission for the front-end developer exercise for role of junior front-web developer.
+this is my submission for the front-end developer exercise for the role of junior front-web developer.
 
 NPM 
 first, I made sure Node was installed and I directed into my project folder through Hyper terminal. I then installed and started NPM, testing that the server was successfully running. I also installed nodemon to make sure any changes were saved and updated on the server. I also included a git repository to make sure I didn't mess up and have to redo successful code. 
