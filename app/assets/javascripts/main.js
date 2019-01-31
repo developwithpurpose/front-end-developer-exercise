@@ -49,7 +49,6 @@ jQuery(document).ready(function(){
         }
       }});
 
-    //This initiates the the jQuery plugin 'amazingcarousel-5', which is used for the step transitions. (jQuery code included in the javascript file)
     if ( typeof html5Lightbox === "undefined" )
     {
         html5Lightbox = jQuery(".html5lightbox").html5lightbox({
