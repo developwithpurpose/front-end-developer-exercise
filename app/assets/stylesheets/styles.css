@@ -6,6 +6,22 @@
   padding: 0;
   box-sizing: content-box; }
 
+.app {
+  position: relative; }
+
+.shadow {
+  position: absolute; }
+  .shadow_left {
+    top: 0;
+    left: -15px; }
+  .shadow_bottom {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%); }
+  .shadow_right {
+    top: 0;
+    right: -15px; }
+
 @keyframes easeIn {
   0% {
     opacity: 0; }
@@ -21,7 +37,9 @@ body {
   background-color: #fff; }
 
 .main_content {
-  display: flex; }
+  display: flex;
+  height: 600px;
+  overflow: hidden; }
 
 .heading {
   position: relative;
@@ -58,10 +76,15 @@ body {
 
 .list {
   width: 300px;
+  height: 100vh;
   margin-right: 70px; }
+  .list_extension {
+    background-image: linear-gradient(90deg, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+    width: 100%;
+    height: 100%; }
   .list_item {
     position: relative;
-    background-image: linear-gradient(90deg, #ebeced, #d1d5d6);
+    background-image: linear-gradient(90deg, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
     width: 300px;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 18px;
