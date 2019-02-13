@@ -1,0 +1,152 @@
+//FONTS
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:300,400,600");
+
+//VARIABLES
+$openSans: "Open Sans", sans-serif;
+$sourceSansPro: "Source Sans Pro", sans-serif;
+
+// BASE
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+// ANIMATIONS
+@keyframes easeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+body {
+  background-color: #bbbfc2;
+}
+.app {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #fff;
+}
+.main_content {
+  display: flex;
+}
+
+.heading {
+  position: relative;
+  margin-bottom: 60px;
+  &_img {
+    width: 100%;
+  }
+  &_text_container {
+    font-family: $openSans;
+    position: absolute;
+    color: #fff;
+    top: 50px;
+    right: 70px;
+    max-width: 50%;
+    text-align: right;
+
+    h2 {
+      font-weight: 300;
+      font-size: 32px;
+      margin-bottom: 15px;
+      opacity: 0;
+      animation-name: easeIn;
+      animation-delay: 0.5s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 48px;
+      text-transform: uppercase;
+      opacity: 0;
+      animation-name: easeIn;
+      animation-delay: 1s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+.list {
+  width: 300px;
+  margin-right: 70px;
+  &_item {
+    position: relative;
+    background-image: linear-gradient(90deg, #ebeced, #d1d5d6);
+    width: 300px;
+    font-family: $sourceSansPro;
+    font-size: 18px;
+    color: #9ba0a4;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 2px;
+    &:hover {
+      cursor: pointer;
+      &::after {
+        width: 100%;
+      }
+    }
+    & > * {
+      margin-right: 20px;
+      z-index: 21;
+    }
+    &::after,
+    .selected::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background-color: #fff;
+      z-index: 20;
+      animation-name: "selected";
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      transition-duration: 0.5s;
+    }
+  }
+  .hovered,
+  .selected {
+    color: #36abe1;
+    font-weight: 600;
+  }
+  .selected::after {
+    width: 100%;
+  }
+}
+
+.description {
+  margin-right: 70px;
+  width: 100%;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-out;
+  height: 100vh;
+  &_window{
+    height: 50vh;
+    overflow: scroll;
+  }
+  &_step {
+    height: 100vh;
+  }
+  p {
+    margin-bottom: 40px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+  }
+}
+
+#column{
+  height: 50vh;
+}

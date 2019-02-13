@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:300,400,600");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box; }
+
+@keyframes easeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+body {
+  background-color: #bbbfc2; }
+
+.app {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #fff; }
+
+.main_content {
+  display: flex; }
+
+.heading {
+  position: relative;
+  margin-bottom: 60px; }
+  .heading_img {
+    width: 100%; }
+  .heading_text_container {
+    font-family: "Open Sans", sans-serif;
+    position: absolute;
+    color: #fff;
+    top: 50px;
+    right: 70px;
+    max-width: 50%;
+    text-align: right; }
+    .heading_text_container h2 {
+      font-weight: 300;
+      font-size: 32px;
+      margin-bottom: 15px;
+      opacity: 0;
+      animation-name: easeIn;
+      animation-delay: 0.5s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards; }
+    .heading_text_container h1 {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 48px;
+      text-transform: uppercase;
+      opacity: 0;
+      animation-name: easeIn;
+      animation-delay: 1s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards; }
+
+.list {
+  width: 300px;
+  margin-right: 70px; }
+  .list_item {
+    position: relative;
+    background-image: linear-gradient(90deg, #ebeced, #d1d5d6);
+    width: 300px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    color: #9ba0a4;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 2px; }
+    .list_item:hover {
+      cursor: pointer; }
+      .list_item:hover::after {
+        width: 100%; }
+    .list_item > * {
+      margin-right: 20px;
+      z-index: 21; }
+    .list_item::after,
+    .list_item .selected::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background-color: #fff;
+      z-index: 20;
+      animation-name: "selected";
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      transition-duration: 0.5s; }
+  .list .hovered,
+  .list .selected {
+    color: #36abe1;
+    font-weight: 600; }
+  .list .selected::after {
+    width: 100%; }
+
+.description {
+  margin-right: 70px;
+  width: 100%;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-out;
+  height: 100vh; }
+  .description_window {
+    height: 50vh;
+    overflow: scroll; }
+  .description_step {
+    height: 100vh; }
+  .description p {
+    margin-bottom: 40px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px; }
+
+#column {
+  height: 50vh; }
