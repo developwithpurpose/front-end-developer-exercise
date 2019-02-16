@@ -1,0 +1,15 @@
+//FONTS
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:300,400,600");
+
+//VARIABLES
+$openSans: "Open Sans", sans-serif;
+$sourceSansPro: "Source Sans Pro", sans-serif;
+
+// BASE
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}

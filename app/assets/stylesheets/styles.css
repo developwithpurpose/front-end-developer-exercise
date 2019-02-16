@@ -6,6 +6,12 @@
   padding: 0;
   box-sizing: content-box; }
 
+@keyframes easeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .app {
   position: relative; }
 
@@ -22,12 +28,6 @@
     top: 0;
     right: -15px; }
 
-@keyframes easeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
 body {
   background-color: #bbbfc2; }
 
@@ -40,6 +40,9 @@ body {
   display: flex;
   height: 600px;
   overflow: hidden; }
+
+#column {
+  height: 50vh; }
 
 .heading {
   position: relative;
@@ -140,6 +143,3 @@ body {
   .description .link {
     color: #6fbee7;
     cursor: pointer; }
-
-#column {
-  height: 50vh; }

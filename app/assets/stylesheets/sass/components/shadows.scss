@@ -1,0 +1,23 @@
+.app{
+  position: relative;
+}
+
+.shadow{
+  position: absolute;
+
+  &_left{
+    top: 0;
+    left: -15px;
+  }
+
+  &_bottom{
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &_right{
+    top: 0;
+    right: -15px;
+  }
+}

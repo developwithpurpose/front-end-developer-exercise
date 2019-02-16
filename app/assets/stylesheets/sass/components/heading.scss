@@ -1,0 +1,38 @@
+.heading {
+  position: relative;
+  margin-bottom: 60px;
+  &_img {
+    width: 100%;
+  }
+  &_text_container {
+    font-family: $openSans;
+    position: absolute;
+    color: #fff;
+    top: 50px;
+    right: 70px;
+    max-width: 50%;
+    text-align: right;
+
+    h2 {
+      font-weight: 300;
+      font-size: 32px;
+      margin-bottom: 15px;
+      opacity: 0;
+      animation-name: easeIn;
+      animation-delay: 0.5s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 48px;
+      text-transform: uppercase;
+      opacity: 0;
+      animation-name: easeIn;
+      animation-delay: 1s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+  }
+}

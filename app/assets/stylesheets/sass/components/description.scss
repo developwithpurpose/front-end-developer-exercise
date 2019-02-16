@@ -1,0 +1,25 @@
+.description {
+  margin-right: 70px;
+  width: 100%;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-out;
+  height: 100vh;
+  &_window{
+    height: 50vh;
+    overflow: scroll;
+  }
+  &_step {
+    height: 100vh;
+  }
+  p {
+    margin-bottom: 40px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+  }
+  .link{
+    color: #6fbee7;
+    cursor: pointer;
+  }
+}

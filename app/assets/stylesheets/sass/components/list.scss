@@ -1,0 +1,54 @@
+.list {
+  width: 300px;
+  height: 100vh;
+  margin-right: 70px;
+  &_extension{
+    background-image: linear-gradient(90deg, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+    width: 100%;
+    height: 100%;
+  }
+  &_item {
+    position: relative;
+    background-image: linear-gradient(90deg, #ebeced 0%, #ebeced 95%, #d1d5d6 100%);
+    width: 300px;
+    font-family: $sourceSansPro;
+    font-size: 18px;
+    color: #9ba0a4;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 2px;
+    &:hover {
+      cursor: pointer;
+      &::after {
+        width: 100%;
+      }
+    }
+    & > * {
+      margin-right: 20px;
+      z-index: 21;
+    }
+    &::after,
+    .selected::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background-color: #fff;
+      z-index: 20;
+      animation-name: "selected";
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      transition-duration: 0.5s;
+    }
+  }
+  .hovered,
+  .selected {
+    color: #36abe1;
+    font-weight: 600;
+  }
+  .selected::after {
+    width: 100%;
+  }
+}
