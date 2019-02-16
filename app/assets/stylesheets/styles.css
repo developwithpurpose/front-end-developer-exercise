@@ -137,6 +137,9 @@ body {
     font-size: 13px;
     color: #65686f;
     line-height: 18px; }
+  .description .link {
+    color: #6fbee7;
+    cursor: pointer; }
 
 #column {
   height: 50vh; }

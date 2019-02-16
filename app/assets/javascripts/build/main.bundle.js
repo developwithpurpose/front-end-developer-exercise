@@ -99,6 +99,9 @@ var arrangeFriends = function arrangeFriends(array) {
 };
 
 var setMessages = function setMessages() {
+  var name = function name(friend) {
+    return "<span class=\"link\">" + friend.firstName + " " + friend.lastName + "</span>";
+  };
   var _iteratorNormalCompletion2 = true;
   var _didIteratorError2 = false;
   var _iteratorError2 = undefined;
@@ -114,16 +117,16 @@ var setMessages = function setMessages() {
           continue;
           break;
         case 1:
-          targetElement.innerHTML = list[0].firstName + " " + list[0].lastName + " is also in Baby Step " + (steps.indexOf(list) + 1);
+          targetElement.innerHTML = name(list[0]) + " is also in Baby Step " + (steps.indexOf(list) + 1);
           break;
         case 2:
-          targetElement.innerHTML = list[0].firstName + " " + list[0].lastName + " and " + (list[1].firstName + " " + list[1].lastName) + " are also in Baby Step " + (steps.indexOf(list) + 1);
+          targetElement.innerHTML = name(list[0]) + " and " + name(list[1]) + " are also in Baby Step " + (steps.indexOf(list) + 1);
           break;
         case 3:
-          targetElement.innerHTML = list[0].firstName + " " + list[0].lastName + ", " + (list[1].firstName + " " + list[1].lastName) + ", and one other friend are also in Baby Step " + (steps.indexOf(list) + 1);
+          targetElement.innerHTML = name(list[0]) + ", " + name(list[1]) + ", and one other friend are also in Baby Step " + (steps.indexOf(list) + 1);
           break;
         default:
-          targetElement.innerHTML = list[0].firstName + " " + list[0].lastName + ", " + (list[1].firstName + " " + list[1].lastName) + ", and " + (list.length - 2) + " other friends are also in Baby Step " + (steps.indexOf(list) + 1);
+          targetElement.innerHTML = name(list[0]) + ", " + name(list[1]) + ", and " + (list.length - 2) + " other friends are also in Baby Step " + (steps.indexOf(list) + 1);
           break;
       }
     }
