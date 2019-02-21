@@ -42,7 +42,7 @@ body {
 /* Outer Shadow Effects */
 .effect6	{
     position:relative;       
-        box-shadow:0 -2px 4px 2px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        box-shadow:0 -2px 4px 2px rgba(0, 0, 0, 0.0), 0 0 40px rgba(0, 0, 0, 0.0) inset;
 	}
 
 
@@ -50,7 +50,7 @@ body {
     content:"";
     position: absolute; 
     z-index:-1;
-    box-shadow:0 -8px 6px 10px rgba(0,0,0,0.3);
+    box-shadow:0 -8px 6px 10px rgba(0,0,0,0.2);
     top:10%;
     bottom:0;
     left:10px;
@@ -67,7 +67,6 @@ header {
   	position: relative;
   	color: white;
   	line-height: 15px;
-  	
 	}
 
 
@@ -388,6 +387,7 @@ div.content {
 .tabs input.tab-selector-7:checked ~ .content .content-7  {
     z-index: 100;
     opacity: 1;
+    display: block;
     -webkit-transition: top 600ms;
   	-moz-transition: top 600ms;
   	-o-transition: top 600ms;
