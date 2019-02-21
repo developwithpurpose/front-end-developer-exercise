@@ -214,35 +214,35 @@ main 	{
     
 .tabs input.tab-selector-1:checked ~ .floating-bar	{
 	top:60px;
-	 z-index: 9;
+	z-index: 9;
     opacity: 1;
     background: #ffffff;
 	} 
 .tabs input.tab-selector-2:checked ~ .floating-bar	{
 	top:121px;
-	 z-index: 6;
+	z-index: 6;
     opacity: 1;
     background: #ffffff;
 	} 
 .tabs input.tab-selector-3:checked ~ .floating-bar	{
 	top:182px;
-	 z-index: 9;
+	z-index: 9;
     opacity: 1;
     background: #ffffff;
 	} 
 .tabs input.tab-selector-4:checked ~ .floating-bar	{
 	top:243px;
-	 z-index: 9;
+	z-index: 9;
     opacity: 1;
 	} 
 .tabs input.tab-selector-5:checked ~ .floating-bar	{
 	top:304px;
-	 z-index: 9;
+	z-index: 9;
     opacity: 1;
 	}  
 .tabs input.tab-selector-6:checked ~ .floating-bar	{
 	top:365px;
-	 z-index: 9;
+	z-index: 9;
     opacity: 1;
 	}  
 .tabs input.tab-selector-7:checked ~ .floating-bar  {
@@ -337,7 +337,7 @@ div.content {
 	color: #36abe1;
 	font-size: 30px;
 	line-height: 20px;
-	margin-bottom: 8px;
+	margin-bottom: 14px;
 	display: block;
 	}
 	
@@ -382,55 +382,68 @@ div.content {
 /* Content Sprite Icons */
 
 .content-icon {
-  /* right: 24px;
-  height: 24px;
-  
-  */
-  
-  width: 80px;
-  height: 64px;
-  float: left;
-  margin-right: 15px;
-  margin-left: 10px;
-  background: url("../images/icons/sprites/icons_large.png") no-repeat;
-  z-index: 1;
-  display: block;
-  /*
-   -webkit-transform: translate(-4px, -4px);
-  -moz-transform: translate(-12px, -42px);
-  -ms-transform: translate(-12px, -42px);
-  transform: translate(0px, 0px);
- */
+  	width: 80px;
+  	height: 68px;
+  	float: left;
+  	margin-right: 15px;
+  	z-index: 1;
+  	display: block;
 	}
 
 
 .content-icon-1 {
-  background-position: 0px -460px;
-  /*
-  -webkit-transform: scale(.8);
-  -moz-transform: scale(.8);
-  -ms-transform: scale(.8);
-  transform: scale(.8);
-  */
-   }
+  	background: url("../images/icons/individual/icons_large_bs1_blue.png") no-repeat;
+  	-webkit-transform: translate(0px, -10px);
+  	-moz-transform: translate(0px, -10px);
+  	-ms-transform: translate(0px, -10px);
+  	transform: translate(0px, -10px);
+   	}
 
 .content-icon-2 {
-  background-position: 0px -522px; }
+  	background: url("../images/icons/individual/icons_large_bs2_blue.png") no-repeat;
+   	-webkit-transform: translate(0px, -6px);
+  	-moz-transform: translate(0px, -6px);
+  	-ms-transform: translate(0px, -6px);
+  	transform: translate(0px, -6px);
+  	}
   
-
 .content-icon-3 {
-  background-position: 0px -588px; }
+  	background: url("../images/icons/individual/icons_large_bs3_blue.png") no-repeat;
+   	-webkit-transform: translate(0px, -8px);
+  	-moz-transform: translate(0px, -8px);
+  	-ms-transform: translate(0px, -8px);
+  	transform: translate(0px, -8px);
+  	}
 
 .content-icon-4 {
-  background-position: 0px -650px; }
+  	background: url("../images/icons/individual/icons_large_bs4_blue.png") no-repeat;
+   	-webkit-transform: translate(0px, -4px);
+  	-moz-transform: translate(0px, -4px);
+  	-ms-transform: translate(0px, -4px);
+  	transform: translate(0px, -4px);
+  	}
 
 .content-icon-5 {
-  background-position: 0px -710px;
+  	background: url("../images/icons/individual/icons_large_bs5_blue.png") no-repeat;
+   	-webkit-transform: translate(0px, -4px);
+  	-moz-transform: translate(0px, -4px);
+  	-ms-transform: translate(0px, -4px);
+  	transform: translate(0px, -4px);
    }
 .content-icon-6 {
-  background-position: 0px -750px; }
+  	background: url("../images/icons/individual/icons_large_bs6_blue.png") no-repeat;
+   	-webkit-transform: translate(0px, -8px);
+  	-moz-transform: translate(0px, -8px);
+  	-ms-transform: translate(0px, -8px);
+  	transform: translate(0px, -8px);
+  	}
 
 .content-icon-7 {
-  background-position: 0px -820px; }
+  	background: url("../images/icons/individual/icons_large_bs7_blue.png") no-repeat;
+   	-webkit-transform: translate(0px, -6px);
+  	-moz-transform: translate(0px, -6px);
+  	-ms-transform: translate(0px, -6px);
+  	transform: translate(0px, -6px);
+  	}
 
 
