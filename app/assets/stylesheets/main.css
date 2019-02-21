@@ -13,7 +13,7 @@ main.css
   src: url('/assets/fonts/helvetica.woff?#iefix') format("woff");
   font-style: normal;
   font-weight: normal;
-}
+	}
 
 
 /*** Outer Portions ***/
@@ -21,8 +21,8 @@ body {
 	height: 100%;
 	background-color: #bbbfc2;
 	z-index: -1;
-}
-	
+	}
+		
 .exterior {
 	width: 100%;
 	height: 100%;
@@ -34,8 +34,7 @@ body {
   	top: 0px;
   	margin: auto;
   	width: 980px;
-  	
-  }
+  	}
   
   	/*
   	background: #ebeced;
@@ -55,7 +54,7 @@ header {
   	position: relative;
   	color: white;
   	line-height: 15px;
-}
+	}
 
 
 .headerText {
@@ -67,9 +66,9 @@ header {
     font-size: 32px;
     color: #fff;
     text-align: right;
-}
+	}
 
-.h1sub {
+.h1sub 	{
 	padding-top: 15px;
 	font-weight: bold;
 	font-size: 50px;
@@ -80,25 +79,23 @@ header {
 
 
 
-main {
+main 	{
     position: relative;
 	background-color: #ffffff;
 	padding-top: 60px;
 	height: 600px;
-}
+	}
 
 /** Nav-Tabs **/
 
-.tabs {
+.tabs 	{
     float: left;
 	/* margin: 40px auto; */
 	width: 300px;
 	height:100%;
 	background-color: #ececee;
 	box-shadow: inset -6px 0 8px -6px rgba(0,0,0,0.2);
-	
-
-}
+	}
 
 .tabs input {
 	position: absolute;
@@ -109,47 +106,46 @@ main {
 	top: 60px;
 	opacity: 0;
 	cursor: pointer;
-}
+	}
 
-.tabs input#tab-2{
+.tabs input#tab-2	{
 	top: 120px;
-}
-.tabs input#tab-3{
+	}
+.tabs input#tab-3	{
 	top: 180px;
-}
-.tabs input#tab-4{
+	}
+.tabs input#tab-4	{
 	top: 240px;
-}
-.tabs input#tab-5{
+	}
+.tabs input#tab-5	{
 	top: 300px;
-}
-.tabs input#tab-6{
+	}
+.tabs input#tab-6	{
 	top: 360px;
-}
-.tabs input#tab-7{
+	}
+.tabs input#tab-7	{
 	top: 420px;
-}
+	}
 
 
 /** Tab Label **/
 
 .tabs label {
 	background-color: #ececee;
-	font-size: 15px;
+	font-size: 18px;
 	line-height: 60px;
 	position: relative;
     float: left;
 	display: block;
 	width: 300px;
 	height: 60px;
-	color: #385c5b;
+	color: #9ba0a4;
 	font-size: 18px;
 	font-family: 'Source Sans Pro', sans-serif;
 	border-bottom: 1px solid #ffffff;
 	text-align: center;
 	box-shadow: inset -6px 0 8px -6px rgba(0,0,0,0.2);
-	background-color: #ececee;
-}
+	}
 
 .tabs input:hover + label {
 	/* background: #5ba4a4; */
@@ -186,60 +182,125 @@ main {
 /* Tabs Box Shadow */
 .tabs label:after {
     content: '';
-	background: #ffffff;
+    background: transparent; 
+	/* background: #ffffff; */
 	position: absolute;
 	bottom: -2px;
-	/* left: 360px; */
 	width: 100%;
-	/* height: 2px; */
 	display: block;
-
-
-    
 	}
 
 /* Checked Tab(Label) */
 .tabs input:checked + label {
-    background: #fff;
+    background: transparent; 
 	z-index: 10;
+	color: #36abe1;
+	font-size: 18px; 
 	}
+	
+/* Floating Click Bar */
+ .floating-bar {
+  	position: absolute;
+  	background-color: white;
+  	top: 60px;
+  	height: 60px;
+  	width: 300px;
+  	-webkit-transition: all 300ms;
+  	-moz-transition: all 300ms;
+  	-o-transition: all 300ms;
+  	-ms-transition: all 600ms;
+  	transition: all 300ms; 
+  	}
+    
+.tabs input.tab-selector-1:checked ~ .floating-bar	{
+	top:60px;
+	 z-index: 9;
+    opacity: 1;
+    background: #ffffff;
+	} 
+.tabs input.tab-selector-2:checked ~ .floating-bar	{
+	top:121px;
+	 z-index: 6;
+    opacity: 1;
+    background: #ffffff;
+	} 
+.tabs input.tab-selector-3:checked ~ .floating-bar	{
+	top:182px;
+	 z-index: 9;
+    opacity: 1;
+    background: #ffffff;
+	} 
+.tabs input.tab-selector-4:checked ~ .floating-bar	{
+	top:243px;
+	 z-index: 9;
+    opacity: 1;
+	} 
+.tabs input.tab-selector-5:checked ~ .floating-bar	{
+	top:304px;
+	 z-index: 9;
+    opacity: 1;
+	}  
+.tabs input.tab-selector-6:checked ~ .floating-bar	{
+	top:365px;
+	 z-index: 9;
+    opacity: 1;
+	}  
+.tabs input.tab-selector-7:checked ~ .floating-bar  {
+    top: 426px;
+    z-index: 9;
+    opacity: 1;
+   /* transition: all ease-out 0.2s 0.1s; */
+}
+
+
 	
 /* Nav Sprite Icons */
 
 .nav-icon {
-  right: 24px;
-  height: 24px;
-  width: 30px;
-  background: url("../images/icons/sprites/icons_small.png") no-repeat;
-  z-index: 1;
-  display: block;
-  -webkit-transform: translate(-12px, -42px);
-  -moz-transform: translate(-12px, -42px);
-  -ms-transform: translate(-12px, -42px);
-  transform: translate(-12px, -42px);
-  position: absolute;
-   }
+  	right: 24px;
+  	height: 24px;
+  	width: 30px;
+  	background: url("../images/icons/sprites/icons_small.png") no-repeat;
+  	z-index: 1;
+  	display: block;
+  	-webkit-transform: translate(-12px, -42px);
+  	-moz-transform: translate(-12px, -42px);
+  	-ms-transform: translate(-12px, -42px);
+  	transform: translate(-12px, -42px);
+  	position: absolute;
+	}
 
 .nav-icon-1 {
-  background-position: 0px 0px; }
+  	background-position: 0px 0px; 
+  	}
 
 .nav-icon-2 {
-  background-position: 0px -25px; }
+  	background-position: 0px -25px; 
+  	}
 
 .nav-icon-3 {
-  background-position: 0px -50px; }
+  	background-position: 0px -50px; 
+  	}
 
 .nav-icon-4 {
-  background-position: 0px -75px; }
+  	background-position: 0px -75px; 
+  	}
 
 .nav-icon-5 {
-  background-position: 0px -100px; }
+  	background-position: 0px -100px; 
+  	}
 
 .nav-icon-6 {
-  background-position: 0px -125px; }
+  	background-position: 0px -125px; 
+  	}
 
 .nav-icon-7 {
-  background-position: 0px -150px; }
+  	background-position: 0px -150px; 
+  	}
+  
+  
+
+
 
 /*** Content Tabs ***/
 
@@ -264,13 +325,13 @@ div.content {
 	/* padding: 10px 40px; */
 	z-index: 1;
     opacity: 0;
-     /* transition: all linear 2.1s; */
-     padding-left: 70px;
+    /* transition: all linear 2.1s; */
+    padding-left: 70px;
 	padding-right: 70px;
 	}
 
 .content div h2,
-.content div h3{
+.content div h3	{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 600; 
 	color: #36abe1;
@@ -311,8 +372,12 @@ div.content {
 .tabs input.tab-selector-7:checked ~ .content .content-7  {
     z-index: 100;
     opacity: 1;
-   /* transition: all ease-out 0.2s 0.1s; */
-}
+    -webkit-transition: top 600ms;
+  	-moz-transition: top 600ms;
+  	-o-transition: top 600ms;
+  	-ms-transition: top 600ms;
+  	transition: top 600ms; 
+	}
 
 /* Content Sprite Icons */
 
@@ -350,8 +415,6 @@ div.content {
    }
 
 .content-icon-2 {
-
-
   background-position: 0px -522px; }
   
 
