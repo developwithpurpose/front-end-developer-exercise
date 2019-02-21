@@ -30,21 +30,34 @@ body {
 
 
 .contentWrapper {
-	position: relative;
+	position: absolute;
   	top: 0px;
   	margin: auto;
   	width: 980px;
+  	height: 860px;
+  	margin-bottom: 250px;
   	}
   
-  	/*
-  	background: #ebeced;
-  	background: -webkit-linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
- 	background: -moz-linear-gradient(right, #ebeced 95%, #d1d5d6 100%);
-  	background: -o-linear-gradient(right, #ebeced 95%, #d1d5d6 100%);
-  	background: linear-gradient(to right, #ebeced 95%, #d1d5d6 100%); 
-  	}
-  	*/
-  
+  	
+/* Outer Shadow Effects */
+.effect6	{
+    position:relative;       
+        box-shadow:0 -2px 4px 2px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	}
+
+
+.effect6:before, .effect6:after	{
+    content:"";
+    position: absolute; 
+    z-index:-1;
+    box-shadow:0 -8px 6px 10px rgba(0,0,0,0.3);
+    top:10%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    border-radius:200px / 140px;
+	}
+
 /*** Header ***/  
 header {
   	height: 276px;
@@ -54,6 +67,7 @@ header {
   	position: relative;
   	color: white;
   	line-height: 15px;
+  	
 	}
 
 
@@ -80,10 +94,12 @@ header {
 
 
 main 	{
-    position: relative;
+    position: absolute;
 	background-color: #ffffff;
 	padding-top: 60px;
-	height: 600px;
+	height: 525px;
+	width: 980px;
+	display: block;
 	}
 
 /** Nav-Tabs **/
@@ -93,8 +109,10 @@ main 	{
 	/* margin: 40px auto; */
 	width: 300px;
 	height:100%;
+	z-index: -4;
 	background-color: #ececee;
 	box-shadow: inset -6px 0 8px -6px rgba(0,0,0,0.2);
+	
 	}
 
 .tabs input {
@@ -105,7 +123,6 @@ main 	{
 	left: 0px;
 	top: 60px;
 	opacity: 0;
-	cursor: pointer;
 	}
 
 .tabs input#tab-2	{
@@ -131,7 +148,7 @@ main 	{
 /** Tab Label **/
 
 .tabs label {
-	background-color: #ececee;
+	background-color: transparent;
 	font-size: 18px;
 	line-height: 60px;
 	position: relative;
@@ -144,7 +161,7 @@ main 	{
 	font-family: 'Source Sans Pro', sans-serif;
 	border-bottom: 1px solid #ffffff;
 	text-align: center;
-	box-shadow: inset -6px 0 8px -6px rgba(0,0,0,0.2);
+	/* box-shadow: inset -6px 0 8px -6px rgba(0,0,0,0.2); */
 	}
 
 .tabs input:hover + label {
@@ -306,12 +323,11 @@ main 	{
 
 div.content {
     width: 680px;
-    height: 600px;
-    position: absolute;
-	display: block;
     height: 100%;
+    position: relative;
+	display: block;
     margin-left: 300px;
-	/* float: right; */
+    
 	background-color: #ffffff;
 	line-height: 18px;
 	z-index: 0;
@@ -446,4 +462,16 @@ div.content {
   	transform: translate(0px, -6px);
   	}
 
+/* Hide Accessible Content */
+
+.hide {
+      border: 0; 
+      clip: rect(0 0 0 0); 
+      height: 1px; 
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
 
