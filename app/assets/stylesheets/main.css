@@ -331,6 +331,7 @@ div.content {
 	line-height: 18px;
 	z-index: 0;
 	
+	
 	}
 
 .content div {
@@ -343,6 +344,11 @@ div.content {
     /* transition: all linear 2.1s; */
     padding-left: 70px;
 	padding-right: 70px;
+	-webkit-transition: top 600ms;
+  	-moz-transition: top 600ms;
+  	-o-transition: top 600ms;
+  	-ms-transition: top 600ms;
+  	transition: top 600ms; 
 	}
 
 .content div h2,
@@ -388,11 +394,7 @@ div.content {
     z-index: 100;
     opacity: 1;
     display: block;
-    -webkit-transition: top 600ms;
-  	-moz-transition: top 600ms;
-  	-o-transition: top 600ms;
-  	-ms-transition: top 600ms;
-  	transition: top 600ms; 
+    
 	}
 
 /* Content Sprite Icons */
