@@ -1,7 +1,7 @@
 #Code Challenge
 
 ## HTML
-In my current role, I understand the importance of structural hierarchy of a page's content, and attempted to maintian a clear hierarchy of content within the markup. I also attempted to keep the markup as semantic as possible for clarity of purpose. Where there was copy that was not visible in the mockup, I included the copy in the html and hid it with a CSS clip. To build hide/show tab functionality, I used 'radio' button input labels that corresponded with content divs and required no external scripting. 
+In my current role, I understand the importance of structural hierarchy within a page's content, and attempted to organize the content with this mind. I also attempted to keep the markup as semantic as possible for clarity of purpose. Where there was copy that was not visible in the mockup, I included the copy in the html and hid it with a CSS clip (for accessibility). To build hide/show tab functionality, I used 'radio' button input labels that corresponded with content divs and required no external scripting. 
 
 ## CSS
 In addition to the main.css style sheet, I included a standard reset.css to normalize browser stylings.

@@ -150,11 +150,10 @@ main 	{
 	font-family: 'Source Sans Pro', sans-serif;
 	border-bottom: 1px solid #ffffff;
 	text-align: center;
-	/* box-shadow: inset -6px 0 8px -6px rgba(0,0,0,0.2); */
 	}
 
 .tabs input:hover + label {
-	/* background: #5ba4a4; */
+	/* none */
 	}
 
 .tabs label:first-of-type {
@@ -189,7 +188,6 @@ main 	{
 .tabs label:after {
     content: '';
     background: transparent; 
-	/* background: #ffffff; */
 	position: absolute;
 	bottom: -2px;
 	width: 100%;
@@ -226,7 +224,7 @@ main 	{
 	} 
 .tabs input.tab-selector-2:checked ~ .floating-bar	{
 	top:121px;
-	z-index: 6;
+	z-index: 9;
     opacity: 1;
     background: #ffffff;
 	} 
@@ -255,11 +253,9 @@ main 	{
     top: 426px;
     z-index: 9;
     opacity: 1;
-   /* transition: all ease-out 0.2s 0.1s; */
 }
 
 /* Nav Sprite Icons */
-
 .nav-icon {
   	right: 24px;
   	height: 24px;
@@ -319,11 +315,9 @@ div.content {
     position: absolute;
 	top: 0;
 	left: 0;
-	/* padding: 10px 40px; */
 	z-index: 1;
 	opacity: 0;
 	display: block;
-    /* transition: all linear 2.1s; */
     padding-left: 70px;
 	padding-right: 70px;
 	}
@@ -371,15 +365,14 @@ div.content {
     z-index: 100;
     opacity: 1;
     display: block;
-    -webkit-transition: top 600ms;
-  	-moz-transition: top 600ms;
-  	-o-transition: top 600ms;
-  	-ms-transition: top 600ms;
-  	transition: top 600ms; 
+    -webkit-transition: top 300ms;
+  	-moz-transition: top 300ms;
+  	-o-transition: top 300ms;
+  	-ms-transition: top 300ms;
+  	transition: top 300ms; 
 	}
 
 /* Content Sprite Icons */
-
 .content-icon {
   	width: 80px;
   	height: 68px;
@@ -446,10 +439,6 @@ div.content {
 	  }
 	  
 /* Friend Fill from JSON Data */
-.friends	{
-	
-	}
-
 
 /* Hide Content For Accessibility */
 .hide {
