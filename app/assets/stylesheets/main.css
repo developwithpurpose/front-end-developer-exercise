@@ -1,7 +1,4 @@
-
-/* 
-main.css
-*/
+/* main.css */
 
 /***  Font & Font Families Imports ***/
     @import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400);
@@ -28,7 +25,6 @@ body {
 	height: 100%;
 	}
 
-
 .contentWrapper {
 	position: absolute;
   	top: 0px;
@@ -38,13 +34,11 @@ body {
   	margin-bottom: 250px;
   	}
   
-  	
 /* Outer Shadow Effects */
 .effect6	{
     position:relative;       
         box-shadow:0 -2px 4px 2px rgba(0, 0, 0, 0.0), 0 0 40px rgba(0, 0, 0, 0.0) inset;
 	}
-
 
 .effect6:before, .effect6:after	{
     content:"";
@@ -69,7 +63,6 @@ header {
   	line-height: 15px;
 	}
 
-
 .headerText {
     font-weight: 100;
     font-family: 'Open Sans', sans-serif;
@@ -89,8 +82,6 @@ header {
 	}
 	
 /*** Main ***/	
-
-
 
 main 	{
     position: absolute;
@@ -142,7 +133,6 @@ main 	{
 .tabs input#tab-7	{
 	top: 420px;
 	}
-
 
 /** Tab Label **/
 
@@ -268,8 +258,6 @@ main 	{
    /* transition: all ease-out 0.2s 0.1s; */
 }
 
-
-	
 /* Nav Sprite Icons */
 
 .nav-icon {
@@ -313,10 +301,6 @@ main 	{
 .nav-icon-7 {
   	background-position: 0px -150px; 
   	}
-  
-  
-
-
 
 /*** Content Tabs ***/
 
@@ -326,12 +310,9 @@ div.content {
     position: relative;
 	display: block;
     margin-left: 300px;
-    
 	background-color: #ffffff;
 	line-height: 18px;
 	z-index: 0;
-	
-	
 	}
 
 .content div {
@@ -340,15 +321,11 @@ div.content {
 	left: 0;
 	/* padding: 10px 40px; */
 	z-index: 1;
-    opacity: 0;
+	opacity: 0;
+	display: block;
     /* transition: all linear 2.1s; */
     padding-left: 70px;
 	padding-right: 70px;
-	-webkit-transition: top 600ms;
-  	-moz-transition: top 600ms;
-  	-o-transition: top 600ms;
-  	-ms-transition: top 600ms;
-  	transition: top 600ms; 
 	}
 
 .content div h2,
@@ -394,7 +371,11 @@ div.content {
     z-index: 100;
     opacity: 1;
     display: block;
-    
+    -webkit-transition: top 600ms;
+  	-moz-transition: top 600ms;
+  	-o-transition: top 600ms;
+  	-ms-transition: top 600ms;
+  	transition: top 600ms; 
 	}
 
 /* Content Sprite Icons */
@@ -462,10 +443,15 @@ div.content {
   	-moz-transform: translate(0px, -6px);
   	-ms-transform: translate(0px, -6px);
   	transform: translate(0px, -6px);
-  	}
+	  }
+	  
+/* Friend Fill from JSON Data */
+.friends	{
+	
+	}
 
-/* Hide Accessible Content */
 
+/* Hide Content For Accessibility */
 .hide {
       border: 0; 
       clip: rect(0 0 0 0); 
@@ -476,4 +462,3 @@ div.content {
       position: absolute;
       width: 1px;
     }
-
