@@ -6,9 +6,15 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+    "prestart": "npm run build",
+    "start": "http-server ./app -d false",
+    "build:styles": "npx tailwind build ./app/assets/stylesheets/styles.css -c ./app/assets/stylesheets/tailwind.js -o ./app/assets/stylesheets/generated-styles.css",
+    "build": "npm run build:styles && npm run minify:js",
+    "minify:js": "node ./bin/minify.js"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "http-server": "^0.8.0",
+    "minify": "^4.1.1",
+    "tailwindcss": "^0.7.4"
   }
 }

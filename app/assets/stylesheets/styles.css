@@ -1,0 +1,155 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/preflight";
+ */
+@tailwind preflight;
+
+/**
+ * This injects any component classes registered by plugins.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/components";
+ */
+@tailwind components;
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "components/buttons";
+ * @import "components/forms";
+ */
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/utilities";
+ */
+@tailwind utilities;
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example :
+ *
+ * .bg-pattern-graph-paper { ... }
+ * .skew-45 { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "utilities/background-patterns";
+ * @import "utilities/skew-transforms";
+ */
+body {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.body-container {
+    /* This is the width of the header image, to avoid blowout  body container will flow with width */
+    width: 976px;
+}
+
+.bstep-page-header {
+    height: 100%;
+}
+
+.bg-header-text {
+    background-image: url("../images/header_text.jpg");
+    background-repeat:no-repeat;
+    height: 276px;
+    width: 976px;
+}
+
+.bstep-page-sub-header {
+    height: 60px;
+}
+
+.p-bottom-3-75 {
+    padding-bottom: 3.75rem;
+}
+
+.nav-gradient {
+    background: linear-gradient(to right, #ebeced, #d1d5d6);
+}
+
+.bstep-menu-item {
+    font-size: 18px;
+    line-height: 3.75rem;
+    display: block;
+}
+
+.bstep-content-section {
+    height: 40rem;
+    scroll-behavior: smooth;
+}
+
+.padding-left-70px {
+    padding-left: 70px;
+}
+
+.bstep-section {
+    height: 40rem;
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+
+
+/**
+ * Navigation Helpers
+ */
+.ico {
+    height: 25px;
+    width: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bstep-content-navigation a:active, .bstep-content-navigation a:focus { 
+    background-color: white;
+}
+
+#bstep-nav-link-1 .ico { background-image: url("../images/icons/individual/icons_small_bs1.png"); }
+#bstep-nav-link-1.active .ico { background-image: url("../images/icons/individual/icons_small_bs1_blue.png"); }
+
+#bstep-nav-link-2 .ico { background-image: url("../images/icons/individual/icons_small_bs2.png"); }
+#bstep-nav-link-2.active .ico { background-image: url("../images/icons/individual/icons_small_bs2_blue.png"); }
+
+#bstep-nav-link-3 .ico { background-image: url("../images/icons/individual/icons_small_bs3.png"); }
+#bstep-nav-link-3.active .ico { background-image: url("../images/icons/individual/icons_small_bs3_blue.png"); }
+
+#bstep-nav-link-4 .ico { background-image: url("../images/icons/individual/icons_small_bs4.png"); }
+#bstep-nav-link-4.active .ico { background-image: url("../images/icons/individual/icons_small_bs4_blue.png"); }
+
+#bstep-nav-link-5 .ico { background-image: url("../images/icons/individual/icons_small_bs5.png"); }
+#bstep-nav-link-5.active .ico { background-image: url("../images/icons/individual/icons_small_bs5_blue.png"); }
+
+#bstep-nav-link-6 .ico { background-image: url("../images/icons/individual/icons_small_bs6.png"); }
+#bstep-nav-link-6.active .ico { background-image: url("../images/icons/individual/icons_small_bs6_blue.png"); }
+
+#bstep-nav-link-7 .ico { background-image: url("../images/icons/individual/icons_small_bs7.png"); }
+#bstep-nav-link-7.active .ico { background-image: url("../images/icons/individual/icons_small_bs7_blue.png"); }
