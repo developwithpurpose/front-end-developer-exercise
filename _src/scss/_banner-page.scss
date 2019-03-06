@@ -1,0 +1,40 @@
+/* ===========================
+   Banner Page
+   =========================== */
+
+.banner {
+
+  &-page {
+    height: 17.7rem;
+    margin: 0;
+    padding: 5rem 7rem;
+    text-align: right;
+  }
+
+  &-1 {
+    background: url('../images/header.jpg') no-repeat;
+  }
+}
+
+h1 {
+  margin: 0 0 0 auto;
+  max-width: 44.5rem;
+  padding: 0;
+}
+
+.heading {
+  color: $basic;
+  font-family: $font-third;
+  
+
+  &-bold {
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: .96;
+    text-transform: uppercase;
+  }
+  &-light {
+    font-size: 3.2rem;
+    font-weight: 300;
+  }
+}

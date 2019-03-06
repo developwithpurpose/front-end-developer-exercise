@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+// ----------------------
+// == Site settings
+// ----------------------
+
+// Fonts
+$font-primary:  Helvetica, Arial, sans-serif;
+$font-third: 'Open Sans', sans-serif;
+$font-secondary: 'Source Sans Pro', sans-serif;
+
+
+// = Colors
+// -----------------------------
+
+$basic: #fff;
+$page: #bbbfc2;
+$main-heading: #36abe1;
+$link-hover: $main-heading;
+$link-primary: #6fbee7;
+$text-primary: #65686f;
+$step-link: #9ba0a4;
+
+
+// = Grid
+// -----------------------------
+
+// Max width wrapper
+$wrapper-width: 114rem;
+
+//= Mixins - Media Query
+//-----------------------------
+$bp-1: 450px;
+$bp-2: 768px;
+$bp-3: 970px;
+$bp-4: 1170px;
+
+@mixin screen-xs {
+
+	@media (min-width: $bp-1) {
+		@content;
+	}
+}
+
+@mixin screen-sm {
+
+	@media (min-width: $bp-2) {
+		@content;
+	}
+}
+
+@mixin screen-md {
+  
+  @media (min-width: $bp-3) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  
+  @media (min-width: $bp-4) {
+    @content;
+  }
+}
