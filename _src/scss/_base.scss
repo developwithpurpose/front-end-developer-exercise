@@ -229,8 +229,12 @@ nav {
 }
 
 .scroll-pane {
-	max-height: 19.5rem;
+	max-height: 26.5rem;
 	overflow: hidden;
+}
+
+.step-content {
+	padding-bottom: 7rem;
 }
 
 .header-section,
@@ -253,6 +257,12 @@ nav {
 	font-size: 1.8rem;
 	font-weight: 300;
 	line-height: 1.2;
+}
+
+.step-message {
+	span {
+		color: $link-primary;
+	}
 }
 
 .head-wrap {
@@ -320,3 +330,4 @@ nav {
 		background-image: url('../images/icons/individual/icons_large_bs7_blue.png');
 	}
 }
+
