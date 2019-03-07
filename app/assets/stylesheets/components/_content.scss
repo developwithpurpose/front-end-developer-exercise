@@ -1,0 +1,22 @@
+.c-content {
+    display: flex;
+    flex-wrap:wrap;
+    width: 70%;
+    overflow: hidden;
+    height: 400px;
+}
+
+.c-content-slide {
+    padding: 0 70px 70px;
+    height: 100%;
+}
+
+.c-content-slide__heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.c-content-slide__icon {
+    margin-right: 10px;
+}

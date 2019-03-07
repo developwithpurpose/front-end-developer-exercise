@@ -1,0 +1,12 @@
+body {
+    background: $bgGray;
+    font-family: Helvetica, Arial, sans-serif;
+    color: $fontGray;
+    display: flex;
+    justify-content: center;
+}
+
+body,
+body * {
+    box-sizing: border-box;
+}

@@ -1,0 +1,112 @@
+.c-content-nav {
+    width: 30%;
+    background: #ebeced;
+    background: linear-gradient(left, #ebeced 95%, #d1d5d6 100%);
+    border-top: 1px solid #ebeced;
+}
+
+.c-content-nav__highlight {
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: $white;
+    z-index: 0;
+}
+
+.c-content-nav__holder {
+    position: relative;
+    padding-bottom: 120px;
+}
+
+.c-content-nav__item {
+    position: relative;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    text-align: right;
+    border-bottom: 1px solid $white;
+    z-index:1;
+}
+
+.c-content-nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: $fontLightGray;
+    font-size: 18px;
+    line-height: 60px;
+    padding: 0 24px;
+    text-decoration: none;
+    &:active,
+    &--active {
+        color: $fontBlue;
+        font-weight: 600;
+    }
+    &--step-1 {
+        .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs1.png)
+        }
+        &.c-content-nav__link--active .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs1_blue.png)
+        }
+    }
+    &--step-2 {
+        .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs2.png)
+        }
+        &.c-content-nav__link--active .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs2_blue.png)
+        }
+    }
+    &--step-3 {
+        .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs3.png)
+        }
+        &.c-content-nav__link--active .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs3_blue.png)
+        }
+    }
+    &--step-4 {
+        .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs4.png)
+        }
+        &.c-content-nav__link--active .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs4_blue.png)
+        }
+    }
+    &--step-5 {
+        .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs5.png)
+        }
+        &.c-content-nav__link--active .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs5_blue.png)
+        }
+    }
+    &--step-6 {
+        .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs6.png)
+        }
+        &.c-content-nav__link--active .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs6_blue.png)
+        }
+    }
+    &--step-7 {
+        .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs7.png)
+        }
+        &.c-content-nav__link--active .c-content-nav__icon {
+            background-image: url(/assets/images/icons/individual/icons_small_bs7_blue.png)
+        }
+    }
+}
+
+.c-content-nav__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 24px;
+    background-size: auto 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
