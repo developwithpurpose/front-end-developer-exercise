@@ -1,0 +1,130 @@
+html{
+	scroll-behavior: smooth;
+}
+body {
+	background-color: #bbbfc2;
+	font-family: Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #65686f;
+}
+#outer {
+	width: 1010px;
+	margin: auto;
+	margin-top: -8px;
+}
+#container {
+	background-color: #fff;
+	width: 980px;
+	height: 924px;
+	float: left;
+}
+	#hdr {
+		height: 276px;
+		background-color: #000;
+		color: #fff;
+	}
+		#hdr-line1 {
+			padding-top: 50px;
+			padding-right: 70px;
+			font-family: "Open Sans",sans-serif;
+			font-weight: 300;
+			font-size: 32px;
+			text-align: right;
+		}
+		#hdr-line2 {
+			padding-top: 15px;
+			padding-right: 70px;
+			font-family: "Open Sans",sans-serif;
+			font-weight: 700;
+			font-size: 50px;
+			line-height: 48px;
+			text-align: right;
+		}
+	#content {
+		margin-top: 60px;
+	}
+		#steps {
+			float: left;
+			height: 588px;
+			width: 300px;
+			background-color: #ebeced;
+			text-align: right;
+		}
+			.step-link {
+				line-height: 60px;
+				border-bottom: 1px solid #fff;
+				font-family: "Source Sans Pro", sans-serif;
+				font-weight: 400;
+				font-size: 18px;
+				color: #9ba0a4;
+				background-color: rgba(255,255,255,0.0);
+				transition: 1s;
+			}
+			.step-link-active {
+				font-weight: 600;
+				color: #36abe1;
+				background-color: rgba(255,255,255,1.0);
+				transition: 1s;
+			}
+			.step-link:hover, .step-link-active:hover {
+				cursor: pointer;
+			}
+				.step-link a {
+					color: #9ba0a4;
+					text-decoration: none;
+				}
+				.step-link-active a {
+					color: #36abe1;
+					text-decoration: none;
+				}
+				.step-link img, .step-link-active img {
+					padding: 0 24px;
+					padding-top: 18px;
+					float: right;	
+				}
+		#step-content {
+			float: right;
+			height: 588px;
+			width: 540px;
+			padding: 0 70px;
+		}
+		#step-content-container {
+			height: 240px;
+			width: 540px;
+			overflow-y: scroll;
+			scroll-behavior: smooth;
+		}
+			.step-content-header {
+				font-family: "Source Sans Pro", sans-serif;
+				padding-bottom: 24px;
+				line-height: 20px;
+			}
+				.content-hdr-img {
+					float: left;
+					padding-right: 14px;
+				}
+				.content-hdr-title {
+					font-weight: 600;
+					font-size: 30px;
+					color: #36abe1;
+					padding-top: 14px;
+					padding-bottom: 4px;
+				}
+				.content-hdr-subt {
+					font-weight: 300;
+					font-size: 18px;
+					color: #5c6366;
+				}
+			.step-content-body {
+				clear: left;
+				padding-bottom: 50px;
+			}
+			#step-content-footer {
+				padding-top: 40px;
+				line-height: normal;
+			}
+				#step-content-footer a {
+					color: #6fbee7;
+					text-decoration: none;
+				}

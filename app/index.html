@@ -1,3 +1,180 @@
 <!doctype html>
 <title>Front-End Developer Exercise</title>
-The server is running!
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700|Source+Sans+Pro:300,400,600" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="assets/stylesheets/babysteps_style.css">
+	<script src="assets/javascripts/babysteps_script.js"></script>
+	<script>
+		var currentStep = 1;
+		
+		function checkForFriends(stepToCheck) {
+			var dynamicMssg = "";
+			var i = "";
+			var NameList = [];
+			var firstInList = "";
+			var secondInList = "";
+			var numOfOtherFriends = 0;
+
+			$.getJSON("baby-steps.json", function(JSONdata) {
+				for (i in JSONdata.friends) {
+				if (JSONdata.friends[i].babyStep == stepToCheck) {
+						if (NameList.length === 0) {
+							NameList = [JSONdata.friends[i].lastName+","+JSONdata.friends[i].firstName];
+						}
+						else {
+							NameList.push(JSONdata.friends[i].lastName+","+JSONdata.friends[i].firstName);
+						}
+					}
+				}
+				if (NameList.length != 0) {
+					NameList.sort();
+					firstInList = NameList[0];
+					var tempNameSplit = firstInList.split(",");
+					firstInList = tempNameSplit[1] + " " + tempNameSplit[0];
+					if (NameList.length > 1) {
+						secondInList = NameList[1];
+						var tempNameSplit = secondInList.split(",");
+						secondInList = tempNameSplit[1] + " " + tempNameSplit[0];
+					}
+					if (NameList.length > 2) {
+						numOfOtherFriends = NameList.length - 2;
+					}
+				}
+				if (firstInList != "" && secondInList == "") {
+					dynamicMssg = "<a href='#' style='text-decoration: none;'>" + firstInList + "</a> is";
+				}
+				else if (firstInList != "" && secondInList != "" && numOfOtherFriends === 0) {
+					dynamicMssg = "<a href='#' style='text-decoration: none;'>" + firstInList + "</a> and <a href='#' style='text-decoration: none;'>" + secondInList + "</a> are";
+				}
+				else if (firstInList != "" && secondInList != "" && numOfOtherFriends === 1) {
+					dynamicMssg = "<a href='#' style='text-decoration: none;'>" +firstInList + "</a>, <a href='#' style='text-decoration: none;'>" + secondInList + "</a>, and 1 other friend are";
+				}
+				else if (firstInList != "" && secondInList != "" && numOfOtherFriends > 1) {
+					dynamicMssg = "<a href='#' style='text-decoration: none;'>" +firstInList + "</a>, <a href='#' style='text-decoration: none;'>" + secondInList + "</a>, and " + numOfOtherFriends + " other friends are";
+				}
+				
+				if (dynamicMssg != "") {
+					document.getElementById("step-content-footer").innerHTML = dynamicMssg + " also in Baby Step " + stepToCheck.toString();
+				}
+				else {
+					document.getElementById("step-content-footer").innerHTML = "";
+				}
+			});
+		}
+
+		function clickOnStep(newStep) {
+			if (currentStep != newStep) {
+				var oldStepID = "steplink"+currentStep.toString();
+				var newStepID = "steplink"+newStep.toString();
+				var oldStepImgID = "img"+currentStep.toString();
+				var newStepImgID = "img"+newStep.toString();
+				document.getElementById(oldStepID).classList.remove("step-link-active");
+				document.getElementById(newStepID).classList.add("step-link-active");
+				document.getElementById(oldStepImgID).src = "assets/images/icons/individual/icons_small_bs"+currentStep.toString()+".png";
+				document.getElementById(newStepImgID).src = "assets/images/icons/individual/icons_small_bs"+newStep.toString()+"_blue.png";
+				checkForFriends(newStep);
+				currentStep = newStep;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="outer">
+		<img src="assets/images/shadow_left.jpg" style="float:left;">
+		<div id="container">
+			<div id="hdr" style="background-image: url(assets/images/header.jpg);">	
+				<div id="hdr-line1">Real Live, Love and Money with</div>
+				<div id="hdr-line2">AMERICA'S MOST<br>TRUSTED GUY</div>
+			</div>
+			<div id="content">
+				<div id="steps" style="background-image: url(assets/images/shadow_left_nav.jpg); background-repeat: repeat-y;">
+					<div class="step-link step-link-active" id="steplink1" onclick="clickOnStep(1)">
+						<a href="#step1">Baby Step 1</a><img id="img1" src="assets/images/icons/individual/icons_small_bs1_blue.png"></div>
+					<div class="step-link" id="steplink2" onclick="clickOnStep(2)">
+						<a href="#step2">Baby Step 2</a><img id="img2" src="assets/images/icons/individual/icons_small_bs2.png"></div>
+					<div class="step-link" id="steplink3" onclick="clickOnStep(3)">
+						<a href="#step3">Baby Step 3</a><img id="img3" src="assets/images/icons/individual/icons_small_bs3.png"></div>
+					<div class="step-link" id="steplink4" onclick="clickOnStep(4)">
+						<a href="#step4">Baby Step 4</a><img id="img4" src="assets/images/icons/individual/icons_small_bs4.png"></div>
+					<div class="step-link" id="steplink5" onclick="clickOnStep(5)">
+						<a href="#step5">Baby Step 5</a><img id="img5" src="assets/images/icons/individual/icons_small_bs5.png"></div>
+					<div class="step-link" id="steplink6" onclick="clickOnStep(6)">
+						<a href="#step6">Baby Step 6</a><img id="img6" src="assets/images/icons/individual/icons_small_bs6.png"></div>
+					<div class="step-link" id="steplink7" onclick="clickOnStep(7)">
+						<a href="#step7">Baby Step 7</a><img id="img7" src="assets/images/icons/individual/icons_small_bs7.png"></div>
+				</div>
+				<div id="step-content">
+					<div id="step-content-container">
+						<div class="step-content-header" id="step1">
+							<img class="content-hdr-img" src="assets/images/icons/individual/icons_large_bs1_blue.png">
+							<div class="content-hdr-title">Baby Step 1</div>
+							<div class="content-hdr-subt">$1,000 Emergency Fund</div>
+						</div>
+						<div class="step-content-body">
+							An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.<br><br>
+							This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!
+						</div>
+						<div class="step-content-header" id="step2">
+							<img class="content-hdr-img" src="assets/images/icons/individual/icons_large_bs2_blue.png">
+							<div class="content-hdr-title">Baby Step 2</div>
+							<div class="content-hdr-subt">Pay off all debt using the Debt Snowball</div>
+						</div>
+						<div class="step-content-body">
+							List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first.<br><br>
+							The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.
+						</div>
+						<div class="step-content-header" id="step3">
+							<img class="content-hdr-img" src="assets/images/icons/individual/icons_large_bs3_blue.png">
+							<div class="content-hdr-title">Baby Step 3</div>
+							<div class="content-hdr-subt">3 to 6 months of exepenses in savings</div>
+						</div>
+						<div class="step-content-body">
+							Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra” money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?” Your answer to that question is how much you should save.<br><br>
+							Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you’re paying to yourself, a buffer between you and life.
+						</div>
+						<div class="step-content-header" id="step4">
+							<img class="content-hdr-img" src="assets/images/icons/individual/icons_large_bs4_blue.png">
+							<div class="content-hdr-title">Baby Step 4</div>
+							<div class="content-hdr-subt">Invest 15% of household income for retirement</div>
+						</div>
+						<div class="step-content-body">
+							When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.<br><br>
+							Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.
+						</div>
+						<div class="step-content-header" id="step5">
+							<img class="content-hdr-img" src="assets/images/icons/individual/icons_large_bs5_blue.png">
+							<div class="content-hdr-title">Baby Step 5</div>
+							<div class="content-hdr-subt">College funding for children</div>
+						</div>
+						<div class="step-content-body">
+							When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.<br><br>
+							Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.
+						</div>
+						<div class="step-content-header" id="step6">
+							<img class="content-hdr-img" src="assets/images/icons/individual/icons_large_bs6_blue.png">
+							<div class="content-hdr-title">Baby Step 6</div>
+							<div class="content-hdr-subt">Pay off your house early</div>
+						</div>
+						<div class="step-content-body">
+							Now it’s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.<br><br>
+							As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!
+						</div>
+						<div class="step-content-header" id="step7">
+							<img class="content-hdr-img" src="assets/images/icons/individual/icons_large_bs7_blue.png">
+							<div class="content-hdr-title">Baby Step 7</div>
+							<div class="content-hdr-subt">Build wealth and give!</div>
+						</div>
+						<div class="step-content-body">
+							It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!<br><br>
+							Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.
+						</div>
+					</div>
+					<div id="step-content-footer"></div>
+				</div>
+			</div>
+			<img src="assets/images/shadow_bottom.jpg">
+		</div>
+		<img src="assets/images/shadow_right.jpg" style="float:right;">
+	</div>
+</body>
