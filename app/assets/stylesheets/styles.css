@@ -1,0 +1,167 @@
+/*-- Reset Css --*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  margin: 0 0 60px;
+}
+
+.header img {
+  width: 100%;
+  height: auto;
+}
+
+.header-text {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  margin: 70px 50px;
+}
+
+.thin {
+  color: #fff;
+  font-weight: 100;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+h1.top {
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: right;
+  line-height: 35px;
+  margin: 5px 0 0;
+}
+
+h1.bottom {
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: right;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  width: 30%;
+  height: auto;
+  background-image:
+    linear-gradient(to left,
+    #d1d5d6,
+    #ebeced 3%);
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: #9ba0a4;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: solid 1px #fff;
+}
+
+.tab button:last-child {
+  border-bottom: none;
+}
+
+.icon {
+  height: 30px;
+  position: relative;
+  left: 30%;
+  top: 5px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  color: #36abe1;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #fff;
+  color: #36abe1;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 70px;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+
+.tab-title {
+  line-height: 18px;
+}
+
+.tab-img {
+  display: flex;
+  align-items: center;
+}
+
+.tab-img img {
+  margin: 0 15px 0 0;
+  position: relative;
+  bottom: 10px;
+}
+
+.tab-title p {
+  color: #5c6366 !important;
+  font-size: 18px;
+}
+
+.tabcontent h3 {
+  color: #36abe1;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.tabcontent p {
+  margin: 15px auto;
+}
+
+.tabs-p {
+  color: #65686f;
+}
+
+.tabs-p p:last-child{
+  margin-bottom: 40px;
+}
+
+/*--Item-box styles--*/
+.item-box {
+  display: flex;
+}
+
+.item-fName, .item-lName {
+  color: #36abe1;
+  font-size: 15px;
+}
+
+.item-step {
+  color: #5c6366;
+}
+
+.new-list {
+  display: flex;
+}
+
+li {
+  margin: 0 10px 0 0;
+  list-style: none;
+  color: cornflowerblue;
+}
