@@ -22,7 +22,7 @@ rendered by DOM manipulation and the data is retrieved in JSON format from a Jav
 to include a noscript tag in the metadata and redirect the user to a static HTML page on Baby Step 1 which 
 functions without JavaScript and links to mirroring pages that represent the other 6 Baby Steps. The downside
 of this approach is that this would not scale well as the combinations of page states increases. In addition,
-this is difficult to maintain as the content is dusplicated across multiple files. One solution to this would
+this is difficult to maintain as the content is duplicated across multiple files. One solution to this would
 be to generate these static files in a build script so that the core content is housed in one place. I am very
 interested in learning more optimal ways of supporting non JavaScript browsers, but this is a working solution 
 in order to comply with the spec.
@@ -34,9 +34,9 @@ specific pixel requirements called out in the spec. This unfortunately is not su
 My intention was to refactor this code to support older browser versions but I was not able to do this in time
 with the 4 hour mark.
 
-CSS Transision
+CSS Transition
 --------------
-My animation is pretty simple. I added a CSS transition to the background of the button when selected. This animation
+My animation is pretty simple. I added a CSS fade transition to the background of the button when selected. This animation
 is not expected to work in browsers that do not support JavaScript because the animation is triggered by DOM manipulation.
 
 Improvements
