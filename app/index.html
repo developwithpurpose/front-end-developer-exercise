@@ -1,3 +1,95 @@
 <!doctype html>
-<title>Front-End Developer Exercise</title>
-The server is running!
+<head>
+    <meta charset="utf-8">
+
+    <title>Front-End Developer Exercise</title>
+    <meta name="description" content="Front-End Developer Exercise">
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=nojssupport/baby1.html">
+    </noscript>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascripts/util.js" type="text/javascript"></script>
+    <script src="assets/javascripts/data.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="pageContainer">
+        <div class="topContent">
+            <div class="leftContent"></div>
+            <div class="contentContainer">
+                <div class="imageHeaderContainer">
+                    <img src="assets/images/header_text.jpg" class="imageHeader"/>
+                </div>
+                <div class="imageDivider"></div>
+                <div class="mainContentContainer">
+                    <div class="tableContainer">
+                        <div class="tableButton" onClick="selectBabyStep(this.id)" id="baby1">
+                            <div class="tableButtonText">
+                                Baby Step 1
+                            </div>
+                            <img src="assets/images/icons/individual/icons_small_bs1.png" class="buttonImg" id="img1" />
+                        </div>
+                        <div class="tableButton" onClick="selectBabyStep(this.id)" id="baby2">
+                            <div class="tableButtonText">
+                                Baby Step 2
+                            </div>
+                            <img src="assets/images/icons/individual/icons_small_bs2.png" class="buttonImg" id="img2" />
+                        </div>
+                        <div class="tableButton" onClick="selectBabyStep(this.id)" id="baby3">
+                            <div class="tableButtonText">
+                                Baby Step 3
+                            </div>
+                            <img src="assets/images/icons/individual/icons_small_bs3.png" class="buttonImg" id="img3" />
+                        </div>
+                        <div class="tableButton" onClick="selectBabyStep(this.id)" id="baby4">
+                            <div class="tableButtonText">
+                                Baby Step 4
+                            </div>
+                            <img src="assets/images/icons/individual/icons_small_bs4.png" class="buttonImg" id="img4" />
+                        </div>
+                        <div class="tableButton" onClick="selectBabyStep(this.id)" id="baby5">
+                            <div class="tableButtonText">
+                                Baby Step 5
+                            </div>
+                            <img src="assets/images/icons/individual/icons_small_bs5.png" class="buttonImg" id="img5" />
+                        </div>
+                        <div class="tableButton" onClick="selectBabyStep(this.id)" id="baby6">
+                            <div class="tableButtonText">
+                                Baby Step 6
+                            </div>
+                            <img src="assets/images/icons/individual/icons_small_bs6.png" class="buttonImg" id="img6" />
+                        </div>
+                        <div class="tableButton" onClick="selectBabyStep(this.id)" id="baby7">
+                            <div class="tableButtonText">
+                                Baby Step 7
+                            </div>
+                            <img src="assets/images/icons/individual/icons_small_bs7.png" class="buttonImg" id="img7" />
+                        </div>
+                    </div>
+                    <div class="descriptionContainer">
+                        <div class="mainDiscriptionContainer">
+                            <div class="titleContainer">
+                                <div class="titleImageContainer">
+                                    <img src="assets/images/icons/individual/icons_large_bs1_blue.png" id="imageIcon" />
+                                </div>
+                                <div class="titleSubtitleContainer">
+                                    <div class="titleText" id="titleText"></div>
+                                    <div class="subtitleText" id="subtitleText"></div>
+                                </div>
+                            </div>
+                            <div class="titleDivider"></div>
+                            <div class="description" id="descriptionText"></div>
+                            <div class="descriptionDivider"></div>
+                            <div class="friendContainer" id="friendContainer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightContent"></div>
+        </div>
+        <div class="bottomContent"></div>
+    </div>
+</body>
+</html>

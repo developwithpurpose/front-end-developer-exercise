@@ -1,0 +1,181 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.topContent {
+    display: flex;
+    flex-direction: row;
+    flex: 7;
+    background-color: #fff;
+}
+
+.bottomContent {
+    flex: 1;
+    background-color: #bbbfc2;
+}
+
+.leftContent {
+    flex: 1;
+    background-color: #bbbfc2;
+}
+
+.rightContent {
+    flex: 1;
+    background-color: #bbbfc2;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.imageHeader {
+    flex: 2;
+}
+
+.imageDivider {
+    height: 60px;
+    background-color: #fff;
+}
+
+.mainContentContainer {
+    display: flex;
+    flex-direction: row;
+    flex: 7;
+    background-color: #fff;
+}
+
+.tableContainer {
+    overflow: auto;
+    flex: 1;
+    background: linear-gradient(to right, #ebeced 95%, #d1d5d6);
+}
+
+.tableButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    background: linear-gradient(to right, #ebeced 95%, #d1d5d6);
+    color: #9BA0A4;
+    line-height: 60px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.tableButtonSelected {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    transition: background-color 1s ease;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #fff;
+    color: #36abe1;
+    line-height: 60px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.buttonImg {
+    margin-right: 24px;
+    margin-left: 24px;
+    height: 25px;
+    width: 30px;
+}
+
+.descriptionContainer {
+    margin-left: 70px;
+    margin-right: 70px;
+    flex-grow: 1;
+    background-color: #fff;
+    flex: 3;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #fff;
+}
+
+.titleImageContainer {
+    margin-right: 10px;
+}
+
+.titleSubtitleContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.titleText {
+    transition: 1s ease;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #36abe1;
+    line-height: 30px;
+}
+
+.subtitleText {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #5c6366;
+    line-height: 20px;
+}
+
+.titleDivider {
+    height: 24px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.description {
+    background-color: #fff;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+}
+
+.descriptionDivider {
+    height: 24px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.friendContainer {
+    width: 100%;
+    background-color: #fff;
+}
+
+.userText {
+    font-family: helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+}
+
+.userLink {
+    font-family: helvetica, sans-serif;
+    font-size: 13px;
+    color: #6fbee7;
+    line-height: 18px;
+}
+
