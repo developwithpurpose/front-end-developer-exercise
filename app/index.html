@@ -6,38 +6,39 @@
   <link rel="stylesheet" href="./dist/main.css">
 </head>
 <body>
-  <header>
+  <header class="header--steps">
     <img src="assets/images/header_text.jpg" alt="Dave Ramsey">
   </header>
-  <nav class="nav__container">
-    <ul class="nav--steps">
-      <li>
-        <a href="">Baby Step 1</a>
-      </li>
-      <li>
-        <a href="">Baby Step 2</a>
-      </li>
-      <li>
-        <a href="">Baby Step 3</a>
-      </li>
-      <li>
-        <a href="">Baby Step 4</a>
-      </li>
-      <li>
-        <a href="">Baby Step 5</a>
-      </li>
-      <li>
-        <a href="">Baby Step 6</a>
-      </li>
-      <li>
-        <a href="">Baby Step 7</a>
-      </li>
-    </ul>
-  </nav>
 
-  <main>
-    <section>
-      <article class="step__container">
+  <main class="body--steps">
+    <nav class="nav__container">
+      <ul class="nav--steps">
+        <li id="nav--step-1" class="active">
+          <a href="#step-1" class="baby-step__link">Baby Step 1</a>
+        </li>
+        <li id="nav--step-2">
+          <a href="#step-2" class="baby-step__link">Baby Step 2</a>
+        </li>
+        <li id="nav--step-3">
+          <a href="#step-3" class="baby-step__link">Baby Step 3</a>
+        </li>
+        <li id="nav--step-4">
+          <a href="#step-4" class="baby-step__link">Baby Step 4</a>
+        </li>
+        <li id="nav--step-5">
+          <a href="#step-5" class="baby-step__link">Baby Step 5</a>
+        </li>
+        <li id="nav--step-6">
+          <a href="#step-6" class="baby-step__link">Baby Step 6</a>
+        </li>
+        <li id="nav--step-7">
+          <a href="#step-7" class="baby-step__link">Baby Step 7</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="steps__container">
+      <article id="step-1" class="step__container active">
         <div class="step__header">
           <h1>Baby Step 1</h1>
           <h3>$1,000 Emergency Fund</h3>
@@ -48,7 +49,7 @@
         </div>
       </article>
 
-      <article class="step__container">
+      <article id="step-2" class="step__container">
         <div class="step__header">
           <h1>Baby Step 2</h1>
           <h3>Pay off all debt using the Debt Snowball</h3>
@@ -59,10 +60,10 @@
         </div>
       </article>
 
-      <article class="step__container">
+      <article id="step-3" class="step__container">
         <div class="step__header">
           <h1>Baby Step 3</h1>
-          <h3>3 to 6 months of exepenses in savings</h3>
+          <h3>3 to 6 months of expenses in savings</h3>
         </div>
         <div class="step__body">
           <p>Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra” money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?” Your answer to that question is how much you should save.</p>
@@ -70,7 +71,7 @@
         </div>
       </article>
 
-      <article class="step__container">
+      <article id="step-4" class="step__container">
         <div class="step__header">
           <h1>Baby Step 4</h1>
           <h3>Invest 15% of household income for retirement</h3>
@@ -81,7 +82,7 @@
         </div>
       </article>
 
-      <article class="step__container">
+      <article id="step-5" class="step__container">
         <div class="step__header">
           <h1>Baby Step 5</h1>
           <h3>College funding for children</h3>
@@ -92,7 +93,7 @@
         </div>
       </article>
 
-      <article class="step__container">
+      <article id="step-6" class="step__container">
         <div class="step__header">
           <h1>Baby Step 6</h1>
           <h3>Pay off your house early</h3>
@@ -103,7 +104,7 @@
         </div>
       </article>
 
-      <article class="step__container">
+      <article id="step-7" class="step__container">
         <div class="step__header">
           <h1>Baby Step 7</h1>
           <h3>Build wealth and give!</h3>
@@ -113,6 +114,8 @@
           <p>Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.</p>
         </div>
       </article>
+
+      <div class="friends__container"></div>
     </section>
   </main>
   <script src="./dist/bundle.js"></script>
