@@ -1,78 +1,40 @@
-import '../stylesheets/main.scss'
-import $ from 'jquery'
-import _ from 'lodash'
-import '../../baby-steps'
+import '../stylesheets/main.scss';
+import $ from 'jquery';
+import '../../baby-steps';
+
+import { retrieveFriends, friendsOnStep, setFriendsHtml } from './friends';
 
 $(document).ready(() => {
-  retrieveFriends();
+    retrieveFriends();
+});
+
+$('#step-1, #nav--step-1').addClass('active').siblings().not('.friends__container').addClass('hidden');
+
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
 });
 
 $('a.baby-step__link').click(() => {
-  const target = event.target;
-  const activeStep = activeStepNumber(target.innerHTML);
-  const friends = JSON.parse(window.sessionStorage.getItem('friends'));
-  const onStep = friendsOnStep(friends, activeStep);
-  console.log('onStep', onStep);
+    const target = event.target;
+    const activeStep = activeStepNumber(target.innerHTML);
+    const friends = JSON.parse(window.sessionStorage.getItem('friends'));
+    const onStep = friendsOnStep(friends, activeStep);
 
-  setFriendsHtml(onStep);
-  setActiveClass(activeStep);
+    setFriendsHtml(onStep, activeStep);
+    setActiveClass(activeStep);
 });
 
 const activeStepNumber = (step) => {
-  const stringArr = step.split('');
-  return parseInt(stringArr[stringArr.length - 1]);
-};
-
-const retrieveFriends = () => {
-  $.getJSON('../../baby-steps.json', (data) => {
-    window.sessionStorage.setItem('friends', JSON.stringify(data.friends));
-  })
-};
-
-const friendsOnStep = (friends, step) => {
-  const stepFriends = friends.filter(friend => friend.babyStep === step);
-  if (stepFriends.length) {
-    return _.sortBy(stepFriends, ['lastName'])
-  }
-
-  return stepFriends;
-};
-
-const setFriendsHtml = (friends) => {
-  if (friends.length > 3) {
-    $('.friends__container').empty().prepend(
-      `<div>
-        <span class="friend--name">${friends[0].firstName} ${friends[0].lastName}</span>, <span class="friend--name">${friends[1].firstName} ${friends[1].lastName}</span> and ${friends.length - 2} other friends are on this step
-      </div>`
-    )
-
-  } else if (friends.length === 3) {
-    $('.friends__container').empty().prepend(
-      `<div>
-        <span class="friend--name">${friends[0].firstName} ${friends[0].lastName}</span>, <span class="friend--name">${friends[1].firstName} ${friends[1].lastName}</span> and ${friends.length - 2} other friends is on this step
-      </div>`
-    )
-  } else if (friends.length === 2) {
-    $('.friends__container').empty().prepend(
-      `<div>
-        <span class="friend--name">${friends[0].firstName} ${friends[0].lastName}</span>, <span class="friend--name">${friends[1].firstName} ${friends[1].lastName}</span> are on this step
-      </div>`
-    )
-  } else if (friends.length === 1) {
-    $('.friends__container').empty().prepend(
-      `<div>
-        <span class="friend--name">${friends[0].firstName} ${friends[0].lastName}</span> is on this step
-      </div>`
-    )
-  } else {
-    $('.friends__container').empty();
-  }
+    const stringArr = step.split('');
+    return parseInt(stringArr[stringArr.length - 1]);
 };
 
 const setActiveClass = (stepNumber) => {
-  const articleStepId = `step-${stepNumber}`;
-  const navStepId = `nav--step-${stepNumber}`;
+    const articleStepId = `step-${ stepNumber }`;
+    const navStepId = `nav--step-${ stepNumber }`;
 
-  $('li.active, article.active').removeClass('active');
-  $(`#${articleStepId}, #${navStepId}`).addClass('active');
+    $('li.active, article.active').removeClass('active').addClass('hidden');
+    $(`#${articleStepId}, #${navStepId}`).addClass('active').removeClass('hidden');
 };
