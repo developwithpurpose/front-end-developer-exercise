@@ -6,24 +6,23 @@ import { retrieveFriends, friendsOnStep, setFriendsHtml } from './friends';
 
 $(document).ready(() => {
     retrieveFriends();
-});
 
-$('#step-1, #nav--step-1').addClass('active').siblings().not('.friends__container').addClass('hidden');
+    $('#step-1, #nav--step-1').addClass('active').siblings().not('.friends__container').addClass('hidden');
 
-$('a').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-});
+    $('a').click(function(){
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0});
+    });
 
-$('a.baby-step__link').click(() => {
-    const target = event.target;
-    const activeStep = activeStepNumber(target.innerHTML);
-    const friends = JSON.parse(window.sessionStorage.getItem('friends'));
-    const onStep = friendsOnStep(friends, activeStep);
+    $('a.baby-step__link').click(() => {
+        const target = event.target;
+        const activeStep = activeStepNumber(target.innerHTML);
+        const friends = JSON.parse(window.sessionStorage.getItem('friends'));
+        const onStep = friendsOnStep(friends, activeStep);
 
-    setFriendsHtml(onStep, activeStep);
-    setActiveClass(activeStep);
+        setFriendsHtml(onStep, activeStep);
+        setActiveClass(activeStep);
+    });
 });
 
 const activeStepNumber = (step) => {
