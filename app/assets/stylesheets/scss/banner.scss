@@ -1,0 +1,32 @@
+.banner {
+  position: relative;
+  background: url("../images/header.jpg") no-repeat;
+  background-size: contain;
+  width: 980px;
+  height: 276px;
+
+  &__text-container {
+    position: absolute;
+    display: block;
+    top: 50px;
+    right: 70px;
+  }
+
+  &__slogan {
+    text-align: right;
+    font-family: "Open Sans";
+    color: #fff;
+
+    &--first {
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 45px; /* 32 + 15 - 2(--bold) */
+    }
+
+    &--bold {
+      font-size: 50px;
+      line-height: 48px;
+      font-weight: bold;
+    }
+  }
+}

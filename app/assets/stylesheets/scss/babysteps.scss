@@ -1,0 +1,60 @@
+.baby-step__icon--small {
+  display: inline;
+  background: #000 url("../images/icons/sprites/icons_small.png") no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.baby-steps {
+  position: relative;
+  padding: 0 70px;
+}
+
+.baby-step__icon--large {
+  float: left;
+  margin-right: 10px;
+}
+
+div[class*="baby-steps__"] {
+  position: relative;
+
+  p {
+    font-family: "Helvetica, Arial";
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #65686f;
+    margin-bottom: 24px;
+  }
+}
+
+.baby-step {
+  &__title {
+    padding-top: 15px;
+    font-family: "Source Sans Pro";
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 30px;
+    color: #36abe1;
+    margin: 0;
+  }
+
+  &__action {
+    position: relative;
+    top: 7px;
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 20px;
+    color: #5c6366;
+    margin: 0 0 24px 0;
+  }
+
+  &__friends {
+    font-family: "Helvetica, Arial";
+    font-weight: normal;
+    font-size: 13px;
+    color: #65686f;
+    margin-top: 40px;
+  }
+}

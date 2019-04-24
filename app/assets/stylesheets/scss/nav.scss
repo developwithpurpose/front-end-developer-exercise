@@ -1,0 +1,54 @@
+nav.navbar--vertical {
+  background: linear-gradient(to right, #ebeced, #d1d5d6);
+  box-shadow: 2px 0 5px -2px rgba(0, 0, 0, 0.4);
+
+  ul > li {
+    border-bottom: 1px solid #fff;
+
+    > a {
+      position: relative;
+      display: block;
+      font-family: "Source Sans Pro";
+      font-size: 18px;
+      line-height: 60px;
+      text-align: right;
+      font-weight: normal;
+      text-decoration: none;
+      padding: 0 24px;
+      color: #9ba0a4;
+      width: 276px;
+      transition: background-color 500ms ease-in-out;
+
+      .navbar__icons {
+        position: relative;
+        top: 7px;
+        display: inline-block;
+        margin-left: 24px;
+
+        width: 35px;
+        height: 25px;
+        background: url("../images/icons/sprites/icons_small.png") no-repeat;
+      }
+
+      &.active {
+        background: #fff;
+        color: #36abe1;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+/* normal grey icons */
+@for $i from 0 through 6 {
+  .navbar__icons-#{$i + 1} {
+    background-position: 0 -#{$i * 25px} !important;
+  }
+}
+
+/* blue icons (7 * 25px height = 175 for blue starting poing in sprite)*/
+@for $i from 0 through 6 {
+  .navbar__icons-#{$i + 1}--blue {
+    background-position: 0 -#{175 + $i * 25px} !important;
+  }
+}

@@ -6,7 +6,8 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+    "start": "http-server ./app -d false",
+    "sass:watch": "sass --watch ./app/assets/stylesheets/scss/styles.scss:./app/assets/stylesheets/styles.css"
   },
   "devDependencies": {
     "http-server": "^0.8.0"
