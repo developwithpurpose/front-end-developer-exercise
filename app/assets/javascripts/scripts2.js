@@ -1,4 +1,3 @@
-let friends = {};
 const nav = document.querySelector("nav");
 nav.addEventListener("click", selectBabyStep);
 
@@ -12,7 +11,7 @@ babySteps.forEach((step, i) => {
 fetch("baby-steps.json")
   .then(res => res.json())
   .then(data => {
-    friends = sortFriends(data.friends);
+    const friends = sortFriends(data.friends);
     setFriendMessages(friends);
   });
 
