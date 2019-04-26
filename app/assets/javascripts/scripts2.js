@@ -1,4 +1,4 @@
-const nav = document.querySelector("nav");
+const nav = document.querySelector("nav ul");
 nav.addEventListener("click", selectBabyStep);
 
 const babySteps = document.querySelectorAll('div[class*="baby-steps__"]');
@@ -80,7 +80,7 @@ function selectBabyStep(e) {
   e.preventDefault();
   e.stopPropagation();
   const { target } = e;
-  if (target.className.match(/navbar--vertical/)) {
+  if (!target.dataset.step) {
     return;
   }
 
