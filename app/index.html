@@ -45,46 +45,86 @@
 			background-color: #fff;
 			padding-top: 60px;
 			display: flex;
-			/*background-image: linear-gradient(90deg, #ebeced, #d1d5d6);*/
 		}
 
 		.index {
-			background-image: linear-gradient(90deg, #ebeced, #d1d5d6);
+			background: rgb(235,236,237);
+			background: linear-gradient(90deg, rgba(235,236,237,1) 95%, rgba(209,213,214,1) 100%);
 			width: 33%;
 		}
 
 		.tab {
 			text-align: right;
 			clear: both;
-			animation-name: tab-selection;
-			animation-duration: 4s;
+			transition: 1s;
+			width: 100%;
+			cursor: pointer;
+			outline:none;
+			border: none;
+			padding: 5px;
 		}
 
-		@keyframes tab-selection {
-		  from {
-		  	background-color: #ebeced;
-		  }
-		  to {
-		  	background-color: #fff;
-		  }
-		}
-
-		.index p {
+		.tab p {
 			font-family: Source Sans Pro;
 			font-size: 18px;
 			color: #9ba0a4;
-			line-height: 60px;
-			animation-name: tab-name-selection;
-			animation-duration: 4s;
+			transition: 1s;
+			margin-right: 50px;
 		}
 
-		@keyframes tab-name-selection {
-		  from {
-		  	color: #9ba0a4;
-		  }
-		  to {
-		  	color: #6fbee7;
-		  }
+		.tab:focus p {
+			color: #6fbee7;
+		}
+
+		#tab1 {
+			background: url(/assets/images/icons/individual/icons_small_bs1.png) no-repeat 95%;
+		}
+		#tab2 {
+			background: url(/assets/images/icons/individual/icons_small_bs2.png) no-repeat 95%;
+		}
+		#tab3 {
+			background: url(/assets/images/icons/individual/icons_small_bs3.png) no-repeat 95%;
+		}
+		#tab4 {
+			background: url(/assets/images/icons/individual/icons_small_bs4.png) no-repeat 95%;
+		}
+		#tab5 {
+			background: url(/assets/images/icons/individual/icons_small_bs5.png) no-repeat 95%;
+		}
+		#tab6 {
+			background: url(/assets/images/icons/individual/icons_small_bs6.png) no-repeat 95%;
+		}
+		#tab7 {
+			background: url(/assets/images/icons/individual/icons_small_bs7.png) no-repeat 95%;
+		}
+
+		#tab1:focus {
+			background: url(/assets/images/icons/individual/icons_small_bs1_blue.png) no-repeat right;
+			background-color: #fff;
+		}
+		#tab2:focus {
+			background: url(/assets/images/icons/individual/icons_small_bs2_blue.png) no-repeat right;
+			background-color: #fff;
+		}
+		#tab3:focus {
+			background: url(/assets/images/icons/individual/icons_small_bs3_blue.png) no-repeat right;
+			background-color: #fff;
+		}
+		#tab4:focus {
+			background: url(/assets/images/icons/individual/icons_small_bs4_blue.png) no-repeat right;
+			background-color: #fff;
+		}
+		#tab5:focus {
+			background: url(/assets/images/icons/individual/icons_small_bs5_blue.png) no-repeat right;
+			background-color: #fff;
+		}
+		#tab6:focus {
+			background: url(/assets/images/icons/individual/icons_small_bs6_blue.png) no-repeat right;
+			background-color: #fff;
+		}
+		#tab7:focus {
+			background: url(/assets/images/icons/individual/icons_small_bs7_blue.png) no-repeat right;
+			background-color: #fff;
 		}
 
 		.cards {
@@ -99,16 +139,9 @@
 			clear: both;
 		}
 
-		.icon-small {
-			width: 24px;
-			float: right;
-		}
-
-		.heading {
-		}
-
 		.card {
 			padding: 0px 70px;
+			display: none;
 		}
 
 		.friend-info { 
@@ -116,19 +149,6 @@
 			font-size: 13px;
 			margin: 40px 0px;
 		}
-
-		#background-gradient-right {
-			float: right;
-		}
-
-		#background-gradient-left {
-			float: left;
-		}
-
-		#background-gradient-bottom {
-			
-		}
-
 
 	</style>
 
@@ -200,44 +220,45 @@
 		return message;
 		
 	}
+
+	function showCard(babyStepNumber) {
+		for (var i = 1; i < 8; i++)
+		{
+			var x = document.getElementById("card" + i);
+			if (i === babyStepNumber) {
+			    x.style.display = "block";
+			  } else {
+			    x.style.display = "none";
+			  }
+			}
+		}
 	</script>
 	<div id="jumbotron">
 		<img src="assets/images/header_text.jpg">
 	</div>
-
-<!-- <img id="background-gradient-right" src="assets/images/shadow_right.jpg">
-	<img id="background-gradient-left" src="assets/images/shadow_left.jpg">
-	<img id="background-gradient-bottom" src="assets/images/shadow_bottom.jpg"> -->
 	<div class="main">
 		<div class="index">
-			<div class="tab" style="cursor: pointer;" onclick="theFunction()">
+			<button class="tab" onclick="showCard(1)" id="tab1">
 				<p>Baby Step 1</p>
-				<img class="icon-small" src="/assets/images/icons/individual/icons_small_bs1.png">
-			</div>
-			<div class="tab" style="cursor: pointer;" onclick="theFunction()">
+			</button>
+			<button class="tab" onclick="showCard(2)" id="tab2">
 				<p>Baby Step 2</p>
-				<img class="icon-small" src="/assets/images/icons/individual/icons_small_bs2.png">
-			</div>
-			<div class="tab" style="cursor: pointer;" onclick="theFunction()">
+			</button>
+			<button class="tab" onclick="showCard(3)" id="tab3">
 				<p>Baby Step 3</p>
-				<img class="icon-small" src="/assets/images/icons/individual/icons_small_bs3.png">
-			</div>
-			<div class="tab" style="cursor: pointer;" onclick="theFunction()">
+			</button>
+			<button class="tab" onclick="showCard(4)" id="tab4">
 				<p>Baby Step 4</p>
-				<img class="icon-small" src="/assets/images/icons/individual/icons_small_bs4.png">
-			</div>
-			<div class="tab" style="cursor: pointer;" onclick="theFunction()">
+			</button>
+			<button class="tab" onclick="showCard(5)" id="tab5">
 				<p>Baby Step 5</p>
-				<img class="icon-small" src="/assets/images/icons/individual/icons_small_bs5.png">
-			</div>
-			<div class="tab" style="cursor: pointer;" onclick="theFunction()">
+			</button>
+			<button class="tab" onclick="showCard(6)" id="tab6">
 				<p>Baby Step 6</p>
-				<img class="icon-small" src="/assets/images/icons/individual/icons_small_bs6.png">
-			</div>
-			<div class="tab" style="cursor: pointer;" onclick="theFunction()">
+			</button>
+			<button class="tab" onclick="showCard(7)" id="tab7">
 				<p>Baby Step 7</p>
-				<img class="icon-small" src="/assets/images/icons/individual/icons_small_bs7.png">
-			</div>
+			</button>
 		</div>
 
 		<div class="cards">
