@@ -9,38 +9,42 @@
 			if (this.readyState == 4 && this.status == 200) {
 				
 
-      			const data = JSON.parse(this.responseText)
-      			const friends = data.friends
+				const data = JSON.parse(this.responseText)
+				const friends = data.friends
 
-      			var steps = [
-      				[],
-      				[],
-      				[],
-      				[],
-      				[],
-      				[],
-      				[],
-      				[]
-      			]
-      			for (var i = 0; i < friends.length; i++) {
-      				var step = friends[i].babyStep;
-      				steps[step].push(friends[i]);
-      			}
-      			
-      			document.getElementById("friend-info-1").innerHTML =
-      				createMessage(steps[1], 1);
-      				document.getElementById("friend-info-2").innerHTML =
-      				createMessage(steps[2], 2);
-      				document.getElementById("friend-info-3").innerHTML =
-      				createMessage(steps[3], 3);
-      				document.getElementById("friend-info-4").innerHTML =
-      				createMessage(steps[4], 4)
-      				document.getElementById("friend-info-5").innerHTML =
-      				createMessage(steps[5], 5)
-      				document.getElementById("friend-info-6").innerHTML =
-      				createMessage(steps[6], 6)
-      				document.getElementById("friend-info-7").innerHTML = 
-      				createMessage(steps[7], 7)
+				var steps = [
+					[],
+					[],
+					[],
+					[],
+					[],
+					[],
+					[],
+					[]
+				]
+				for (var i = 0; i < friends.length; i++) {
+					var step = friends[i].babyStep;
+					steps[step].push(friends[i]);
+				}
+
+				for (var i = 0; i < steps.length; i++) {
+					steps[i].sort(alphabetize);
+				}
+				
+				document.getElementById("friend-info-1").innerHTML =
+					createMessage(steps[1], 1);
+					document.getElementById("friend-info-2").innerHTML =
+					createMessage(steps[2], 2);
+					document.getElementById("friend-info-3").innerHTML =
+					createMessage(steps[3], 3);
+					document.getElementById("friend-info-4").innerHTML =
+					createMessage(steps[4], 4)
+					document.getElementById("friend-info-5").innerHTML =
+					createMessage(steps[5], 5)
+					document.getElementById("friend-info-6").innerHTML =
+					createMessage(steps[6], 6)
+					document.getElementById("friend-info-7").innerHTML = 
+					createMessage(steps[7], 7)
 			}
 		};
 		xhttp.open("GET", "/baby-steps.json", true);
@@ -64,8 +68,17 @@
 		else {
 			message = "<a>" + people[0].firstName + " " + people[0].lastName + "</a>, <a>" + people[1].firstName + " " + people[1].lastName + "</a>, and " + (people.length - 2) + " other friends are also in Baby Step " + babyStepNumber + ".";
 		}
-		return message;
-		
+		return message;	
+	}
+
+	function alphabetize( person1, person2 ) {
+		if ( person1.lastName < person2.lastName ){
+			return -1;
+		}
+		if ( person1.lastName > person2.lastName ){
+			return 1;
+		}
+		return 0;
 	}
 
 	function showCard(babyStepNumber) {
@@ -73,9 +86,9 @@
 		{
 			var x = document.getElementById("card" + i);
 			if (i === babyStepNumber) {
-			    x.style.display = "block";
+				x.style.display = "block";
 			  } else {
-			    x.style.display = "none";
+				x.style.display = "none";
 			  }
 			}
 		}
