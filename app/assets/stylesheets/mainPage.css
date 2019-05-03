@@ -1,8 +1,146 @@
 body {
-	background-color: #bbb;
+	background-color: #bbbfc2;
+}
+
+p {
+	font-family: Helvetica;
+	font-size: 13px;
+	color: #65686f;
+	line-height: 18px;
+}
+
+a {
+	color: #6fbee7;
+}
+
+h3 {
+	font-family: Source Sans Pro;
+	font-weight: 600;
+	font-size: 30px;
+	color: #36abe1;
+	line-height: 20px;
+	margin: 5px;
+}
+
+h4 {
+	font-family: Source Sans Pro;
+	font-weight: lighter;
+	font-size: 18px;
+	color: #5c6366;
+	line-height: 20px;
+	margin: 5px;
+}
+
+#jumbotron img{
+	width: 100%;
+	height: auto;
+}
+
+.main {
+	background-color: #fff;
+	padding-top: 60px;
+	display: flex;
+}
+
+.index {
+	background: rgb(235,236,237);
+	background: linear-gradient(90deg, rgba(235,236,237,1) 95%, rgba(209,213,214,1) 100%);
+	width: 33%;
+}
+
+.tab {
+	text-align: right;
+	clear: both;
+	transition: 1s;
+	width: 100%;
+	cursor: pointer;
+	outline:none;
+	border: none;
+	padding: 5px;
+}
+
+.tab p {
+	font-family: Source Sans Pro;
+	font-size: 18px;
+	color: #9ba0a4;
+	transition: 1s;
+	margin-right: 50px;
+}
+
+.tab:focus p {
+	color: #6fbee7;
+}
+
+#tab1 {
+	background: url(/assets/images/icons/individual/icons_small_bs1.png) no-repeat 95%;
+}
+#tab2 {
+	background: url(/assets/images/icons/individual/icons_small_bs2.png) no-repeat 95%;
+}
+#tab3 {
+	background: url(/assets/images/icons/individual/icons_small_bs3.png) no-repeat 95%;
+}
+#tab4 {
+	background: url(/assets/images/icons/individual/icons_small_bs4.png) no-repeat 95%;
+}
+#tab5 {
+	background: url(/assets/images/icons/individual/icons_small_bs5.png) no-repeat 95%;
+}
+#tab6 {
+	background: url(/assets/images/icons/individual/icons_small_bs6.png) no-repeat 95%;
+}
+#tab7 {
+	background: url(/assets/images/icons/individual/icons_small_bs7.png) no-repeat 95%;
+}
+
+#tab1:focus {
+	background: url(/assets/images/icons/individual/icons_small_bs1_blue.png) no-repeat right;
+	background-color: #fff;
+}
+#tab2:focus {
+	background: url(/assets/images/icons/individual/icons_small_bs2_blue.png) no-repeat right;
+	background-color: #fff;
+}
+#tab3:focus {
+	background: url(/assets/images/icons/individual/icons_small_bs3_blue.png) no-repeat right;
+	background-color: #fff;
+}
+#tab4:focus {
+	background: url(/assets/images/icons/individual/icons_small_bs4_blue.png) no-repeat right;
+	background-color: #fff;
+}
+#tab5:focus {
+	background: url(/assets/images/icons/individual/icons_small_bs5_blue.png) no-repeat right;
+	background-color: #fff;
+}
+#tab6:focus {
+	background: url(/assets/images/icons/individual/icons_small_bs6_blue.png) no-repeat right;
+	background-color: #fff;
+}
+#tab7:focus {
+	background: url(/assets/images/icons/individual/icons_small_bs7_blue.png) no-repeat right;
+	background-color: #fff;
+}
+
+.cards {
+	flex: 1;
 }
 
 .icon {
-	width: 70px;
+	width: 700px;
 	height: 50px;
+	float: left;
+	padding: 0px 10px;
+	clear: both;
+}
+
+.card {
+	padding: 0px 70px;
+	display: none;
+}
+
+.friend-info { 
+	font-family: Helvetica;
+	font-size: 13px;
+	margin: 40px 0px;
 }
