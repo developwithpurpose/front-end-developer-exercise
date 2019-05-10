@@ -84,3 +84,36 @@
     background:white;
 }
 
+.stepsHeader{
+    font-weight: 600;
+    font-size:30px;
+    line-height: 20px;
+    color:#36abe1;
+}
+
+.stepsText{
+    margin-left:155px;
+    margin-top:-55px;
+}
+
+.stepsSubheader{
+    font-weight: 300;
+    font-size:18px;
+    margin-left:155px;
+    padding-bottom:24px;
+}
+
+.stepsInfo{
+    margin-left:70px;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color:#65686f;
+    line-height: 18px;
+    padding-bottom: 10px;
+    margin-right:70px;
+}
+
+.largeIcon{
+    margin-left:40px;
+}
