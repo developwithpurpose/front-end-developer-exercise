@@ -15,3 +15,8 @@ Document your submission here (optional, but recommended)
 <!-- 7. Added bootstrap to the HTML files and set up the vertical tabs to hold the info -->
 
 <!-- 8. Built out HTML tabs to include appropriate info info -->
+
+<!-- 9. Built out all HTML sections to inclue the large blue images, titles, and the info tied to the step -->
+
+<!-- Added the css to equal the requirements from the "annotated-mockup.jpg" file  -->
+
