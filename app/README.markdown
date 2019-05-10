@@ -22,5 +22,5 @@ Document your submission here (optional, but recommended)
 
 <!-- 11. Added JS files and a fetch call to get the names on the console. -->
 
-<!--  -->
+<!-- 12. Logic for the friends functionality -->
 

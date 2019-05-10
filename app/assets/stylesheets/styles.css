@@ -4,7 +4,6 @@
     margin: 0;
 }
 
-
 .header1Text {
     position: absolute;
     top: 50px;
@@ -25,12 +24,10 @@
     font-size: 50px;
     text-align: end;
     line-height: 48px;
-  }
-
+}
 
 .nav-tabs--vertical {
     border-bottom: none;
-    /* border-right: 1px solid #ddd; */
     display: flex;
     flex-flow: column nowrap;
 }
@@ -76,7 +73,7 @@
 
 .icon{
     padding-left:24px;
-    padding-right:24px;
+    /* padding-right:24px; */
 }
 
 .navPadding{
@@ -127,36 +124,54 @@
     margin-left: 70px;
     margin-right: 70px;
     color:#65686f;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 #jsonDataContainerStep3{
     margin-left: 70px;
     margin-right: 70px;
     color:#65686f;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 #jsonDataContainerStep4{
     margin-left: 70px;
     margin-right: 70px;
     color:#65686f;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 #jsonDataContainerStep5{
     margin-left: 70px;
     margin-right: 70px;
     color:#65686f;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 #jsonDataContainerStep6{
     margin-left: 70px;
     margin-right: 70px;
     color:#65686f;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 #jsonDataContainerStep7{
     margin-left: 70px;
     margin-right: 70px;
     color:#65686f;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 .active{
@@ -169,3 +184,15 @@
 .stepsSubheader{
     color:#5c6366;
 }
+
+.nav-link{
+    padding-top:0;
+    padding-bottom:0;
+    padding-right:24px !important;
+    padding-left:120px;
+}
+
+.tab-content{
+    padding-left:-55px;
+}
+
