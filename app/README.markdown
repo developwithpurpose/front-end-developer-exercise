@@ -18,5 +18,9 @@ Document your submission here (optional, but recommended)
 
 <!-- 9. Built out all HTML sections to inclue the large blue images, titles, and the info tied to the step -->
 
-<!-- Added the css to equal the requirements from the "annotated-mockup.jpg" file  -->
+<!-- 10. Added the css to equal the requirements from the "annotated-mockup.jpg" file  -->
+
+<!-- 11. Added JS files and a fetch call to get the names on the console. -->
+
+<!--  -->
 
