@@ -24,3 +24,4 @@ Document your submission here (optional, but recommended)
 
 <!-- 12. Logic for the friends functionality -->
 
+<!-- 13. Went back and got super specific with the CSS and double checked the requirements -->

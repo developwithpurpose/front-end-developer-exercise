@@ -12,6 +12,8 @@
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 32px;
+    margin:0;
+    padding-bottom: 15px;
   }
 
   .header2Text {
@@ -99,6 +101,7 @@
     font-size:18px;
     margin-left:155px;
     padding-bottom:24px;
+    margin-bottom:0px;
 }
 
 .stepsInfo{
@@ -108,8 +111,13 @@
     font-weight: 400;
     color:#65686f;
     line-height: 18px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    margin-bottom:0px;
     margin-right:70px;
+}
+
+.stepsInfoBottom{
+    padding-bottom: 40px;
 }
 
 .largeIcon{
