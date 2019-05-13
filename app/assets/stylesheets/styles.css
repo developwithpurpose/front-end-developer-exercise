@@ -108,17 +108,17 @@ html body {
   width: 60%;
 }
 
-.main-title {
+.step-title {
   padding-left: 90px;
 }
-.main-title h3 {
+.step-title h3 {
   margin: 0px;
   font-family: 'Source Sans Pro';
   font-weight: 600;
   font-size: 30px;
   color: #36abe1;
 }
-.main-title h4 {
+.step-title h4 {
   margin: 0px;
   font-family: 'Source Sans Pro';
   font-weight: 300;
@@ -161,11 +161,15 @@ html body {
   background: url("../images/icons/individual/icons_large_bs7_blue.png");
 }
 
-.main-body p {
+.step-body p {
   margin: 24px 0px 0px;
   font-family: Helvetica;
   font-weight: 400;
   font-size: 13px;
   color: #65686f;
   line-height: 18px;
+}
+
+.hide {
+  display: none;
 }
