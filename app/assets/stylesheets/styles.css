@@ -31,3 +31,75 @@ html body {
   font-size: 32px;
   font-weight: 300;
 }
+
+.body {
+  background: #fff;
+  padding-top: 60px;
+  padding-right: 70px;
+  display: flex;
+}
+
+.nav {
+  width: 30%;
+  background-image: linear-gradient(to right, #ebeced 95%, #d1d5d6 100%);
+}
+
+.nav-tabs {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  font-family: 'Source Sans Pro';
+}
+
+.nav-tab {
+  border-bottom: 2px solid #fff;
+  height: 60px;
+  display: flex;
+}
+.nav-tab:hover {
+  cursor: pointer;
+}
+
+.nav-icon {
+  height: 25px;
+  width: 30px;
+  margin: auto 24px;
+  float: right;
+}
+
+.nav-text {
+  color: #9ba0a4;
+  width: 70%;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.nav-icon-bs1 {
+  background: url("../images/icons/individual/icons_small_bs1.png");
+}
+
+.nav-icon-bs2 {
+  background: url("../images/icons/individual/icons_small_bs2.png");
+}
+
+.nav-icon-bs3 {
+  background: url("../images/icons/individual/icons_small_bs3.png");
+}
+
+.nav-icon-bs4 {
+  background: url("../images/icons/individual/icons_small_bs4.png");
+}
+
+.nav-icon-bs5 {
+  background: url("../images/icons/individual/icons_small_bs5.png");
+}
+
+.nav-icon-bs6 {
+  background: url("../images/icons/individual/icons_small_bs6.png");
+}
+
+.nav-icon-bs7 {
+  background: url("../images/icons/individual/icons_small_bs7.png");
+}
