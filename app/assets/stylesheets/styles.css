@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
 
 html body {
   background: #bbbfc2;
@@ -35,7 +35,6 @@ html body {
 .body {
   background: #fff;
   padding-top: 60px;
-  padding-right: 70px;
   display: flex;
 }
 
@@ -102,4 +101,71 @@ html body {
 
 .nav-icon-bs7 {
   background: url("../images/icons/individual/icons_small_bs7.png");
+}
+
+.main {
+  margin: 0px 70px;
+  width: 60%;
+}
+
+.main-title {
+  padding-left: 90px;
+}
+.main-title h3 {
+  margin: 0px;
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-size: 30px;
+  color: #36abe1;
+}
+.main-title h4 {
+  margin: 0px;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  font-size: 18px;
+  color: #5c6366;
+}
+
+.large-icon {
+  height: 65px;
+  width: 77px;
+  display: block;
+  float: left;
+}
+
+.large-icon-bs1 {
+  background: url("../images/icons/individual/icons_large_bs1_blue.png");
+}
+
+.large-icon-bs2 {
+  background: url("../images/icons/individual/icons_large_bs2_blue.png");
+}
+
+.large-icon-bs3 {
+  background: url("../images/icons/individual/icons_large_bs3_blue.png");
+}
+
+.large-icon-bs4 {
+  background: url("../images/icons/individual/icons_large_bs4_blue.png");
+}
+
+.large-icon-bs5 {
+  background: url("../images/icons/individual/icons_large_bs5_blue.png");
+}
+
+.large-icon-bs6 {
+  background: url("../images/icons/individual/icons_large_bs6_blue.png");
+}
+
+.large-icon-bs7 {
+  background: url("../images/icons/individual/icons_large_bs7_blue.png");
+}
+
+.main-body p {
+  margin: 24px 0px 0px;
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
 }
