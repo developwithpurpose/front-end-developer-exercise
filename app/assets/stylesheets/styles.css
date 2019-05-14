@@ -69,21 +69,6 @@ html body {
   float: right;
 }
 
-.nav-text {
-  color: #9ba0a4;
-  width: 70%;
-  text-align: right;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 60px;
-}
-
-.nav-tab-active {
-  background-color: transparent;
-  color: #36abe1;
-  font-weight: 600;
-}
-
 .nav-icon-bs1 {
   background: url("../images/icons/individual/icons_small_bs1.png");
 }
@@ -110,6 +95,48 @@ html body {
 
 .nav-icon-bs7 {
   background: url("../images/icons/individual/icons_small_bs7.png");
+}
+
+.nav-text {
+  color: #9ba0a4;
+  width: 70%;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.nav-tab-active .nav-text {
+  color: #36abe1;
+  font-weight: 600;
+}
+
+.nav-tab-active .nav-icon-bs1 {
+  background: url("../images/icons/individual/icons_small_bs1_blue.png");
+}
+
+.nav-tab-active .nav-icon-bs2 {
+  background: url("../images/icons/individual/icons_small_bs2_blue.png");
+}
+
+.nav-tab-active .nav-icon-bs3 {
+  background: url("../images/icons/individual/icons_small_bs3_blue.png");
+}
+
+.nav-tab-active .nav-icon-bs4 {
+  background: url("../images/icons/individual/icons_small_bs4_blue.png");
+}
+
+.nav-tab-active .nav-icon-bs5 {
+  background: url("../images/icons/individual/icons_small_bs5_blue.png");
+}
+
+.nav-tab-active .nav-icon-bs6 {
+  background: url("../images/icons/individual/icons_small_bs6_blue.png");
+}
+
+.nav-tab-active .nav-icon-bs7 {
+  background: url("../images/icons/individual/icons_small_bs7_blue.png");
 }
 
 .main {
