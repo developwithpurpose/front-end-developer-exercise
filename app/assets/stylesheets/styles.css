@@ -75,6 +75,12 @@ html body {
   line-height: 60px;
 }
 
+.nav-tab-active {
+  background: #fff;
+  color: #36abe1;
+  font-weight: 600;
+}
+
 .nav-icon-bs1 {
   background: url("../images/icons/individual/icons_small_bs1.png");
 }
@@ -168,6 +174,18 @@ html body {
   font-size: 13px;
   color: #65686f;
   line-height: 18px;
+}
+
+.friends {
+  margin-top: 40px;
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 13px;
+  color: #65686f;
+}
+.friends a {
+  color: #6fbee7;
+  text-decoration: none;
 }
 
 .hide {
