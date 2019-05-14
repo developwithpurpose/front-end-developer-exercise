@@ -17,7 +17,7 @@ $(function() {
   function updateFriends(babyStep) {
     var friendsOnStep;
 
-    $.get('../../baby-steps.json', function(data) {
+    $.getJSON('../../baby-steps.json', function(data) {
       friendsOnStep = data.friends.filter(friend => friend.babyStep === babyStep);
       friendsOnStep.sort(function(a, b) {
         return a.lastName.localeCompare(b.lastName)
@@ -47,7 +47,7 @@ $(function() {
       }
 
       $('.friend-suffix').append(' also in Baby Step ' + babyStep);
-    }, 'json');
+    });
   }
 
   function animateSlider(newStep) {
