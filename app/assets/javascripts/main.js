@@ -1,10 +1,13 @@
 $(function() {
+  var previousStep = 1;
+
   $('.nav-tab').click(function () {
     for(var i=1; i<=7; i++) {
       $('.baby-step-' + i).addClass('hide');
     }
 
     updateFriends(this.value);
+    animateSlider(this.value);
 
     $('.nav-tab').removeClass('nav-tab-active');
     $('.nav-tab-' + this.value).addClass('nav-tab-active')
@@ -22,7 +25,7 @@ $(function() {
       $('.friend-2').text('');
       $('.friend-separator').text('');
       $('.friend-suffix').text('');
-      
+
       if(friendsOnStep.length === 0) {
         $('.friends').addClass('hide');
       } else if (friendsOnStep.length === 1) {
@@ -43,5 +46,11 @@ $(function() {
 
       $('.friend-suffix').append(' also in Baby Step ' + babyStep);
     }, 'json');
+  }
+
+  function animateSlider(newStep) {
+    var pixelMove = (newStep - previousStep) * 62;
+    $('.slider').animate({ 'top': '+=' + pixelMove + 'px' }, 500 );
+    previousStep = newStep;
   }
 });

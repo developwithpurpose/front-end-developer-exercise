@@ -39,8 +39,9 @@ html body {
 }
 
 .nav {
-  width: 30%;
+  width: 280px;
   background-image: linear-gradient(to right, #ebeced 95%, #d1d5d6 100%);
+  z-index: 0;
 }
 
 .nav-tabs {
@@ -76,7 +77,7 @@ html body {
 }
 
 .nav-tab-active {
-  background: #fff;
+  background-color: transparent;
   color: #36abe1;
   font-weight: 600;
 }
@@ -111,7 +112,7 @@ html body {
 
 .main {
   margin: 0px 70px;
-  width: 60%;
+  width: 560px;
 }
 
 .step-title {
@@ -190,4 +191,12 @@ html body {
 
 .hide {
   display: none;
+}
+
+.slider {
+  position: absolute;
+  background-color: #fff;
+  width: 280px;
+  height: 60px;
+  z-index: -1;
 }
