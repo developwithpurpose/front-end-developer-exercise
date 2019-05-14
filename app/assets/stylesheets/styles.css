@@ -35,11 +35,13 @@ html body {
 .body {
   background: #fff;
   padding-top: 60px;
+  margin-bottom: 60px;
   display: flex;
 }
 
 .nav {
   width: 280px;
+  height: 600px;
   background-image: linear-gradient(to right, #ebeced 95%, #d1d5d6 100%);
   z-index: 0;
 }
