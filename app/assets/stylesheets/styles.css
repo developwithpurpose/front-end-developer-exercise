@@ -20,12 +20,14 @@ html body {
   font-family: 'Open Sans', sans-serif;
   text-align: right;
 }
+
 .header h1 {
   margin: 0px;
   font-size: 50px;
   font-weight: 700;
   line-height: 48px;
 }
+
 .header h2 {
   margin: 0px;
   font-size: 32px;
@@ -58,6 +60,7 @@ html body {
   height: 60px;
   display: flex;
 }
+
 .nav-tab:hover {
   cursor: pointer;
 }
@@ -147,6 +150,7 @@ html body {
 .step-title {
   padding-left: 90px;
 }
+
 .step-title h3 {
   margin: 0px;
   font-family: 'Source Sans Pro';
@@ -154,6 +158,7 @@ html body {
   font-size: 30px;
   color: #36abe1;
 }
+
 .step-title h4 {
   margin: 0px;
   font-family: 'Source Sans Pro';
@@ -213,6 +218,7 @@ html body {
   font-size: 13px;
   color: #65686f;
 }
+
 .friends a {
   color: #6fbee7;
   text-decoration: none;

@@ -1,8 +1,8 @@
 $(function() {
   var previousStep = 1;
 
-  $('.nav-tab').click(function () {
-    for(var i=1; i<=7; i++) {
+  $('.nav-tab').click(function() {
+    for (var i = 1; i <= 7; i++) {
       $('.baby-step-' + i).addClass('hide');
     }
 
@@ -19,14 +19,16 @@ $(function() {
 
     $.get('../../baby-steps.json', function(data) {
       friendsOnStep = data.friends.filter(friend => friend.babyStep === babyStep);
-      friendsOnStep.sort(function(a, b){return a.lastName.localeCompare(b.lastName)});
+      friendsOnStep.sort(function(a, b) {
+        return a.lastName.localeCompare(b.lastName)
+      });
 
       $('.friends').removeClass('hide');
       $('.friend-2').text('');
       $('.friend-separator').text('');
       $('.friend-suffix').text('');
 
-      if(friendsOnStep.length === 0) {
+      if (friendsOnStep.length === 0) {
         $('.friends').addClass('hide');
       } else if (friendsOnStep.length === 1) {
         $('.friend-1').text(friendsOnStep[0].firstName + ' ' + friendsOnStep[0].lastName);
@@ -36,8 +38,8 @@ $(function() {
           $('.friend-separator').text(' and ');
         } else if (friendsOnStep.length >= 3) {
           $('.friend-separator').text(', ');
-          $('.friend-suffix').text(', and ' + (friendsOnStep.length-2) + ' other friend'
-            + (friendsOnStep.length-2 > 1 ? 's' : ''));
+          $('.friend-suffix').text(', and ' + (friendsOnStep.length - 2) + ' other friend' +
+            (friendsOnStep.length - 2 > 1 ? 's' : ''));
         }
         $('.friend-1').text(friendsOnStep[0].firstName + ' ' + friendsOnStep[0].lastName);
         $('.friend-2').text(friendsOnStep[1].firstName + ' ' + friendsOnStep[1].lastName);
@@ -50,7 +52,9 @@ $(function() {
 
   function animateSlider(newStep) {
     var pixelMove = (newStep - previousStep) * 62;
-    $('.slider').animate({ 'top': '+=' + pixelMove + 'px' }, 500 );
+    $('.slider').animate({
+      'top': '+=' + pixelMove + 'px'
+    }, 500);
     previousStep = newStep;
   }
 });
