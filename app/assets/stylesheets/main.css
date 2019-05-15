@@ -1,0 +1,119 @@
+body {
+	background: #BBBFC2;
+}
+.wrapper {
+	height: 886px;
+	width: 980px;
+	margin: auto;
+	box-shadow: 0 10px 8px #888888;
+}
+.menu {
+	float: left;
+	width: 280px;
+	margin-right: 70px;
+background: #ebeced; /* Old browsers */
+background: -moz-linear-gradient(left, #ebeced 95%, #d1d5d6 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #ebeced 95%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #ebeced 95%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+}
+.menu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.menu li {
+	text-align: right;
+	font-size: 18px;
+	line-height: 60px;
+	color: #9ba0a4;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	border-bottom: solid thin white;
+}
+.menu .active {
+	background: white;
+	color: #36abe1;
+	font-weight: 400;
+}
+.menu a {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+}
+.menu .icon {
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	width: 30px;
+	height: 25px;
+	margin-left: 20px;
+	margin-right: 24px;
+	background-image: url('../images/icons/sprites/icons_small.png');
+}
+.menu .dollar.active {
+	background-position-y: 175px;
+}
+.menu .snowball.active {
+	background-position-y: 150px;
+}
+.menu .pig.active {
+	background-position-y: 125px;
+}
+.menu .chart.active {
+	background-position-y: 100px;
+}
+.menu .book.active {
+	background-position-y: 75px;
+}
+.menu .home.active {
+	background-position-y: 50px;
+}
+.menu .hand.active {
+	background-position-y: 25px;
+}
+.menu .snowball {
+	background-position-y: 325px;
+}
+.menu .pig {
+	background-position-y: 300px;
+}
+.menu .chart{
+	background-position-y: 275px;
+}
+.menu .book{
+	background-position-y: 250px;
+}
+.menu .home {
+	background-position-y: 225px;
+}
+.menu .hand {
+	background-position-y: 200px;
+}
+.content {
+	padding-right: 70px;
+	background: white;
+	font-family: Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #65686f;
+}
+.content img {
+	margin-bottom: 24px;
+}
+.content p {
+	margin: unset;
+	padding: unset;
+	margin-bottom: 20px;
+}
+.content p:nth-of-type(2) {
+	margin-bottom: 40px;
+}
+#friends a {
+	color: #61BDE6;
+	text-decoration: none;
+}	
+.menu, .content {
+	padding-top: 60px;
+	height: 550px;
+}
