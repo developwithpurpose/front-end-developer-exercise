@@ -1,0 +1,14 @@
+IMPORTANT NOTE: This project uses an open source jQuery plugin called "animatescroll" by Ram Swaroop
+Functionality:
+    The main javascript functionality exists in the "baby-steps.js" file. It waits for the document to be ready and pulls in the friends data from the json file. I proceeds to group the data by the steps each individual is on before 
+    inserting the appropriate string into the corresponding step div. It also listens to a button click and shifts the focus of the step section to the appropriate step.
+
+Note: I was unable to come up with a solution to change the color of the button image when clicked.
+
+CSS:
+    I handled the left and right border images by throwing them in with the main header div and giving them an absolute position while giving the header a relative one. I separated each element that needed styling into identifiable chunks
+    and shared styling rules when I could.
+
+HTML:
+    The content was put into semantic divs according to the role the content appeared to play from the mockup. The content is split into the header content for the main image and border shadows, the navigation content for the buttons that change the step the user
+    is on, and the step information is stored in its own section tag.

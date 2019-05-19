@@ -1,0 +1,98 @@
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #bbbfc2;
+}
+.content-container {
+    height: 900px;
+    width: 980px;
+    margin: auto;
+    background-color: white;
+}
+.shadow {
+    position: absolute;
+    top: 0;
+}
+.shadow-bottom {
+    width: 980px;
+    margin: 0 auto;
+    display: block;
+}
+.main-header {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.shadow-right {
+    right: -15px;
+}
+.shadow-left {
+    left: -15px;
+}
+li {
+    list-style: none;
+}
+
+.step-navigation {
+    float: left;
+    margin-right: 70px;
+    width: 300px;
+    border-image:url("../images/shadow_left_nav.jpg");
+    border-top:0;
+    border-left:0;
+    border-right:0;
+}
+
+.step-buttons-container {
+    display: block;
+    float: right;
+    width: 205px;
+}
+.step-button {
+    border: none;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    color: #9ba0a4;
+    cursor: pointer;
+    margin-right: 15px;
+    font-weight: 400;
+    line-height: 60px;
+    width: 163px;
+    float: left;
+}
+.step-button:focus {
+    outline-width: 0;
+    font-weight: 600;
+    color: #36abe1;
+}
+.step-button>p{
+    margin: 0 25px 0 0;
+    float: left;
+}
+.button-img {
+    width: 24px;
+    height: 24px;
+}
+section {
+        margin-right: 70px;
+        overflow: hidden;
+    }
+.step, section {
+    height: 350px;
+}
+.step > p {
+    margin-bottom: 27px;
+    line-height: 18px;
+    font-size: 13px;
+    padding-left: 5px;
+    font-weight: 400;
+    color: #65686f;
+    font-family: Helvetica, sans-serif
+}
+.step-header {
+    margin-bottom: 8px;
+}
+a {
+    color: #6fbee7;
+}
