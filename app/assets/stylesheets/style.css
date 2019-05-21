@@ -1,0 +1,162 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+/* =Clearfix (all browsers)--------------------------------*/.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}/* IE6 */ * html .clearfix {height: 1%;}/* IE7 */*:first-child+html .clearfix {min-height: 1px;}
+body {
+	background-color: #bbbfc2;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.main {
+	width: 980px;
+	margin: 0 auto;
+	box-shadow: 0 0 9px rgba(0,0,0,0.25);
+	background-color: #fff;
+}
+.content {
+	margin: 60px 0 0 0;
+}
+#baby-step-info {
+	float: left;
+	margin: 0 70px;
+	width: 540px;
+	height: 375px;
+	position: relative;
+	overflow: hidden;
+}
+	#baby-step-info .meta-top {
+		float: left;
+		width: 100%;
+		margin: 0 0 24px;
+	}
+	#baby-step-info .meta-top img {
+		float: left;
+		margin: 0 24px 0 0;
+	}
+	#baby-step-info .meta-top h2, #baby-step-info .meta-top h3 {
+		float: left;
+		width: 80%;
+	}
+	#baby-step-info .meta-top h2 {
+		font-weight: 600;
+		color: #36abe1;
+		line-height: 20px;
+		font-size: 30px;
+		margin: 12px 0 6px;
+	}
+	#baby-step-info .meta-top h3 {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 20px;
+		color: #5c6366;
+	}
+	#baby-step-info .meta, #baby-step-info .meta-bottom {
+		font-family: "Helvetica", "Arial", sans-serif;
+		font-size: 13px;
+		color: #65686f;
+		line-height: 18px;
+		margin: 0 0 40px;
+		float: left;
+		position: relative;
+	}
+	#baby-step-info .meta-bottom a {
+		color: #6fbee7;
+		text-decoration: none;
+	}
+
+[class*="step"] {
+	height: 375px;
+	position: relative;
+}
+#tracker {
+	position: absolute;
+	top: 1px;
+	background: #fff;
+	height: 60px;
+	width: 100%;
+	z-index: 9;
+}
+.nav-left {
+	position: relative;
+	float: left;
+	font-size: 18px;
+	line-height: 60px;
+	width: 300px;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ebeced+90,d1d5d6+100 */
+	background: #ebeced; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ebeced 90%, #d1d5d6 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #ebeced 90%,#d1d5d6 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #ebeced 90%,#d1d5d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=1 ); /* IE6-9 */
+}
+.nav-left ul li {
+	z-index: 99;
+	border-bottom: 1px solid #fff;
+	text-align: right;
+	position: relative;
+	height: 60px;
+}
+.nav-left ul li:first-child {
+	border-top: 1px solid #ebeced;
+}
+.nav-left ul li a {
+	position: relative;
+	padding: 0 85px 0 0;
+/* 	background: url(../images/icons/sprites/icons_small.png) no-repeat right center; */
+
+	color: #9ba0a4;
+	display: block;
+	text-decoration: none;
+}
+.nav-left ul li a.active {
+	font-weight: 600;
+	color: #36abe1;
+}
+.nav-left ul li span.sprites-left {
+	background-image: url(../images/icons/sprites/icons_small.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 19px;
+	right: 30px;
+	height: 25px;
+	width: 30px;
+}
+.nav-left ul li a.bs-1 span {
+	background-position: 0 0;
+}
+	.nav-left a.bs-1.active span {
+		background-position: 0 -175px;
+	}	
+.nav-left ul li a.bs-2 span {
+	background-position: 0 -25px;
+}
+	.nav-left a.bs-2.active span {
+		background-position: 0 -200px;
+	}	
+.nav-left ul li a.bs-3 span {
+	background-position: 0 -50px;
+}
+	.nav-left a.bs-3.active span {
+		background-position: 0 -225px;
+	}	
+.nav-left ul li a.bs-4 span {
+	background-position: 0 -75px;
+}
+	.nav-left a.bs-4.active span {
+		background-position: 0 -250px;
+	}	
+.nav-left ul li a.bs-5 span {
+	background-position: 0 -100px;
+}
+	.nav-left a.bs-5.active span {
+		background-position: 0 -275px;
+	}	
+.nav-left ul li a.bs-6 span {
+	background-position: 0 -125px;
+}
+	.nav-left a.bs-6.active span {
+		background-position: 0 -300px;
+	}	
+.nav-left ul li a.bs-7 span {
+	background-position: 0 -150px;
+}
+	.nav-left a.bs-7.active span {
+		background-position: 0 -325px;
+	}	
