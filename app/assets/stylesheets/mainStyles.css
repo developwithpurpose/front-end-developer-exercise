@@ -1,0 +1,48 @@
+body {
+    background-color: #bbbfc2;
+}
+
+#wrapper {
+    display: flex;
+    max-width: 980px;
+}
+
+.main {
+    display: flex;
+}
+
+.header{
+    background-color: white;
+}
+
+.content {
+    flex-basis: 70%;
+    padding: 0 70px 40px 70px;
+    background-color: white;
+}
+
+.stepInfo {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    height: 1px;
+    overflow: hidden;
+}
+
+.active-content {
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    height: auto;
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #65686f;
+}
+
+#friends a {
+    color: #6fbee7;
+}

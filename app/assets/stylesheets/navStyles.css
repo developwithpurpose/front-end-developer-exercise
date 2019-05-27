@@ -1,0 +1,29 @@
+.nav {
+    flex-basis: 30%;
+    font-size: 18px;
+    line-height: 60px;
+    color: #9ba0a4;
+    background: linear-gradient(90deg, #ebeced 95%, #d1d5d6 100%);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    border-bottom: 1px solid white;
+    list-style: none;
+    text-align: right;
+}
+
+.nav li img {
+    padding: 0 24px;
+    margin-bottom: -8px;
+}
+
+.active-nav {
+    font-weight: semi-bold;
+    color: #36abe1;
+    background-color: white;
+}
