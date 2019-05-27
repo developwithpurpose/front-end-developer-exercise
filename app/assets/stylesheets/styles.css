@@ -1,0 +1,73 @@
+.body {
+    display: flex;
+}
+
+.nav {
+    flex-basis: 25%;
+    font-size: 18px;
+    line-height: 60px;
+    color: #9ba0a4;
+    background-image: linear-gradient(#ebeced, #d1d5d6);
+    margin-right: 70px;
+}
+
+.active-nav {
+    font-weight: semi-bold;
+    color: #36abe1;
+    background-color: white;
+}
+
+.content {
+    flex-basis: 75%;
+}
+
+.stepInfo {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    height: 1px;
+    overflow: hidden;
+}
+/* .tabbed-container {
+    top: 0;
+    left: 0;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    background-color: #ddd;
+} */
+
+.active-content {
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    height: auto;
+}
+/* .tabbed-container.tabbed-container-active {
+} */
+
+h1 {
+    font-size: 30px;
+    font-weight: semi-bold;
+    line-height: 20px;
+    color: #36abe1;
+    margin: 0;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: light;
+    line-height: 20px;
+    color: #5c6366;
+    margin: 0;
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #65686f;
+}
+
+#header {
+    margin-bottom: 60px;
+}
