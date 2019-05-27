@@ -3,12 +3,11 @@
 }
 
 .nav {
-    flex-basis: 25%;
+    flex-basis: 30%;
     font-size: 18px;
     line-height: 60px;
     color: #9ba0a4;
     background-image: linear-gradient(#ebeced, #d1d5d6);
-    margin-right: 70px;
 }
 
 .active-nav {
@@ -18,7 +17,8 @@
 }
 
 .content {
-    flex-basis: 75%;
+    flex-basis: 70%;
+    padding: 0 70px 40px 70px;
 }
 
 .stepInfo {
@@ -28,13 +28,6 @@
     height: 1px;
     overflow: hidden;
 }
-/* .tabbed-container {
-    top: 0;
-    left: 0;
-    padding-bottom: 20px;
-    padding-right: 30px;
-    background-color: #ddd;
-} */
 
 .active-content {
     position: relative;
@@ -42,8 +35,7 @@
     opacity: 1;
     height: auto;
 }
-/* .tabbed-container.tabbed-container-active {
-} */
+
 
 h1 {
     font-size: 30px;
@@ -68,6 +60,15 @@ p {
     color: #65686f;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
 #header {
     margin-bottom: 60px;
+}
+
+#friends a {
+    color: #6fbee7;
 }
