@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #bbbfc2;
+}
+
+.page-header {
+    background-image: url("../images/header_text.jpg");
+    height: 275px;
+    width: 980px;
+    margin-left: 200px;
+    padding: 0;
+}
+
+.info {
+    background-color: white;
+    width: 980px;
+    height: 800px;
+    margin-left: 200px;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+}
+
+.stepsChoices {
+    background-image: linear-gradient(to right, #ebeced, #d1d5d6);
+    width: 300px;
+    height: 740px;
+    float: left;
+    font-size: 18px;
+    margin-top: 60px;
+}
+
+.selection {
+    border-bottom: solid 2px white;
+    padding: 0 24px 5px 100px;
+    color: #9ba0a4;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 60px;
+}
+
+.steps-desc {
+    line-height: 18px;
+    width: 980px;
+    padding: 60px 70px 0 350px;
+}
+
+.clicked {
+    background-color: white;
+    color: #36abe1;
+    font-style: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.babyStep1 .babyStep2 .babyStep3
+.babyStep4 .babyStep5 .babyStep6
+.babyStep7 {
+    margin: 0 0 0 50px;
+}
