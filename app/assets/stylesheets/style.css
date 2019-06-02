@@ -133,14 +133,20 @@ a {text-decoration: none; }
                     display: flex;
                     width: 300px;
                     padding: 0;
-                    background-color: #ebeced;
+                    /* background-color: #ebeced; */
                     margin-bottom: 1px;
+                }
+                .nav_link {
+                    background-color: #ebeced;
+                }
+                .nav_link_on {
+                    background-color: white;
                 }
                 .nav_item_on {
                     display: flex;
                     width: 300px;
                     padding: 0;
-                    background-color: white;
+                    /* background-color: white; */
                     margin-bottom: 1px;
                 }               
                     .bs_n_header {
@@ -242,29 +248,13 @@ a {text-decoration: none; }
                         padding: 0;
                         margin: 0; 
                     }
-                    .paragraph1 {
+                    .paragraph {
                         font-family: Helvetica;
                         font-size: 13px;
                         color: #65686f;
                         line-height: 18px;
                         padding: 0;
                         margin: 18px 0 18px 0; 
-                    }
-                    .paragraph2 {
-                        font-family: Helvetica;
-                        font-size: 13px;
-                        color: #65686f;
-                        line-height: 18px;
-                        padding: 0;
-                        margin: 0 0 40px 0; 
-                    }
-                    .paragraph2 {
-                        font-family: Helvetica;
-                        font-size: 13px;
-                        color: #65686f;
-                        line-height: 18px;
-                        padding: 0;
-                        margin: 0 0 40px 0; 
                     }
                 .friends_on_app {
                     padding: 0;

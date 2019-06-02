@@ -13,40 +13,47 @@
         <link href="assets/fonts/Helvetica.ttf" rel="stylesheet">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
         
-        <style>
-            /* .content_1 { display: none; }
+        
+        <style>           
+            #a_A_1 { display: none; }
+            #a_B_1 { display: block; }
+            #a_A_2 { display: block; }
+            #a_B_2 { display: none; }
+            #a_A_3 { display: block; }
+            #a_B_3 { display: none; }
+            #a_A_4 { display: block; }
+            #a_B_4 { display: none; }
+            #a_A_5 { display: block; }
+            #a_B_5 { display: none; }
+            #a_A_6 { display: block; }
+            #a_B_6 { display: none; }
+            #a_A_7 { display: block; }
+            #a_B_7 { display: none; }
+
+            .content_1 { display: block; }
             .content_2 { display: none; }
             .content_3 { display: none; }
             .content_4 { display: none; }
             .content_5 { display: none; }
             .content_6 { display: none; }
-            .content_7 { display: none; } */
-
-            .toggle { width: 100%; height: 0; }
-            /* .content_1.toggle { display:  block; }
+            .content_7 { display: none; }
+           
+            /* .toggle { width: 100%; height: 0; }
+            .content_1.toggle { display:  block; }
             .content_2.toggle { display:  block; }
             .content_3.toggle { display:  block; }
             .content_4.toggle { display:  block; }
             .content_5.toggle { display:  block; }
             .content_6.toggle { display:  block; } 
             .content_7.toggle { display:  block; } */
-
-            .hideme { width: 0; height: 0; }
-            .content_1.hideme { display: none; }
-            .content_2.hideme { display: none; }
-            .content_3.hideme { display: none; }
-            .content_4.hideme { display: none; }
-            .content_5.hideme { display: none; }
-            .content_6.hideme { display: none; }
-            .content_7.hideme { display: none; } 
-        
-            .toggle {
+            /* .toggle {
             -webkit-transition: .3s;
             transition: .3s;
             }
             .toggle.active {
-                 height: 100%;}
+                 height: 100%;} */
         </style>
 
     </head>
@@ -68,168 +75,280 @@
                     <nav class="navbar" id="navID">
                         <img class="shadow_left_nav_image" src="/assets/images/shadow_left_nav.jpg" alt="Left Nav Shadow" />         
                         <ul class="side_nav">
-                            <script>
-                                $(document).ready(function(){
-                                    $(".item_1").click(function(){
-                                        
-                                        $(".item_1").toggleClass("nav_item");
-                                        $(".item_1").toggleClass("nav_item_on");
-                                        
-                                        $(".link_1").toggleClass("nav_link");
-                                        $(".link_1").toggleClass("nav_link_on");
 
-                                        $(".h3_1").toggleClass("bs_n_header");
-                                        $(".h3_1").toggleClass("bs_n_header_on");
+                        <script>
+                            $(document).ready(function(){
+                                $(".item_1").click(function(){
+                                    $("#a_B_1").hide();
+                                    $("#a_B_2").hide();
+                                    $("#a_B_3").hide();
+                                    $("#a_B_4").hide();
+                                    $("#a_B_5").hide();
+                                    $("#a_B_6").hide();
+                                    $("#a_B_7").hide();
 
-                                        $(".img_1").toggleClass("icons_small")
-                                        $(".img_1").toggleClass("icons_small_on")
-                                        $(".img_blue_1").toggleClass("icons_small ")
-                                        $(".img_blue_1").toggleClass("icons_small_on")
+                                    $("#a_A_1").show();
+                                    $("#a_A_2").show();
+                                    $("#a_A_3").show();
+                                    $("#a_A_4").show();
+                                    $("#a_A_5").show();
+                                    $("#a_A_6").show();
+                                    $("#a_A_7").show();
 
-                                        $(".span_1").toggleClass("gradient_edge");
-                                        $(".span_1").toggleClass("gradient_edge_on");
-
-                                        $("section").slideUp(1000);
-                                        $(".content_1").slideDown(500);
-                                        
-                                        // $( "section.content_1" ).css( "border", "3px solid blue" );
-
-                                    });
+                                    $("#a_A_1").hide();
+                                    $("#a_B_1").show();
+                                    $("section").slideUp(1000);
+                                    $(".content_1").slideDown(500);
                                 });
-                            </script> 
+                            });
+                        </script>
                             <li class="item_1 nav_item">
-                                <a href="#" class="link_1 nav_link">
-                                    <h3 class="h3_1 bs_n_header">Baby Step 1</h3>
-                                    <img class="img_1 icons_small" src="/assets/images/icons/individual/icons_small_bs1.png" alt="Small BabyStep One Icon" />
-                                    <img class="img_blue_1 icons_small_on" src="/assets/images/icons/individual/icons_small_bs1_blue.png" alt="Small BabyStep One Icon" />                                    
-                                    <span class="span_1 gradient_edge"></span>
+                                <a href="#" class="nav_link" id="a_A_1">
+                                    <h3 class="bs_n_header">Baby Step 1</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs1.png" alt="Small BabyStep One Icon" />
+                                    <span class="gradient_edge"></span>
+                                </a>
+                                <a href="#" class="nav_link_on" id="a_B_1">
+                                    <h3 class="bs_n_header_on">Baby Step 1</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs1_blue.png" alt="Small BabyStep One Icon" />
+                                    <span class="gradient_edge_on"></span>
                                 </a>
                             </li>
 
-                            <script>
-                                $(document).ready(function(){
-                                    $(".item_2").click(function(){
-                                        $(".item_2").toggleClass("nav_item");
-                                        $(".item_2").toggleClass("nav_item_on");
-                                        
-                                        $(".link_2").toggleClass("nav_link");
-                                        $(".link_2").toggleClass("nav_link_on");
+                        <script>
+                            $(document).ready(function(){
+                                $(".item_2").click(function(){
+                                    $("#a_B_1").hide();
+                                    $("#a_B_2").hide();
+                                    $("#a_B_3").hide();
+                                    $("#a_B_4").hide();
+                                    $("#a_B_5").hide();
+                                    $("#a_B_6").hide();
+                                    $("#a_B_7").hide();
 
-                                        $(".h3_2").toggleClass("bs_n_header");
-                                        $(".h3_2").toggleClass("bs_n_header_on");
+                                    $("#a_A_1").show();
+                                    $("#a_A_2").show();
+                                    $("#a_A_3").show();
+                                    $("#a_A_4").show();
+                                    $("#a_A_5").show();
+                                    $("#a_A_6").show();
+                                    $("#a_A_7").show();
 
-                                        $(".img_2").toggleClass("icons_small")
-                                        $(".img_2").toggleClass("icons_small_on")
-                                        $(".img_blue_2").toggleClass("icons_small ")
-                                        $(".img_blue_2").toggleClass("icons_small_on")
-
-                                        $(".span_2").toggleClass("gradient_edge");
-                                        $(".span_2").toggleClass("gradient_edge_on");
-
-                                        $("section").slideUp(1000);
-                                        $(".content_2").slideDown(500);
-                                    });
+                                    $("#a_A_2").hide();
+                                    $("#a_B_2").show();
+                                    $("section").slideUp(1000);
+                                    $(".content_2").slideDown(500);
                                 });
-                            </script> 
+                            });
+                        </script>
                             <li class="item_2 nav_item">
-                                <a href="#" class="link_2 nav_link">
-                                    <h3 class="h3_2 bs_n_header">Baby Step 2</h3>
-                                    <img class="img_2 icons_small" src="/assets/images/icons/individual/icons_small_bs2.png" alt="Small BabyStep Two Icon" />
-                                    <img class="img_blue_2 icons_small_on" src="/assets/images/icons/individual/icons_small_bs2_blue.png" alt="Small BabyStep Two Icon" />                                    
-                                    <span class="span_2 gradient_edge"></span>
+                                <a href="#" class="nav_link" id="a_A_2">
+                                    <h3 class="bs_n_header">Baby Step 2</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs2.png" alt="Small BabyStep Two Icon" />
+                                    <span class="gradient_edge"></span>
+                                </a>
+                                <a href="#" class="nav_link_on" id="a_B_2">
+                                    <h3 class="bs_n_header_on">Baby Step 2</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs2_blue.png" alt="Small BabyStep Two Icon" />
+                                    <span class="gradient_edge_on"></span>
+                                </a>
+                            </li>
+
+                        <script>
+                            $(document).ready(function(){
+                                $(".item_3").click(function(){
+                                    $("#a_B_1").hide();
+                                    $("#a_B_2").hide();
+                                    $("#a_B_3").hide();
+                                    $("#a_B_4").hide();
+                                    $("#a_B_5").hide();
+                                    $("#a_B_6").hide();
+                                    $("#a_B_7").hide();
+
+                                    $("#a_A_1").show();
+                                    $("#a_A_2").show();
+                                    $("#a_A_3").show();
+                                    $("#a_A_4").show();
+                                    $("#a_A_5").show();
+                                    $("#a_A_6").show();
+                                    $("#a_A_7").show();
+
+                                    $("#a_A_3").hide();
+                                    $("#a_B_3").show();
+                                    $("section").slideUp(1000);
+                                    $(".content_3").slideDown(500);
+                                });
+                            });
+                        </script>
+                            <li class="item_3 nav_item">
+                                <a href="#" class="nav_link" id="a_A_3">
+                                    <h3 class="bs_n_header">Baby Step 3</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs3.png" alt="Small BabyStep Three Icon" />
+                                    <span class="gradient_edge"></span>
+                                </a>
+                                <a href="#" class="nav_link_on" id="a_B_3">
+                                    <h3 class="bs_n_header_on">Baby Step 3</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs3_blue.png" alt="Small BabyStep Three Icon" />
+                                    <span class="gradient_edge_on"></span>
                                 </a>
                             </li>
                             
-                            <script>
-                                $(document).ready(function(){
-                                    $(".item_3").click(function(){
-                                        $(".item_3").toggleClass("nav_item");
-                                        $(".item_3").toggleClass("nav_item_on");
-                                        
-                                        $(".link_3").toggleClass("nav_link");
-                                        $(".link_3").toggleClass("nav_link_on");
+                        <script>
+                            $(document).ready(function(){
+                                $(".item_4").click(function(){
+                                    $("#a_B_1").hide();
+                                    $("#a_B_2").hide();
+                                    $("#a_B_3").hide();
+                                    $("#a_B_4").hide();
+                                    $("#a_B_5").hide();
+                                    $("#a_B_6").hide();
+                                    $("#a_B_7").hide();
 
-                                        $(".h3_3").toggleClass("bs_n_header");
-                                        $(".h3_3").toggleClass("bs_n_header_on");
+                                    $("#a_A_1").show();
+                                    $("#a_A_2").show();
+                                    $("#a_A_3").show();
+                                    $("#a_A_4").show();
+                                    $("#a_A_5").show();
+                                    $("#a_A_6").show();
+                                    $("#a_A_7").show();
 
-                                        $(".img_3").toggleClass("icons_small")
-                                        $(".img_3").toggleClass("icons_small_on")
-                                        $(".img_blue_3").toggleClass("icons_small ")
-                                        $(".img_blue_3").toggleClass("icons_small_on")
-
-                                        $(".span_3").toggleClass("gradient_edge");
-                                        $(".span_3").toggleClass("gradient_edge_on");
-
-                                        $("section").slideUp(1000);
-                                        $(".content_3").slideDown(500);
-                                    });
+                                    $("#a_A_4").hide();
+                                    $("#a_B_4").show();
+                                    $("section").slideUp(1000);
+                                    $(".content_4").slideDown(500);
                                 });
-                            </script> 
-                            <li class="item_3 nav_item">
-                                <a href="#" class="link_3 nav_link">
-                                    <h3 class="h3_3 bs_n_header">Baby Step 3</h3>
-                                    <img class="img_3 icons_small" src="/assets/images/icons/individual/icons_small_bs3.png" alt="Small BabyStep Three Icon" />
-                                    <img class="img_blue_3 icons_small_on" src="/assets/images/icons/individual/icons_small_bs3_blue.png" alt="Small BabyStep ThreeIcon" />                                    
-                                    <span class="span_3 gradient_edge"></span>
-                                </a>
-                            </li>
-
-                            <script>
-                                $(document).ready(function(){
-                                    $(".item_4").click(function(){
-                                        // $(".item_3").toggleClass("nav_item");
-                                        // $(".item_3").toggleClass("nav_item_on");
-                                        
-                                        // $(".link_3").toggleClass("nav_link");
-                                        // $(".link_3").toggleClass("nav_link_on");
-
-                                        // $(".h3_3").toggleClass("bs_n_header");
-                                        // $(".h3_3").toggleClass("bs_n_header_on");
-
-                                        // $(".img_3").toggleClass("icons_small")
-                                        // $(".img_3").toggleClass("icons_small_on")
-                                        // $(".img_blue_3").toggleClass("icons_small ")
-                                        // $(".img_blue_3").toggleClass("icons_small_on")
-
-                                        // $(".span_3").toggleClass("gradient_edge");
-                                        // $(".span_3").toggleClass("gradient_edge_on");
-
-                                        
-
-                                        $("section").slideUp(1000);
-                                        $(".content_4").slideDown(500);
-                                    });
-                                });
-                            </script> 
-
+                            });
+                        </script>
                             <li class="item_4 nav_item">
-                                <a href="#" class="nav_link">
-                                    <h3 class="bs_n_header">Baby Step 4 </h3>
+                                <a href="#" class="off_4 nav_link" id="a_A_4">
+                                    <h3 class="bs_n_header">Baby Step 4</h3>
                                     <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs4.png" alt="Small BabyStep One Icon" />
                                     <span class="gradient_edge"></span>
                                 </a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="#" class="nav_link">
-                                    <h3 class="bs_n_header">Baby Step 5 </h3>
-                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs5.png" alt="Small BabyStep One Icon" />
-                                    <span class="gradient_edge"></span>
+                                <a href="#" class="on_4 nav_link_on" id="a_B_4">
+                                    <h3 class="bs_n_header_on">Baby Step 4</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs4_blue.png" alt="Small BabyStep One Icon" />
+                                    <span class="gradient_edge_on"></span>
                                 </a>
                             </li>
-                            <li class="nav_item">
-                                <a href="#" class="nav_link">
-                                    <h3 class="bs_n_header">Baby Step 6 </h3>
-                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs6.png" alt="Small BabyStep One Icon" />
+
+                        <script>
+                            $(document).ready(function(){
+                                $(".item_5").click(function(){
+                                    $("#a_B_1").hide();
+                                    $("#a_B_2").hide();
+                                    $("#a_B_3").hide();
+                                    $("#a_B_4").hide();
+                                    $("#a_B_5").hide();
+                                    $("#a_B_6").hide();
+                                    $("#a_B_7").hide();
+
+                                    $("#a_A_1").show();
+                                    $("#a_A_2").show();
+                                    $("#a_A_3").show();
+                                    $("#a_A_4").show();
+                                    $("#a_A_5").show();
+                                    $("#a_A_6").show();
+                                    $("#a_A_7").show();
+
+                                    $("#a_A_5").hide();
+                                    $("#a_B_5").show();
+                                    $("section").slideUp(1000);
+                                    $(".content_5").slideDown(500);
+                                });
+                            });
+                        </script>
+                            <li class="item_5 nav_item">
+                                <a href="#" class="off_5 nav_link" id="a_A_5">
+                                    <h3 class="bs_n_header">Baby Step 5</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs5.png" alt="Small BabyStep Five Icon" />
                                     <span class="gradient_edge"></span>
+                                </a>
+                                <a href="#" class="on_5 nav_link_on" id="a_B_5">
+                                    <h3 class="bs_n_header_on">Baby Step 5</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs5_blue.png" alt="Small BabyStep Five Icon" />
+                                    <span class="gradient_edge_on"></span>
                                 </a>
                             </li>
-                            <li class="nav_item">
-                                <a href="#" class="nav_link">
-                                    <h3 class="bs_n_header">Baby Step 7 </h3>
-                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs7.png" alt="Small BabyStep One Icon" />
+                            
+                        <script>
+                            $(document).ready(function(){
+                                $(".item_6").click(function(){
+                                    $("#a_B_1").hide();
+                                    $("#a_B_2").hide();
+                                    $("#a_B_3").hide();
+                                    $("#a_B_4").hide();
+                                    $("#a_B_5").hide();
+                                    $("#a_B_6").hide();
+                                    $("#a_B_7").hide();
+
+                                    $("#a_A_1").show();
+                                    $("#a_A_2").show();
+                                    $("#a_A_3").show();
+                                    $("#a_A_4").show();
+                                    $("#a_A_5").show();
+                                    $("#a_A_6").show();
+                                    $("#a_A_7").show();
+
+                                    $("#a_A_6").hide();
+                                    $("#a_B_6").show();
+                                    $("section").slideUp(1000);
+                                    $(".content_6").slideDown(500);
+                                });
+                            });
+                        </script>
+                            <li class="item_6 nav_item">
+                                <a href="#" class="nav_link" id="a_A_6">
+                                    <h3 class="bs_n_header">Baby Step 6</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs6.png" alt="Small BabyStep Six Icon" />
                                     <span class="gradient_edge"></span>
                                 </a>
-                            </li>                                                       
+                                <a href="#" class="nav_link_on" id="a_B_6">
+                                    <h3 class="bs_n_header_on">Baby Step 6</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs6_blue.png" alt="Small BabyStep Six Icon" />
+                                    <span class="gradient_edge_on"></span>
+                                </a>
+                            </li>
+
+                        <script>
+                            $(document).ready(function(){
+                                $(".item_7").click(function(){
+                                    $("#a_B_1").hide();
+                                    $("#a_B_2").hide();
+                                    $("#a_B_3").hide();
+                                    $("#a_B_4").hide();
+                                    $("#a_B_5").hide();
+                                    $("#a_B_6").hide();
+                                    $("#a_B_7").hide();
+
+                                    $("#a_A_1").show();
+                                    $("#a_A_2").show();
+                                    $("#a_A_3").show();
+                                    $("#a_A_4").show();
+                                    $("#a_A_5").show();
+                                    $("#a_A_6").show();
+                                    $("#a_A_7").show();
+
+                                    $("#a_A_7").hide();
+                                    $("#a_B_7").show();
+                                    $("section").slideUp(1000);
+                                    $(".content_7").slideDown(500);
+                                });
+                            });
+                        </script>
+                            <li class="item_7 nav_item">
+                                <a href="#" class="nav_link" id="a_A_7">
+                                    <h3 class="bs_n_header">Baby Step 7</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs7.png" alt="Small BabyStep Seven Icon" />
+                                    <span class="gradient_edge"></span>
+                                </a>
+                                <a href="#" class="nav_link_on" id="a_B_7">
+                                    <h3 class="bs_n_header_on">Baby Step 7</h3>
+                                    <img class="icons_small" src="/assets/images/icons/individual/icons_small_bs7_blue.png" alt="Small BabyStep Seven Icon" />
+                                    <span class="gradient_edge_on"></span>
+                                </a>
+                            </li>
+
                         </ul>
                         
                         <div class="place_holder_div">
@@ -244,18 +363,18 @@
                                 <img src="/assets/images/headings/heading_bs1.png" alt="Baby Step One Header" />
                             </header>
 
-                            <p class="paragraph1">
+                            <p class="paragraph">
                                 An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen.
                             </p>
                             
-                            <p class="paragraph2">
+                            <p class="paragraph">
                                 This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!
                             </p>
                         </article>
                         
                         <p class="friends_on_app">
-                            <span class="first_two_friends">name 1, name2</span>
-                            <span class="number_friends">and x Other Friends are on ths step</span>
+                            <span class="first_two_friends paragraph">name 1, name2</span>
+                            <span class="number_friends paragraph">and x Other Friends are on ths step</span>
                         </p>
                     </section>
 
@@ -265,11 +384,11 @@
                                 <img src="/assets/images/headings/heading_bs2.png" alt="Baby Step Two Header" />
                             </header>
 
-                            <p class="paragraph1">
+                            <p class="paragraph">
                                 List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first.
                             </p>
                             
-                            <p class="paragraph2">
+                            <p class="paragraph">
                                 The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.
                             </p>
                         </article>
@@ -286,11 +405,11 @@
                                 <img src="/assets/images/headings/heading_bs3.png" alt="Baby Step Three Header" />
                             </header>
 
-                            <p class="paragraph1">
+                            <p class="paragraph">
                                 Once you complete the first two baby steps, you will have built serious momentum. But don’t start throwing all your “extra” money into investments quite yet. It’s time to build your full emergency fund. Ask yourself, “What would it take for me to live for three to six months if I lost my income?” Your answer to that question is how much you should save.
                             </p>
                             
-                            <p class="paragraph2">
+                            <p class="paragraph">
                                 Use this money for emergencies only: incidents that would have a major impact on you and your family. Keep these savings in a money market account. Remember, this stash of money is not an investment; it is insurance you’re paying to yourself, a buffer between you and life.
                             </p>
                         </article>
@@ -307,11 +426,11 @@
                                 <img src="/assets/images/headings/heading_bs4.png" alt="Baby Step Four Header" />
                             </header>
 
-                            <p class="paragraph1">
+                            <p class="paragraph">
                                 When you reach this step, you’ll have no payments—except the house—and a fully funded emergency fund. Now it’s time to get serious about building wealth.
                             </p>
                             
-                            <p class="paragraph2">
+                            <p class="paragraph">
                                 Dave suggests investing 15% of your household income into Roth IRAs and pre-tax retirement plans. Don’t invest more than that because the extra money will help you complete the next two steps: college savings and paying off your home early.
                             </p>
                         </article>
@@ -328,11 +447,11 @@
                                 <img src="/assets/images/headings/heading_bs5.png" alt="Baby Step Five Header" />
                             </header>
 
-                            <p class="paragraph1">
+                            <p class="paragraph">
                                 By this point, you should have already started Baby Step 4—investing 15% of your income—before saving for college. Whether you are saving for you or your child to go to college, you need to start now.
                             </p>
                             
-                            <p class="paragraph2">
+                            <p class="paragraph">
                                 In order to have enough money saved for college, you need to have a goal. Determine how much per month you should be saving at 12% interest in order to have enough for college. If you save at 12% and inflation is at 4%, then you are moving ahead of inflation at a net of 8% per year!
                             </p>
                         </article>
@@ -349,11 +468,11 @@
                                 <img src="/assets/images/headings/heading_bs6.png" alt="Baby Step Six Header" />
                             </header>
 
-                            <p class="paragraph1">
+                            <p class="paragraph">
                                 Now it’s time to begin chunking all of your extra money toward the mortgage. You are getting closer to realizing the dream of a life with no house payments.
                             </p>
                             
-                            <p class="paragraph2">
+                            <p class="paragraph">
                                 As you attack this last debt, you will gain momentum much like you did back in the second step of the debt snowball. Remember, having absolutely no payments is totally within your reach!
                             </p>
                         </article>
@@ -370,15 +489,15 @@
                                 <img src="/assets/images/headings/heading_bs7.png" alt="Baby Step Seven Header" />
                             </header>
 
-                            <p class="paragraph1">
+                            <p class="paragraph">
                                 Build wealth and give!
                             </p>
                             
-                            <p class="paragraph2">
+                            <p class="paragraph">
                                 It’s time to build wealth and give like never before. Leave an inheritance for future generations, and bless others now with your excess. It's really the only way to live!
                             </p>
 
-                            <p class="paragraph3">
+                            <p class="paragraph">
                                 Golda Meir says, “You can’t shake hands with a clenched fist.” Vow to never hold your money so tightly that you never give any away. Hoarding money is not the way to wealth. Save for yourself, save for your family’s future, and be gracious enough to bless others. You can do all three at the same time.                            </p>
                             </p>
                         </article>
@@ -404,3 +523,29 @@
         </div>                                                                 
     </body>
 </html>
+
+<!-- <script>
+    $(document).ready(function(){
+        $(".item_1").click(function(){
+            
+            $(".item_1").toggleClass("nav_item");
+            $(".item_1").toggleClass("nav_item_on");
+            
+            $(".link_1").toggleClass("nav_link");
+            $(".link_1").toggleClass("nav_link_on");
+
+            $(".h3_1").toggleClass("bs_n_header");
+            $(".h3_1").toggleClass("bs_n_header_on");
+
+            $(".img_1").toggleClass("icons_small")
+            $(".img_1").toggleClass("icons_small_on")
+            $(".img_blue_1").toggleClass("icons_small ")
+            $(".img_blue_1").toggleClass("icons_small_on")
+
+            $(".span_1").toggleClass("gradient_edge");
+            $(".span_1").toggleClass("gradient_edge_on");
+
+            $("section").slideUp(1000);
+            $(".content_1").slideDown(500);
+        });
+    }); -->
