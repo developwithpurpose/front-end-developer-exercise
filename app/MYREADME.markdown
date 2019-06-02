@@ -66,3 +66,21 @@ LAYOUT - Nested divs for layout purposes
     </div>                                                      <!-- End of div page -->
 
 </body>
+
+
+
+                                        // $(".item_1").toggleClass("nav_item");
+                                        // $(".item_1").toggleClass("nav_item_on");
+                                        
+                                        // $(".link_1").toggleClass("nav_link");
+                                        // $(".link_1").toggleClass("nav_link_on");
+
+                                        // $(".h3_1").toggleClass("bs_n_header");
+                                        // $(".h3_1").toggleClass("bs_n_header_on");
+
+                                        // $(".img_1").toggle()
+                                        // $("img_blue_ 1").toggle()
+
+                                        // $(".span_1").toggleClass("gradient_edge");
+                                        // $(".span_1").toggleClass("gradient_edge_on");
+                                                               

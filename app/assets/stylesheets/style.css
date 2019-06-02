@@ -19,6 +19,20 @@
 /* Add backgroundcolor to elements and check for space between them */
 /* add auto margin to main container to center */
 
+.slider {
+	overflow-y: hidden;
+	max-height: 628px; /* approximate max height */
+
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.slider.closed {
+	max-height: 0;
+}
+
+a {text-decoration: none; }
+
 .webpage {
     background-color:#bbbfc2;
     font-family: Helvetica;
@@ -94,57 +108,100 @@
             padding: 0;
             margin: 0;
         }
-
-        /* <nav> and <div> inside of main_sub_container */
-            .nav_container {
+       
+            .navbar {
                 font-family: 'Source Sans Pro';
                 overflow:hidden;
                 float: left;              
-                width: 300px;               
+                width: 300px;                              
                 padding: 0;
-                margin: 0 70px 0 0;                
-                list-style: none;
+                margin: 0 70px 0 0;
+                transition: 0.800s ease;
             }
-        /* Figure out why this img is not at top of nav container - added float-left */
                 .shadow_left_nav_image {
                     float: left;
                     padding: 0;
                     margin: 0 70px 0 0;
                 }
-                .nav_ul {
-                    display: inline-block;                  
+                .side_nav {
+                    display: inline-block;
+                    list-style: none;                 
                     margin: 0;
                     padding: 0;
                 }
-                .li_bs_n {             
-                    list-style: none;
+                .nav_item {
+                    display: flex;
                     width: 300px;
                     padding: 0;
                     background-color: #ebeced;
                     margin-bottom: 1px;
-                }                
-                .bs_n_header {
-                    display: inline;
-                    font-size: 18px;
+                }
+                .nav_item_on {
+                    display: flex;
+                    width: 300px;
+                    padding: 0;
+                    background-color: white;
+                    margin-bottom: 1px;
+                }               
+                    .bs_n_header {
+                        font-weight: 400;
+                        display: inline;
+                        font-size: 18px;
+                        color:#9ba0a4;
+                        line-height: 60px;
+                        margin: 0 0 0 125px;
+                        padding: 0;
+                        vertical-align: middle;                  
+                    }
+                    .bs_n_header_on {
+                        font-weight: 600;
+                        display: inline;
+                        font-size: 18px;
+                        color:#36abe1;
+                        line-height: 60px;
+                        margin: 0 0 0 125px;
+                        padding: 0;
+                        vertical-align: middle; 
+                    }
+                    .icons_small {                
+                        padding: 0;
+                        margin-left: 24px;
+                        margin-right: 9px;
+                        vertical-align: middle;
+                    } 
+                    .icons_small_on {
+                        display: none;         
+                        padding: 0;
+                        margin-left: 24px;
+                        margin-right: 9px;
+                        vertical-align: middle;
+                    }             
+                    .gradient_edge {
+                        float: right;
+                        width: 15px;
+                        height: 60px;
+                        padding: 0;
+                        margin: 0;
+                        background-image: linear-gradient(to right, #ebeced, #d1d5d6);
+                    }
+                    .gradient_edge_on {
+                        float: right;
+                        width: 15px;
+                        height: 60px;
+                        padding: 0;
+                        margin: 0;
+                        background-color: white;
+                    }
+                /* .nav_link {
                     color:#9ba0a4;
-                    line-height: 60px;
-                    margin: 0 0 0 125px;
-                    padding: 0;
-                    vertical-align: middle;                    
+                } */
+
+                .nav_item > .nav_link {
+                    flex: 1;
                 }
-                .icons_small {                 
-                    padding: 0;
-                    margin-left: 24px;
-                    margin-right: 9px;
-                    vertical-align: middle;
-                }
-                .gradient_edge {
-                    float: right;
-                    width: 15px;
-                    height: 60px;
-                    padding: 0;
-                    margin: 0;
-                    background-image: linear-gradient(to right, #ebeced, #d1d5d6);
+
+                .nav_item > .nav_link:hover {
+                    background-image: linear-gradient(to right,#d1d5d6, #ebeced);
                 }
                 .place_holder_section {
                     overflow:hidden;
@@ -192,6 +249,14 @@
                         line-height: 18px;
                         padding: 0;
                         margin: 18px 0 18px 0; 
+                    }
+                    .paragraph2 {
+                        font-family: Helvetica;
+                        font-size: 13px;
+                        color: #65686f;
+                        line-height: 18px;
+                        padding: 0;
+                        margin: 0 0 40px 0; 
                     }
                     .paragraph2 {
                         font-family: Helvetica;
