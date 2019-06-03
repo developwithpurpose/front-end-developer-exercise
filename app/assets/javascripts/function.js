@@ -161,7 +161,6 @@ $(document).ready(function () {
 
     $(".step7").on("click", function () {
         findFriends();
-        $(".step7").attr("data-seven");
         $(".step7").addClass("clicked");
         $(".pic7").attr("src", "assets/images/icons/individual/icons_small_bs7_blue.png");
         $(".pic2").attr("src", "assets/images/icons/individual/icons_small_bs2.png");
@@ -185,56 +184,13 @@ $(document).ready(function () {
         $(".babyStep2").hide();
     });
 
-    // var friends = require("/baby-steps.json");
-    // console.log("Friends:", friends);
-
-    // function findFriends() {
-    //     $.get("../../baby-steps.json", function(data) {
-    //         console.log("Data: " + data)
-    //     })
-    // }
-
     function findFriends() {
-        var clickedStep = 
         $.ajax({
             url: "baby-steps.json",
             method: "GET",
             async: false
         }).then(function(data) {
-            // console.log(response);
-            // $(".message").text(JSON.stringify(response));
-            // var friends = [];
-            // $.each(data.friends, function(i, friend) {
-            //     if (friend.babyStep == step) {
-            //         friends.push(friend)
-            //     }
-            // });
-
-            // $(".message").hide( "slow", function() {
-            //     if (step==2) {
-            //         $(".message").show("slide", { direction: "left" }, 2000).append("<span class='Links'>"+friends[0].firstName + " " + friends[0].lastName + "</span> is also in Baby Step 2");
-            //     } else if (step==3) {
-            //         $(".message").show("slide", { direction: "left" }, 2000).append("<span class='Links'>"+friends[1].firstName + " " + friends[1].lastName + "</span> and <span class='Links'>" + friends[0].firstName + " " + friends[0].lastName + "</span> are also in Baby Step 3");
-            //     } else if (step==4) {
-            //         $(".message").show("slide", { direction: "left" }, 2000).append("<span class='Links'>"+friends[0].firstName + " " + friends[0].lastName + ", " + friends[2].firstName + " " + friends[2].lastName+"</span>" +" and " + ((friends.length)-2) + " other friend are also in Baby Step 4");
-            //     } else if (step==5) {
-            //         $(".message").show("slide", { direction: "left" }, 2000).append("<span class='Links'>"+friends[2].firstName + " " + friends[2].lastName + ", " + friends[3].firstName + " " + friends[3].lastName+"</span>" +" and " + ((friends.length)-2) + " other friends are also in Baby Step 5");
-            //     } else if (step==6) {
-            //         $(".message").show("slide", { direction: "left" }, 2000).append("<span class='Links'>"+friends[2].firstName + " " + friends[2].lastName + ", " + friends[3].firstName + " " + friends[3].lastName+"</span>" +" and " + ((friends.length)-2) + " other friends are also in Baby Step 6");
-            //     } else if (step==7) {
-            //         $(".message").show("slide", { direction: "left" }, 2000).append("<span class='Links'>"+friends[2].firstName + " " + friends[2].lastName + ", " + friends[0].firstName + " " + friends[0].lastName+"</span>" +" and " + ((friends.length)-2) + " other friends are also in Baby Step 7");
-            //     } else { 
-            //         $(".message").html("");
-            //     }
-            //     });
-
-            // for (var i = 0; i < response.length; i++) {
-            //     if (response[i].babyStep === clickedStep) {
-            //         $(".message").text(JSON.stringify(response[i].firstName + " " + response[i].lastName) + ", ")
-            //     } else if (response[i].babyStep != clickedStep) {
-            //         $(".message").text("")
-            //     }
-            // }
+            $("#message").html(data)
         })
     }
 })
