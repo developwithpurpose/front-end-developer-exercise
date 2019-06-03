@@ -1,12 +1,17 @@
 MYREADME.md authored by Colleen Woolsey
 
-LAYOUT - Nested divs for layout purposes
+MISC:
+    As I did a final check of my work against the instructions noticed that it said "animate" the transitions. Wasn't sure how specific to get - I used jQuery effects (of which animate is a sub-category) But in case the distinction is important, I refactored Baby Step 4 so that it uses the animate effect.
+
+    Named the <li> elements and their child elements with a "_n" syntax with an eye to possibly refactoring the <script> code to eliminate redundancy with a "split" function.
+
+    Because of time constraints only developed dynamic content for Baby Step 5. The HTML starts on line 531 and the <script> on line 18. The AJAX request successfully returned data to the localhost:8080 but there are still some bugs that need to be worked out for it to process correctly.
+    
+LAYOUT: Nested divs for layout purposes and semantic markup where appropriate
     Inside the page there is <div> container_with_side_shadows, with three elements in a ROW - left shadow<div>,  main_container<main>,     and right shadow <div>
     Inside the main_container<main> there are 3 elements in a COLUMN - <header>, main_sub_container<div>, and shadow_bottom<div>
     Inside main_sub_container<div> there are 2 elements in a ROW - <nav> (COLUMN) and article_plus_dynamic<div> (COLUMN)
     Nested inside article_plus_dynamic there are 2 elements - <article> containing the detail info and the <section> with dynamic text
-    
-<body>
 
     <div classname="page">                                     <!-- Start of page div // add auto margin-->
 
@@ -18,7 +23,7 @@ LAYOUT - Nested divs for layout purposes
 
             <main classname="main_container">                   <!-- Start of sub div 2 main_container - COLUMN layout -->
                 <header>                                        
-                    <img  header_text.jpg  />                <!-- header.jpg as background image -->
+                    <img  header_text.jpg  />                   <!-- header.jpg as background image -->
                 </header>
 
                 <div classname="main_sub_container">            <!-- 2 parts 1. <nav> 2. <article> + <dynamic-section> ROW layout -->
@@ -26,12 +31,13 @@ LAYOUT - Nested divs for layout purposes
                     <nav classname="nav_container">             <!-- COLUMN layout for n=7 <li> -->
                         <ul>                        
                             <li classname="bs_n"">
-                                <a>
-                                    <h3 (18px)></h3> + <img> - toggle between icons_small_bsn.png and icons_small_bsn_blue.png  />
-                                </a>
+                                <a><h3 (18px)></h3> + <img> -  icons_small_bsn.png  + edge</a>
+                                <a><h3 (18px)></h3> + <img> -  icons_small_bsn_blue.png + edge </a>
                             </li>
-                            |
-                            V                                   <!-- NOTE: Find a place for shadow_left_nav.jpg??? -->                          
+                            |                       
+                            |                                   <!-- hide and show <a> depending on active -->
+                            V
+
                         </ul>
                     </nav>
 
@@ -64,23 +70,4 @@ LAYOUT - Nested divs for layout purposes
         </div>                                                  <!-- end of div container_with_side_shadows -->
 
     </div>                                                      <!-- End of div page -->
-
-</body>
-
-
-
-                                        // $(".item_1").toggleClass("nav_item");
-                                        // $(".item_1").toggleClass("nav_item_on");
-                                        
-                                        // $(".link_1").toggleClass("nav_link");
-                                        // $(".link_1").toggleClass("nav_link_on");
-
-                                        // $(".h3_1").toggleClass("bs_n_header");
-                                        // $(".h3_1").toggleClass("bs_n_header_on");
-
-                                        // $(".img_1").toggle()
-                                        // $("img_blue_ 1").toggle()
-
-                                        // $(".span_1").toggleClass("gradient_edge");
-                                        // $(".span_1").toggleClass("gradient_edge_on");
-                                                               
+                                                              

@@ -13,8 +13,94 @@
         <link href="assets/fonts/Helvetica.ttf" rel="stylesheet">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
 
-        
+        <script>
+            function ajax_get(url, callback) {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        console.log('responseText:' + xmlhttp.responseText);
+                        try {
+                            var data = JSON.parse(xmlhttp.responseText);
+                        } catch(err) {
+                            console.log(err.message + " in " + xmlhttp.responseText);
+                            return;
+                        }
+                        callback(data);                        
+                    }
+                };
+            
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+            }
+
+            ajax_get('http://localhost:8080/baby-steps.json', function(data) {
+                
+                console.log(data);
+
+                let newArray = [];
+                for(var i = 0; i < data.length; i++) {
+                if ([i].babyStep === 5) newArray.push([i]);
+                }            
+                var countFolk = newArray.length - 2;
+
+                var sortedArray = newArray.sort();
+                var sortedArrayDesc = sortedArray.reverse();
+
+                console.log(sortedArrayDesc[0].value.firstName)
+
+                var singleFirstName = sortedArrayDesc[0].value.firstName
+                var singleLastName = sortedArrayDesc[0].value.lastName
+                var secondFirstName = sortedArrayDesc[1].value.firstName
+                var secondLastName = sortedArrayDesc[1].value.lastName
+
+                document.getElementById("name5AFirst").innerHTML = singleFirstName;
+                document.getElementById("name5ALast").innerHTML = singleLastName;
+                document.getElementById("name5BFirst").innerHTML = secondFirstName;
+                document.getElementById("name5ALast").innerHTML = secondLastName;          
+                document.getElementById("numFolk5").innerHTML = countFolk;
+
+                if (countFolk === 0){
+                    document.getElementByClassName("paragraph").innerHTML = "";
+                }
+                else if (countFolk === 1) {
+                    document.getElementById("name5AFirst").innerHTML = singleFirstName;
+                    document.getElementById("name5ALast").innerHTML = singleLastName;                    
+                    document.getElementById("p2_5").innerHTML = "";
+                    document.getElementById("p3_5").innerHTML = "";
+                    document.getElementById("p4_5").innerHTML = "";
+                }
+                else if (countFolk === 2) {
+                    document.getElementById("name5AFirst").innerHTML = singleFirstName;
+                    document.getElementById("name5ALast").innerHTML = singleLastName;
+                    document.getElementById("name5BFirst").innerHTML = singleFirstName;
+                    document.getElementById("name5BLast").innerHTML = singleLastName;
+                    document.getElementById("p1_5").innerHTML = "";                    
+                    document.getElementById("p3_5").innerHTML = "";
+                    document.getElementById("p4_5").innerHTML = "";
+                }
+                else if (countFolk === 3) {
+                    document.getElementById("name5AFirst").innerHTML = singleFirstName;
+                    document.getElementById("name5ALast").innerHTML = singleLastName;
+                    document.getElementById("name5BFirst").innerHTML = singleFirstName;
+                    document.getElementById("name5BLast").innerHTML = singleLastName;
+                    document.getElementById("p1_5").innerHTML = "";                    
+                    document.getElementById("p2_5").innerHTML = "";
+                    document.getElementById("p4_5").innerHTML = "";
+                }
+                else {
+                    document.getElementById("name5AFirst").innerHTML = singleFirstName;
+                    document.getElementById("name5ALast").innerHTML = singleLastName;
+                    document.getElementById("name5BFirst").innerHTML = singleFirstName;
+                    document.getElementById("name5BLast").innerHTML = singleLastName;
+                    document.getElementById("numFolk5").innerHTML = countFolk; 
+                    document.getElementById("p1_5").innerHTML = "";                    
+                    document.getElementById("p2_5").innerHTML = "";
+                    document.getElementById("p3_5").innerHTML = "";
+                }
+            });
+        </script>
         
         <style>           
             #a_A_1 { display: none; }
@@ -40,20 +126,16 @@
             .content_6 { display: none; }
             .content_7 { display: none; }
            
-            /* .toggle { width: 100%; height: 0; }
-            .content_1.toggle { display:  block; }
-            .content_2.toggle { display:  block; }
-            .content_3.toggle { display:  block; }
+            .toggle { width: 100%; height: 0; }
+            
             .content_4.toggle { display:  block; }
-            .content_5.toggle { display:  block; }
-            .content_6.toggle { display:  block; } 
-            .content_7.toggle { display:  block; } */
-            /* .toggle {
+
+            .toggle {
             -webkit-transition: .3s;
             transition: .3s;
             }
             .toggle.active {
-                 height: 100%;} */
+                 height: 100%;}
         </style>
 
     </head>
@@ -99,7 +181,7 @@
                                     $("#a_B_1").show();
                                     $("section").slideUp(1000);
                                     $(".content_1").slideDown(500);
-                                });
+                                })
                             });
                         </script>
                             <li class="item_1 nav_item">
@@ -138,7 +220,7 @@
                                     $("#a_B_2").show();
                                     $("section").slideUp(1000);
                                     $(".content_2").slideDown(500);
-                                });
+                                })
                             });
                         </script>
                             <li class="item_2 nav_item">
@@ -177,7 +259,7 @@
                                     $("#a_B_3").show();
                                     $("section").slideUp(1000);
                                     $(".content_3").slideDown(500);
-                                });
+                                })
                             });
                         </script>
                             <li class="item_3 nav_item">
@@ -215,8 +297,11 @@
                                     $("#a_A_4").hide();
                                     $("#a_B_4").show();
                                     $("section").slideUp(1000);
-                                    $(".content_4").slideDown(500);
-                                });
+
+                                    $(".content_4").animate({
+                                        height: 'toggle'
+                                    });
+                                })
                             });
                         </script>
                             <li class="item_4 nav_item">
@@ -255,7 +340,7 @@
                                     $("#a_B_5").show();
                                     $("section").slideUp(1000);
                                     $(".content_5").slideDown(500);
-                                });
+                                })
                             });
                         </script>
                             <li class="item_5 nav_item">
@@ -294,7 +379,7 @@
                                     $("#a_B_6").show();
                                     $("section").slideUp(1000);
                                     $(".content_6").slideDown(500);
-                                });
+                                })
                             });
                         </script>
                             <li class="item_6 nav_item">
@@ -333,7 +418,7 @@
                                     $("#a_B_7").show();
                                     $("section").slideUp(1000);
                                     $(".content_7").slideDown(500);
-                                });
+                                })
                             });
                         </script>
                             <li class="item_7 nav_item">
@@ -372,10 +457,7 @@
                             </p>
                         </article>
                         
-                        <p class="friends_on_app">
-                            <span class="first_two_friends paragraph">name 1, name2</span>
-                            <span class="number_friends paragraph">and x Other Friends are on ths step</span>
-                        </p>
+                        <p class="friends_on_app paragraph">Placeholder for number of folks on this Baby Step</p>
                     </section>
 
                     <section class="content_2 article_plus_dynamic">
@@ -393,10 +475,7 @@
                             </p>
                         </article>
                         
-                        <p class="friends_on_app">
-                            <span class="first_two_friends">name 1, name 2</span>
-                            <span class="number_friends">and x Other Friends are on ths step</span>
-                        </p>
+                        <p class="friends_on_app paragraph">Placeholder for number of folks on this Baby Step</p>
                     </section>
 
                     <section class="content_3 article_plus_dynamic">
@@ -414,10 +493,7 @@
                             </p>
                         </article>
                         
-                        <p class="friends_on_app">
-                            <span class="first_two_friends">name 1, name 2</span>
-                            <span class="number_friends">and x Other Friends are on ths step</span>
-                        </p>
+                        <p class="friends_on_app paragraph">Placeholder for number of folks on this Baby Step</p>
                     </section>
                 
                     <section class="content_4 article_plus_dynamic">
@@ -435,10 +511,7 @@
                             </p>
                         </article>
                         
-                        <p class="friends_on_app">
-                            <span class="first_two_friends">name 1, name 2</span>
-                            <span class="number_friends">and x Other Friends are on ths step</span>
-                        </p>
+                        <p class="friends_on_app paragraph">Placeholder for number of folks on this Baby Step</p>
                     </section>
 
                     <section class="content_5 article_plus_dynamic">
@@ -456,10 +529,42 @@
                             </p>
                         </article>
                         
-                        <p class="friends_on_app">
-                            <span class="first_two_friends">name 1, name 2</span>
-                            <span class="number_friends">and x Other Friends are on ths step</span>
-                        </p>
+                        <div class="friends_on_app">
+                            <p class="paragraph" id="p1_5"></p>
+                                <span id="names5AFirst"></span>
+                                <span id="names5ALast"></span>            
+                                <span>is also in Baby Step 5.</span>
+                            </p>
+
+                            <p class="paragraph" id="p2_5"></p>
+                                <span id="names5AFirst"></span>
+                                <span id="names5ALast"></span>
+                                <span>and</span>            
+                                <span id="names5BFirst"></span>
+                                <span id="names5BLast"></span>
+                                <span>are also in Baby Step 5.</span>
+                            </p>
+
+                            <p class="paragraph" id="p3_5"></p>
+                                <span id="names5AFirst"></span>
+                                <span id="names5ALast"></span>
+                                <span>and</span>            
+                                <span id="names5BFirst"></span>
+                                <span id="names5BLast"></span>
+                                <span>and one other friend are also in Baby Step 5.</span>
+                            </p>
+                            
+                            <p class="paragraph" id="p4_5"></p>
+                                <span id="names5AFirst"></span>
+                                <span id="names5ALast"></span>
+                                <span>and</span>            
+                                <span id="names5BFirst"></span>
+                                <span id="names5BLast"></span>
+                                <span>and</span>
+                                <span id="numFolk5"></span>
+                                <span>Other Friends are also in Baby Step 5.</span>
+                            </p>
+                        </div>
                     </section>                    
 
                     <section class="content_6 article_plus_dynamic">
@@ -477,10 +582,7 @@
                             </p>
                         </article>
                         
-                        <p class="friends_on_app">
-                            <span class="first_two_friends">name 1, name 2</span>
-                            <span class="number_friends">and x Other Friends are on ths step</span>
-                        </p>
+                        <p class="friends_on_app paragraph">Placeholder for number of folks on this Baby Step</p>
                     </section>
 
                     <section class="content_7 article_plus_dynamic" style="margin-bottom: 70px;">
@@ -502,10 +604,7 @@
                             </p>
                         </article>
                         
-                        <p class="friends_on_app">
-                            <span class="first_two_friends">name 1, name 2</span>
-                            <span class="number_friends">and x Other Friends are on ths step</span>
-                        </p>
+                        <p class="friends_on_app paragraph">Placeholder for number of folks on this Baby Step</p>
                     </section>
 
                 </div>
@@ -523,29 +622,3 @@
         </div>                                                                 
     </body>
 </html>
-
-<!-- <script>
-    $(document).ready(function(){
-        $(".item_1").click(function(){
-            
-            $(".item_1").toggleClass("nav_item");
-            $(".item_1").toggleClass("nav_item_on");
-            
-            $(".link_1").toggleClass("nav_link");
-            $(".link_1").toggleClass("nav_link_on");
-
-            $(".h3_1").toggleClass("bs_n_header");
-            $(".h3_1").toggleClass("bs_n_header_on");
-
-            $(".img_1").toggleClass("icons_small")
-            $(".img_1").toggleClass("icons_small_on")
-            $(".img_blue_1").toggleClass("icons_small ")
-            $(".img_blue_1").toggleClass("icons_small_on")
-
-            $(".span_1").toggleClass("gradient_edge");
-            $(".span_1").toggleClass("gradient_edge_on");
-
-            $("section").slideUp(1000);
-            $(".content_1").slideDown(500);
-        });
-    }); -->

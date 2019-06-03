@@ -1,6 +1,5 @@
 /* stylesheet - style.css authored by Colleen Woolsey */
 
-/* source-sans-pro-regular */
 @font-face {
     font-family: 'Source Sans Pro';
     font-style: normal;
@@ -13,11 +12,6 @@
          url('../fonts/source-sans-pro-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/source-sans-pro-v12-latin-regular.svg#SourceSansPro') format('svg'); /* Legacy iOS */
   }
-/* Due to time constraints went with headings that already had text */
-/* Made spacing 18px between bottom of image heading_bsN.png instead of calculating 24px from text */
-/* Check for flat divs and add overflow:hidden */
-/* Add backgroundcolor to elements and check for space between them */
-/* add auto margin to main container to center */
 
 .slider {
 	overflow-y: hidden;
@@ -50,7 +44,6 @@ a {text-decoration: none; }
     display: block;
     margin: 0 auto;
 }
-    /* H724px W15px  */
      .left_shadow {
         overflow:hidden; 
         float: left;
@@ -65,7 +58,6 @@ a {text-decoration: none; }
         padding: 0;
         margin: 0;
     }
-    /* H724px W15px  */
     .right_shadow {
         overflow:hidden; 
         float: right;
@@ -73,8 +65,6 @@ a {text-decoration: none; }
         margin: 0;
     }
 
-    /* 3 divs inside of <main> main_container */
-        /* H276px W980px */
          .main_header {
             position: relative;
             height: 276px;
@@ -86,7 +76,6 @@ a {text-decoration: none; }
             padding: 0;
             margin: 0; 
         }
-        /* H50px W70px */
         .red_square {
             background-color: red;
             width: 70px;
@@ -102,7 +91,6 @@ a {text-decoration: none; }
             padding: 0;
             margin: 0;
         }
-        /* H30px W980px */
         .shadow_bottom {
             height: 30px;
             padding: 0;
@@ -133,7 +121,6 @@ a {text-decoration: none; }
                     display: flex;
                     width: 300px;
                     padding: 0;
-                    /* background-color: #ebeced; */
                     margin-bottom: 1px;
                 }
                 .nav_link {
@@ -146,7 +133,6 @@ a {text-decoration: none; }
                     display: flex;
                     width: 300px;
                     padding: 0;
-                    /* background-color: white; */
                     margin-bottom: 1px;
                 }               
                     .bs_n_header {
@@ -174,14 +160,7 @@ a {text-decoration: none; }
                         margin-left: 24px;
                         margin-right: 9px;
                         vertical-align: middle;
-                    } 
-                    .icons_small_on {
-                        display: none;         
-                        padding: 0;
-                        margin-left: 24px;
-                        margin-right: 9px;
-                        vertical-align: middle;
-                    }             
+                    }            
                     .gradient_edge {
                         float: right;
                         width: 15px;
@@ -198,10 +177,6 @@ a {text-decoration: none; }
                         margin: 0;
                         background-color: white;
                     }
-                /* .nav_link {
-                    color:#9ba0a4;
-                } */
-
                 .nav_item > .nav_link {
                     flex: 1;
                 }
@@ -237,13 +212,10 @@ a {text-decoration: none; }
                 margin: 0 70px 0 0;
             }
 
-             /* <article> and <section> inside of article_plus_dynamic */
                 .article_detail_container  {
                     padding: 0;
                     margin: 0; 
                 }
-                    /* H65ps W436px */
-                    /* Source Sans Pro, semi-bold 30px, #36abe1, line-height: 20ps; */
                     .headings_bs {
                         padding: 0;
                         margin: 0; 
@@ -260,17 +232,3 @@ a {text-decoration: none; }
                     padding: 0;
                     margin: 0;
                 }
-                    .first_two_friends {
-                        font-family: Helvetica;
-                        font-size: 13px;
-                        color:  #6fbee7;
-                        padding: 0;
-                        margin: 0; 
-                    }
-                    .number_friends {
-                        font-family: Helvetica;
-                        font-size: 13px;
-                        color: #65686f;
-                        padding: 0;
-                        margin: 0; 
-                    }
