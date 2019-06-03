@@ -36,24 +36,29 @@
             }
 
             ajax_get('http://localhost:8080/baby-steps.json', function(data) {
-                
+
                 console.log(data);
 
                 let newArray = [];
                 for(var i = 0; i < data.length; i++) {
-                if ([i].babyStep === 5) newArray.push([i]);
-                }            
-                var countFolk = newArray.length - 2;
+                    if (data[i].babyStep === 5) {
+                        newArray.push([i]);
+                    }
+                }
+
+                console.log(newArray);
+                var countFolk = 3;          
+                // var countFolk = newArray.length - 2;
 
                 var sortedArray = newArray.sort();
                 var sortedArrayDesc = sortedArray.reverse();
 
-                console.log(sortedArrayDesc[0].value.firstName)
+                // console.log(sortedArrayDesc[0].value.firstName);
 
-                var singleFirstName = sortedArrayDesc[0].value.firstName
-                var singleLastName = sortedArrayDesc[0].value.lastName
-                var secondFirstName = sortedArrayDesc[1].value.firstName
-                var secondLastName = sortedArrayDesc[1].value.lastName
+                var singleFirstName = sortedArrayDesc[0].value.firstName;
+                var singleLastName = sortedArrayDesc[0].value.lastName;
+                var secondFirstName = sortedArrayDesc[1].value.firstName;
+                var secondLastName = sortedArrayDesc[1].value.lastName;
 
                 document.getElementById("name5AFirst").innerHTML = singleFirstName;
                 document.getElementById("name5ALast").innerHTML = singleLastName;
