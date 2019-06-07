@@ -1,0 +1,53 @@
+.nav {
+  font: "Source Sans Pro";
+  font-weight: "regular";
+  font-size: 18px;
+  color: #9ba0a4;
+  line-height: 60px;
+}
+
+.navSelected {
+  font: "Source Sans Pro";
+  font-weight: "semibold";
+  font-size: 18px;
+  color: #36abe1;
+  line-height: 60px;
+}
+
+.tabHeader {
+  font: "Source Sans Pro";
+  font-weight: "semi-bold";
+  font-size: 30px;
+  color: #bcd3dd;
+  line-height: 20px;
+}
+
+.tabSubHeader {
+  font: "Source Sans Pro";
+  font-weight: "light";
+  font-size: 18px;
+  color: #5c6366;
+  line-height: 20px;
+}
+
+.tabParagraph {
+  font: "Helvetica";
+  font-weight: "regular";
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+}
+
+.tabFriendsName {
+  font: "Helvetica";
+  font-weight: "regular";
+  font-size: 13px;
+  color: #6fbee7;
+}
+
+.tabFriendsText {
+  font: "Helvetica";
+  font-weight: "regular";
+  font-size: 13px;
+  color: #65686f;
+}
