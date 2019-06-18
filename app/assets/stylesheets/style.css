@@ -18,6 +18,11 @@ body{
   margin-bottom:60px;
 }
 
+.header-img {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
 .header-shadow-left{
   float: right;
   display: inline;
