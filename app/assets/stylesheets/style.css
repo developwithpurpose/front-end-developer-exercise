@@ -81,3 +81,110 @@ ul{
   font-weight: 600;
   color:#36abe1;
 }
+
+#tab-1{
+  background-image: url('images/icons_small_bs1.png');
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.ui-tabs-active #tab-1{
+  background-image: url('images/icons_small_bs1_blue.png');
+}
+#tab-2{
+  background-image: url('images/icons_small_bs2.png');
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.ui-tabs-active #tab-2{
+  background-image: url('images/icons_small_bs2_blue.png');
+}
+#tab-3{
+  background-image: url('images/icons_small_bs3.png');
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.ui-tabs-active #tab-3{
+  background-image: url('images/icons_small_bs3_blue.png');
+}
+#tab-4{
+  background-image: url('images/icons_small_bs4.png');
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.ui-tabs-active #tab-4{
+  background-image: url('images/icons_small_bs4_blue.png');
+}
+#tab-5{
+  background-image: url('images/icons_small_bs5.png');
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.ui-tabs-active #tab-5{
+  background-image: url('images/icons_small_bs5_blue.png');
+}
+#tab-6{
+  background-image: url('images/icons_small_bs6.png');
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.ui-tabs-active #tab-6{
+  background-image: url('images/icons_small_bs6_blue.png');
+}
+#tab-7{
+  background-image: url('images/icons_small_bs7.png');
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.ui-tabs-active #tab-7{
+  background-image: url('images/icons_small_bs7_blue.png');
+}
+
+.content{
+  height:100%;
+  padding-right:70px;
+}
+
+.large-icon{
+  display: inline-block;
+  float: left;
+}
+.steps-headers{
+  float:left;
+  margin-top:12.5px;
+  margin-left:12.5px;
+}
+
+.steps h1{
+  display:inline-block;
+  top:0;
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 20px;
+  color:#36abe1;
+}
+.steps h2{
+  display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  color:#5c6366;
+}
+
+.clear{
+  clear: both;
+}
+.steps p{
+  clear: both;
+  font-family: sans-serif;
+  font-weight: normal;
+  line-height: 18px;
+  padding-top:24px;
+  color:#65686F;
+}
+
+.steps p.friends{
+  padding-top:40px;
+}
