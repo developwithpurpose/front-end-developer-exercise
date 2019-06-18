@@ -2,7 +2,6 @@ body{
   margin-left:auto;
   margin-right:auto;
   font-family: 'Source Sans Pro', sans-serif;
-  background-image: url('images/side_shadows.png');
   background-color:#bbbfc2;
   background-position: top;
   background-repeat: no-repeat;
@@ -83,60 +82,60 @@ ul{
 }
 
 #tab-1{
-  background-image: url('images/icons_small_bs1.png');
+  background-image: url('../images/icons/individual/icons_small_bs1.png');
   background-position: right;
   background-repeat: no-repeat;
 }
 .ui-tabs-active #tab-1{
-  background-image: url('images/icons_small_bs1_blue.png');
+  background-image: url('../images/icons/individual/icons_small_bs1_blue.png');
 }
 #tab-2{
-  background-image: url('images/icons_small_bs2.png');
+  background-image: url('../images/icons/individual/icons_small_bs2.png');
   background-position: right;
   background-repeat: no-repeat;
 }
 .ui-tabs-active #tab-2{
-  background-image: url('images/icons_small_bs2_blue.png');
+  background-image: url('../images/icons/individual/icons_small_bs2_blue.png');
 }
 #tab-3{
-  background-image: url('images/icons_small_bs3.png');
+  background-image: url('../images/icons/individual/icons_small_bs3.png');
   background-position: right;
   background-repeat: no-repeat;
 }
 .ui-tabs-active #tab-3{
-  background-image: url('images/icons_small_bs3_blue.png');
+  background-image: url('../images/icons/individual/icons_small_bs3_blue.png');
 }
 #tab-4{
-  background-image: url('images/icons_small_bs4.png');
+  background-image: url('../images/icons/individual/icons_small_bs4.png');
   background-position: right;
   background-repeat: no-repeat;
 }
 .ui-tabs-active #tab-4{
-  background-image: url('images/icons_small_bs4_blue.png');
+  background-image: url('../images/icons/individual/icons_small_bs4_blue.png');
 }
 #tab-5{
-  background-image: url('images/icons_small_bs5.png');
+  background-image: url('../images/icons/individual/icons_small_bs5.png');
   background-position: right;
   background-repeat: no-repeat;
 }
 .ui-tabs-active #tab-5{
-  background-image: url('images/icons_small_bs5_blue.png');
+  background-image: url('../images/icons/individual/icons_small_bs5_blue.png');
 }
 #tab-6{
-  background-image: url('images/icons_small_bs6.png');
+  background-image: url('../images/icons/individual/icons_small_bs6.png');
   background-position: right;
   background-repeat: no-repeat;
 }
 .ui-tabs-active #tab-6{
-  background-image: url('images/icons_small_bs6_blue.png');
+  background-image: url('../images/icons/individual/icons_small_bs6_blue.png');
 }
 #tab-7{
-  background-image: url('images/icons_small_bs7.png');
+  background-image: url('../images/icons/individual/icons_small_bs7.png');
   background-position: right;
   background-repeat: no-repeat;
 }
 .ui-tabs-active #tab-7{
-  background-image: url('images/icons_small_bs7_blue.png');
+  background-image: url('../images/icons/individual/icons_small_bs7_blue.png');
 }
 
 .content{
@@ -187,4 +186,9 @@ ul{
 
 .steps p.friends{
   padding-top:40px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
