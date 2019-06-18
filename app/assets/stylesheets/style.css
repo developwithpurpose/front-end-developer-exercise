@@ -47,7 +47,7 @@ ul{
   display:block;
   line-height: 60px;
   text-align: right;
-  padding-right:24px;
+  padding-right: 0px 24px;
   border-color:#FFF;
   border-width: .5px;
   border-style: solid;
@@ -199,4 +199,22 @@ ul{
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+.tag-line {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+    margin: 27px 0px 30px;
+}
+
+.tag-line a{
+  color: #6fbee7;
+  text-decoration: none;
+}
+
+.tag-line a:hover{
+  text-decoration: underline;
 }
