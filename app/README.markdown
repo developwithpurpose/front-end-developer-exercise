@@ -2,9 +2,9 @@ As I started this project, I studied the mockup and how I would set up the proje
 
 I struggled toward the end with some spaceing issues in the tabs. I followed the mockup guidelines but something is keepign them from showing correctly. I think it has to do with the ui bullets, which are hidden by ```list-style-type: none;```
 
-I took the first 3 hours and came up with a good foundation for the project. I hope to use the last hour to work on the AJAX request.  
+I took the first 3 hours and came up with a good foundation for the project. I hope to use the last hour to work on the AJAX request. I paln to study up on this in my spare time.  
 
-I also see where I could use the (app/assets/images/header.jpg) then input the text overlaid on the banner but unfortunately, I ran out of time. 
+I also see where I could use the (app/assets/images/header.jpg) then input the text overlaid on the banner but unfortunately, I ran out of time.
 
 Thank you for allowing me to do this exercise and show my progress since my last submission! I appreciate your time! 
 
