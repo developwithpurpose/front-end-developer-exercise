@@ -64,8 +64,12 @@ ul{
 
 .ui-tabs-active{
   background-color: #FFFFFF;
-
 }
+
+#tabs li {
+    list-style-type: none;
+}
+
 .ui-state-active{
   border-width:0px;
 }
