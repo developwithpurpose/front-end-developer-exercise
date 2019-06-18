@@ -1,3 +1,58 @@
-<!doctype html>
-<title>Front-End Developer Exercise</title>
-The server is running!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dave Ramsey's 7 Baby Steps</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+</head>
+<body>
+    
+<div class="container">
+    <img src="assets/images/header_text.jpg" class="header-img">
+
+    <div class="body-grid " id="tabs">
+
+        <ul>
+            <li><a href="#fragment-1" id="tab-1">Baby Step 1</a></li>
+            <li><a href="#fragment-2" id="tab-2">Baby Step 2</a></li>
+            <li><a href="#fragment-3" id="tab-3">Baby Step 3</a></li>
+            <li><a href="#fragment-4" id="tab-4">Baby Step 4</a></li>
+            <li><a href="#fragment-5" id="tab-5">Baby Step 5</a></li>
+            <li><a href="#fragment-6" id="tab-6">Baby Step 6</a></li>
+            <li><a href="#fragment-7" id="tab-7">Baby Step 7</a></li>
+        </ul>
+
+                    <div class="content">
+                    
+                        <div id="fragment-1" class="steps">
+                            <img src="assets/images/icons/individual/icons_large_bs1_blue.png" class="large-icon">
+                            <div class="steps-headers">
+                                <h1>Baby Step 1</h1><br>
+                                <h2>$1,000 Emergency Fund</h2>
+                            </div>
+                            <span class="clear"></span>
+                            <p>An emergency fund is for those unexpected events in life that you can't plan for: the loss of a
+                                job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It's not a
+                                matter of if these events will happen; it's simply a matter of when they will happen.</p>
+                            <p>This beginning emergency fund will keep life's little Murphies from turning into new debt while
+                                you work off the old debt. If a real emergency happens, you can handle it with your emergency
+                                fund. No more borrowing. It's time to break the cycle of debt!</p>
+                        </div>
+                    </div
+
+    </div>
+</div>
+
+
+</body>
+</html>
