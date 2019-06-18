@@ -1,1 +1,3 @@
-Document your submission here (optional, but recommended)
+As I started this project, I studied the mockup and how I would set up the project correctly. Seeing the updated requirements, I tried to steer away from an JavaScript. The project is built with html and css, there is also a jQuery plugin that helped me creating the tabs for the Baby Steps. 
+
+I took the first 3 hours and came up with a good foundation for the project. I hope to use the last hour to work on the AJAX request.  
