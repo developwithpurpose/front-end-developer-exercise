@@ -6,9 +6,11 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
-    "start": "http-server ./app -d false"
+   "start": "http-server ./app -d false && npm run scss",
+   "scss": "node-sass --watch app/assets/stylesheets/scss -o app/assets/stylesheets/css"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "http-server": "^0.8.0",
+    "node-sass": "^4.9.2"
   }
 }

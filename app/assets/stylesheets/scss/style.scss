@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+
+$white:      #fff;
+$blue:       #36abe1;  //menu text blue
+$blue-light: #6fbee7;  //links
+$grey:       #65686f;  //friends and body text
+$grey-alt:   #bbbfc2;
+$grey-dark:  #5c6366;  //subheading
+$grey-light: #9ba0a4;  //menu text
+$gradient1:  #ebeced;
+$gradient2:  #d1d5d6;
+$black:      #000;
+
+h1,
+h2,
+h3,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  animation:move-up 1s ease-out;
+  color: $white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  transform: translateY(-9px);
+  position: relative;
+
+  @keyframes move-up { 
+    from {top:50px; opacity: 0;}
+    to {top:0px; opacity: 1}
+  }
+}
+
+h2 {
+  color: $white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: $grey-light;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 60px;
+  transition: all .25s;
+}
+
+body {
+  background-color: $grey-alt;
+  color: $grey;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0 0 50px 0;
+
+  .main {
+    -moz-box-shadow: 0px -275px 5px 1px rgba(0, 0, 0, 0.2), 0 14px 29px -12px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px -275px 5px 1px rgba(0, 0, 0, 0.2), 0 14px 29px -12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px -275px 5px 1px rgba(0, 0, 0, 0.2), 0 14px 29px -12px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    max-width: 980px;
+  }
+}
+
+a {
+  color: $blue-light;
+  transition: color .25s;
+  text-decoration: none;
+
+  &:hover {
+    color: $grey-light;
+  }
+}
+
+
+//hero
+.hero {
+  background-image: url("/assets/images/header.jpg");
+  height: 276px;
+  text-align: right;
+
+  .inner {
+    padding: 50px 70px 0;
+  }
+}
+
+//content
+.content {
+  background: $white;
+  height: 674px;
+  padding-top: 60px;
+  white-space: nowrap;
+
+  > ul, div {
+    display: inline-block;
+    white-space: normal;
+  }
+
+  .menu {
+    -moz-box-shadow: inset -4px 1px 9px -6px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset -4px 1px 9px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -4px 1px 9px -6px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, $gradient1, $gradient2);
+    display: inline-block;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+
+    li {
+      border-bottom: 1px solid $white;
+      padding-right: 24px;
+      text-align: right;
+      transition: background-color .25s;
+
+      > h3, img {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      img {
+        margin-left: 24px;
+
+        &.blue { display: none; }
+      }
+
+      &:hover,
+      &.active {
+        background-color: $white;
+        cursor: pointer;
+
+        h3 {
+          color: $blue;
+          font-weight: 600;
+        }
+
+        img {
+          display: inline-block;
+          margin-left: 24px;
+
+          &.grey { display: none; }
+        }
+      }
+    }
+  }
+
+  .scroll-content-wrapper {
+    display: inline-block;
+    height: 375px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 680px;
+
+    .scroll-content {
+      height: 2625px;
+      margin: 0 70px;
+      position: absolute;
+      -webkit-transition-timing-function: cubic-bezier(0.160, 0.480, 0.860, 0); /* older webkit */
+      -webkit-transition-timing-function: cubic-bezier(0.160, 0.480, 0.860, -0.070); 
+      -moz-transition-timing-function: cubic-bezier(0.160, 0.480, 0.860, -0.070); 
+      -o-transition-timing-function: cubic-bezier(0.160, 0.480, 0.860, -0.070); 
+      transition-timing-function: cubic-bezier(0.160, 0.480, 0.860, -0.070); /* custom */
+
+      > div {
+       height: 375px;
+      }
+    }
+
+    .scroll-content-header {
+      margin-bottom: 12px;
+
+       > img { height: 65px; }
+     }
+
+    .copy {
+      font-size: 13px;
+      line-height: 18px;
+
+      p {
+        margin-top: 0;
+        margin-bottom: 24px;
+      }
+    }
+
+    .friend-content {
+      padding-top: 16px;
+    }
+  }
+}
+
+.missing-js {
+  .content {
+    height: auto;
+  }
+
+  .scroll-content-wrapper {
+    display: block;
+    height: auto;
+    width: 980px;
+
+    .scroll-content {
+      height: auto;
+      position: relative;
+
+      > div {
+        height: auto;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
