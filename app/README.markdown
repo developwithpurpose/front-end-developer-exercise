@@ -1,4 +1,4 @@
-#Notes: 
+# Notes: 
 - Added node-sass to allow use of sass.
 
 - Used noscript tags to allow for non-js browsing.
