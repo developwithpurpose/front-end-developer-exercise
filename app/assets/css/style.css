@@ -1,0 +1,104 @@
+/*Background*/
+.bg {
+    background-color: #bbbfc2; 
+}
+
+.jumbotron {
+    margin-bottom: .5vh;
+    padding-bottom: 2vh;
+    padding-top: .5vh;
+    background: white;
+}
+
+.panel {
+    /* position: center; */
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    padding: 1rem;
+}
+
+#heading {
+    font-family: Times;
+    font-weight: bold;
+}
+
+.panel-title {
+    font-weight: bold;
+}
+
+th {
+    font-weight: bold;
+}
+
+.icon {
+    /* height: 100px; */
+    width: 200px;
+    /* object-fit: cover;  */
+}
+
+.row {
+    padding: 1vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+/* .footer {
+    background: #333333;
+    color: white;
+    text-align: right;
+    padding-right: 25px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    flex-shrink: 0;
+} */
+
+p {
+    text-align: left;
+}
+
+footer {
+    background: #333333;
+    color: white;
+    text-align: right;
+    padding-right: 25px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    flex-shrink: 0;
+}
+
+.btn {
+    color: rgb(12, 10, 10);
+    background-color: #ebeced;
+    border-color: #d1d5d6;
+    /* padding: 1rem; */
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    margin: .1rem;
+}
+
+.btn-group-vertical {
+    float: left;
+}
+
+.float {
+    float: left;
+}
