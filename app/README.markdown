@@ -1,1 +1,1 @@
-Document your submission here (optional, but recommended)
+https://cdn.ramseysolutions.net/media/topics/baby-steps/hero-wall.jpg
