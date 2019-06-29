@@ -8,7 +8,7 @@ Server:
     No changes where made to how to access this page from the original Readme file.
 
 HTML:
-    The page is created using various Divs one overall div with two column divs for the tabs on the left and the text for each tab on the right. All JavaScript and CSS was contained externally in seperate files.
+    The overall design is to not display any of the steps and only display them then there tab is clicked. The page is created using various Divs one overall div with two column divs for the tabs on the left and the text for each tab on the right. All JavaScript and CSS was contained externally in seperate files.
 
 JavaScript:
     Only the Dynamic Content uses JavaScript. JQuery was used to shorten the amount of words and lines needed to access classes and ids. Also, it was used for the ability to hide and show elements as needed. 
