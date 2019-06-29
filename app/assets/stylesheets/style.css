@@ -9,9 +9,10 @@ body{
     background-color: white;
     height: 900px;
     margin-left: 15%;
-    margin-right: 12%;
-    border: 2px black solid;
-}
+    margin-right: 13%;
+    -webkit-box-shadow: 3px 0px 2px 0px rgba(187,191,194,1);
+    -moz-box-shadow: 3px 0px 2px 0px rgba(187,191,194,1);
+    box-shadow: 3px 0px 2px 0px rgba(187,191,194,1);}
 
 #page img{
     max-width: 100%;
@@ -23,19 +24,18 @@ body{
     width: 40%;
 }
 #column2{
-    margin-top: 60px;
+    margin-top: 65px;
     float: left;
     width: 50%;
 }
-
 
 ul{
     padding-inline-start: 0;
 }
 
 li{
-    list-style-type: none;
     background-image: url("../images/shadow_left_nav.jpg");
+    list-style-type: none;
     text-align: center;
     line-height: 60px;
     color: #9ba0a4;
@@ -51,6 +51,19 @@ li{
 
 .assetPic{
     display: inline;
+}
+
+p{
+    line-height: 18px;
+    font-family: Helvetica;
+    font: 13px;
+    font-style: normal;
+    color: #65686f;
+}
+
+.steps:active{
+    background-image: none;
+    background-color: white;
 }
 
 

@@ -3,6 +3,7 @@ $(document).ready(function () {
     buttons();
 });
 
+// function for hiding all the posts for each step
 function hideElements() {
     $("#step1").hide();
     $("#step2").hide();
@@ -14,6 +15,7 @@ function hideElements() {
     $("#Dynamic").hide();
 }
 
+// function for enteracting with each list item like a button
 function buttons() {
     $("#bs1").click(function () {
         hideElements();
@@ -52,6 +54,7 @@ function buttons() {
     });
 }
 
+// function for the dynamic content of this exercise. 
 function dynamContent(num) {
     var data = null;
     var counter = 0;
@@ -60,10 +63,12 @@ function dynamContent(num) {
     var url = "baby-steps.json";
     var async = true;
 
+    // Ajax call to the provide JSON file to retrieve the names of the people on the same step
     var xttp = new XMLHttpRequest();
     xttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             data = JSON.parse(this.responseText);
+
             var friends = data.friends;
             var length = data.friends.length;
             var firstName;
