@@ -1,0 +1,56 @@
+body{
+    background-image: url("../images/shadow_bottom.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+#page{
+    background-color: white;
+    height: 900px;
+    margin-left: 15%;
+    margin-right: 12%;
+    border: 2px black solid;
+}
+
+#page img{
+    max-width: 100%;
+}
+
+#column1{
+    margin-top: 60px;
+    float: left;
+    width: 40%;
+}
+#column2{
+    margin-top: 60px;
+    float: left;
+    width: 50%;
+}
+
+
+ul{
+    padding-inline-start: 0;
+}
+
+li{
+    list-style-type: none;
+    background-image: url("../images/shadow_left_nav.jpg");
+    text-align: center;
+    line-height: 60px;
+    color: #9ba0a4;
+    font-size: 18px;
+    width: 77%;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.stepText{
+    display: inline;
+}
+
+.assetPic{
+    display: inline;
+}
+
+
