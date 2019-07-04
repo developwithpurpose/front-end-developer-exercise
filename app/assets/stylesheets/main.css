@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: #bbbfc2;
+}
+
+.mainContainer {
+  width: 985px;
+  margin: 0 auto;
+  background-color: #fff;
+  min-height: 1000px;
+}
+
+.headerContainer {
+  height: 276px;
+  margin-bottom: 60px;
+  padding-top: 50px;
+  padding-right: 70px;
+  background: url("../images/header.jpg");
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  text-align: right;
+}
+
+.headerContainer h1 {
+  margin: 0px;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.headerContainer h2 {
+  margin: 0px;
+  font-size: 32px;
+  font-family: 'Open Sans Light', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.navContainer ul {
+  list-style: none;
+}
