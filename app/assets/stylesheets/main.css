@@ -12,9 +12,10 @@ body {
   width: 985px;
   margin: 0 auto;
   background-color: #fff;
-  min-height: 1000px;
+  min-height: 100vh;
 }
 
+/* Header */
 .headerContainer {
   height: 276px;
   margin-bottom: 60px;
@@ -41,6 +42,69 @@ body {
   font-weight: 300;
 }
 
-.navContainer ul {
+/* Sidebar */
+.navContainer {
+  min-height: 80vh;
+  background-image: linear-gradient(to right, #ebeced 90%, #d1d5d6 100%);
+  line-height: 60px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #9ba0a4;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 60px;
+  margin-left: 15px;
+  padding-right: 24px;
+}
+
+.navList {
+  margin-bottom: 2px;
+  padding: 0px;
+  margin: 0px;
   list-style: none;
+}
+
+.navList li:hover {
+  color: #36abe1;
+}
+
+.blue {
+  color: #36abe1;
+}
+
+.navList:hover {
+  cursor: pointer;
+}
+
+.contentContainer{
+  /* display: none; */
+  display: block;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+}
+
+/* .showContentContainer {
+  display: block;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+} */
+
+.contentContainer img {
+  margin-bottom: 24px;
+}
+
+/* Friends Feature */
+.dynamicFriends {
+  margin-top: 40px;
+}
+
+.dynamicFriends a {
+  color: #6fbee7;
+  text-decoration: none;
 }
