@@ -1,0 +1,25 @@
+@import './variables';
+
+.hero {
+  background: no-repeat top center url(../images/header.jpg);
+  color: $white;
+  font-family: $font-open-sans;
+  grid-area: header;
+  height: 276px;
+  margin-bottom: 60px;
+  padding-right: 70px;
+  padding-top: 50px;
+  text-align: right;
+
+  &__title {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+
+  &__sub-title {
+    font-size: 32px;
+    font-weight: 300;
+  }
+}

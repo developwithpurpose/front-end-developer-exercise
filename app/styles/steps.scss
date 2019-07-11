@@ -1,0 +1,67 @@
+@import "./variables.scss";
+
+main {
+  grid-area: main;
+  overflow: auto;
+  padding: 0 70px;
+  height: 295px;
+  overflow: hidden;
+}
+
+.step {
+  margin-bottom: 75px;
+
+  &__header {
+    display: flex;
+    margin-bottom: 8px;
+    font-family: $font-sans-pro;
+  }
+
+  &__icon {
+    grid-area: icon;
+  }
+
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 16px;
+  }
+
+  &__title {
+    grid-area: title;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    color: $blue;
+  }
+
+  &__sub-title {
+    grid-area: sub-title;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 20px;
+    color: #5c6366;
+  }
+
+  &__content p,
+  &__friends {
+    margin-bottom: 24px;
+    font-family: $font-helvetica;
+    font-size: 13px;
+    line-height: 18px;
+    color: #65686f;
+  }
+
+  &__content {
+    margin-bottom: 40px;
+  }
+
+  &__friends {
+    height: 18px;
+  }
+
+  .friends__names {
+    color: #6fbee7;
+  }
+}

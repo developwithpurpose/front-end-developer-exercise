@@ -1,0 +1,104 @@
+@import "./variables.scss";
+
+.nav {
+  background: #ebeced;
+  background: linear-gradient(to right, #ebeced 0%, #d1d5d6 100%);
+  font-family: $font-sans-pro;
+  grid-area: nav;
+  box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
+
+  &__step {
+    text-align: right;
+    border-bottom: 1px solid $white;
+
+    a {
+      color: #9ba0a4;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 60px;
+      background-image: url(../images/icons_small.png);
+      background-repeat: no-repeat;
+      background-position-x: 119px;
+      padding-right: 84px;
+
+      &:hover {
+        color: $blue;
+        font-weight: 600;
+        background-position-x: 121px;
+      }
+    }
+
+    &.nav__step--active {
+      background-color: $white;
+
+      a {
+        color: $blue;
+        font-weight: 600;
+        background-position-x: 121px;
+      }
+    }
+  }
+
+  &--step-1 {
+    background-position-y: 0px;
+
+    &:hover,
+    .nav__step--active & {
+      background-position-y: -175px;
+    }
+  }
+
+  &--step-2 {
+    background-position-y: -25px;
+
+    &:hover,
+    .nav__step--active & {
+      background-position-y: -200px;
+    }
+  }
+
+  &--step-3 {
+    background-position-y: -50px;
+
+    &:hover,
+    .nav__step--active & {
+      background-position-y: -225px;
+    }
+  }
+
+  &--step-4 {
+    background-position-y: -75px;
+
+    &:hover,
+    .nav__step--active & {
+      background-position-y: -250px;
+    }
+  }
+
+  &--step-5 {
+    background-position-y: -100px;
+
+    &:hover,
+    .nav__step--active & {
+      background-position-y: -275px;
+    }
+  }
+
+  &--step-6 {
+    background-position-y: -125px;
+
+    &:hover,
+    .nav__step--active & {
+      background-position-y: -300px;
+    }
+  }
+
+  &--step-7 {
+    background-position-y: -150px;
+
+    &:hover,
+    .nav__step--active & {
+      background-position-y: -325px;
+    }
+  }
+}

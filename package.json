@@ -1,14 +1,42 @@
 {
   "name": "front-end-developer-exercise",
   "version": "1.0.0",
+  "description": "A light foundation for your next frontend project based on webpack.",
+  "scripts": {
+    "build": "webpack --config webpack/webpack.config.prod.js  --colors",
+    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
+    "dist": "npm run build && http-server ./dist -d false"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
-  "scripts": {
-    "start": "http-server ./app -d false"
-  },
+  "author": "pauljeter@gmail.com",
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.2",
+    "copy-webpack-plugin": "^5.0.3",
+    "css-loader": "^3.0.0",
+    "eslint": "^5.16.0",
+    "eslint-loader": "^2.1.2",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^4.0.0-beta.5",
+    "http-server": "^0.11.1",
+    "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "core-js": "^3.0.1"
   }
 }

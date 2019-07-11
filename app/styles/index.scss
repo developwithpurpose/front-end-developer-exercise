@@ -1,0 +1,25 @@
+@import './minireset';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap');
+
+@import './nav';
+@import './hero';
+@import './steps';
+
+body {
+  background-color: #bbbfc2;
+  font-family: $font-open-sans;
+}
+
+.container {
+  background-color: $white;
+  display: grid;
+  grid-template-areas: "header header""nav main";
+  grid-template-columns: 300px auto;
+  grid-template-rows: 336px auto;
+  height: calc(100vh - 80px);
+  margin: 0 auto;
+  width: 980px;
+  min-height: 763px;
+  box-shadow: 5px 0 10px -5px rgba(0, 0, 0, 0.4), -5px 0 10px -5px rgba(0, 0, 0, 0.4)
+}
