@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap');
+
+body {
+    background-color: #bbbfc2;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    border: solid 1px gray;
+    width: 980px; 
+    margin: 37px auto;
+    position: relative;
+}
+
+header {
+    background-image: url('../images/header_text.jpg');
+    background-repeat: no-repeat;
+    margin: 0;
+    width: 100%;
+    height: 275px;
+}
+.baby-steps-body {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+
+
+.navigation {
+    position: relative;
+    height: 800px;
+    width: 300px;
+    background-image: linear-gradient(to right, #ebeced , #d1d5d6);
+}
+
+.navigation div {
+    text-align: end;
+}
+
+
+.navigation div p {
+    line-height: 60px;
+    font-size: 18px;
+    display: inline;
+    color: #9ba0a4;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    z-index: 2;
+}
+
+.active p {
+    color: #36abe1 !important;
+    font-weight: bold !important;
+}
+
+.active-box {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 73px;
+}
+
+.baby-step-icon {
+    margin: -7px 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.baby-step-detail {
+    margin: 0 70px;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
+}
+
+.baby-step-detail-para-1 {
+    margin: 24px 0;
+}
