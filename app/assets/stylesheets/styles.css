@@ -63,7 +63,8 @@ header {
     top: 0;
     left: 0;
     width: 300px;
-    height: 73px;
+    height: 78px;
+    transition: 450ms;
 }
 
 .baby-step-icon {
@@ -82,4 +83,16 @@ header {
 
 .baby-step-detail-para-1 {
     margin: 24px 0;
+}
+
+.baby-step-detail-para-2 {
+    margin-bottom: 40px;
+}
+
+.active-detail{
+    transition: 1500ms;
+}
+
+.friend-name {
+    color: #6fbee7;
 }
