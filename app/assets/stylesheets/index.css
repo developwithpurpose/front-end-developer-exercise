@@ -1,0 +1,93 @@
+
+.header-img{
+    width: 100%;
+    margin-bottom: 60px;
+}
+.header-text {
+    position: relative;
+}
+.text-on-img {
+    position: absolute;
+    text-align: end;
+    width: 95%;
+    margin-top: 50px;
+    top: 0;
+}
+.real-life, .img-text {
+    color: #fff;
+}
+.baby-step {
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+}
+.baby-step-button{
+    width: 350px;
+    height: 90px;
+    background-color: #eaedef;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #9ba0a2;
+}
+
+#text {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.text-body {
+    margin-top: 24px;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+}
+.real-life {
+    font-weight: normal;
+}
+
+h1 {
+    color: #36abe2;
+    margin: 5px 0 0 0;
+}
+
+h3 {
+    color: #5c6366;
+    margin: 0;
+}
+h2 {
+    margin-bottom: 15px;
+}
+
+.inner-container {
+    margin: 0px 100px;
+    background-color: #fff;
+}
+.container {
+    background-color: #bbbfc2;
+}
+
+p {
+    margin: 0;
+}
+
+.icons {
+    width: 120px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.small-icons {
+    width: 50px;
+    height: 40px;
+    margin-left: 40px;
+}
+
+.button-content {
+    margin-top: 30px;
+    margin-left: 90px;
+    display: flex;
+    justify-content: center;
+}

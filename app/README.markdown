@@ -1,1 +1,2 @@
-Document your submission here (optional, but recommended)
+
+I have worked on the axios call to get the friends data, but I was getting error "GET http://10.0.2.15:8080/assets/javascripts/getData net::ERR_ABORTED 404 (Not Found)". I found out that I was not running the json-server at first and I installed it 'npm install -g json-server' and I run it on the terminal but I still got the same error and was not able to use the friends data. 
