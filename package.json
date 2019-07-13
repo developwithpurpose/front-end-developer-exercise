@@ -6,9 +6,19 @@
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
   "scripts": {
+    "prestart":"./node_modules/.bin/babel source --out-dir app/assets/scripts",
     "start": "http-server ./app -d false"
   },
   "devDependencies": {
-    "http-server": "^0.8.0"
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "chai": "^4.2.0",
+    "http-server": "^0.8.0",
+    "mocha": "^6.1.4",
+    "nock": "^10.0.6"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4"
   }
 }
