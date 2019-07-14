@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
-body {
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+
+body{
   margin: 0;
   top: 0;
   left: 0;
@@ -68,16 +69,17 @@ header img {
   border-radius: 0px !important;
   color: #9ba0a4;
   line-height: 60px;
-  font-family: "Source Sans Pro";
+  font-family: 'Source Sans Pro';
   font-size: 18px;
   text-align: right;
   font-weight: 200;
   border-bottom: 1px solid white;
+
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   color: #6fbee7;
-  font-family: "Source Sans Pro";
+  font-family: 'Source Sans Pro';
   background-color: white;
   font-weight: 400;
   font-size: 18px;
@@ -85,13 +87,13 @@ header img {
 }
 
 .babysteps {
-  position: relative;
-  font-size: calc(1em + 1vh);
-  padding: 0;
-  margin-top: 60px;
-  list-style-type: none;
-  text-decoration: none;
-  color: #9ba0a4 !important;
+    position: relative;
+    font-size: calc(1em + 1vh);
+    padding: 0;
+    margin-top:60px;
+    list-style-type: none;
+    text-decoration: none;
+    color: #9ba0a4 !important;
 }
 
 .babysteps img {
@@ -107,7 +109,6 @@ header img {
   color: #36abe1 !important;
   background-color: #ffffff;
 }
-
 .current a {
   color: #36abe1 !important;
   background-color: #ffffff;
@@ -158,7 +159,7 @@ header img {
   height: 26px;
 }
 
-.nav-link.active #step-3 {
+.nav-link.active #step-3{
   background: url(/assets/images/icons/sprites/icons_small.png) no-repeat 0 -224px;
   width: 30px;
   height: 26px;
@@ -234,7 +235,7 @@ header img {
   position: relative;
   margin-top: 24px;
   width: 600px;
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-size: 13px;
   color: #65686f;
   font-weight: 400;
@@ -242,10 +243,8 @@ header img {
 }
 
 #friends {
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-size: 13px;
   color: #65686f;
   font-weight: 400;
 }
-
-/*# sourceMappingURL=style.css.map */

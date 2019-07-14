@@ -10,44 +10,27 @@ $(document).ready(function() {
          var array = data.friends[i];
 
          if(array.babyStep == 1) {
-           $("#babystep-1 #friends").append(array.firstName + ' ' + array.lastName);
+           $("#v-pills-1 #friends").append('<a class="name" href="">' + array.firstName + ' ' + array.lastName + '</a>');
          }
          if(array.babyStep == 2) {
-           $("#babystep-2 #friends").append(array.firstName + ' ' + array.lastName + ' is on this step.');
+           $("#v-pills-2 #friends").append('<a class="name" href="">' + array.firstName + ' ' + array.lastName + '</a>' + ' is on this step.');
          }
          if(array.babyStep == 3) {
-           $("#babystep-3 #friends").append(array.firstName + ' ' + array.lastName + ', ');
+           $("#v-pills-3 #friends").append('<a class="name" href="">' + array.firstName + ' ' + array.lastName + '</a>' + ', ');
          }
          if(array.babyStep == 4) {
-           $("#babystep-4 #friends").append(array.firstName + ' ' + array.lastName + ', ');
+           $("#v-pills-4 #friends").append('<a class="name" href="">' + array.firstName + ' ' + array.lastName + '</a>' + ', ');
          }
          if(array.babyStep == 5) {
-           $("#babystep-5 #friends").append(array.firstName + ' ' + array.lastName + ', ');
+           $("#v-pills-5 #friends").append('<a class="name" href="">' + array.firstName + ' ' + array.lastName + '</a>' + ', ');
          }
          if(array.babyStep == 6) {
-           $("#babystep-6 #friends").append(array.firstName + ' ' + array.lastName + ', ');
+           $("#v-pills-6 #friends").append('<a class="name" href="">' + array.firstName + ' ' + array.lastName + '</a>' + ', ');
          }
          if(array.babyStep == 7) {
-           $("#babystep-7 #friends").append(array.firstName + ' ' + array.lastName + ', ');
+           $("#v-pills-7 #friends").append('<a class="name" href="">' + array.firstName + ' ' + array.lastName + '</a>' + ', ');
          }
        }
      }
    });
-  $(function(){
-
-     //Get Baby Steps tab and Add/Remove current class on click event.
-    $('.babysteps > ul > li').click(function(e){
-        e.preventDefault();
-
-        $(this).siblings().removeClass('current');
-
-        $(this).addClass('current', function(){
-        $(this).fadeIn(500);
-        });
-    });
-    //Show Baby Step content based on what's selected.
-     $("li").click(function () {
-        $('.step').hide().eq($(this).index()).show();
-});
-});
 });
