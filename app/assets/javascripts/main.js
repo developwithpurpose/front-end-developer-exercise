@@ -13,7 +13,7 @@ $(document).ready(function() {
            $("#v-pills-1 #friends").append('<a class="name" href="">' + array.firstName + ' ' + array.lastName + '</a>');
          }
          if(array.babyStep == 2) {
-           $("#v-pills-2 #friends").append('<a class="name" href="">' + array.firstName + ' ' + array.lastName + '</a>' + ' is on this step.');
+           $("#v-pills-2 #friends").append('<a class="name" href="">' + array.firstName + ' ' + array.lastName + '</a>' + ' is also on Baby Step 2.');
          }
          if(array.babyStep == 3) {
            $("#v-pills-3 #friends").append('<a class="name" href="">' + array.firstName + ' ' + array.lastName + '</a>' + ', ');
