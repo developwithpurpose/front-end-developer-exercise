@@ -1,0 +1,78 @@
+@font-face{
+  font-family: 'Source Sans Pro Regular';
+  src: url("../fonts/SourceSansPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family:'Source Sans Pro semi-bold';
+  src: url("../fonts/SourceSansPro-Semibold.otf") format("opentype")
+}
+
+@font-face {
+  font-family:'Source Sans Pro Light';
+  src: url("../fonts/SourceSansPro-Light.otf") format("opentype");
+}
+
+body {
+  margin:0px;
+  background-color: #bbbfc2;
+
+}
+
+a {
+  color: #6fbee7;
+  text-decoration: none;
+}
+
+.baby-steps{
+  background-image: linear-gradient(90deg, rgba(235,236,237,1) 95%, rgba(209,213,214,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#ebeced', endColorstr='#d1d5d6');
+}
+
+.header-img{
+  padding-bottom:60px;
+  background-color: white;
+}
+
+.tab-label {
+  font-family:"Source Sans Pro Regular";
+  font-size:18px;
+  color: #9ba0a4;
+  line-height: 60px;
+  margin-top:-5px;
+}
+
+.tab-img {
+  margin-left: 24px;
+}
+
+.step-container {
+  background-color:white;
+}
+.step-header{
+  font-family: 'Source Sans Pro semi-bold';
+  font-size: 30px;
+  color: #36abe1;
+  line-height: 20px;
+}
+
+.step-subheader {
+  font-family: 'Source Sans Pro light';
+  font-size:18px;
+  color:#5c6366;
+  line-height: 20px;
+}
+
+.description-text {
+  font-family: Helvetica;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
+  margin-bottom:40px;
+}
+
+.link-text{
+  font-family: Helvetica;
+  font-size: 13px;
+  color: #65686f;
+}

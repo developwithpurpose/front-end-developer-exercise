@@ -9,7 +9,6 @@ var getFriends;
     req.onreadystatechange = function () {
       if (req.readyState === 4) {
         var res = JSON.parse(req.response);
-        console.log(res.friends);
         if (req.status == 200) callback(res.friends);else console.error("Failed to load (HTTP error)");
       }
     };
