@@ -30,26 +30,82 @@ a {
 }
 
 .baby-steps{
-  background-image: linear-gradient(90deg, rgba(235,236,237,1) 95%, rgba(209,213,214,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#ebeced', endColorstr='#d1d5d6');
-}
-.baby-step{
   position: relative;
+  display: block;
   margin-top:-5px;
-  display:block;
-  background:transparent;
+  width:980px;
+  height:630px;
+  background-color:white;
 }
 
-.baby-steps .baby-step:first-child{
+section {
+  position: absolute;
+  display:block;
+  z-index: 0;
+}
+section .tab{
+  background-image: linear-gradient(90deg, rgba(235,236,237,1) 95%, rgba(209,213,214,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#ebeced', endColorstr='#d1d5d6');
+  float: left;
+  height:89px;
+  padding-right:24px;
+  cursor: pointer;
+  left:-90px;
+}
+
+.baby-steps section:first-child{
   z-index: 1;
 } 
 
+.baby-steps section:nth-child(2){
+  top:90px;
+}
+.baby-steps section:nth-child(2) .step-container{
+  top:-90px;
+}
+.baby-steps section:nth-child(3){
+  top:180px;
+}
+.baby-steps section:nth-child(3) .step-container{
+  top:-180px;
+}
+.baby-steps section:nth-child(4){
+  top:270px;
+}
+.baby-steps section:nth-child(4) .step-container{
+  top:-270px;
+}
+.baby-steps section:nth-child(5){
+  top:360px;
+}
+.baby-steps section:nth-child(5) .step-container{
+  top:-360px;
+}
+.baby-steps section:nth-child(6){
+  top:450px;
+}
+.baby-steps section:nth-child(6) .step-container{
+  top:-450px;
+}
+.baby-steps section:nth-child(7){
+  top:540px;
+}
+.baby-steps section:nth-child(7) .step-container{
+  top:-540px;
+}
 
-.baby-steps .baby-step:target .tab-label{
-  color:#36abe1;
+section:target,
+section:target .tab{
   z-index: 2;
   background-color: white;
+  background-image:none;
+  filter:none;
 }
+
+section:target .tab .tab-label{
+  color:#36abe1;
+}
+
 .tab-label {
   font-family:"Source Sans Pro Regular";
   font-size:18px;
@@ -59,17 +115,20 @@ a {
 }
 
 .tab-img {
-  margin-left: 24px;
+  float: right;
 }
 
 
 .step-container {
-  position: absolute;
-  display:block;
+  float:right;
   padding-left:70px;
   padding-right:70px;
+  width: 646px;
   background-color:white;
   z-index: 0;
+  height:630px;
+  position: absolute;
+  left:194px;
 }
 
 .step-header{
