@@ -4,7 +4,7 @@ let listFriends = function(friends){
     if (typeof (friendsInCurrentStep) === "undefined")
       continue;
     const list = getFriendListByBabyStep(i, friendsInCurrentStep)
-    //Input the output of each baby step in appropriate places if the result is not "";
+    document.getElementById('friends'+i).innerHTML = list;
   }
 }
 getFriends(listFriends);
