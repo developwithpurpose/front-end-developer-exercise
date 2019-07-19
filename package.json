@@ -20,6 +20,8 @@
     "mocha": "^6.1.4"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4"
+    "@babel/polyfill": "^7.4.4",
+    "autoprefixer": "^9.6.1",
+    "postcss-cli": "^6.1.3"
   }
 }
