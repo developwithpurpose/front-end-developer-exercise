@@ -1,0 +1,69 @@
+HTML, body {
+    margin: 0px;
+    padding: 0px;
+      border: 0px;
+    }
+
+body{
+    background-color:#bbbfc2;
+}
+
+@font-face {
+    font-family: OpenSans-Light;
+    src: url(../fonts/OpenSans-Light.ttf);
+  }
+  
+  @font-face {
+    font-family: OpenSans-Bold;
+    src: url(../fonts/OpenSans-Bold.ttf);
+  }
+
+.wrapper{
+    display: grid;
+    background-color: white;
+    grid-template-columns: 200px 780px;
+    grid-template-rows: 276px 700px;
+    grid-gap:70px;
+    
+    width:980px;
+    margin:0 auto;
+}
+
+.header {
+    background-image: url('../images/header.jpg');
+    grid-column:1/3;
+    grid-auto-rows: minmax(200px, auto);
+    text-align: right;
+
+}
+
+.textwrapper {
+    
+}
+
+.header-text1 {
+    color:#fff;
+    font-family: "OpenSans-Light", Times;
+    font-size: 32px;
+    margin-top: 50px;
+    margin-right: 70px;
+    /* margin-bottom: 15px; */
+}
+
+.header-text2 {
+    color:#fff;
+    font-family: "OpenSans-Bold", Times;
+    font-size: 50px;
+    
+    margin-right: 70px;
+    line-height: 48px;
+}
+
+.buttons {
+    grid-column: 1;
+}
+
+.content {
+    grid-column: 2;
+
+}
