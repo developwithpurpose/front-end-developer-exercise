@@ -76,15 +76,17 @@ body{
 .buttons {
     grid-column: 1;
     display: grid;
-    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px 300px;
+    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 189px;
     grid-row-gap:3px;
     text-align: center;
+    /* border: rgb(164, 4, 179) 1px solid; */
     
    
 }
 
 .filler{
     background-image: linear-gradient(to right, #ebeced , #d1d5d6);
+   
 }
 
 
@@ -115,7 +117,7 @@ body{
 
     grid-column: 2;
     display: grid;
-    grid-template-rows: 125px auto auto;
+    grid-template-rows: 125px 200px auto;
     grid-template-columns: 120px 420px;
 
     
