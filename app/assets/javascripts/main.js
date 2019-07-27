@@ -22,17 +22,21 @@ $( document ).ready(function() {
 
             console.log(step)
 
-            for (var i = 0;i<data.friends.length-1;i++) {
+            for (var i = 0;i<data.friends.length;i++) {
                 // console.log(data.friends[i].firstName + " " + data.friends[i].lastName  + " " + data.friends[i].babyStep);
                 if (data.friends[i].babyStep === step) {
                     mystep_friends.push(data.friends[i].firstName + " " + data.friends[i].lastName);
                 }
             }
 
-            console.log(mystep_friends)
-            console.log(mystep_friends-2);
+            
+            // console.log(mystep_friends-2);
 
-            if (mystep_friends.length === 1) {
+            if (mystep_friends.length === 0) {
+                $("#names").text("");
+                $("#onstep").text("") 
+            }
+            else if (mystep_friends.length === 1) {
                 $("#names").text(mystep_friends[0]);
                 $("#onstep").text(" is also in Baby Step 2") 
             }
