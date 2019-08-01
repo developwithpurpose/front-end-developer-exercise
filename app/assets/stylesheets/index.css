@@ -59,6 +59,10 @@ body {
     width: 100%;
 }
 
+.body-col {
+    padding-top: 60px;
+}
+
 .nav-link {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
@@ -89,24 +93,11 @@ body {
 .nav-img {
     display: block;
     margin: auto;
+    border: none;
 }
 
 .content-div {
     padding-bottom: 25px;
-}
-
-.content-text {
-    margin-top: 12px;
-    margin-bottom: 40px;
-}
-
-.step-friends {
-    font-weight: 600;
-    color: #9B9B9B;
-}
-
-.step-friends a {
-    color: #6fbee7;
 }
 
 .invisible {
@@ -122,6 +113,24 @@ body {
     transition: opacity 1.25s
 }
 
+.invisible .content-text {
+    margin: 0;
+}
+
+.content-text, .shown .content-text {
+    margin-top: 12px;
+    margin-bottom: 40px;
+}
+
+.step-friends {
+    font-weight: 600;
+    color: #9B9B9B;
+}
+
+.step-friends a {
+    color: #6fbee7;
+}
+
 #banner {
     width: 100%;
     height: 100%;
@@ -133,7 +142,6 @@ body {
 }
 
 #main-container {
-    padding-top: 60px;
     width: 100%;
     max-width: 980px;
 }
