@@ -1,6 +1,10 @@
 html {
     background-color: #bbbfc2;
     height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #65686f;
+    line-height: 18px;
 }
 
 body {
@@ -21,8 +25,21 @@ body {
     vertical-align: top;
 }
 
+.fill {
+    width: 100%;
+    height: 100%;
+}
+
 .fill-height {
     height: 100%;
+}
+
+.fill-width {
+    width: 100%;
+}
+
+.contain-width {
+    max-width: 100%;
 }
 
 .container {
@@ -40,11 +57,6 @@ body {
 .border {
     height: 100%;
     width: 100%;
-}
-
-.header {
-    width: 100%;
-    height: 100%;
 }
 
 .nav-link {
@@ -72,18 +84,50 @@ body {
     margin: auto;
 }
 
+.content-div {
+    padding-bottom: 25px;
+}
+
+.content-text {
+    margin-top: 12px;
+    margin-bottom: 40px;
+}
+
+.step-friends {
+    font-weight: 600;
+    color: #9B9B9B;
+}
+
+.step-friends a {
+    color: #6fbee7;
+}
+
+#banner {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 #site-container {
     background-color: white;
 }
 
 #main-container {
     padding-top: 60px;
+    width: 100%;
+    max-width: 980px;
 }
 
 #nav-container {
+    background-color: #ebeced;
     background-image: linear-gradient(to right, #ebeced 95%, #d1d5d6);
 }
 
 #nav-border {
     visibility: hidden;
+}
+
+#content-container {
+    padding: 0 70px;
+    padding-bottom: 50px;
 }
