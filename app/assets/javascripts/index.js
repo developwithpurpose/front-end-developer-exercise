@@ -33,7 +33,56 @@ function toggleStep(index, toggle)
     $(".nav-link .nav-img").eq(index).attr("src", getImage(index, toggle));
 }
 
+function loadFriends()
+{
+    $.ajax({
+        url: "./baby-steps.json",
+        success: function(result)
+        {
+            var friends = result.friends;
+            for (var i = 0; i < 7; i++)
+            {
+                var filtered = friends.filter(function(friend)
+                {
+                    return friend.babyStep === (i + 1);
+                })
+                $(".content-div .step-friends").eq(i)
+                    .html(getFriendString(i, filtered));
+
+            }
+        }
+    })
+}
+
+function getFriendString(index, friends)
+{
+    if (friends.length > 0)
+    {
+        return "<a>" + friends[0].firstName + " " + friends[0].lastName + "</a>"
+        + (friends.length > 1
+            ? (friends.length > 2
+                ? ", "
+                : " and "
+            )
+            + "<a>" + friends[1].firstName + " " + friends[1].lastName + "</a>"
+            + (friends.length > 2
+                ? ", and " + (friends.length - 2) + " other friend"
+                + (friends.length > 3
+                    ? "s "
+                    : " "
+                )
+                : " "
+            )
+            + "are "
+            : " is "
+        )
+        + "also in Baby Step " + (index + 1);
+    }
+    return "";
+}
+
 $(document).ready(function() {
+    loadFriends();
     $(".nav-link").click(function(e) {
         selectStep($("#" + e.currentTarget.id).parent().parent().index());
         return false;
