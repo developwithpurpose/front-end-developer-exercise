@@ -71,6 +71,13 @@ body {
     border-bottom: 1px solid white;
 }
 
+.selected-link {
+    color: #36abe1;
+    font-weight: 600;
+    background-color: white;
+    transition: background-color 1s;
+}
+
 .nav-item {
     text-align: right;
 }
@@ -100,6 +107,19 @@ body {
 
 .step-friends a {
     color: #6fbee7;
+}
+
+.invisible {
+    height: 0px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.shown {
+    opacity: 1;
+    height: auto;
+    transition: opacity 1.25s
 }
 
 #banner {
