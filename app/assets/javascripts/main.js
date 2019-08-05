@@ -2,12 +2,67 @@
 
 $(function () {
     console.log("ready!");
+    let currentStep = 1;
+    console.log(currentStep);
+
+    //Determine which radio button is checked:
+    $(document).ready(function () {
+        $('input:radio[name=radio-set]').change(function () {
+            currentStep = this.value;
+            if (this.value == '1' | 1) {
+                console.log(currentStep);
+                alert("Allot Thai Gayo Bhai");
+            }
+            else if (this.value == '2' | 2) {
+                alert("Transfer Thai Gayo");
+                //console.log(this.value);
+            }
+            //selectedValue = $("input[name=radio-set]:checked").val();
+
+            console.log(currentStep);
+            // do stuff with currentStep
+        });
+    });
+
+
+    /*
+    $("input[type='radio']").on('change', function () {
+        var selectedValue = $("input[name=radio-set]:checked").val();
+        console.log(selectedValue);
+        if (selectedValue) {
+            alert("Hello, your favorite programming language= " + selectedValue);
+        }
+        console.log(selectedValue);
+    });
+    */
+
+    //const currentStep = $('input[name=radio-set]:checked').val();
+    //console.log(currentStep);
+
+    //let currentCheckedBabyStep;
+
+    /*
+        return (document.getElementById('tab-1').checked) ? 1 :
+            (document.getElementById('tab-2').checked) ? 2 :
+                (document.getElementById('tab-3').checked) ? 3 :
+                    (document.getElementById('tab-4').checked) ? 4 :
+                        (document.getElementById('tab-5').checked) ? 5 :
+                            (document.getElementById('tab-6').checked) ? 6 :
+                                (document.getElementById('tab-7').checked) ? 7 :
+    
+                                    null;
+    
+        console.log(currentCheckedBabyStep);
+        */
+
 
     $.getJSON('./assets/javascripts/baby-steps.json', function (data) {
         console.log(data);
-        console.log(data.friends[0])
+        //console.log(data.friends[i])
 
-            (Object.keys(data.friends) = 1 ? )
+
+
+
 
         $("span.friends").append(`<p>${data.friends.map(x => JSON.stringify(x))}</p>`);
     });
