@@ -433,3 +433,16 @@ div.content {
     position: absolute;
     width: 1px
 }
+
+.showFriends {
+    font-family: 'Helvetica Reg', sans-serif;
+    padding-top: 26px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #65686f;
+
+}
+
+.blueName {
+    color: #6fbee7;
+}
