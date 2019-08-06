@@ -1,4 +1,4 @@
-#Code Challenge
+##Code Challenge
 
 Thank you for the opportunity to re-attempt this code challenge!
 
@@ -9,7 +9,7 @@ In order to reflect the current chosen baby-step, I leveraged the radio-buttons 
 
 I then went about building a function that would use that radio-step status ('currentStep') as the basis for selecting data to manipulate from the JSON file. It was in building this function that I felt a greater compentency in Javascript since last attempting this challenge. I attempted to write the function so that any number of future Baby Steppers' data could be added to the JSON file, with no functionality lost.
 
-Using .filter and .sort made short work of extracting only the appropriate Baby Steppers per step, and then ordering them alphabetically in friendFilter.
+Using .filter and .sort made short work of extracting only the appropriate Baby Steppers per step, and then ordering them alphabetically in# friendFilter.
 
 Next, I employed a series of ternary operators to define how the friends would appear with each baby step. Using the array.length of friendFilter, I was able to shape the returned template literals accordingly. And, I did deviate from the instructions in one way: I wanted the 'and # other friends' to reflect the actual number of other friends on that Baby Step.
 
