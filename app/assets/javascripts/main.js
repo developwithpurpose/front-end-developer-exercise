@@ -14,19 +14,26 @@ $(function () {
         $.getJSON('./assets/javascripts/baby-steps.json', function (data) {
 
             let currentFriends = [];
+            console.log(currentStep);
+            let friendFilter = data.friends.filter(x => x.babyStep == currentStep).sort((a, b) => (a.lastName < b.lastName)
+                ? -1
+                : a.lastName > b.lastName
+                    ? 1
+                    : 0);
 
-            let friendData = data.friends.filter(x => x.babyStep == currentStep).map((x, i) =>
-                (data.friends.filter(x => x.babyStep == currentStep).length == 1)
-                    ? currentFriends.push(`${x.firstName} ${x.lastName} is also in Baby Step ${currentStep}`)
-                    : (data.friends.filter(x => x.babyStep == currentStep).length == 2)
-                        ? currentFriends.push(`${x.firstName} ${x.lastName} and ${data.friends[i + 2].firstName} ${data.friends[i + 2].lastName} are also in Baby Step  ${currentStep}`)
-                        : (data.friends.filter(x => x.babyStep == currentStep).length == 3)
-                            ? currentFriends.push(`${x.firstName} ${x.lastName} and ${data.friends[i + 2].firstName} ${data.friends[i + 2].lastName} and 1 other friend are also in Baby Step  ${currentStep}`)
-                            : (data.friends.filter(x => x.babyStep == currentStep).length > 3)
-                                ? currentFriends.push(`${x.firstName} ${x.lastName} and ${data.friends[i + 2].firstName} ${data.friends[i + 2].lastName} and ${data.friends.filter(x => x.babyStep == currentStep).length - 1} other friends are also in Baby Step  ${currentStep}`)
+            console.log(friendFilter);
+            friendFilter.map((y, i) =>
+                (friendFilter.length == 1)
+                    ? currentFriends.push(`${y.firstName} ${y.lastName} is also in Baby Step ${currentStep}`)
+                    : (friendFilter.length == 2)
+                        ? currentFriends.push(`${y.firstName} ${y.lastName} and ${friendFilter[1].firstName} ${friendFilter[1].lastName} are also in Baby Step  ${currentStep}`)
+                        : (friendFilter.length == 3)
+                            ? currentFriends.push(`${y.firstName} ${y.lastName} and ${friendFilter[1].firstName} ${friendFilter[1].lastName} and 1 other friend are also in Baby Step  ${currentStep}`)
+                            : (friendFilter.length > 3)
+                                ? currentFriends.push(`${y.firstName} ${y.lastName}, ${friendFilter[1].firstName} ${friendFilter[1].lastName} and ${currentStep - 2} other friends are also in Baby Step  ${currentStep}`)
                                 : '');
 
-            $("span.friends").html(`<p>${(friendData.length == 0) ? '' : currentFriends[0]}</p>`);
+            $("span.friends").html(`<p>${(friendFilter.length == 0) ? '' : currentFriends[0]}</p>`);
         });
     }
 });
