@@ -22,7 +22,7 @@ $(function () {
                 (friendFilter.length == 1)
                     ? currentFriends.push(`<span class="blueName">${y.firstName} ${y.lastName}</span> is also in Baby Step ${currentStep}`)
                     : (friendFilter.length == 2)
-                        ? currentFriends.push(`<span class="blueName">${y.firstName} ${y.lastName} and ${friendFilter[1].firstName} ${friendFilter[1].lastName}</span> are also in Baby Step  ${currentStep}`)
+                        ? currentFriends.push(`<span class="blueName">${y.firstName} ${y.lastName}</span> and <span class="blueName">${friendFilter[1].firstName} ${friendFilter[1].lastName}</span> are also in Baby Step  ${currentStep}`)
                         : (friendFilter.length == 3)
                             ? currentFriends.push(`<span class="blueName">${y.firstName} ${y.lastName}</span>, <span class="blueName">${friendFilter[1].firstName} ${friendFilter[1].lastName}</span>, and 1 other friend are also in Baby Step  ${currentStep}`)
                             : (friendFilter.length > 3)
