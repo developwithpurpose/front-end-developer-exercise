@@ -1,6 +1,6 @@
 #Code Challenge
 
-Thank you for the opportunity to work on this code challenge (on my second time through this code challenge).
+Thank you for the opportunity to re-attempt this code challenge!
 
 ## Javascript
 On my last attempt this year, I was pretty uncertain of how to manipulate the JSON data in order to present the appropriate number of friends that were in each 'baby-step.' It was really gratifying to re-attempt this challenge after attempting numerous other exercises and projects with Javascript.
