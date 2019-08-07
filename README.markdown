@@ -6,18 +6,21 @@ Copyright © 2014 Lampo Licensing, LLC. All rights reserved.
 Objective
 ---------
 
-Build a web page that will provide information about The 7 Baby Steps.
+Built a web page that provides information about The 7 Baby Steps.
 
 Requirements
 ------------
 
-* Fork this repository and submit your finished work as a pull request.
-* Your submission should look like the provided mockup.
-* There should be an animation when navigating between the baby steps. You are free to come up with what this transition looks like (and an example has been provided).
-* The "Dynamic Content" user story included at the end of this README should be completed as a part of your submission.
-* Treat your final deliverable as if it were going to be deployed to production.
-* Instead of code comments, please document your submission by creating a README in the `./app/` directory. Feel free to include anything in it that you think might be helpful in evaluating your work.
-* If you use a preprocessor or some kind of build tool, include the source code as well as the compiled output.
+* Forked this repository and submitted my finished work as a pull request.
+* Submission looks like the provided mockup.
+* There is animation when navigating between the baby steps (react-spring library).
+* The "Dynamic Content" user story is included at the end of this README, completed as a part of
+  submission.
+* Final deliverable treated as if it were going to be deployed to production.
+* Instead of code comments, I documented my submission by creating a README in the `./app/`
+  directory. I included items that I thought might be helpful in evaluating my work.
+* Create-react-app used. See source documentation here: 
+  https://facebook.github.io/create-react-app/docs/getting-started
 
 Success Criteria
 ----------------
@@ -27,6 +30,7 @@ Success Criteria
 * You should __not__ create a mobile/responsive version, as we will not be giving any credit for it.
 * The page should be usable without JavaScript, though not necessarily functionally identical (e.g. the Dynamic Content user story requires JavaScript). Please document intentional deviations.
 * You should __not__ use a single-page application framework (e.g. Angular, Ember, React), though you can use any other libraries that you need (e.g. jQuery, Lodash, etc.).
+  * React usage was pre-approved by technical recruiter.
 
 Resources
 ---------
