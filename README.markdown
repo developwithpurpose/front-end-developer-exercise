@@ -7,6 +7,7 @@ Objective
 ---------
 
 Built a web page that provides information about The 7 Baby Steps.
+* source: https://www.daveramsey.com/dave-ramsey-7-baby-steps#baby_step_1
 
 Requirements
 ------------
@@ -64,6 +65,7 @@ Dynamic Content
 As a user I want to be encouraged by how many friends of mine are also going through the selected baby step. I don't need to see all my friends; just a summary of who is in the same baby step.
 
 You should make an AJAX request for the data from `/app/baby-steps.json`, which includes a list of friend objects. Each object contains names and their baby step. Based on the data returned, you will need to show the following information to the user, sorted by last name ascending.
+  * AJAX request: used Axios with React
 
 ### Message Logic
 
