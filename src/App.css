@@ -1,11 +1,11 @@
 .App {
+  background-color: #bbbfc2;
+  height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #65686f;
+  line-height: 18px;
   text-align: center;
-}
-
-.Logo-image {
-  animation: Logo-image-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
 }
 
 .App-header {
@@ -15,19 +15,132 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+#banner {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.contained {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.from-top {
+  vertical-align: top;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+}
+
+.fill-height {
+  height: 100%;
+}
+
+.fill-width {
+  width: 100%;
+}
+
+.contain-width {
+  max-width: 100%;
+}
+
+.container {
+  display: table;
+}
+
+.row {
+  display: table-row;
+}
+
+.p {
+  line-height: 20px;
+}
+
+.col {
+  display: table-cell;
+}
+
+.border {
+  height: 100%;
+  width: 100%;
+}
+
+.nav-item {
+  text-align: right;
+}
+
+.nav-img-div {
+  vertical-align: middle;
+}
+
+.nav_img {
+  display: block;
+  margin: auto;
+}
+
+.content-div {
+  padding-bottom: 25px;
+}
+
+.content-text {
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
+
+.step-friends {
+  font-weight: 600;
+  color: #9b9b9b;
+}
+
+.step-friends a {
+  color: #6fbee7;
+}
+
+#main-container {
+  padding-top: 60px;
+  width: 100%;
+  max-width: 980px;
+}
+
+#nav-container {
+  background-color: #ebeced;
+  background-image: linear-gradient(to right, #ebeced 95%, #d1d5d6);
+}
+
+#nav_border {
+  visibility: hidden;
+}
+
+#site-container {
+  background-color: white;
+}
+
+#content-container {
+  padding: 0 70px;
+  padding-bottom: 50px;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  width: 100%;
+  color: #9ba0a4;
+  text-decoration: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  line-height: 60px;
 }
