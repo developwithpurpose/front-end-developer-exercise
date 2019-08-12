@@ -31,10 +31,14 @@
                 }
 
                 function getMessageForFriendsInStep(listOfFriends) {
+                    if(listOfFriends.length === 0){
+                        return [];
+                    }
                     if (listOfFriends.length < 3) {
-                        return listOfFriends.map((friend, index, list) => {
+                        const lessThan3 = listOfFriends.map((friend, index, list) => {
                             return getFriendMessage(friend, index + 1, list.length);
-                        })
+                        });
+                        return [...lessThan3, ' are also in Baby Step ' + listOfFriends[0].babyStep];
                     } else if (listOfFriends.length === 3) {
                         const twoInThisListPlusOne = listOfFriends.filter((friend, index) => {
                             return index < 3
@@ -46,24 +50,29 @@
 
                     } else {
 
-                        const alwayLessThan4 = listOfFriends.filter((friend, index) => {
-                            return index < 4
+                        const alwaysLessThan4 = listOfFriends.filter((friend, index) => {
+                            return index < 3
                         });
                         const remainingFriendCount = listOfFriends.length - 4;
-                        const moreThan4Friends = alwayLessThan4.map((friend, index, array) => {
+                        const moreThan4Friends = alwaysLessThan4.map((friend, index, array) => {
                             return getFriendMessage(friend, index + 1, array.length);
-                        })
-                        return [...moreThan4Friends, ' and ' + remainingFriendCount + ' others in Group Step ' + listOfFriends[0].babyStep]
+                        });
+                        if(remainingFriendCount < 1){
+                            return [...moreThan4Friends, ' are also in Baby Step ' + listOfFriends[0].babyStep];
+                        }else{
+                            return [...moreThan4Friends, ' and ' + remainingFriendCount + ' others in Group Step ' + listOfFriends[0].babyStep]
+                        }
+
                     }
                 }
 
-                $("#step-1-message").text(getByStepNumber(1));
-                $("#step-2-message").text(getByStepNumber(2));
-                $("#step-3-message").text(getByStepNumber(3));
-                $("#step-4-message").text(getByStepNumber(4));
-                $("#step-5-message").text(getByStepNumber(5));
-                $("#step-6-message").text(getByStepNumber(6));
-                $("#step-7-message").text(getByStepNumber(7));
+                $("#step-1-message").text(getByStepNumber(1).join(' '));
+                $("#step-2-message").text(getByStepNumber(2).join(' '));
+                $("#step-3-message").text(getByStepNumber(3).join(' '));
+                $("#step-4-message").text(getByStepNumber(4).join(' '));
+                $("#step-5-message").text(getByStepNumber(5).join(' '));
+                $("#step-6-message").text(getByStepNumber(6).join(' '));
+                $("#step-7-message").text(getByStepNumber(7).join(' '));
             });
         });
     </script>
