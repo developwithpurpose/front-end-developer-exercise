@@ -1,0 +1,203 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1.2;
+}
+ol {
+    padding-left: 1.4em;
+    list-style: decimal;
+}
+ul {
+    padding-left: 1.4em;
+    list-style: square;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* end reset browser styles */
+
+.clear:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.clear {
+    zoom: 1;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+header {
+    background-color:rgb(93,43,78);
+    background-image: -webkit-linear-gradient(right, rgb(93,43,78), rgb(8,2,50));
+    padding-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3em;
+    color: white;
+    font-weight: bold;
+    padding-top: 30px;
+    clear: both;
+    padding-left: 10px;
+}
+
+
+aside h2 {
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+aside h3 {
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+.main h2 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+.main h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+.main p {
+    color: #9ba0a4;
+    margin: 24px 70px;
+}
+.main img {
+    margin-left: 70px;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar1 {
+    float: left;
+    width: 300px;
+    padding: 0 20px 0 10px;
+}
+.main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+    border-left:  1px -moz-mac-accentdarkshadow;
+    border-right: 1px -moz-mac-accentdarkshadow;
+    margin-top: 60px;
+}
+.headings {
+    margin: 0 0 -15px 90px;
+}
+nav header h1, footer p, .contentWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ul.menu {
+    list-style-type: none;
+    margin-top: 60px;
+}
+ul.menu li {
+    font-size: 18px;
+    font-family: "Source Sans Pro", sans-serif;
+    height: 60px;
+    padding-top: 25px;
+    background: #ebeced url('images/shadow_left_nav.jpg') top right repeat-y;
+}
+ul.menu li a {
+    height: 25px;
+    display: inline-block;
+    color: #9ba0a4;
+    background: url(images/icons/sprites/icons_small.png) no-repeat;
+    padding: 0px 50px 0 60px;
+    margin-left:0;
+    line-height: 30px;
+    text-decoration: none;
+}
+ul.menu li:hover{
+    background-color: white;
+    background-image: none;
+}
+
+ul.menu li.step-1 a {
+    background-position: 170px 0px;
+}
+ul.menu li.step-2 a {
+    background-position: 170px -25px;
+}
+ul.menu li.step-3 a {
+    background-position: 170px -50px;
+}
+ul.menu li.step-4 a {
+    background-position: 170px -75px;
+}
+ul.menu li.step-5 a {
+    background-position: 170px -100px;
+}
+ul.menu li.step-6 a {
+    background-position: 170px -125px;
+}
+ul.menu li.step-7 a {
+    background-position: 170px -150px;
+}
+
+ul.menu li.step-1 a:hover{
+    color: #36abe1;
+    background-position: 170px -175px;
+}
+ul.menu li.step-2 a:hover {
+    color: #36abe1;
+    background-position: 170px -200px;
+}
+ul.menu li.step-3 a:hover {
+    color: #36abe1;
+    background-position: 170px -225px;
+}
+ul.menu li.step-4 a:hover {
+    color: #36abe1;
+    background-position: 170px -250px;
+}
+ul.menu li.step-5 a:hover {
+    color: #36abe1;
+    background-position: 170px -275px;
+}
+ul.menu li.step-6 a:hover {
+    color: #36abe1;
+    background-position: 170px -300px;
+
+}
+ul.menu li.step-7 a:hover {
+    color: #36abe1;
+    background-position: 170px -325px;
+}
+
+.article1,.article2,.article3,.article4,.article5,.article6,.article7{
+    display:none;
+}
+
+.article1:target,.article2:target,.article3:target,.article4:target,.article5:target,.article6:target,.article7:target{
+    display:block;
+}
