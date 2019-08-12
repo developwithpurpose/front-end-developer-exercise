@@ -1,0 +1,200 @@
+
+/* Color Definitions */
+$colorWhite: #fff;
+$colorPrimary: #36abe1;
+$colorGrey700: #bbbfc2;
+$colorLinks: #6fbee7;
+$colorBody: #65686f;
+$colorSubheading: #5c6366;
+$colorNavLink: #9ba0a4;
+
+/* Typography */
+$fontHero: 'Open Sans', sans-serif;
+$fontHeading: 'Source Sans Pro', sans-serif;
+$fontBody: 'Helvetica', sans-serif;
+
+/* Layout */
+$contentWidth: 980px;
+
+/* ======================================== */
+/* Begin Styles                             */
+/* ======================================== */
+body {
+  font-family: $fontBody;
+  background-color: $colorGrey700;
+  color: $colorBody;
+}
+a, a:visited, a:active {
+  color: $colorLinks;
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fontHeading;
+}
+
+.outer {
+  width: $contentWidth;
+  height: 100%;
+  margin: 0 auto;
+  background-color: $colorWhite;
+  box-shadow: 0px 0px 5px 4px rgba(0,0,0,.10);
+}
+
+/* ======================================== */
+/* Header Styles */
+/* ======================================== */
+header {
+  background: url('../images/header.jpg');
+  width: $contentWidth;
+  height:276px;
+}
+
+.header-content {
+  padding: 50px 70px;
+  text-align: right;
+  color: $colorWhite;
+
+  h3 {
+    font-family: $fontHero;
+    font-weight: 300;
+    font-size: 32px;
+    margin: 0 auto 15px auto;
+  }
+  h1 {
+    font-family: $fontHero;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 48px;
+    margin: 0 auto;
+  }
+}
+
+/* ======================================== */
+/* Sidebar */
+/* ======================================== */
+.sidebar {
+  display: table-cell;
+  vertical-align: top;
+  width: 300px;
+  background: #ebeced;
+  background: linear-gradient(90deg, #ebeced 0%, #ebeced 96%, #d1d5d6 100%);
+}
+
+.menu {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+
+  > li {
+    width: 100%;
+    border-bottom: 1px solid $colorWhite;
+    color: $colorWhite;
+    background: transparent url('../images/shadow_left_nav.jpg') 0 100% repeat-y;
+    text-align: right;
+    transition: 250ms ease all;
+
+    &.active {
+      background: $colorWhite;
+      > .item {
+        color: $colorPrimary;
+        font-weight: 600;
+      }
+    }
+    &:hover {
+      > .item {
+        color: $colorPrimary;
+      }
+    }
+
+    > .item {
+      font-family: $fontHeading;
+      display: inline-block;
+      transition: 250ms ease all;
+      background-position: 100% 17px;
+      background-repeat: no-repeat;
+      background-size: 30px 25px;
+      line-height: 60px;
+      font-weight: 400;
+      color: $colorNavLink;
+      font-size: 18px;
+      margin-right: 24px;
+      padding-right: 60px;
+    }
+  }
+}
+
+@for $i from 1 through 7 {
+  .menu > li:nth-child(#{$i}) > .item {
+    background-image: url("../images/icons/individual/icons_large_bs#{$i}.png");
+  }
+  .menu > li:nth-child(#{$i}):hover > .item,
+  .menu > li:nth-child(#{$i}).active > .item {
+    background-image: url("../images/icons/individual/icons_large_bs#{$i}_blue.png");
+  }
+}
+
+/* ======================================== */
+/* Content */
+/* ======================================== */
+.wrap {
+  display: table;
+  margin-top: 60px;
+  height: 100%;
+}
+.content {
+  display: table-cell;
+  vertical-align: top;
+  width: 680px;
+  background-color: $colorWhite;
+}
+.slide-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+article {
+  padding: 0 70px;
+
+  h2 {
+    font-family: $fontHeading;
+    font-weight: 600;
+    font-size: 30px;
+    color: $colorPrimary;
+    line-height: 20px;
+    padding: 8px 0;
+    margin: 0;
+  }
+  h5 {
+    font-family: $fontHeading;
+    font-weight: 300;
+    font-size: 18px;
+    color: $colorSubheading;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  p {
+    font-size: 13px;
+    line-height: 18px;
+    margin: 13px 0;
+
+    &.friends {
+      /* 40px - 13px */
+      margin-top: 27px;
+    }
+  }
+}
+
+article .slide-header {
+  height: 65px;
+  background-size: 77px 65px;
+  padding-left: 92px;
+}
+@for $i from 1 through 7 {
+  // $yOffset: -455px-(65px*($i-1));
+  article:nth-child(#{$i}) .slide-header {
+    background: url("../images/icons/individual/icons_large_bs#{$i}_blue.png") 0 0 no-repeat;
+    /* Using sprite isn't quite lined up. */
+    // background: url("../images/icons/sprites/icons_large.png") 0 #{$yOffset} no-repeat;
+  }
+}
