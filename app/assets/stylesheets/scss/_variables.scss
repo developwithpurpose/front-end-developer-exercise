@@ -1,0 +1,39 @@
+//------------------------------------//
+//  $VARIABLES
+//------------------------------------//
+// Size
+$max-width: 980px;
+
+// Colors
+$white: #fff;
+$black: #283746;
+$dark-gray: #bbbfc2;
+$mid-gray: #9ba0a4;
+$light-gray: #5c6366;
+$lightest-gray: #ececee;
+$dark-blue: #36abe1;
+$light-blue: #6fbee7;
+$link-color: $light-blue;
+$main-color: #65686f;
+
+// FONTS
+// Google fonts import
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Source+Sans+Pro:300,400,600,700&display=swap');
+
+$primary-font: Helvetica, Arial, sans-serif;
+$open-sans: 'Open Sans', Helvetica, Arial, sans-serif;
+$source-sans: 'Source Sans Pro', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+//MIXINS
+@mixin clearfix {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }

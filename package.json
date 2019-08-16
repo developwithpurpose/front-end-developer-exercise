@@ -5,10 +5,23 @@
     "type": "git",
     "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
   },
-  "scripts": {
-    "start": "http-server ./app -d false"
-  },
   "devDependencies": {
-    "http-server": "^0.8.0"
-  }
+    "grunt": "~1.0.3",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-cache-bust": "^1.7.0",
+    "grunt-contrib-clean": "~2.0.0",
+    "grunt-contrib-jshint": "~2.1.0",
+    "grunt-contrib-sass": "~1.0.0",
+    "grunt-contrib-uglify": "~4.0.1",
+    "grunt-contrib-watch": "~1.1.0"
+  },
+  "description": "Front-end Developer Exercise ============================",
+  "bugs": {
+    "url": "https://github.com/developwithpurpose/front-end-developer-exercise/issues"
+  },
+  "homepage": "https://github.com/developwithpurpose/front-end-developer-exercise#readme",
+  "main": "gruntfile.js",
+  "dependencies": {},
+  "author": "John Fouse",
+  "license": "ISC"
 }
