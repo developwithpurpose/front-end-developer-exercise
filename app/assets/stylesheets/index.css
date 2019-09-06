@@ -1,0 +1,9 @@
+/* Address margins handled incorrectly in IE 6/7. */
+ body {
+	margin: 0;
+	background: #bbbfc2;
+}
+
+.header_img {
+	width: 100%;
+}
