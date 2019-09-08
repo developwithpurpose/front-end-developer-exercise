@@ -1,9 +1,96 @@
 /* Address margins handled incorrectly in IE 6/7. */
  body {
 	margin: 0;
-	background: #bbbfc2;
+	background-color: #bbbfc2;
 }
 
 .header_img {
-	width: 100%;
+	display: block;
+	margin: 0 auto;
 }
+
+.body_content {
+	width: 980px;
+	min-height: 660px;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	padding: 60px 0 0 0;
+	background-color: #FFFFFF;
+}
+
+
+/* Side Navigation */
+.baby_steps_tabs {
+	width: 25%;
+	background: linear-gradient(to right, #ebeced, #d1d5d6);
+}
+
+.baby_steps_tabs_list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.baby_steps_nav {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	justify-content: flex-end;
+	font: 18px/60px 'Source Sans Pro', sans-serif;
+	color: #9ba0a4;
+	margin-bottom: 1px;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.baby_steps_nav a {
+	text-decoration: none;
+	color: #9ba0a4;
+}
+
+.baby_steps_nav:hover {
+	background-color: #FFFFFF;
+}
+
+.active {
+	background-color: #FFFFFF;
+}
+
+.active_img {
+	display: none;
+}
+
+.baby_steps_tabs ul li img {
+	padding: 0 24px;
+}
+
+/* Content */
+
+.baby_steps_content {
+	width: 75%;
+}
+
+.baby_steps_text {
+	margin: 0 70px;
+}
+
+.baby_steps_text p {
+	margin-top: 24px;
+	font: 300 18px/20px 'Source Sans Pro', sans-serif;
+}
+
+
+/* Dynamic Content */
+
+.baby_steps_friends {
+	margin: 0 70px;
+	font: Regular 13px Helvetica;
+	color: #65686f;
+}
+
+.baby_steps_friends a:link {
+	color: #6fbee7;
+	text-decoration: none;
+}
+
