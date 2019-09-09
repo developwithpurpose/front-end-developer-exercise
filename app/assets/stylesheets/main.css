@@ -130,7 +130,6 @@ p {
 }
 
 .nav-item.active .nav-link {
-  background: #fff;
   color: #36abe1;
   font-weight: bolder;
 }

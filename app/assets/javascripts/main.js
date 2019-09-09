@@ -1,4 +1,12 @@
 $(function() {
+  $('.js-nav-link').on('click', function(event) {
+    event.preventDefault();
+
+    var $this = $(this);
+
+    setActiveNavItem($this);
+  });
+
   getEncouragementData();
 });
 
@@ -83,4 +91,10 @@ function getEncouragementData() {
       buildEncouragementHtml(friendsOnStep, currentEncouragementStep);
     }
   });
+}
+
+function setActiveNavItem(target) {
+  $('.js-nav-item.active').removeClass('active');
+
+  target.closest('.js-nav-item').addClass('active');
 }
