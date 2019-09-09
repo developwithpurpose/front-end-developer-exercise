@@ -245,3 +245,8 @@ p {
 .social-encouragement {
   margin-top: 40px;
 }
+
+/* Utility classes */
+.hide {
+  display: none !important;
+}
