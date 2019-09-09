@@ -4,11 +4,31 @@ $(function() {
 
     var $this = $(this);
 
+    animateNavHighlight(event);
+    animateVisiblePanel($this);
     setActiveNavItem($this);
   });
 
   getEncouragementData();
 });
+
+function animateNavHighlight(event) {
+  var highlight = $('.js-nav-item-highlight');
+  var target = $(event.target);
+
+  highlight.animate({ top: target.position().top });
+}
+
+function animateVisiblePanel(link) {
+  var scrollContainer = $('.js-scroll-container');
+  var panelTarget = link.data('target');
+
+  var visiblePanel = $('#' + panelTarget);
+
+  scrollContainer.animate({
+    scrollTop: visiblePanel.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop()
+  });
+}
 
 function buildEncouragementHtml(friendsArr, encouragementNode) {
   var friends = friendsArr;

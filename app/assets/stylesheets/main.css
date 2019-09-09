@@ -221,6 +221,11 @@ p {
   width: 70%;
 }
 
+.scroll-container {
+  overflow: hidden;
+  height: 320px;
+}
+
 /* Panels */
 .panel {
   height: 320px;
