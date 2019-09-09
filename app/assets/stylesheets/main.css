@@ -85,6 +85,12 @@ p {
   top: 100%;
 }
 
+/* Main Header */
+.page-header {
+  margin-bottom: 60px;
+  position: relative;
+}
+
 /* Side Navigation */
 .sidenav {
   background: #ebeced; /* Old browsers */
