@@ -84,3 +84,122 @@ p {
   right: 0;
   top: 100%;
 }
+
+/* Side Navigation */
+.sidenav {
+  background: #ebeced; /* Old browsers */
+  background: linear-gradient(to right, #ebeced 94%, #d1d5d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeced', endColorstr='#d1d5d6',GradientType=0 ); /* IE 9 */
+  background-image: url('/assets/images/shadow_left_nav.jpg');
+  position: relative;
+  width: 30%;
+}
+
+.sidenav .nav-list {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  margin: 0;
+  z-index: 1;
+}
+
+.nav-item-highlight {
+  background: #fff;
+  height: 60px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.nav-item .nav-link {
+  color: #9ba0a4;
+  border-bottom: 1px solid #fff;
+  display: block;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 60px;
+  text-align: right;
+}
+
+.nav-item.active .nav-link {
+  background: #fff;
+  color: #36abe1;
+  font-weight: bolder;
+}
+
+.nav-link span {
+  display: inline-block;
+}
+
+.nav-link .nav-icon {
+  background-image: url('/assets/images/icons/sprites/icons_small.png');
+  margin: 0 24px;
+  vertical-align: middle;
+  width: 30px;
+}
+
+/* Icon Spritemaps */
+.nav-icon.icon--baby-step-1 {
+  background-position-y: 0;
+  height: 24px;
+}
+
+.nav-item.active .nav-icon.icon--baby-step-1 {
+  background-position-y: -175px;
+}
+
+.nav-icon.icon--baby-step-2 {
+  background-position-y: -27px;
+  height: 20px;
+}
+
+.nav-item.active .nav-icon.icon--baby-step-2 {
+  background-position-y: -202px;
+}
+
+.nav-icon.icon--baby-step-3 {
+  background-position-y: -53px;
+  height: 19px;
+}
+
+.nav-item.active .nav-icon.icon--baby-step-3 {
+  background-position-y: -228px;
+}
+
+.nav-icon.icon--baby-step-4 {
+  background-position-y: -76px;
+  height: 23px;
+}
+
+.nav-item.active .nav-icon.icon--baby-step-4 {
+  background-position-y: -251px;
+}
+
+.nav-icon.icon--baby-step-5 {
+  background-position-y: -100px;
+  height: 25px;
+}
+
+.nav-item.active .nav-icon.icon--baby-step-5 {
+  background-position-y: -275px;
+}
+
+.nav-icon.icon--baby-step-6 {
+  background-position-y: -126px;
+  height: 24px;
+}
+
+.nav-item.active .nav-icon.icon--baby-step-6 {
+  background-position-y: -301px;
+}
+
+.nav-icon.icon--baby-step-7 {
+  background-position-y: -150px;
+  height: 25px;
+}
+
+.nav-item.active .nav-icon.icon--baby-step-7 {
+  background-position-y: -325px;
+}
