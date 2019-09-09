@@ -203,3 +203,35 @@ p {
 .nav-item.active .nav-icon.icon--baby-step-7 {
   background-position-y: -325px;
 }
+
+/* Body of Page */
+.main-content {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.body-content {
+  min-height: 600px;
+  padding: 0 70px;
+  width: 70%;
+}
+
+/* Panels */
+.panel {
+  height: 320px;
+}
+
+.panel-header {
+  align-items: flex-end;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.panel-icon {
+  margin-right: 12px;
+}
+
+/* Social Encouragement */
+.social-encouragement {
+  margin-top: 40px;
+}
