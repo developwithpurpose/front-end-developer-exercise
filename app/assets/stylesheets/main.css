@@ -1,0 +1,56 @@
+/* General base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #bbbfc2;
+  font-family: Helvetica, 'Source Sans Pro', Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  color: #6fbee7;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  color: #36abe1;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 6px 0;
+}
+
+h2 {
+  color: #5c6366;
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 20px;
+  margin: 0;
+}
+
+p {
+  color: #65686f;
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 18px;
+  margin-top: 0;
+}
+
+/* Main page container */
+.container {
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+  min-height: 620px;
+  position: relative;
+}
