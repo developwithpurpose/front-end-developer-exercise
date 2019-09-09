@@ -54,3 +54,33 @@ p {
   min-height: 620px;
   position: relative;
 }
+
+.container:after,
+.container:before {
+  background-repeat: no-repeat;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 15px;
+  z-index: -1;
+}
+
+.container:after {
+  background-image: url(/assets/images/shadow_right.jpg);
+  left: 100%;
+}
+
+.container:before {
+  background-image: url(/assets/images/shadow_left.jpg);
+  right: 100%;
+}
+
+.bottom-shadow {
+  background-image: url(/assets/images/shadow_bottom.jpg);
+  height: 30px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+}
