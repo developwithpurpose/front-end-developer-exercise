@@ -232,7 +232,9 @@ p {
 }
 
 .panel-header {
+  -ms-flex-align: end;
   align-items: flex-end;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 24px;
 }
@@ -246,7 +248,32 @@ p {
   margin-top: 40px;
 }
 
+/* IE 9 classes */
+.ie9 .sidenav {
+  float: left;
+}
+
+.ie9 .body-content {
+  float: right;
+}
+
+.ie9 .panel {
+  display: block;
+}
+
+.ie9 .panel-headlines,
+.ie9 .panel-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* Utility classes */
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
 .hide {
   display: none !important;
 }
