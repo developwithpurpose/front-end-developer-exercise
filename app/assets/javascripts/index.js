@@ -71,10 +71,10 @@ function friendsInStep(i, friends) {
         "<a>" + `${friends[1].firstName} ${friends[1].lastName}` +
         "</a>" + (friends.length > 2 ? ", and " +
           (friends.length - 2) + " other friend" +
-          (friends.length > 3 ? "s " : " ") : " ") + "are " : " is ") + "also in this Baby Step ");
+          (friends.length > 3 ? "s " : " ") : " ") + "are " : " is ") + "also in Baby Step " + (i + 1));
   }
   return (
-    "<a>" + "Dont Quit!" + "</a>" + " " + "<span>" + "You can do this!" + "<span>"
+    ""
   );
 }
 
