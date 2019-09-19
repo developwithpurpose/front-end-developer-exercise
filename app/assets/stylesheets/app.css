@@ -47,6 +47,7 @@ nav {
   background-color: white;
   transition: background-color 1.5s;
   font-weight: 600;
+  
 }
 
 nav a {
@@ -66,7 +67,11 @@ nav img {
 
 .description-container {
   padding: 0 70px;
+  overflow: scroll;
 }
+
+
+
 .description-container p {
   -webkit-font-family: "Source Sans Pro", sans-serif;
   font-family: "Source Sans Pro", sans-serif;
