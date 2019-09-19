@@ -84,3 +84,16 @@ nav img {
   opacity: 1;
   transition: opacity 1.5s;
 }
+
+.friends {
+  -webkit-font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  line-height: 20px;
+  color: #5c6366;
+}
+
+.friends a {
+  color: #36abe1;
+  font-weight: 400;
+}
