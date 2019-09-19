@@ -1,0 +1,36 @@
+.navbar {
+    overflow: hidden;
+    float: left;
+    font-family: 'Source Sans Pro';
+    margin-right: 70px;
+}
+
+.navbar button {
+    line-height: 60px;
+    font-size: 18px;
+    padding-left: 50px;
+    display: block;
+    color: #9ba0a4;
+    text-decoration: none;
+    border: none;
+    transition: 0.3s;
+    background: linear-gradient(90deg, #ebeced, #d1d5d6);
+}
+
+.navbar button:focus {
+    outline: 0;
+    background-color: #ffffff;
+}
+
+.navbar button:hover {
+    color: #36abe1;
+    cursor: pointer;
+}
+
+.navbar button.active { 
+    color: #36abe1;
+}
+
+.navbar button img {
+    margin: 10px 24px 0px 24px;
+}

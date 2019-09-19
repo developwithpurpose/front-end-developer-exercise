@@ -1,3 +1,133 @@
 <!doctype html>
-<title>Front-End Developer Exercise</title>
-The server is running!
+<html>
+<head>
+    <title>7 Baby Steps</title>
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/navstyle.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <div class="content" id="header">
+        <img src="assets/images/header_text.jpg" alt="Dave Ramsey America's Most Trusted Guy" id="header_image">
+        <img src="assets/images/shadow_left.jpg" id="shadow_left">
+        <img src="assets/images/shadow_right.jpg" id="shadow_right">
+    </div>
+</head>
+<body>
+    <div class="content" id="content_body">
+        <div class="navbar">
+            <button class="bsbutton" id="bs1button" onClick="openStep(event, 'bs1')">Baby Step 1
+                <img src="assets/images/icons/individual/icons_small_bs1.png" id="step1_icon">
+            </button>
+            <button class="bsbutton" id="bs2button" onClick="openStep(event, 'bs2')">Baby Step 2
+                <img src="assets/images/icons/individual/icons_small_bs2.png" id="step2_icon">
+            </button>
+            <button class="bsbutton" id="bs3button" onClick="openStep(event, 'bs3')">Baby Step 3
+                <img src="assets/images/icons/individual/icons_small_bs3.png" id="step3_icon">
+            </button>
+            <button class="bsbutton" id="bs4button" onClick="openStep(event, 'bs4')">Baby Step 4
+                <img src="assets/images/icons/individual/icons_small_bs4.png" id="step4_icon">
+            </button>
+            <button class="bsbutton" id="bs5button" onClick="openStep(event, 'bs5')">Baby Step 5
+                <img src="assets/images/icons/individual/icons_small_bs5.png" id="step5_icon">
+            </button>
+            <button class="bsbutton" id="bs6button" onClick="openStep(event, 'bs6')">Baby Step 6
+                <img src="assets/images/icons/individual/icons_small_bs6.png" id="step6_icon">
+            </button>
+            <button class="bsbutton" id="bs7button" onClick="openStep(event, 'bs7')">Baby Step 7
+                <img src="assets/images/icons/individual/icons_small_bs7.png" id="step7_icon">
+            </button>
+        </div>
+
+        <div id="bs1" class="bscontent">
+            <img src="assets/images/icons/individual/icons_large_bs1_blue.png">
+            <h2>Baby Step 1</h2>
+            <h4>1,000 in an Emergency Fund</h4>
+            <p>In this first step, your goal is to save $1,000 as fast as you can. 
+                Your emergency fund will cover those unexpected life events you can't plan for. 
+                And there are plenty of them. You don’t want to dig a deeper hole while you’re 
+                trying to work your way out of debt!</p>
+        </div>
+
+        <div id="bs2" class="bscontent">
+            <img src="assets/images/icons/individual/icons_large_bs2_blue.png">
+            <h2>Baby Step 2</h2>
+            <h4>Pay off all non-mortgage debt using the Debt Snowball</h4>
+            <p>Next, it’s time to pay off the cars, the credit cards, and your student loans. 
+                Start by listing all of your debts except for your mortgage. Put them in order 
+                by balance from smallest to largest. This is called the debt snowball method, 
+                and you’ll use it to knock out your debts one by one.</p>
+        </div>
+
+        <div id="bs3" class="bscontent">
+            <img src="assets/images/icons/individual/icons_large_bs3_blue.png">
+            <h2>Baby Step 3</h2>
+            <h4>3 to 6 months of expenses in a Fully Funded Emergency Fund</h4>
+            <p>You’ve paid off your debt! Don’t slow down now. Take that money you were 
+                throwing at your debt and build a fully funded emergency fund that covers 
+                3–6 months of your expenses. This will protect you against life’s bigger 
+                surprises, like the loss of a job or your car breaking down, without slipping 
+                back into debt.</p>
+        </div>
+
+        <div id="bs4" class="bscontent">
+            <img src="assets/images/icons/individual/icons_large_bs4_blue.png">
+            <h2>Baby Step 4</h2>
+            <h4>Invest 15% of household income into Retirement</h4>
+            <p>It's time to get serious about retirement—no matter your age. Take 15% 
+                of your gross household income and start investing it into your retirement. 
+                Start with your company’s 401(k) plan and receive the full employer match. 
+                Invest the rest into Roth IRAs—one for you and one for your spouse (if you’re married).</p>
+        </div>
+
+        <div id="bs5" class="bscontent">
+            <img src="assets/images/icons/individual/icons_large_bs5_blue.png">
+            <h2>Baby Step 5</h2>
+            <h4>Fund college for children</h4>
+            <p>By this step, you've paid off all debts (except the house) and started saving 
+                for retirement. Next, it's time to save for your children’s college expenses 
+                (that is, if they make it through Algebra II and Chemistry unscathed). We 
+                recommend 529 college savings plans or ESAs (Education Savings Accounts).</p>
+        </div>
+
+        <div id="bs6" class="bscontent">
+            <img src="assets/images/icons/individual/icons_large_bs6_blue.png">
+            <h2>Baby Step 6</h2>
+            <h4>Pay off your home early</h4>
+            <p>Now, bring it all home. Baby Step 6 is the big dog! Your mortgage is 
+                the only thing between you and complete freedom from debt. Can you imagine 
+                your life with no house payment? Any extra money you can put toward your 
+                mortgage could save you tens (or even hundreds) of thousands in interest.</p>
+        </div>
+
+        <div id="bs7" class="bscontent">
+            <img src="assets/images/icons/individual/icons_large_bs7_blue.png">
+            <h2>Baby Step 7</h2>
+            <h4>Build wealth and give a bunch away</h4>
+            <p>You know what people with no debt can do? Anything they want! 
+                The last step is the most fun. You can live and give like no one 
+                else! Keep building wealth and become insanely generous. Leave an 
+                inheritance for your kids and their kids. Now, that's what we call 
+                leaving a legacy!</p>
+        </div>
+
+        <div id="friends">
+            <span id="friendList"></span>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/javascripts/openStep.js"></script>
+    <script src="assets/javascripts/getFriends.js"></script>
+    <script src="assets/javascripts/showFriends.js"></script>
+    <script>
+    $(document).ready(function(){
+        $.getJSON("baby-steps.json", function(json) {
+            getFriends(json);
+        });
+    });
+    </script>
+</body>
+<footer>
+    <img src="assets/images/shadow_bottom.jpg" id="shadow_bottom">
+</footer>
+
+</html>
