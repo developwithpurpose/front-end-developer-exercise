@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $body;
+    box-sizing: border-box;
+    font-weight: 400;
+    margin: 0;
+    font-family: $font_main;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $body_text;
+}
+
+.container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto 40px;
+    padding: 0 15px 30px;
+    position: relative;
+
+    &:before,
+    &:after {
+        width: 15px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-repeat: no-repeat;
+        background-position: center top;
+        content: '';
+    }
+
+    &:before {
+        left: 0;
+        background-image: url(/assets/images/shadow_left.jpg);
+    }
+
+    &:after {
+        right: 0;
+        background-image: url(/assets/images/shadow_right.jpg);
+    }
+}
+
+#masthead {
+    background: url(/assets/images/header.jpg);
+    height: 276px;
+    padding: 50px 70px;
+    text-align: right;
+
+    h1 {
+        max-width: 400px;
+        margin-left: auto;
+    }
+}
+
+#page {
+    padding-top: 60px;
+    display: flex;
+    min-height: 500px;
+    background-color: $white;
+    position: relative;
+
+    &:after {
+        content: '';
+        background-image: url(/assets/images/shadow_bottom.jpg);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+    }
+}
+
+nav {
+    flex: 0 1 auto;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ECECEE;
+    position: relative;
+    box-shadow: inset -8px 0 8px -4px rgba(0, 0, 0, 0.2);
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 70px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $white;
+        z-index: 1;
+    }
+
+    .step-nav {
+        padding: 20px 24px;
+        display: block;
+        position: relative;
+        z-index: 2;
+        font-family: $font_alt;
+        color: $gray;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 30px;
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+
+        .step-icon {
+            background-image: url(/assets/images/icons/sprites/icons_small.png);
+            background-repeat: no-repeat;
+            background-position: 0 3px;
+            display: inline-block;
+            width: 30px;
+            height: 26px;
+            flex: 0 0 auto;
+            margin-left: 20px;
+        }
+
+        &.step2 {
+            .step-icon {
+                background-position: 0 -22px;
+            }
+        }
+
+        &.step3 {
+            .step-icon {
+                background-position: 0 -48px;
+            }
+        }
+
+        &.step4 {
+            .step-icon {
+                background-position: 0 -74px;
+            }
+        }
+
+        &.step5 {
+            .step-icon {
+                background-position: 0 -100px;
+            }
+        }
+
+        &.step6 {
+            .step-icon {
+                background-position: 0 -125px;
+                height: 25px;
+            }
+        }
+
+        &.step7 {
+            .step-icon {
+                background-position: 0 -150px;
+            }
+        }
+
+        &.active,
+        &:hover,
+        &:focus {
+            color: $accent;
+            font-weight: 600;
+
+            &.step1 {
+                .step-icon {
+                    background-position: 0 -175px;
+                    height: 25px;
+                }
+            }
+
+            &.step2 {
+                .step-icon {
+                    background-position: 0 -197px;
+                }
+            }
+
+            &.step3 {
+                .step-icon {
+                    background-position: 0 -223px;
+                }
+            }
+
+            &.step4 {
+                .step-icon {
+                    background-position: 0 -249px;
+                }
+            }
+
+            &.step5 {
+                .step-icon {
+                    background-position: 0 -275px;
+                }
+            }
+
+            &.step6 {
+                .step-icon {
+                    background-position: 0 -300px;
+                }
+            }
+
+            &.step7 {
+                .step-icon {
+                    background-position: 0 -325px;
+                }
+            }
+        }
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: $white;
+        }
+    }
+}
+
+#content {
+    flex: 1 1 auto;
+    padding: 0 60px 80px;
+
+    a {
+        color: $links;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+            color: darken($links,10);
+        }
+    }
+
+    .step {
+        .step-header {
+            background-image: url(/assets/images/icons/sprites/icons_large.png);
+            background-repeat: no-repeat;
+            background-position: 0 -454px;
+            padding-left: 90px;
+            min-height: 68px;
+
+            h2 {
+                padding-top: 5px;
+            }
+        }
+
+        &#step2 .step-header {
+            background-position: 0 -516px;
+        }
+
+        &#step3 .step-header {
+            background-position: 0 -581px;
+        }
+
+        &#step4 .step-header {
+            background-position: 0 -645px;
+        }
+
+        &#step5 .step-header {
+            background-position: 0 -712px;
+        }
+
+        &#step6 .step-header {
+            background-position: 0 -778px;
+            min-height: 64px;
+        }
+
+        &#step7 .step-header {
+            background-position: 0 -842px;
+        }
+    }
+
+    .friends {
+        
+    }
+}

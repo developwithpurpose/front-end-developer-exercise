@@ -1,0 +1,37 @@
+h1,h2,h3 {
+    font-family: $font_alt;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 300;
+    color: $white;
+    font-size: 32px;
+    line-height: 1;
+    
+    span {
+        text-transform: uppercase;
+        font-weight: 700;
+        display: block;
+        margin-top: 5px;
+        font-size: 50px;
+    }
+}
+
+h2 {
+    color: $accent; 
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.1;
+} 
+
+h3 {
+    color: $subheadings;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+p {
+
+}
