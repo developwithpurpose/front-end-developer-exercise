@@ -1,0 +1,17 @@
+#page {
+    padding-top: 60px;
+    display: flex;
+    min-height: 600px;
+    background-color: $white;
+    position: relative;
+
+    &:after {
+        content: '';
+        background-image: url(/assets/images/shadow_bottom.jpg);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+    }
+}
