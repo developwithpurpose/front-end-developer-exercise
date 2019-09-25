@@ -293,8 +293,8 @@ nav {
     #content {
         .step-article {
             position: absolute;
-            width: 100%;
-            height: 100%;
+            // width: 100%;
+            // height: 100%;
             transition: all 0.6s ease-out;
             transform: translate3d(0, -100%, 0);
             opacity: 0;
@@ -348,6 +348,7 @@ nav {
         .friends {
             display: block;
             visibility: visible;
+            margin-top: 30px;
         }
     }
 }
