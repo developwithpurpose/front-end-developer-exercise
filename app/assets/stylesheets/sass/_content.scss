@@ -75,6 +75,14 @@
             &.active {
                 opacity: 1;
             }
+
+            &#step1 { z-index: 7; }
+            &#step2 { z-index: 6; }
+            &#step3 { z-index: 5; }
+            &#step4 { z-index: 4; }
+            &#step5 { z-index: 3; }
+            &#step6 { z-index: 2; }
+            &#step7 { z-index: 1; }
         }
 
         #step1.active { transform: translate3d(0, 0, 0);
