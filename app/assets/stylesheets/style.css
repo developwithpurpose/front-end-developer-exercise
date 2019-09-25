@@ -4,6 +4,36 @@ body {
 	margin:0;
 }
 
+h1 {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight:600;
+	font-size:30px;
+	color:#36abe1;
+	line-height:20px;
+	margin-top:10px;
+	margin-bottom:5px;
+}
+
+p {
+	font-family: "Helvetica", sans-serif;
+	font-weight:400;
+	font-size:13px;
+	color:#65686f;
+	line-height:18px;
+}
+
+a:hover, a:visited, a:link, a:active {
+	text-decoration:none;
+}
+
+.subtitle {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight:300;
+	font-size:18px;
+	color:#5c6366;
+	line-height:20px;
+}
+
 .outerContainer {
 	width:1010px;
 	margin:0 auto;
@@ -94,12 +124,16 @@ body {
 	font-size:18px;
 	font-weight:400;
 	line-height:60px;
-	color:#9ba0a4;
 	padding-right:24px;
 	list-style:none;
 	text-align:right;
 	border-bottom:1px solid #ffffff;
 	cursor:pointer;
+	
+}
+
+#nav li span {
+	color:#9ba0a4;
 }
 
 .nav-icon {
@@ -112,90 +146,90 @@ body {
 }
 
 
-#nav ul li:nth-child(1) .nav-icon {
+#nav ul a:nth-child(1) li .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs1.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav ul li:nth-child(2) .nav-icon {
+#nav ul a:nth-child(2) li .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs2.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav ul li:nth-child(3) .nav-icon {
+#nav ul a:nth-child(3) li .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs3.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav ul li:nth-child(4) .nav-icon {
+#nav ul a:nth-child(4) li .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs4.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav ul li:nth-child(5) .nav-icon {
+#nav ul a:nth-child(5) li .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs5.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav ul li:nth-child(6) .nav-icon {
+#nav ul a:nth-child(6) li .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs6.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav ul li:nth-child(7) .nav-icon {
+#nav ul a:nth-child(7) li .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs7.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav li:hover {
+#nav ul a li:hover span {
 	font-weight:600;
 	color:#36abe1;
 }
 
-#nav li:nth-child(1):hover .nav-icon {
+#nav ul a:nth-child(1):hover li .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs1_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav li:nth-child(2):hover .nav-icon {
+#nav ul a:nth-child(2):hover li .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs2_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav li:nth-child(3):hover .nav-icon {
+#nav ul a:nth-child(3):hover li.nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs3_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav li:nth-child(4):hover .nav-icon {
+#nav ul a:nth-child(4):hover li .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs4_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav li:nth-child(5):hover .nav-icon {
+#nav ul a:nth-child(5):hover li .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs5_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav li:nth-child(6):hover .nav-icon {
+#nav ul a:nth-child(6):hover li .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs6_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav li:nth-child(7):hover .nav-icon{
+#nav ul a:nth-child(7):hover li .nav-icon{
 	background-image:url('../images/icons/individual/icons_small_bs7_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
@@ -203,8 +237,30 @@ body {
 
 #content {
 	float:left;
+	width:550px;
+	height:595px;
 	padding-left:70px;
 	padding-right:70px;	
+	overflow-y:hidden;
+	scroll-behavior:smooth;
+}
+
+.content-section {
+	height:595px;
+}
+
+.first-paragraph {
+	margin-top:5px;
+}
+
+.heading-section-left {
+	float:left;
+	width:77px;
+}
+
+.heading-section-right {
+	float:left;
+	padding-left:15px;
 }
 
 .clear-both {
