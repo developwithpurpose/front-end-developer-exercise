@@ -15,3 +15,6 @@ Thanks for the opportunity to work on this. There were a couple of challenges th
 
 It would've been helpful if each icon area in the sprites were sized identically. It slowed down development determining the right sizes and background-positions for each icon. I would provide this feedback to the design team. In my current role as both a designer and front-end dev, I would make this change myself. Taking the time to edit the design file would still save development time, so I'd be glad to do it.
 
+Or, in an ideal world, I'd recommend using SVGs or an icon font if possible.
+
+Thanks again!
