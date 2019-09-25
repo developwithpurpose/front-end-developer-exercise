@@ -1,2 +1,2 @@
-
+$(document).ready(function(){$("body").addClass("js-enabled"),$(".steps-nav").each(function(){var a=$(this),t=a.find("span.active"),e=t.find("a"),i=$(e.attr("href"));a.on("click",".step-nav",function(a){a.preventDefault();var e=$(this),s=this.hash;s&&!e.is(".active")&&(i.removeClass("active"),t.removeClass("active"),i=$(s).addClass("active"),t=e.parent().addClass("active"))})})});
 //# sourceMappingURL=scripts-min.js.map

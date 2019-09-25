@@ -15,17 +15,32 @@
             <h1>Real Life, Love and Money with<span>America's Most Trusted Guy</span></h1>
         </header>
         <section id="page">
-            <nav>
-                <a href="#step1" class="step-nav step1 active"><span class="step-label">Baby Step 1</span> <span class="step-icon"></span></a>
-                <a href="#step2" class="step-nav step2"><span class="step-label">Baby Step 2</span> <span class="step-icon"></span></a>
-                <a href="#step3" class="step-nav step3"><span class="step-label">Baby Step 3</span> <span class="step-icon"></span></a>
-                <a href="#step4" class="step-nav step4"><span class="step-label">Baby Step 4</span> <span class="step-icon"></span></a>
-                <a href="#step5" class="step-nav step5"><span class="step-label">Baby Step 5</span> <span class="step-icon"></span></a>
-                <a href="#step6" class="step-nav step6"><span class="step-label">Baby Step 6</span> <span class="step-icon"></span></a>
-                <a href="#step7" class="step-nav step7"><span class="step-label">Baby Step 7</span> <span class="step-icon"></span></a>
+            <nav class="steps-nav">
+                <span class="active">
+                    <a href="#step1" class="step-nav step1"><span class="step-label">Baby Step 1</span> <span class="step-icon"></span></a>
+                </span>
+                <span>
+                    <a href="#step2" class="step-nav step2"><span class="step-label">Baby Step 2</span> <span class="step-icon"></span></a>
+                </span>
+                <span>
+                    <a href="#step3" class="step-nav step3"><span class="step-label">Baby Step 3</span> <span class="step-icon"></span></a>
+                </span>
+                <span>
+                    <a href="#step4" class="step-nav step4"><span class="step-label">Baby Step 4</span> <span class="step-icon"></span></a>
+                </span>
+                <span>
+                    <a href="#step5" class="step-nav step5"><span class="step-label">Baby Step 5</span> <span class="step-icon"></span></a>
+                </span>
+                <span>
+                    <a href="#step6" class="step-nav step6"><span class="step-label">Baby Step 6</span> <span class="step-icon"></span></a>
+                </span>
+                <span>
+                    <a href="#step7" class="step-nav step7"><span class="step-label">Baby Step 7</span> <span class="step-icon"></span></a>
+                </span>
+                <span class="indicator"></span>
             </nav>
             <main id="content">
-                <article id="step1" class="step active">
+                <article id="step1" class="step-article active">
                     <header class="step-header">                        
                         <h2>Baby Step 1</h2>
                         <h3>$1,000 Emergency Fund</h3>
@@ -39,7 +54,7 @@
                     </div>
                 </article>
 
-                <article id="step2" class="step">
+                <article id="step2" class="step-article">
                     <header class="step-header">                        
                         <h2>Baby Step 2</h2>
                         <h3>Pay off all debt using the Debt Snowball</h3>
@@ -53,7 +68,7 @@
                     </div>
                 </article>
 
-                <article id="step3" class="step">
+                <article id="step3" class="step-article">
                     <header class="step-header">                        
                         <h2>Baby Step 3</h2>
                         <h3>3 to 6 months of exepenses in savings</h3>
@@ -67,7 +82,7 @@
                     </div>
                 </article>
 
-                <article id="step4" class="step">
+                <article id="step4" class="step-article">
                     <header class="step-header">                        
                         <h2>Baby Step 4</h2>
                         <h3>Invest 15% of household income for retirement</h3>
@@ -81,7 +96,7 @@
                     </div>
                 </article>
 
-                <article id="step5" class="step">
+                <article id="step5" class="step-article">
                     <header class="step-header">                        
                         <h2>Baby Step 5</h2>
                         <h3>College funding for children</h3>
@@ -95,7 +110,7 @@
                     </div>
                 </article>
 
-                <article id="step6" class="step">
+                <article id="step6" class="step-article">
                     <header class="step-header">                        
                         <h2>Baby Step 6</h2>
                         <h3>Pay off your house early</h3>
@@ -109,7 +124,7 @@
                     </div>
                 </article>
 
-                <article id="step7" class="step">
+                <article id="step7" class="step-article">
                     <header class="step-header">                        
                         <h2>Baby Step 7</h2>
                         <h3>Build wealth and give!</h3>
@@ -125,7 +140,8 @@
             </main>
         </section>
     </section>
-    <script type="text/javascript" src="baby-steps.json"></script>
-    <script type="text/javascript" src="assets/javascripts/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/baby-steps.json"></script>
+    <script type="text/javascript" src="/assets/javascripts/min/scripts-min.js"></script>
 </body>
 </html>
