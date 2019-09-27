@@ -22,6 +22,10 @@ p {
 	line-height:18px;
 }
 
+a {
+	color:#6fbee7;
+}
+
 a:hover, a:visited, a:link, a:active {
 	text-decoration:none;
 }
@@ -132,6 +136,12 @@ a:hover, a:visited, a:link, a:active {
 	
 }
 
+#nav li.active, #nav li.active span {
+	background:#ffffff;
+	font-weight:600;
+	color:#36abe1;
+}
+
 #nav li span {
 	color:#9ba0a4;
 }
@@ -193,43 +203,43 @@ a:hover, a:visited, a:link, a:active {
 	color:#36abe1;
 }
 
-#nav ul a:nth-child(1):hover li .nav-icon {
+#nav ul a:nth-child(1):hover li .nav-icon, #nav ul a:nth-child(1) li.active .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs1_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav ul a:nth-child(2):hover li .nav-icon {
+#nav ul a:nth-child(2):hover li .nav-icon, #nav ul a:nth-child(2) li.active .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs2_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav ul a:nth-child(3):hover li.nav-icon {
+#nav ul a:nth-child(3):hover li .nav-icon, #nav ul a:nth-child(3) li.active .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs3_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav ul a:nth-child(4):hover li .nav-icon {
+#nav ul a:nth-child(4):hover li .nav-icon, #nav ul a:nth-child(4) li.active .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs4_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav ul a:nth-child(5):hover li .nav-icon {
+#nav ul a:nth-child(5):hover li .nav-icon, #nav ul a:nth-child(5) li.active .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs5_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav ul a:nth-child(6):hover li .nav-icon {
+#nav ul a:nth-child(6):hover li .nav-icon, #nav ul a:nth-child(6) li.active .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs6_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
 }
 
-#nav ul a:nth-child(7):hover li .nav-icon{
+#nav ul a:nth-child(7):hover li .nav-icon, #nav ul a:nth-child(7) li.active .nav-icon {
 	background-image:url('../images/icons/individual/icons_small_bs7_blue.png');
 	background-position:top center;
 	background-repeat:no-repeat;
@@ -251,6 +261,11 @@ a:hover, a:visited, a:link, a:active {
 
 .first-paragraph {
 	margin-top:5px;
+}
+
+.last-paragraph {
+	margin-top:30px;
+	font-weight:600;
 }
 
 .heading-section-left {
