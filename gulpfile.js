@@ -52,7 +52,7 @@ gulp.task('minify:css', function () {
   return gulp.src('temp/css/style.css')
     .pipe(sourcemaps.init())
     .pipe(cleanCSS({ compatibility: 'ie8' }))
-    .pipe(sourcemaps.write('../maps'))
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('temp/css'))
 });
 
@@ -63,7 +63,7 @@ gulp.task('babel', function () {
     .pipe(babel({
       presets: ['@babel/env']
     }))
-    .pipe(sourcemaps.write('../maps'))
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('temp/js'))
 });
 
@@ -72,7 +72,7 @@ gulp.task('minify:js', function () {
   return gulp.src('temp/js/main.js')
     .pipe(sourcemaps.init())
     .pipe(uglify())
-    .pipe(sourcemaps.write('../maps'))
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('temp/js'))
 });
 
@@ -113,12 +113,12 @@ gulp.task('prod:transfer-images', function () {
 });
 
 gulp.task('prod:transfer-css', function () {
-  return gulp.src('temp/css/style.css')
+  return gulp.src('temp/css/**/*')
     .pipe(gulp.dest('app/build/prod/dist/css'))
 });
 
 gulp.task('prod:transfer-js', function () {
-  return gulp.src('temp/js/main.js')
+  return gulp.src('temp/js/**/*')
     .pipe(gulp.dest('app/build/prod/dist/js'))
 });
 
@@ -129,7 +129,7 @@ gulp.task('prod:transfer', gulp.parallel(
 ));
 
 // development server
-gulp.task('connect', async function () {
+gulp.task('connect-dev', async function () {
   connect.server({
     root: 'app/build/dev',
     port: 3000,
@@ -137,9 +137,23 @@ gulp.task('connect', async function () {
   });
 });
 
-gulp.task('open', async function () {
+gulp.task('open-dev', async function () {
   return gulp.src('app/build/dev/*.html')
     .pipe(open({ uri: 'http://localhost:3000/' }))
+});
+
+// production server
+gulp.task('connect-prod', async function () {
+  connect.server({
+    root: 'app/build/prod',
+    port: 8080,
+    livereload: true
+  });
+});
+
+gulp.task('open-prod', async function () {
+  return gulp.src('app/build/prod/*.html')
+    .pipe(open({ uri: 'http://localhost:8080/' }))
 });
 
 gulp.task('watch', async function () {
@@ -168,12 +182,14 @@ gulp.task('dev', gulp.series(
   'clean'
 ));
 
-gulp.task('serve', gulp.series('dev', 'connect', 'open', 'watch'));
+gulp.task('serve-dev', gulp.series('dev', 'connect-dev', 'open-dev', 'watch'));
+
+gulp.task('serve-prod', gulp.series('dev', 'connect-prod', 'open-prod'));
 
 // build production
 gulp.task('build:prod', function () {
   const target = gulp.src('app/src/index.html');
-  const sources = gulp.src(['temp/img/**/*', 'temp/js/main.js', 'temp/css/style.css'], { read: false });
+  const sources = gulp.src(['temp/img/**/*', 'temp/js/**/*', 'temp/css/**/*'], { read: false });
 
   return target.pipe(inject(sources))
     .pipe(gulp.dest('app/build/prod'))
