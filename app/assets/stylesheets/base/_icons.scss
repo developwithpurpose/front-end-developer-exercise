@@ -1,0 +1,79 @@
+.icon::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 25px;
+  background: transparent url("../images/icons/sprites/icons_large.png") no-repeat;
+  background-size: 100%;
+  margin: 18px 0 0 20px;
+}
+
+.icon--emergency-fund {
+  &::after {
+    background-position: 0 0;
+  }
+
+  &:hover::after {
+    background-position: 0 -177px;
+  }
+}
+
+.icon--debt-snowball {
+  &::after {
+    background-position: 0 -26px;
+  }
+
+  &:hover::after {
+    background-position: 0 -203px;
+  }
+}
+
+.icon--savings {
+  &::after {
+    background-position: 0 -51px;
+  }
+
+  &:hover::after {
+    background-position: 0 -228px;
+  }
+}
+
+.icon--invest {
+  &::after {
+    background-position: 0 -76px;
+  }
+
+  &:hover::after {
+    background-position: 0 -253px;
+  }
+}
+
+.icon--college {
+  &::after {
+    background-position: 0 -101px;
+  }
+
+  &:hover::after {
+    background-position: 0 -278px;
+  }
+}
+
+.icon--mortgage {
+  &::after {
+    background-position: 0 -126px;
+  }
+
+  &:hover::after {
+    background-position: 0 -303px;
+  }
+}
+
+.icon--give {
+  &::after {
+    background-position: 0 -152px;
+  }
+
+  &:hover::after {
+    background-position: 0 -329px;
+  }
+}

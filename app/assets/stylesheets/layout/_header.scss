@@ -1,0 +1,31 @@
+.header {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("../images/header.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  width: 980px;
+  height: 276px;
+  flex: 0 0 100%; /* Let it fill the entire space horizontally */
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 300;
+    width: 450px;
+    float: right;
+    text-align: right;
+    position: relative;
+    top: 50px;
+    right: 70px;
+  }
+
+  &__title-strong {
+    font-size: 3.125rem;
+    font-weight: 700;
+    line-height: 3rem;
+    margin-top: 0.9375rem;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+}

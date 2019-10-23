@@ -1,14 +1,28 @@
 {
-  "name": "front-end-developer-exercise",
+  "name": "webpack-guide",
   "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/developwithpurpose/front-end-developer-exercise.git"
-  },
+  "description": "webpack 4 guide",
+  "main": "app.js",
   "scripts": {
-    "start": "http-server ./app -d false"
+    "build": "rm -rf ./dist/ && webpack --mode production --config webpack.config.js",
+    "dev": "webpack-dev-server --mode development --config webpack.config.js"
   },
+  "dependencies": {},
   "devDependencies": {
-    "http-server": "^0.8.0"
-  }
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  },
+  "author": "Abby Fleming",
+  "license": "ISC"
 }
