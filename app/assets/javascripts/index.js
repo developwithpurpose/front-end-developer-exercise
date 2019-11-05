@@ -10,7 +10,6 @@ function openCity(evt, babyStep) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  console.log('evt', evt.currentTarget);
 
   getFriends(evt, babyStep);
   document.getElementById(babyStep).style.display = "block";
@@ -20,28 +19,14 @@ function openCity(evt, babyStep) {
 
 document.querySelector('.active').click();
 
-
-// document.addEventListener('click', function (event) {
-//   if (event.target.classList.contains('active')) {
-//     moveIndicator(event);
-//   }
-// }, false);
-
 function moveIndicator(e) {
   const activeEl = e.currentTarget;
   var rect = activeEl.getBoundingClientRect();
-  console.log(rect.top, rect.right, rect.bottom, rect.left);
   const indicator = document.querySelector('.indicator');
 
   indicator.style.top = `${rect.top}px`;
   indicator.style.left = 0;
-  console.log('activeTabPosition');
-
 }
-
-// function getStepNumber(babyStep) {
-
-// }
 
 function addFriends(friends, babyStep) {
   var friendsEl = document.querySelector(`#${babyStep} .friends`);
