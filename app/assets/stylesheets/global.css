@@ -10,7 +10,14 @@ body {
 
 a {
   color: #6fbee7;
-  color: var(--links)
+  color: var(--links);
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 header {
@@ -21,4 +28,5 @@ section {
   background: white;
   background: var(--white);
   padding-top: 60px;
+  margin-bottom: 70px;
 }

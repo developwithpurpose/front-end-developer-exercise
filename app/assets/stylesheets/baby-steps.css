@@ -1,5 +1,67 @@
+.baby-steps {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.baby-steps:before {
+  content: '';
+  background: url('../images/shadow_left.jpg') no-repeat;
+  width: 15px;
+  height: 100%;
+  position: absolute;
+  left: -15px;
+}
+
+.baby-steps:after {
+  content: '';
+  background: url('../images/shadow_right.jpg') no-repeat;
+  width: 15px;
+  height: 100%;
+  position: absolute;
+  right: -15px;
+  top: 0;
+}
+
+.baby-steps header {
+  position: relative;
+  color: #ffffff;
+  color: var(--white);
+  font-family: 'Open Sans';
+}
+
+.baby-steps header .heading-text {
+  position: absolute;
+  right: 70px;
+  width: 500px;
+  top: 50px;
+  text-align: right;
+}
+
+.baby-steps header h1 {
+  font-weight: 700;
+  line-height: 48px;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.baby-steps header .sub-heading-text {
+  font-weight: 300;
+  font-size: 32px;
+}
+
 .baby-steps section {
   display: flex;
+}
+
+.baby-steps section:after{
+  content: '';
+  background: url('../images/shadow_bottom.jpg') no-repeat;
+  bottom: 0;
+  height: 15px;
+  width: 100%;
+  position: absolute;
 }
 
 .tabs {
@@ -9,6 +71,16 @@
   margin: 0;
   box-shadow: none;
   background: var(--graident);
+  padding-bottom: 250px;
+}
+
+.tabs .indicator {
+  background-color: #36abe1;
+  background-color: var(--baby-step-blue);
+  width: 5px;
+  height: 74px;
+  position: absolute;
+  transition: top 0.3s ease-in-out;
 }
 
 .tabs .tab {
@@ -17,6 +89,7 @@
   text-align: right;
   line-height: 60px;
   height: auto;
+  text-transform: none;
 }
 
 .tabs .tab a {
@@ -30,9 +103,20 @@
   padding: 0;
 }
 
+.tabs .tab a .blue-icon {
+  display: none;
+}
+
+.tabs .tab a.active .blue-icon {
+  display: block;
+}
+
+.tabs .tab a.active img {
+  display: none;
+}
+
 .tabs .tab a img {
   margin: 24px;
-  height: 24px;
 }
 
 .tabs .tab a:focus, .tabs .tab a:focus.active {
@@ -51,7 +135,43 @@
   font-weight: 700;
 }
 
-/* TODO: Get this to actually work */
-.tabs .indicator {
-  display: none;
+.tabcontent {
+  flex: 1;
+  margin: 0 70px;
+}
+
+.tabcontent .content-heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tabcontent .content-heading img {
+  margin-right: 10px;
+}
+
+.tabcontent .content-heading .sub-heading h3 {
+  margin: 0;
+  font-family: 'Source Sans Pro';
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #36abe1;
+  color: var(--baby-step-blue);
+}
+
+.tabcontent .content-heading .sub-heading p {
+  margin: 0;
+  font-family: 'Source Sans Pro';
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #5c6366;
+  color: var(--heading-text);
+}
+
+.tabcontent .content-heading p {
+  font-family: 'Helvetica', 'Arial';
+  font-size: 13px;
+  line-height: 18px;
 }
