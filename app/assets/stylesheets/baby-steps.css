@@ -1,0 +1,57 @@
+.baby-steps section {
+  display: flex;
+}
+
+.tabs {
+  flex-direction: column;
+  height: auto;
+  width: 400px;
+  margin: 0;
+  box-shadow: none;
+  background: var(--graident);
+}
+
+.tabs .tab {
+  border-bottom: 1px solid;
+  border-color: white;
+  text-align: right;
+  line-height: 60px;
+  height: auto;
+}
+
+.tabs .tab a {
+  font-family: 'Source Sans Pro';
+  font-size: 18px;
+  color: #9ba0a4;
+  color: var(--default-icon);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+}
+
+.tabs .tab a img {
+  margin: 24px;
+  height: 24px;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+  outline: none;
+  background: white;
+}
+
+.tabs .tab a:hover {
+  color: #9ba0a4;
+  color: var(--default-icon);
+}
+
+.tabs .tab a.active {
+  color: #36abe1;
+  color: var(--baby-step-blue);
+  font-weight: 700;
+}
+
+/* TODO: Get this to actually work */
+.tabs .indicator {
+  display: none;
+}

@@ -1,0 +1,24 @@
+body {
+  color: #65686f;
+  background: #bbbfc2;
+  background: var(--main-background);
+  color: var(--body-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: #6fbee7;
+  color: var(--links)
+}
+
+header {
+  height: 276px;
+}
+
+section {
+  background: white;
+  background: var(--white);
+  padding-top: 60px;
+}

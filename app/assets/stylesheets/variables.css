@@ -1,0 +1,11 @@
+:root {
+  --main-background: #bbbfc2;
+  --body-text: #65686f;
+  --default-icon: #9ba0a4;
+  --baby-step-blue: #36abe1;
+  --heading-text: #5c6366;
+  --links: #6fbee7;
+  --white: #ffffff;
+  --black: #000000;
+  --graident: linear-gradient(90deg, rgba(235,236,237,1) 96%, rgba(209,213,214,1) 100%);
+}

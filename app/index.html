@@ -1,3 +1,93 @@
-<!doctype html>
-<title>Front-End Developer Exercise</title>
-The server is running!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Front-end Developer Exercise</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/main.css" />
+</head>
+
+<body>
+  <div class="baby-steps">
+    <header>
+      <img src="assets/images/header_text.jpg" alt="Dave Ramsey Baby Steps Heading" />
+    </header>
+    <section>
+      <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+        <li class="tab">
+          <a class="active" href="#test1">
+            <span>Baby Step 1</span>
+            <img src="assets/images/icons/individual/icons_large_bs1.png" role="presentation" />
+          </a>
+        </li>
+        <li class="tab">
+          <a href="#test2">
+            <span>Baby Step 2</span>
+            <img src="assets/images/icons/individual/icons_large_bs2.png" role="presentation" />
+          </a>
+        </li>
+        <li class="tab">
+          <a href="#test3">
+            <span>Baby Step 3</span>
+            <img src="assets/images/icons/individual/icons_large_bs3.png" role="presentation" />
+          </a>
+        </li>
+        <li class="tab">
+          <a href="#test4">
+            <span>Baby Step 4</span>
+            <img src="assets/images/icons/individual/icons_large_bs4.png" role="presentation" />
+          </a>
+        </li>
+        <li class="tab">
+          <a href="#test5">
+            <span>Baby Step 5</span>
+            <img src="assets/images/icons/individual/icons_large_bs5.png" role="presentation" />
+          </a>
+        </li>
+        <li class="tab">
+          <a href="#test6">
+            <span>Baby Step 6</span>
+            <img src="assets/images/icons/individual/icons_large_bs6.png" role="presentation" />
+          </a>
+        </li>
+        <li class="tab">
+          <a href="#test7">
+            <span>Baby Step 7</span>
+            <img src="assets/images/icons/individual/icons_large_bs7.png" role="presentation" />
+          </a>
+        </li>
+      </ul>
+      <div id="test1" class="col s12">
+        <p>Baby Step 1</p>
+      </div>
+      <div id="test2" class="col s12">
+        <p>Baby Step 2</p>
+      </div>
+      <div id="test3" class="col s12">
+        <p>Baby Step 3</p>
+      </div>
+      <div id="test4" class="col s12">
+        <p>Baby Step 4</p>
+      </div>
+      <div id="test5" class="col s12">
+        <p>Baby Step 5</p>
+      </div>
+      <div id="test6" class="col s12">
+        <p>Baby Step 6</p>
+      </div>
+      <div id="test7" class="col s12">
+        <p>Baby Step 7</p>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    var el = document.querySelector('.tabs');
+    var instance = M.Tabs.init(el);
+  </script>
+</body>
+
+</html>
